@@ -6,11 +6,11 @@ Usage:
     python3 scripts/issue_list.py [--group <id>] [--project <id>] [options]
 
 Examples:
-    python3 scripts/issue_list.py --project 10324 --state opened
+    python3 scripts/issue_list.py --project 91001 --state opened
     python3 scripts/issue_list.py --group 18274 --labels "type::bug,priority::high"
-    python3 scripts/issue_list.py --project 10324 --milestone "v3.3.1.0" --state all
+    python3 scripts/issue_list.py --project 91001 --milestone "v3.3.1.0" --state all
     python3 scripts/issue_list.py --group 18274 --iteration 2892 --state all
-    python3 scripts/issue_list.py --project 10324 --format json --limit 10
+    python3 scripts/issue_list.py --project 91001 --format json --limit 10
 
 Environment Variables:
     GITLAB_URL         - GitLab instance URL (default: https://gitlab.com)
@@ -116,11 +116,11 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  %(prog)s --project 10324 --state opened
+  %(prog)s --project 91001 --state opened
   %(prog)s --group 18274 --labels "type::bug"
-  %(prog)s --project 10324 --milestone "v3.3.1.0" --state all
+  %(prog)s --project 91001 --milestone "v3.3.1.0" --state all
   %(prog)s --group 18274 --iteration 2892 --state all
-  %(prog)s --project 10324 --state all --format json --limit 20
+  %(prog)s --project 91001 --state all --format json --limit 20
 
 Environment Variables:
   GITLAB_URL         GitLab instance URL (default: https://gitlab.com)
@@ -139,8 +139,8 @@ Environment Variables:
     parser.add_argument("--state", choices=["opened", "closed", "all"], default="opened",
                         help="Issue state (default: opened)")
     parser.add_argument("--labels", help="Comma-separated labels (e.g., 'bug,critical')")
-    parser.add_argument("--milestone", help="Milestone title (for project-level milestones, e.g. CASS projects)")
-    parser.add_argument("--iteration", help="Iteration ID (for group-level iterations, e.g. STAR)")
+    parser.add_argument("--milestone", help="Milestone title (for project-level milestones, e.g. Cloud Services projects)")
+    parser.add_argument("--iteration", help="Iteration ID (for group-level iterations, e.g. Service Management)")
     parser.add_argument("--assignee", help="Assignee username")
     parser.add_argument("--author", help="Author username")
     parser.add_argument("--search", help="Search query in title and description")

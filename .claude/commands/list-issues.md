@@ -7,4 +7,4 @@ Run the following, passing all arguments through:
 python3 scripts/issue_list.py $ARGUMENTS
 ```
 
-Display the results in a clear, readable format. Default project is 12421 (sprint-metrics-dashboard); use `--project` or `--group` to query other projects/groups.
+Display the results in a clear, readable format. Default project is 99001 (sprint-metrics-dashboard); use `--project` or `--group` to query other projects/groups.

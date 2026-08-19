@@ -46,7 +46,7 @@ This is a static GitLab Pages dashboard that displays sprint metrics collected f
 - Home page with group/project listing cards showing active sprint status, with filter chips (All Projects / Active Sprints)
 - Per-project sprint tracking: groups with `mode: "projects"` show per-project cards on the home page with project-scoped dashboards
 - Per-group dashboard pages with direct-linkable URLs (`group.html?group={slug}` or `group.html?group={slug}&project={project-slug}`)
-- Multi-group support (CASS, STAR, P2DS) — each group has its own dashboard URL
+- Multi-group support (Cloud Services, Service Management, Data Services) — each group has its own dashboard URL
 - Branding: Tinkers favicon on all pages, group/project logos on home page cards
 - Sprint navigation by fiscal year and month
 - Sprint progress summary with visual progress bar, time remaining, work complete %, and scope change %
@@ -175,7 +175,7 @@ The frontend JavaScript follows a **four-layer architecture**. Every file belong
 ## Important Context
 
 ### GitLab Environment
-- **GitLab Instance:** Internal CDSO GitLab at git.example.com
+- **GitLab Instance:** Internal GitLab at git.example.com
 - **Classification:** CUI-CTI (Controlled Unclassified Information - Cyber Threat Intelligence)
 - **Commit Signing:** Required and verified by GitLab hooks
 - **API Authentication:** Uses GitLab tokens with specific scopes
@@ -186,11 +186,11 @@ Required CI/CD variables (Settings > CI/CD > Variables):
 - `GITLAB_TOKEN` - API token with `read_api` scope for reading iterations/issues (must have access to all groups in `groups.json`)
 - `GITLAB_GROUP` - (Optional) Fallback group ID if `groups.json` is not configured
 - `CI_PUSH_TOKEN` - API token with `api` scope + Maintainer role for committing data
-- `ANTHROPIC_API_KEY` - Anthropic-compatible API key used by `generate_reports.py` for AI test steps + goals/summary. On the CDSO network this is an **Ask Sage** key.
-- `ANTHROPIC_BASE_URL` - Anthropic-compatible endpoint for `generate_reports.py`. **Required on the CI runner**, which has no public internet egress — point it at the Ask Sage gateway (`https://api.genai.army.mil/server/anthropic`). When unset the SDK defaults to `api.anthropic.com`, which the runner cannot reach.
+- `ANTHROPIC_API_KEY` - Anthropic-compatible API key used by `generate_reports.py` for AI test steps + goals/summary. On the internal network this is an **Ask Sage** key.
+- `ANTHROPIC_BASE_URL` - Anthropic-compatible endpoint for `generate_reports.py`. **Required on the CI runner**, which has no public internet egress — point it at the Ask Sage gateway (`https://ai-gateway.example.com/server/anthropic`). When unset the SDK defaults to `api.anthropic.com`, which the runner cannot reach.
 - `ANTHROPIC_MODEL` - (Optional) Model id for `generate_reports.py` (default `claude-haiku-4-5-20251001`); override if the gateway exposes Claude under a different id.
 - `DOD_CA_CERT` - (Optional) DoD CA certificate bundle for SSL verification (File type, ~96KB, 49 certificates)
-- `JIRA_URL` - Base URL of the Jira instance for Jira-sourced groups (e.g. `https://jira.dso.army.mil`). Required when a group in `groups.json` has `source: "jira"`.
+- `JIRA_URL` - Base URL of the Jira instance for Jira-sourced groups (e.g. `https://jira.example.com`). Required when a group in `groups.json` has `source: "jira"`.
 - `JIRA_TOKEN` - Jira Personal Access Token (Server/Data Center), sent as `Authorization: Bearer`. Read-only scope is sufficient. **Env/CI only — never commit.**
 - `JIRA_SSL_VERIFY` - (Optional) `false`/`0`/`no` disables SSL verification (default enabled). Handled like `GITLAB_SSL_VERIFY`: bypassed by default in CI and switched on when `DOD_CA_CERT` is configured (the DoD Jira host chains to that bundle).
 
@@ -207,7 +207,7 @@ Required CI/CD variables (Settings > CI/CD > Variables):
 - Metrics: `initial_count`, `initial_weight`, `completed` (count/weight)
 - `daily_burndown` - Array of `{date, remaining_count, remaining_weight}`
 - `type_breakdown` - Counts by issue type (bug, improvement, new_feature, other)
-- `issues` - Full issue list with id, title, description, project, weight, state, labels, milestone (`description` powers client-side Release Notes for reports-enabled standard groups like STAR)
+- `issues` - Full issue list with id, title, description, project, weight, state, labels, milestone (`description` powers client-side Release Notes for reports-enabled standard groups like Service Management)
 - `last_updated` - ISO timestamp (current sprint only)
 
 **Milestone JSON** (`milestones/{project-slug}/{milestone-slug}.json`):
@@ -225,7 +225,7 @@ Required CI/CD variables (Settings > CI/CD > Variables):
 - **API Commits:** Uses GitLab Commits API instead of git push to bypass signed commit requirements
 - **SSL Verification:** Can be enabled via `DOD_CA_CERT` CI/CD variable (see `docs/SSL_CERTIFICATE_SETUP.md`). When not configured, SSL verification is disabled for compatibility. DoD certificates are combined with public CAs to support both PyPI package downloads and GitLab API access.
 - **Iterations vs Milestones:** Scripts auto-detect GitLab tier (Premium uses Iterations, Free uses Milestones). Groups with `mode: "projects"` use project-level Milestones for sprints (filtered by `transition_date`).
-- **Jira Data Source (`source: "jira"`):** A group in `groups.json` can set `source: "jira"` to pull from Jira Software (Server/Data Center) instead of GitLab. P2DS uses this. Config fields on the group: `jira_board_id` (numeric Scrum board), `jira_project_key` (optional, logging), `jira_story_points_field` (custom field id for weight, e.g. `customfield_10106`), and optional `jira_type_map` (Jira issue-type name → `type::*` label; defaults in `jira_provider.DEFAULT_TYPE_MAP`). `scheduled_update.py` and `backfill.py` dispatch on `source` (defaulting to `"gitlab"`); `jira_provider.py` fetches sprints via the Agile API, reconstructs daily burndown from the Sprint-field **changelog** (Jira's analog to GitLab resource events), maps status `statusCategory == "done"` → `closed`, derives numeric `iid` from the issue key, and emits the **identical sprint-record schema** as the GitLab path (so the frontend is unchanged). Jira backfill is floored at the FY2026 cutoff (`JIRA_BACKFILL_EARLIEST` in `backfill.py`). Scope: sprint metrics only — no milestones/releases index or AI reports for Jira groups. **Known limitation:** issues *removed* from a sprint before it ends are not returned by the `sprint = {id}` query, so mid-sprint removals may be undercounted in burndown.
+- **Jira Data Source (`source: "jira"`):** A group in `groups.json` can set `source: "jira"` to pull from Jira Software (Server/Data Center) instead of GitLab. Data Services uses this. Config fields on the group: `jira_board_id` (numeric Scrum board), `jira_project_key` (optional, logging), `jira_story_points_field` (custom field id for weight, e.g. `customfield_10106`), and optional `jira_type_map` (Jira issue-type name → `type::*` label; defaults in `jira_provider.DEFAULT_TYPE_MAP`). `scheduled_update.py` and `backfill.py` dispatch on `source` (defaulting to `"gitlab"`); `jira_provider.py` fetches sprints via the Agile API, reconstructs daily burndown from the Sprint-field **changelog** (Jira's analog to GitLab resource events), maps status `statusCategory == "done"` → `closed`, derives numeric `iid` from the issue key, and emits the **identical sprint-record schema** as the GitLab path (so the frontend is unchanged). Jira backfill is floored at the FY2026 cutoff (`JIRA_BACKFILL_EARLIEST` in `backfill.py`). Scope: sprint metrics only — no milestones/releases index or AI reports for Jira groups. **Known limitation:** issues *removed* from a sprint before it ends are not returned by the `sprint = {id}` query, so mid-sprint removals may be undercounted in burndown.
 - **Per-Project Sprint Tracking:** Groups with `mode: "projects"` in `groups.json` track sprints per project using Milestones. Historical group-level Iteration data is pre-split into per-project files via `project_split.py`. `scheduled_update.py` and `backfill.py` handle ongoing milestone collection. The `dataPath()` helper in `js/services/api.js` routes to `data/{group}/{project}/` when a project is active.
 - **Fiscal Year:** October-September, sprints organized by end date. **Data cutoff: October 2025 (FY2026).** No sprint, milestone, or release data before this date is displayed. Controlled by `EARLIEST_FY` and `EARLIEST_DATE` constants in `js/services/api.js`. `discoverFYs()` uses `EARLIEST_FY` as the floor for FY scanning; the releases page filters milestones with `due_date < EARLIEST_DATE`. `fyMonths(fy, upToDate)` accepts an optional `Date` to cap the month list at the current date — `loadFY()` passes `new Date()` to avoid fetching future months that don't have data files yet. The dropdown population in `dashboard.js` omits `upToDate` since it already checks `if (data[key])` before rendering.
 - **Working Days:** Burndown ideal line excludes weekends and US federal holidays
@@ -246,10 +246,10 @@ Required CI/CD variables (Settings > CI/CD > Variables):
 Lets users download **Release Notes**, **Test Plans**, **Sprint Reports**, and **Monthly Reports** as MS Word documents from the dashboard. Because the site is static (GitLab Pages, no server), the architecture splits into a CI step that precomputes content and a client step that renders Word.
 
 - **Scope by group type** (each document requires different data, so support varies):
-  - **Project-mode groups (CASS: MIRARS, PPMT, TOMT, ArmyWX, QuickSubmitForms)** — collect per-project milestone issue **descriptions**, so they get **all four** documents (Release Notes, Test Plan, Sprint Report, Monthly Report). A sprint qualifies only when `source === "milestone"` (post-`transition_date`); historical iteration-sourced sprints have no milestone/report files.
-  - **Jira-sourced standard groups (P2DS)** — no per-issue descriptions collected, so **Sprint Report + Monthly Report only**.
-  - **Reports-enabled standard GitLab groups (STAR, `"reports": true` in groups.json)** — iteration-sourced, but the sprint record's `issues` now carry `description` (added to `backfill.py`/`scheduled_update.py`), so they get **Release Notes + Sprint Report + Monthly Report** (no Test Plan). Release Notes are built client-side from the loaded sprint record's issues (these groups have no milestone JSON), grouped by project. **Historical descriptions require a one-time manual `backfill` re-run to populate; `scheduled_update` backfills active/recent sprints going forward. Until then Release Notes render "No description provided."**
-- **Backend (`scripts/generate_reports.py`):** scheduled CI job (after `scheduled_update`). Project-mode groups → `process_project` (milestones via API); standard groups reading local sprint JSON (Jira **and** reports-enabled, e.g. STAR) → `process_local_group` (`data/{group}/fy*/`). For each completed sprint and past month lacking output, calls Anthropic (`claude-haiku-4-5`) for per-issue **test-plan steps** (project-mode only; respects `test-plan::no` / `release-notes::no` labels) and sprint/monthly **goals + summary**, plus deterministic metrics. Writes JSON only to `reports/sprints/{milestone-slug}.json` and `reports/months/{YYYY-MM}.json` (group-scoped for standard groups). **Idempotent** (skips existing); **env-only secrets** (`GITLAB_TOKEN`, `ANTHROPIC_API_KEY`) with a lazy Anthropic client so idle runs need no key. No Word files are ever stored. The CI runner has no public internet egress, so the Anthropic client is pointed at the Ask Sage gateway via `ANTHROPIC_BASE_URL` (an internal `api.genai.army.mil` host); `api.anthropic.com` is unreachable from CI.
+  - **Project-mode groups (Cloud Services: ORBIT, PULSE, RELAY, SkyCast, FormFlow)** — collect per-project milestone issue **descriptions**, so they get **all four** documents (Release Notes, Test Plan, Sprint Report, Monthly Report). A sprint qualifies only when `source === "milestone"` (post-`transition_date`); historical iteration-sourced sprints have no milestone/report files.
+  - **Jira-sourced standard groups (Data Services)** — no per-issue descriptions collected, so **Sprint Report + Monthly Report only**.
+  - **Reports-enabled standard GitLab groups (Service Management, `"reports": true` in groups.json)** — iteration-sourced, but the sprint record's `issues` now carry `description` (added to `backfill.py`/`scheduled_update.py`), so they get **Release Notes + Sprint Report + Monthly Report** (no Test Plan). Release Notes are built client-side from the loaded sprint record's issues (these groups have no milestone JSON), grouped by project. **Historical descriptions require a one-time manual `backfill` re-run to populate; `scheduled_update` backfills active/recent sprints going forward. Until then Release Notes render "No description provided."**
+- **Backend (`scripts/generate_reports.py`):** scheduled CI job (after `scheduled_update`). Project-mode groups → `process_project` (milestones via API); standard groups reading local sprint JSON (Jira **and** reports-enabled, e.g. Service Management) → `process_local_group` (`data/{group}/fy*/`). For each completed sprint and past month lacking output, calls Anthropic (`claude-haiku-4-5`) for per-issue **test-plan steps** (project-mode only; respects `test-plan::no` / `release-notes::no` labels) and sprint/monthly **goals + summary**, plus deterministic metrics. Writes JSON only to `reports/sprints/{milestone-slug}.json` and `reports/months/{YYYY-MM}.json` (group-scoped for standard groups). **Idempotent** (skips existing); **env-only secrets** (`GITLAB_TOKEN`, `ANTHROPIC_API_KEY`) with a lazy Anthropic client so idle runs need no key. No Word files are ever stored. The CI runner has no public internet egress, so the Anthropic client is pointed at the Ask Sage gateway via `ANTHROPIC_BASE_URL` (an internal `ai-gateway.example.com` host); `api.anthropic.com` is unreachable from CI.
 - **Frontend:** `js/core/reports.js` builds Word-openable documents from JSON via the lightweight **Office-HTML** approach (`officeHtml()` + `downloadDoc()` in `utils.js`); `js/services/api.js` fetches the report/milestone JSON. **Release notes are built client-side with no AI** — from milestone JSON (`buildReleaseNotesDoc`, project-mode) or from the sprint record's issues (`buildReleaseNotesFromSprint`, standard reports-enabled groups). Only test plans and sprint/monthly reports depend on the CI-generated AI content.
 - **UI gating:** `availableSprintDocs(sprint, group)` picks the per-button set from the sprint source + group config; `reportsEnabledFor(group, project)` gates the Monthly Report button. Sprint buttons (`#sprint-reports` in `group.html`) show only for a completed sprint whose context supports them; the Monthly Report button shows only for a past calendar month. Buttons degrade gracefully ("not generated yet") when report JSON is absent. Sprint→file mapping uses `slugify(sprint.title)` (matches the Python slug).
 - **Dropped from the prototype:** the "X unit tests added" section (it read the project source repo, which the dashboard pipeline cannot access).
@@ -377,7 +377,7 @@ python scheduled_update.py  # or backfill.py
 
 ## GitLab Issue Management
 
-The project includes a complete suite of scripts for managing GitLab issues directly from the command line or within Claude Code. This enables end-to-end workflows like "Implement MIRARS #1234" where Claude can read, implement, update, and close issues.
+The project includes a complete suite of scripts for managing GitLab issues directly from the command line or within Claude Code. This enables end-to-end workflows like "Implement ORBIT #1234" where Claude can read, implement, update, and close issues.
 
 ### Available Scripts
 
@@ -387,7 +387,7 @@ All scripts are in the `scripts/` directory and require environment variables to
 
 **`scripts/issue_read.py`** - Read and display issue details
 ```bash
-# Using default project (GITLAB_PROJECT=12421)
+# Using default project (GITLAB_PROJECT=99001)
 python3 scripts/issue_read.py <issue_iid> [--show-comments]
 
 # Examples
@@ -395,7 +395,7 @@ python3 scripts/issue_read.py 1183
 python3 scripts/issue_read.py 1183 --show-comments
 
 # Override with explicit project
-python3 scripts/issue_read.py 10324 1183
+python3 scripts/issue_read.py 91001 1183
 ```
 
 **`scripts/issue_list.py`** - List and filter issues
@@ -410,7 +410,7 @@ python3 scripts/issue_list.py --format json --limit 10
 python3 scripts/issue_list.py --group 18274 --labels "type::bug,priority::high"
 
 # Override with explicit project
-python3 scripts/issue_list.py --project 10324 --state opened
+python3 scripts/issue_list.py --project 91001 --state opened
 
 # Options:
 #   --state opened|closed|all
@@ -436,7 +436,7 @@ python3 scripts/issue_create.py --title "Fix bug" \
   --description "Details" --labels "bug,critical" --weight 3
 
 # Explicit project override
-python3 scripts/issue_create.py 10324 --title "Different project issue"
+python3 scripts/issue_create.py 91001 --title "Different project issue"
 ```
 
 **`scripts/issue_implement.py`** - Start implementation workflow
@@ -449,7 +449,7 @@ python3 scripts/issue_implement.py 1183
 python3 scripts/issue_implement.py 1183 --assign-to-me
 
 # Explicit project override
-python3 scripts/issue_implement.py 10324 1183
+python3 scripts/issue_implement.py 91001 1183
 
 # Displays:
 # - Issue details and description
@@ -468,7 +468,7 @@ python3 scripts/issue_comment.py 1183 --body "Implementation complete"
 python3 scripts/issue_comment.py 1183  # Interactive mode
 
 # Explicit project override
-python3 scripts/issue_comment.py 10324 1183 --body "Different project"
+python3 scripts/issue_comment.py 91001 1183 --body "Different project"
 ```
 
 **`scripts/issue_update.py`** - Update issue fields
@@ -483,7 +483,7 @@ python3 scripts/issue_update.py 1183 --state-event close
 python3 scripts/issue_update.py 1183 --weight 5 --assignee username
 
 # Explicit project override
-python3 scripts/issue_update.py 10324 1183 --add-labels "priority::high"
+python3 scripts/issue_update.py 91001 1183 --add-labels "priority::high"
 
 # Options:
 #   --title "New title"
@@ -509,7 +509,7 @@ python3 scripts/issue_close.py 1183 --note "Fixed and verified" \
   --add-labels "status::done,verified"
 
 # Explicit project override
-python3 scripts/issue_close.py 10324 1183 --note "Different project"
+python3 scripts/issue_close.py 91001 1183 --note "Different project"
 ```
 
 ### Configuration
@@ -523,13 +523,13 @@ export GITLAB_SSL_VERIFY="true"        # Enable SSL verification (default)
 
 **Optional Environment Variables:**
 ```bash
-export GITLAB_PROJECT="12421"          # Sprint Metrics Dashboard project (default for all commands)
+export GITLAB_PROJECT="99001"          # Sprint Metrics Dashboard project (default for all commands)
 export GITLAB_GROUP="18274"            # Default group ID
 export GITLAB_USERNAME="your-user"     # For --assign-to-me flag
 export GITLAB_ISSUE_TOKEN="<token>"    # Overrides GITLAB_TOKEN for issue metadata scripts only
                                        # (issue_read, issue_list, issue_create, issue_comment,
-                                       #  issue_update, issue_close). Use a CASS group token
-                                       # to access MIRARS, PPMT, TOMT, etc.
+                                       #  issue_update, issue_close). Use a Cloud Services group token
+                                       # to access ORBIT, PULSE, RELAY, etc.
                                        # issue_implement.py always uses GITLAB_TOKEN (repo access).
 ```
 
@@ -538,11 +538,11 @@ export GITLAB_ISSUE_TOKEN="<token>"    # Overrides GITLAB_TOKEN for issue metada
 - **Write operations** (all others): Requires `api` scope
 - **`GITLAB_ISSUE_TOKEN`**: Requires `read_api` for read-only scripts, `api` for write scripts
 
-**Note**: All issue management scripts default to project 12421 (Sprint Metrics Dashboard). You can override by providing an explicit project_id argument.
+**Note**: All issue management scripts default to project 99001 (Sprint Metrics Dashboard). You can override by providing an explicit project_id argument.
 
 ### Complete Workflow Example
 
-When implementing an issue (e.g., "Implement MIRARS #1234"), use the following workflow:
+When implementing an issue (e.g., "Implement ORBIT #1234"), use the following workflow:
 
 ```bash
 # 1. Read the issue to understand requirements
@@ -602,7 +602,7 @@ Would you like me to add any other requirements?"
 User: "Yes, also add assigned user and dates. Then create the issue."
 
 Claude: "Creating issue in GitLab..."
-[Runs: python3 scripts/issue_create.py 10324 --title "Add CSV export for sprint metrics" ...]
+[Runs: python3 scripts/issue_create.py 91001 --title "Add CSV export for sprint metrics" ...]
 
 "✓ Issue #1245 created: https://git.example.com/project/issues/1245"
 ```
@@ -610,7 +610,7 @@ Claude: "Creating issue in GitLab..."
 This eliminates context switching between chat and GitLab UI during backlog grooming sessions.
 
 #### Workflow 2: Complete Issue Implementation
-When you say "Implement MIRARS #1234", Claude will:
+When you say "Implement ORBIT #1234", Claude will:
 
 1. Read the issue details using `issue_read.py`
 2. Start the implementation workflow with `issue_implement.py`

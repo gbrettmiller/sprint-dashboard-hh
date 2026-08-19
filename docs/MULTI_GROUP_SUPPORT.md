@@ -1,18 +1,18 @@
 # Multi-Group Dashboard Support
 
-**Status: Implemented** — Merged via MR !4 on 2026-02-18. All groups (C/GOTS, ITSM, P2DS) are live with data populated.
+**Status: Implemented** — Merged via MR !4 on 2026-02-18. All groups (Cloud Services, Service Management, Data Services) are live with data populated.
 
 ## Context
 
-The sprint metrics dashboard currently serves a single GitLab group (C/GOTS). To consolidate sprint visibility across teams, we're adding support for multiple groups with a group selector UI. Three groups will be configured:
+The sprint metrics dashboard currently serves a single GitLab group (Cloud Services). To consolidate sprint visibility across teams, we're adding support for multiple groups with a group selector UI. Three groups will be configured:
 
 | Group | GitLab ID | Slug |
 |-------|-----------|------|
-| C/GOTS | 18274 | cgots |
-| ITSM | 18275 | itsm |
-| P2DS | 19322 | p2ds |
+| Cloud Services | 90001 | cloud-services |
+| Service Management | 90002 | service-management |
+| Data Services | 90003 | data-services |
 
-Existing C/GOTS data will be migrated into a `cgots/` subdirectory. A `groups.json` config file drives both the frontend and Python scripts.
+Existing Cloud Services data will be migrated into a `cloud-services/` subdirectory. A `groups.json` config file drives both the frontend and Python scripts.
 
 ---
 
@@ -23,18 +23,18 @@ Existing C/GOTS data will be migrated into a `cgots/` subdirectory. A `groups.js
   ```json
   {
     "groups": [
-      {"id": 18274, "name": "C/GOTS", "slug": "cgots"},
-      {"id": 18275, "name": "ITSM", "slug": "itsm"},
-      {"id": 19322, "name": "P2DS", "slug": "p2ds"}
+      {"id": 90001, "name": "Cloud Services", "slug": "cloud-services"},
+      {"id": 90002, "name": "Service Management", "slug": "service-management"},
+      {"id": 90003, "name": "Data Services", "slug": "data-services"}
     ],
-    "default": "cgots"
+    "default": "cloud-services"
   }
   ```
-- Move existing data: `public/data/fy2026/` → `public/data/cgots/fy2026/` and `public/data/current-sprint.json` → `public/data/cgots/current-sprint.json`
+- Move existing data: `public/data/fy2026/` → `public/data/cloud-services/fy2026/` and `public/data/current-sprint.json` → `public/data/cloud-services/current-sprint.json`
 
 ## Step 2: Update HTML — `public/index.html`
 
-- Genericize title and header — remove "C/GOTS" references
+- Genericize title and header — remove "Cloud Services" references
 - Insert group selector nav between `</header>` and `<nav class="nav-bar">`:
   ```html
   <nav class="group-bar" aria-label="Group selection">
@@ -104,13 +104,13 @@ The `.gitlab-ci.yml` uses `find public/data -name '*.json'` which will automatic
 ## Step 6: Verification
 
 1. **Local frontend test**: `cd public && python -m http.server 8000`
-   - Group buttons render (C/GOTS, ITSM, P2DS)
-   - C/GOTS loads by default with existing data
-   - ITSM/P2DS show "No sprint data found" (no data yet)
-   - Switching back to C/GOTS restores charts
+   - Group buttons render (Cloud Services, Service Management, Data Services)
+   - Cloud Services loads by default with existing data
+   - Service Management/Data Services show "No sprint data found" (no data yet)
+   - Switching back to Cloud Services restores charts
    - FY/month dropdowns reset on group switch
    - Keyboard nav works (Tab to group buttons, arrow keys)
-2. **Data migration**: verify `public/data/cgots/fy2026/` has all JSON files
+2. **Data migration**: verify `public/data/cloud-services/fy2026/` has all JSON files
 3. **Python scripts**: verify `scheduled_update.py` reads `groups.json` and processes groups (needs API token for full test)
 
 ---

@@ -6,18 +6,18 @@ Usage:
     python3 scripts/issue_read.py [project_id] <issue_iid> [--show-comments]
 
 Examples:
-    # Using GITLAB_PROJECT env var (default: 12421)
+    # Using GITLAB_PROJECT env var (default: 99001)
     python3 scripts/issue_read.py 1183
     python3 scripts/issue_read.py 1183 --show-comments
 
     # Explicit project override
-    python3 scripts/issue_read.py 10324 1183
+    python3 scripts/issue_read.py 91001 1183
 
 Environment Variables:
     GITLAB_URL         - GitLab instance URL (default: https://gitlab.com)
     GITLAB_TOKEN       - API token with read_api scope (required)
     GITLAB_SSL_VERIFY  - Enable SSL verification (default: true)
-    GITLAB_PROJECT     - Default project ID (default: 12421)
+    GITLAB_PROJECT     - Default project ID (default: 99001)
 """
 
 import sys
@@ -150,13 +150,13 @@ Examples:
   %(prog)s 1183 --show-comments
 
   # Explicit project override
-  %(prog)s 10324 1183
+  %(prog)s 91001 1183
 
 Environment Variables:
   GITLAB_URL         GitLab instance URL (default: https://gitlab.com)
   GITLAB_TOKEN       API token with read_api scope (required)
   GITLAB_SSL_VERIFY  Enable SSL verification (default: true)
-  GITLAB_PROJECT     Default project ID (default: 12421)
+  GITLAB_PROJECT     Default project ID (default: 99001)
         """
     )
 

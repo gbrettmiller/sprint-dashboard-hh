@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Shared Jira API client for the P2DS data source (Jira Server / Data Center).
+Shared Jira API client for the Data Services data source (Jira Server / Data Center).
 
 Mirrors the structure and resilience of gitlab_api.py (rate-limit handling,
 5xx exponential backoff, configurable SSL), but speaks the Jira REST v2 and
@@ -18,7 +18,7 @@ Usage:
     issues = client.search("sprint = 42", expand="changelog")
 
 Configuration (environment variables):
-    JIRA_URL         Base URL of the Jira instance (e.g. https://jira.example.mil)
+    JIRA_URL         Base URL of the Jira instance (e.g. https://jira.example.com)
     JIRA_TOKEN       Personal Access Token (sent as: Authorization: Bearer <token>)
     JIRA_SSL_VERIFY  "false"/"0"/"no" to disable SSL verification (default: enabled)
 """

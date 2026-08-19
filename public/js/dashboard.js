@@ -306,7 +306,7 @@ function setReportStatus(msg) {
 }
 
 // Name used in generated document headings: the project for project-mode
-// dashboards, otherwise the group (standard-mode groups like P2DS have no
+// dashboards, otherwise the group (standard-mode groups like Data Services have no
 // active project).
 function reportSubjectName() {
   return activeProject ? activeProject.name : (activeGroup ? activeGroup.name : '');
@@ -314,8 +314,8 @@ function reportSubjectName() {
 
 // Show the Generate toolbar for a completed sprint, toggling each button by the
 // document types its data source + group supports (see availableSprintDocs):
-// milestone-sourced sprints (CASS) get all three; Jira-sourced sprints (P2DS) get
-// only the Sprint Report; reports-enabled standard groups (STAR) get Release Notes
+// milestone-sourced sprints (Cloud Services) get all three; Jira-sourced sprints (Data Services) get
+// only the Sprint Report; reports-enabled standard groups (Service Management) get Release Notes
 // + Sprint Report; other iteration-sourced sprints get none.
 function updateSprintReports() {
   const bar = $('sprint-reports');
@@ -360,8 +360,8 @@ function wireSprintReportButtons() {
   if (!rn || !tp || !sr) return;
 
   rn.addEventListener('click', () => generateDoc('release notes', setReportStatus, async () => {
-    // Project-mode groups (CASS) build from per-project milestone JSON; standard
-    // reports-enabled groups (STAR) have no milestone JSON, so build from the
+    // Project-mode groups (Cloud Services) build from per-project milestone JSON; standard
+    // reports-enabled groups (Service Management) have no milestone JSON, so build from the
     // already-loaded sprint record's issues (which carry descriptions).
     if (!activeProject) {
       return buildReleaseNotesFromSprint(selectedSprint, reportSubjectName());

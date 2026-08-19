@@ -11,9 +11,9 @@ stages:
   variables:
     GIT_SSL_NO_VERIFY: "1"
     GITLAB_SSL_VERIFY: "false"
-    # Jira (P2DS data source). JIRA_URL/JIRA_TOKEN come from CI/CD variables and
+    # Jira (Data Services data source). JIRA_URL/JIRA_TOKEN come from CI/CD variables and
     # inject automatically. SSL bypass by default; enabled below when DOD_CA_CERT
-    # is configured (jira.dso.army.mil chains to the DoD CA bundle).
+    # is configured (jira.example.com chains to the DoD CA bundle).
     JIRA_SSL_VERIFY: "false"
   before_script:
     - apt-get update -qq && apt-get install -y -qq git ca-certificates > /dev/null

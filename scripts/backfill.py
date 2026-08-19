@@ -321,7 +321,7 @@ def build_sprint_record(group_encoded, sprint, issues_raw):
             "id": issue["id"],
             "iid": iid,
             "title": issue["title"],
-            # Stored so standard groups (e.g. STAR) can build Release Notes from
+            # Stored so standard groups (e.g. Service Management) can build Release Notes from
             # the sprint record directly — they have no per-project milestone JSON.
             "description": issue.get("description") or "",
             "project_id": project_id,

@@ -10,18 +10,18 @@ Usage:
     python3 scripts/issue_create.py [project_id] --title "Title" [options]
 
 Examples:
-    # Using GITLAB_PROJECT env var (default: 12421)
+    # Using GITLAB_PROJECT env var (default: 99001)
     python3 scripts/issue_create.py
     python3 scripts/issue_create.py --title "Fix bug" --description "Details" --labels "bug,critical" --weight 3
 
     # Explicit project override
-    python3 scripts/issue_create.py 10324 --title "Different project issue"
+    python3 scripts/issue_create.py 91001 --title "Different project issue"
 
 Environment Variables:
     GITLAB_URL         - GitLab instance URL (default: https://gitlab.com)
     GITLAB_TOKEN       - API token with api scope (required)
     GITLAB_SSL_VERIFY  - Enable SSL verification (default: true)
-    GITLAB_PROJECT     - Default project ID (default: 12421)
+    GITLAB_PROJECT     - Default project ID (default: 99001)
 """
 
 import sys
@@ -127,13 +127,13 @@ Examples:
   %(prog)s --title "Fix bug" --description "Bug details" --labels "bug,critical" --weight 3
 
   # Explicit project override
-  %(prog)s 10324 --title "Different project issue"
+  %(prog)s 91001 --title "Different project issue"
 
 Environment Variables:
   GITLAB_URL         GitLab instance URL (default: https://gitlab.com)
   GITLAB_TOKEN       API token with api scope (required)
   GITLAB_SSL_VERIFY  Enable SSL verification (default: true)
-  GITLAB_PROJECT     Default project ID (default: 12421)
+  GITLAB_PROJECT     Default project ID (default: 99001)
         """
     )
 

@@ -11,13 +11,13 @@
 #### DRIFT — medium
 
 **1. `ARCHITECTURE.md:Stack` and `API / Data Pattern` describe GitLab-only collection, but a second data source (Jira) is live.**
-`groups.json` sets `"source": "jira"` for P2DS, and `scripts/jira_api.py` + `jira_provider.py` implement it. Both scripts already appear in the ARCHITECTURE.md structure tree, so the doctrine is internally inconsistent: the file lists the Jira scripts but its Stack table and "GitLab API → Python scripts → JSON" data-flow narrative never mention Jira. Doctrine should acknowledge the Jira path.
+`groups.json` sets `"source": "jira"` for Data Services, and `scripts/jira_api.py` + `jira_provider.py` implement it. Both scripts already appear in the ARCHITECTURE.md structure tree, so the doctrine is internally inconsistent: the file lists the Jira scripts but its Stack table and "GitLab API → Python scripts → JSON" data-flow narrative never mention Jira. Doctrine should acknowledge the Jira path.
 
 **2. `ARCHITECTURE.md:Stack` lists only `requests>=2.28` for data collection.**
 `scripts/requirements.txt` also pins `anthropic>=0.40` and `httpx>=0.27` (the AI dependency for `generate_reports.py`). The declared stack omits the AI report-generation dependency.
 
 **3. `VECTOR.md:Problem Statement` / `Core Value Proposition` frame the product as sprint data "collected from GitLab."**
-P2DS is now sourced from Jira. A one-line acknowledgement that data comes from GitLab *or* Jira would keep the identity doc current.
+Data Services is now sourced from Jira. A one-line acknowledgement that data comes from GitLab *or* Jira would keep the identity doc current.
 
 ---
 

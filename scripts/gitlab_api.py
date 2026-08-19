@@ -32,8 +32,8 @@ GITLAB_SSL_VERIFY = os.environ.get("GITLAB_SSL_VERIFY", "true").lower() not in (
 def issue_token():
     """Return the token for issue metadata operations (read, list, create, comment, update, close).
 
-    Prefers GITLAB_ISSUE_TOKEN when set (e.g. a CASS group token that can access
-    MIRARS, PPMT, etc.), falling back to GITLAB_TOKEN. Scripts that touch the repo
+    Prefers GITLAB_ISSUE_TOKEN when set (e.g. a Cloud Services group token that can access
+    ORBIT, PULSE, etc.), falling back to GITLAB_TOKEN. Scripts that touch the repo
     (issue_implement.py, backfill.py, scheduled_update.py) bypass this and use
     GITLAB_TOKEN directly.
     """

@@ -1,7 +1,7 @@
 # Case Study: Adding a Jira Data Source to the Sprint Metrics Dashboard
 
 **Date:** 2026-07-01
-**Feature:** P2DS sprint data pulled from Jira (Server/Data Center) — GitLab issue #43
+**Feature:** Data Services sprint data pulled from Jira (Server/Data Center) — GitLab issue #43
 **Tooling:** Claude Code (Opus 4.8)
 
 ---
@@ -9,12 +9,12 @@
 ## 1. Executive Summary
 
 The Sprint Metrics Dashboard was originally built to collect data exclusively from
-GitLab (Iterations and Milestones APIs). The P2DS program elected to remain on Jira
-rather than migrate to GitLab, but leadership still needed P2DS to appear on the same
-dashboard as the GitLab-backed programs (CASS, STAR).
+GitLab (Iterations and Milestones APIs). The Data Services program elected to remain on Jira
+rather than migrate to GitLab, but leadership still needed Data Services to appear on the same
+dashboard as the GitLab-backed programs (Cloud Services, Service Management).
 
 This session added a complete **Jira data-collection path** that produces the exact
-same JSON that the GitLab collectors produce, so the dashboard front end renders P2DS
+same JSON that the GitLab collectors produce, so the dashboard front end renders Data Services
 with **zero front-end changes**. The work was planned, implemented, tested against the
 live Jira instance, documented, and merged to `master` in a **single working session**.
 
@@ -27,7 +27,7 @@ the same outcome. See Section 5 for the breakdown and assumptions.
 ## 2. The Problem
 
 - The dashboard's data pipeline (Python) understood only GitLab.
-- P2DS lives in a **Jira Server/Data Center** instance (`jira.dso.army.mil`), which
+- Data Services lives in a **Jira Server/Data Center** instance (`jira.example.com`), which
   differs from Jira Cloud in REST API version (v2), authentication (Personal Access
   Token bearer), and response pagination.
 - The dashboard's charts (burndown, velocity, type breakdown, issue tables) depend on a
@@ -51,7 +51,7 @@ the same outcome. See Section 5 for the breakdown and assumptions.
 - `scheduled_update.py` and `backfill.py` — added a source dispatch (`source: "jira"`)
   that leaves the existing GitLab path untouched; the FY2026-floored backfill seeds
   history for the velocity chart.
-- `public/data/groups.json` — P2DS re-enabled as a Jira group with its board id and
+- `public/data/groups.json` — Data Services re-enabled as a Jira group with its board id and
   story-points field.
 - `.gitlab-ci.yml` — Jira SSL handling wired into the existing DoD-certificate pattern;
   credentials injected as masked CI/CD variables.
@@ -67,7 +67,7 @@ output validated to be schema-identical to the GitLab-sourced groups; front end 
    source-agnostic (so the work could be isolated to the Python layer).
 2. **Planning.** Produced an implementation plan and a prerequisites checklist
    (URL, board id, token handling, story-points field, issue-type mapping), and confirmed
-   scope: FY26 backfill + ongoing, sprint metrics only (no reports/releases for P2DS yet).
+   scope: FY26 backfill + ongoing, sprint metrics only (no reports/releases for Data Services yet).
 3. **Implementation.** Built the Jira client and provider, then wired source dispatch into
    the two collectors, deliberately keeping file I/O in the existing scripts to avoid
    disturbing the working GitLab path.
@@ -75,7 +75,7 @@ output validated to be schema-identical to the GitLab-sourced groups; front end 
    story-points field was empty and identified the correct one** by inspecting the field
    catalog; validated that the active sprint's issue count and type mix matched the team's
    own Jira chart; confirmed exact schema parity with existing data files; and found and
-   removed **stale GitLab-era placeholder data** for P2DS before regenerating cleanly.
+   removed **stale GitLab-era placeholder data** for Data Services before regenerating cleanly.
 5. **Documentation & handoff.** Updated project documentation, logged a known limitation
    for future work, and filed a follow-up backlog item for report downloads.
 
@@ -117,7 +117,7 @@ substantial — on the order of **one afternoon versus one to two weeks**.
   error against live data.
 - **Environment constraints.** DoD certificates, no public egress on CI, and masked-secret
   handling add setup and testing friction that pure application code does not.
-- **Legacy data.** Pre-existing placeholder data for P2DS had to be recognized as stale and
+- **Legacy data.** Pre-existing placeholder data for Data Services had to be recognized as stale and
   cleaned — a subtle issue that is easy to miss and produces confusing dashboard results.
 
 ## 7. Where Claude Code Added the Most Value

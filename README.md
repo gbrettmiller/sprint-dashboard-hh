@@ -157,8 +157,8 @@ Configure these in **Settings > CI/CD > Variables**:
 | `GITLAB_TOKEN` | API token for reading iterations/issues (must have access to all configured groups) | `read_api` |
 | `GITLAB_GROUP` | (Optional) Fallback group ID if `groups.json` is not configured | — |
 | `CI_PUSH_TOKEN` | API token for committing data files | `api` + Maintainer role |
-| `ANTHROPIC_API_KEY` | Anthropic-compatible API key for `generate_reports.py` (Ask Sage key on the CDSO network) | — |
-| `ANTHROPIC_BASE_URL` | Anthropic-compatible endpoint for `generate_reports.py`. Required on CI (no public egress) — Ask Sage gateway `https://api.genai.army.mil/server/anthropic` | — |
+| `ANTHROPIC_API_KEY` | Anthropic-compatible API key for `generate_reports.py` (Ask Sage key on the internal network) | — |
+| `ANTHROPIC_BASE_URL` | Anthropic-compatible endpoint for `generate_reports.py`. Required on CI (no public egress) — Ask Sage gateway `https://ai-gateway.example.com/server/anthropic` | — |
 | `ANTHROPIC_MODEL` | (Optional) Model id for `generate_reports.py` (default `claude-haiku-4-5-20251001`) | — |
 | `DOD_CA_CERT` | (Optional) DoD CA certificate bundle for SSL verification | File type |
 
@@ -172,22 +172,22 @@ Groups are configured in `public/data/groups.json`:
 {
   "groups": [
     {
-      "id": 18274, "name": "CASS", "slug": "cass",
-      "logo": "img/CASS-Logo.png",
+      "id": 90001, "name": "Cloud Services", "slug": "cloud-services",
+      "logo": "img/cloud-services-logo.svg",
       "mode": "projects",
       "transition_date": "2026-03-04",
       "projects": [
-        {"id": 10324, "name": "MIRARS", "slug": "mirars", "logo": "img/MIRARS-Logo.png"},
-        {"id": 10541, "name": "PPMT", "slug": "ppmt", "logo": "img/PPMT-Logo.png"},
-        {"id": 10832, "name": "TOMT", "slug": "tomt"},
-        {"id": 10313, "name": "ArmyWX", "slug": "armywx"},
-        {"id": 10314, "name": "QuickSubmitForms", "slug": "quicksubmitforms"}
+        {"id": 91001, "name": "ORBIT", "slug": "orbit", "logo": "img/orbit-logo.svg"},
+        {"id": 91002, "name": "PULSE", "slug": "pulse", "logo": "img/pulse-logo.svg"},
+        {"id": 91003, "name": "RELAY", "slug": "relay"},
+        {"id": 91004, "name": "SkyCast", "slug": "skycast"},
+        {"id": 91005, "name": "FormFlow", "slug": "formflow"}
       ]
     },
-    {"id": 18275, "name": "STAR", "slug": "star", "logo": "img/STAR-Logo.png"},
-    {"id": 19322, "name": "P2DS", "slug": "p2ds", "logo": "img/P2DS-Logo.png"}
+    {"id": 90002, "name": "Service Management", "slug": "service-management", "logo": "img/service-management-logo.svg"},
+    {"id": 90003, "name": "Data Services", "slug": "data-services", "logo": "img/data-services-logo.svg"}
   ],
-  "default": "cass"
+  "default": "cloud-services"
 }
 ```
 
@@ -282,7 +282,7 @@ export GITLAB_TOKEN="<your-personal-access-token>"  # api scope — covers all i
 export GITLAB_SSL_VERIFY="true"
 
 # Optional - set defaults to avoid repeating project/group IDs
-export GITLAB_PROJECT="10324"
+export GITLAB_PROJECT="91001"
 export GITLAB_GROUP="18274"
 export GITLAB_USERNAME="your-username"      # For --assign-to-me flag
 ```
@@ -301,33 +301,33 @@ Create your personal access token at: **Profile > Access Tokens** — select `ap
 
 ```bash
 # Display issue details
-python3 scripts/issue_read.py 10324 1183
+python3 scripts/issue_read.py 91001 1183
 
 # Include comments
-python3 scripts/issue_read.py 10324 1183 --show-comments
+python3 scripts/issue_read.py 91001 1183 --show-comments
 ```
 
 #### List Issues
 
 ```bash
 # List open issues in a project
-python3 scripts/issue_list.py --project 10324 --state opened
+python3 scripts/issue_list.py --project 91001 --state opened
 
 # List issues with filters
 python3 scripts/issue_list.py --group 18274 --labels "type::bug,priority::high"
 
 # Output as JSON
-python3 scripts/issue_list.py --project 10324 --format json --limit 10
+python3 scripts/issue_list.py --project 91001 --format json --limit 10
 ```
 
 #### Create Issues
 
 ```bash
 # Interactive mode (prompts for title, description, labels, etc.)
-python3 scripts/issue_create.py 10324
+python3 scripts/issue_create.py 91001
 
 # Command-line mode
-python3 scripts/issue_create.py 10324 \
+python3 scripts/issue_create.py 91001 \
   --title "Add CSV export feature" \
   --description "Export sprint data to CSV format" \
   --labels "type::feature,priority::high" \
@@ -338,10 +338,10 @@ python3 scripts/issue_create.py 10324 \
 
 ```bash
 # Add labels to track progress
-python3 scripts/issue_update.py 10324 1183 --add-labels "status::in-progress"
+python3 scripts/issue_update.py 91001 1183 --add-labels "status::in-progress"
 
 # Update multiple fields
-python3 scripts/issue_update.py 10324 1183 \
+python3 scripts/issue_update.py 91001 1183 \
   --weight 8 \
   --assignee username \
   --add-labels "status::testing"
@@ -351,21 +351,21 @@ python3 scripts/issue_update.py 10324 1183 \
 
 ```bash
 # Add a comment
-python3 scripts/issue_comment.py 10324 1183 \
+python3 scripts/issue_comment.py 91001 1183 \
   --body "Implementation complete, testing locally"
 
 # Interactive mode (prompts for comment)
-python3 scripts/issue_comment.py 10324 1183
+python3 scripts/issue_comment.py 91001 1183
 ```
 
 #### Close Issues
 
 ```bash
 # Simple close
-python3 scripts/issue_close.py 10324 1183
+python3 scripts/issue_close.py 91001 1183
 
 # Close with note and labels
-python3 scripts/issue_close.py 10324 1183 \
+python3 scripts/issue_close.py 91001 1183 \
   --note "Implemented in commit abc123, verified in testing" \
   --add-labels "status::done,verified"
 ```
@@ -396,27 +396,27 @@ Implement an issue from start to finish with full GitLab tracking:
 
 ```bash
 # 1. Read the issue
-python3 scripts/issue_read.py 10324 1234 --show-comments
+python3 scripts/issue_read.py 91001 1234 --show-comments
 
 # 2. Get implementation guidance (branch name, commit template)
-python3 scripts/issue_implement.py 10324 1234 --assign-to-me
+python3 scripts/issue_implement.py 91001 1234 --assign-to-me
 
 # 3. Create branch and implement
 git checkout -b 1234-feature-title
 
 # 4. Update status as you work
-python3 scripts/issue_update.py 10324 1234 --add-labels "status::in-progress"
+python3 scripts/issue_update.py 91001 1234 --add-labels "status::in-progress"
 
 # 5. Add progress comments
-python3 scripts/issue_comment.py 10324 1234 --body "Implementation complete"
+python3 scripts/issue_comment.py 91001 1234 --body "Implementation complete"
 
 # 6. Update status during testing
-python3 scripts/issue_update.py 10324 1234 \
+python3 scripts/issue_update.py 91001 1234 \
   --add-labels "status::testing" \
   --remove-labels "status::in-progress"
 
 # 7. Close when verified
-python3 scripts/issue_close.py 10324 1234 \
+python3 scripts/issue_close.py 91001 1234 \
   --note "Implemented and verified" \
   --add-labels "status::done"
 ```

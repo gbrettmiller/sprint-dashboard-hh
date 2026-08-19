@@ -190,7 +190,7 @@ There is no shared state library. Each page module (`js/*.js`) manages its own m
 
 Data flows in one direction: **GitLab / Jira API → Python scripts → JSON files → browser fetch → rendering**.
 
-1. **Collection:** Python scripts hit the GitLab REST API (`/api/v4/groups/:id/iterations`, `/api/v4/projects/:id/milestones`, `/api/v4/projects/:id/issues`) and write structured JSON to `public/data/`. Groups configured with `"source": "jira"` in `groups.json` (e.g. P2DS) are collected from Jira Software (Server/DC) instead — `jira_api.py` (bearer-token REST client) and `jira_provider.py` fetch sprints via the Agile API and emit the **identical sprint-record schema** as the GitLab path, so the frontend is unaware of the source.
+1. **Collection:** Python scripts hit the GitLab REST API (`/api/v4/groups/:id/iterations`, `/api/v4/projects/:id/milestones`, `/api/v4/projects/:id/issues`) and write structured JSON to `public/data/`. Groups configured with `"source": "jira"` in `groups.json` (e.g. Data Services) are collected from Jira Software (Server/DC) instead — `jira_api.py` (bearer-token REST client) and `jira_provider.py` fetch sprints via the Agile API and emit the **identical sprint-record schema** as the GitLab path, so the frontend is unaware of the source.
 2. **Commit:** `api_commit.py` uses the GitLab Commits API to push data files. This bypasses the instance's signed-commit hook requirement for automated pipeline commits.
 3. **Serve:** GitLab Pages serves `public/` as static files. No server-side computation at read time.
 4. **Fetch:** The browser fetches JSON via `fetchJSON()` in `js/services/api.js`. All network access goes through this function. It returns `null` on non-OK responses, preventing thrown errors from missing data files.

@@ -39,10 +39,10 @@ export function isPastMonth(monthKey, today) {
 
 // Which downloadable documents a completed sprint supports, keyed off its data
 // source and the group config. Release Notes and Test Plan need per-issue
-// descriptions: milestone-sourced sprints (project-mode groups, e.g. CASS) carry
-// them per project and get all three. Jira-sourced sprints (P2DS) get only the
+// descriptions: milestone-sourced sprints (project-mode groups, e.g. Cloud Services) carry
+// them per project and get all three. Jira-sourced sprints (Data Services) get only the
 // Sprint Report (goals/summary + metrics). Reports-enabled standard GitLab groups
-// (STAR, `reports: true`) collect issue descriptions in the sprint record, so
+// (Service Management, `reports: true`) collect issue descriptions in the sprint record, so
 // they get Release Notes (built client-side from those issues) and the Sprint
 // Report, but no Test Plan. All other iteration-sourced sprints get none.
 export function availableSprintDocs(sprint, group) {
@@ -54,8 +54,8 @@ export function availableSprintDocs(sprint, group) {
 }
 
 // Whether sprint/monthly report JSON is generated for this dashboard context,
-// gating the Monthly Report button. True for project-mode projects (CASS),
-// Jira-sourced standard groups (P2DS), and reports-enabled standard groups (STAR).
+// gating the Monthly Report button. True for project-mode projects (Cloud Services),
+// Jira-sourced standard groups (Data Services), and reports-enabled standard groups (Service Management).
 export function reportsEnabledFor(group, project) {
   if (project) return true;
   return !!group && (group.source === 'jira' || !!group.reports);
@@ -170,7 +170,7 @@ export function buildReleaseNotesDoc(milestoneData) {
   return { filename: safeFilename(`${heading}.doc`), html: officeHtml(heading, body) };
 }
 
-// Release notes for a standard group (e.g. STAR) built from the loaded sprint
+// Release notes for a standard group (e.g. Service Management) built from the loaded sprint
 // record itself — these groups have no per-project milestone JSON, but their
 // sprint issues carry descriptions. A standard-group sprint spans several
 // projects, so delivered issues are grouped under a per-project heading.

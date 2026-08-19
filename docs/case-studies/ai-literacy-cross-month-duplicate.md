@@ -16,7 +16,7 @@ A team member spotted a visual oddity on the dashboard. Working with Claude Code
 
 The Sprint Metrics Dashboard shows our teams' sprint health — burndown, velocity, issue breakdowns — pulled automatically from GitLab. Nobody types data into it; a scheduled job collects it each hour and commits JSON files the website reads.
 
-While looking at the May view, a team member noticed something that *looked wrong*: the MIRARS sprint **"v3.3.1.0" appeared twice**. It showed up in the May sprint dropdown where it didn't belong, and it produced a phantom, empty bar on the velocity chart.
+While looking at the May view, a team member noticed something that *looked wrong*: the ORBIT sprint **"v3.3.1.0" appeared twice**. It showed up in the May sprint dropdown where it didn't belong, and it produced a phantom, empty bar on the velocity chart.
 
 That instinct — "that doesn't look right" — is where the entire fix began. No automated check flagged it. A human did.
 
@@ -143,7 +143,7 @@ To put the productivity gain in perspective, here's a grounded estimate of how l
 | Phase | Manual estimate |
 |---|---|
 | Triage & reproduce — open the dashboard, isolate which sprint and which data files are involved | 20–30 min |
-| Investigate & confirm root cause — find the duplicate across two files, query GitLab for the authoritative answer, and work through the practical snags (the milestone's internal id vs. display id, the C/GOTS token-scoping nuance) | 60–90 min |
+| Investigate & confirm root cause — find the duplicate across two files, query GitLab for the authoritative answer, and work through the practical snags (the milestone's internal id vs. display id, the Cloud Services token-scoping nuance) | 60–90 min |
 | Dataset-wide scope check — write a scan to confirm the problem is isolated, not systemic | 20–30 min |
 | Design & implement the fix at the right layer | 45–75 min |
 | Verify — write a functional test, re-scan the full dataset, syntax-check | 30–60 min |

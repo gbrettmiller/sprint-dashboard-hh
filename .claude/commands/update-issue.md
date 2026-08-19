@@ -18,4 +18,4 @@ Run the following, passing all arguments through:
 python3 scripts/issue_update.py $ARGUMENTS
 ```
 
-Confirm the update succeeded and display any changed fields. Default project is 12421; provide explicit project_id for other projects (e.g. 10324 for MIRARS).
+Confirm the update succeeded and display any changed fields. Default project is 99001; provide explicit project_id for other projects (e.g. 91001 for ORBIT).

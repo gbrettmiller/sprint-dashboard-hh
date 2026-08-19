@@ -64,17 +64,17 @@ describe('isPastMonth / toReportMonthKey', () => {
 });
 
 describe('availableSprintDocs', () => {
-  it('offers all three docs for milestone-sourced sprints (CASS)', () => {
+  it('offers all three docs for milestone-sourced sprints (Cloud Services)', () => {
     expect(availableSprintDocs({ source: 'milestone' }))
       .toEqual({ releaseNotes: true, testPlan: true, sprintReport: true });
   });
 
-  it('offers only the sprint report for Jira-sourced sprints (P2DS)', () => {
+  it('offers only the sprint report for Jira-sourced sprints (Data Services)', () => {
     expect(availableSprintDocs({ source: 'jira' }))
       .toEqual({ releaseNotes: false, testPlan: false, sprintReport: true });
   });
 
-  it('offers release notes + sprint report for a reports-enabled standard group (STAR)', () => {
+  it('offers release notes + sprint report for a reports-enabled standard group (Service Management)', () => {
     expect(availableSprintDocs({ source: 'iteration' }, { reports: true }))
       .toEqual({ releaseNotes: true, testPlan: false, sprintReport: true });
   });
@@ -82,7 +82,7 @@ describe('availableSprintDocs', () => {
   it('offers nothing for iteration-sourced or unknown sprints', () => {
     expect(availableSprintDocs({ source: 'iteration' }))
       .toEqual({ releaseNotes: false, testPlan: false, sprintReport: false });
-    expect(availableSprintDocs({ source: 'iteration' }, { slug: 'star' })) // group without reports flag
+    expect(availableSprintDocs({ source: 'iteration' }, { slug: 'other' })) // group without reports flag
       .toEqual({ releaseNotes: false, testPlan: false, sprintReport: false });
     expect(availableSprintDocs({}))
       .toEqual({ releaseNotes: false, testPlan: false, sprintReport: false });
@@ -92,16 +92,16 @@ describe('availableSprintDocs', () => {
 });
 
 describe('reportsEnabledFor', () => {
-  it('is true for a project-mode project (CASS)', () => {
-    expect(reportsEnabledFor({ slug: 'cass' }, { slug: 'mirars' })).toBe(true);
+  it('is true for a project-mode project (Cloud Services)', () => {
+    expect(reportsEnabledFor({ slug: 'cloud-services' }, { slug: 'orbit' })).toBe(true);
   });
 
-  it('is true for a Jira-sourced standard group (P2DS)', () => {
-    expect(reportsEnabledFor({ slug: 'p2ds', source: 'jira' }, null)).toBe(true);
+  it('is true for a Jira-sourced standard group (Data Services)', () => {
+    expect(reportsEnabledFor({ slug: 'data-services', source: 'jira' }, null)).toBe(true);
   });
 
-  it('is true for a reports-enabled standard group (STAR)', () => {
-    expect(reportsEnabledFor({ slug: 'star', reports: true }, null)).toBe(true);
+  it('is true for a reports-enabled standard group (Service Management)', () => {
+    expect(reportsEnabledFor({ slug: 'service-management', reports: true }, null)).toBe(true);
   });
 
   it('is false for a plain standard group and no group', () => {
@@ -121,7 +121,7 @@ describe('officeHtml', () => {
 
 describe('buildReleaseNotesDoc', () => {
   const milestoneData = {
-    project_name: 'MIRARS',
+    project_name: 'ORBIT',
     milestone_title: 'v3.3.0',
     issues: [
       { iid: 2, title: 'Closed feature', state: 'closed', labels: ['type::improvement'],
@@ -133,8 +133,8 @@ describe('buildReleaseNotesDoc', () => {
 
   it('includes a project/milestone heading and a .doc filename', () => {
     const { filename, html } = buildReleaseNotesDoc(milestoneData);
-    expect(filename).toBe('MIRARS v3.3.0 Release Notes.doc');
-    expect(html).toContain('MIRARS v3.3.0 Release Notes');
+    expect(filename).toBe('ORBIT v3.3.0 Release Notes.doc');
+    expect(html).toContain('ORBIT v3.3.0 Release Notes');
   });
 
   it('includes only delivered (closed, non-excluded) issues and summarizes them', () => {
@@ -162,7 +162,7 @@ describe('buildReleaseNotesDoc', () => {
 
 describe('buildReleaseNotesFromSprint', () => {
   const sprint = {
-    title: 'ITSM FY26 Q1-4',
+    title: 'FY26 Q1-4',
     issues: [
       { iid: 5, title: 'RAMS closed', state: 'closed', project_name: 'rams', labels: [],
         description: '## Description\nAdds a RAMS export.\n\n## User Story\nAs a user...' },
@@ -174,13 +174,13 @@ describe('buildReleaseNotesFromSprint', () => {
   };
 
   it('uses the group subject + sprint title in the heading and filename', () => {
-    const { filename, html } = buildReleaseNotesFromSprint(sprint, 'STAR');
-    expect(filename).toBe('STAR ITSM FY26 Q1-4 Release Notes.doc');
-    expect(html).toContain('STAR ITSM FY26 Q1-4 Release Notes');
+    const { filename, html } = buildReleaseNotesFromSprint(sprint, 'Service Management');
+    expect(filename).toBe('Service Management FY26 Q1-4 Release Notes.doc');
+    expect(html).toContain('Service Management FY26 Q1-4 Release Notes');
   });
 
   it('groups delivered issues by project and summarizes them', () => {
-    const { html } = buildReleaseNotesFromSprint(sprint, 'STAR');
+    const { html } = buildReleaseNotesFromSprint(sprint, 'Service Management');
     // Projects appear as h2 headings (alphabetical: oams before rams).
     expect(html).toContain('<h2>oams</h2>');
     expect(html).toContain('<h2>rams</h2>');
@@ -190,27 +190,27 @@ describe('buildReleaseNotesFromSprint', () => {
   });
 
   it('excludes open and release-notes::no issues', () => {
-    const { html } = buildReleaseNotesFromSprint(sprint, 'STAR');
+    const { html } = buildReleaseNotesFromSprint(sprint, 'Service Management');
     expect(html).not.toContain('OAMS open');
     expect(html).not.toContain('Hidden');
   });
 
   it('handles a sprint with no delivered issues', () => {
-    const { html } = buildReleaseNotesFromSprint({ title: 'Empty', issues: [] }, 'STAR');
+    const { html } = buildReleaseNotesFromSprint({ title: 'Empty', issues: [] }, 'Service Management');
     expect(html).toContain('No completed issues');
   });
 
   it('falls back when an issue has no description', () => {
     const { html } = buildReleaseNotesFromSprint(
       { title: 'S', issues: [{ iid: 1, title: 'X', state: 'closed', project_name: 'oams', labels: [], description: '' }] },
-      'STAR',
+      'Service Management',
     );
     expect(html).toContain('No description provided.');
   });
 });
 
 describe('buildTestPlanDoc', () => {
-  const milestoneData = { project_name: 'MIRARS', milestone_title: 'v3.3.0' };
+  const milestoneData = { project_name: 'ORBIT', milestone_title: 'v3.3.0' };
   const reportJson = {
     title: 'v3.3.0',
     test_plan: [
@@ -220,7 +220,7 @@ describe('buildTestPlanDoc', () => {
 
   it('renders each entry with steps as a list', () => {
     const { filename, html } = buildTestPlanDoc(reportJson, milestoneData);
-    expect(filename).toBe('MIRARS v3.3.0 Test Plan.doc');
+    expect(filename).toBe('ORBIT v3.3.0 Test Plan.doc');
     expect(html).toContain('#5 Login works');
     expect(html).toContain('<li>Open login</li>');
     expect(html).toContain('<li>Enter creds</li>');
@@ -250,8 +250,8 @@ describe('buildSprintReportDoc', () => {
   };
 
   it('includes goals, summary, a metrics table and formatted dates', () => {
-    const { filename, html } = buildSprintReportDoc(reportJson, 'MIRARS');
-    expect(filename).toBe('MIRARS v3.3.0 Sprint Report.doc');
+    const { filename, html } = buildSprintReportDoc(reportJson, 'ORBIT');
+    expect(filename).toBe('ORBIT v3.3.0 Sprint Report.doc');
     expect(html).toContain('May 4, 2026');
     expect(html).toContain('May 15, 2026');
     expect(html).toContain('Deliver the export feature.');
@@ -278,8 +278,8 @@ describe('buildMonthlyReportDoc', () => {
   };
 
   it('labels the month and includes every sprint block', () => {
-    const { filename, html } = buildMonthlyReportDoc(reportJson, 'MIRARS');
-    expect(filename).toBe('MIRARS Monthly Report May 2026.doc');
+    const { filename, html } = buildMonthlyReportDoc(reportJson, 'ORBIT');
+    expect(filename).toBe('ORBIT Monthly Report May 2026.doc');
     expect(html).toContain('May 2026');
     expect(html).toContain('v1.0.0');
     expect(html).toContain('v1.1.0');
@@ -288,7 +288,7 @@ describe('buildMonthlyReportDoc', () => {
   });
 
   it('handles a month with no sprints', () => {
-    const { html } = buildMonthlyReportDoc({ month: '2026-05', sprints: [] }, 'MIRARS');
+    const { html } = buildMonthlyReportDoc({ month: '2026-05', sprints: [] }, 'ORBIT');
     expect(html).toContain('No completed sprints');
   });
 });

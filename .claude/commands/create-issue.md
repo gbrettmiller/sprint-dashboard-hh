@@ -46,6 +46,6 @@ python3 scripts/issue_create.py $ARGUMENTS --title "<title>" --description "<for
 
 Omit `--labels` entirely if the user selected "Other".
 
-Default project is 12421 (sprint-metrics-dashboard). Pass an explicit project_id as the first argument to target a different project (e.g. `10324` for MIRARS).
+Default project is 99001 (sprint-metrics-dashboard). Pass an explicit project_id as the first argument to target a different project (e.g. `91001` for ORBIT).
 
 After creation, display the issue number and URL.

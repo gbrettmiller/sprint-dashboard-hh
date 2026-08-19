@@ -9,11 +9,11 @@ produces NO Word files. Release notes are built client-side from the existing
 milestone JSON and are intentionally NOT generated here.
 
 What it writes (JSON only, committed via scripts/api_commit.py in CI):
-    Project-mode groups (CASS):
+    Project-mode groups (Cloud Services):
         public/data/{group}/{project}/reports/sprints/{milestone-slug}.json
         public/data/{group}/{project}/reports/months/{YYYY-MM}.json
     Standard groups reading local sprint JSON — group-scoped, sprint report only:
-        Jira-sourced (P2DS) and iteration groups opted in via "reports": true (STAR).
+        Jira-sourced (Data Services) and iteration groups opted in via "reports": true (Service Management).
         public/data/{group}/reports/sprints/{sprint-slug}.json
         public/data/{group}/reports/months/{YYYY-MM}.json
 
@@ -22,8 +22,8 @@ Scope:
       sprint milestones are those with start_date >= the group's transition_date;
       per-issue descriptions drive test plans + release notes.
     - Standard groups reading local sprint JSON (data/{group}/fy*/): those with
-      source == "jira" (P2DS) and iteration groups opted in via "reports": true
-      (STAR). Sprint + monthly reports only. No test plan is generated here;
+      source == "jira" (Data Services) and iteration groups opted in via "reports": true
+      (Service Management). Sprint + monthly reports only. No test plan is generated here;
       Release Notes are built client-side from the sprint issues.
     A sprint is "completed" when its end/due date is in the past. Monthly reports
     are generated only for calendar months strictly before the current month.
@@ -37,11 +37,11 @@ Environment (CI/CD variables — no hardcoded values; the script errors if unset
     GITLAB_URL          GitLab instance URL
     GITLAB_TOKEN        API token with read_api scope
     ANTHROPIC_API_KEY   Anthropic-compatible API key (test steps + goals/summary).
-                        On the CDSO network this is an Ask Sage key.
+                        On the internal network this is an Ask Sage key.
 Optional:
     ANTHROPIC_BASE_URL  Anthropic-compatible endpoint. The CI runner has no public
                         internet egress, so set this to the Ask Sage gateway, e.g.
-                        https://api.genai.army.mil/server/anthropic. When unset the
+                        https://ai-gateway.example.com/server/anthropic. When unset the
                         SDK defaults to api.anthropic.com (unreachable from CI).
     ANTHROPIC_MODEL     Model id to use (default: claude-haiku-4-5-20251001). Override
                         if the gateway exposes Claude under a different id.
@@ -504,8 +504,8 @@ def write_monthly_reports(months_dir, sprint_cache, today, group_slug, project_s
 # Local-sprint processing (reads locally collected sprint JSON)
 #
 # Used by standard (non project-mode) groups that store their sprint metrics as
-# local JSON: Jira-sourced groups (P2DS) and GitLab iteration groups opted in via
-# `"reports": true` in groups.json (STAR). Both share the identical output layout,
+# local JSON: Jira-sourced groups (Data Services) and GitLab iteration groups opted in via
+# `"reports": true` in groups.json (Service Management). Both share the identical output layout,
 # group-scoped: data/{group}/reports/{sprints,months}/.
 # ---------------------------------------------------------------------------
 def load_local_sprints(group_slug):
@@ -535,8 +535,8 @@ def load_local_sprints(group_slug):
 def process_local_group(get_ai, group, today, force, dry_run):
     """Generate sprint + monthly reports for a standard group from local sprint JSON.
 
-    Covers Jira-sourced groups (P2DS) and iteration-sourced GitLab groups opted in
-    via `"reports": true` (STAR). Sources completed-issue titles + metrics from the
+    Covers Jira-sourced groups (Data Services) and iteration-sourced GitLab groups opted in
+    via `"reports": true` (Service Management). Sources completed-issue titles + metrics from the
     locally collected sprint JSON. No test plan is generated here (Release Notes are
     built client-side from the sprint issues; see js/core/reports.js). Output layout
     mirrors project-mode groups but is group-scoped: data/{group}/reports/{sprints,months}/.
@@ -672,8 +672,8 @@ def main():
             for project in group.get("projects", []):
                 written += process_project(client, get_ai, group, project, today, force, args.dry_run)
         elif group.get("source") == "jira" or group.get("reports"):
-            # Jira-sourced groups (P2DS) and iteration groups opted in via
-            # "reports": true (STAR) both read local sprint JSON.
+            # Jira-sourced groups (Data Services) and iteration groups opted in via
+            # "reports": true (Service Management) both read local sprint JSON.
             log.info("=" * 60)
             log.info("Group %s", group["name"])
             written += process_local_group(get_ai, group, today, force, args.dry_run)

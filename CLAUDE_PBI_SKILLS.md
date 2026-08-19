@@ -277,13 +277,13 @@ export GITLAB_GROUP="12345"  # tinkers group
 2. **Test `/read-issue`**:
    ```bash
    # Read a known issue
-   python3 scripts/issue_read.py 10324 1183
+   python3 scripts/issue_read.py 91001 1183
 
    # Read with comments
-   python3 scripts/issue_read.py 10324 1183 --show-comments
+   python3 scripts/issue_read.py 91001 1183 --show-comments
 
    # Test error handling (invalid issue)
-   python3 scripts/issue_read.py 10324 999999
+   python3 scripts/issue_read.py 91001 999999
    ```
 
 3. **Test `/list-issues`**:
@@ -292,19 +292,19 @@ export GITLAB_GROUP="12345"  # tinkers group
    python3 scripts/issue_list.py --group 18274 --state opened
 
    # List with labels filter
-   python3 scripts/issue_list.py --project 10324 --labels "type::bug"
+   python3 scripts/issue_list.py --project 91001 --labels "type::bug"
 
    # Test JSON output
-   python3 scripts/issue_list.py --project 10324 --format json --limit 5
+   python3 scripts/issue_list.py --project 91001 --format json --limit 5
    ```
 
 4. **Test `/create-issue`**:
    ```bash
    # Interactive mode
-   python3 scripts/issue_create.py 10324
+   python3 scripts/issue_create.py 91001
 
    # Non-interactive mode
-   python3 scripts/issue_create.py 10324 \
+   python3 scripts/issue_create.py 91001 \
      --title "Test issue" \
      --description "Test description" \
      --labels "test"
@@ -313,31 +313,31 @@ export GITLAB_GROUP="12345"  # tinkers group
 5. **Test `/implement-issue`**:
    ```bash
    # Basic workflow
-   python3 scripts/issue_implement.py 10324 1183
+   python3 scripts/issue_implement.py 91001 1183
 
    # With assignment
    export GITLAB_USERNAME="your-username"
-   python3 scripts/issue_implement.py 10324 1183 --assign-to-me
+   python3 scripts/issue_implement.py 91001 1183 --assign-to-me
    ```
 
 ### Integration Testing (via Claude):
 
 ```bash
 # From Claude Code prompt
-/read-issue 10324 1183
-/list-issues --project 10324 --state opened
-/create-issue 10324 --title "Test from Claude"
-/implement-issue 10324 1183
+/read-issue 91001 1183
+/list-issues --project 91001 --state opened
+/create-issue 91001 --title "Test from Claude"
+/implement-issue 91001 1183
 ```
 
 ### End-to-End Workflow Test:
 
-1. List open issues: `/list-issues --project 10324 --state opened`
-2. Read specific issue: `/read-issue 10324 <iid> --show-comments`
-3. Start implementation: `/implement-issue 10324 <iid> --assign-to-me`
+1. List open issues: `/list-issues --project 91001 --state opened`
+2. Read specific issue: `/read-issue 91001 <iid> --show-comments`
+3. Start implementation: `/implement-issue 91001 <iid> --assign-to-me`
 4. [Make code changes]
 5. Create commit with issue reference
-6. Create new issue: `/create-issue 10324 --title "Follow-up task"`
+6. Create new issue: `/create-issue 91001 --title "Follow-up task"`
 
 ### Expected Outcomes:
 - All scripts execute without errors in local environment

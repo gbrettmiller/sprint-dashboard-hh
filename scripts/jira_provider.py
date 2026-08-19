@@ -2,7 +2,7 @@
 """
 Jira data provider: turns Jira Software sprints into the dashboard's standard
 sprint-record dict — the exact shape produced by backfill.py / scheduled_update.py
-build_sprint_record(). This lets a Jira-backed group (P2DS) render on the frontend
+build_sprint_record(). This lets a Jira-backed group (Data Services) render on the frontend
 with no changes to the JS, which is entirely data-source-agnostic.
 
 Responsibilities (Jira -> record only):
@@ -19,7 +19,7 @@ Config comes from the group dict in groups.json:
     {
       "source": "jira",
       "jira_board_id": 42,                       # required: numeric Scrum board id
-      "jira_project_key": "P2DS",                # optional: for logging/validation
+      "jira_project_key": "DSVC",                 # optional: for logging/validation
       "jira_story_points_field": "customfield_10016",  # optional: weight source
       "jira_type_map": { "story": "type::new-feature" }  # optional: overrides
     }
@@ -129,7 +129,7 @@ def get_backfill_sprints(client, board_id, earliest_date):
 # Issue mapping
 # ---------------------------------------------------------------------------
 def _iid_from_key(key):
-    """P2DS-123 -> 123. Falls back to 0 if the key has no numeric suffix."""
+    """DSVC-123 -> 123. Falls back to 0 if the key has no numeric suffix."""
     if key and "-" in key:
         tail = key.rsplit("-", 1)[-1]
         if tail.isdigit():
@@ -216,7 +216,7 @@ def _map_issue(client, issue, sprint, story_points_field, type_map):
     except (TypeError, ValueError):
         pass
 
-    # P2DS uses the Jira project like a group and its components like the
+    # Data Services uses the Jira project like a group and its components like the
     # per-project split (mirrors GitLab standard-mode groups). Surface the
     # first component as project_name so the dashboard's project column,
     # filter chips, sort, and velocity all group by component.

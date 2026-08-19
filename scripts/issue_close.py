@@ -6,19 +6,19 @@ Usage:
     python3 scripts/issue_close.py [project_id] <issue_iid> [options]
 
 Examples:
-    # Using GITLAB_PROJECT env var (default: 12421)
+    # Using GITLAB_PROJECT env var (default: 99001)
     python3 scripts/issue_close.py 1183
     python3 scripts/issue_close.py 1183 --note "Implemented in commit abc123"
     python3 scripts/issue_close.py 1183 --note "Fixed and verified" --add-labels "status::done,verified"
 
     # Explicit project override
-    python3 scripts/issue_close.py 10324 1183 --note "Different project issue closed"
+    python3 scripts/issue_close.py 91001 1183 --note "Different project issue closed"
 
 Environment Variables:
     GITLAB_URL         - GitLab instance URL (default: https://gitlab.com)
     GITLAB_TOKEN       - API token with api scope (required)
     GITLAB_SSL_VERIFY  - Enable SSL verification (default: true)
-    GITLAB_PROJECT     - Default project ID (default: 12421)
+    GITLAB_PROJECT     - Default project ID (default: 99001)
 """
 
 import sys
@@ -47,13 +47,13 @@ Examples:
   %(prog)s 1183 --note "Fixed and verified" --add-labels "status::done,verified"
 
   # Explicit project override
-  %(prog)s 10324 1183 --note "Different project issue"
+  %(prog)s 91001 1183 --note "Different project issue"
 
 Environment Variables:
   GITLAB_URL         GitLab instance URL (default: https://gitlab.com)
   GITLAB_TOKEN       API token with api scope (required)
   GITLAB_SSL_VERIFY  Enable SSL verification (default: true)
-  GITLAB_PROJECT     Default project ID (default: 12421)
+  GITLAB_PROJECT     Default project ID (default: 99001)
         """
     )
 

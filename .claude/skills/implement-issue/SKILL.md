@@ -2,7 +2,7 @@ Implement a GitLab issue end-to-end: read requirements, branch, code, track stat
 
 Usage: /implement-issue <issue_iid> [--assign-to-me] [project_id <iid>]
 
-Default project is 12421 (sprint-metrics-dashboard). Pass an explicit project_id as the first positional argument to target another project (e.g. `10324` for MIRARS).
+Default project is 99001 (sprint-metrics-dashboard). Pass an explicit project_id as the first positional argument to target another project (e.g. `91001` for ORBIT).
 
 ## Workflow
 

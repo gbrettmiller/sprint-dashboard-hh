@@ -235,7 +235,7 @@ function renderCardsForGroup(model) {
 }
 
 // Labeled header for the inline dashboard so the detail panel is tied to the
-// selected project (e.g. "CASS" / "PPMT — Sprint Dashboard"). Home-page only.
+// selected project (e.g. "Cloud Services" / "PULSE — Sprint Dashboard"). Home-page only.
 function renderDashboardHeader(group, project) {
   const header = $('dashboard-header');
   header.innerHTML = '';

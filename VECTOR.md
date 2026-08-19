@@ -90,7 +90,7 @@ A single static site that makes sprint health visible across all Tinkers groups 
 
 ## Constraints
 
-- **Environment:** Internal CDSO GitLab at `git.example.com`. Users must be on NIPR, VPN, or AVD. DoD PKI certificates required for SSL verification.
+- **Environment:** Internal GitLab at `git.example.com`. Users must be on NIPR, VPN, or AVD. DoD PKI certificates required for SSL verification.
 - **Classification:** CUI-CTI (Controlled Unclassified Information - Cyber Threat Intelligence). Governs what data appears in the dashboard and how it is handled.
 - **Commit Signing:** The GitLab instance requires signed commits. The data pipeline uses the GitLab Commits API (`api_commit.py`) to bypass this requirement for automated nightly commits.
 - **No Build Step:** The frontend must remain pure static HTML/CSS/JS. No bundler, transpiler, or build system. Deployment is direct from `public/`.
