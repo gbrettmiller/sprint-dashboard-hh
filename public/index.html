@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MilTech Sprint Metrics</title>
+<link rel="icon" type="image/png" href="img/miltech-logo.png">
+<script src="js/chart.min.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="container">
+  <header>
+    <h1>MilTech Sprint Metrics</h1>
+    <p>These dashboards show key metrics and other information from MilTech sprints. Click the one you want to see to get the full picture.</p>
+  </header>
+
+  <div id="loading" class="empty-msg" aria-live="polite">Loading groups&hellip;</div>
+
+  <main id="main-content">
+    <div id="home-filter" class="home-filter" style="display:none">
+      <span class="filter-label">Filter:</span>
+      <div class="project-chips" role="radiogroup" aria-label="Sprint filter"></div>
+    </div>
+    <div id="group-tabs" class="group-tabs" role="tablist" aria-label="Groups" style="display:none"></div>
+    <div id="groups-grid" class="groups-grid" role="list" style="display:none"></div>
+    <div id="cards-empty" class="empty-msg" style="display:none"></div>
+    <div id="dashboard-header" class="dashboard-header" hidden></div>
+    <div id="dashboard-root" class="inline-dashboard" role="tabpanel"></div>
+  </main>
+</div>
+
+<script type="module" src="js/home.js"></script>
+</body>
+</html>

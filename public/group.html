@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sprint Metrics Dashboard</title>
+<link rel="icon" type="image/png" href="img/miltech-logo.png">
+<script src="js/chart.min.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="container">
+  <header>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a> <span aria-hidden="true">&raquo;</span>
+      <span id="breadcrumb-group" aria-current="page">Group</span>
+    </nav>
+    <h1 id="page-title">Sprint Metrics Dashboard</h1>
+    <p>This dashboard shows key metrics and other information from team sprints.</p>
+  </header>
+
+  <main id="main-content">
+    <!-- Dashboard shell (nav-bar + #dashboard) is injected here by js/dashboard.js -->
+    <div id="dashboard-root"></div>
+  </main>
+</div>
+
+<script type="module" src="js/group.js"></script>
+</body>
+</html>

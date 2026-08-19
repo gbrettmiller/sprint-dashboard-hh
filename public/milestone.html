@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milestone Detail - Sprint Metrics Dashboard</title>
+<link rel="icon" type="image/png" href="img/miltech-logo.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="container">
+  <header>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Dashboard</a> <span aria-hidden="true">&raquo;</span>
+      <a id="group-link" href="group.html">Group</a> <span aria-hidden="true">&raquo;</span>
+      <a id="releases-link" href="releases.html">All Releases</a> <span aria-hidden="true">&raquo;</span>
+      <span id="breadcrumb-current" aria-current="page">Milestone</span>
+    </nav>
+    <h1 id="page-heading"><span id="heading-project"></span> <span id="heading-title">Loading&hellip;</span></h1>
+    <p id="milestone-meta" class="text-muted"></p>
+  </header>
+
+  <div id="loading" class="empty-msg" aria-live="polite">Loading milestone data&hellip;</div>
+
+  <main id="main-content">
+    <div id="milestone-content" style="display:none">
+      <div class="action-bar">
+        <a id="btn-all-releases" class="action-btn secondary" href="releases.html">All Releases</a>
+      </div>
+
+      <div id="issues-list"></div>
+    </div>
+  </main>
+</div>
+
+<script type="module" src="js/milestone.js"></script>
+</body>
+</html>

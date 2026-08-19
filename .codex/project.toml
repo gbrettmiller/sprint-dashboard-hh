@@ -1,0 +1,14 @@
+# Codex project configuration for sprint-metrics-dashboard
+
+# This file keeps project-specific settings minimal and defers to the
+# global Codex configuration in ~/.codex/config.toml for the model and
+# AskSage/OpenAI gateway.
+
+[project]
+name = "sprint-metrics-dashboard"
+
+# Trust this workspace for shell commands that operate inside the
+# repository, while still relying on Codex's approval policy for
+# potentially risky operations.
+trust_level = "trusted"
+

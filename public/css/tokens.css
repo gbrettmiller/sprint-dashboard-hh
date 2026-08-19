@@ -1,0 +1,62 @@
+:root {
+    --purple: #6b4fbb;
+    --purple-light: #e1d8f6;
+    --purple-dark: #4a357e;
+    --purple-faint: rgba(107, 79, 187, 0.03);
+    --purple-overlay: rgba(107, 79, 187, 0.08);
+    --purple-glow: rgba(107, 79, 187, 0.15);
+    --bg: #f5f5f7;
+    --bg-hover: #fafafc;
+    --card: #ffffff;
+    --white: #ffffff;
+    --text: #1f1f1f;
+    --text-muted: #636378;
+    --border: #e0e0e6;
+    --green: #2da160;
+    --green-light: #e6f5ec;
+    --red: #dd2b0e;
+    --blue: #1f75cb;
+    --orange: #c17d10;
+    --gray: #89888d;
+    --gray-light: #bbbbbb;
+    --radius: 8px;
+    --radius-sm: 12px;   /* badges, small pills */
+    --radius-pill: 999px; /* fully rounded chips */
+    --focus-ring: 0 0 0 3px rgba(107, 79, 187, 0.4);
+
+    /* Typography scale */
+    --fs-2xs: 10px;
+    --fs-xs: 11px;
+    --fs-sm: 12px;
+    --fs-md: 13px;
+    --fs-base: 14px;
+    --fs-lg: 16px;
+    --fs-xl: 18px;
+    --fs-2xl: 20px;
+    --fs-3xl: 24px;
+    --fs-4xl: 28px;
+    --fs-5xl: 32px;
+
+    /* Font weights */
+    --fw-normal: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /* Line heights */
+    --lh-tight: 1.2;
+    --lh-normal: 1.5;
+    --lh-relaxed: 1.6;
+
+    /* Spacing scale (4px base) — for margin, padding, and gap */
+    --space-3xs: 2px;
+    --space-2xs: 4px;
+    --space-xs: 8px;
+    --space-sm: 12px;
+    --space-md: 16px;
+    --space-lg: 20px;
+    --space-xl: 24px;
+    --space-2xl: 32px;
+    --space-3xl: 48px;
+    --space-4xl: 64px;
+  }

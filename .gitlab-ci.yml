@@ -1,0 +1,173 @@
+stages:
+  - collect
+  - test
+  - pages
+
+# ---------------------------------------------------------------------------
+# Templates
+# ---------------------------------------------------------------------------
+.python_setup: &python_setup
+  image: python:3.12-slim
+  variables:
+    GIT_SSL_NO_VERIFY: "1"
+    GITLAB_SSL_VERIFY: "false"
+    # Jira (P2DS data source). JIRA_URL/JIRA_TOKEN come from CI/CD variables and
+    # inject automatically. SSL bypass by default; enabled below when DOD_CA_CERT
+    # is configured (jira.dso.army.mil chains to the DoD CA bundle).
+    JIRA_SSL_VERIFY: "false"
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq git ca-certificates > /dev/null
+    # Install Python packages FIRST (using default system certs for PyPI access)
+    - pip install --quiet -r scripts/requirements.txt
+    # THEN configure DoD certificates (only needed for GitLab API access)
+    - |
+      if [ -n "$DOD_CA_CERT" ]; then
+        echo "Configuring DoD CA certificates from CI/CD variable..."
+
+        # Create cert directory
+        mkdir -p /tmp/certs
+
+        # Handle both file variable and string variable
+        if [ -f "$DOD_CA_CERT" ]; then
+          # File variable - GitLab wrote content to a file
+          echo "Detected file variable at: $DOD_CA_CERT"
+          CERT_FILE="$DOD_CA_CERT"
+        else
+          # String variable - write the content directly
+          echo "Detected string variable, writing to temporary file..."
+          printf "%s" "$DOD_CA_CERT" > /tmp/certs/dod_bundle.crt
+          CERT_FILE="/tmp/certs/dod_bundle.crt"
+        fi
+
+        # Verify certificate file
+        if [ -f "$CERT_FILE" ]; then
+          FILE_SIZE=$(stat -c%s "$CERT_FILE" 2>/dev/null || echo 0)
+          CERT_COUNT=$(grep -c "BEGIN CERTIFICATE" "$CERT_FILE" 2>/dev/null || echo 0)
+          echo "Certificate file size: $FILE_SIZE bytes"
+          echo "Certificate bundle contains: $CERT_COUNT certificate(s)"
+
+          if [ "$CERT_COUNT" -gt 0 ]; then
+            # Append DoD certs to system bundle (preserves PyPI access)
+            cat "$CERT_FILE" >> /etc/ssl/certs/ca-certificates.crt
+
+            # Set Python certificate variables to use combined bundle
+            export REQUESTS_CA_BUNDLE="/etc/ssl/certs/ca-certificates.crt"
+            export SSL_CERT_FILE="/etc/ssl/certs/ca-certificates.crt"
+            export CURL_CA_BUNDLE="/etc/ssl/certs/ca-certificates.crt"
+
+            # Enable SSL verification for GitLab and Jira
+            export GITLAB_SSL_VERIFY="true"
+            export JIRA_SSL_VERIFY="true"
+            export GIT_SSL_NO_VERIFY="0"
+
+            echo "✓ SSL verification enabled with DoD certificates"
+            echo "  DoD certificates appended to system bundle"
+            echo "  Combined bundle: $(grep -c "BEGIN CERTIFICATE" /etc/ssl/certs/ca-certificates.crt) total certificates"
+          else
+            echo "⚠ WARNING: No valid certificates found in bundle, using SSL bypass"
+          fi
+        else
+          echo "⚠ WARNING: Certificate file not found, using SSL bypass"
+        fi
+      else
+        echo "⚠ DOD_CA_CERT not set, using SSL verification bypass"
+      fi
+
+# ---------------------------------------------------------------------------
+# Test — Core unit tests (js/core/). Runs on every branch push; blocks pages deployment.
+# ---------------------------------------------------------------------------
+test:
+  stage: test
+  image: node:lts-alpine
+  script:
+    - npm ci
+    - npm test
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+      when: never
+    - if: $CI_COMMIT_BRANCH
+
+# ---------------------------------------------------------------------------
+# Backfill – manual one-time job
+# ---------------------------------------------------------------------------
+backfill:
+  <<: *python_setup
+  stage: collect
+  rules:
+    - when: manual
+      allow_failure: true
+  script:
+    - python3 scripts/backfill.py
+    - |
+      FILES=$(find public/data -name '*.json' -type f)
+      if [ -z "$FILES" ]; then
+        echo "No data files to commit."
+      else
+        python3 scripts/api_commit.py "chore: backfill sprint data" $FILES
+      fi
+
+# ---------------------------------------------------------------------------
+# Scheduled update – runs on all configured pipeline schedules:
+#   - hourly during business hours (configured in GitLab UI → Build → Pipeline schedules)
+#   - nightly at 2 AM
+# ---------------------------------------------------------------------------
+scheduled_update:
+  <<: *python_setup
+  stage: collect
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+  script:
+    - python3 scripts/scheduled_update.py
+    - |
+      FILES=$(find public/data -name '*.json' -type f)
+      if [ -z "$FILES" ]; then
+        echo "No data files to commit."
+      else
+        python3 scripts/api_commit.py "chore: scheduled sprint data update" $FILES
+      fi
+
+# ---------------------------------------------------------------------------
+# Generate reports – AI report JSON (test plans + sprint/monthly reports) for
+# completed sprints and past months. Runs on schedules, AFTER scheduled_update
+# (sequenced via needs) so the two jobs never commit concurrently.
+#
+# Idempotent: skips sprints/months whose JSON already exists, so Anthropic usage
+# is near-zero on routine runs (cost only when a sprint completes / a month ends).
+#
+# Requires the ANTHROPIC_API_KEY CI/CD variable. allow_failure keeps a missing
+# key or AI error from blocking the data pipeline; the key is only needed when
+# there is new work to generate.
+# ---------------------------------------------------------------------------
+generate_reports:
+  <<: *python_setup
+  stage: collect
+  needs: ["scheduled_update"]
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+      allow_failure: true
+  script:
+    - python3 scripts/generate_reports.py
+    - |
+      FILES=$(find public/data -path '*/reports/*' -name '*.json' -type f)
+      if [ -z "$FILES" ]; then
+        echo "No report files to commit."
+      else
+        python3 scripts/api_commit.py "chore: update generated reports" $FILES
+      fi
+
+# ---------------------------------------------------------------------------
+# GitLab Pages deployment
+# Runs on any push to default branch (including API commits from collect jobs)
+# ---------------------------------------------------------------------------
+pages:
+  stage: pages
+  image: alpine:latest
+  script:
+    - echo "Deploying GitLab Pages from public/"
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+      when: never
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

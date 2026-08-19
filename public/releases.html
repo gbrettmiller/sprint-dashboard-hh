@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Releases - Sprint Metrics Dashboard</title>
+<link rel="icon" type="image/png" href="img/miltech-logo.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="container">
+  <header>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Dashboard</a> <span aria-hidden="true">&raquo;</span>
+      <a id="group-link" href="group.html">Group</a> <span aria-hidden="true">&raquo;</span>
+      <span aria-current="page">All Releases</span>
+    </nav>
+    <h1>All Releases</h1>
+    <p id="releases-meta" class="text-muted"></p>
+  </header>
+
+  <div id="loading" class="empty-msg" aria-live="polite">Loading release data&hellip;</div>
+
+  <main id="main-content">
+    <div id="releases-content" style="display:none"></div>
+  </main>
+</div>
+
+<script type="module" src="js/releases.js"></script>
+</body>
+</html>
