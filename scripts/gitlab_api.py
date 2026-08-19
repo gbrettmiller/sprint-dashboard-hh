@@ -20,6 +20,12 @@ import logging
 from urllib.parse import quote as urlquote
 
 import requests
+from dotenv import load_dotenv
+
+# Loads .env from the repo root (walks up from this file) so GITLAB_URL/GITLAB_TOKEN/
+# GITLAB_PROJECT persist across demo sessions without re-exporting each time. Never
+# overrides variables already set in the shell environment.
+load_dotenv()
 
 # ---------------------------------------------------------------------------
 # Configuration
