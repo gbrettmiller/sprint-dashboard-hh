@@ -47,7 +47,7 @@ This is a static GitLab Pages dashboard that displays sprint metrics collected f
 - Per-project sprint tracking: groups with `mode: "projects"` show per-project cards on the home page with project-scoped dashboards
 - Per-group dashboard pages with direct-linkable URLs (`group.html?group={slug}` or `group.html?group={slug}&project={project-slug}`)
 - Multi-group support (Cloud Services, Service Management, Data Services) — each group has its own dashboard URL
-- Branding: Tinkers favicon on all pages, group/project logos on home page cards
+- Branding: Tinkerers favicon on all pages, group/project logos on home page cards
 - Sprint navigation by fiscal year and month
 - Sprint progress summary with visual progress bar, time remaining, work complete %, and scope change %
 - Burndown chart (issue count or story points) with ideal line accounting for weekends/holidays
@@ -235,7 +235,7 @@ Required CI/CD variables (Settings > CI/CD > Variables):
 - **Multi-Group:** Each group has its own dashboard page at `group.html?group={slug}`. Project-mode groups use `group.html?group={slug}&project={project-slug}`. The home page (`index.html`) lists all groups with sprint status cards and filter chips. `resolveGroupAndProject()` in `js/services/api.js` parses URL parameters and resolves the active group/project. The `dataPath()` helper scopes all data fetches to the active group (and project if applicable). Python scripts loop over all configured groups. Falls back to `GITLAB_GROUP` env var for single-group backward compatibility.
 - **Page Navigation:** Breadcrumbs follow the pattern: Home > Group Name > All Releases > Milestone. For project-mode groups, breadcrumbs show "Group: Project". All pages resolve names from `groups.json`. The milestone and releases pages receive the group via `?group=` URL parameter. For project-mode groups, the breadcrumb group link points to `index.html` instead of `group.html`.
 - **Home Page Filter:** Cards are tagged with `data-sprint-state` (active, ended, upcoming, none). Filter chips ("All Projects" / "Active Sprints") show/hide cards. Section headers hide when all their cards are filtered out. Empty state message shown when no cards match.
-- **Branding:** Tinkers favicon on all pages via `<link rel="icon">`. Group and project logos on home page cards, configured via `logo` field in `groups.json`. Projects without a `logo` fall back to their parent group's logo.
+- **Branding:** Tinkerers favicon on all pages via `<link rel="icon">`. Group and project logos on home page cards, configured via `logo` field in `groups.json`. Projects without a `logo` fall back to their parent group's logo.
 - **Empty Iteration Filtering:** GitLab iteration cadences auto-generate placeholder iterations with null titles. Python scripts skip these during data collection (`backfill.py` and `scheduled_update.py`). Frontend has a defensive fallback displaying date range if a null title is encountered.
 - **Milestone Data Collection:** Python scripts fetch project-level milestones via `/api/v4/projects/:id/milestones` and store issue data with full descriptions for section parsing. Projects are discovered from sprint issue data. Milestone index is sorted by `due_date` descending.
 - **Releases Page:** Displays milestones in reverse chronological order, limited to 5 most recent per project with an expand/collapse toggle.

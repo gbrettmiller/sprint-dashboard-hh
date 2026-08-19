@@ -8,7 +8,7 @@ project:
 
 owner:
   name: alex.r.chen.ctr
-  team: Tinkers / Cloud Services
+  team: Tinkerers / Cloud Services
 
 knowledge:
   research: ./vector/research/
@@ -61,16 +61,16 @@ These are Investiture defaults. They apply to every project using this framework
 
 ## Problem Statement
 
-Tinkers software teams deliver work in sprints tracked through GitLab — and, for some teams, Jira. Sprint health data — burndown rates, velocity, issue breakdown by type, and milestone progress — is not visible without navigating each tool's UI across multiple groups, projects, and boards. Team leads and program managers need a consolidated, accessible view that surfaces this data at a glance, regardless of the underlying tracker, and supports sprint review conversations.
+Tinkerers software teams deliver work in sprints tracked through GitLab — and, for some teams, Jira. Sprint health data — burndown rates, velocity, issue breakdown by type, and milestone progress — is not visible without navigating each tool's UI across multiple groups, projects, and boards. Team leads and program managers need a consolidated, accessible view that surfaces this data at a glance, regardless of the underlying tracker, and supports sprint review conversations.
 
 ## Target Audience
 
-- **Primary:** Tinkers team leads, program managers, and developers who participate in sprint planning and review. Must be on NIPR, VPN, or AVD to access.
+- **Primary:** Tinkerers team leads, program managers, and developers who participate in sprint planning and review. Must be on NIPR, VPN, or AVD to access.
 - **Secondary:** Claude Code agent (via CLAUDE.md) — the dashboard is developed with AI-assisted tooling and the project includes a CLI-integrated issue management workflow.
 
 ## Core Value Proposition
 
-A single static site that makes sprint health visible across all Tinkers groups and projects without requiring GitLab or Jira access or login. Data is collected automatically from each team's tracker and rendered from pre-committed JSON files. Any team member on NIPR can open it in a browser and see the current sprint state, burndown trend, velocity history, and issue breakdown — with no authentication, no configuration, and no build step.
+A single static site that makes sprint health visible across all Tinkerers groups and projects without requiring GitLab or Jira access or login. Data is collected automatically from each team's tracker and rendered from pre-committed JSON files. Any team member on NIPR can open it in a browser and see the current sprint state, burndown trend, velocity history, and issue breakdown — with no authentication, no configuration, and no build step.
 
 ## What This Is Not
 
