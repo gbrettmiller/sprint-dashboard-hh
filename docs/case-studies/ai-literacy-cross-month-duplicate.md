@@ -204,5 +204,5 @@ def remove_sprint_from_other_month_files(target_path: Path, sprint_id):
 ```
 
 **Links:**
-- Issue: [#34 — Fix: cross-month sprint duplicate](https://code.cdso.army.mil/miltech/cots-gots/sprint-metrics-dashboard/-/work_items/34)
+- Issue: [#34 — Fix: cross-month sprint duplicate](https://git.example.com/tinkers/sprint-metrics-dashboard/-/work_items/34)
 - Fix commit: `5637327e2` · Merge: `0d2592d4e`

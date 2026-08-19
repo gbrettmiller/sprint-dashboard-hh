@@ -4,7 +4,7 @@ A static dashboard for displaying sprint metrics, deployed via GitLab Pages. Dat
 
 ## Quick Start
 
-> **Note:** This dashboard connects to an internal GitLab instance at `code.cdso.army.mil`. You must be on NIPR, VPN, or AVD.
+> **Note:** This dashboard connects to an internal GitLab instance at `git.example.com`. You must be on NIPR, VPN, or AVD.
 
 ### View the dashboard locally
 
@@ -24,7 +24,7 @@ To read and manage GitLab issues from the command line or with Claude Code:
 pip install -r scripts/requirements.txt
 
 # Add to ~/.bashrc or ~/.zshrc so these persist across sessions:
-export GITLAB_URL="https://code.cdso.army.mil"
+export GITLAB_URL="https://git.example.com"
 export GITLAB_SSL_VERIFY="true"
 export GITLAB_TOKEN="<your-personal-access-token>"  # Personal access token with api scope (Profile > Access Tokens)
 export GITLAB_USERNAME="your.username"              # Optional: enables --assign-to-me flag
@@ -43,7 +43,7 @@ git pull origin master
 - **Multi-Group Support**: Home page lists all groups with active sprint status; each group has its own dashboard at a direct-linkable URL (`group.html?group={slug}`)
 - **Per-Project Sprint Tracking**: Groups can use `mode: "projects"` to track sprints per project using Milestones instead of group-level Iterations. Each project gets its own card on the home page and its own dashboard (`group.html?group={slug}&project={project-slug}`)
 - **Home Page Filtering**: Filter chips to show all projects or only those with active sprints
-- **Branding**: MilTech favicon on all pages; group and project logos on home page cards (configured via `logo` field in `groups.json`)
+- **Branding**: Tinkers favicon on all pages; group and project logos on home page cards (configured via `logo` field in `groups.json`)
 - **Sprint Navigation**: Browse sprints by fiscal year (Oct-Sep) and month
 - **Burndown Chart**: Toggle between issue count and story points; ideal line accounts for weekends and US federal holidays; visual shading highlights non-working days
 - **Project Filtering**: Filter all views by project using chip toggles
@@ -277,7 +277,7 @@ The project includes command-line tools for managing GitLab issues directly, ena
 Set environment variables:
 
 ```bash
-export GITLAB_URL="https://code.cdso.army.mil"
+export GITLAB_URL="https://git.example.com"
 export GITLAB_TOKEN="<your-personal-access-token>"  # api scope — covers all issue and data scripts
 export GITLAB_SSL_VERIFY="true"
 

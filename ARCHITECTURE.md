@@ -96,7 +96,7 @@ sprint-metrics-dashboard/
 │   ├── css/
 │   │   ├── tokens.css          # [Design System] CSS custom properties
 │   │   └── styles.css          # [Design System] Imports tokens.css; all component styles
-│   ├── img/                    # Logos: miltech-logo.png, group and project logos
+│   ├── img/                    # Logos: favicon.svg, group and project logos
 │   ├── js/
 │   │   ├── core/               # [Core] Pure logic — no DOM, no fetch, no side effects
 │   │   │   ├── utils.js        # $(), esc(), slugify(), getParams(), formatText(), officeHtml(), downloadDoc()

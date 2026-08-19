@@ -2,7 +2,7 @@
 
 ## Problem
 
-The CI/CD pipeline runs in a Docker container (`python:3.12-slim`) that doesn't include DoD root CA certificates by default. This causes SSL verification failures when connecting to `code.cdso.army.mil`.
+The CI/CD pipeline runs in a Docker container (`python:3.12-slim`) that doesn't include DoD root CA certificates by default. This causes SSL verification failures when connecting to `git.example.com`.
 
 ## Solution
 
@@ -48,7 +48,7 @@ The pipeline should now:
 - Detect the `DOD_CA_CERT` variable
 - Install it into the container's CA bundle
 - Enable SSL verification (`GITLAB_SSL_VERIFY=true`)
-- Successfully connect to code.cdso.army.mil with proper certificate validation
+- Successfully connect to git.example.com with proper certificate validation
 
 ### Step 4: Verify Success
 
@@ -99,7 +99,7 @@ openssl x509 -inform DER -in dod_cert.der -out dod_cert.pem
 If SSL verification still fails:
 1. Check that `DOD_CA_CERT` variable is actually set in CI/CD settings
 2. Look for the "Installing DoD CA certificate" message in job logs
-3. Verify the certificate chain includes the root CA that signed code.cdso.army.mil's certificate
+3. Verify the certificate chain includes the root CA that signed git.example.com's certificate
 
 ### Fall Back to Disabled SSL (Not Recommended)
 

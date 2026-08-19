@@ -29,7 +29,7 @@
 - **Null sentinel pattern:** `current-sprint.json` writes `null` instead of file deletion — confirmed from CLAUDE.md and code pattern
 - **Conventional commits:** `chore:`, `feat:`, `fix:` — confirmed from `git log`
 - **Project start:** 2026-01-27 — confirmed from first commit
-- **Repo:** `https://code.cdso.army.mil/miltech/cots-gots/sprint-metrics-dashboard.git` — confirmed from `git remote`
+- **Repo:** `https://git.example.com/tinkers/sprint-metrics-dashboard.git` — confirmed from `git remote`
 - **Naming conventions:** JS camelCase, Python snake_case, HTML lowercase, data kebab-case — confirmed from file sampling
 - **No testing framework detected** — confirmed from absence of test files, test config, and test dependencies
 

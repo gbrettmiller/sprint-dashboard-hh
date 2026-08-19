@@ -11,7 +11,7 @@ The Sprint Metrics Dashboard currently collects and displays sprint data from Gi
 - Will facilitate collaborative PBI generation and implementation
 
 **Environment considerations:**
-- Self-hosted GitLab at code.cdso.army.mil with DoD PKI certificates
+- Self-hosted GitLab at git.example.com with DoD PKI certificates
 - SSL verification ENABLED (`GITLAB_SSL_VERIFY=true`) - DoD certs in system CA bundle
 - Authentication via `GITLAB_TOKEN` (already configured in CI/CD)
 - Must follow existing Python script patterns for consistency
@@ -258,10 +258,10 @@ Each skill definition includes:
 
 ### Local Testing Setup:
 ```bash
-export GITLAB_URL="https://code.cdso.army.mil"
+export GITLAB_URL="https://git.example.com"
 export GITLAB_TOKEN="<your-token>"
 export GITLAB_SSL_VERIFY="true"  # SSL verification enabled
-export GITLAB_GROUP="18274"  # miltech/cots-gots group
+export GITLAB_GROUP="12345"  # tinkers group
 ```
 
 ## Verification & Testing

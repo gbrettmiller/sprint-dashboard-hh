@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-The Sprint Metrics Dashboard CI/CD pipeline requires DoD root CA certificates to validate SSL connections to `code.cdso.army.mil`. The current workaround uses CI/CD variables to install certificates on each pipeline run, which is complex and adds overhead.
+The Sprint Metrics Dashboard CI/CD pipeline requires DoD root CA certificates to validate SSL connections to `git.example.com`. The current workaround uses CI/CD variables to install certificates on each pipeline run, which is complex and adds overhead.
 
 ## Proposed Solution
 
@@ -85,7 +85,7 @@ cp /usr/local/share/ca-certificates/dod.crt .
 docker build -t <registry>/python-dod-certs:3.12 -t <registry>/python-dod-certs:latest .
 
 # Test the image locally
-docker run --rm <registry>/python-dod-certs:3.12 python3 -c "import requests; requests.get('https://code.cdso.army.mil')"
+docker run --rm <registry>/python-dod-certs:3.12 python3 -c "import requests; requests.get('https://git.example.com')"
 
 # Push to registry
 docker push <registry>/python-dod-certs:3.12
@@ -159,7 +159,7 @@ To upgrade Python version (e.g., 3.13):
 
 Before deploying to production pipelines, verify:
 
-- [ ] SSL connections to `code.cdso.army.mil` succeed
+- [ ] SSL connections to `git.example.com` succeed
 - [ ] `pip install` works without SSL errors
 - [ ] Python `requests` library validates certificates correctly
 - [ ] Git operations with SSL verification enabled work
@@ -198,5 +198,5 @@ If a custom image is not feasible:
 
 For questions or assistance with this request, contact the Sprint Metrics Dashboard team.
 
-**Project**: miltech/cots-gots/sprint-metrics-dashboard
-**GitLab Instance**: https://code.cdso.army.mil
+**Project**: tinkers/sprint-metrics-dashboard
+**GitLab Instance**: https://git.example.com

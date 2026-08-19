@@ -11,7 +11,7 @@ to the branch specified by CI_COMMIT_REF_NAME (or 'master' by default).
 
 Required environment variables:
     CI_PUSH_TOKEN   - GitLab token with api scope
-    CI_SERVER_URL   - e.g. https://code.cdso.army.mil
+    CI_SERVER_URL   - e.g. https://git.example.com
     CI_PROJECT_ID   - numeric project ID (set automatically by GitLab CI)
 
 Optional:

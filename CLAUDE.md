@@ -47,7 +47,7 @@ This is a static GitLab Pages dashboard that displays sprint metrics collected f
 - Per-project sprint tracking: groups with `mode: "projects"` show per-project cards on the home page with project-scoped dashboards
 - Per-group dashboard pages with direct-linkable URLs (`group.html?group={slug}` or `group.html?group={slug}&project={project-slug}`)
 - Multi-group support (CASS, STAR, P2DS) — each group has its own dashboard URL
-- Branding: MilTech favicon on all pages, group/project logos on home page cards
+- Branding: Tinkers favicon on all pages, group/project logos on home page cards
 - Sprint navigation by fiscal year and month
 - Sprint progress summary with visual progress bar, time remaining, work complete %, and scope change %
 - Burndown chart (issue count or story points) with ideal line accounting for weekends/holidays
@@ -175,14 +175,14 @@ The frontend JavaScript follows a **four-layer architecture**. Every file belong
 ## Important Context
 
 ### GitLab Environment
-- **GitLab Instance:** Internal CDSO GitLab at code.cdso.army.mil
+- **GitLab Instance:** Internal CDSO GitLab at git.example.com
 - **Classification:** CUI-CTI (Controlled Unclassified Information - Cyber Threat Intelligence)
 - **Commit Signing:** Required and verified by GitLab hooks
 - **API Authentication:** Uses GitLab tokens with specific scopes
 
 ### CI/CD Configuration
 Required CI/CD variables (Settings > CI/CD > Variables):
-- `GITLAB_URL` - GitLab instance URL (https://code.cdso.army.mil)
+- `GITLAB_URL` - GitLab instance URL (https://git.example.com)
 - `GITLAB_TOKEN` - API token with `read_api` scope for reading iterations/issues (must have access to all groups in `groups.json`)
 - `GITLAB_GROUP` - (Optional) Fallback group ID if `groups.json` is not configured
 - `CI_PUSH_TOKEN` - API token with `api` scope + Maintainer role for committing data
@@ -235,7 +235,7 @@ Required CI/CD variables (Settings > CI/CD > Variables):
 - **Multi-Group:** Each group has its own dashboard page at `group.html?group={slug}`. Project-mode groups use `group.html?group={slug}&project={project-slug}`. The home page (`index.html`) lists all groups with sprint status cards and filter chips. `resolveGroupAndProject()` in `js/services/api.js` parses URL parameters and resolves the active group/project. The `dataPath()` helper scopes all data fetches to the active group (and project if applicable). Python scripts loop over all configured groups. Falls back to `GITLAB_GROUP` env var for single-group backward compatibility.
 - **Page Navigation:** Breadcrumbs follow the pattern: Home > Group Name > All Releases > Milestone. For project-mode groups, breadcrumbs show "Group: Project". All pages resolve names from `groups.json`. The milestone and releases pages receive the group via `?group=` URL parameter. For project-mode groups, the breadcrumb group link points to `index.html` instead of `group.html`.
 - **Home Page Filter:** Cards are tagged with `data-sprint-state` (active, ended, upcoming, none). Filter chips ("All Projects" / "Active Sprints") show/hide cards. Section headers hide when all their cards are filtered out. Empty state message shown when no cards match.
-- **Branding:** MilTech favicon on all pages via `<link rel="icon">`. Group and project logos on home page cards, configured via `logo` field in `groups.json`. Projects without a `logo` fall back to their parent group's logo.
+- **Branding:** Tinkers favicon on all pages via `<link rel="icon">`. Group and project logos on home page cards, configured via `logo` field in `groups.json`. Projects without a `logo` fall back to their parent group's logo.
 - **Empty Iteration Filtering:** GitLab iteration cadences auto-generate placeholder iterations with null titles. Python scripts skip these during data collection (`backfill.py` and `scheduled_update.py`). Frontend has a defensive fallback displaying date range if a null title is encountered.
 - **Milestone Data Collection:** Python scripts fetch project-level milestones via `/api/v4/projects/:id/milestones` and store issue data with full descriptions for section parsing. Projects are discovered from sprint issue data. Milestone index is sorted by `due_date` descending.
 - **Releases Page:** Displays milestones in reverse chronological order, limited to 5 most recent per project with an expand/collapse toggle.
@@ -328,7 +328,7 @@ python -m http.server 8000
 ```bash
 cd scripts
 pip install -r requirements.txt
-export GITLAB_URL="https://code.cdso.army.mil"
+export GITLAB_URL="https://git.example.com"
 export GITLAB_TOKEN="your-token-here"
 # Scripts read groups from public/data/groups.json automatically.
 # Fallback: export GITLAB_GROUP="your-group-id"
@@ -516,7 +516,7 @@ python3 scripts/issue_close.py 10324 1183 --note "Different project"
 
 **Required Environment Variables:**
 ```bash
-export GITLAB_URL="https://code.cdso.army.mil"
+export GITLAB_URL="https://git.example.com"
 export GITLAB_TOKEN="<token>"          # API scope for write operations, read_api for read-only
 export GITLAB_SSL_VERIFY="true"        # Enable SSL verification (default)
 ```
@@ -604,7 +604,7 @@ User: "Yes, also add assigned user and dates. Then create the issue."
 Claude: "Creating issue in GitLab..."
 [Runs: python3 scripts/issue_create.py 10324 --title "Add CSV export for sprint metrics" ...]
 
-"✓ Issue #1245 created: https://code.cdso.army.mil/project/issues/1245"
+"✓ Issue #1245 created: https://git.example.com/project/issues/1245"
 ```
 
 This eliminates context switching between chat and GitLab UI during backlog grooming sessions.
