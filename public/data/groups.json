@@ -2,19 +2,21 @@
   "groups": [
     {
       "id": 90001, "name": "Cloud Services", "slug": "cloud-services",
+      "logo": "img/cloud-services-logo.svg",
       "mode": "projects",
       "transition_date": "2026-03-04",
       "projects": [
-        {"id": 91001, "name": "ORBIT", "slug": "orbit"},
-        {"id": 91002, "name": "PULSE", "slug": "pulse"},
+        {"id": 91001, "name": "ORBIT", "slug": "orbit", "logo": "img/orbit-logo.svg"},
+        {"id": 91002, "name": "PULSE", "slug": "pulse", "logo": "img/pulse-logo.svg"},
         {"id": 91003, "name": "RELAY", "slug": "relay"},
         {"id": 91004, "name": "SkyCast", "slug": "skycast"},
         {"id": 91005, "name": "FormFlow", "slug": "formflow"}
       ]
     },
-    {"id": 90002, "name": "Service Management", "slug": "service-management", "reports": true},
+    {"id": 90002, "name": "Service Management", "slug": "service-management", "logo": "img/service-management-logo.svg", "reports": true},
     {
       "id": 90003, "name": "Data Services", "slug": "data-services",
+      "logo": "img/data-services-logo.svg",
       "source": "jira",
       "jira_board_id": 5001,
       "jira_project_key": "DSVC",
