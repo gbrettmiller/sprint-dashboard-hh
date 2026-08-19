@@ -43,7 +43,7 @@ git pull origin master
 - **Multi-Group Support**: Home page lists all groups with active sprint status; each group has its own dashboard at a direct-linkable URL (`group.html?group={slug}`)
 - **Per-Project Sprint Tracking**: Groups can use `mode: "projects"` to track sprints per project using Milestones instead of group-level Iterations. Each project gets its own card on the home page and its own dashboard (`group.html?group={slug}&project={project-slug}`)
 - **Home Page Filtering**: Filter chips to show all projects or only those with active sprints
-- **Branding**: Tinkers favicon on all pages; group and project logos on home page cards (configured via `logo` field in `groups.json`)
+- **Branding**: Tinkerers favicon on all pages; group and project logos on home page cards (configured via `logo` field in `groups.json`)
 - **Sprint Navigation**: Browse sprints by fiscal year (Oct-Sep) and month
 - **Burndown Chart**: Toggle between issue count and story points; ideal line accounts for weekends and US federal holidays; visual shading highlights non-working days
 - **Project Filtering**: Filter all views by project using chip toggles
