@@ -54,7 +54,7 @@
       "weight": 3,
       "state": "closed",
       "labels": [],
-      "description": "previous item 852 had 2 issues:\n\n1. george.b. miller16.ctr updated his profile and had a dateupdatedbyemployee in sql. I then went in and updated his employee record. It wiped out the dateupdatedbyemployee. It should have no impact on that field when updated from the employee screen.\n2. I updated my profile and it updated the dateupdatedbyemployee correctly. I then went in and updated my employee record (not profile). It changed the dateupdatedbyemployee date. Updating anyone's record from the employee screen should have no impact on that field."
+      "description": "previous item 852 had 2 issues:\n\n1. morgan.t.lee.ctr updated his profile and had a dateupdatedbyemployee in sql. I then went in and updated his employee record. It wiped out the dateupdatedbyemployee. It should have no impact on that field when updated from the employee screen.\n2. I updated my profile and it updated the dateupdatedbyemployee correctly. I then went in and updated my employee record (not profile). It changed the dateupdatedbyemployee date. Updating anyone's record from the employee screen should have no impact on that field."
     },
     {
       "id": 185176,

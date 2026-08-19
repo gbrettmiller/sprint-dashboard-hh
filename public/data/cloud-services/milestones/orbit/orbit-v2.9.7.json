@@ -1,7 +1,7 @@
 {
   "milestone_title": "ORBIT v2.9.7",
   "milestone_id": 1898,
-  "slug": "mirars-v2.9.7",
+  "slug": "orbit-v2.9.7",
   "project_id": 91001,
   "project_name": "ORBIT",
   "group_slug": "cloud-services",
@@ -38,7 +38,7 @@
       "labels": [
         "Status: PROD Ready"
       ],
-      "description": "I created a new person davlyn.l.williams and it tells me the persona id is used within peo c3t.  Davlyn is in there as davlyn.l.williams.ctr but it stopped me from putting in davlyn.l.williams without the .ctr"
+      "description": "I created a new person jordan.a.rivera and it tells me the persona id is used within the parent program office.  Jordan is in there as jordan.a.rivera.ctr but it stopped me from putting in jordan.a.rivera without the .ctr"
     },
     {
       "id": 152643,

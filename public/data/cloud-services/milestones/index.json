@@ -142,7 +142,7 @@
         },
         {
           "title": "ORBIT 26Q1-5",
-          "slug": "mirars-26q1-5",
+          "slug": "orbit-26q1-5",
           "state": "closed",
           "due_date": "2025-12-23"
         },
@@ -154,7 +154,7 @@
         },
         {
           "title": "ORBIT v2.9.8",
-          "slug": "mirars-v2.9.8",
+          "slug": "orbit-v2.9.8",
           "state": "closed",
           "due_date": "2024-03-29"
         },
@@ -166,13 +166,13 @@
         },
         {
           "title": "ORBIT 3.2.4",
-          "slug": "mirars-3.2.4",
+          "slug": "orbit-3.2.4",
           "state": "closed",
           "due_date": null
         },
         {
           "title": "ORBIT 2.9.9",
-          "slug": "mirars-2.9.9",
+          "slug": "orbit-2.9.9",
           "state": "closed",
           "due_date": null
         },
@@ -184,13 +184,13 @@
         },
         {
           "title": "ORBIT 2.9.9 Overview",
-          "slug": "mirars-2.9.9-overview",
+          "slug": "orbit-2.9.9-overview",
           "state": "closed",
           "due_date": null
         },
         {
           "title": "ORBIT v2.9.7",
-          "slug": "mirars-v2.9.7",
+          "slug": "orbit-v2.9.7",
           "state": "closed",
           "due_date": null
         }
@@ -287,7 +287,7 @@
         },
         {
           "title": "PULSE 26Q1-5",
-          "slug": "ppmt-26q1-5",
+          "slug": "pulse-26q1-5",
           "state": "closed",
           "due_date": "2025-12-23"
         },
@@ -491,7 +491,7 @@
         },
         {
           "title": "PULSE 5.0.7.1",
-          "slug": "ppmt-5.0.7.1",
+          "slug": "pulse-5.0.7.1",
           "state": "closed",
           "due_date": null
         },

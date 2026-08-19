@@ -7,7 +7,7 @@ project:
   repo: https://git.example.com/tinkers/sprint-metrics-dashboard.git
 
 owner:
-  name: george.b.miller16.ctr
+  name: alex.r.chen.ctr
   team: Tinkers / Cloud Services
 
 knowledge:

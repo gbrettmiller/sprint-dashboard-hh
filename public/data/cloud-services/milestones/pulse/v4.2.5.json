@@ -62,7 +62,7 @@
     {
       "id": 155892,
       "iid": 301,
-      "title": "Export capability failes in QA with error Could not find a part of the path 'D:\\WebContent\\PULSE\\App_Data\\ppmt_org_data.csv'.",
+      "title": "Export capability failes in QA with error Could not find a part of the path 'D:\\WebContent\\PULSE\\App_Data\\pulse_org_data.csv'.",
       "weight": 0,
       "state": "closed",
       "labels": [
