@@ -1,0 +1,53 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "pulse",
+  "milestone_slug": "v5.1.2",
+  "title": "v5.1.2",
+  "start_date": "2026-04-21",
+  "end_date": "2026-05-04",
+  "generated_at": "2026-06-30T22:01:19.971572Z",
+  "test_plan": [
+    {
+      "iid": 704,
+      "title": "feat: Remove single-security-group enforcement from UI and controller",
+      "steps": "- Navigate to the Admin User create or edit form and verify that multiple security group checkboxes can be selected simultaneously without any checkbox automatically unchecking when another is selected\n- Select two or more security groups and click Save, then verify that the user is saved successfully without any validation error message appearing\n- Verify that the saved user record displays all selected security groups (check the user details or list view to confirm multiple groups are assigned)\n- Repeat the above steps on both the Create and Edit user forms to ensure the behavior is consistent"
+    },
+    {
+      "iid": 705,
+      "title": "feat: Update session layer to store and propagate multiple security group IDs",
+      "steps": "- Log in as a test user assigned to two security groups in `Organization_Security_Config` and verify both group IDs appear in the session claims\n- Log in as a test user assigned to a single security group and verify the claim contains only that one group ID\n- Verify that user permissions and access control behave correctly for users with multiple group assignments\n- Test the login flow, including standard login (line 115) and test-mode login (line 226), to confirm both paths correctly serialize multiple group IDs\n- Verify the application builds without errors and all existing tests pass after the changes"
+    },
+    {
+      "iid": 706,
+      "title": "feat: Refactor permission TVFs to union record visibility across all assigned security groups",
+      "steps": "- Create a test user assigned to two security groups with different record visibility permissions (e.g., Group A can see Records 1\u20133, Group B can see Records 3\u20135)\n- Verify the user sees the union of records (1\u20135) when querying via `fnGetOneNListIDsUserHasPermissionsFor` and `BO_fnGetOneNListUserHasPermissionsFor`\n- Create a second test user assigned to only one security group and confirm they see the same records as before the migration (regression test)\n- Run the migration script in the test environment and verify it executes without errors, including the unique constraint drop logic if applicable\n- Build the project and confirm no compilation errors or warnings; run the existing test suite and verify all tests pass"
+    },
+    {
+      "iid": 707,
+      "title": "feat: add Organization_ActionList_Column_Config table and seed migration",
+      "steps": "- Verify the `Organization_ActionList_Column_Config` table is created with all required columns (`ID`, `fk_Organization_ID`, `ViewName`, `ColumnKey`, `DisplayName`, `IsVisible`, `DisplayOrder`) and the unique constraint on `(fk_Organization_ID, ViewName, ColumnKey)`.\n- Query the seeded data to confirm all 4 organizations \u00d7 4 views are populated with the correct ColumnKey universe (19 or 20 keys) and verify DisplayName overrides (e.g., 'JPM' for JPOCompliance `PmPd`, 'Funded Amount' for Vantage North Recent `TotalDollarCeiling`).\n- Confirm visibility rules are applied correctly: Beacon and JPOCompliance show `ModifiedDate` and `ModifiedBy` as visible on all views; Vantage North Recent shows the 10 specified columns as visible; Vantage North non-Recent hides `TypeOfAction`, `TotalDollarCeiling`, `PeoPriorityNumber`, `IsPmOnTrack`, `PmPriorityNumber`, `AwardDateRevised`, and `ContractingProjectedAwardDate`.\n- Run the migration on a fresh database restore and verify it completes without errors and is idempotent (re-running produces no duplicate rows).\n- Build the project and confirm all existing tests pass."
+    },
+    {
+      "iid": 709,
+      "title": "feat: add ActionListColumnConfig admin controller and tabbed UI",
+      "steps": "- Navigate to `~/Admin/Options` and verify \"Action List Columns\" link appears in the Form tab, sorted alphabetically among other options.\n- Log in as an Owner and navigate to `~/Admin/ActionListColumnConfig`; verify four tabs load (Recent Items, All Items, Due Soon, Overdue) with no errors and each tab displays all columns with IsVisible checkbox, DisplayName text field, and DisplayOrder number field populated with current values.\n- On one tab, modify at least one column's IsVisible, DisplayName, or DisplayOrder, click Save, and verify the POST updates only that view's config, the page redirects to the same tab, and changes persist on reload.\n- Log in as a non-Owner user and attempt to navigate directly to `~/Admin/ActionListColumnConfig`; verify access is denied or redirected.\n- Verify the project builds with no errors or warnings and all existing tests pass."
+    },
+    {
+      "iid": 710,
+      "title": "feat: replace hardcoded List/Index column conditionals with config-driven render loop",
+      "steps": "- Verify that `List/Index` renders the same columns as before for each organization and view by comparing the current hardcoded output with the new config-driven output; confirm column order matches `DisplayOrder` in the database.\n- Test that columns with `IsVisible = false` in the database are hidden from both the header row (`<th>`) and all data rows (`<td>`), and that custom `DisplayName` values display correctly as sort link text.\n- Click each column header to verify sorting works correctly and sort parameters are applied without errors.\n- Confirm the Draft view delete-icon column (bin SVG and delete link) remains visible and functional outside the config loop.\n- Run all E2E tests after page object selector updates to ensure they pass with the new column-based selectors (not position-based)."
+    }
+  ],
+  "sprint_report": {
+    "goals": "This sprint aimed to establish a configuration-driven framework for customizing action list column displays and to extend the platform's permission model to support users assigned to multiple security groups simultaneously. These changes remove hard-coded UI constraints and enable more flexible organizational access control.",
+    "summary": "The team built a complete admin interface and data layer for managing action list column visibility through configuration, eliminating the need for code changes when column display rules need to adjust. In parallel, the permission and session architecture was refactored to recognize and enforce security rules across all groups a user belongs to, rather than limiting users to a single group. These foundational changes increase operational flexibility and allow the platform to scale to more complex organizational permission structures without requiring engineering intervention for routine configuration updates.",
+    "metrics": {
+      "initial_count": 8,
+      "initial_weight": 23,
+      "completed_count": 8,
+      "completed_weight": 23,
+      "initial_breakdown": "4 Improvements, 3 New Features, 1 Refactor",
+      "completed_breakdown": "4 Improvements, 3 New Features, 1 Refactor"
+    }
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "milestone_title": "v3.3.0",
+  "milestone_id": 2781,
+  "slug": "v3.3.0",
+  "project_id": 91001,
+  "project_name": "ORBIT",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:27.294320Z",
+  "issues": [
+    {
+      "id": 189013,
+      "iid": 1166,
+      "title": "Notification Responses does not show Email",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "The Responses view of a sent Notification will show two records labeled \"Text Message\" when a Notification has been sent by SMS and Email."
+    },
+    {
+      "id": 195878,
+      "iid": 1203,
+      "title": "Phone number verification via code for Notification Information",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI defines the verification process for the phone number in the \"Notification Information\" section. After a user enters a number and saves their profile, a verification field will appear at the top of the page. The user must then enter a code sent via SMS to that number to confirm ownership and enable SMS notifications.\n\n---\n\n#### **User Story**\n\n*   **As a** ORBIT user,\n*   **I want to** enter a phone number for notifications, save my profile, and then enter a verification code sent to my phone,\n*   **so that** I can securely confirm my phone number and ensure I receive SMS alerts.\n\n---\n\n#### **Acceptance Criteria**\n\n**Scenario 1: User Enters Number and Saves Profile**\n\n*   **Given** a user is on their \"Edit Profile\" page and enters a new or changed phone number in the \"Notification Information\" section,\n*   **When** they click the \"Save\" button for the profile,\n*   **Then** a verification code **must** be sent via SMS to the entered phone number.\n*   **And** after the page reloads, a new section/field, clearly labeled for verification, **must** appear at the top of the profile page.\n*   **And** a status indicator next to the phone number field **must** display \"Verification Required.\"\n\n**Scenario 2: Successful Verification**\n\n*   **Given** the verification code field is displayed on the user's profile,\n*   **When** the user enters the correct verification code from the SMS and clicks \"Verify,\"\n*   **Then** the verification section at the top of the page **must** disappear.\n*   **And** the status indicator next to the phone number field **must** update to \"Verified.\"\n*   **And** a success message (e.g., \"Your notification phone number has been successfully verified.\") **must** be displayed.\n\n**Scenario 3: Failed Verification**\n\n*   **Given** the verification code field is displayed,\n*   **When** the user enters an incorrect code and clicks \"Verify,\"\n*   **Then** an error message (e.g., \"Invalid verification code. Please try again.\") **must** be displayed within the verification section.\n*   **And** the verification section **must** remain visible.\n\n**Scenario 4: User with Verified Number**\n\n*   **Given** a user with a previously verified notification phone number views their \"Edit Profile\" page,\n*   **When** the page loads,\n*   **Then** the verification code section **must not** be displayed.\n*   **And** the status next to their number **must** show \"Verified.\""
+    },
+    {
+      "id": 201344,
+      "iid": 1208,
+      "title": "Fix Day Light Savings Time issue.",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "Currently, the Day Light Savings time difference is calculated whenever a Work Site record is retrieve; however, there is a bug that does not currently update a Check-In record whenever DST changes, so a person has to re-save all Work Site records to fix this issue.\n\nThe recommended fix is to use the OS's time zone information on demand (instead of storing as a database record)."
+    },
+    {
+      "id": 201353,
+      "iid": 1209,
+      "title": "Upgrade ORBIT to .NET 10",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "type::DevOps",
+        "workflow::refined"
+      ],
+      "description": "Upgrade ORBIT to .NET 10 from .NET 8, which Long Term Support (LTS) ends in the near future."
+    },
+    {
+      "id": 204305,
+      "iid": 1210,
+      "title": "Training Exempt Flag and Reason not populating in SQL",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "workflow::refined"
+      ],
+      "description": "The training exempt flag and reason remain null in sql even after making someone exempt. This needs to be addressed as a customer is asking for this to be included in reports."
+    },
+    {
+      "id": 205790,
+      "iid": 1213,
+      "title": "Backend: Add Employee ID Field to User Profile Schema and Registration Logic",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "release-notes::no",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "### User Story\n\n*   **As a** ORBIT Administrator,\n*   **I want** the system to automatically capture and store a user's Employee ID upon registration,\n*   **so that** this standard identifier is captured in our database, making it available for display on profiles and for future integration work.\n\n### Acceptance Criteria\n\n*   **Given** a new user is registering,\n*   **When** the user registration data is submitted to the backend,\n*   **Then** the `EmployeeId` value **must** be included in the data payload.\n*   **And** the backend logic **must** save the `EmployeeId` value to the new user's profile in the database.\n*   **And** the existing `personaID` **must** remain the primary unique identifier for the user record; the introduction of the `EmployeeId` field does not alter the function or authority of `personaID` in this PBI."
+    },
+    {
+      "id": 205791,
+      "iid": 1214,
+      "title": "Display Employee ID on User Registration Page",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "### User Story\n\n*   **As a** new user registering for ORBIT,\n*   **I want to** see my Employee ID displayed as a read-only field on the registration page,\n*   **so that** I have confidence and visual confirmation that the system has correctly identified me before I complete my registration.\n\n### Acceptance Criteria\n\n*   **Given** a new user lands on the \"User Registration\" page after authenticating,\n*   **When** the page loads,\n*   **Then** it **must** display a new field labeled \"Employee ID\" (or \"Employee ID\").\n*   **And** the Employee ID field **must** be pre-populated with the Employee ID value provided by the authentication service.\n*   **And** the Employee ID field **must** be visually distinct to indicate it is read-only (e.g., have a greyed-out background).\n*   **And** the Employee ID field **must** be disabled, preventing the user from clicking into it or changing its value.\n*   **And** all other fields on the registration form **must** remain functional as they do today."
+    },
+    {
+      "id": 205792,
+      "iid": 1215,
+      "title": "UI: Display Employee ID on User and Employee Profile Pages",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "### User Story\n\n*   **As a** user, manager, or administrator viewing a user's profile,\n*   **I want to** see the user's Employee ID displayed as a read-only field,\n*   **so that** I can positively identify the individual using this standard, authoritative identifier.\n\n### Acceptance Criteria\n\n**Scenario 1: User Viewing Their Own Profile**\n*   **Given** a registered user is viewing their own \"My Profile\" page,\n*   **When** the page loads,\n*   **Then** a new field labeled \"Employee ID\" **must** be displayed, containing their correct Employee ID value.\n*   **And** this field **must** be read-only and not editable, even when the user enters the \"Edit Profile\" mode.\n\n**Scenario 2: Admin/Manager Viewing a User's Employee Page**\n*   **Sub-Scenario 2a: User has an Employee ID in their database record**\n    *   **Given** an Admin or Manager is viewing the \"Employee\" details page for a user who *has* an Employee ID stored in their profile,\n    *   **When** the page loads,\n    *   **Then** a field labeled \"Employee ID\" **must** be displayed, containing that user's correct Employee ID value.\n    *   **And** this field **must** be read-only.\n*   **Sub-Scenario 2b: User does NOT yet have an Employee ID in their database record**\n    *   **Given** an Admin or Manager is viewing the \"Employee\" details page for a user who *has not yet* had their Employee ID backfilled,\n    *   **When** the page loads,\n    *   **Then** the field label \"Employee ID\" **must** still be displayed to maintain a consistent layout.\n    *   **And** the value area next to the label **must** display a clear placeholder text (e.g., \"Pending user login\" or \"---\").\n    *   **And** this placeholder area **must** be read-only."
+    },
+    {
+      "id": 205793,
+      "iid": 1216,
+      "title": "Backend: Backfill Employee ID for Existing Users on Login",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "### User Story\n\n*   **As a** ORBIT Administrator,\n*   **I want** the system to automatically update an existing user's profile with their Employee ID the first time they log in after this feature is deployed,\n*   **so that** all user profiles are enriched with their Employee ID over time, ensuring data completeness without requiring manual intervention or a separate data migration effort.\n\n### Acceptance Criteria\n\n*   **Given** an existing user authenticates successfully, providing their `personaID` and `EmployeeId` to the backend,\n*   **When** the backend processes the login request,\n*   **Then** the system **must** use the `personaID` to retrieve the user's record from the MongoDB database.\n*   **And** the system **must** check if the `EmployeeId` field for that user record is null or empty.\n\n*   **Scenario: Employee ID is Missing**\n    *   **If** the `EmployeeId` field is empty, the system **must** update the user's database record with the `EmployeeId` received from the authentication service.\n\n*   **Scenario: Employee ID Already Exists**\n    *   **If** the `EmployeeId` field already has a value, the system **must not** perform any database update."
+    },
+    {
+      "id": 205797,
+      "iid": 1220,
+      "title": "Add \"Admin Leave\" option to Mobile Check-In",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "### **Enhancement: Add \"Admin Leave\" as a Mobile Check-In Status Option**\n\n**Description:** This PBI addresses the need for an additional status option within Mobile Check-In for employees who are not on a telework agreement. When a worksite is closed or has a delayed opening, for example for inclement weather, these employees are often placed on administrative leave. This enhancement adds \"Admin Leave\" to the list of available statuses for Mobile Check-In, allowing for more accurate reporting during such events.\n\n---\n\n#### **User Story**\n\n*   **As an** employee who is not on a telework agreement,\n*   **When** I need to unexpectedly report as on \"Admin Leave\" due to inclement weather or other situations, \n*   **I want to** be able to select \"Admin Leave\" as my status for Mobile Check-In,\n*   **so that** I can accurately report my accountability when my worksite is closed or delayed and I am not allowed to telework.\n\n---\n\n#### **Acceptance Criteria**\n\n**Scenario 1: User Sees New Status Option on Help message**\n\n*   **Given** a user submits \"?\" to Mobile Check-In to receive help options,\n*   **When** they view the list of available statuses,\n*   **Then** \"Admin Leave\" **must** be included as an option.\n\n**Scenario 2: Successful Submission of \"Admin Leave\" Status**\n\n*   **Given** a user has entered \"Admin Leave\" as their status,\n*   **When** they submit their Mobile Check-In report,\n*   **Then** their status **must** be successfully saved and recorded as \"Admin Leave.\"\n*   **And** the user **must** receive a standard confirmation of their successful submission.\n\n**Scenario 3: Report Accurately Reflects \"Admin Leave\" Status**\n\n*   **Given** a user has reported their status as \"Admin Leave,\"\n*   **When** a supervisor or administrator views the Check-In report,\n*   **Then** the report **must** clearly and accurately display that the user's status is \"Admin.\""
+    },
+    {
+      "id": 205798,
+      "iid": 1221,
+      "title": "Accept Spelled-Out Numbers for Mobile Check-In",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI addresses a usability issue for users who rely on voice-to-text (voice recognition) to report their status via SMS. Voice recognition software often transcribes spoken numbers as words (e.g., \"one\" instead of \"1\"), which the current system rejects. This enhancement will update the SMS parser to recognize and accept these common, spelled-out number formats.\n\n---\n\n#### **User Story**\n\n*   **As a** ORBIT user who uses voice recognition for texting,\n*   **I want to** have the system correctly interpret spelled-out numbers (like \"One\") that I send via text message,\n*   **so that** I can successfully report my status using the convenience of voice-to-text without my message failing.\n\n---\n\n#### **Acceptance Criteria**\n\n**Scenario 1: Successful Report with a Spelled-Out Number**\n\n*   **Given** a user is registered to report their status via text message,\n*   **When** they send a text message containing a valid spelled-out number (e.g., \"One\", \"one\", \"TWO\", \"three\"),\n*   **Then** the system **must** correctly parse the word as its numeric equivalent (e.g., \"One\" as 1).\n*   **And** the report **must** be processed successfully, identical to how it would if the user had sent the digit.\n*   **And** the user **must** receive the standard success confirmation message.\n\n**Scenario 2: Successful Report with a Digit (Existing Functionality)**\n\n*   **Given** a user is registered to report their status via text message,\n*   **When** they send a text message containing a valid digit (e.g., \"1\"),\n*   **Then** the system **must** continue to process the report successfully as it does today.\n\n**Scenario 3: Successful Report with Common Voice Recognition Artifacts**\n\n*   **Given** a user is using voice-to-text,\n*   **When** they send a message containing common voice recognition formats like \"Number One\" or \"Digit 2\",\n*   **Then** the system **must** intelligently parse the intended number from the text.\n*   **And** the report **must** be processed successfully.\n\n**Scenario 4: Failed Report with Invalid Text**\n\n*   **Given** a user is registered to report their status via text message,\n*   **When** they send a text message that does not contain a recognizable digit or spelled-out number (e.g., \"won\", \"On\", \"for\", \"hello world\"),\n*   **Then** the system **must** respond with the standard error message indicating an invalid input."
+    },
+    {
+      "id": 205841,
+      "iid": 1222,
+      "title": "3 Consecutive DNR should not show for regular users",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "The section \"Employee Missed 3 Consecutive Check-Ins\" should not be displayed for users who do not have an active Supervisor, Layer Manager, or Organization Manager role."
+    },
+    {
+      "id": 205996,
+      "iid": 1225,
+      "title": "Exclude Read-Only Org Managers from New User Notifications",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "source::customer-direct",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI modifies the email notification logic for new user registrations. Currently, when a new user registers without selecting a layer, an email is sent to all Organization Managers. This enhancement will use the existing \"Read-only\" attribute of the Organization Manager role as a filter. If an Org Manager is set to \"Read-only: Yes,\" they will be excluded from receiving these new user registration emails, reducing unnecessary email traffic for managers who have an audit-only role.\n\n---\n\n#### **User Story**\n\n*   **As an** Administrator,\n*   **I want to** prevent Organization Manager roles configured with \"Read-only: Yes\" from receiving new user registration email notifications,\n*   **so that** I can ensure these emails are only sent to managers who are responsible for taking action, and not to those with oversight or audit-only responsibilities.\n\n---\n\n#### **Acceptance Criteria**\n\n**Scenario 1: New User Registers Without a Layer (Read-Only Manager)**\n\n*   **Given** there is an Organization Manager whose role is set to \"Read-only: Yes\",\n*   **And** a new user registers and selects that same organization, but does **not** select a layer,\n*   **When** the registration is submitted,\n*   **Then** that specific \"Read-only\" Organization Manager **must not** receive the new user registration email notification.\n\n**Scenario 2: New User Registers Without a Layer (Standard Manager)**\n\n*   **Given** there is an Organization Manager whose role is set to \"Read-only: No\",\n*   **And** a new user registers and selects that same organization, but does **not** select a layer,\n*   **When** the registration is submitted,\n*   **Then** that standard Organization Manager **must** receive the new user registration email notification as expected.\n\n**Scenario 3: New User Registers WITH a Layer**\n\n*   **Given** an Organization Manager is set to \"Read-only: No,\"\n*   **And** a new user registers and selects both an organization and a layer,\n*   **When** the registration is submitted,\n*   **Then** no Organization Managers should receive the email (as the notification correctly goes to the Layer Manager). This existing behavior **must** remain unchanged.\n\n**Scenario 4: Core Function of \"Read-Only\" is Unaffected**\n\n*   **Given** an Organization Manager is set to \"Read-only: Yes,\"\n*   **When** they log in and use the ORBIT application,\n*   **Then** their UI permissions **must** remain restricted to read-only access as currently implemented. This change only affects email notifications."
+    },
+    {
+      "id": 206643,
+      "iid": 1226,
+      "title": "Change HTTP Response from 400 to 202 on Twilio Status Updates",
+      "weight": 3,
+      "state": "closed",
+      "labels": [],
+      "description": "While researching the reason for HTTP error responses, it was discovered that I used the wrong HTTP response for handling Twilio delivery status updates.\n\nInstead of using 400, which is a HTTP error, we should be using 202, which mean \"we received the notification, we're done\" and handle any errors internally; otherwise, Twilio may try to retry the status update unnecessarily.\n\nAcceptance criteria is that ORBIT always responds with 202."
+    },
+    {
+      "id": 206750,
+      "iid": 1227,
+      "title": "Update Pipeline to Tag PROD Images with the Git Tag",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "The current PROD part of the CI/CD pipeline uses the last git commit SHA as the tag because it does not have the git tag information.\n\nWe want all ORBIT images to be tagged with the git tag so we can keep better track of the images.\n\nThe CI/CD Pipeline must be modified to use the git tag as the image tag for the PROD images.\n\nThe Acceptance Criteria is that the PROD images are tagged with the git tag, such as \"v3.3.0.0\"."
+    },
+    {
+      "id": 207345,
+      "iid": 1228,
+      "title": "Error when editing and saving existing roles",
+      "weight": 3,
+      "state": "closed",
+      "labels": [],
+      "description": "We have a customer (Northeast Region) who is trying to edit existing roles and sometimes he gets 'record not saved'.  I was able to recreate in TEST. \n\nI selected a supervisor role and changed the flag to read only. Upon saving, I received the error. This doesn't happen to every record,  I am not sure yet of the exact conditions."
+    },
+    {
+      "id": 207493,
+      "iid": 1229,
+      "title": "Investigate Check-In Reminder Emails not being sent",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "Investigate whether reminder emails are not being sent at 8:30 and 8:45 local times."
+    },
+    {
+      "id": 208406,
+      "iid": 1230,
+      "title": "Remove Invalid Roles from the Web UI",
+      "weight": 1,
+      "state": "closed",
+      "labels": [],
+      "description": "Remove the role values \"Security Manager\" and \"Travel Manager\" from the Web UI from the Role Assignment form. This form appears to Super Admins and Org Managers."
+    },
+    {
+      "id": 209725,
+      "iid": 1232,
+      "title": "Send the new IAnaTimeZoneId values to SQL Server for reports",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": ""
+    },
+    {
+      "id": 210497,
+      "iid": 1233,
+      "title": "Upgrade PROD MongoDB nodes to latest v7",
+      "weight": 3,
+      "state": "closed",
+      "labels": [],
+      "description": ""
+    },
+    {
+      "id": 210498,
+      "iid": 1234,
+      "title": "Remove validation on DSN phone field.",
+      "weight": 1,
+      "state": "closed",
+      "labels": [],
+      "description": ""
+    }
+  ]
+}

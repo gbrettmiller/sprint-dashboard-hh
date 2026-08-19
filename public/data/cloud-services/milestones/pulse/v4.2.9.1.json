@@ -1,0 +1,128 @@
+{
+  "milestone_title": "v4.2.9.1",
+  "milestone_id": 1964,
+  "slug": "v4.2.9.1",
+  "project_id": 91002,
+  "project_name": "PULSE",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:33.630419Z",
+  "issues": [
+    {
+      "id": 155918,
+      "iid": 385,
+      "title": "Compliance document is required admin setting does not allow end user to not require the compliance document tracking field.",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Break/Fix",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155919,
+      "iid": 386,
+      "title": "Meta data for admin setting is required for the Contracting Tab \u2013 Reason for Region Projected Award Date Revision field does not allow orgs to not require the field.",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Break/Fix",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155926,
+      "iid": 387,
+      "title": "When required Contracting Tab \u2013 Reason for Region Projected Award Date Revision places the validation error on the small business section instead of under the Contracting Tab \u2013 Reason for Region Projected Award Date Revision field.",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Break/Fix",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155924,
+      "iid": 388,
+      "title": "Complete Dev Review",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Task",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155923,
+      "iid": 389,
+      "title": "Complete Fortify Scan & Request Approval",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Task",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155922,
+      "iid": 390,
+      "title": "Deploy v4.2.9.1 to QA/Test",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Task",
+        "type::DevOps"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155921,
+      "iid": 391,
+      "title": "Complete QA/Test Version Testing",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Task",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155920,
+      "iid": 392,
+      "title": "Deploy v4.2.9 to PROD",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Task",
+        "type::DevOps"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155925,
+      "iid": 393,
+      "title": "Make \"RfpReleaseDate\" and \"DraftRfpReleaseDate\" fields independent of each other.",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: QA",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": "When the \"DraftRfpReleaseDate\" field is hidden the \"RfpReleaseDate\" field does not display the revised date field for the \"RfpReleaseDate\". Change the logic to allow the \"RfpReleaseDate\" field to be used when the \"DraftRfpReleaseDate\" is not used."
+    }
+  ]
+}

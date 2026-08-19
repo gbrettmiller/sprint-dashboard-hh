@@ -1,0 +1,131 @@
+{
+  "milestone_title": "v1.0.0",
+  "milestone_id": 1894,
+  "slug": "v1.0.0",
+  "project_id": 91005,
+  "project_name": "FormFlow",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:39.349602Z",
+  "issues": [
+    {
+      "id": 151804,
+      "iid": 1,
+      "title": "Create request forms for PlatformOrg and General.",
+      "weight": 8,
+      "state": "closed",
+      "labels": [
+        "New Feature",
+        "TEST"
+      ],
+      "description": "Create a form for PlatformOrg and General. The forms are similar so a single form can be reused but the dropdown list lookups for capability, primary org, and secondary org are dependent on the form selected. The header and titles are also dependent on the form selection. When no form is identified a landing page with links to each of the forms will be loaded."
+    },
+    {
+      "id": 151805,
+      "iid": 2,
+      "title": "Add SOAP service to capture values and mappings for dropdown list",
+      "weight": 8,
+      "state": "closed",
+      "labels": [
+        "New Feature",
+        "TEST"
+      ],
+      "description": "Add SOAP services for dropdown list.\n\nhttps://internal-services.example.com/arsys/WSDL/public/sifprodgrp/CST:PlatformOrg2  \nhttps://internal-services.example.com/arsys/WSDL/public/sifprodgrp/CST:AffiliatedSystems3\n\n![image](/uploads/cdcc7634ddb454a94ab2f9660d0e432a/image.png)"
+    },
+    {
+      "id": 151806,
+      "iid": 3,
+      "title": "Add logic to handle/populate dropdown list in form(s)",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "New Feature",
+        "TEST"
+      ],
+      "description": "Add logic to populate primary organization based on form selection.\nAdd logic to populate secondary organization based on request form type and primary organization selection using mapping captured from SOAP services.\nAdd logic to populate \"capability\" dropdown list values based on request form type selection."
+    },
+    {
+      "id": 151802,
+      "iid": 4,
+      "title": "Add ability to capture values from authentication cookie to pre-populate form fields.",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "New Feature",
+        "TEST"
+      ],
+      "description": "Add ability to capture First Name, Last Name, and Email from corporate SSO authentication cookie. \n![image](/uploads/d947c880d85da848068fb850fcd6742c/image.png)"
+    },
+    {
+      "id": 151803,
+      "iid": 5,
+      "title": "Add authentication using corporate SSO.",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "New Feature",
+        "TEST"
+      ],
+      "description": "Add authentication to forms app that uses Corporate SSO"
+    },
+    {
+      "id": 151801,
+      "iid": 6,
+      "title": "Add Logging",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "New Feature",
+        "TEST"
+      ],
+      "description": "Add logging through via Serilog storing logs to a rolling interval file."
+    },
+    {
+      "id": 151799,
+      "iid": 7,
+      "title": "Add Form Validation and File AV Scanning",
+      "weight": 8,
+      "state": "closed",
+      "labels": [
+        "New Feature",
+        "TEST"
+      ],
+      "description": "Add validation to form fields making all fields required except the attachments field and validate the input format. Add connection to AV API to scan uploaded files."
+    },
+    {
+      "id": 151800,
+      "iid": 8,
+      "title": "Add SOAP Remedy Connection and Form Submission capability.",
+      "weight": 8,
+      "state": "closed",
+      "labels": [
+        "New Feature",
+        "TEST"
+      ],
+      "description": "Add connection to remedy service to create tickets via Soap. \nAdd logic to upload form to Remedy once validation is complete and files are scanned."
+    },
+    {
+      "id": 151807,
+      "iid": 9,
+      "title": "Stand up AV API for File Scanning before submission.",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "In Progress",
+        "New Feature"
+      ],
+      "description": ""
+    },
+    {
+      "id": 151808,
+      "iid": 10,
+      "title": "Turn on websockets for web server",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Bug",
+        "In Progress"
+      ],
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,426 @@
+{
+  "fiscal_year": 2026,
+  "month": 2,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 3934,
+      "title": "Third-Party Integration FY26Q2-2",
+      "start_date": "2026-01-21",
+      "end_date": "2026-02-03",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 5,
+        "weight": 11
+      },
+      "burndown": [
+        {
+          "date": "2026-01-21",
+          "remaining_count": 4,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2026-01-22",
+          "remaining_count": 1,
+          "remaining_weight": 1
+        },
+        {
+          "date": "2026-01-23",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-24",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-25",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-26",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-27",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-28",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-29",
+          "remaining_count": 1,
+          "remaining_weight": 3
+        },
+        {
+          "date": "2026-01-30",
+          "remaining_count": 1,
+          "remaining_weight": 3
+        },
+        {
+          "date": "2026-01-31",
+          "remaining_count": 1,
+          "remaining_weight": 3
+        },
+        {
+          "date": "2026-02-01",
+          "remaining_count": 1,
+          "remaining_weight": 3
+        },
+        {
+          "date": "2026-02-02",
+          "remaining_count": 1,
+          "remaining_weight": 3
+        },
+        {
+          "date": "2026-02-03",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 1,
+        "improvement": 3,
+        "new_feature": 2,
+        "other": 1
+      },
+      "completed": {
+        "count": 7,
+        "weight": 17
+      },
+      "issues": [
+        {
+          "id": 190525,
+          "iid": 634,
+          "title": "Fix issues preventing Gitlab Pipeline from completing run.",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "TEST PASSED",
+            "type::DevOps",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-29",
+          "date_closed": "2026-02-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 190100,
+          "iid": 633,
+          "title": "Resolve broken Path issue with JS responsible for handling new VendorId Dropdown Logic.",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "TEST PASSED",
+            "Type: Break/Fix",
+            "type::Bug"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-27",
+          "date_closed": "2026-01-27",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 188996,
+          "iid": 632,
+          "title": "Identify Issue with User Group Delete Functionality.",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "TEST PASSED",
+            "source::customer-direct",
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-21",
+          "date_closed": "2026-01-21",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 188547,
+          "iid": 631,
+          "title": "Vendor ID optional when creating or editing Prime Contractor lookup item",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "TEST PASSED",
+            "source::customer-direct",
+            "type::New Feature",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-21",
+          "date_closed": "2026-01-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 188546,
+          "iid": 630,
+          "title": "Ensure vendor ID field is hidden when meta data is set to hidden",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "TEST PASSED",
+            "source::customer-direct",
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-21",
+          "date_closed": "2026-01-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 188542,
+          "iid": 629,
+          "title": "Ensure Prime contractors with no vendor ID assigned are retained",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "TEST PASSED",
+            "source::customer-direct",
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-21",
+          "date_closed": "2026-01-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 188491,
+          "iid": 628,
+          "title": "Update BO and API Views to utilize the new Vendor ID field",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "TEST PASSED",
+            "type::New Feature",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-21",
+          "date_closed": "2026-01-23",
+          "date_removed_from_sprint": null
+        }
+      ]
+    },
+    {
+      "id": 3986,
+      "title": "Third-Party Integration FY26Q2-3",
+      "start_date": "2026-02-04",
+      "end_date": "2026-02-17",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 1,
+        "weight": 3
+      },
+      "burndown": [
+        {
+          "date": "2026-02-04",
+          "remaining_count": 1,
+          "remaining_weight": 3
+        },
+        {
+          "date": "2026-02-05",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-06",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-07",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-08",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-09",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-10",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2026-02-11",
+          "remaining_count": 1,
+          "remaining_weight": 3
+        },
+        {
+          "date": "2026-02-12",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-13",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-14",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-15",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-16",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-17",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 1,
+        "new_feature": 2,
+        "other": 3
+      },
+      "completed": {
+        "count": 6,
+        "weight": 17
+      },
+      "issues": [
+        {
+          "id": 194298,
+          "iid": 639,
+          "title": "Fix Path for PULSE Template Download in QA and PROD Environments",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::New Feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-17",
+          "date_closed": "2026-02-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 194030,
+          "iid": 638,
+          "title": "Handle NullReferenceException for Metadata Retrieval in ItemController",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-13",
+          "date_closed": "2026-02-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 192980,
+          "iid": 637,
+          "title": "Configure SEMGREP to output a CSV report to be uploaded after scans for SRQ approval.",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::DevOps"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-10",
+          "date_closed": "2026-02-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 192978,
+          "iid": 636,
+          "title": "Review initial findings and resolve any findings from the initial scan.",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::DevOps"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-10",
+          "date_closed": "2026-02-11",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 192976,
+          "iid": 635,
+          "title": "Add initial configurations from SEMGREP and set it up to run locally.",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::DevOps"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-10",
+          "date_closed": "2026-02-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 185045,
+          "iid": 623,
+          "title": "Generate the Bulk Upload Template",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::New Feature",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": "2026-02-05",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

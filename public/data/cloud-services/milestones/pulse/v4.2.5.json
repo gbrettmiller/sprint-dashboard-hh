@@ -1,0 +1,193 @@
+{
+  "milestone_title": "v4.2.5",
+  "milestone_id": 1954,
+  "slug": "v4.2.5",
+  "project_id": 91002,
+  "project_name": "PULSE",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:32.494156Z",
+  "issues": [
+    {
+      "id": 155890,
+      "iid": 296,
+      "title": "In the pre-award action edit form when the delete action button is clicked, if the confirmation is canceled the button remains disabled.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155891,
+      "iid": 297,
+      "title": "In the Bulk Upload tool; when an arrow button is clicked in the Instructions Slide Show the button is disabled for 10 seconds before it is reenabled.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155884,
+      "iid": 299,
+      "title": "In Admin Tools some links are not disabled when a link is clicked.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155897,
+      "iid": 300,
+      "title": "Edit form for fiscal years in Admin Tools returns a null referance exception.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155892,
+      "iid": 301,
+      "title": "Export capability failes in QA with error Could not find a part of the path 'D:\\WebContent\\PULSE\\App_Data\\ppmt_org_data.csv'.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155893,
+      "iid": 302,
+      "title": "Search button on usermanagement page in Admin Tools is not properly aligned and covers the search bar.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155885,
+      "iid": 303,
+      "title": "Update the JPO-Meridian LOE list",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155896,
+      "iid": 304,
+      "title": "Service Code Field Filtering",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: New Feature",
+        "type::New Feature"
+      ],
+      "description": "Service Code Field - When select \"Service\", only Service Codes that begin with a Letter will appear; When select \"Supply\", only Service Codes that begin with a Number will appear."
+    },
+    {
+      "id": 155887,
+      "iid": 305,
+      "title": "Add Field \"Action Briefed at Steering Committee?\"",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: New Feature",
+        "type::New Feature"
+      ],
+      "description": "Add Field \"Action Briefed at Steering Committee?\" with \"Yes and No\" Drop Down Selections.  Field should be added after the PM on track question."
+    },
+    {
+      "id": 155889,
+      "iid": 306,
+      "title": "Change Type of Funding Obligations from a Previous Fiscal Year Validation",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": "Reword Validation Message for Actions containing type of funding's for a previous fiscal year to read more clear i.e. \u201cThis action has [X] number of previous year obligation(s) listed in the financials table\u201c  (Change this to a warning color like Amber)"
+    },
+    {
+      "id": 155895,
+      "iid": 307,
+      "title": "Add Ability to set which action fields to duplicate from Admin Tools",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: New Feature",
+        "type::New Feature"
+      ],
+      "description": "Add ability to set which action fields to duplicate from Admin Tools for the duplicate action feature. Currently these are statically coded in the stored procedure."
+    },
+    {
+      "id": 155888,
+      "iid": 308,
+      "title": "Remove Unused Stored Procedure \"GetIsHiddenMetaDataFieldValue\"",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": "Change Stored Procedure References to \"GetIsHiddenMetaDataFieldValue\" to  use \"GetFieldMetaDataValues\" remove unused stored procedure"
+    },
+    {
+      "id": 155886,
+      "iid": 309,
+      "title": "Baymark/Northline Check boxes are allowing both to be checked.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": "Baymark and Northline check boxes should only allow one of them to be selected at a time. Currently both are able to be selected."
+    },
+    {
+      "id": 155894,
+      "iid": 310,
+      "title": "v4.2.5 Regression Testing, Fortify Scan, & Release Notes",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Task",
+        "type::Improvement"
+      ],
+      "description": ""
+    }
+  ]
+}

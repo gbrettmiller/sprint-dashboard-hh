@@ -1,0 +1,664 @@
+{
+  "fiscal_year": 2026,
+  "month": 12,
+  "year": 2025,
+  "sprints": [
+    {
+      "id": 3633,
+      "title": "Third-Party Integration FY26Q1-4",
+      "start_date": "2025-11-26",
+      "end_date": "2025-12-09",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 11,
+        "weight": 34
+      },
+      "burndown": [
+        {
+          "date": "2025-11-26",
+          "remaining_count": 11,
+          "remaining_weight": 34
+        },
+        {
+          "date": "2025-11-27",
+          "remaining_count": 11,
+          "remaining_weight": 34
+        },
+        {
+          "date": "2025-11-28",
+          "remaining_count": 8,
+          "remaining_weight": 21
+        },
+        {
+          "date": "2025-11-29",
+          "remaining_count": 8,
+          "remaining_weight": 21
+        },
+        {
+          "date": "2025-11-30",
+          "remaining_count": 8,
+          "remaining_weight": 21
+        },
+        {
+          "date": "2025-12-01",
+          "remaining_count": 8,
+          "remaining_weight": 21
+        },
+        {
+          "date": "2025-12-02",
+          "remaining_count": 8,
+          "remaining_weight": 21
+        },
+        {
+          "date": "2025-12-03",
+          "remaining_count": 8,
+          "remaining_weight": 21
+        },
+        {
+          "date": "2025-12-04",
+          "remaining_count": 8,
+          "remaining_weight": 21
+        },
+        {
+          "date": "2025-12-05",
+          "remaining_count": 8,
+          "remaining_weight": 21
+        },
+        {
+          "date": "2025-12-06",
+          "remaining_count": 8,
+          "remaining_weight": 21
+        },
+        {
+          "date": "2025-12-07",
+          "remaining_count": 8,
+          "remaining_weight": 21
+        },
+        {
+          "date": "2025-12-08",
+          "remaining_count": 2,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2025-12-09",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 11
+      },
+      "completed": {
+        "count": 11,
+        "weight": 34
+      },
+      "issues": [
+        {
+          "id": 177426,
+          "iid": 1106,
+          "title": "Employee upload handling of matching layer names",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 5,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-26",
+          "date_closed": "2025-11-28",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 171144,
+          "iid": 1105,
+          "title": "[BUG] Search button on content filtered pages no longer works",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "Type: Bug",
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-26",
+          "date_closed": "2025-12-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 169539,
+          "iid": 1102,
+          "title": "Create unit test for active/inactive fetch of Vendor Accounts",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-26",
+          "date_closed": "2025-12-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 169538,
+          "iid": 1101,
+          "title": "Create unit test for active/inactive fetch of Position Assignments",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-26",
+          "date_closed": "2025-12-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 169534,
+          "iid": 1098,
+          "title": "Create unit test for active/inactive fetch of Matrix Orgs",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-26",
+          "date_closed": "2025-12-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 169531,
+          "iid": 1096,
+          "title": "Create unit test for active/inactive fetch of Reports",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-26",
+          "date_closed": "2025-12-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 169529,
+          "iid": 1094,
+          "title": "Create unit test for active/inactive fetch of Tasks",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-26",
+          "date_closed": "2025-12-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 155424,
+          "iid": 1043,
+          "title": "[ORBIT-290] Add Emergency contact 1 and 2 relationship to SQL",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Customer:GCS",
+            "jira-import::ORBIT-1",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-26",
+          "date_closed": "2025-11-28",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 155250,
+          "iid": 869,
+          "title": "[ORBIT-92] Home Screen: Move supervised location reported information above the layer location",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "customer:platform-engineering",
+            "Governance_Board:Vote",
+            "jira-import::ORBIT-1",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-26",
+          "date_closed": "2025-12-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 155248,
+          "iid": 867,
+          "title": "[ORBIT-90] Notifications: Allow email to be sent same time as Text response required",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "customer:platform-engineering",
+            "Governance_Board:Vote",
+            "jira-import::ORBIT-1",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-26",
+          "date_closed": "2025-11-28",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 155238,
+          "iid": 857,
+          "title": "[ORBIT-78] Ability to bulk transfer to a different layer",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 8,
+          "state": "closed",
+          "labels": [
+            "Customer:Internal",
+            "Governance_Board:Vote",
+            "jira-import::ORBIT-1"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-26",
+          "date_closed": "2025-12-09",
+          "date_removed_from_sprint": null
+        }
+      ]
+    },
+    {
+      "id": 3719,
+      "title": "FY26Q1-5",
+      "start_date": "2025-12-11",
+      "end_date": "2025-12-23",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 10,
+        "weight": 14
+      },
+      "burndown": [
+        {
+          "date": "2025-12-11",
+          "remaining_count": 10,
+          "remaining_weight": 14
+        },
+        {
+          "date": "2025-12-12",
+          "remaining_count": 9,
+          "remaining_weight": 13
+        },
+        {
+          "date": "2025-12-13",
+          "remaining_count": 9,
+          "remaining_weight": 13
+        },
+        {
+          "date": "2025-12-14",
+          "remaining_count": 9,
+          "remaining_weight": 13
+        },
+        {
+          "date": "2025-12-15",
+          "remaining_count": 9,
+          "remaining_weight": 13
+        },
+        {
+          "date": "2025-12-16",
+          "remaining_count": 5,
+          "remaining_weight": 7
+        },
+        {
+          "date": "2025-12-17",
+          "remaining_count": 6,
+          "remaining_weight": 10
+        },
+        {
+          "date": "2025-12-18",
+          "remaining_count": 6,
+          "remaining_weight": 10
+        },
+        {
+          "date": "2025-12-19",
+          "remaining_count": 3,
+          "remaining_weight": 7
+        },
+        {
+          "date": "2025-12-20",
+          "remaining_count": 3,
+          "remaining_weight": 7
+        },
+        {
+          "date": "2025-12-21",
+          "remaining_count": 3,
+          "remaining_weight": 7
+        },
+        {
+          "date": "2025-12-22",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-12-23",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 18
+      },
+      "completed": {
+        "count": 18,
+        "weight": 31
+      },
+      "issues": [
+        {
+          "id": 185096,
+          "iid": 1140,
+          "title": "Update Future Check-Ins with Updated Employee Info",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "v3.2.6",
+          "date_added_to_sprint": "2025-12-22",
+          "date_closed": "2025-12-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184526,
+          "iid": 1129,
+          "title": "[BUG] Changing Layer assignment for Notification Managers",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Customer:GCS",
+            "Type: Bug"
+          ],
+          "milestone": "v3.2.6",
+          "date_added_to_sprint": "2025-12-17",
+          "date_closed": "2025-12-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184426,
+          "iid": 1128,
+          "title": "Deploy ORBIT v3.2.6.3 to TEST",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": "v3.2.6",
+          "date_added_to_sprint": "2025-12-16",
+          "date_closed": "2025-12-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184414,
+          "iid": 1127,
+          "title": "Investigate GitLab Pipeline Issues",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "v3.2.6",
+          "date_added_to_sprint": "2025-12-16",
+          "date_closed": "2025-12-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184348,
+          "iid": 1126,
+          "title": "Deploy ORBIT v3.2.6.2 to TEST",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [],
+          "milestone": "v3.2.6",
+          "date_added_to_sprint": "2025-12-16",
+          "date_closed": "2025-12-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184302,
+          "iid": 1125,
+          "title": "[BUG] Future check-in not active after employee transfer",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Type: Bug",
+            "priority::highest",
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.6",
+          "date_added_to_sprint": "2025-12-16",
+          "date_closed": "2025-12-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184097,
+          "iid": 1124,
+          "title": "[BUG] \"Emergency Contact 2\" Overwriting \"Emergency Contact 1\"",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Type: Bug",
+            "priority::high",
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.6",
+          "date_added_to_sprint": "2025-12-15",
+          "date_closed": "2025-12-15",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183947,
+          "iid": 1123,
+          "title": "[BUG] Fix special search handlers to ensure they work on Employee/Reminder log pages",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": "v3.2.6",
+          "date_added_to_sprint": "2025-12-12",
+          "date_closed": "2025-12-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183680,
+          "iid": 1122,
+          "title": "Add explanatory text for \"Response Required\" field",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.6",
+          "date_added_to_sprint": "2025-12-11",
+          "date_closed": "2025-12-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183679,
+          "iid": 1121,
+          "title": "\"Response required\" default to No",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.6",
+          "date_added_to_sprint": "2025-12-11",
+          "date_closed": "2025-12-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183677,
+          "iid": 1119,
+          "title": "Emails for \"Response Required\" needs additional text referencing SMS notification",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.6",
+          "date_added_to_sprint": "2025-12-11",
+          "date_closed": "2025-12-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183676,
+          "iid": 1118,
+          "title": "Explanatory text for \"Send toNotification Managers\" field",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.6",
+          "date_added_to_sprint": "2025-12-11",
+          "date_closed": "2025-12-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183675,
+          "iid": 1117,
+          "title": "\"Send Notification\" button disabled until \"SEND\" entered",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.6",
+          "date_added_to_sprint": "2025-12-11",
+          "date_closed": "2025-12-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183672,
+          "iid": 1114,
+          "title": "Column headers in \"Employee Without Notification Information\" download",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.6",
+          "date_added_to_sprint": "2025-12-11",
+          "date_closed": "2025-12-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183671,
+          "iid": 1113,
+          "title": "Send to Notification Managers default to \"No\"",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.6",
+          "date_added_to_sprint": "2025-12-11",
+          "date_closed": "2025-12-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183666,
+          "iid": 1108,
+          "title": "Update Notification Information text",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.6",
+          "date_added_to_sprint": "2025-12-11",
+          "date_closed": "2025-12-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183665,
+          "iid": 1107,
+          "title": "Receive SMS Notifications at company-issued mobile device number",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.6",
+          "date_added_to_sprint": "2025-12-11",
+          "date_closed": "2025-12-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 155233,
+          "iid": 852,
+          "title": "[ORBIT-73] Add Profile Update Date to SQL",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Customer:Internal",
+            "jira-import::ORBIT-1",
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.6",
+          "date_added_to_sprint": "2025-12-11",
+          "date_closed": "2025-12-16",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

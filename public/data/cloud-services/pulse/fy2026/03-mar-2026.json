@@ -1,0 +1,703 @@
+{
+  "fiscal_year": 2026,
+  "month": 3,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 4179,
+      "title": "Third-Party Integration FY262-4",
+      "start_date": "2026-02-18",
+      "end_date": "2026-03-03",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 5,
+        "weight": 19
+      },
+      "burndown": [
+        {
+          "date": "2026-02-18",
+          "remaining_count": 5,
+          "remaining_weight": 19
+        },
+        {
+          "date": "2026-02-19",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-20",
+          "remaining_count": 12,
+          "remaining_weight": 36
+        },
+        {
+          "date": "2026-02-21",
+          "remaining_count": 12,
+          "remaining_weight": 36
+        },
+        {
+          "date": "2026-02-22",
+          "remaining_count": 12,
+          "remaining_weight": 36
+        },
+        {
+          "date": "2026-02-23",
+          "remaining_count": 12,
+          "remaining_weight": 36
+        },
+        {
+          "date": "2026-02-24",
+          "remaining_count": 3,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2026-02-25",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-26",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-27",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-28",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-03-01",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-03-02",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-03-03",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 9,
+        "improvement": 24,
+        "new_feature": 3,
+        "other": 0
+      },
+      "completed": {
+        "count": 36,
+        "weight": 97
+      },
+      "issues": [
+        {
+          "id": 199335,
+          "iid": 694,
+          "title": "Bug: LookupItem Admin Edit \u2014 HTTP 500 on load/save, missing Parent PM dropdown, and org selection loop",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::bug"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-03",
+          "date_closed": "2026-03-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 199087,
+          "iid": 692,
+          "title": "Internal Server Error when saving a Parent assignment on LookupItem Edit",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "type::bug"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-03",
+          "date_closed": "2026-03-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 198916,
+          "iid": 691,
+          "title": "Security: Centralize multi-tenant org filtering to prevent cross-org data access",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::Bug"
+          ],
+          "milestone": "v5.0.9.3",
+          "date_added_to_sprint": "2026-03-03",
+          "date_closed": "2026-03-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 198915,
+          "iid": 690,
+          "title": "Security: Implement API key expiration and rate limiting on API endpoints",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::Bug"
+          ],
+          "milestone": "v5.0.9.3",
+          "date_added_to_sprint": "2026-03-03",
+          "date_closed": "2026-03-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 198914,
+          "iid": 689,
+          "title": "Security: Add CSRF anti-forgery token validation to BulkUpload POST action",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::Bug"
+          ],
+          "milestone": "v5.0.9.3",
+          "date_added_to_sprint": "2026-03-03",
+          "date_closed": "2026-03-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 198913,
+          "iid": 688,
+          "title": "Security: Fix XSS vulnerability \u2014 replace innerHTML assignment in customAlerts.js",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "type::Bug"
+          ],
+          "milestone": "v5.0.9.3",
+          "date_added_to_sprint": "2026-03-03",
+          "date_closed": "2026-03-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 198912,
+          "iid": 687,
+          "title": "Performance: Disable global lazy-loading and add explicit .Include() calls to fix N+1 queries",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": "v5.0.9.3",
+          "date_added_to_sprint": "2026-03-03",
+          "date_closed": "2026-03-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 198911,
+          "iid": 686,
+          "title": "Bug: Fix blocking .Result calls on async methods in BulkUploadController",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "type::Bug"
+          ],
+          "milestone": "v5.0.9.3",
+          "date_added_to_sprint": "2026-03-03",
+          "date_closed": "2026-03-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 198910,
+          "iid": 685,
+          "title": "Bug: Expand ErrorLog.HttpResponseMessage field \u2014 currently truncated to 25 characters",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::Bug"
+          ],
+          "milestone": "v5.0.9.3",
+          "date_added_to_sprint": "2026-03-03",
+          "date_closed": "2026-03-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 198844,
+          "iid": 663,
+          "title": "Rename projects: remove Core suffix from DataCore, ServiceCore, and WebCore",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-03",
+          "date_closed": "2026-03-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 198843,
+          "iid": 662,
+          "title": "Clean up repository: remove dead code, merge artifacts, and disabled tests",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-03",
+          "date_closed": "2026-03-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 198842,
+          "iid": 661,
+          "title": "Add unit tests for AccProjectedAwardDateRevision controller",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-03",
+          "date_closed": "2026-03-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195726,
+          "iid": 660,
+          "title": "Rename Project from OneNListApp.API.Teststo OneNListApp.Tests",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-24",
+          "date_closed": "2026-02-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195720,
+          "iid": 659,
+          "title": "Add Sandbox to Admin Section Program Supported by PMPD Mapping Logic",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-24",
+          "date_closed": "2026-02-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195718,
+          "iid": 658,
+          "title": "Add Sandbox as an Organization and Display IsCHS and IsNorthline Fields",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-24",
+          "date_closed": "2026-02-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195294,
+          "iid": 657,
+          "title": "BulkUploadController \u2014 BuildTemplateHeaders Extraction Unit Tests",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-20",
+          "date_closed": "2026-02-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195293,
+          "iid": 656,
+          "title": "SecurityAccessService \u2014 Unit Tests",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-20",
+          "date_closed": "2026-02-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195292,
+          "iid": 655,
+          "title": "LookupItemService \u2014 Unit Tests",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-20",
+          "date_closed": "2026-02-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195290,
+          "iid": 654,
+          "title": "Generic Service<TEntity> Base Class \u2014 Unit Tests",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-20",
+          "date_closed": "2026-02-20",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195289,
+          "iid": 653,
+          "title": "OneNListItemService \u2014 Unit Tests",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-20",
+          "date_closed": "2026-02-20",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195288,
+          "iid": 652,
+          "title": "OneNItemValidationHelper \u2014 Access Level and Dynamic Metadata Validation",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-20",
+          "date_closed": "2026-02-25",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195287,
+          "iid": 651,
+          "title": "OneNItemValidationHelper \u2014 Pre-Award Action Section Validators",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-20",
+          "date_closed": "2026-02-25",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195286,
+          "iid": 650,
+          "title": "OneNItemValidationHelper \u2014 Draft, Expired, and Cancelled Action Validation",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-20",
+          "date_closed": "2026-02-25",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195284,
+          "iid": 649,
+          "title": "BulkUploadController \u2014 Import Phase and Results Download Unit Tests",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-20",
+          "date_closed": "2026-02-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195282,
+          "iid": 648,
+          "title": "BulkUploadController \u2014 Pre-flight File Validation Unit Tests",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-20",
+          "date_closed": "2026-02-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195281,
+          "iid": 647,
+          "title": "BulkUploadService (Legacy Excel Service) \u2014 Unit Tests",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-20",
+          "date_closed": "2026-02-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195279,
+          "iid": 646,
+          "title": "FieldMetadataProvider \u2014 Unit Tests",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-20",
+          "date_closed": "2026-02-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195276,
+          "iid": 645,
+          "title": "SystemFieldMetadataService \u2014 Unit Tests",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-20",
+          "date_closed": "2026-02-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195274,
+          "iid": 644,
+          "title": "CageCodeMappingService \u2014 Unit Tests",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-20",
+          "date_closed": "2026-02-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195273,
+          "iid": 643,
+          "title": "Establish Unit Test Standards, Conventions, and Shared Infrastructure",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-20",
+          "date_closed": "2026-02-20",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195095,
+          "iid": 642,
+          "title": "Update BO OneNList View so that action with inactive PM's show the PM in reports.",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "TEST-Passed",
+            "source::customer-direct",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-19",
+          "date_closed": "2026-02-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 194537,
+          "iid": 641,
+          "title": "Remove Inactive Prime Contractors from Vendor ID Mapping List",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "priority::high",
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-18",
+          "date_closed": "2026-02-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 194534,
+          "iid": 640,
+          "title": "Metadata Field Settings Not Reflected in Form (Default Value and Required Indicator Issues)",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "priority::highest",
+            "type::Bug",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-18",
+          "date_closed": "2026-02-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183662,
+          "iid": 616,
+          "title": "Actionable Error Report (Post-Upload Reporting and Correction)",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::New Feature",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-18",
+          "date_closed": "2026-02-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183661,
+          "iid": 615,
+          "title": "Headless Processing of Valid Rows (Import to Draft State)",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::New Feature",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-18",
+          "date_closed": "2026-02-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183660,
+          "iid": 614,
+          "title": "Upload Interface & Pre-flight Check (Data Validation and Error Identification)",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::New Feature",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-18",
+          "date_closed": "2026-02-19",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

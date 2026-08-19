@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-4-feb-26",
+  "title": "Data Services 4 FEB 26",
+  "start_date": "2026-01-21",
+  "end_date": "2026-02-04",
+  "generated_at": "2026-07-02T21:56:45.340805Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on advancing four critical applications toward production readiness by completing core feature implementations, resolving functional defects, and establishing operational governance controls. The team worked to enhance user experience across multiple systems while ensuring proper administrative oversight and data integrity in test and production environments.",
+    "summary": "The team delivered substantial progress across Access Requests, Compliance Review, Records API, I/O, TCT, and Finance Portal applications, with 22 completed issues spanning feature development, bug resolution, and deployment activities. Key accomplishments include deploying Compliance Review to the test environment with improved notification and labeling functionality, establishing dynamic form capabilities and read-only controls in Access Requests, moving TCT and Finance Portal to production, and pushing I/O updates across multiple customer environments. These completions establish the foundation for operational use while improving data management practices, administrative controls, and user workflows across the portfolio.",
+    "metrics": {
+      "initial_count": 27,
+      "initial_weight": 59,
+      "completed_count": 23,
+      "completed_weight": 45,
+      "initial_breakdown": "13 Improvements, 11 Others, 3 New Features",
+      "completed_breakdown": "11 Others, 10 Improvements, 2 New Features"
+    }
+  }
+}

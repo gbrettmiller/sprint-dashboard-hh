@@ -1,0 +1,69 @@
+{
+  "milestone_title": "v3.2.7",
+  "milestone_id": 2305,
+  "slug": "v3.2.7",
+  "project_id": 91001,
+  "project_name": "ORBIT",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:24.921739Z",
+  "issues": [
+    {
+      "id": 183678,
+      "iid": 1120,
+      "title": "Add Form Validation to Notification Page",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "#### **User Story**\n\n* **As a** Notification Manager,\n* **I want** the \"Confirm Notification\" button to be disabled until I've filled out all necessary fields, and I want a clear indicator of which fields are required,\n* **so that** I can avoid submission errors and understand exactly what information is needed to send a notification.\n\n---\n\n#### **Acceptance Criteria (Gherkin Format)**\n\n**Scenario 1: Initial Page Load**\n\n* **Given** a Notification Manager is on the \"Send Notification\" page,\n* **When** the page finishes loading,\n* **Then** the \"Confirm Notification\" button **must** be in a disabled state.\n* **And** a required field indicator (e.g., a red asterisk `*`) **must** be displayed next to the labels for required fields.\n\n**Scenario 2: User Completes All Required Fields**\n\n* **Given** the \"Confirm Notification\" button is disabled,\n* **When** the user provides valid input for all required fields,\n* **Then** the \"Confirm Notification\" button **must** transition to an enabled state.\n\n**Scenario 3: User Clears a Required Field After Completion**\n\n* **Given** all required fields are filled and the \"Confirm Notification\" button is enabled,\n* **When** the user deletes the content from a required field (e.g., clears the \"To\" field),\n* **Then** the \"Confirm Notification\" button **must** immediately transition back to a disabled state.\n\n---\n\n#### **Test Cases**\n\n| Test ID | Description | Steps | Expected Result |\n|---------|-------------|-------|-----------------|\n| **TC-001** | **Initial State:** Verify the button is disabled and indicators are present on page load. | 1\\. Navigate to the \"Send Notification\" page. | The \"Confirm Notification\" button is greyed out and unclickable. An asterisk `*` is visible next to the four required field labels. |\n| **TC-002** | **Partial Completion:** Verify the button remains disabled if not all required fields are filled. | 1\\. Select a \"Notification Type\". <br>2. Select \"Recipients\". <br>3. Enter a \"Subject\". | The \"Confirm Notification\" button remains in its disabled state because the \"Message\" field is empty. |\n| **TC-003** | **Full Completion:** Verify the button becomes enabled once all required fields are filled. | 1\\. Perform steps from TC-002. <br>2. Enter text into the \"Message\" field. | As soon as text is entered into the \"Message\" field, the \"Confirm Notification\" button becomes active and clickable. |\n| **TC-004** | **Re-Disabling:** Verify the button disables if a required field (e.g., Recipients) is cleared. | 1\\. Complete all steps from TC-003 so the button is enabled. <br>2. Clear the \"Recipients\" selection. | The \"Confirm Notification\" button immediately returns to its disabled state. |\n| **TC-005** | **UI/UX Verification:** Confirm the visual states of the button are distinct. | 1\\. Observe the \"Confirm Notification\" button in both disabled and enabled states. | There is a clear and unambiguous visual difference (e.g., color, opacity, cursor style) between the two states. |"
+    },
+    {
+      "id": 185019,
+      "iid": 1135,
+      "title": "Enable Register Button on Form Completion",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "#### **User Story**\n\n* **As a** new user registering for ORBIT,\n* **I want** the \"Register\" button to activate only after I have provided all the required information,\n* **so that** I have a clear visual cue that my form is ready to be submitted and can avoid validation errors.\n\n---\n\n#### **Acceptance Criteria (Gherkin Format)**\n\n**Scenario 1: Page Loads for the First Time**\n\n* **Given** a new user is on the self-registration page,\n* **When** the page finishes loading,\n* **Then** the \"Register\" button **must** be in a disabled state (e.g., visually greyed-out and not clickable).\n\n**Scenario 2: User Completes All Required Fields**\n\n* **Given** the \"Register\" button is disabled,\n* **When** the user enters valid data into the final required field on the form,\n* **Then** the \"Register\" button **must** transition to an enabled state (e.g., full color and clickable).\n\n**Scenario 3: User Clears a Required Field After Completion**\n\n* **Given** all required fields are filled and the \"Register\" button is enabled,\n* **When** the user deletes the content from any one of the required fields (e.g., clears the \"Rank\" selection),\n* **Then** the \"Register\" button **must** immediately transition back to a disabled state.\n\n---\n\n#### **Test Cases**\n\n| Test ID | Description | Steps | Expected Result |\n|---------|-------------|-------|-----------------|\n| **TC-001** | **Initial State:** Verify the button is disabled on page load. | 1\\. Navigate to the self-registration page. | The \"Register\" button is greyed out and cannot be clicked. |\n| **TC-002** | **Partial Completion:** Verify the button remains disabled if not all required fields are filled. | 1\\. Navigate to the registration page. 2. Fill in the \"SSN\" and \"Rank\" fields. | The \"Register\" button remains in its disabled state. |\n| **TC-003** | **Full Completion:** Verify the button becomes enabled once all required fields are filled. | 1\\. Navigate to the registration page. 2. Fill in all required fields (e.g., SSN, Rank, Organization, Phone Number) with valid data. | As soon as the last required field is filled, the \"Register\" button becomes active and clickable. |\n| **TC-004** | **Re-Disabling:** Verify the button disables if a required field is cleared. | 1\\. Complete all steps from TC-003 so the button is enabled. 2. Delete the value from the \"Phone Number\" field. | The \"Register\" button immediately returns to its disabled state. |\n| **TC-005** | **UI/UX Verification:** Confirm the visual states are distinct. | 1\\. Observe the \"Register\" button in both disabled and enabled states. | There is a clear and unambiguous visual difference (e.g., color, opacity, cursor style) between the two states. |"
+    },
+    {
+      "id": 185138,
+      "iid": 1141,
+      "title": "\"Employee Without Notification Information\" csv download logic issue",
+      "weight": 3,
+      "state": "closed",
+      "labels": [],
+      "description": "Randi states the following from her testing:\n\"If I have both secondary email and sms I am removed from report correctly. If I have secondary email and no sms I show on report as no under both columns.\""
+    },
+    {
+      "id": 185174,
+      "iid": 1142,
+      "title": "Send Notifications to Government Issued Mobile Device",
+      "weight": 3,
+      "state": "closed",
+      "labels": [],
+      "description": "see 1107 \n\nAs a ORBIT user who has a Government Issued mobile device and who has entered the number for the Government issued mobile device on my ORBIT profile, I want to receive SMS notifications at that number whenever I meet the criteria for an SMS notification that is sent by my organization.\n\n---\n\nACCEPTANCE CRITERIA:\n\n* If a user has entered a valid phone number in the \"Government Issued Mobile Device\" field of their profile, when a Notification Manager sends an SMS notification with conditions that the user meets, the user receives an SMS notification at the number entered in the \"Government Issued Mobile Device\" field.\n* If a user has entered a separate number in the Notification Information section of their profile, they also receive the notification at that number."
+    },
+    {
+      "id": 185175,
+      "iid": 1143,
+      "title": "Profile Update Date in Sql",
+      "weight": 3,
+      "state": "closed",
+      "labels": [],
+      "description": "previous item 852 had 2 issues:\n\n1. george.b. miller16.ctr updated his profile and had a dateupdatedbyemployee in sql. I then went in and updated his employee record. It wiped out the dateupdatedbyemployee. It should have no impact on that field when updated from the employee screen.\n2. I updated my profile and it updated the dateupdatedbyemployee correctly. I then went in and updated my employee record (not profile). It changed the dateupdatedbyemployee date. Updating anyone's record from the employee screen should have no impact on that field."
+    },
+    {
+      "id": 185176,
+      "iid": 1144,
+      "title": "Layer specific Notification Manager",
+      "weight": 3,
+      "state": "closed",
+      "labels": [],
+      "description": "**When selecting a layer in the notification role, the user should see that layer and everything below that layer on the notification screen.**\n\nIt seems this role only works when assigning the user to a PM Layer. It does not work if the user is assigned to a layer below pm such as pd.\n\nI set me up as a notification manager for layer 2 (PD level) under peo. when I try to do a notification, no layers are displayed. It appears to happen if the layer is a PD. it works for PM"
+    }
+  ]
+}

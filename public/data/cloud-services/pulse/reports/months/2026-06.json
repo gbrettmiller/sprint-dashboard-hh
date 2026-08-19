@@ -1,0 +1,23 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "pulse",
+  "month": "2026-06",
+  "generated_at": "2026-07-01T06:08:29.941088Z",
+  "sprints": [
+    {
+      "title": "v5.1.4",
+      "start_date": "2026-06-03",
+      "end_date": "2026-06-17",
+      "goals": "This sprint focused on enhancing data import capabilities and administrative tooling while resolving critical display and validation issues affecting users and administrators. The team aimed to improve the maintainability of core data layers and strengthen API security features alongside user experience improvements across lookup item management.",
+      "summary": "The team successfully delivered an Excel import tool for Level of Effort lookup items, enabling faster data ingestion and reducing manual configuration overhead. Critical bugs were fixed including correction of fiscal year filtering on the home page dashboard and resolution of a persistent validation issue with the Type of Submission field that was blocking saves. The sprint also modernized the action list data layer by transitioning from stored procedures to Entity Framework, refactored magic numbers into named constants for improved code clarity, and significantly enhanced administrative capabilities through improved API key management with expiration tracking and usage visibility. Additional polish to the user experience included new help text and tooltips in admin settings, a view and edit toggle for lookup items, and new metadata fields such as OrbitalLink checkbox support for action descriptions.",
+      "metrics": {
+        "initial_count": 12,
+        "initial_weight": 30,
+        "completed_count": 12,
+        "completed_weight": 30,
+        "initial_breakdown": "7 Improvements, 2 Refactors, 1 New Feature, 1 Bug, 1 Devops",
+        "completed_breakdown": "7 Improvements, 2 Refactors, 1 New Feature, 1 Bug, 1 Devops"
+      }
+    }
+  ]
+}

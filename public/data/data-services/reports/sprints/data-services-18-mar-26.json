@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-18-mar-26",
+  "title": "Data Services 18 MAR 26",
+  "start_date": "2026-03-03",
+  "end_date": "2026-03-18",
+  "generated_at": "2026-07-02T21:56:57.290886Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on refining user interfaces across multiple applications, establishing infrastructure for new purchasing capabilities, and expanding role-based access controls to support organizational hierarchy requirements. The team also prioritized environment promotions and data migrations to advance staging readiness across the ecosystem.",
+    "summary": "The team completed significant user experience improvements to the Access Requests application by streamlining the My POC and My Action screens, removing redundant Travel Card columns, and enhancing navigation with improved form validation and button functionality. Critical infrastructure work included pushing Catalog Sync to production and test environments, deploying Compliance Review capabilities across consortium test systems with expanded resource manager support, and establishing the foundation for a new Purchasing module with screen layouts and navigation components. Administrative enhancements expanded Program Office permissions across multiple organizational groups while data migrations and environment configurations moved Division and Business Unit applications closer to production readiness. These deliverables collectively improve user workflows, extend system accessibility, and position the platform for the next phase of capability rollout.",
+    "metrics": {
+      "initial_count": 28,
+      "initial_weight": 72,
+      "completed_count": 28,
+      "completed_weight": 72,
+      "initial_breakdown": "13 Others, 11 Improvements, 3 Bugs, 1 New Feature",
+      "completed_breakdown": "13 Others, 11 Improvements, 3 Bugs, 1 New Feature"
+    }
+  }
+}

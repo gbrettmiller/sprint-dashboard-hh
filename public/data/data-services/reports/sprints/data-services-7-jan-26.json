@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-7-jan-26",
+  "title": "Data Services 7 JAN 26",
+  "start_date": "2025-12-17",
+  "end_date": "2026-01-07",
+  "generated_at": "2026-07-02T21:56:37.166539Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on stabilizing core application functionality across multiple modules while expanding administrative capabilities and improving data security posture. The team prioritized bug fixes in existing workflows, enhanced user interface consistency, and implemented critical security controls for document handling and data retrieval operations.",
+    "summary": "The team delivered 27 completed items spanning six product lines, with particular emphasis on resolving user-facing issues in the Records API, Access Requests, and Compliance Review modules that were blocking normal operations. Key accomplishments include fixing dropdown and release type functionality in Records API, implementing security controls for SharePoint library access in Compliance Review, standardizing required field validation across Access Requests, and improving reporting accuracy in the I/O Power BI environment. Additionally, the team advanced foundational work through schema updates, security model documentation, and administrative guides that position these systems for sustained operation and governance. These fixes and enhancements reduce operational friction, strengthen data security compliance, and improve the user experience across all deployed modules.",
+    "metrics": {
+      "initial_count": 27,
+      "initial_weight": 58,
+      "completed_count": 27,
+      "completed_weight": 58,
+      "initial_breakdown": "14 Others, 11 Improvements, 2 Bugs",
+      "completed_breakdown": "14 Others, 11 Improvements, 2 Bugs"
+    }
+  }
+}

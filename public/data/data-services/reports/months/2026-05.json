@@ -1,0 +1,53 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "month": "2026-05",
+  "generated_at": "2026-07-02T21:57:26.275709Z",
+  "sprints": [
+    {
+      "title": "Data Services 13 May 26",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-13",
+      "goals": "This sprint focused on stabilizing and enhancing core application functionality across multiple modules while expanding deployment capabilities to production environments. The team aimed to resolve critical bugs, complete pending feature implementations in the Purchasing and Compliance Review systems, and establish foundational architecture for the ORBIT initiative.",
+      "summary": "The team completed 31 issues spanning six major application areas, with particular emphasis on the Compliance Review module where gallery row highlighting, record attribute viewing, sorting functionality, and production deployments across all test and production environments were successfully delivered. Significant progress was made on the Purchasing module's Item Form Screen with all five component areas now complete, while critical fixes were applied to TCT archive flows, SALT configuration management, Access Requests approval and form handling, and Records API task synchronization. The ORBIT program advanced with security and data architecture work completed, and supporting systems like email notification features and training period management tools were implemented to enhance operational capabilities.",
+      "metrics": {
+        "initial_count": 34,
+        "initial_weight": 69,
+        "completed_count": 32,
+        "completed_weight": 65,
+        "initial_breakdown": "13 Improvements, 7 Bugs, 7 Others, 7 New Features",
+        "completed_breakdown": "12 Improvements, 7 Others, 7 New Features, 6 Bugs"
+      }
+    },
+    {
+      "title": "Data Services 27 May 26",
+      "start_date": "2026-05-13",
+      "end_date": "2026-05-27",
+      "goals": "This sprint focused on advancing three major product lines—Compliance Review, Purchasing UI, and TCT—while addressing foundational infrastructure improvements and critical bug fixes across the platform. The team aimed to deliver enhanced user experiences through refined data display capabilities, streamlined administrative workflows, and improved system reliability across multiple applications.",
+      "summary": "The sprint successfully delivered significant improvements across the portfolio, including comprehensive gallery column implementations for Purchasing UI that enhance data visualization, substantial Compliance Review administrative enhancements that improve user record management and data upload workflows, and the successful release of TCT 1.3.0 to production with accompanying documentation and system cleanup. Additionally, the team resolved critical infrastructure issues such as service principal configuration, implemented filtering improvements including Contractor integration and modern combo box controls, and completed ownership transfer capabilities in Compliance Review. These deliverables collectively enhance system usability, administrative efficiency, and platform stability while enabling users to manage data and workflows more effectively across the organization.",
+      "metrics": {
+        "initial_count": 27,
+        "initial_weight": 70,
+        "completed_count": 24,
+        "completed_weight": 63,
+        "initial_breakdown": "13 Improvements, 6 New Features, 6 Others, 2 Bugs",
+        "completed_breakdown": "11 Improvements, 6 Others, 5 New Features, 2 Bugs"
+      }
+    },
+    {
+      "title": "Data Services 10 JUN 26",
+      "start_date": "2026-05-27",
+      "end_date": "2026-06-09",
+      "goals": "This sprint aimed to advance multiple applications toward production readiness by establishing foundational infrastructure for test environments, resolving critical operational issues across distributed sites, and delivering user-facing enhancements that improve workflow efficiency and reporting capabilities.",
+      "summary": "The team successfully deployed infrastructure across four major applications, creating required lists and libraries for Access Requests, AMIT, SALT, and Compliance Review in test and production environments while pushing three applications to production. Critical bugs affecting attribute synchronization across sites, supervisor selection accuracy, and PDF generation were resolved, and significant user experience improvements were implemented including dynamic task filtering, approver visibility into their approved requests, and enhanced administrative controls. These completions establish stable test environments for ongoing development, eliminate blocking production issues, and deliver tangible improvements to end-user workflows across the platform.",
+      "metrics": {
+        "initial_count": 34,
+        "initial_weight": 59,
+        "completed_count": 31,
+        "completed_weight": 52,
+        "initial_breakdown": "18 Others, 9 Improvements, 4 New Features, 3 Bugs",
+        "completed_breakdown": "18 Others, 7 Improvements, 3 New Features, 3 Bugs"
+      }
+    }
+  ]
+}

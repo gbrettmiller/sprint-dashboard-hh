@@ -1,0 +1,110 @@
+{
+  "milestone_title": "ORBIT v2.9.7",
+  "milestone_id": 1898,
+  "slug": "mirars-v2.9.7",
+  "project_id": 91001,
+  "project_name": "ORBIT",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:30.126845Z",
+  "issues": [
+    {
+      "id": 152642,
+      "iid": 688,
+      "title": "Notification via email not working",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: PROD Ready"
+      ],
+      "description": "1. I sent a Notification and checked off email - the notification came as a text.\n2. I sent a Notification and checked off email and text - I received two texts"
+    },
+    {
+      "id": 152636,
+      "iid": 689,
+      "title": "corporate-email Persona ID returns an error",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: PROD Ready"
+      ],
+      "description": "When adding or editing a employee record, if the person has a corporate-email Persona ID, a red errors appears twice under it: \"Please enter only the Persona ID\""
+    },
+    {
+      "id": 152639,
+      "iid": 690,
+      "title": "Persona id check",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: PROD Ready"
+      ],
+      "description": "I created a new person davlyn.l.williams and it tells me the persona id is used within peo c3t.  Davlyn is in there as davlyn.l.williams.ctr but it stopped me from putting in davlyn.l.williams without the .ctr"
+    },
+    {
+      "id": 152643,
+      "iid": 691,
+      "title": "Notification Message Status not updating",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: PROD Ready"
+      ],
+      "description": "Message status is not appearing on the screen when viewing all recipients. It is also not on the Excel download"
+    },
+    {
+      "id": 152638,
+      "iid": 692,
+      "title": "Notification Data not populating SQL",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: PROD Ready"
+      ],
+      "description": "The data from Notifications is not going to SQL"
+    },
+    {
+      "id": 152641,
+      "iid": 693,
+      "title": "Remove calls to TDA Position table",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: PROD Ready"
+      ],
+      "description": "There appears to be a call from Mongo to SQL that runs very often - Delete from DW_Tdaposition where mongoid = @mongoi\n\nSam sees this running over and over again and taking up resources.  Can we remove it since we no longer use this table?"
+    },
+    {
+      "id": 152640,
+      "iid": 694,
+      "title": "Notification Home Screen Bottom",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: PROD Ready"
+      ],
+      "description": "I am not sure what the bottom of the Notification screen is showing \"people without Notification Information\" . it doesn't seem accurate since almost everyone has an sms in qa. It should just show those people without an SMS"
+    },
+    {
+      "id": 152637,
+      "iid": 695,
+      "title": "Person Search doesn't appear to order properly",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: PROD Ready"
+      ],
+      "description": "When Searching for a person under search or employee search, the order seems random. I typed in Jones and the list is no longer alphabetical by first name like it is in production."
+    },
+    {
+      "id": 152644,
+      "iid": 696,
+      "title": "OOO Log not showing",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: PROD Ready"
+      ],
+      "description": "I loaded an OOO file in a customer with three records. The log never appeared on the bottom of the screen, however the 3 records loaded successfully."
+    }
+  ]
+}

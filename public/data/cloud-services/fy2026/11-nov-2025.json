@@ -1,0 +1,1472 @@
+{
+  "fiscal_year": 2026,
+  "month": 11,
+  "year": 2025,
+  "sprints": [
+    {
+      "id": 3520,
+      "title": "Third-Party Integration FY26Q1-2",
+      "start_date": "2025-10-30",
+      "end_date": "2025-11-12",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 28,
+        "weight": 74
+      },
+      "burndown": [
+        {
+          "date": "2025-10-30",
+          "remaining_count": 28,
+          "remaining_weight": 74
+        },
+        {
+          "date": "2025-10-31",
+          "remaining_count": 30,
+          "remaining_weight": 72
+        },
+        {
+          "date": "2025-11-01",
+          "remaining_count": 30,
+          "remaining_weight": 72
+        },
+        {
+          "date": "2025-11-02",
+          "remaining_count": 30,
+          "remaining_weight": 72
+        },
+        {
+          "date": "2025-11-03",
+          "remaining_count": 23,
+          "remaining_weight": 53
+        },
+        {
+          "date": "2025-11-04",
+          "remaining_count": 19,
+          "remaining_weight": 39
+        },
+        {
+          "date": "2025-11-05",
+          "remaining_count": 28,
+          "remaining_weight": 44
+        },
+        {
+          "date": "2025-11-06",
+          "remaining_count": 22,
+          "remaining_weight": 40
+        },
+        {
+          "date": "2025-11-07",
+          "remaining_count": 16,
+          "remaining_weight": 28
+        },
+        {
+          "date": "2025-11-08",
+          "remaining_count": 16,
+          "remaining_weight": 28
+        },
+        {
+          "date": "2025-11-09",
+          "remaining_count": 16,
+          "remaining_weight": 28
+        },
+        {
+          "date": "2025-11-10",
+          "remaining_count": 8,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2025-11-11",
+          "remaining_count": 8,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2025-11-12",
+          "remaining_count": 7,
+          "remaining_weight": 7
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 1,
+        "other": 59
+      },
+      "completed": {
+        "count": 60,
+        "weight": 111
+      },
+      "issues": [
+        {
+          "id": 167838,
+          "iid": 600,
+          "title": "Unable to add consolidated actions to action items",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "governance-board::july"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-07",
+          "date_closed": "2025-11-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 167429,
+          "iid": 46,
+          "title": "Name formatting in Select User field of User Management page",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::high",
+            "workflow::review-passed"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-05",
+          "date_closed": "2025-11-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 167428,
+          "iid": 45,
+          "title": "Update Service Requirement column on Task Order page",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::high",
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-05",
+          "date_closed": "2025-11-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 167427,
+          "iid": 44,
+          "title": "HRS AO Column Position on Open Actions page",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::high"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-05",
+          "date_closed": "2025-11-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 167426,
+          "iid": 43,
+          "title": "HRS AO Name Display format on Open Actions page",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::high",
+            "workflow::review-passed"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-05",
+          "date_closed": "2025-11-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 167425,
+          "iid": 42,
+          "title": "HRS AO Name display format on Dashboard",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::high",
+            "workflow::review-passed"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-05",
+          "date_closed": "2025-11-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 167424,
+          "iid": 41,
+          "title": "CA Name display format on Task Orders Page",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::high"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-05",
+          "date_closed": "2025-11-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 167423,
+          "iid": 40,
+          "title": "KO Name display format on Task Orders Page",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::high",
+            "workflow::review-passed"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-05",
+          "date_closed": "2025-11-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 167422,
+          "iid": 39,
+          "title": "HRS AO Name display format on Task Orders Page",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::high"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-05",
+          "date_closed": "2025-11-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 167421,
+          "iid": 38,
+          "title": "COR Name display format on Task Orders Page",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::high",
+            "workflow::review-passed"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-05",
+          "date_closed": "2025-11-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 167420,
+          "iid": 37,
+          "title": "ACOR Name display format on Task Orders Page",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::high"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-05",
+          "date_closed": "2025-11-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 167186,
+          "iid": 594,
+          "title": "PULSE 5.0.2",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 0,
+          "state": "closed",
+          "labels": [
+            "pipeline::gov-prod-deployed"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-04",
+          "date_closed": "2025-11-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 167185,
+          "iid": 593,
+          "title": "PULSE 5.0.3",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 0,
+          "state": "closed",
+          "labels": [
+            "pipeline::gov-prod-deployed"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-04",
+          "date_closed": "2025-11-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 167184,
+          "iid": 1092,
+          "title": "ORBIT 3.2.4.2",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 0,
+          "state": "closed",
+          "labels": [
+            "pipeline::gov-prod-deployed"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-04",
+          "date_closed": "2025-11-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162851,
+          "iid": 36,
+          "title": "Different checklist for different action types ",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "priority::high"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-31",
+          "date_closed": "2025-11-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162850,
+          "iid": 35,
+          "title": "One checklist for the schedule",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "priority::high"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162847,
+          "iid": 34,
+          "title": "Sort order by description (based on predefined sort order) ",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::high"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162739,
+          "iid": 1091,
+          "title": "Implement Content Filtering for Tasks page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-05",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162738,
+          "iid": 1090,
+          "title": "Implement Content Filtering for Roles page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::ready-for-release"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162737,
+          "iid": 1089,
+          "title": "Implement Content Filtering for Reports page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-05",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162736,
+          "iid": 1088,
+          "title": "Implement Content Filtering for Employees page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162735,
+          "iid": 1087,
+          "title": "Implement Content Filtering for Matrix Organizations page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162734,
+          "iid": 1086,
+          "title": "Implement Content Filtering for Layers page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162733,
+          "iid": 1085,
+          "title": "Implement Content Filtering for Work Sites page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162732,
+          "iid": 1084,
+          "title": "Implement Content Filtering for Vendor Accounts page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162731,
+          "iid": 1083,
+          "title": "Implement Content Filtering for Position Assignments page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162610,
+          "iid": 33,
+          "title": "Names in Select User field on User Management screen formatted as LN, FN",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::high"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-04",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162609,
+          "iid": 32,
+          "title": "Names in COR, KO, and CA columns on Task Orders page formatted as LN, FN",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::high"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-04",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162608,
+          "iid": 31,
+          "title": "Names in Switch User feature on the Dashboard formatted as LN, FN",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::high",
+            "workflow::review-passed"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-04",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162607,
+          "iid": 30,
+          "title": "Names in HRS AO column formatted as LN, FN",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::high"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-04",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161540,
+          "iid": 25,
+          "title": "36. Posting Award CLIN: Low: Service field drop down – Change \"CMR\" to  \"CMR/SCR\"",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::low"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-07",
+          "date_closed": "2025-11-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161539,
+          "iid": 24,
+          "title": "33. Posting Award CLIN Item #: Low:  Item # field should allow alpha and numeric up to 6 characters",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::low"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-07",
+          "date_closed": "2025-11-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161537,
+          "iid": 22,
+          "title": "17. New action: Low:  Title shows \"(NA)\", Why",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::low"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-10",
+          "date_closed": "2025-11-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161536,
+          "iid": 21,
+          "title": "16. New Service Requirement: Low:  does not require org type selection, all will be government",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::low"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-10",
+          "date_closed": "2025-11-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161535,
+          "iid": 20,
+          "title": "37. Posting Award Action POCs: Medium:  POCs should be \"Task Order POC\" vs \"Action POC\"",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::medium"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-10",
+          "date_closed": "2025-11-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161533,
+          "iid": 18,
+          "title": "25. New SR initial Action Financials: Medium: Values format in Accounting/Currency format",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::medium",
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-10",
+          "date_closed": "2025-11-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161532,
+          "iid": 17,
+          "title": "24. \t24. New SR initial Action: Medium: Acquisition method once saved no longer displays on page",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::medium",
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-10",
+          "date_closed": "2025-11-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161531,
+          "iid": 16,
+          "title": "22. New SR initial Action Previous contract information: Medium: entering value of last PoP does not format in currency format",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "code-complete",
+            "priority::medium"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161530,
+          "iid": 15,
+          "title": "15. New Service Requirement: Low:  Status not labeled",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 0,
+          "state": "closed",
+          "labels": [
+            "code-complete",
+            "priority::low"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-10",
+          "date_closed": "2025-11-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161529,
+          "iid": 14,
+          "title": "13. Action Page: Medium: need a \"View Schedule\" button",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::medium"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-05",
+          "date_closed": "2025-11-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161528,
+          "iid": 13,
+          "title": "10. All: MEDIUM: Need Sort/Filter capability similar to dashboard on all display pages",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::medium"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-05",
+          "date_closed": "2025-11-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161526,
+          "iid": 11,
+          "title": "35. Posting Award CLIN: High: Base period should be \"Base Phase In Start\"  through \"Base end\" date",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "code-complete",
+            "priority::high"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-04",
+          "date_closed": "2025-11-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161525,
+          "iid": 10,
+          "title": "(27) On Action details page, \"Complete Action\" button disabled if award is not posted",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::high",
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-10",
+          "date_closed": "2025-11-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161518,
+          "iid": 9,
+          "title": "(23) New SR initial Action Projected PoPs: Highest",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::highest"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-04",
+          "date_closed": "2025-11-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161515,
+          "iid": 6,
+          "title": "(18) Comment text should be cleared from input field after comment save",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "priority::high"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161514,
+          "iid": 5,
+          "title": "(12) Action page should have hot link to SharePoint folder",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "priority::high",
+            "workflow::review-passed"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-31",
+          "date_closed": "2025-11-04",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161513,
+          "iid": 4,
+          "title": "(11) Open Actions page includes HRS AO column",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "priority::high"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-04",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161512,
+          "iid": 3,
+          "title": "(9) Be consistent in how you display/list user names.",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "priority::high"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-05",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161511,
+          "iid": 2,
+          "title": "(8) Task order details page should have hot link to SharePoint folder",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "priority::high"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-31",
+          "date_closed": "2025-11-04",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161510,
+          "iid": 1,
+          "title": "(7) Task orders list includes Service Requirement column",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "priority::high"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-04",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 158747,
+          "iid": 1082,
+          "title": "Reorganize and simplify ORBIT help page",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Customer:Internal",
+            "Type:Improvement",
+            "user-experience",
+            "user-interface",
+            "workflow::ready-for-release"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 156251,
+          "iid": 592,
+          "title": "Pipeline Documentation",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "governance-board::july",
+            "workflow::refined"
+          ],
+          "milestone": "v5.0.4",
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 156250,
+          "iid": 591,
+          "title": "Test and Validate Pipeline",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 8,
+          "state": "closed",
+          "labels": [
+            "governance-board::july",
+            "workflow::refined"
+          ],
+          "milestone": "v5.0.4",
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-10-31",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 153055,
+          "iid": 766,
+          "title": "Allow for Training Waiver",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "customer:data-analytics",
+            "source::gov-board-F725Q3",
+            "type::New Feature",
+            "workflow::refined"
+          ],
+          "milestone": "ORBIT 3.2.4",
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 155436,
+          "iid": 1055,
+          "title": "[ORBIT-304] Company logo should display properly in the ORBIT header",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "jira-import::ORBIT-1",
+            "ui",
+            "user-interface",
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-06",
+          "date_closed": "2025-11-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 156111,
+          "iid": 578,
+          "title": "[PULSE-201] Fix Error in Customer Access Request Form Submission",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "governance-board::july",
+            "jira-import::PULSE-1",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 156107,
+          "iid": 574,
+          "title": "[PULSE-197] Fix AJAX to Set PostAwardSection.PostAward_fk_FollowOnActionIDWhen Follow-On Partial is Refreshed",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "governance-board::july",
+            "jira-import::PULSE-1",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 156102,
+          "iid": 569,
+          "title": "[PULSE-189] Properly display \"Total Dollar Ceiling\" value in item list",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "governance-board::july",
+            "jira-import::PULSE-1",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-04",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 155243,
+          "iid": 862,
+          "title": "[ORBIT-84] Email to all Notification Managers",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Customer:Platform Engineering Center",
+            "Governance_Board:Vote",
+            "jira-import::ORBIT-1",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 155213,
+          "iid": 832,
+          "title": "[ORBIT-53] Pending Transfers",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "jira-import::ORBIT-1",
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-06",
+          "date_closed": "2025-11-12",
+          "date_removed_from_sprint": null
+        }
+      ]
+    },
+    {
+      "id": 3569,
+      "title": "Third-Party Integration FY26Q1-3",
+      "start_date": "2025-11-13",
+      "end_date": "2025-11-25",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 9,
+        "weight": 25
+      },
+      "burndown": [
+        {
+          "date": "2025-11-13",
+          "remaining_count": 9,
+          "remaining_weight": 25
+        },
+        {
+          "date": "2025-11-14",
+          "remaining_count": 9,
+          "remaining_weight": 30
+        },
+        {
+          "date": "2025-11-15",
+          "remaining_count": 9,
+          "remaining_weight": 30
+        },
+        {
+          "date": "2025-11-16",
+          "remaining_count": 9,
+          "remaining_weight": 30
+        },
+        {
+          "date": "2025-11-17",
+          "remaining_count": 8,
+          "remaining_weight": 28
+        },
+        {
+          "date": "2025-11-18",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2025-11-19",
+          "remaining_count": 4,
+          "remaining_weight": 10
+        },
+        {
+          "date": "2025-11-20",
+          "remaining_count": 3,
+          "remaining_weight": 7
+        },
+        {
+          "date": "2025-11-21",
+          "remaining_count": 5,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2025-11-22",
+          "remaining_count": 5,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2025-11-23",
+          "remaining_count": 5,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2025-11-24",
+          "remaining_count": 4,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-11-25",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 18
+      },
+      "completed": {
+        "count": 18,
+        "weight": 41
+      },
+      "issues": [
+        {
+          "id": 175489,
+          "iid": 51,
+          "title": "Document Deployment Checklist",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 0,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-21",
+          "date_closed": "2025-11-25",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 175454,
+          "iid": 13,
+          "title": "Alter request headers to servicenow incident endpoint to ensure a response body",
+          "project_id": 91005,
+          "project_name": "formflow",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-20",
+          "date_closed": "2025-11-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 175251,
+          "iid": 12,
+          "title": "Configure security certs for FormFlow connection to SN",
+          "project_id": 91005,
+          "project_name": "formflow",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-20",
+          "date_closed": "2025-11-20",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 175170,
+          "iid": 11,
+          "title": "Configure logging in FormFlow to ensure api connection to service now is logged in detail",
+          "project_id": 91005,
+          "project_name": "formflow",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-19",
+          "date_closed": "2025-11-20",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 174856,
+          "iid": 14,
+          "title": "Show MetGM button on homepage and enable the route",
+          "project_id": 91004,
+          "project_name": "skycast",
+          "weight": 0,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-18",
+          "date_closed": "2025-11-18",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 174854,
+          "iid": 612,
+          "title": "Generate Scripts to Export BO Views for the Client Organization",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-18",
+          "date_closed": "2025-11-18",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 171149,
+          "iid": 13,
+          "title": "Modify Homepage to hide MetGM Button",
+          "project_id": 91004,
+          "project_name": "skycast",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-14",
+          "date_closed": "2025-11-14",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 169570,
+          "iid": 1104,
+          "title": "Email reminder indicator",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-13",
+          "date_closed": "2025-11-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 169564,
+          "iid": 1103,
+          "title": "Email reminders on Holidays",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-13",
+          "date_closed": "2025-11-14",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 169537,
+          "iid": 1100,
+          "title": "Create unit test for active/inactive fetch of Work Sites",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-13",
+          "date_closed": "2025-11-20",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 169536,
+          "iid": 1099,
+          "title": "Create unit test for active/inactive fetch of Layers",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-13",
+          "date_closed": "2025-11-25",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 169533,
+          "iid": 1097,
+          "title": "Create unit test for active/inactive fetch of Employees",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-21",
+          "date_closed": "2025-11-25",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 169530,
+          "iid": 1095,
+          "title": "Create unit test for active/inactive fetch of Roles",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-13",
+          "date_closed": "2025-11-25",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 169292,
+          "iid": 1093,
+          "title": "Read-only selection on Roles not working",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Type: Bug",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-13",
+          "date_closed": "2025-11-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161527,
+          "iid": 12,
+          "title": "2. Dashboard:  MEDIUM: User Donald Clark and Sarah Shacklette (Team Leads) are displaying 202 actions (all actions)",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "priority::medium",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-13",
+          "date_closed": "2025-11-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161517,
+          "iid": 8,
+          "title": "21. New SR initial Action Previous contract information: High:",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "priority::high",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-13",
+          "date_closed": "2025-11-18",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 161516,
+          "iid": 7,
+          "title": "(20) Milestone Schedule: High: Significant rework needed",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 8,
+          "state": "closed",
+          "labels": [
+            "priority::high",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-14",
+          "date_closed": "2025-11-18",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 155180,
+          "iid": 799,
+          "title": "[ORBIT-15] Emails from Home Screen",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Customer:Internal",
+            "jira-import::ORBIT-1",
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-13",
+          "date_closed": "2025-11-19",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

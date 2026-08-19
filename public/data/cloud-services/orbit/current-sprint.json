@@ -1,0 +1,110 @@
+{
+  "id": 8027,
+  "title": "v3.3.6",
+  "start_date": "2026-08-18",
+  "end_date": "2026-09-01",
+  "state": "active",
+  "source": "milestone",
+  "goal": "Reorganize customer settings UI to separate org/admin settings. Allow org managers to edit more org settings with a new flag on the org manager role that gives more access.",
+  "initial_totals": {
+    "count": 4,
+    "weight": 6
+  },
+  "burndown": [
+    {
+      "date": "2026-08-18",
+      "remaining_count": 4,
+      "remaining_weight": 6
+    },
+    {
+      "date": "2026-08-19",
+      "remaining_count": 4,
+      "remaining_weight": 6
+    }
+  ],
+  "type_breakdown": {
+    "bug": 0,
+    "improvement": 0,
+    "new_feature": 0,
+    "other": 4
+  },
+  "completed": {
+    "count": 0,
+    "weight": 0
+  },
+  "issues": [
+    {
+      "id": 583796,
+      "iid": 1413,
+      "title": "Make the \"Waive All Remaining\" button smaller on the employee view for tasks",
+      "description": "Button is slightly large from past discussions, will resize to fit the UI better.",
+      "project_id": 91001,
+      "project_name": "orbit",
+      "weight": 1,
+      "state": "opened",
+      "labels": [
+        "Type:Improvement",
+        "workflow::refined"
+      ],
+      "milestone": "v3.3.6",
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 583795,
+      "iid": 1412,
+      "title": "Add \"Configure Org Options\" Permission Flag to Org Managers in Role Editor",
+      "description": "## Description\n\nCurrently, the customer-level options on the left pane of the **Customer Settings** page are strictly read-only for all Organization Managers. To allow administrative delegation, we need to introduce a new permission flag called **Configure Org Options** on the Role editor page. Enabling this flag (setting it to \"Yes\") will allow users assigned to that role to edit the left-pane organization settings.\n\n## Technical & UI Requirements\n\n### 1. Database Schema\n\n- Add a boolean attribute/permission field `ConfigureOrgOptions` (default: `False` / \"No\") to the roles/permissions schema table.\n\n### 2. Role Editor UI Updates\n\n- Locate the Role editor form (utilized by ORBIT Admins to customize application roles, specifically for the Organization Manager role context).\n- Add a Yes/No option control (e.g., toggle, checkbox, or radio buttons) labeled **Configure Org Options**.\n- Ensure the selection updates and saves successfully to the database.\n\n### 3. Authorization & Frontend Enforcement on Customer Settings\n\n**UI Behavior:**\n\nWhen a user with an \"Organization Manager\" role loads the **Customer Settings** page:\n\n- If `ConfigureOrgOptions == False`, the left-pane settings fields remain read-only.\n- If `ConfigureOrgOptions == True`, render the edit pencil/interactive input controls, enabling the user to submit modifications.\n\n**API Validation:**\n\n- Implement backend validation on the endpoint handling the customer settings update API.\n- Reject any inbound PATCH/PUT request from non-admin accounts if their user roles do not explicitly have the `ConfigureOrgOptions` permission set to `True`.\n\n## Acceptance Criteria\n\n- [ ] **AC 1:** The database schema is updated to support the new `ConfigureOrgOptions` boolean permission.\n- [ ] **AC 2:** Admins can view, edit, and save the **Configure Org Options** (Yes/No) setting within the Role Editor page.\n- [ ] **AC 3:** If the flag is set to \"No\" (default), Organization Managers see read-only text fields on the Customer Settings left pane.\n- [ ] **AC 4:** If the flag is set to \"Yes\", Organization Managers are presented with editing controls (text boxes, edit icons, save buttons) for those fields.\n- [ ] **AC 5:** API authorization is secured: the backend actively rejects edit requests to customer settings if a non-admin client lacks the `ConfigureOrgOptions` permission flag.",
+      "project_id": 91001,
+      "project_name": "orbit",
+      "weight": 3,
+      "state": "opened",
+      "labels": [
+        "Type:Improvement",
+        "workflow::refined"
+      ],
+      "milestone": "v3.3.6",
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 583794,
+      "iid": 1411,
+      "title": "Group and Position Admin-Only Options in a Lower Section of Customer Settings",
+      "description": "## Description\n\nAs a ORBIT Admin, I want all settings and actions exclusive to my role to be grouped into a distinct, dedicated section below the Manager options on the **Customer Settings** page, so that I don't confuse system-level administrative configurations with standard customer settings.\n\n## Technical & UI Requirements\n\n- A clear visual separator (e.g., a stylized horizontal rule or section card header titled **Admin Options**) must be placed below the top section.\n- Within this lower section, the Admin-only parameters will be arranged into left and right columns.\n\n### 1. Left-Pane Admin Settings (Bottom Section)\n\nThese system/admin-only configuration items must be grouped in the left column:\n\n- Department\n- Division\n- Sub-Division\n- ORBIT POC\n- CSR\n- Supervisor Required\n- Vendor Account Required\n- Work Room and Work Pod Required\n\n### 2. Right-Pane Admin Links & Utilities (Bottom Section)\n\nThese high-level management tools and links must be grouped in the right column:\n\n- Activities (manage existing Activities)\n- Layer Names (manage Layer Names)\n- Matrix Organizations (add or manage Matrix Organizations)\n- Modules (manage existing Modules)\n- Notifications (view Notifications)\n- Employee (export or manage Employee)\n- Queue (refresh Queue for ENS and Reporting Database)\n- Fix TDAs (link / action)\n- Reports (add or manage displayed reports)\n- Software Licenses (add a Software License)\n- Position Assignments (export or manage Position Assignments)\n- Upload (upload Employee data)\n- Bulk Transfer (bulk transfer employee)\n- Refresh Future Check-In (refresh the Future Check-In)\n\n## Acceptance Criteria\n\n- [ ] **AC 1:** A clean, visually distinct header panel or section card titled **Admin Options** is implemented.\n- [ ] **AC 2:** The section is positioned directly beneath the Organization Manager section.\n- [ ] **AC 3:** Access control is preserved: this entire section is strictly hidden from regular Organization Managers and only rendered for ORBIT Admin roles.\n- [ ] **AC 4:** All database write operations, updates, and utility runs triggered from this section function correctly.",
+      "project_id": 91001,
+      "project_name": "orbit",
+      "weight": 1,
+      "state": "opened",
+      "labels": [
+        "Type:Improvement",
+        "workflow::refined"
+      ],
+      "milestone": "v3.3.6",
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 583786,
+      "iid": 1410,
+      "title": "Group and Position Organization Manager Options at the Top of Customer Settings",
+      "description": "## Description\n\nAs a ORBIT Admin, I want to see the Organization Manager-level settings and links grouped together at the top of the **Customer Settings** page, so that I can easily view and manage the settings that are also visible to our customers' managers in a familiar, unified layout.\n\n## Technical & UI Requirements\n\n- The top portion of the rearranged page should mimic the layout of the **Organization Manager Settings** view but remain fully functional for the Admin.\n\n> **Note:** The left-pane fields under this section are read-only by default for standard Organization Managers. However, they must be dynamically editable if the user has the **Configure Org Options** permission enabled (see Issue 3).\n\n### 1. Left-Pane Settings (Top Section)\n\nThe following fields must be grouped in the left column under the main page title:\n\n- Contact Email\n- Quick Reporting\n- Mobile Emails\n- Profile Expire Days\n- Profile Reminder Emails\n- Reminder Emails (with info icon)\n- Reporting URL\n- Supervisor Viewable\n- Timestamp Viewable\n- Website\n- Reminder Emails (without icon)\n- Mobile Reminder Emails\n- Supervisor Reminder Emails\n\n### 2. Right-Pane Management Links (Top Section)\n\nThe following management links and actions must be grouped in the right column of the top section:\n\n- Contracts (add another / manage existing)\n- Vendor Accounts (add another / manage existing)\n- Work Sites (add another / manage existing)\n- Layers (add another / manage existing)\n- OOO Upload (upload OOO data)\n- Point of Contact (manage POCs)\n- Roles (assign another / manage existing)\n- Tasks (add another / manage existing)\n\n## Acceptance Criteria\n\n- [ ] **AC 1:** For ORBIT Admins, a visual header/divider clearly separates these **Organization Manager Options** from the Admin-only section below.\n- [ ] **AC 2:** The layout (ordering and column distribution) of the top section matches the existing Organization Manager view exactly.\n- [ ] **AC 3:** All links, buttons, and inline edit features within this top section remain fully functional for the Admin user.\n- [ ] **AC 4:** Left-pane input fields are rendered as read-only or editable for Organization Managers based on the presence of the `ConfigureOrgOptions` flag on their role profile.",
+      "project_id": 91001,
+      "project_name": "orbit",
+      "weight": 1,
+      "state": "opened",
+      "labels": [
+        "Type:Improvement",
+        "workflow::refined"
+      ],
+      "milestone": "v3.3.6",
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    }
+  ],
+  "last_updated": "2026-08-19T14:57:11.317041Z"
+}

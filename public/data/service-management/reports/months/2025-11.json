@@ -1,0 +1,38 @@
+{
+  "group_slug": "service-management",
+  "project_slug": null,
+  "month": "2025-11",
+  "generated_at": "2026-07-10T21:41:42.086109Z",
+  "sprints": [
+    {
+      "title": "Service Management FY26 Q1-1",
+      "start_date": "2025-11-04",
+      "end_date": "2025-11-17",
+      "goals": "This sprint focused on resolving critical data integrity issues in production Service Management systems while expanding access controls and improving the data model to support enterprise asset management workflows. The team aimed to enhance permission management across multiple applications and complete foundational work for the Site 8 and Site 3 asset tracking initiatives.",
+      "summary": "The sprint successfully resolved a production incident involving missing attachments on incidents and corrected a data relationship issue that was creating CI associations to incorrect assets during import. The team strengthened the platform's security posture by implementing granular permission controls on reference tables and application workspaces across M2S, Fulfillment, and other systems, ensuring only authorized users can edit sensitive configuration data. Additionally, the team consolidated duplicate table structures, improved reference data models by converting the Business Unit field to a reference type, and loaded critical consumables and cable inventory data into Intake to support ongoing asset management operations for the Site 8 and Site 3 units.",
+      "metrics": {
+        "initial_count": 17,
+        "initial_weight": 51,
+        "completed_count": 17,
+        "completed_weight": 51,
+        "initial_breakdown": "17 Others",
+        "completed_breakdown": "17 Others"
+      }
+    },
+    {
+      "title": "Service Management FY26 Q1-2",
+      "start_date": "2025-11-18",
+      "end_date": "2025-12-02",
+      "goals": "This sprint aimed to strengthen core IT Service Management capabilities by improving data accessibility, automating critical workflows, and enhancing the Support system with proper role-based security and incident routing. The team also worked to ensure data integrity across asset management systems and make infrastructure dependencies visible to support teams.",
+      "summary": "The team completed fourteen features and improvements that collectively modernize the Service Management platform's usability and automation. Key accomplishments include expanding template capacity, automating contact and tier population workflows, establishing proper default assignment routing in the Support ticketing system, and implementing role-based access controls aligned with organizational structure. Additionally, asset management data was refreshed with over Site 8 updates, financial and reference data was standardized per customer specifications, and critical infrastructure navigation tools were integrated to help teams visualize CI dependencies. These changes reduce manual data entry, improve incident routing accuracy, and provide teams with better visibility into system relationships and asset hierarchies.",
+      "metrics": {
+        "initial_count": 14,
+        "initial_weight": 34,
+        "completed_count": 14,
+        "completed_weight": 34,
+        "initial_breakdown": "14 Others",
+        "completed_breakdown": "14 Others"
+      }
+    }
+  ]
+}

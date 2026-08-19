@@ -1,0 +1,22 @@
+{
+  "group_slug": "service-management",
+  "project_slug": null,
+  "milestone_slug": "service-management-fy26-q2-1",
+  "title": "Service Management FY26 Q2-1",
+  "start_date": "2026-01-06",
+  "end_date": "2026-01-15",
+  "generated_at": "2026-07-10T21:41:09.748347Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on expanding the financial tracking and status management capabilities within our Fulfillment and Intake systems while improving data governance and organizational alignment. The work aimed to enhance parts inventory management, refine incident handling workflows, and establish foundational support structures for BackupNav operations.",
+    "summary": "The team completed fifteen targeted improvements across multiple system domains, including the addition of financial fields for parts tracking, implementation of new on-hold status reasons for incident management, and removal of obsolete data fields to streamline user interfaces. Key accomplishments include establishing a parts reference table, converting warranty expiration to date-type storage for accurate reporting, restricting visibility of resolution codes by customer tenant, and creating the BackupNav support structure with automated maintenance record population. These changes strengthen financial controls, improve data accuracy for compliance reporting, and enable the preventive maintenance capabilities required for long-term asset management visibility across the organization.",
+    "metrics": {
+      "initial_count": 15,
+      "initial_weight": 34,
+      "completed_count": 15,
+      "completed_weight": 34,
+      "initial_breakdown": "15 Others",
+      "completed_breakdown": "15 Others"
+    }
+  }
+}

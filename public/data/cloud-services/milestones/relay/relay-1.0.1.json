@@ -1,0 +1,47 @@
+{
+  "milestone_title": "RELAY 1.0.1",
+  "milestone_id": 4365,
+  "slug": "relay-1.0.1",
+  "project_id": 91003,
+  "project_name": "RELAY",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:40.339043Z",
+  "issues": [
+    {
+      "id": 246990,
+      "iid": 124,
+      "title": "Bug: Base Contract Detail View Displays Incorrect \"Active\" Status",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "type::Bug",
+        "workflow::refined"
+      ],
+      "description": "# Bug: Base Contract Detail View Displays Incorrect \"Active\" Status\n\n## Description\n\nA bug has been identified where the Base Contract detail page consistently displays the status as \"Active,\" regardless of the contract's actual status. As shown in the user-provided screenshot, the \"Base Contracts Overview\" list correctly shows a status like \"Close-out,\" but when a user clicks on that contract, the detail page incorrectly shows \"Active.\" This creates a data discrepancy and can mislead users about the contract's current state.\n\nThe correct status values are: \"Active\", \"Dormant\", \"Close-Out\", and \"Archived\". The detail view must reflect the same status as the overview list.\n\n## User Story\n\n> **As a** RELAY user, **I want** the status on the contract detail page to accurately match the contract's real status, **So that** I can trust the information I see and avoid confusion about whether a contract is active, closed, or archived.\n\n## Steps to Reproduce\n\n1. Navigate to the \"Base Contracts Overview\" screen.\n2. Find a contract in the list that has a status other than \"Active\" (e.g., \"Close-out\").\n3. Click on that contract row to navigate to its detail page.\n4. **Expected Result:** The detail page should display the same status shown in the overview list (e.g., \"Close-out\").\n5. **Actual Result:** The detail page incorrectly displays the status as \"Active.\"\n\n## Additional Context\n\n* **Origin:** Customer feedback during testing.\n* **Risk/Complexity:** Low. This is likely a data-binding issue where the wrong data field is being referenced on the detail page component.\n\n---\n\n## Acceptance Criteria (BDD)\n\n```gherkin\nFeature: Accurate Contract Status Display\n  In order to trust the data presented in the system\n  As a RELAY user\n  I need the contract status to be consistent between the overview list and the detail page.\n\n  Background:\n    Given a user is logged into the RELAY system\n    And a contract exists with a status of \"Close-out\"\n    And the \"Base Contracts Overview\" list correctly displays this status\n\n  Scenario: Viewing a non-active contract's details\n    When the user clicks on the \"Close-out\" contract to view its detail page\n    Then the detail page must display the status as \"Close-out\"\n    And the detail page must NOT display the status as \"Active\"\n\n  Scenario Outline: Status consistency for all states\n    Given a contract exists with a status of \"<Status>\"\n    When the user navigates to that contract's detail page\n    Then the detail page must display the status as \"<Status>\"\n\n    Examples:\n      | Status      |\n      | Active      |\n      | Dormant     |\n      | Close-Out   |\n      | Archived    |\n```\n\n![image](/uploads/e872ed2b351cd0228be6dbd8e1633cc6/image.png){width=\"665\" height=\"359\"}"
+    },
+    {
+      "id": 246993,
+      "iid": 126,
+      "title": "Failing to add report",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "type::Bug",
+        "workflow::refined"
+      ],
+      "description": "Reports are currently showing blank in RELAY Live. Whenever we try to add a report we're getting a failure message. "
+    },
+    {
+      "id": 246994,
+      "iid": 127,
+      "title": "Dashboard text overflow",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "type::Bug",
+        "workflow::refined"
+      ],
+      "description": "# Bug: Long Action Descriptions Overlap Adjacent Items\n\n## Description\n\nA UI bug has been identified where lengthy \"Action Descriptions\" overflow their container bounds and visually overlap the item below them in the list. This text overflow creates a cluttered interface and introduces a risk of users accidentally selecting the wrong action due to overlapping clickable areas.\n\nWe need to update the CSS for this component to handle long text gracefully. Depending on the design system, this should be resolved by either allowing the row height to expand dynamically (word-wrap) or by truncating the text with an ellipsis and providing a tooltip on hover.\n\n## User Story\n\n> **As a** RELAY user, **I want** long action descriptions to be formatted correctly without bleeding into other rows, **So that** I can clearly read the descriptions and avoid accidentally clicking the wrong action.\n\n## Steps to Reproduce\n\n1. Navigate to the view containing the Action Descriptions list.\n2. Create or identify an action with an unusually long text description that exceeds the column width.\n3. Observe the list view.\n4. **Expected Result:** The text should either wrap to a new line (expanding the row height) or truncate gracefully (e.g., \"Long description...\").\n5. **Actual Result:** The text overflows its container and overlaps the text/row directly below it.\n\n## Additional Context\n\n* **Origin:** Customer feedback during testing.\n* **Risk/Complexity:** Low. This is a front-end styling issue.\n* **Implementation Recommendation:** Apply appropriate CSS (e.g., `word-wrap: break-word;` and `white-space: normal;` for multi-line, or `white-space: nowrap; overflow: hidden; text-overflow: ellipsis;` if single-line truncation is preferred).\n\n---\n\n## Acceptance Criteria (BDD)\n\n```gherkin\nFeature: Prevent Text Overlap on Long Action Descriptions\n  In order to maintain a clean and usable interface\n  As a RELAY user\n  I need long text descriptions to be contained within their designated UI boundaries\n\n  Background:\n    Given a user is logged into the RELAY system\n    And the user is viewing a list containing Action Descriptions\n\n  Scenario: Viewing an action with a very long description\n    Given an action exists with a description that exceeds the visual width of its container\n    When the user views the action in the list\n    Then the text must not overlap the row below it\n    And the row height should dynamically expand to accommodate the text OR the text should truncate with an ellipsis\n    And the clickable area (hitbox) for the action must not overlap with adjacent actions\n\n  Scenario: Interacting with truncated text (If truncation is chosen as the fix)\n    Given an action description is truncated due to length\n    When the user hovers their mouse over the truncated description\n    Then a tooltip or expanded view should display the full action description\n```\n\n![image.png](/uploads/d749402e442f458944f2f18edf76ef01/image.png){width=\"245\" height=\"304\"}"
+    }
+  ]
+}

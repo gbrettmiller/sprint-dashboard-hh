@@ -1,0 +1,38 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "relay",
+  "milestone_slug": "relay-1.0.2",
+  "title": "RELAY 1.0.2",
+  "start_date": "2026-07-15",
+  "end_date": "2026-07-21",
+  "generated_at": "2026-07-22T06:07:48.735751Z",
+  "test_plan": [
+    {
+      "iid": 130,
+      "title": "CLIN Detail showing incorrect POP",
+      "steps": "- Navigate to CLIN Details page and load a CLIN record with a Base Period and multiple Options\n- Verify that the Base Period displays \"Base Period\" and not \"Option 1\"\n- Verify that Option 1 displays \"Option 1\" and not \"Option 2\"\n- Verify that each subsequent option displays its correct corresponding label (Option 2, Option 3, etc.)\n- Confirm POP labels are correctly aligned with their respective periods across multiple CLIN records"
+    },
+    {
+      "iid": 132,
+      "title": "Mission Area Showing N/A in random task orders",
+      "steps": "- Navigate to the Task Orders screen\n- Review multiple task orders and verify that mission areas are displayed correctly (not showing \"N/A\")\n- Identify any task orders displaying \"N/A\" in the mission area field\n- Compare task orders with \"N/A\" values against those with proper mission area values to identify patterns\n- Verify that all task orders have valid mission area data populated in the backend and are displaying correctly in the UI"
+    },
+    {
+      "iid": 134,
+      "title": "Nginx and Tomcat routing for proper URL resolution",
+      "steps": "- Navigate to `https://www.apps.example.com/relay` in a private/incognito browser window and verify the URL redirects to `https://www.apps.example.com/relay/` with the page loading successfully and port 8080 not visible in the address bar.\n- Navigate to `https://www.apps.example.com/RELAY` and verify the URL redirects to `https://www.apps.example.com/relay/` with the page loading successfully (no 404 error).\n- Navigate to `https://www.apps.example.com/relay/` and verify the page loads successfully without extra redirects.\n- Navigate to `https://www.apps.example.com/RELAY/` and verify the URL redirects to `https://www.apps.example.com/relay/` with the page loading successfully."
+    }
+  ],
+  "sprint_report": {
+    "goals": "This sprint focused on resolving critical routing and data display issues that were preventing accurate task order information from being presented to users. The work aimed to ensure proper URL resolution across our application infrastructure and correct persistent data integrity problems affecting mission area and contract line item detail visibility.",
+    "summary": "The team completed three high-impact fixes that restore data accuracy and system reliability across the application. We resolved nginx and Tomcat routing configuration issues that were causing URL resolution failures, fixed a bug where mission area fields were displaying as N/A in random task orders, and corrected CLIN detail records that were showing inaccurate periods of performance. Together these fixes eliminate confusion in task order management and ensure users can now reliably access and view accurate contract and mission information.",
+    "metrics": {
+      "initial_count": 4,
+      "initial_weight": 10,
+      "completed_count": 3,
+      "completed_weight": 7,
+      "initial_breakdown": "3 Bugs, 1 Improvement",
+      "completed_breakdown": "2 Bugs, 1 Improvement"
+    }
+  }
+}

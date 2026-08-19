@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-29-apr-26",
+  "title": "Data Services 29 APR 26",
+  "start_date": "2026-04-15",
+  "end_date": "2026-04-29",
+  "generated_at": "2026-07-02T21:57:09.033362Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on advancing the Data Services platform's core workflows across multiple functional areas, including completion of out-processing automation, records management enhancements, and deployment of critical system integrations. The team prioritized stabilizing existing features while laying groundwork for new acquisitions and reporting capabilities.",
+    "summary": "The sprint delivered significant progress across in-process and out-processing workflows, with the I/O module receiving multiple form refinements, field additions, and deployment to test-prod environments that improve user experience and data accuracy. Records management capabilities were strengthened through standardized naming conventions, enhanced admin screens, and resolution of critical bugs in document access and record retrieval. The team also advanced several major system integrations including Compliance Platform/Portfolio Reporting reporting to production, Access Requests list deployments, and foundational work on new platforms such as the SW License Tracker reporting interface and multiple Army logistics systems. These improvements enhance operational efficiency while establishing the technical foundation for expanded functionality across enterprise logistics, acquisitions, and workforce management domains.",
+    "metrics": {
+      "initial_count": 43,
+      "initial_weight": 80,
+      "completed_count": 41,
+      "completed_weight": 72,
+      "initial_breakdown": "18 Others, 16 Improvements, 6 New Features, 3 Bugs",
+      "completed_breakdown": "16 Others, 16 Improvements, 6 New Features, 3 Bugs"
+    }
+  }
+}

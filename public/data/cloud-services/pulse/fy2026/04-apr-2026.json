@@ -1,0 +1,233 @@
+{
+  "fiscal_year": 2026,
+  "month": 4,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 2780,
+      "title": "v5.1.1",
+      "start_date": "2026-03-26",
+      "end_date": "2026-04-08",
+      "state": "closed",
+      "source": "milestone",
+      "goal": "Enhancements to business rule logic for permission groups allow end user to apply business rule to selected user groups from the admin tools section. Create new lookup item field from customer direct request. Remove usage of \"PO\" from application.",
+      "initial_totals": {
+        "count": 7,
+        "weight": 15
+      },
+      "burndown": [
+        {
+          "date": "2026-03-26",
+          "remaining_count": 7,
+          "remaining_weight": 15
+        },
+        {
+          "date": "2026-03-27",
+          "remaining_count": 7,
+          "remaining_weight": 15
+        },
+        {
+          "date": "2026-03-28",
+          "remaining_count": 7,
+          "remaining_weight": 15
+        },
+        {
+          "date": "2026-03-29",
+          "remaining_count": 7,
+          "remaining_weight": 15
+        },
+        {
+          "date": "2026-03-30",
+          "remaining_count": 7,
+          "remaining_weight": 15
+        },
+        {
+          "date": "2026-03-31",
+          "remaining_count": 6,
+          "remaining_weight": 14
+        },
+        {
+          "date": "2026-04-01",
+          "remaining_count": 5,
+          "remaining_weight": 11
+        },
+        {
+          "date": "2026-04-02",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-04-03",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-04-04",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-04-05",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-04-06",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-04-07",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-04-08",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 1,
+        "new_feature": 4,
+        "other": 3
+      },
+      "completed": {
+        "count": 8,
+        "weight": 17
+      },
+      "issues": [
+        {
+          "id": 206254,
+          "iid": 703,
+          "title": "improvement: Prevent automatic re-authentication after user logout",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": "v5.1.1",
+          "date_added_to_sprint": "2026-03-27",
+          "date_closed": "2026-03-27",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 205713,
+          "iid": 702,
+          "title": "feat(ui): Add Northline, Baymark, and AllRegion behavior flags to Security Group admin create/edit form",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::New Feature"
+          ],
+          "milestone": "v5.1.1",
+          "date_added_to_sprint": "2026-03-25",
+          "date_closed": "2026-04-02",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 205712,
+          "iid": 701,
+          "title": "feat(csharp): Add HasNorthlineAccess, HasCHSAccess, HasAllACCAccess to security group model and viewmodel",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "type::New Feature"
+          ],
+          "milestone": "v5.1.1",
+          "date_added_to_sprint": "2026-03-25",
+          "date_closed": "2026-04-02",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 205711,
+          "iid": 700,
+          "title": "refactor(sql): Replace hardcoded group lookups in BO_fnGetOneNListUserHasPermissionsFor",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "type::Refactor"
+          ],
+          "milestone": "v5.1.1",
+          "date_added_to_sprint": "2026-03-25",
+          "date_closed": "2026-04-02",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 205709,
+          "iid": 699,
+          "title": "refactor(sql): Replace hardcoded group IDs and name lookups in fnGetOneNListIDsUserHasPermissionsFor",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "type::Refactor"
+          ],
+          "milestone": "v5.1.1",
+          "date_added_to_sprint": "2026-03-25",
+          "date_closed": "2026-04-02",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 205706,
+          "iid": 698,
+          "title": "feat(db): Add configurable permission flag columns to Organization_Security_Group",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "type::New Feature"
+          ],
+          "milestone": "v5.1.1",
+          "date_added_to_sprint": "2026-03-25",
+          "date_closed": "2026-04-02",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 204236,
+          "iid": 697,
+          "title": "refactor: Replace PO/JPO acronyms with Central in all user-visible display text",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Refactor"
+          ],
+          "milestone": "v5.1.1",
+          "date_added_to_sprint": "2026-03-25",
+          "date_closed": "2026-04-01",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 204224,
+          "iid": 696,
+          "title": "feat: Add \"Action Supported By\" lookup field to Item Action Description section",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "source::customer-direct",
+            "type::New Feature"
+          ],
+          "milestone": "v5.1.1",
+          "date_added_to_sprint": "2026-03-25",
+          "date_closed": "2026-03-31",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "group_slug": "service-management",
+  "project_slug": null,
+  "month": "2026-05",
+  "generated_at": "2026-07-10T21:41:42.087906Z",
+  "sprints": [
+    {
+      "title": "Service Management FY26Q3-3",
+      "start_date": "2026-04-28",
+      "end_date": "2026-05-12",
+      "goals": "This sprint focused on enhancing asset management capabilities across the Intake and Fulfillment platforms by expanding data fields and reporting visibility. The work aimed to improve operational tracking of vehicle assets and provide leadership with better visibility into ticket resolution trends.",
+      "summary": "The team completed six features that strengthen asset lifecycle management and reporting across both systems. Vehicle and consumable assets now capture initial hours and miles data, with improved navigation and configuration options in NavHub GEN II and the Asset Config Workspace. In parallel, performance analytics were configured to track open ticket trends, giving operations and leadership real-time insight into support backlog health. These enhancements enable more accurate asset valuation, better maintenance planning, and data-driven decision making around support resource allocation.",
+      "metrics": {
+        "initial_count": 6,
+        "initial_weight": 16,
+        "completed_count": 6,
+        "completed_weight": 16,
+        "initial_breakdown": "5 Improvements, 1 New Feature",
+        "completed_breakdown": "5 Improvements, 1 New Feature"
+      }
+    },
+    {
+      "title": "Service Management FY26Q3-4",
+      "start_date": "2026-05-14",
+      "end_date": "2026-05-29",
+      "goals": "This sprint aimed to enhance data visibility and access controls across our Service Management platforms while establishing a secure foundation for the SPM pilot implementation. The team focused on extending asset management capabilities, improving maintenance record functionality, and operationalizing role-based access restrictions.",
+      "summary": "The team successfully expanded Fulfillment and Intake asset tracking by adding critical identifier fields including serial numbers and RMA tracking, enabling more precise asset lifecycle management and maintenance correlation. We established sophisticated access control mechanisms across multiple modules, including Query Range ACLs for location-sensitive hardware data and Assignment Group-based restrictions for SPM, ensuring data governance aligns with organizational security requirements. Dashboard and workspace enhancements now link vessel performance visualizations to vessel-specific operational lists, improving data-driven decision making for fleet management. Additionally, maintenance workflow automation was refined to automatically pull asset baseline metrics, reducing manual data entry and ensuring consistency between asset records and maintenance histories.",
+      "metrics": {
+        "initial_count": 10,
+        "initial_weight": 32,
+        "completed_count": 10,
+        "completed_weight": 32,
+        "initial_breakdown": "6 Improvements, 4 New Features",
+        "completed_breakdown": "6 Improvements, 4 New Features"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-17-dec",
+  "title": "Data Services 17 DEC",
+  "start_date": "2025-12-03",
+  "end_date": "2025-12-17",
+  "generated_at": "2026-07-02T21:56:33.698550Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on advancing user interface consistency and functionality across five major applications while resolving critical workflow and data management issues. The team prioritized completing core admin features, improving form layouts and validations, and establishing stronger organizational data integrations.",
+    "summary": "The team delivered significant enhancements to the I/O, Access Requests, Records API, Compliance Review, TCT, and Catalog Sync applications, including new admin dashboards, corrected task assignment and deletion workflows, and improved form field organization using centralized organizational hierarchies. Critical bugs affecting approval notifications, email rendering, and sub-organizational task handling were resolved, while UI consistency was improved across applications through color alignment and standardized component libraries. The sprint also established foundational work for security modeling, record retention automation, and data source integration from enterprise systems like external HR systems. These changes streamline administrative operations, improve user experience consistency, and strengthen the platform's ability to manage records, training assignments, and approval workflows at enterprise scale.",
+    "metrics": {
+      "initial_count": 29,
+      "initial_weight": 73,
+      "completed_count": 29,
+      "completed_weight": 73,
+      "initial_breakdown": "16 Others, 7 Bugs, 6 Improvements",
+      "completed_breakdown": "16 Others, 7 Bugs, 6 Improvements"
+    }
+  }
+}

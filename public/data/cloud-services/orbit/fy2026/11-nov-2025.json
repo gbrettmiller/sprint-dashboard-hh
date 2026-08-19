@@ -1,0 +1,579 @@
+{
+  "fiscal_year": 2026,
+  "month": 11,
+  "year": 2025,
+  "sprints": [
+    {
+      "id": 3520,
+      "title": "Third-Party Integration FY26Q1-2",
+      "start_date": "2025-10-30",
+      "end_date": "2025-11-12",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 12,
+        "weight": 27
+      },
+      "burndown": [
+        {
+          "date": "2025-10-30",
+          "remaining_count": 12,
+          "remaining_weight": 27
+        },
+        {
+          "date": "2025-10-31",
+          "remaining_count": 12,
+          "remaining_weight": 27
+        },
+        {
+          "date": "2025-11-01",
+          "remaining_count": 12,
+          "remaining_weight": 27
+        },
+        {
+          "date": "2025-11-02",
+          "remaining_count": 12,
+          "remaining_weight": 27
+        },
+        {
+          "date": "2025-11-03",
+          "remaining_count": 6,
+          "remaining_weight": 13
+        },
+        {
+          "date": "2025-11-04",
+          "remaining_count": 7,
+          "remaining_weight": 13
+        },
+        {
+          "date": "2025-11-05",
+          "remaining_count": 5,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2025-11-06",
+          "remaining_count": 5,
+          "remaining_weight": 13
+        },
+        {
+          "date": "2025-11-07",
+          "remaining_count": 1,
+          "remaining_weight": 5
+        },
+        {
+          "date": "2025-11-08",
+          "remaining_count": 1,
+          "remaining_weight": 5
+        },
+        {
+          "date": "2025-11-09",
+          "remaining_count": 1,
+          "remaining_weight": 5
+        },
+        {
+          "date": "2025-11-10",
+          "remaining_count": 1,
+          "remaining_weight": 5
+        },
+        {
+          "date": "2025-11-11",
+          "remaining_count": 1,
+          "remaining_weight": 5
+        },
+        {
+          "date": "2025-11-12",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 1,
+        "other": 14
+      },
+      "completed": {
+        "count": 15,
+        "weight": 34
+      },
+      "issues": [
+        {
+          "id": 167184,
+          "iid": 1092,
+          "title": "ORBIT 3.2.4.2",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 0,
+          "state": "closed",
+          "labels": [
+            "pipeline::gov-prod-deployed"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-04",
+          "date_closed": "2025-11-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162739,
+          "iid": 1091,
+          "title": "Implement Content Filtering for Tasks page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-05",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162738,
+          "iid": 1090,
+          "title": "Implement Content Filtering for Roles page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::ready-for-release"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162737,
+          "iid": 1089,
+          "title": "Implement Content Filtering for Reports page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-05",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162736,
+          "iid": 1088,
+          "title": "Implement Content Filtering for Employee page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162735,
+          "iid": 1087,
+          "title": "Implement Content Filtering for Matrix Organizations page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162734,
+          "iid": 1086,
+          "title": "Implement Content Filtering for Layers page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162733,
+          "iid": 1085,
+          "title": "Implement Content Filtering for Work Sites page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162732,
+          "iid": 1084,
+          "title": "Implement Content Filtering for Vendor Accounts page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 162731,
+          "iid": 1083,
+          "title": "Implement Content Filtering for Position Assignments page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 158747,
+          "iid": 1082,
+          "title": "Reorganize and simplify ORBIT help page",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Customer:Internal",
+            "Type:Improvement",
+            "user-experience",
+            "user-interface",
+            "workflow::ready-for-release"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 153055,
+          "iid": 766,
+          "title": "Allow for Training Waiver",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "customer:data-analytics",
+            "source::gov-board-F725Q3",
+            "type::New Feature",
+            "workflow::refined"
+          ],
+          "milestone": "ORBIT 3.2.4",
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 155436,
+          "iid": 1055,
+          "title": "[ORBIT-304] Company logo should display properly in the ORBIT header",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "jira-import::ORBIT-1",
+            "ui",
+            "user-interface",
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-06",
+          "date_closed": "2025-11-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 155243,
+          "iid": 862,
+          "title": "[ORBIT-84] Email to all Notification Managers",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "customer:platform-engineering",
+            "Governance_Board:Vote",
+            "jira-import::ORBIT-1",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-30",
+          "date_closed": "2025-11-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 155213,
+          "iid": 832,
+          "title": "[ORBIT-53] Pending Transfers",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "jira-import::ORBIT-1",
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-06",
+          "date_closed": "2025-11-12",
+          "date_removed_from_sprint": null
+        }
+      ]
+    },
+    {
+      "id": 3569,
+      "title": "Third-Party Integration FY26Q1-3",
+      "start_date": "2025-11-13",
+      "end_date": "2025-11-25",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 7,
+        "weight": 21
+      },
+      "burndown": [
+        {
+          "date": "2025-11-13",
+          "remaining_count": 7,
+          "remaining_weight": 21
+        },
+        {
+          "date": "2025-11-14",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2025-11-15",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2025-11-16",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2025-11-17",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2025-11-18",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2025-11-19",
+          "remaining_count": 3,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2025-11-20",
+          "remaining_count": 2,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2025-11-21",
+          "remaining_count": 3,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-11-22",
+          "remaining_count": 3,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-11-23",
+          "remaining_count": 3,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-11-24",
+          "remaining_count": 3,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-11-25",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 8
+      },
+      "completed": {
+        "count": 8,
+        "weight": 23
+      },
+      "issues": [
+        {
+          "id": 169570,
+          "iid": 1104,
+          "title": "Email reminder indicator",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-13",
+          "date_closed": "2025-11-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 169564,
+          "iid": 1103,
+          "title": "Email reminders on Holidays",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-13",
+          "date_closed": "2025-11-14",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 169537,
+          "iid": 1100,
+          "title": "Create unit test for active/inactive fetch of Work Sites",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-13",
+          "date_closed": "2025-11-20",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 169536,
+          "iid": 1099,
+          "title": "Create unit test for active/inactive fetch of Layers",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-13",
+          "date_closed": "2025-11-25",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 169533,
+          "iid": 1097,
+          "title": "Create unit test for active/inactive fetch of Employee",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-21",
+          "date_closed": "2025-11-25",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 169530,
+          "iid": 1095,
+          "title": "Create unit test for active/inactive fetch of Roles",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-13",
+          "date_closed": "2025-11-25",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 169292,
+          "iid": 1093,
+          "title": "Read-only selection on Roles not working",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Type: Bug",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-13",
+          "date_closed": "2025-11-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 155180,
+          "iid": 799,
+          "title": "[ORBIT-15] Emails from Home Screen",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Customer:Internal",
+            "jira-import::ORBIT-1",
+            "workflow::in-review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-13",
+          "date_closed": "2025-11-19",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "milestone_title": "ORBIT v2.9.8",
+  "milestone_id": 1899,
+  "slug": "mirars-v2.9.8",
+  "project_id": 91001,
+  "project_name": "ORBIT",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:24.358921Z",
+  "issues": [
+    {
+      "id": 152654,
+      "iid": 697,
+      "title": "Prevent User from changing the level of a Layer",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "Customer: Internal",
+        "Module: Other",
+        "Status: PROD Ready",
+        "Type: Bug",
+        "Type: Improvement"
+      ],
+      "description": "We should not allowed a layer to be changed from a PD to a PM or visa versa. This throws off sql. However, if we are going to put that error check in there, then we also need the ability to move people from one layer to another in bulk."
+    },
+    {
+      "id": 152659,
+      "iid": 698,
+      "title": "Populate SQL Role Table - DW_organizationrole Using Worker Service",
+      "weight": 13,
+      "state": "closed",
+      "labels": [
+        "Customer: Internal",
+        "Module: Other",
+        "Status: PROD Ready",
+        "Type: Improvement"
+      ],
+      "description": "Populate the Organization Role table in SQL\n1. Put the personaid in the employee_akousername column \n2. not sure which field you are using for layer manager, either org_id or customerlayer_id - whichever one should only have data for layer managers\n3. not sure which field you are using for layer manager, either org_sortorder or customerlayer_orgsort - whichever one should only have data for layer managers\n4. Add a column for contract_company\n5. Only populate contract_company when the role type is Company Lead"
+    },
+    {
+      "id": 152652,
+      "iid": 699,
+      "title": "Email to update profile",
+      "weight": 8,
+      "state": "closed",
+      "labels": [
+        "Customer: Internal",
+        "Module: Other",
+        "Status: PROD Ready",
+        "Type: Improvement"
+      ],
+      "description": "Per Dan Hamilton:\n\nAdd a feature to send email to users who have not updated their profile in X days. 'X' is defined at the Organization level. X will be used for Alerts on home page and email. However, email will only happen if the organization also has the email flag set to yes. \nCap the number of days at 180. use intervals of 5 when selecting number of days.\nSee email verbiage under comments below.\nThings to consider:\nIf they do not act on the email - send it again in 7 days. (7 days since email sent and last profile update > X days)\nWe need to track the difference of a user updating their profile or someone else updating their employee record.\npopulated the new date field with 3/28/2024, otherwise it will be null and no one will ever get it."
+    },
+    {
+      "id": 152653,
+      "iid": 700,
+      "title": "Search on Notification response",
+      "weight": 8,
+      "state": "closed",
+      "labels": [
+        "Customer: Platform Engineering",
+        "Module: Notifications",
+        "Status: PROD Ready",
+        "Type: Improvement"
+      ],
+      "description": "from a customer:\nNotifications: Allow the responses on the Notification screen to be searchable by the response number so users needing assistance can be identified quickly"
+    },
+    {
+      "id": 152655,
+      "iid": 702,
+      "title": "Don't validate screen when inactivating a user",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Customer: Internal",
+        "Module: Personnel",
+        "Status: PROD Ready",
+        "Type: Improvement"
+      ],
+      "description": "Internal - Inactivating Users: When inactivating a user who may not have been assigned to a layer, it requires you to fill in a layer before inactivating.\u00a0 Change validation, so that when the record is set to inactive, validation does not take place"
+    },
+    {
+      "id": 152651,
+      "iid": 703,
+      "title": "Ability to set up contract numbers",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Customer: Platform Engineering",
+        "Module: Other",
+        "Status: PROD Ready",
+        "Type: Improvement"
+      ],
+      "description": "From a customer\nAllow Organization Managers to input Company specific contract numbers under settings (To be used on employee screen in addition to the vendor account). Currently, setting up numbers is an available feature that only a System Admin can perform."
+    },
+    {
+      "id": 152662,
+      "iid": 704,
+      "title": "Mandate supervisor field on employee screen",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Customer: Platform Engineering",
+        "Module: Personnel",
+        "Status: PROD Ready",
+        "Type: Improvement"
+      ],
+      "description": "a customer:\nMandate the supervisor field on the employee screen. This would be an optional mandate controlled at the Organization level."
+    },
+    {
+      "id": 152661,
+      "iid": 705,
+      "title": "Upgrade PROD MongoDB Nodes to v5",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Customer: Internal",
+        "Module: API/Package Update",
+        "Status: PROD Ready",
+        "Type: Improvement"
+      ],
+      "description": "This is already done in Production"
+    },
+    {
+      "id": 152658,
+      "iid": 706,
+      "title": "Add Application Insights on new resources",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Customer: Internal",
+        "Module: API/Package Update",
+        "Type: Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 152650,
+      "iid": 710,
+      "title": "Fixes to Issues Found During QA",
+      "weight": 13,
+      "state": "closed",
+      "labels": [
+        "Status: PROD Ready"
+      ],
+      "description": ""
+    },
+    {
+      "id": 152657,
+      "iid": 718,
+      "title": "Set Up MongoDB Connector in Test",
+      "weight": 13,
+      "state": "closed",
+      "labels": [
+        "Customer: Internal",
+        "Module: Other",
+        "Status: PROD Ready",
+        "Type: Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 152660,
+      "iid": 731,
+      "title": "Inactive Unassigned employee remain active in SQL",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Added During Sprint",
+        "Customer: Internal",
+        "Module: Personnel",
+        "Status: PROD Ready",
+        "Type: Bug"
+      ],
+      "description": "To create this issue:\n1. Someone must self register\n2. They must update their profile with work site (otherwise their record doesn't go to sql)\n3. A Layer or Org manager accesses the unassigned employee link\n4. Click the trash can next to the unassigned employee\n5. Their SQL record remains active"
+    },
+    {
+      "id": 152656,
+      "iid": 732,
+      "title": "Remove Phone from Scenarios",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Added During Sprint",
+        "Module: Notifications",
+        "Status: PROD Ready",
+        "Type: Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 152649,
+      "iid": 750,
+      "title": "Remove the protected layer UNDER Roles",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: PROD Ready",
+        "Type: Bug"
+      ],
+      "description": "When making the change to the layer screen, it appears that the role screen was changed as well. There should be no change to the role screen. they should be allowed to change their layer in a role"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "milestone_title": "1.7.2",
+  "milestone_id": 2513,
+  "slug": "1.7.2",
+  "project_id": 91005,
+  "project_name": "FormFlow",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:39.915059Z",
+  "issues": [
+    {
+      "id": 192655,
+      "iid": 33,
+      "title": "Sync capability values in form dropdown with values from ServiceNow",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "Finance Ops is an organization, not an affected system -  so that shouldn't be on the Capability list or Affected System list   \nSkyCast Download Portal is the correct one to use   \nAdd to Capability list:   \nA365   \nFR-LAT   \nBusiness Objects    \nAdd to Affected System list:   \nRELAY"
+    },
+    {
+      "id": 192719,
+      "iid": 34,
+      "title": "Make changes to authentication handler in FormFlow for SEMGREP remediation",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement"
+      ],
+      "description": "Currently our controller assumes Corporate SSO is enough to access api endpoints for the application. We will refactor our application authentication so that it considers the headers with a policy to authenticate the user before allowing them to access any api endpoints."
+    }
+  ]
+}

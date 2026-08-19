@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-27-may-26",
+  "title": "Data Services 27 May 26",
+  "start_date": "2026-05-13",
+  "end_date": "2026-05-27",
+  "generated_at": "2026-07-02T21:57:19.319579Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on advancing three major product lines\u2014Compliance Review, Purchasing UI, and TCT\u2014while addressing foundational infrastructure improvements and critical bug fixes across the platform. The team aimed to deliver enhanced user experiences through refined data display capabilities, streamlined administrative workflows, and improved system reliability across multiple applications.",
+    "summary": "The sprint successfully delivered significant improvements across the portfolio, including comprehensive gallery column implementations for Purchasing UI that enhance data visualization, substantial Compliance Review administrative enhancements that improve user record management and data upload workflows, and the successful release of TCT 1.3.0 to production with accompanying documentation and system cleanup. Additionally, the team resolved critical infrastructure issues such as service principal configuration, implemented filtering improvements including Contractor integration and modern combo box controls, and completed ownership transfer capabilities in Compliance Review. These deliverables collectively enhance system usability, administrative efficiency, and platform stability while enabling users to manage data and workflows more effectively across the organization.",
+    "metrics": {
+      "initial_count": 27,
+      "initial_weight": 70,
+      "completed_count": 24,
+      "completed_weight": 63,
+      "initial_breakdown": "13 Improvements, 6 New Features, 6 Others, 2 Bugs",
+      "completed_breakdown": "11 Improvements, 6 Others, 5 New Features, 2 Bugs"
+    }
+  }
+}

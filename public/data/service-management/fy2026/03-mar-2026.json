@@ -1,0 +1,626 @@
+{
+  "fiscal_year": 2026,
+  "month": 3,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 4180,
+      "title": "Service Management FY26Q2-4",
+      "start_date": "2026-02-19",
+      "end_date": "2026-03-13",
+      "state": 3,
+      "source": "iteration",
+      "goal": null,
+      "initial_totals": {
+        "count": 11,
+        "weight": 47
+      },
+      "burndown": [
+        {
+          "date": "2026-02-19",
+          "remaining_count": 9,
+          "remaining_weight": 41
+        },
+        {
+          "date": "2026-02-20",
+          "remaining_count": 9,
+          "remaining_weight": 41
+        },
+        {
+          "date": "2026-02-21",
+          "remaining_count": 9,
+          "remaining_weight": 41
+        },
+        {
+          "date": "2026-02-22",
+          "remaining_count": 9,
+          "remaining_weight": 41
+        },
+        {
+          "date": "2026-02-23",
+          "remaining_count": 9,
+          "remaining_weight": 41
+        },
+        {
+          "date": "2026-02-24",
+          "remaining_count": 9,
+          "remaining_weight": 41
+        },
+        {
+          "date": "2026-02-25",
+          "remaining_count": 9,
+          "remaining_weight": 41
+        },
+        {
+          "date": "2026-02-26",
+          "remaining_count": 9,
+          "remaining_weight": 41
+        },
+        {
+          "date": "2026-02-27",
+          "remaining_count": 9,
+          "remaining_weight": 41
+        },
+        {
+          "date": "2026-02-28",
+          "remaining_count": 9,
+          "remaining_weight": 41
+        },
+        {
+          "date": "2026-03-01",
+          "remaining_count": 9,
+          "remaining_weight": 41
+        },
+        {
+          "date": "2026-03-02",
+          "remaining_count": 9,
+          "remaining_weight": 41
+        },
+        {
+          "date": "2026-03-03",
+          "remaining_count": 9,
+          "remaining_weight": 41
+        },
+        {
+          "date": "2026-03-04",
+          "remaining_count": 8,
+          "remaining_weight": 38
+        },
+        {
+          "date": "2026-03-05",
+          "remaining_count": 8,
+          "remaining_weight": 38
+        },
+        {
+          "date": "2026-03-06",
+          "remaining_count": 6,
+          "remaining_weight": 28
+        },
+        {
+          "date": "2026-03-07",
+          "remaining_count": 6,
+          "remaining_weight": 28
+        },
+        {
+          "date": "2026-03-08",
+          "remaining_count": 6,
+          "remaining_weight": 28
+        },
+        {
+          "date": "2026-03-09",
+          "remaining_count": 4,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2026-03-10",
+          "remaining_count": 1,
+          "remaining_weight": 5
+        },
+        {
+          "date": "2026-03-11",
+          "remaining_count": 1,
+          "remaining_weight": 5
+        },
+        {
+          "date": "2026-03-12",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-03-13",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 6,
+        "new_feature": 5,
+        "other": 0
+      },
+      "completed": {
+        "count": 11,
+        "weight": 47
+      },
+      "issues": [
+        {
+          "id": 194802,
+          "iid": 57,
+          "title": "Intake Populate Program field on GPS Hardware assets for BackupNav",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::New-Feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-18",
+          "date_closed": "2026-03-04",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 194797,
+          "iid": 56,
+          "title": "Intake Location table asset data update for NavHub",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-18",
+          "date_closed": "2026-03-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 194796,
+          "iid": 55,
+          "title": "Intake Location table asset data update for NavPod",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-18",
+          "date_closed": "2026-03-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 194793,
+          "iid": 54,
+          "title": "Intake Location table incident data update for NavPod",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-18",
+          "date_closed": "2026-03-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 194792,
+          "iid": 53,
+          "title": "Intake Location table incident data update for NavHub",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-18",
+          "date_closed": "2026-03-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 194661,
+          "iid": 433,
+          "title": "PROD Review logs for ServiceNow upgrade to Zurich and resolve app issues",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::New-Feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-18",
+          "date_closed": "2026-03-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 194660,
+          "iid": 432,
+          "title": "TEST Review logs for ServiceNow upgrade to Zurich and resolve app issues",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review",
+            "type::New-Feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-18",
+          "date_closed": "2026-03-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 194659,
+          "iid": 431,
+          "title": "DEV Review logs for ServiceNow upgrade to Zurich and resolve app issues",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review",
+            "type::New-Feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-18",
+          "date_closed": "2026-03-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 193812,
+          "iid": 52,
+          "title": "Intake NavPod GEN II Asset Load Site 12 02-11-2026",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-18",
+          "date_closed": "2026-02-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 193810,
+          "iid": 51,
+          "title": "Intake NavPod GEN II Asset Load Site 5 08-22-2025",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-18",
+          "date_closed": "2026-02-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189029,
+          "iid": 43,
+          "title": "Intake - Update Location field reference on Incident table and GPS Hardware table",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::New-Feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-18",
+          "date_closed": "2026-03-10",
+          "date_removed_from_sprint": null
+        }
+      ]
+    },
+    {
+      "id": 4474,
+      "title": "Service Management FY26Q2-5",
+      "start_date": "2026-03-14",
+      "end_date": "2026-03-27",
+      "state": 3,
+      "source": "iteration",
+      "goal": null,
+      "initial_totals": {
+        "count": 12,
+        "weight": 28
+      },
+      "burndown": [
+        {
+          "date": "2026-03-14",
+          "remaining_count": 12,
+          "remaining_weight": 28
+        },
+        {
+          "date": "2026-03-15",
+          "remaining_count": 12,
+          "remaining_weight": 28
+        },
+        {
+          "date": "2026-03-16",
+          "remaining_count": 12,
+          "remaining_weight": 28
+        },
+        {
+          "date": "2026-03-17",
+          "remaining_count": 12,
+          "remaining_weight": 28
+        },
+        {
+          "date": "2026-03-18",
+          "remaining_count": 11,
+          "remaining_weight": 23
+        },
+        {
+          "date": "2026-03-19",
+          "remaining_count": 10,
+          "remaining_weight": 22
+        },
+        {
+          "date": "2026-03-20",
+          "remaining_count": 10,
+          "remaining_weight": 22
+        },
+        {
+          "date": "2026-03-21",
+          "remaining_count": 10,
+          "remaining_weight": 22
+        },
+        {
+          "date": "2026-03-22",
+          "remaining_count": 10,
+          "remaining_weight": 22
+        },
+        {
+          "date": "2026-03-23",
+          "remaining_count": 2,
+          "remaining_weight": 2
+        },
+        {
+          "date": "2026-03-24",
+          "remaining_count": 1,
+          "remaining_weight": 1
+        },
+        {
+          "date": "2026-03-25",
+          "remaining_count": 1,
+          "remaining_weight": 1
+        },
+        {
+          "date": "2026-03-26",
+          "remaining_count": 1,
+          "remaining_weight": 1
+        },
+        {
+          "date": "2026-03-27",
+          "remaining_count": 1,
+          "remaining_weight": 1
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 12
+      },
+      "completed": {
+        "count": 12,
+        "weight": 28
+      },
+      "issues": [
+        {
+          "id": 202717,
+          "iid": 436,
+          "title": "M2S Quick Submit update Primary Organization names",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Capability:: M2S",
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-12",
+          "date_closed": "2026-03-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 201629,
+          "iid": 58,
+          "title": "Intake Add Installed date field to Asset views and populate values",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-12",
+          "date_closed": "2026-03-18",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 198977,
+          "iid": 61,
+          "title": "Fulfillment Parts table add query_range ACL",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Review Complete"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-12",
+          "date_closed": "2026-03-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 198805,
+          "iid": 434,
+          "title": "M2S Add Description field to ORBIT FieldGear Incident Notification",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Capability:: M2S",
+            "Workflow::Review Complete"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-12",
+          "date_closed": "2026-03-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 196393,
+          "iid": 60,
+          "title": "Fulfillment Add Part Number field to Fulfillment CI",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Review Complete"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-12",
+          "date_closed": "2026-03-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 196200,
+          "iid": 59,
+          "title": "Fulfillment 'Asset Tag' field is not populating on Incident",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Review Complete"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-12",
+          "date_closed": "2026-03-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195681,
+          "iid": 58,
+          "title": "Fulfillment Incident Financials tab update label to Financial Data Type",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Review Complete"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-12",
+          "date_closed": "2026-03-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195679,
+          "iid": 57,
+          "title": "Fulfillment Financials for Parts add default description",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Review Complete"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-12",
+          "date_closed": "2026-03-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195676,
+          "iid": 56,
+          "title": "Fulfillment Incident Financials tab Manufacturer column location",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-12",
+          "date_closed": "2026-03-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 195656,
+          "iid": 55,
+          "title": "Fulfillment Set Resolution Code to 'Incident Closed' when State changes to Closed",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-12",
+          "date_closed": "2026-03-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 192699,
+          "iid": 430,
+          "title": "M2S Add Active Reference Qualifier to Affected System list",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Capability:: M2S",
+            "Workflow::Review Complete"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-12",
+          "date_closed": "2026-03-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 192662,
+          "iid": 429,
+          "title": "M2S Reconcile the Affected System list with Quick Submit Capability list",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Capability:: M2S"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-12",
+          "date_closed": "2026-03-24",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

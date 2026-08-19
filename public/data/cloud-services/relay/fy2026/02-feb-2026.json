@@ -1,0 +1,645 @@
+{
+  "fiscal_year": 2026,
+  "month": 2,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 3934,
+      "title": "Third-Party Integration FY26Q2-2",
+      "start_date": "2026-01-21",
+      "end_date": "2026-02-03",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 0,
+        "weight": 0
+      },
+      "burndown": [
+        {
+          "date": "2026-01-21",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-22",
+          "remaining_count": 16,
+          "remaining_weight": 23
+        },
+        {
+          "date": "2026-01-23",
+          "remaining_count": 15,
+          "remaining_weight": 22
+        },
+        {
+          "date": "2026-01-24",
+          "remaining_count": 15,
+          "remaining_weight": 22
+        },
+        {
+          "date": "2026-01-25",
+          "remaining_count": 15,
+          "remaining_weight": 22
+        },
+        {
+          "date": "2026-01-26",
+          "remaining_count": 11,
+          "remaining_weight": 16
+        },
+        {
+          "date": "2026-01-27",
+          "remaining_count": 5,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2026-01-28",
+          "remaining_count": 1,
+          "remaining_weight": 2
+        },
+        {
+          "date": "2026-01-29",
+          "remaining_count": 1,
+          "remaining_weight": 2
+        },
+        {
+          "date": "2026-01-30",
+          "remaining_count": 1,
+          "remaining_weight": 2
+        },
+        {
+          "date": "2026-01-31",
+          "remaining_count": 1,
+          "remaining_weight": 2
+        },
+        {
+          "date": "2026-02-01",
+          "remaining_count": 1,
+          "remaining_weight": 2
+        },
+        {
+          "date": "2026-02-02",
+          "remaining_count": 1,
+          "remaining_weight": 2
+        },
+        {
+          "date": "2026-02-03",
+          "remaining_count": 1,
+          "remaining_weight": 2
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 23
+      },
+      "completed": {
+        "count": 22,
+        "weight": 32
+      },
+      "issues": [
+        {
+          "id": 190188,
+          "iid": 114,
+          "title": "Add db tables for clin description and notes",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-28",
+          "date_closed": "2026-01-28",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 190087,
+          "iid": 113,
+          "title": "Bug: Check 18-D and 19-D Contracts Details Page",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-27",
+          "date_closed": "2026-01-27",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189534,
+          "iid": 112,
+          "title": "As a User: Whn I create a new action from a TO, I need to copy the following POCs: COR, COR RA, CS: Roles required to Post AwardKO",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-23",
+          "date_closed": "2026-01-27",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189378,
+          "iid": 111,
+          "title": "Make sure all data is viewable on completed actions",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": "2026-01-28",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189377,
+          "iid": 110,
+          "title": "Remove Mod link on Complete mods",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": "2026-01-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189376,
+          "iid": 109,
+          "title": "Write Action data on staging",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": "2026-01-27",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189375,
+          "iid": 108,
+          "title": "Assign Action POCs require KO and CS before Posting",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": "2026-01-28",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189374,
+          "iid": 107,
+          "title": "Some MOds are pull the wrong Base Contract",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": "2026-01-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189373,
+          "iid": 106,
+          "title": "Bug: Timestamps should be in EST",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": "2026-01-27",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189371,
+          "iid": 105,
+          "title": "Change Effective Date to Requested Award Date on Mods",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": "2026-01-26",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189370,
+          "iid": 104,
+          "title": "Award Details Data not Displaying",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": "2026-01-26",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189369,
+          "iid": 103,
+          "title": "Bug: Clin History not showing Clin Type Desc and Exercised",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": "2026-01-26",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189368,
+          "iid": 102,
+          "title": "Bug: Clin Exercised Toggle on Post Award modal",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": "2026-01-26",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189364,
+          "iid": 101,
+          "title": "Bug: Remove Extra Clin Btn on PostAward",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": "2026-01-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189362,
+          "iid": 100,
+          "title": "Bug: Full Performance Date not editable",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": "2026-01-27",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189355,
+          "iid": 99,
+          "title": "Add db table to track Facility Type",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": "2026-01-28",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189352,
+          "iid": 98,
+          "title": "Add new Clin default value updates. (Default UoI to Lot and Quantity to 1 )",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": "2026-01-27",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189349,
+          "iid": 97,
+          "title": "Move PrevContract section on ActionDetails toward the top",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": "2026-01-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189347,
+          "iid": 95,
+          "title": "Bug: ActionDetails task order pocs not populating",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": "2026-01-27",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189345,
+          "iid": 94,
+          "title": "Labeling Updates on Action Details Page",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "opened",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": null,
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189342,
+          "iid": 93,
+          "title": "Differentiate between Task Order Actions and Service Requirement Actions",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": "2026-01-28",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189336,
+          "iid": 92,
+          "title": "Bug: Cannot create new Actions",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": "2026-01-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183773,
+          "iid": 70,
+          "title": "scheduling rebaseline",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-22",
+          "date_closed": "2026-01-22",
+          "date_removed_from_sprint": null
+        }
+      ]
+    },
+    {
+      "id": 3986,
+      "title": "Third-Party Integration FY26Q2-3",
+      "start_date": "2026-02-04",
+      "end_date": "2026-02-17",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 8,
+        "weight": 11
+      },
+      "burndown": [
+        {
+          "date": "2026-02-04",
+          "remaining_count": 7,
+          "remaining_weight": 10
+        },
+        {
+          "date": "2026-02-05",
+          "remaining_count": 7,
+          "remaining_weight": 10
+        },
+        {
+          "date": "2026-02-06",
+          "remaining_count": 4,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2026-02-07",
+          "remaining_count": 4,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2026-02-08",
+          "remaining_count": 4,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2026-02-09",
+          "remaining_count": 4,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2026-02-10",
+          "remaining_count": 3,
+          "remaining_weight": 5
+        },
+        {
+          "date": "2026-02-11",
+          "remaining_count": 3,
+          "remaining_weight": 5
+        },
+        {
+          "date": "2026-02-12",
+          "remaining_count": 3,
+          "remaining_weight": 5
+        },
+        {
+          "date": "2026-02-13",
+          "remaining_count": 3,
+          "remaining_weight": 5
+        },
+        {
+          "date": "2026-02-14",
+          "remaining_count": 3,
+          "remaining_weight": 5
+        },
+        {
+          "date": "2026-02-15",
+          "remaining_count": 3,
+          "remaining_weight": 5
+        },
+        {
+          "date": "2026-02-16",
+          "remaining_count": 3,
+          "remaining_weight": 5
+        },
+        {
+          "date": "2026-02-17",
+          "remaining_count": 3,
+          "remaining_weight": 5
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 6,
+        "new_feature": 0,
+        "other": 2
+      },
+      "completed": {
+        "count": 5,
+        "weight": 6
+      },
+      "issues": [
+        {
+          "id": 191721,
+          "iid": 121,
+          "title": "TO List PAge (Hover should show long names)",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": "2026-02-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 191720,
+          "iid": 120,
+          "title": "TO List Page: Remove COR HRS Alt",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": "2026-02-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 191718,
+          "iid": 119,
+          "title": "On SR List Page Show SR Short name (Long Name on Hover)",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": "2026-02-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 191717,
+          "iid": 118,
+          "title": "Remove Agreement Column from SR list Page",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": "2026-02-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 191716,
+          "iid": 117,
+          "title": "Update the List Pages to make POC assignable from the list page throughout the app",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 5,
+          "state": "opened",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": null,
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 191712,
+          "iid": 115,
+          "title": "Add Task Section to SR Details",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": "2026-02-04",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 175491,
+          "iid": 52,
+          "title": "Migrate Latest Access DB to Test",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 0,
+          "state": "opened",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": null,
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 169557,
+          "iid": 48,
+          "title": "Documentation - RELAY Initial Deployment to Prod",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 0,
+          "state": "opened",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": null,
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

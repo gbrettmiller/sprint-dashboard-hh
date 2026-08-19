@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-22-oct",
+  "title": "Data Services 22 OCT",
+  "start_date": "2025-10-07",
+  "end_date": "2025-10-22",
+  "generated_at": "2026-07-02T21:56:19.244913Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on advancing the In/Out task management system with enhanced organizational filtering and hierarchy visibility, while simultaneously deploying multiple applications to production environments and resolving critical functional defects across the ITAM, RIST, and regulatory modules.",
+    "summary": "The team completed a substantial modernization of the In/Out master task list by incorporating sub-organization and team-level columns and filters throughout the interface, enabling users to better segment work across organizational structures. Concurrent with this enhancement, the team successfully deployed In/Out version 1.2, Access Requests version 1.2, and RIST to their respective production and test environments, while addressing significant bugs in ITAM asset management, RIST criteria editing, and regulatory request workflows. Additional work included integrating the Data Services menu component across systems, improving data accuracy through HRDB import refinements, and delivering UI mockups and bulk upload capabilities for purchasing and ITAM functions. These efforts collectively enhance operational visibility, reduce administrative friction, and improve cross-system data consistency for users across multiple government customers.",
+    "metrics": {
+      "initial_count": 33,
+      "initial_weight": 67,
+      "completed_count": 32,
+      "completed_weight": 62,
+      "initial_breakdown": "17 Improvements, 12 Others, 4 Bugs",
+      "completed_breakdown": "16 Improvements, 12 Others, 4 Bugs"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "month": "2026-04",
+  "generated_at": "2026-07-02T21:57:26.275348Z",
+  "sprints": [
+    {
+      "title": "Data Services 1 APR 26",
+      "start_date": "2026-03-18",
+      "end_date": "2026-04-01",
+      "goals": "This sprint focused on advancing multiple application platforms toward production readiness while addressing critical UI and workflow issues across the Data Services ecosystem. The team prioritized stability improvements, organizational hierarchy fixes, and new feature deployment across Access Requests, Compliance Review, Purchasing, and support applications.",
+      "summary": "The sprint delivered 34 completed items spanning production deployments, scaling and display fixes, and foundational architectural work. Key accomplishments include full Access Requests production deployment with enhanced form functionality and funding source controls, Compliance Review production dashboard launch with multi-level organizational support and document tracking, and the initial framework for the new Purchasing application. The team also resolved critical UI rendering issues affecting icon and button display at various screen sizes, corrected email targeting in approval workflows, and implemented security group and role updates across all environments. Together, these changes improve operational efficiency across records management, request approvals, procurement, and in-processing workflows while enhancing system stability and user experience.",
+      "metrics": {
+        "initial_count": 32,
+        "initial_weight": 66,
+        "completed_count": 32,
+        "completed_weight": 66,
+        "initial_breakdown": "17 Others, 12 Improvements, 3 New Features",
+        "completed_breakdown": "17 Others, 12 Improvements, 3 New Features"
+      }
+    },
+    {
+      "title": "Data Services 15 APR 26",
+      "start_date": "2026-04-01",
+      "end_date": "2026-04-15",
+      "goals": "This sprint aimed to stabilize core platform infrastructure across multiple applications while advancing three major feature initiatives: the Software License Tracker application build-out, the Compliance Review functionality improvements, and organizational restructuring across Baseline systems to reflect current org structure and staff assignments.",
+      "summary": "The team completed thirty-three issues spanning infrastructure updates, bug fixes, and new feature development across four major systems. Significant progress was made on the Software License Tracker, bringing the application from initial setup through UI build-out and request form functionality. The Compliance Review received critical fixes addressing document upload, attribute updates, and library mapping challenges, while also implementing reporting integration and group population for records management oversight. Platform maintenance work modernized naming conventions and organizational structures across Baseline applications to align with current Division-to-Business Unit transitions, and the Purchasing module launched new home screen and administrative screens to support software licensing workflows. These deliverables collectively enhance operational efficiency, strengthen data governance, and establish foundational architecture for downstream feature work.",
+      "metrics": {
+        "initial_count": 33,
+        "initial_weight": 73,
+        "completed_count": 33,
+        "completed_weight": 73,
+        "initial_breakdown": "16 Improvements, 11 Others, 6 Bugs",
+        "completed_breakdown": "16 Improvements, 11 Others, 6 Bugs"
+      }
+    },
+    {
+      "title": "Data Services 29 APR 26",
+      "start_date": "2026-04-15",
+      "end_date": "2026-04-29",
+      "goals": "This sprint focused on advancing the Data Services platform's core workflows across multiple functional areas, including completion of out-processing automation, records management enhancements, and deployment of critical system integrations. The team prioritized stabilizing existing features while laying groundwork for new acquisitions and reporting capabilities.",
+      "summary": "The sprint delivered significant progress across in-process and out-processing workflows, with the I/O module receiving multiple form refinements, field additions, and deployment to test-prod environments that improve user experience and data accuracy. Records management capabilities were strengthened through standardized naming conventions, enhanced admin screens, and resolution of critical bugs in document access and record retrieval. The team also advanced several major system integrations including Compliance Platform/Portfolio Reporting reporting to production, Access Requests list deployments, and foundational work on new platforms such as the SW License Tracker reporting interface and multiple Army logistics systems. These improvements enhance operational efficiency while establishing the technical foundation for expanded functionality across enterprise logistics, acquisitions, and workforce management domains.",
+      "metrics": {
+        "initial_count": 43,
+        "initial_weight": 80,
+        "completed_count": 41,
+        "completed_weight": 72,
+        "initial_breakdown": "18 Others, 16 Improvements, 6 New Features, 3 Bugs",
+        "completed_breakdown": "16 Others, 16 Improvements, 6 New Features, 3 Bugs"
+      }
+    },
+    {
+      "title": "Data Services 13 May 26",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-13",
+      "goals": "This sprint focused on stabilizing and enhancing core application functionality across multiple modules while expanding deployment capabilities to production environments. The team aimed to resolve critical bugs, complete pending feature implementations in the Purchasing and Compliance Review systems, and establish foundational architecture for the ORBIT initiative.",
+      "summary": "The team completed 31 issues spanning six major application areas, with particular emphasis on the Compliance Review module where gallery row highlighting, record attribute viewing, sorting functionality, and production deployments across all test and production environments were successfully delivered. Significant progress was made on the Purchasing module's Item Form Screen with all five component areas now complete, while critical fixes were applied to TCT archive flows, SALT configuration management, Access Requests approval and form handling, and Records API task synchronization. The ORBIT program advanced with security and data architecture work completed, and supporting systems like email notification features and training period management tools were implemented to enhance operational capabilities.",
+      "metrics": {
+        "initial_count": 34,
+        "initial_weight": 69,
+        "completed_count": 32,
+        "completed_weight": 65,
+        "initial_breakdown": "13 Improvements, 7 Bugs, 7 Others, 7 New Features",
+        "completed_breakdown": "12 Improvements, 7 Others, 7 New Features, 6 Bugs"
+      }
+    }
+  ]
+}

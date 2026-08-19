@@ -1,0 +1,48 @@
+{
+  "milestone_title": "RELAY 1.0.2",
+  "milestone_id": 4465,
+  "slug": "relay-1.0.2",
+  "project_id": 91003,
+  "project_name": "RELAY",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:40.573610Z",
+  "issues": [
+    {
+      "id": 257111,
+      "iid": 130,
+      "title": "CLIN Detail showing incorrect POP",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "priority::medium",
+        "type::Bug"
+      ],
+      "description": "When loading CLIN Details, the POP is showing Option 1 for the Base Period, Option 2 for Option 1 etc."
+    },
+    {
+      "id": 257113,
+      "iid": 132,
+      "title": "Mission Area Showing N/A in random task orders",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "priority::medium",
+        "type::Bug"
+      ],
+      "description": "In the Task Orders screen, some task orders display the appropriate mission area, but others are showing \"N/A\""
+    },
+    {
+      "id": 257460,
+      "iid": 134,
+      "title": "Nginx and Tomcat routing for proper URL resolution",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "priority::highest",
+        "type::improvement",
+        "workflow::refined"
+      ],
+      "description": "**CURRENTLY:** \n\n* `/relay` - \"can't read this page\" message in browser, shows https://www.apps.example.com:8080/relay/ in address bar\n* `/RELAY` - 404 error, nginx/1.31.2, shows https://www.apps.example.com/RELAY in address bar\n* `/relay/` - works, shows https://www.apps.example.com/relay/ in address bar\n* `/RELAY/` - works, shows https://www.apps.example.com/relay/ in address bar\n\n---\n\n_the following was generated in chat with an internal AI assistant_\n\n**BLUF (Bottom Line Up Front):** The presence of Nginx in the 404 error confirms this is a dual-layered issue between your proxy and your application server. \n* The **port `8080` leak** happens because Tomcat is issuing a redirect to append a trailing slash, but it doesn't know it sits behind Nginx, so it uses its internal port. \n* The **Nginx 404 error** happens because your current Nginx rules successfully rewrite `/RELAY/` to `/relay/`, but the rule fails to catch the exact string `/RELAY` (without the slash), treating it as a missing file.\n\n---\n\n### Resolution Checklist: Nginx & Tomcat Routing\n\n#### Phase 1: Correct the Nginx Reverse Proxy Configuration\n**Objective:** Fix the 404 error for `/RELAY` and ensure Nginx passes the correct external host information to Tomcat so Tomcat stops leaking port 8080.\n\n*   [ ] **1. Locate the Nginx Configuration:** Open the active site configuration file for `www.apps.example.com` (typically found in `/etc/nginx/conf.d/` or `/etc/nginx/sites-available/`).\n*   [ ] **2. Add a Case-Insensitive Rewrite Rule:** Above your existing `location` blocks for this app, add a rewrite rule to catch the missing trailing slashes for both upper and lowercase variants. This forces a clean browser redirect to the canonical path:\n    ```nginx\n    # Catch /relay or /RELAY without a slash and redirect to canonical /relay/\n    rewrite ^/(?i)relay$ /relay/ permanent;\n    ```\n    *(Note: The `(?i)` makes the regex case-insensitive in Nginx).*\n*   [ ] **3. Enforce Proxy Headers:** Ensure the primary `location /relay/` block explicitly passes the external Host and protocol headers to Tomcat. \n    ```nginx\n    location /relay/ {\n        proxy_pass http://127.0.0.1:8080/relay/;\n        \n        # These headers are critical to stop Tomcat from leaking port 8080\n        proxy_set_header Host $host;\n        proxy_set_header X-Real-IP $remote_addr;\n        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n        proxy_set_header X-Forwarded-Proto $scheme;\n        proxy_set_header X-Forwarded-Port 443;\n    }\n    ```\n*   [ ] **4. Validate and Reload Nginx:**\n    *   Run `nginx -t` to verify syntax.\n    *   Run `systemctl reload nginx` (or equivalent) to apply changes safely without dropping active connections.\n\n#### Phase 2: Configure Tomcat for Proxy Awareness\n**Objective:** Tell Tomcat it is operating behind a secure proxy so that any internal redirects it generates use `https://www.apps.example.com` instead of `http://localhost:8080`.\n\n*   [ ] **1. Locate Tomcat's `server.xml`:** Open `<TOMCAT_HOME>/conf/server.xml`.\n*   [ ] **2. Update the HTTP Connector:** Find the `<Connector port=\"8080\"...>` block. Add the proxy-awareness attributes (`proxyName`, `proxyPort`, `scheme`, and `secure`). The updated block should look like this:\n    ```xml\n    <Connector port=\"8080\"\n               protocol=\"HTTP/1.1\"\n               connectionTimeout=\"20000\"\n               redirectPort=\"443\"\n               proxyName=\"www.apps.example.com\"\n               proxyPort=\"443\"\n               scheme=\"https\"\n               secure=\"true\" />\n    ```\n*   [ ] **3. Restart Tomcat:** Restart the Tomcat service to apply the connector changes (e.g., `systemctl restart tomcat`).\n\n#### Phase 3: Verification Testing\n**Objective:** Confirm all four URLs now resolve gracefully to the canonical application path. **Important:** Instruct the tester to clear their browser cache or use an Incognito/Private window, as browsers aggressively cache 301/302 redirects.\n\n*   [ ] **Test 1 (`/relay`):** Navigate to `https://www.apps.example.com/relay`\n    *   *Expected Result:* URL automatically updates to `https://www.apps.example.com/relay/` and page loads successfully. (Port 8080 is no longer visible).\n*   [ ] **Test 2 (`/RELAY`):** Navigate to `https://www.apps.example.com/RELAY`\n    *   *Expected Result:* URL automatically updates to `https://www.apps.example.com/relay/` and page loads successfully. (404 error is gone).\n*   [ ] **Test 3 (`/relay/`):** Navigate to `https://www.apps.example.com/relay/`\n    *   *Expected Result:* Page loads successfully with no extra redirects.\n*   [ ] **Test 4 (`/RELAY/`):** Navigate to `https://www.apps.example.com/RELAY/`\n    *   *Expected Result:* URL automatically updates to `https://www.apps.example.com/relay/` and page loads successfully."
+    }
+  ]
+}

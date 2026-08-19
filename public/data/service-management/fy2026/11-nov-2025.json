@@ -1,0 +1,371 @@
+{
+  "fiscal_year": 2026,
+  "month": 11,
+  "year": 2025,
+  "sprints": [
+    {
+      "id": 3537,
+      "title": "Service Management FY26 Q1-1",
+      "start_date": "2025-11-04",
+      "end_date": "2025-11-17",
+      "state": 3,
+      "source": "iteration",
+      "goal": null,
+      "initial_totals": {
+        "count": 16,
+        "weight": 46
+      },
+      "burndown": [
+        {
+          "date": "2025-11-04",
+          "remaining_count": 15,
+          "remaining_weight": 43
+        },
+        {
+          "date": "2025-11-05",
+          "remaining_count": 15,
+          "remaining_weight": 43
+        },
+        {
+          "date": "2025-11-06",
+          "remaining_count": 15,
+          "remaining_weight": 43
+        },
+        {
+          "date": "2025-11-07",
+          "remaining_count": 9,
+          "remaining_weight": 29
+        },
+        {
+          "date": "2025-11-08",
+          "remaining_count": 9,
+          "remaining_weight": 29
+        },
+        {
+          "date": "2025-11-09",
+          "remaining_count": 9,
+          "remaining_weight": 29
+        },
+        {
+          "date": "2025-11-10",
+          "remaining_count": 6,
+          "remaining_weight": 20
+        },
+        {
+          "date": "2025-11-11",
+          "remaining_count": 6,
+          "remaining_weight": 20
+        },
+        {
+          "date": "2025-11-12",
+          "remaining_count": 6,
+          "remaining_weight": 20
+        },
+        {
+          "date": "2025-11-13",
+          "remaining_count": 5,
+          "remaining_weight": 15
+        },
+        {
+          "date": "2025-11-14",
+          "remaining_count": 4,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2025-11-15",
+          "remaining_count": 4,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2025-11-16",
+          "remaining_count": 4,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2025-11-17",
+          "remaining_count": 2,
+          "remaining_weight": 4
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 17
+      },
+      "completed": {
+        "count": 17,
+        "weight": 51
+      },
+      "issues": [
+        {
+          "id": 167148,
+          "iid": 12,
+          "title": "Attachments missing from incidents in PROD",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-04",
+          "date_closed": "2025-11-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 167011,
+          "iid": 10,
+          "title": "Convert Business Unit field from String to Ref field",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-03",
+          "date_closed": "2025-11-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 167006,
+          "iid": 11,
+          "title": "Tailor permission on reference tables to restrict data edit permissions to specific users",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-17",
+          "date_closed": "2025-11-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 166962,
+          "iid": 415,
+          "title": "M2S: Add app permissions to M2S Workspace and Application links",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Capability:: M2S",
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-03",
+          "date_closed": "2025-11-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 166958,
+          "iid": 10,
+          "title": "Add Fulfillment app permissions to Fulfillment Workspace and Application links",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-03",
+          "date_closed": "2025-11-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 166753,
+          "iid": 7,
+          "title": "Vessel Home Port reference",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-03",
+          "date_closed": "2025-11-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 166751,
+          "iid": 6,
+          "title": "Add link to Quick Submit on Fulfillment workspace",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-03",
+          "date_closed": "2025-11-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 166749,
+          "iid": 4,
+          "title": "Delete Case Type table as duplicate of IR Type table",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-03",
+          "date_closed": "2025-11-04",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 166747,
+          "iid": 2,
+          "title": "Display only select Assignment Groups",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-03",
+          "date_closed": "2025-11-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 166744,
+          "iid": 7,
+          "title": "Access to consumables",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-03",
+          "date_closed": "2025-11-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 166741,
+          "iid": 4,
+          "title": "Relationship not created to correct CI after import",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-03",
+          "date_closed": "2025-11-14",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 167016,
+          "iid": 11,
+          "title": "Site 8 Asset Update",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-03",
+          "date_closed": "2025-11-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 166737,
+          "iid": 411,
+          "title": "Site 8 Asset Update",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 2,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-03",
+          "date_closed": "2025-11-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 167017,
+          "iid": 12,
+          "title": "Site 3 Asset update",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-03",
+          "date_closed": "2025-11-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 166736,
+          "iid": 410,
+          "title": "Site 3 Asset update",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 2,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-03",
+          "date_closed": "2025-11-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 166759,
+          "iid": 8,
+          "title": "Intake: Load Cable info into Consumables",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-03",
+          "date_closed": "2025-11-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 166760,
+          "iid": 8,
+          "title": "Create AWS Asset Relationships",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 5,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-03",
+          "date_closed": "2025-11-17",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

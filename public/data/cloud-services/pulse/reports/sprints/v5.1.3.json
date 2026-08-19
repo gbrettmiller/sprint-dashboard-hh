@@ -1,0 +1,58 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "pulse",
+  "milestone_slug": "v5.1.3",
+  "title": "v5.1.3",
+  "start_date": "2026-05-06",
+  "end_date": "2026-05-20",
+  "generated_at": "2026-06-30T22:01:42.751868Z",
+  "test_plan": [
+    {
+      "iid": 558,
+      "title": "refactor: Clean up PostAward sub-contractor controllers - extract shared logic, defer full merge",
+      "steps": "- Load the post-award action's \"Prime Contractors\" section and verify the page loads without errors.\n- Select 2\u20133 contractors from the checklist and confirm the selection is processed correctly.\n- Edit one of the selected contractors (change Vendor ID, toggle a small-business category) and verify the changes are saved.\n- Reload the page and confirm all edited values persist correctly.\n- Verify that authorization is enforced (attempt to access as a non-PM user and confirm access is denied)."
+    },
+    {
+      "iid": 672,
+      "title": "UX: Surface validation errors hidden inside collapsed accordions",
+      "steps": "- Submit a form with a validation error located inside a collapsed accordion panel and verify the panel automatically expands to reveal the error message\n- Submit a form with validation errors in multiple accordion panels and verify all panels containing errors are automatically expanded\n- Submit a form with validation errors inside collapsed tabs and verify the tab(s) containing errors are automatically activated\n- Verify a summary banner appears at the top of the form displaying the total count of validation errors (e.g., \"3 errors must be corrected before saving\")\n- Submit a form without accordions/tabs containing validation errors and verify the page scrolls to the first error without any unexpected behavior changes"
+    },
+    {
+      "iid": 675,
+      "title": "UX: Add advanced filtering to action item list view (per-column, org-configurable)",
+      "steps": "- Navigate to Admin > Action List Columns and verify that for OrgID=1, the default filterable columns (Action Status, Award Date range, Funding Type, Service Code, Organization) have IsFilterable checked and correct FilterType values; toggle the \"All filterable\" master toggle and confirm all checkboxes update; save and reload the page to verify persistence.\n- Log in as a user with cross-org access, navigate to the action item list view, and verify the collapsible filter panel renders above the table with one input per filterable column matching its FilterType (text inputs for text columns, date-range pickers for dates, multi-select dropdowns for lookup columns, etc.); apply at least one filter and confirm the URL updates with query parameters and results are filtered server-side.\n- Verify that active filters display as removable chips below the filter panel, ordered by the column's DisplayOrder; click an X on a chip and confirm that filter is removed and results update; navigate away and back to the list view and confirm the filter state is restored via the URL.\n- Log in as a single-org user, navigate to the action item list view, and confirm the Organization filter input is NOT rendered in the filter panel; then log in as a cross-org user and confirm the Organization filter input IS present and functional.\n- Log in to Admin > Action List Columns, set FilterType='lookup' on a column, leave LookupCategoryId blank, and save; navigate to the list view and confirm the lookup dropdown is populated with the hardcoded default category for that column; then override the LookupCategoryId with a different category, save, and confirm the list view dropdown now reflects the override."
+    },
+    {
+      "iid": 678,
+      "title": "UX: Fix modal dialog stacking and page-lock issues",
+      "steps": "- Open a record detail modal, then open a child modal (e.g., edit lookup value) from within it and verify the child modal appears above the parent with correct layering\n- Close the child modal and confirm the parent modal remains interactive and visible with its backdrop intact\n- Close the parent modal and verify all backdrops are removed and the page is fully interactive\n- Open record \u2192 open edit sub-item modal \u2192 close sub-item \u2192 attempt to interact with parent modal \u2192 close parent modal and confirm no page lock occurs at any step\n- Press Escape key while a child modal is open and verify only the child modal closes, leaving the parent modal visible and interactive"
+    },
+    {
+      "iid": 683,
+      "title": "UX: Improve user-facing error messages across the application",
+      "steps": "- Navigate to the OneNLists API and trigger an error condition (e.g., invalid request); verify the response returns a structured JSON format with `{ \"error\": { \"code\": \"...\", \"message\": \"...\" } }` instead of generic text.\n- Attempt to submit a form with invalid data (e.g., missing required fields); verify validation error messages display human-readable field names (e.g., \"Award Date\") instead of property names like `fk_OneNList_ID`.\n- Perform a bulk upload with intentionally malformed data; verify error reports reference column header names (e.g., \"Award Date\") rather than numeric column indices.\n- Trigger a server error (HTTP 500) via an invalid API call; verify the response displays a generic user-safe message (\"An unexpected error occurred. Please try again or contact support.\") without exposing stack traces or technical details.\n- Use browser developer tools to monitor AJAX requests and intentionally cause an error; verify the JavaScript error handler displays the message from the API error JSON rather than raw HTTP status codes or exception text."
+    },
+    {
+      "iid": 711,
+      "title": "feat: Add IsmVSATAction column to OneNList and update action description stored procedures",
+      "steps": "- Verify the `IsmVSATAction` column exists on the `OneNList` table by querying the database schema and confirming it is `BIT NOT NULL DEFAULT 0`\n- Verify four rows exist in `System_FieldMetadata` for `IsmVSATAction` with correct `IsHidden` values: OrgID=1 has `IsHidden=0`, and OrgIDs 2, 3, 4 have `IsHidden=1`\n- Log in as an admin for OrgID=1 (Vantage/Vantage North), navigate to Admin > Fields, and confirm the FieldSat Action field is visible and toggleable\n- Log in as an admin for OrgID=2 (Beacon), navigate to Admin > Fields, and confirm the FieldSat Action field is hidden by default but can be unhidden\n- Create or edit an action, verify the FieldSat Action checkbox appears and persists its value after saving"
+    },
+    {
+      "iid": 712,
+      "title": "feat: Add FieldSat Action checkbox to Action Description tab with org-wide visibility for Central Riverside",
+      "steps": "- Navigate to the Action Description tab on an Item Create/Edit form in a Vantage or Vantage North org and verify the \"FieldSat Action\" checkbox is visible.\n- Check the \"FieldSat Action\" checkbox, save the item, and confirm that `IsmVSATAction = 1` is persisted in the OneNList table.\n- Uncheck the \"FieldSat Action\" checkbox, save the item, and confirm that `IsmVSATAction = 0` is persisted in the OneNList table.\n- Log in as a user from Beacon, Union, or JPO Meridian org and verify the \"FieldSat Action\" checkbox is NOT visible on the Action Description tab.\n- Log in as an admin, navigate to Admin > Fields, unhide the FieldSat Action field for a previously hidden org, log out and back in as a regular user, and verify the checkbox now appears on the Action Description tab."
+    }
+  ],
+  "sprint_report": {
+    "goals": "This sprint focused on expanding visibility and usability of the FieldSat action tracking system while systematizing error handling and filtering capabilities across the platform. The team aimed to streamline user workflows by surfacing critical information and reducing friction points in common application tasks.",
+    "summary": "The team extended the FieldSat action feature set by adding checkbox controls and database support for organization-wide visibility of Central Riverside actions, enabling better tracking and coordination across teams. Concurrent work addressed recurring user experience friction by improving error messaging clarity, fixing modal dialog stacking problems that locked users out of the interface, and introducing advanced per-column filtering with organization-level configuration on action item lists. Additional refinements included exposing previously hidden validation errors within collapsed accordion sections and consolidating duplicated logic in PostAward sub-contractor controllers to reduce maintenance burden and improve code consistency going forward.",
+    "metrics": {
+      "initial_count": 7,
+      "initial_weight": 21,
+      "completed_count": 7,
+      "completed_weight": 21,
+      "initial_breakdown": "5 Improvements, 2 New Features",
+      "completed_breakdown": "5 Improvements, 2 New Features"
+    }
+  }
+}

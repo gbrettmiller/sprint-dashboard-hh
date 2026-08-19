@@ -1,0 +1,458 @@
+{
+  "fiscal_year": 2026,
+  "month": 4,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 4583,
+      "title": "Service Management FY26Q3-1",
+      "start_date": "2026-03-31",
+      "end_date": "2026-04-14",
+      "state": 3,
+      "source": "iteration",
+      "goal": null,
+      "initial_totals": {
+        "count": 11,
+        "weight": 32
+      },
+      "burndown": [
+        {
+          "date": "2026-03-31",
+          "remaining_count": 11,
+          "remaining_weight": 32
+        },
+        {
+          "date": "2026-04-01",
+          "remaining_count": 9,
+          "remaining_weight": 28
+        },
+        {
+          "date": "2026-04-02",
+          "remaining_count": 8,
+          "remaining_weight": 25
+        },
+        {
+          "date": "2026-04-03",
+          "remaining_count": 8,
+          "remaining_weight": 25
+        },
+        {
+          "date": "2026-04-04",
+          "remaining_count": 8,
+          "remaining_weight": 25
+        },
+        {
+          "date": "2026-04-05",
+          "remaining_count": 8,
+          "remaining_weight": 25
+        },
+        {
+          "date": "2026-04-06",
+          "remaining_count": 8,
+          "remaining_weight": 25
+        },
+        {
+          "date": "2026-04-07",
+          "remaining_count": 6,
+          "remaining_weight": 20
+        },
+        {
+          "date": "2026-04-08",
+          "remaining_count": 6,
+          "remaining_weight": 20
+        },
+        {
+          "date": "2026-04-09",
+          "remaining_count": 6,
+          "remaining_weight": 20
+        },
+        {
+          "date": "2026-04-10",
+          "remaining_count": 4,
+          "remaining_weight": 16
+        },
+        {
+          "date": "2026-04-11",
+          "remaining_count": 4,
+          "remaining_weight": 16
+        },
+        {
+          "date": "2026-04-12",
+          "remaining_count": 4,
+          "remaining_weight": 16
+        },
+        {
+          "date": "2026-04-13",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-04-14",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 11
+      },
+      "completed": {
+        "count": 11,
+        "weight": 32
+      },
+      "issues": [
+        {
+          "id": 206634,
+          "iid": 62,
+          "title": "Intake Location Asset field on Incident is Read Only",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-31",
+          "date_closed": "2026-04-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 206572,
+          "iid": 61,
+          "title": "Intake Magnifying Glass on CI Field is Missing",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-30",
+          "date_closed": "2026-04-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 206513,
+          "iid": 60,
+          "title": "Intake Maintenance Record Update based on Configuration Item",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-30",
+          "date_closed": "2026-04-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 206308,
+          "iid": 59,
+          "title": "Intake Remove old Location fields from Asset and Incident",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-30",
+          "date_closed": "2026-04-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 204306,
+          "iid": 437,
+          "title": "Global Deny Unless ACL for Incident. Add 'Caller' field.",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-30",
+          "date_closed": "2026-04-02",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 190493,
+          "iid": 53,
+          "title": "Fulfillment Add Vessel field to assignment notifications",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-30",
+          "date_closed": "2026-04-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 190163,
+          "iid": 46,
+          "title": "Intake - BackupNav Reporting requirements",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-30",
+          "date_closed": "2026-04-01",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 185487,
+          "iid": 43,
+          "title": "Fulfillment Load Parts reference table data from spreadsheet",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-30",
+          "date_closed": "2026-04-01",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 171221,
+          "iid": 16,
+          "title": "Fulfillment Create Contact Table workflow to lookup Contact records on incident",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-30",
+          "date_closed": "2026-04-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 171220,
+          "iid": 15,
+          "title": "Fulfillment Create Contact table",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-30",
+          "date_closed": "2026-04-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 166748,
+          "iid": 3,
+          "title": "Fulfillment Need ability to edit Work Notes after they are submitted",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-30",
+          "date_closed": "2026-04-13",
+          "date_removed_from_sprint": null
+        }
+      ]
+    },
+    {
+      "id": 4659,
+      "title": "Service Management FY26Q3-2",
+      "start_date": "2026-04-15",
+      "end_date": "2026-04-24",
+      "state": 3,
+      "source": "iteration",
+      "goal": null,
+      "initial_totals": {
+        "count": 6,
+        "weight": 21
+      },
+      "burndown": [
+        {
+          "date": "2026-04-15",
+          "remaining_count": 6,
+          "remaining_weight": 21
+        },
+        {
+          "date": "2026-04-16",
+          "remaining_count": 5,
+          "remaining_weight": 20
+        },
+        {
+          "date": "2026-04-17",
+          "remaining_count": 5,
+          "remaining_weight": 20
+        },
+        {
+          "date": "2026-04-18",
+          "remaining_count": 5,
+          "remaining_weight": 20
+        },
+        {
+          "date": "2026-04-19",
+          "remaining_count": 5,
+          "remaining_weight": 20
+        },
+        {
+          "date": "2026-04-20",
+          "remaining_count": 5,
+          "remaining_weight": 20
+        },
+        {
+          "date": "2026-04-21",
+          "remaining_count": 3,
+          "remaining_weight": 13
+        },
+        {
+          "date": "2026-04-22",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2026-04-23",
+          "remaining_count": 1,
+          "remaining_weight": 3
+        },
+        {
+          "date": "2026-04-24",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 4,
+        "new_feature": 2,
+        "other": 0
+      },
+      "completed": {
+        "count": 6,
+        "weight": 21
+      },
+      "issues": [
+        {
+          "id": 210802,
+          "iid": 65,
+          "title": "Intake Maintenance Record update based on CI - Validation",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-04-15",
+          "date_closed": "2026-04-21",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 210203,
+          "iid": 438,
+          "title": "SPM Design the access control architecture for SPM Pilot",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::New-Feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-04-15",
+          "date_closed": "2026-04-21",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 209944,
+          "iid": 64,
+          "title": "Intake Asset Update 2 CR",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-04-15",
+          "date_closed": "2026-04-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 208894,
+          "iid": 63,
+          "title": "Fulfillment Update Columns in Workspace Asset List",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-04-15",
+          "date_closed": "2026-04-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 206686,
+          "iid": 62,
+          "title": "Fulfillment Vessel Graphical Dashboard",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Review Complete",
+            "type::New-Feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-04-15",
+          "date_closed": "2026-04-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 206680,
+          "iid": 63,
+          "title": "Intake Add 'Subcomponent/ Battery Service Life' field to Asset table",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-04-15",
+          "date_closed": "2026-04-16",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "fiscal_year": 2026,
+  "month": 10,
+  "year": 2025,
+  "sprints": [
+    {
+      "id": 3356,
+      "title": "Third-Party Integration FY26Q1-1",
+      "start_date": "2025-10-14",
+      "end_date": "2025-10-29",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 0,
+        "weight": 0
+      },
+      "burndown": [
+        {
+          "date": "2025-10-14",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-10-15",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-10-16",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-10-17",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-10-18",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-10-19",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-10-20",
+          "remaining_count": 4,
+          "remaining_weight": 16
+        },
+        {
+          "date": "2025-10-21",
+          "remaining_count": 4,
+          "remaining_weight": 16
+        },
+        {
+          "date": "2025-10-22",
+          "remaining_count": 4,
+          "remaining_weight": 16
+        },
+        {
+          "date": "2025-10-23",
+          "remaining_count": 4,
+          "remaining_weight": 16
+        },
+        {
+          "date": "2025-10-24",
+          "remaining_count": 4,
+          "remaining_weight": 16
+        },
+        {
+          "date": "2025-10-25",
+          "remaining_count": 4,
+          "remaining_weight": 16
+        },
+        {
+          "date": "2025-10-26",
+          "remaining_count": 4,
+          "remaining_weight": 16
+        },
+        {
+          "date": "2025-10-27",
+          "remaining_count": 4,
+          "remaining_weight": 16
+        },
+        {
+          "date": "2025-10-28",
+          "remaining_count": 4,
+          "remaining_weight": 16
+        },
+        {
+          "date": "2025-10-29",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 4
+      },
+      "completed": {
+        "count": 4,
+        "weight": 16
+      },
+      "issues": [
+        {
+          "id": 156249,
+          "iid": 590,
+          "title": "Implement Pipeline in PULSE",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "governance-board::july"
+          ],
+          "milestone": "v5.0.4",
+          "date_added_to_sprint": "2025-10-20",
+          "date_closed": "2025-10-29",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 156247,
+          "iid": 589,
+          "title": "Create Job Pipeline Script",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "governance-board::july",
+            "workflow::ready-for-release"
+          ],
+          "milestone": "v5.0.4",
+          "date_added_to_sprint": "2025-10-20",
+          "date_closed": "2025-10-29",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 156245,
+          "iid": 588,
+          "title": "Define PULSE Workflow",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "governance-board::july",
+            "workflow::ready-for-release"
+          ],
+          "milestone": "v5.0.4",
+          "date_added_to_sprint": "2025-10-20",
+          "date_closed": "2025-10-29",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 156243,
+          "iid": 587,
+          "title": "Analyze Existing Pipeline",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "governance-board::july",
+            "workflow::ready-for-release"
+          ],
+          "milestone": "v5.0.4",
+          "date_added_to_sprint": "2025-10-20",
+          "date_closed": "2025-10-29",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

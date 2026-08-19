@@ -1,0 +1,22 @@
+{
+  "group_slug": "service-management",
+  "project_slug": null,
+  "milestone_slug": "service-management-fy26-q1-3",
+  "title": "Service Management FY26 Q1-3",
+  "start_date": "2025-12-03",
+  "end_date": "2025-12-16",
+  "generated_at": "2026-07-10T21:41:02.943344Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint aimed to expand Service Management platform capabilities for two new mission systems, BackupNav and NavHub GEN I, while improving data quality and user experience across incident management and financial tracking workflows. The team also worked to refine configuration management and dashboard reporting to better align with operational requirements.",
+    "summary": "The team successfully onboarded BackupNav into the Service Management platform by creating incident templates, adding product definitions, and extending the GPS Hardware form with system-specific fields, enabling operators to track and manage BackupNav incidents within the standard workflow. Parallel efforts completed the NavHub GEN I consumables data ingestion, implemented reference qualifiers across multiple forms to enforce data integrity, and updated incident status workflows with new hold reasons that reflect actual operational constraints like site travel dependencies. Additional refinements included dashboard cleanup for Fulfillment, improved Configuration Item labeling for domain-specific contexts, and investigative work into PDF-based incident field population that will inform future automation opportunities. These changes collectively reduce manual data entry, improve asset visibility, and provide teams with more accurate categorization and filtering capabilities.",
+    "metrics": {
+      "initial_count": 18,
+      "initial_weight": 46,
+      "completed_count": 18,
+      "completed_weight": 46,
+      "initial_breakdown": "18 Others",
+      "completed_breakdown": "18 Others"
+    }
+  }
+}

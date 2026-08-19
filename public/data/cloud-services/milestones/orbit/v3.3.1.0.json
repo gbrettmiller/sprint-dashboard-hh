@@ -1,0 +1,545 @@
+{
+  "milestone_title": "v3.3.1.0",
+  "milestone_id": 2892,
+  "slug": "v3.3.1.0",
+  "project_id": 91001,
+  "project_name": "ORBIT",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:27.680089Z",
+  "issues": [
+    {
+      "id": 155241,
+      "iid": 860,
+      "title": "[ORBIT-81] Allow for check-in based on user's local time",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "customer:platform-engineering",
+        "Governance_Board:Vote",
+        "jira-import::ORBIT-1",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\n\nAs a user submitting check-in or future check-in,\nI want the system to determine the reporting day based on my local time,\nSo that I can accurately submit check-in or future check-in without the system prematurely advancing to the next day.\n\n## Acceptance Criteria\n\n**Scenario: User submits check-in prior to 2359 local time**\n- Given I am accessing the check-in feature prior to 2359 in my local timezone\n- When I open the check-in submission page\n- Then the system displays the current local date as the reporting date\n- And I am able to submit check-in for the current local day\n\n**Scenario: Check-in day advances at local midnight**\n- Given I am submitting check-in\n- When my local time crosses midnight (0000)\n- Then the system advances the reporting date to the next day\n- And subsequent check-in submissions reflect the new local date\n\n**Scenario: Users in different timezones see their own local reporting date**\n- Given two users are accessing check-in simultaneously\n- And they are in different timezones\n- When each user opens the check-in submission page\n- Then each user sees the reporting date based on their own local time\n- And not a shared UTC-based date\n\n**Scenario: User creates a Future Check-in for the next day before local midnight**\n- Given I am accessing the check-in feature at any time before 2359 in my local timezone\n- When I select the option to submit a Future Check-in for \"tomorrow\"\n- Then the system sets the reporting date to the next local calendar day\n- And I am able to submit the Future Check-in for that date\n- And the submission is accepted regardless of what the current UTC date is\n\n## Additional Context\n\nThe system currently resets the reporting day based on UTC time, causing users in negative UTC offsets to have the day advance while they are still within their local core hours (1900\u20132359). The fix should derive the reporting day from the user's local timezone."
+    },
+    {
+      "id": 195876,
+      "iid": 1202,
+      "title": "Email verification via code for Notification Information",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI introduces a verification process for the \"Additional Email\" in the \"Notification Information\" section. After a user enters an email and saves their profile, a verification field will appear at the top of the page. The user must then enter a code sent to that email address to confirm ownership and enable notifications.\n\n---\n\n#### **User Story**\n\n*   **As a** ORBIT user,\n*   **I want to** enter an \"Additional Email,\" save my profile, and then enter a verification code sent to that email,\n*   **so that** I can prove I own the email address and ensure I receive important system notifications.\n\n---\n\n#### **Acceptance Criteria**\n\n**Scenario 1: User Enters Email and Saves Profile**\n\n*   **Given** a user is on their \"Edit Profile\" page and enters an email (new or changed) in the \"Additional Email\" field,\n*   **When** they click the \"Save\" button for the profile,\n*   **Then** a verification code **must** be sent to the entered email address.\n*   **And** after the page reloads, a new section/field, clearly labeled for verification, **must** appear at the top of the profile page.\n*   **And** a status indicator next to the \"Additional Email\" field **must** display \"Verification Required.\"\n\n**Scenario 2: Successful Verification**\n\n*   **Given** the verification code field is displayed on the user's profile,\n*   **When** the user enters the correct verification code from their email and clicks \"Verify,\"\n*   **Then** the verification section at the top of the page **must** disappear.\n*   **And** the status indicator next to the \"Additional Email\" field **must** update to \"Verified.\"\n*   **And** a success message (e.g., \"Your additional email has been successfully verified.\") **must** be displayed.\n\n**Scenario 3: Failed Verification**\n\n*   **Given** the verification code field is displayed,\n*   **When** the user enters an incorrect code and clicks \"Verify,\"\n*   **Then** an error message (e.g., \"Invalid verification code. Please try again.\") **must** be displayed within the verification section.\n*   **And** the verification section **must** remain visible.\n\n**Scenario 4: User with Verified Email**\n\n*   **Given** a user with a previously verified \"Additional Email\" views their \"Edit Profile\" page,\n*   **When** the page loads,\n*   **Then** the verification code section **must not** be displayed.\n*   **And** the status next to their email **must** show \"Verified.\""
+    },
+    {
+      "id": 200553,
+      "iid": 1207,
+      "title": "SQL CreatedBy Bug",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "type::Bug",
+        "workflow::refined"
+      ],
+      "description": "When updating a employee record there is a bug that is setting the createdby value in sql to whoever last updated the record rather than who actually created it. We need to fix the bug and consider how we can fix values in past records."
+    },
+    {
+      "id": 205796,
+      "iid": 1219,
+      "title": "Data Sync: Update User Records in SQL with Employee ID",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "#### **User Story**\n\n*   **As a** ORBIT Administrator,\n*   **I want** an existing user's record in the SQL reporting database to be updated with their Employee ID as soon as it's backfilled in ORBIT,\n*   **so that** our historical user data in Power BI becomes progressively more complete and accurate over time.\n\n#### **Acceptance Criteria**\n\n*   **Given** an existing user's Employee ID has just been successfully backfilled into their MongoDB profile,\n*   **When** the backfill process is finalized,\n*   **Then** the system **must** execute an `UPDATE` statement on the corresponding user's record in the SQL database.\n*   **And** this `UPDATE` statement **must** use the `personaID` to locate the correct record.\n*   **And** it **must** populate the `EmployeeId` column for that record with the newly acquired value.\n*   **And** if the user record does not exist in the SQL database for any reason, it should be created (upsert logic)."
+    },
+    {
+      "id": 205992,
+      "iid": 1223,
+      "title": "Visually Distinguish Active and Inactive Roles During Role Assignment",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI addresses a point of confusion in the role creation workflow. When an Organization Manager or Admin assigns a new role to a person, the system displays a list of that user's current roles. Currently, this list mixes active and inactive roles without any visual distinction, making it difficult to understand the user's true current permissions. This enhancement will update the UI to clearly differentiate between active and inactive roles.\n\n---\n\n#### **User Story**\n\n*   **As an** Organization Manager or Admin,\n*   **I want to** clearly see which of a user's current roles are active and which are inactive when I am assigning them a new role,\n*   **so that** I can avoid confusion, make a more informed decision, and prevent administrative errors like re-assigning a role that is simply inactive.\n\n---\n\n#### **Acceptance Criteria**\n\n**Scenario 1: User with Both Active and Inactive Roles**\n\n*   **Given** an administrator is on the \"Create New Role\" page and has selected a user who has a mix of active and inactive roles,\n*   **When** the list of that user's current roles is displayed,\n*   **Then** all inactive roles in the list **must** have a clear visual indicator to differentiate them from active roles.\n*   **And** this indicator could be, for example, the text being greyed out, a prepended/appended \"(Inactive)\" label, or strikethrough text.\n*   **And** active roles in the list **must** appear in the standard, default format.\n\n**Scenario 2: User with Only Active Roles**\n\n*   **Given** an administrator has selected a user who only has active roles,\n*   **When** the list of that user's current roles is displayed,\n*   **Then** all roles in the list **must** appear in the standard \"active\" format, with no \"inactive\" styling applied."
+    },
+    {
+      "id": 205995,
+      "iid": 1224,
+      "title": "Prevent Duplicate Role Assignment",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI introduces validation to the role creation process to prevent a user from being assigned the same role multiple times. The system will check if the user already has the role being assigned. If the role is active, it will redirect the user to the Customer Role index page with an error message. If the role is inactive, it will automatically reactivate the existing role and redirect the user to the Customer Role index page.\n\n---\n\n#### **User Story**\n\n*   **As an** Organization Manager or Admin,\n*   **I want to** be prevented from creating a duplicate role for a user and automatically reactivate an existing inactive role instead,\n*   **so that** I can maintain a clean and accurate permission structure, avoid redundant data, and simplify user management.\n\n---\n\n#### **Acceptance Criteria**\n\n**Scenario 1: Attempting to Create a Duplicate ACTIVE Role**\n\n*   **Given** an administrator is creating a new role for a user,\n*   **And** that user already has the exact same role (e.g., Layer Manager for the same layer) in an \"Active\" state,\n*   **When** the administrator attempts to save the new role,\n*   **Then** a new, duplicate role **must not** be created.\n*   **And** the user will be redirected to the Customer Role's index\npage where they are shown an error message.\n\n**Scenario 2: Attempting to Create a Duplicate INACTIVE Role**\n\n*   **Given** an administrator is creating a new role for a user,\n*   **And** that user has the exact same role, but it is currently in an \"Inactive\" state,\n*   **When** the administrator attempts to save the new role,\n*   **Then** a new, duplicate role **must not** be created.\n*   **And** the inactive role must be reactived. The user will\nthen be redirected back to the Customer Role index page."
+    },
+    {
+      "id": 208943,
+      "iid": 1231,
+      "title": "Don't Allow Invalid Transfer Requests",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "type::Bug",
+        "workflow::refined"
+      ],
+      "description": "## User Story\n\nAs a manager submitting a employee transfer request,\nI want the Request Transfer button to be disabled until all required fields are properly filled,\nSo that I cannot accidentally submit a transfer request without a valid employee selection.\n\n## Acceptance Criteria\n\n**Scenario: Typing in the Employee field without selecting a user does not enable submission**\n- Given I am on the Employee Transfer page\n- And I have typed a name into the Employee search field\n- But I have not selected a user from the returned search results list\n- Then the Request Transfer button is disabled\n\n**Scenario: Selecting a user from the search results enables submission (when other fields are filled)**\n- Given I am on the Employee Transfer page\n- When I type a name into the Employee search field\n- And I select a user from the returned search results list\n- And all other required fields are filled\n- Then the Request Transfer button is enabled\n\n**Scenario: Clearing the Employee field after a valid selection disables submission**\n- Given I have previously selected a user from the Employee search results\n- When I clear or change the text in the Employee field without making a new selection\n- Then the Request Transfer button is disabled\n\n## Additional Context\n\nReported by Northeast Region. The Employee field must have an explicit selection from the autocomplete/search results list to be considered valid \u2014 free-form text entry alone is insufficient."
+    },
+    {
+      "id": 211495,
+      "iid": 1235,
+      "title": "Show Layer Name for existing roles",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\n\nAs a system administrator assigning roles,\nI want to see the specific layer name alongside a user's existing Layer Manager role,\nSo that I can distinguish between Layer Manager roles for different layers without ambiguity.\n\n## Acceptance Criteria\n\n**Scenario: Layer Manager role displays layer name**\n- Given a user has an existing role of type \"Layer Manager\" for a specific layer (e.g. HQ)\n- When the Create Role screen is displayed\n- Then the role is shown as \"Layer Manager - [Layer Name]\" (e.g. \"Layer Manager - HQ\")\n\n**Scenario: Multiple Layer Manager roles display distinct layer names**\n- Given a user has Layer Manager roles for multiple layers\n- When the Create Role screen is displayed\n- Then each role shows its respective layer name (e.g. \"Layer Manager - HQ\", \"Layer Manager - DIV\")\n\n**Scenario: Non-Layer-Manager roles are unaffected**\n- Given a user has existing roles other than Layer Manager\n- When the Create Role screen is displayed\n- Then those roles display without modification"
+    },
+    {
+      "id": 214016,
+      "iid": 1236,
+      "title": "Add unit test for Activity Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Model class:** `ORBIT.Model.Lookup.Activity`\n\n**Test file:** Create `ORBIT.Test.Unit/Lookup/Activity.cs`\n\n**Tests to add:**\n- `Activity_FetchActive_ReturnsRecords`\n- `Activity_Save_CreatesRecord`\n- `Activity_Save_UpdatesRecord`\n- `Activity_SetInactive_SoftDeletes`\n\nFollow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214017,
+      "iid": 1237,
+      "title": "Add unit test for Region Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Model class:** `ORBIT.Model.Lookup.Region`\n\n**Test file:** Create `ORBIT.Test.Unit/Lookup/Commands.cs`\n\n**Tests to add:**\n- `Region_FetchActive_ReturnsRecords`\n- `Region_Save_CreatesRecord`\n- `Region_SetInactive_SoftDeletes`\n\nFollow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214018,
+      "iid": 1238,
+      "title": "Add unit test for Vendor Account Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Model class:** `ORBIT.Model.Lookup.VendorAccount`\n\n**Test file:** Extend `ORBIT.Test.Unit/Customer/VendorAccounts.cs` or create a dedicated Lookup-scope file\n\n**Tests to add:**\n- `VendorAccount_FetchActive_ReturnsRecords`\n- `VendorAccount_Save_CreatesRecord`\n- `VendorAccount_SetInactive_SoftDeletes`\n\nFollow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214019,
+      "iid": 1239,
+      "title": "Add unit test for Country Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Model class:** `ORBIT.Model.Country`\n\n**Test file:** Extend `ORBIT.Test.Unit/Lookup/Location.cs`\n\nExisting tests cover `FetchActive` and `FetchBy` (read-only). Extend with:\n- `Country_Save_CreatesRecord`\n- `Country_Save_UpdatesRecord`\n- `Country_SetInactive_SoftDeletes`\n\nFollow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214020,
+      "iid": 1240,
+      "title": "Add unit test for Department Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Model class:** `ORBIT.Model.Lookup.Department`\n\n**Test file:** Extend `ORBIT.Test.Unit/Lookup/Commands.cs`\n\n**Tests to add:**\n- `Department_FetchActive_ReturnsRecords`\n- `Department_Save_CreatesRecord`\n- `Department_SetInactive_SoftDeletes`\n\nFollow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214021,
+      "iid": 1241,
+      "title": "Add unit test for General Lookup Admin",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Controller:** `Areas/Lookup/Controllers/LookupController`\n\n**Test file:** Extend `ORBIT.Test.Unit/Lookup/Lookup.cs`\n\nThe general LookupController serves as the base/index for the Lookup area. Existing tests cover `FederalHoliday`. Review LookupController action methods and add tests for any additional entities it manages that are not covered by dedicated test files.\n\nFollow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214022,
+      "iid": 1242,
+      "title": "Add unit test for Division Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Model class:** `ORBIT.Model.Lookup.Division`\n\n**Test file:** Extend `ORBIT.Test.Unit/Lookup/Commands.cs`\n\n**Tests to add:**\n- `Division_FetchActive_ReturnsRecords`\n- `Division_Save_CreatesRecord`\n- `Division_SetInactive_SoftDeletes`\n\nFollow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214023,
+      "iid": 1243,
+      "title": "Add unit test for Matrix Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Model class:** `ORBIT.Model.Lookup.Matrix` (distinct from `ORBIT.Model.Customer.Matrix`)\n\n**Test file:** Create `ORBIT.Test.Unit/Lookup/Matrix.cs`\n\n**Tests to add:**\n- `Matrix_FetchActive_ReturnsRecords`\n- `Matrix_Save_CreatesRecord`\n- `Matrix_SetInactive_SoftDeletes`\n\nNote: `ORBIT.Test.Unit/Customer/Matrix.cs` covers `CustomerMatrix` \u2014 this issue is for the Lookup-scoped `Matrix` entity. Follow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214024,
+      "iid": 1244,
+      "title": "Add unit test for Rank Branch Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Model class:** `ORBIT.Model.Lookup.MilitaryBranch`\n\n**Test file:** Extend `ORBIT.Test.Unit/Lookup/Rank.cs`\n\nExisting tests cover `FetchActive` (read-only). Extend with:\n- `MilitaryBranch_Save_CreatesRecord`\n- `MilitaryBranch_Save_UpdatesRecord`\n- `MilitaryBranch_SetInactive_SoftDeletes`\n\nFollow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214025,
+      "iid": 1245,
+      "title": "Add unit test for Rank Rank Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Model class:** `ORBIT.Model.Lookup.Rank`\n\n**Test file:** Extend `ORBIT.Test.Unit/Lookup/Rank.cs`\n\nExisting tests cover `FetchActive` (read-only). Extend with:\n- `MilitaryRank_Save_CreatesRecord`\n- `MilitaryRank_Save_UpdatesRecord`\n- `MilitaryRank_SetInactive_SoftDeletes`\n\nFollow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214026,
+      "iid": 1246,
+      "title": "Add unit test for Rank Type of Separation Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Model class:** `ORBIT.Model.Lookup.MilitaryTypeOfSeparation`\n\n**Test file:** Extend `ORBIT.Test.Unit/Lookup/Rank.cs`\n\nExisting tests cover `FetchActive` (read-only). Extend with:\n- `MilitaryTypeOfSeparation_Save_CreatesRecord`\n- `MilitaryTypeOfSeparation_Save_UpdatesRecord`\n- `MilitaryTypeOfSeparation_SetInactive_SoftDeletes`\n\nFollow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214027,
+      "iid": 1247,
+      "title": "Add unit test for OOO Type Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Model class:** `ORBIT.Model.Lookup.OooType`\n\n**Test file:** Extend `ORBIT.Test.Unit/Lookup/Employee.cs`\n\nExisting tests cover `FetchActive` (read-only). `OooType` has a custom `Save()` with duplicate detection. Extend with:\n- `OooType_Save_CreatesRecord`\n- `OooType_Save_RejectsDuplicate`\n- `OooType_SetInactive_SoftDeletes`\n\nFollow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214028,
+      "iid": 1248,
+      "title": "Add unit test for State Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Model class:** `ORBIT.Model.State`\n\n**Test file:** Extend `ORBIT.Test.Unit/Lookup/Location.cs`\n\nExisting tests cover `FetchActive` and `FetchBy` abbreviation (read-only). Extend with:\n- `State_Save_CreatesRecord`\n- `State_Save_UpdatesRecord`\n- `State_SetInactive_SoftDeletes`\n\nFollow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214029,
+      "iid": 1249,
+      "title": "Add unit test for Sub-Division Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Model class:** `ORBIT.Model.Lookup.SubDivision`\n\n**Test file:** Extend `ORBIT.Test.Unit/Lookup/Commands.cs`\n\n**Tests to add:**\n- `SubDivision_FetchActive_ReturnsRecords`\n- `SubDivision_Save_CreatesRecord`\n- `SubDivision_SetInactive_SoftDeletes`\n\nFollow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214030,
+      "iid": 1250,
+      "title": "Add unit test for Task Type Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Model class:** `ORBIT.Model.Lookup.TaskType`\n\n**Test file:** Extend `ORBIT.Test.Unit/Lookup/Employee.cs`\n\nExisting tests cover `FetchActive` (read-only). Extend with:\n- `TaskType_Save_CreatesRecord`\n- `TaskType_Save_UpdatesRecord`\n- `TaskType_SetInactive_SoftDeletes`\n\nFollow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214031,
+      "iid": 1251,
+      "title": "Add unit test for TDA C-Type Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Model class:** `ORBIT.Model.Lookup.TdaCType`\n\n**Test file:** Extend `ORBIT.Test.Unit/Lookup/Tda.cs`\n\nExisting tests cover `FetchActive` (read-only). Extend with:\n- `TdaCType_Save_CreatesRecord`\n- `TdaCType_Save_UpdatesRecord`\n- `TdaCType_SetInactive_SoftDeletes`\n\nFollow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214032,
+      "iid": 1252,
+      "title": "Add unit test for TDA CIVCC Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Model class:** `ORBIT.Model.Lookup.TdaCivcc`\n\n**Test file:** Extend `ORBIT.Test.Unit/Lookup/Tda.cs`\n\nExisting tests cover `FetchActive` (read-only). Extend with:\n- `TdaCivcc_Save_CreatesRecord`\n- `TdaCivcc_Save_UpdatesRecord`\n- `TdaCivcc_SetInactive_SoftDeletes`\n\nFollow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214033,
+      "iid": 1253,
+      "title": "Add unit test for TDA Ident Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Model class:** `ORBIT.Model.Lookup.TdaIdent`\n\n**Test file:** Extend `ORBIT.Test.Unit/Lookup/Tda.cs`\n\nExisting tests cover `FetchActive` (read-only). Extend with:\n- `TdaIdent_Save_CreatesRecord`\n- `TdaIdent_Save_UpdatesRecord`\n- `TdaIdent_SetInactive_SoftDeletes`\n\nFollow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214034,
+      "iid": 1254,
+      "title": "Add unit test for TDA Position Grade Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Model class:** `ORBIT.Model.Lookup.TdaPositionGrade`\n\n**Test file:** Extend `ORBIT.Test.Unit/Lookup/Tda.cs`\n\nExisting tests cover `FetchActive` (read-only). Extend with:\n- `TdaPositionGrade_Save_CreatesRecord`\n- `TdaPositionGrade_Save_UpdatesRecord`\n- `TdaPositionGrade_SetInactive_SoftDeletes`\n\nFollow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214035,
+      "iid": 1255,
+      "title": "Add unit test for TDA Position POSCO Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Model class:** `ORBIT.Model.Lookup.TdaPositionPosco`\n\n**Test file:** Extend `ORBIT.Test.Unit/Lookup/Tda.cs`\n\nExisting tests cover `FetchActive` (read-only). Extend with:\n- `TdaPositionPosco_Save_CreatesRecord`\n- `TdaPositionPosco_Save_UpdatesRecord`\n- `TdaPositionPosco_SetInactive_SoftDeletes`\n\nFollow project test conventions (try/finally cleanup, `Assert.Inconclusive` for missing seeded data)."
+    },
+    {
+      "id": 214104,
+      "iid": 1256,
+      "title": "Employee Pending Transfers are not shown in Home Page Alerts",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "type::Bug"
+      ],
+      "description": "Reported by Support Ticket INC0033464 - any pending transfers are not shown on the Home Page Alert section, confirmed with local testing."
+    },
+    {
+      "id": 218593,
+      "iid": 1257,
+      "title": "Fix sub-page search method to allow re-searching",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "type::Bug",
+        "workflow::refined"
+      ],
+      "description": "User Story\n\nAs a user searching for employee on any page with a employee search field,\nI want the search field and related display fields to fully reset when I modify or clear my search text after a prior selection,\nSo that I can search for a different person without being forced to refresh the page.\n\nAcceptance Criteria\n\nScenario: Modifying search text after a selection re-triggers the search dropdown\n\n\nGiven I have already selected a employee record from the search results\nWhen I backspace or modify the text in the Employee search field\nAnd the remaining text is more than 2 characters\nThen new search results matching the updated text should appear in the dropdown\nScenario: Clearing and retyping after a selection produces new search results\n\n\nGiven I have already selected a employee record from the search results\nWhen I clear all text from the Employee search field\nAnd I type a new name that is more than 2 characters\nThen search results matching the new text should appear in the dropdown\nScenario: Display fields clear when search text is modified after a selection (Employee Transfer page)\n\n\nGiven I am on the Employee Transfer page\nAnd I have selected a employee record\nAnd the Persona ID, Current Organization, and Current Employee Type fields are populated\nWhen I backspace or modify the text in the Employee search field\nThen the Persona ID field should be cleared\nAnd the Current Organization field should be cleared\nAnd the Current Employee Type field should be cleared\n\nGiven I am on the Create Role page\nAnd I have selected a employee record\nAnd the existing roles table is populated\nWhen I backspace or modify the text in the Employee search field and select a different employee then the\nexisting roles section should update to showcase the newly selected employee's existing roles and remove the previous ones.\n\nAdditional Context\n\nReported by Northeast Region. The bug affects all pages that share the employee search autocomplete behaviour (data-search-employee-transfer and data-search-employee in wwwroot/js/script.js). After a selection is made, the autocomplete dropdown <ul> is removed from the DOM. If the user then edits the search field, the code attempts to append new results into a <ul> that no longer exists, so nothing renders. On the Employee Transfer page specifically, the read-only display fields (Persona ID, Current Organization, Current Employee Type) also retain their previous values rather than clearing when the search text is modified.\n\nFix should be applied to ORBIT.Web/wwwroot/js/script.js in the data-search-employee-transfer and data-search-employee search blocks."
+    },
+    {
+      "id": 218696,
+      "iid": 1258,
+      "title": "Update display format on Roles page",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\n\nAs an ORBIT user viewing a customer organization's Roles page,\nI want role entries to display as \"Role Type - Role Scope\" when a scope is defined,\nSo that I can quickly identify both the type and applicable scope of each assigned role at a glance.\n\n## Acceptance Criteria\n\n**Scenario: Role without an associated scope displays as type only**\n- Given I am on a customer organization's Roles page\n- When the role type has no associated scope (e.g., Organization Manager, Notification Manager)\n- Then the role displays as just the role type (e.g., \"Organization Manager\")\n\n**Scenario: Layer Manager or Company Lead role displays with required scope**\n- Given I am on a customer organization's Roles page\n- When the role type is \"Layer Manager\" or \"Company Lead\"\n- And a scope is defined for the role\n- Then the role displays as \"Role Type - Scope\" (e.g., \"Layer Manager - Headquarters\", \"Company Lead - DSA, Inc\")\n\n**Scenario: Notification Manager with an optional scope displays with scope**\n- Given I am on a customer organization's Roles page\n- When the role type is \"Notification Manager\"\n- And a scope is defined for the role\n- Then the role displays as \"Notification Manager - [Scope]\" (e.g., \"Notification Manager - Headquarters\")\n\n**Scenario: Notification Manager without a scope displays as type only**\n- Given I am on a customer organization's Roles page\n- When the role type is \"Notification Manager\"\n- And no scope is defined\n- Then the role displays as \"Notification Manager\""
+    },
+    {
+      "id": 218706,
+      "iid": 1259,
+      "title": "Add \"Hide Layer level label\" to organization Layers page",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\n\nAs an ORBIT user viewing an organization's Layers page,\nI want to toggle the display of the layer level label (e.g., PM, PD, PL) on or off,\nSo that I can choose whether to see just the layer name or the full \"Level - Name\" format depending on my needs.\n\n## Acceptance Criteria\n\n**Scenario: Layer level label is hidden by default**\n- Given I am on an organization's Layers page\n- When I first load the page\n- Then the layer level label toggle defaults to Off\n- And each layer displays with just its name (e.g., \"ARDAP\" instead of \"PM - ARDAP\")\n\n**Scenario: User enables the layer level label display**\n- Given I am on an organization's Layers page\n- And the layer level label toggle is Off\n- When I toggle the option to On\n- Then each layer displays as \"Level - Name\" (e.g., \"PM - ARDAP\")\n\n**Scenario: User disables the layer level label display**\n- Given I am on an organization's Layers page\n- And the layer level label toggle is On\n- When I toggle the option to Off\n- Then each layer displays with just its name (e.g., \"ARDAP\")"
+    },
+    {
+      "id": 218714,
+      "iid": 1260,
+      "title": "Investigate Not Sent Check-In Reminder Emails",
+      "weight": 2,
+      "state": "closed",
+      "labels": [],
+      "description": "Problem\n\nIn Reminder.Email.RemindToUpdateCheckIn, DateTime.UtcNow was called in two separate places: once inline inside the LINQ filter predicate (to determine which employee were eligible \u2014 i.e., not reminded in the last 14 minutes), and again on each iteration of the for loop when writing the DateReminderCheckIn timestamp back to the database.\n\nImpact\n\nBecause the background worker processes employee in sequence and the batch can take some time to complete, there was a growing drift between the cutoff time used to select eligible employee and the timestamps being written. Employee processed later in a batch received a DateReminderCheckIn value that was meaningfully later than the time used to build the list. This caused the 14-minute deduplication window to be applied inconsistently across the batch \u2014 some employee could be re-evaluated for a reminder sooner than intended, while others had an artificially extended cooldown, potentially causing duplicate reminder emails to be sent within a single batch cycle.\n\nFix\n\nDateTime.UtcNow is now captured once as batchTime before the filter query runs. The same batchTime value is then used both in the LINQ predicate and when writing DateReminderCheckIn for each record in the loop. This ensures all employee in a given batch share a consistent reference timestamp, making the 14-minute suppression window behave predictably regardless of batch size or processing duration."
+    },
+    {
+      "id": 218733,
+      "iid": 1261,
+      "title": "Hide 3 consecutive check-ins section for system administrators",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "Type:Improvement",
+        "release-notes::no",
+        "workflow::refined"
+      ],
+      "description": "If a system administrator has a role of org manager/layer manager/supervisor then they may see this section on their homepage. We can hide it for system administrators."
+    },
+    {
+      "id": 218968,
+      "iid": 1262,
+      "title": "Use Azure Environment Variable to Display/Hide Warning Banner",
+      "weight": 2,
+      "state": "closed",
+      "labels": [],
+      "description": "Change logic to use an Azure Environment variable to display the warning banner; perhaps the banner should be hidden by default so no changes need to be made to PROD."
+    },
+    {
+      "id": 219700,
+      "iid": 1263,
+      "title": "Fix CustomerLayer SP to ensure SortOrder is not null",
+      "weight": 1,
+      "state": "closed",
+      "labels": [],
+      "description": "When a CustomerLayer is renamed, descendant layers lose their SortOrder in DW_Organization.\n\nThe DW_Organization table is denormalized \u2014 every child layer row stores its ancestor layer names directly in its own columns (PM, PD, Division, Branch_Office_Team). The DW_Organization_RebuildSortOrder_Level stored procedure computes each row's SortOrder by matching these column values against ancestor rows to find their Org_Ids, then concatenating them (e.g., 1.5.12.42).\n\nWhen a layer is renamed, the CustomerLayer stored procedure correctly updated that layer's own row but left all descendant rows holding the old name in their denormalized columns. On the next rebuild, the ancestor lookup for those descendants (WHERE PM = <old name>) found no match, causing SortOrder to collapse to NULL through SQL Server null propagation. This produced a DBNull-to-string cast exception in Queue.CustomerRole.ProcessToSql() when it subsequently attempted to look up OrganizationSortOrder for a role belonging to one of those layers.\n\nFix: In the CustomerLayer stored procedure (UPDATE path only), capture the old name before updating each level's row, then cascade-update the stale name in all descendant rows before the rebuild runs. The cascade is scoped by the full ancestor column chain (DoD_Branch, MACOM, MACOM_SubCom, PO, and any parent layer columns) to avoid unintentionally updating rows belonging to a different layer with the same name under a different customer. Level 8 (Branch_Office_Team) requires no cascade as it is the deepest level. New layer inserts are unaffected."
+    },
+    {
+      "id": 219871,
+      "iid": 1264,
+      "title": "Bug with missing \"Order\" for Department, Division, and SubDivision lists.",
+      "weight": 1,
+      "state": "closed",
+      "labels": [],
+      "description": "Bug: The Customer Create/Edit form calls .Order() on the Department, Division, and SubDivision dropdown lists. No typed Order() extension methods existed for these three types in Extension.cs. When the lists are non-empty (as they are in TEST), execution falls through to Enumerable.Order() (LINQ .NET 7+), which requires the element type to implement IComparable<T> \u2014 these lookup types do not, causing an InvalidOperationException and a 500 response at Form.cshtml:37. The bug was hidden in environments where the collections were empty, as the null/count guard short-circuited the call.\n\nFix: Added Order() extension methods for List<Department>, List<Division>, and List<SubDivision> in ORBIT.Model/Helper/Extension.cs, each ordering by Name \u2014 consistent with the existing List<State>.Order() overload."
+    },
+    {
+      "id": 220043,
+      "iid": 1266,
+      "title": "Add .Order() sort assertions to Department, Division, and SubDivision FetchActive tests",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Unit Tests",
+        "release-notes::no"
+      ],
+      "description": "## Model Class\n\n`Department`, `Division`, `SubDivision` \u2014 all in `ORBIT.Model.Lookup`, defined in `Source/dotnet/ORBIT.Model/Lookup/BranchCommand.cs`.\n\n## Test File\n\n`Source/dotnet/ORBIT.Test.Unit/Lookup/Commands.cs`\n\n## Changes Needed\n\nExtend each existing `FetchActive` test to assert that the returned list is sorted ascending by `Name`:\n\n- `DepartmentTest.Department_FetchActive_ReturnsActiveList` \u2014 add sort order assertion\n- `DivisionTest.Division_FetchActive_ReturnsActiveList` \u2014 add sort order assertion\n- `SubDivisionTest.SubDivision_FetchActive_ReturnsActiveList` \u2014 add sort order assertion\n\nPattern:\n```csharp\nAssert.IsTrue(result.Count < 2 || result.SequenceEqual(result.OrderBy(x => x.Name)));\n```\n\n## Conventions\n\n- Follow existing test patterns in `Commands.cs`\n- Use `Assert.Inconclusive` if result count is 0 (already in place; no change needed)"
+    },
+    {
+      "id": 220044,
+      "iid": 1267,
+      "title": "Add unit test for ItAssetType Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Unit Tests",
+        "release-notes::no"
+      ],
+      "description": "## Model Class\n\n`ItAssetType` \u2014 `ORBIT.Model.Lookup` namespace, `Source/dotnet/ORBIT.Model/Lookup/ItAssetType.cs`.\n\n## Test File\n\n`Source/dotnet/ORBIT.Test.Unit/Lookup/ItAssetType.cs`\n\n## Test Methods\n\n- `ItAssetType_FetchActive_ReturnsActiveList`\n- `ItAssetType_Save_CreatesRecord`\n- `ItAssetType_Save_UpdatesRecord`\n- `ItAssetType_SetInactive_SoftDeletes`\n\n## Conventions\n\n- Namespace: `ORBIT.Test.Unit.Lookup`\n- Category B: `[TestInitialize]` / `[TestCleanup]` with `_existing`, `_created`, `_originalName` nullables\n- `Assert.Inconclusive` if no active records exist\n- Cleanup restores original state, deactivates any created record"
+    },
+    {
+      "id": 220045,
+      "iid": 1268,
+      "title": "Add unit test for Module Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Unit Tests",
+        "release-notes::no"
+      ],
+      "description": "## Model Class\n\n`Module` \u2014 `ORBIT.Model.Lookup` namespace, `Source/dotnet/ORBIT.Model/Lookup/Module.cs`.\n\n## Test File\n\n`Source/dotnet/ORBIT.Test.Unit/Lookup/Module.cs`\n\n## Test Methods\n\n- `Module_FetchActive_ReturnsActiveList`\n- `Module_Save_CreatesRecord`\n- `Module_Save_UpdatesRecord`\n- `Module_SetInactive_SoftDeletes`\n\n## Conventions\n\n- Namespace: `ORBIT.Test.Unit.Lookup`\n- Category B: `[TestInitialize]` / `[TestCleanup]` with `_existing`, `_created`, `_originalName` nullables\n- `Assert.Inconclusive` if no active records exist\n- Cleanup restores original state, deactivates any created record"
+    },
+    {
+      "id": 220046,
+      "iid": 1269,
+      "title": "Add unit test for SoftwareLicense Lookup",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Unit Tests",
+        "release-notes::no"
+      ],
+      "description": "## Model Class\n\n`SoftwareLicense` \u2014 `ORBIT.Model.Lookup` namespace, `Source/dotnet/ORBIT.Model/Lookup/SoftwareLicense.cs`.\n\n## Test File\n\n`Source/dotnet/ORBIT.Test.Unit/Lookup/SoftwareLicense.cs`\n\n## Test Methods\n\n- `SoftwareLicense_FetchActive_ReturnsActiveList`\n- `SoftwareLicense_Save_CreatesRecord`\n- `SoftwareLicense_Save_UpdatesRecord`\n- `SoftwareLicense_SetInactive_SoftDeletes`\n\n## Conventions\n\n- Namespace: `ORBIT.Test.Unit.Lookup`\n- Category B: `[TestInitialize]` / `[TestCleanup]` with `_existing`, `_created`, `_originalName` nullables\n- `Assert.Inconclusive` if no active records exist\n- Cleanup restores original state, deactivates any created record"
+    },
+    {
+      "id": 220047,
+      "iid": 1270,
+      "title": "Add unit test for Building",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Unit Tests",
+        "release-notes::no"
+      ],
+      "description": "## Model Class\n\n`Building` \u2014 `ORBIT.Model` root namespace (not `ORBIT.Model.Lookup`), embedded within `Source/dotnet/ORBIT.Model/Lookup/WorkSite.cs`.\n\n## Test File\n\n`Source/dotnet/ORBIT.Test.Unit/Building.cs`  _(at test project root, not under Lookup/)_\n\n## Test Methods\n\n- `Building_FetchActive_ReturnsActiveList`\n- `Building_Save_CreatesRecord`\n- `Building_Save_UpdatesRecord`\n- `Building_SetInactive_SoftDeletes`\n\n## Conventions\n\n- Namespace: `ORBIT.Test.Unit` (root \u2014 matches `ORBIT.Model` root namespace)\n- `using ORBIT.Model;`\n- Category B: `[TestInitialize]` / `[TestCleanup]` with `_existing`, `_created`, `_originalName` nullables\n- `Assert.Inconclusive` if no active records exist"
+    },
+    {
+      "id": 220048,
+      "iid": 1271,
+      "title": "Add unit test for TimeZone",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Unit Tests",
+        "release-notes::no"
+      ],
+      "description": "## Model Class\n\n`TimeZone` \u2014 `ORBIT.Model` root namespace (not `ORBIT.Model.Lookup`), `Source/dotnet/ORBIT.Model/Lookup/TimeZone.cs`. Extends `Entity<T>` directly (not `Lookup<T>`), so `FetchActive()` signature may differ.\n\n## Test File\n\n`Source/dotnet/ORBIT.Test.Unit/TimeZone.cs`  _(at test project root, not under Lookup/)_\n\n## Test Methods\n\n- `TimeZone_FetchActive_ReturnsActiveList`\n- `TimeZone_Save_CreatesRecord`\n- `TimeZone_Save_UpdatesRecord`\n- `TimeZone_SetInactive_SoftDeletes`\n\n## Conventions\n\n- Namespace: `ORBIT.Test.Unit` (root \u2014 matches `ORBIT.Model` root namespace)\n- `using ORBIT.Model;`\n- Note: `System.TimeZone` collision \u2014 may need fully-qualified name or alias\n- Category B: `[TestInitialize]` / `[TestCleanup]` with `_existing`, `_created`, `_originalName` nullables\n- `Assert.Inconclusive` if no active records exist"
+    },
+    {
+      "id": 220577,
+      "iid": 1300,
+      "title": "Fix: Employee Transfers menu item in System Admin navigates to wrong page",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "release-notes::no",
+        "type::Bug",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a system administrator, I want the Employee Transfers menu item to navigate to the correct page so that I can access the intended functionality.\n\n## Acceptance Criteria\n- [x] Given I am in the System Admin menu\n      When I click Employee Transfers\n      Then I am navigated to ORBIT/employee/transfer/\n      And not ORBIT/setting/application/employeetransfer/"
+    },
+    {
+      "id": 220603,
+      "iid": 1309,
+      "title": "Filter Twilio SMS delivery status webhooks to reduce MongoDB load",
+      "weight": 1,
+      "state": "closed",
+      "labels": [],
+      "description": "## Problem\n\nThe `WebHookController.ResponseText` action currently processes every Twilio SMS status callback (`queued`, `sending`, `sent`, `delivered`, `undelivered`, `failed`), each triggering a MongoDB `FetchBy` + `Update` round-trip. During check-in blasts this causes wait queue errors on the 3-node MongoDB replica set.\n\n## Solution\n\nAdd an early-exit filter in `ResponseText` to skip statuses that carry no actionable information. Only the following statuses should trigger a MongoDB write:\n\n| Status | Reason to keep |\n|---|---|\n| `sent` | Terminal status for carriers that do not return delivery receipts |\n| `delivered` | Confirmed end-device receipt |\n| `undelivered` | Carrier-reported delivery failure |\n| `failed` | Twilio-level send failure (never reached carrier) |\n\nStatuses `queued`, `sending`, `accepted`, and `scheduled` should return HTTP 200 immediately without touching MongoDB.\n\n## File to change\n\n`Source/dotnet/ORBIT.Web/Controllers/WebHookController.cs` \u2014 `ResponseText` action method."
+    },
+    {
+      "id": 223418,
+      "iid": 1310,
+      "title": "Fix CustomerLayerName.ToBsonDocument generates a random _id on every call",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::yes"
+      ],
+      "description": "## Bug\\n\\n`CustomerLayerName.ToBsonDocument()` calls `ObjectId.GenerateNewId()` instead of using `this.Id`, so every invocation produces a different `_id`.\\n\\n## Impact\\n\\n`CustomerLayer.Save()` calls `this.ToBsonDocument()`, which propagates via `ToParentBsonDocument()` \u2192 `CustomerLayerName.ToBsonDocument()`. The resulting BsonDocument embeds a random `LayerName._id` \u2014 not the stored one \u2014 and that document is then written to `CustomerLayer`, `CustomerRole`, `Employee`, and `Tda` collections. This affects both inserts and updates.\\n\\nSubsequent lookups via `CustomerLayerName.FetchById(this.LayerName.Id)` silently return `null` because the stored ID no longer matches any real document.\\n\\n## Fix\\n\\nIn `Source/dotnet/ORBIT.Model/Customer/LayerName.cs`, change:\\n\\n```csharp\\nresult.Add(\"_id\", ObjectId.GenerateNewId());\\n```\\n\\nto:\\n\\n```csharp\\nresult.Add(\"_id\", ObjectId.Parse(this.Id));\\n```"
+    },
+    {
+      "id": 223463,
+      "iid": 1311,
+      "title": "NullReferenceException in NotificationEvent view when NotificationResponse.Employee is null",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "bug"
+      ],
+      "description": "## Summary\n\nA `System.NullReferenceException` is thrown when viewing a Notification Event whose response list contains one or more `NotificationResponse` records where the `Employee` navigation property is `null`.\n\n## Root Cause\n\n`Views/Shared/View/NotificationEvent.cshtml` lines 108 and 131 both sort with:\n\n```csharp\nModel.NotificationResponseList.OrderBy( t => t.Employee.NameLast + t.Employee.NameFirst )\n```\n\nThe LINQ key selector is evaluated for **all** items before the first element is yielded. If any `NotificationResponse` has a `null` `Employee` (e.g. a deleted or orphaned record), the sort throws before any row is rendered.\n\n## Fix\n\nApply null-conditional operators in both lambdas (lines 108 and 131):\n\n```csharp\n.OrderBy( t => (t.Employee?.NameLast ?? \"\") + (t.Employee?.NameFirst ?? \"\") )\n```\n\n## Stack Trace (Production)\n\n```\nSystem.NullReferenceException:\n   at Views_Shared_View_NotificationEvent.<ExecuteAsync>b__0_0\n      (NotificationEvent.cshtml:108)\n   at System.Linq.Enumerable+EnumerableSorter`2.ComputeKeys\n   at System.Linq.Enumerable+EnumerableSorter`1.ComputeMap\n   at Areas_Customer_Views_Notification_View.<ExecuteAsync>d__0.MoveNext\n      (View.cshtml:8)\n```\n\n## Test Plan\n\n- [ ] Navigate to a Notification Event whose response list contains an entry where `Employee` is null/orphaned; verify the page loads without error.\n- [ ] Verify normal Notification Events (all responses have valid `Employee`) still sort and display correctly.\n- [ ] Run Playwright tests for the Notification area and confirm no regression."
+    }
+  ]
+}

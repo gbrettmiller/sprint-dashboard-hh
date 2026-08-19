@@ -1,0 +1,87 @@
+{
+  "milestone_title": "v3.2.8",
+  "milestone_id": 2328,
+  "slug": "v3.2.8",
+  "project_id": 91001,
+  "project_name": "ORBIT",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:25.413441Z",
+  "issues": [
+    {
+      "id": 185015,
+      "iid": 1131,
+      "title": "Unrecognized User Authentication Flow",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "#### **User Story**\n\n* **As a** user whose EAMS-A credentials have recently changed (e.g., due to a name change),\n* **I want to** be guided to the correct action after authenticating but before being forced into registration,\n* **so that I can** avoid creating a duplicate account and receive clear instructions on how to resolve my login issue.\n\n---\n\n#### **Acceptance Criteria**\n\n**Scenario 1: User with changed credentials is guided to an intermediary page**\n\n* **Given** a user has successfully authenticated with EAMS-A,\n* **And** their EAMS-A unique identifier does not match an existing user account in the ORBIT database,\n* **When** they are redirected to ORBIT,\n* **Then** they **must not** be taken directly to the self-registration page.\n* **And** they **must** be presented with a new page titled \"Is this your first time here?\".\n* **And** this page **must** display explanatory text detailing why they have landed here.\n* **And** this page **must** present two distinct, clickable options:\n  1. \"I have a ORBIT account but my name or credentials recently changed.\"\n  2. \"This is my first time registering for ORBIT.\"\n\n**Scenario 2: User selects the \"Existing Account / Name Change\" option**\n\n* **Given** a user is on the \"Is this your first time here?\" page,\n* **When** they select the \"I have a ORBIT account...\" option,\n* **Then** the page content **must** be replaced with text informing them to contact their supervisor or unit administrator to have their account details updated.\n* **And** the self-registration form **must not** be displayed.\n\n**Scenario 3: User selects the \"First Time Registration\" option**\n\n* **Given** a user is on the \"Is this your first time here?\" page,\n* **When** they select the \"This is my first time registering...\" option,\n* **Then** they **must** be immediately redirected to the standard self-registration page that exists today.\n\n**Scenario 4: Existing, unchanged user logs in successfully (Regression)**\n\n* **Given** a user has successfully authenticated with EAMS-A,\n* **And** their EAMS-A unique identifier **does** match an existing user account in the ORBIT database,\n* **When** they are redirected to ORBIT,\n* **Then** they **must** bypass the new intermediary page entirely.\n* **And** they **must** be logged in and directed to their standard ORBIT home page."
+    },
+    {
+      "id": 185016,
+      "iid": 1132,
+      "title": "Lock Identity Fields on Registration Page",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "#### **User Story**\n\n* **As a** ORBIT Administrator,\n* **I want** the First Name, Last Name, and Email fields on the self-registration page to be pre-populated and read-only,\n* **so that** I can guarantee that the user's identity in ORBIT matches the authoritative data from the EAMS-A authentication service.\n\n---\n\n#### **Acceptance Criteria (Gherkin Format)**\n\n**Scenario 1: New User Arrives at Registration Page**\n\n* **Given** a new user has successfully authenticated with EAMS-A and is directed to the self-registration page,\n* **When** the registration form loads,\n* **Then** the \"First Name\", \"Last Name\", and \"Email\" fields **must** be populated with the information provided by EAMS-A.\n* **And** these three fields **must** be visually distinct to indicate they are not editable (e.g., have a greyed-out background).\n* **And** these three fields **must** be disabled, preventing the user from clicking into them or changing their values.\n\n**Scenario 2: User Edits Other Fields**\n\n* **Given** the user is on the self-registration page,\n* **When** they interact with the form,\n* **Then** they **must still** be able to edit all other fields as required (e.g. Organization, Sub-Organization, Note).\n\n**Scenario 3: User Submits Registration Form**\n\n* **Given** the user has filled out all the required, editable fields on the registration form,\n* **When** they click the \"Register\" button,\n* **Then** the values from the disabled \"First Name\", \"Last Name\", and \"Email\" fields **must** be successfully submitted and saved to their new ORBIT profile."
+    },
+    {
+      "id": 185020,
+      "iid": 1136,
+      "title": "Add Cancel Button to Registration Page",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "#### **User Story**\n\n* **As a** new user on the self-registration page,\n* **I want** a \"Cancel\" button,\n* **so that** I can easily return to the previous screen if I have reached this page by mistake or decide not to proceed.\n\n---\n\n#### **Acceptance Criteria**\n\n**Scenario 1: Viewing the Registration Page**\n\n* **Given** a user is on the self-registration page,\n* **When** the page renders,\n* **Then** a \"Cancel\" button **must** be visible on the form, typically next to the \"Register\" button.\n* **And** the \"Cancel\" button **must** be visually styled as a secondary action (e.g., different color, outline, or less prominent than the \"Register\" button).\n\n**Scenario 2: User Clicks the Cancel Button with no input data**\n\n* **Given** a user is on the self-registration page,\n* **And** they have not entered data into the form fields,\n* **When** they click the \"Cancel\" button,\n* **Then** they **must** be immediately redirected to the \"Is this your first time here?\" page.\n* **And** no data entered into the form **must** be saved or submitted.\n\n**Scenario 3: User Clicks the Cancel Button with input data**\n\n* **Given** a user is on the self-registration page,\n* **And** they have entered data into the form fields,\n* **When** they click the \"Cancel\" button,\n* **Then** an alert will appear notifying them that they have unsaved changes and asking if they want to proceed\n* **And** if they choose not to proceed they **must** be immediately redirected to the \"Is this your first time here?\" page **and** no data entered into the form **must** be saved or submitted,\n* **Or** if they choose to proceed they **must** be returned to the self-registration page and any data they input is intact."
+    },
+    {
+      "id": 186151,
+      "iid": 1148,
+      "title": "BUG: Pre-existing Future Check-In display on home page",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "priority::highest",
+        "workflow::refined"
+      ],
+      "description": "Acceptance Criteria:\n- All Future Check-Ins created prior to 29 December are properly displayed on ORBIT Home Page."
+    },
+    {
+      "id": 186398,
+      "iid": 1156,
+      "title": "Upgrade PROD MongoDB to v7.0.28",
+      "weight": 3,
+      "state": "closed",
+      "labels": [],
+      "description": "Upgrade the PROD MongoDB nodes to v7.0.28 to address CVES findings."
+    },
+    {
+      "id": 186521,
+      "iid": 1157,
+      "title": "Ensure company-issued mobile Number is a Valid SMS Notification Channel",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI addresses a defect where the \"company-issued mobile device\" number is not being properly utilized in the SMS notification process. Currently, this leads to users not being counted as recipients, not receiving messages, and inaccurate reporting.\n---\n\n#### **User Story**\n\n*   **As a** Notification Manager,\n*   **I want** the system to treat both the \"company-issued mobile device\" and \"Notification Information SMS\" (aka \"Secondary SMS\") numbers as valid and distinct SMS delivery targets,\n*   **so that** I can reliably reach all employee on all their configured devices and have an accurate, auditable record of every notification sent.\n\n#### **Acceptance Criteria**\n\n**Scenario 1: User has BOTH company-issued and Secondary SMS numbers**\n\n*   **Given** a user has valid numbers in both the \"company-issued mobile device\" and \"Secondary SMS\" fields,\n*   **When** a notification is sent via SMS to a group/layer/work site/etc containing that user,\n*   **Then** the user **must** receive the SMS message at **both** phone numbers.\n*   **And** the Sent Notification export **must** list **two separate line items** for that user, one for the company-issued number and one for the Secondary number.\n\n**Scenario 2: User has ONLY the company-issued mobile number**\n\n*   **Given** a user has a valid number *only* in the \"company-issued mobile device\" field,\n*   **When** a notification is sent via SMS to a group/layer/work site/etc containing that user,\n*   **Then** the user **must** receive the SMS message at their company-issued mobile device number.\n*   **And** the Sent Notification export **must** list one line item for that user, showing the company-issued mobile device number as the destination."
+    },
+    {
+      "id": 186767,
+      "iid": 1158,
+      "title": "BUG: SMS Notifications Not Sent in certain scenarios",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "priority::highest"
+      ],
+      "description": "Following the release of ORBIT 3.2.7, an issue occurred where:\n- **if** a user DOES NOT have a company-issued phone number configured in Work Information section\n- **and** the user DOES have an SMS Number configured in the Notification Information section\n- **when** a Notification Manager sends a notification to Text Message only\n- **then** the user IS NOT seen by the system as a valid recipient even though they have an SMS number in Notification Information\n\nBUT\n\n- **if** a user DOES have a company-issued phone number configured in Work Information section\n- **and** the user DOES have an SMS Number configured in the Notification Information section\n- **when** a Notification Manager sends a notification to Text Message only\n- **then** the user IS seen by the system as a valid recipient and receives the notification only at the SMS number in Notification Information\n\n_See also #1157_"
+    }
+  ]
+}

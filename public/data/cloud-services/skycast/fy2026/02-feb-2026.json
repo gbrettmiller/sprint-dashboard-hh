@@ -1,0 +1,135 @@
+{
+  "fiscal_year": 2026,
+  "month": 2,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 3934,
+      "title": "Third-Party Integration FY26Q2-2",
+      "start_date": "2026-01-21",
+      "end_date": "2026-02-03",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 2,
+        "weight": 5
+      },
+      "burndown": [
+        {
+          "date": "2026-01-21",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-22",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-23",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-24",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-25",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-26",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-27",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-28",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-29",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-30",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-31",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-01",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-02",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-03",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 2
+      },
+      "completed": {
+        "count": 2,
+        "weight": 5
+      },
+      "issues": [
+        {
+          "id": 188925,
+          "iid": 27,
+          "title": "Refactor GALWEM to download older files that may be missing from incomplete previous runs",
+          "project_id": 91004,
+          "project_name": "skycast",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v1.7.8",
+          "date_added_to_sprint": "2026-01-21",
+          "date_closed": "2026-01-23",
+          "date_removed_from_sprint": "2026-01-21"
+        },
+        {
+          "id": 188924,
+          "iid": 26,
+          "title": "Add health endpoint for liveness check to GALWEM",
+          "project_id": 91004,
+          "project_name": "skycast",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v1.7.7",
+          "date_added_to_sprint": "2026-01-21",
+          "date_closed": "2026-01-22",
+          "date_removed_from_sprint": "2026-01-21"
+        }
+      ]
+    }
+  ]
+}

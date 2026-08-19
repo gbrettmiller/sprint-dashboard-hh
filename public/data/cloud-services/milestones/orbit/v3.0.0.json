@@ -1,0 +1,128 @@
+{
+  "milestone_title": "v3.0.0",
+  "milestone_id": 1903,
+  "slug": "v3.0.0",
+  "project_id": 91001,
+  "project_name": "ORBIT",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:24.620058Z",
+  "issues": [
+    {
+      "id": 152698,
+      "iid": 751,
+      "title": "Regular User Sign In",
+      "weight": 8,
+      "state": "closed",
+      "labels": [],
+      "description": "A \"regular user\" is able to sign into ORBIT, while ensuring it is a valid, active account; if an account is not active, then show the \"Inactive\" page; if an account does not exist, then show the \"Self Register\" page."
+    },
+    {
+      "id": 152699,
+      "iid": 752,
+      "title": "Display Inactive Page to Inactive Accounts",
+      "weight": 3,
+      "state": "closed",
+      "labels": [],
+      "description": "Display an \"Inactive\" page to people who have an inactive account."
+    },
+    {
+      "id": 152700,
+      "iid": 753,
+      "title": "Display Self-Register Page to New / Non-Existent Accounts",
+      "weight": 8,
+      "state": "closed",
+      "labels": [],
+      "description": "Display a \"Self-Register\" page to new or non-existent accounts; this page must pull some basic information from the person's authentication (such as first name, last name, and email), while allowing a person to correct and add additional information, such as the Organization and Notes.\n\nOnce a person self-registers, then they must be directed to the \"Home\" page."
+    },
+    {
+      "id": 152701,
+      "iid": 754,
+      "title": "User Daily Check-In",
+      "weight": 5,
+      "state": "closed",
+      "labels": [],
+      "description": "A user, no matter their \"Application Role\", must be able to submit a Daily Check-In; the Check-In form will display standard fields and Organization customizable fields; a user can not edit a Daily Check-In, but only add new ones."
+    },
+    {
+      "id": 152702,
+      "iid": 755,
+      "title": "User Future Check-In",
+      "weight": 5,
+      "state": "closed",
+      "labels": [],
+      "description": "A user, no matter their \"Application Roll\", must be able to add and edit Future Check-In records; there will be standard fields but also Organization customizable fields."
+    },
+    {
+      "id": 152703,
+      "iid": 756,
+      "title": "User Views Their Profile",
+      "weight": 5,
+      "state": "closed",
+      "labels": [],
+      "description": "A user, no matter their \"Application Role\", must be able to view their own profile."
+    },
+    {
+      "id": 152704,
+      "iid": 757,
+      "title": "User Edit Their Profile",
+      "weight": 5,
+      "state": "closed",
+      "labels": [],
+      "description": "A user, no matter their \"Application Role\", must be able to edit their own profile."
+    },
+    {
+      "id": 152705,
+      "iid": 758,
+      "title": "User Views Help Page",
+      "weight": 3,
+      "state": "closed",
+      "labels": [],
+      "description": "All users, regardless of their \"Application Role\", must be able to view the Help page."
+    },
+    {
+      "id": 152706,
+      "iid": 759,
+      "title": "Disclaimer / Sign In Page",
+      "weight": 3,
+      "state": "closed",
+      "labels": [],
+      "description": "All users must first view the Disclaimer page to sign in."
+    },
+    {
+      "id": 152707,
+      "iid": 760,
+      "title": "Sign Out",
+      "weight": 3,
+      "state": "closed",
+      "labels": [],
+      "description": "All users, regardless of their \"Application Role\", must be able to sign out, which effectively clears out their session."
+    },
+    {
+      "id": 152708,
+      "iid": 761,
+      "title": "User View Trainings (Optional)",
+      "weight": 8,
+      "state": "closed",
+      "labels": [],
+      "description": "All users, regardless of their \"Application Role\", may be able to view Trainings, if enabled by their Organization; trainings include open and completed items."
+    },
+    {
+      "id": 152709,
+      "iid": 762,
+      "title": "Users Completed and Edit Trainings (Optional)",
+      "weight": 8,
+      "state": "closed",
+      "labels": [],
+      "description": "All users, regardless of their \"Application Role\", may be able to complete and edit Trainings, if enabled by their Organization."
+    },
+    {
+      "id": 152710,
+      "iid": 763,
+      "title": "Display Alerts on Home Page",
+      "weight": 5,
+      "state": "closed",
+      "labels": [],
+      "description": "All users, regardless of their \"Application Role\", must have Alerts visible on the Home page, when appropriate, such as to update their profile (customizable by the Organization), complete trainings (optional), or complete their Mobile Check-In verification (optional)."
+    }
+  ]
+}

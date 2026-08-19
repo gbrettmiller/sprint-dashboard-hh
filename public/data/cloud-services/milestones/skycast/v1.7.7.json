@@ -1,0 +1,22 @@
+{
+  "milestone_title": "v1.7.7",
+  "milestone_id": 2353,
+  "slug": "v1.7.7",
+  "project_id": 91004,
+  "project_name": "SkyCast",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:23.342093Z",
+  "issues": [
+    {
+      "id": 188924,
+      "iid": 26,
+      "title": "Add health endpoint for liveness check to GALWEM",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "GALWEM ACI in azure keeps shutting down randomly without notice causing large time blocks of files to be missing. To mitigate this, we need to implemenet an API endpoint in GALWEM that azure can use for a liveness check. If the API endpoint is not responding, the container will be restarted automatically."
+    }
+  ]
+}

@@ -1,0 +1,400 @@
+{
+  "fiscal_year": 2026,
+  "month": 8,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 4847,
+      "title": "RELAY 1.0.3",
+      "start_date": "2026-07-22",
+      "end_date": "2026-08-07",
+      "state": "closed",
+      "source": "milestone",
+      "goal": null,
+      "initial_totals": {
+        "count": 1,
+        "weight": 0
+      },
+      "burndown": [
+        {
+          "date": "2026-07-22",
+          "remaining_count": 1,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-23",
+          "remaining_count": 1,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-24",
+          "remaining_count": 1,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-25",
+          "remaining_count": 1,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-26",
+          "remaining_count": 1,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-27",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-28",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-29",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-30",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-31",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-08-01",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-08-02",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-08-03",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-08-04",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-08-05",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-08-06",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-08-07",
+          "remaining_count": 1,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 4,
+        "improvement": 2,
+        "new_feature": 0,
+        "other": 0
+      },
+      "completed": {
+        "count": 6,
+        "weight": 7
+      },
+      "issues": [
+        {
+          "id": 319491,
+          "iid": 144,
+          "title": "Action Page - Service Requirement breadcrumb link",
+          "description": "On Action pages, the breadcrumb link to the associated Service Requirement points to `/service-requirements/details/0`, when it should point to `/service-requirements/details/nnn`, where `nnn` represents the ID of the service requirement. \n\n![image](/uploads/ae9e15fb001c4a18fbee83f240e2452f/image.png){width=521 height=251}",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 0,
+          "state": "closed",
+          "labels": [
+            "priority::medium",
+            "type::Improvement"
+          ],
+          "milestone": "RELAY 1.0.3",
+          "date_added_to_sprint": "2026-08-07",
+          "date_closed": "2026-08-11",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 288463,
+          "iid": 143,
+          "title": "Service Requirements page - Service Requirements breadcrumb link",
+          "description": "The \"Service Requirement\" link in the breadcrumb on a Service Requirement page currently points to `/servicerequirements`, which is not a valid link.\n\nThe link from the breadcrumb should be `/service-requirements`.\n\n![image](/uploads/325947906b66eeedc5f16924f3981922/image.png){width=524 height=175}",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::high",
+            "type::improvement"
+          ],
+          "milestone": "RELAY 1.0.3",
+          "date_added_to_sprint": "2026-08-07",
+          "date_closed": "2026-08-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 288461,
+          "iid": 141,
+          "title": "RELAY Action Auto Generation",
+          "description": "From issue tracker:\n> Needing to verify if action generation is functioning correctly. In RELAY Legacy, an action was created this morning, but it's not showing it generated in online. \n\n**Notes**",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 0,
+          "state": "closed",
+          "labels": [
+            "priority::highest",
+            "type::Bug"
+          ],
+          "milestone": "RELAY 1.0.3",
+          "date_added_to_sprint": "2026-08-07",
+          "date_closed": "2026-08-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 257114,
+          "iid": 133,
+          "title": "Milestone Status Report Reflecting Incorrect Information",
+          "description": "The Milestone Status Report is showing incorrect information, based on the report itself it's displaying the Initial / Revised dates, this should be showing the completed dates for milestones that have been finalized, and the most current projected date for milestones that are still in-progress.",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 0,
+          "state": "closed",
+          "labels": [
+            "priority::high",
+            "type::Bug"
+          ],
+          "milestone": "RELAY 1.0.3",
+          "date_added_to_sprint": "2026-07-21",
+          "date_closed": "2026-07-27",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 257112,
+          "iid": 131,
+          "title": "Mod-Decr Value Not Allowing to Input a Negative Number",
+          "description": "Whenever inputting a descope value, it's not allowing to modify the already existing number as a negative number. For instance, if the action already had -50,000, but it needs to be changed to -55,000, it's not allowing the -55,000 to be added - only allowing a positive number. This is also reflecting on the dashboard as a positive number instead of a negative.",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "priority::medium",
+            "type::Bug"
+          ],
+          "milestone": "RELAY 1.0.3",
+          "date_added_to_sprint": "2026-08-07",
+          "date_closed": "2026-08-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 246991,
+          "iid": 125,
+          "title": "CLIN History isn't loading from Task Order page",
+          "description": "CLIN History isn't loading from Task Order page\n\n![image.png](/uploads/558b583d9661f589a83079d6a3643b56/image.png){width=900 height=144}",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "priority::medium",
+            "type::Bug",
+            "workflow::refined"
+          ],
+          "milestone": "RELAY 1.0.3",
+          "date_added_to_sprint": "2026-08-07",
+          "date_closed": "2026-08-07",
+          "date_removed_from_sprint": null
+        }
+      ]
+    },
+    {
+      "id": 5563,
+      "title": "RELAY 1.0.4",
+      "start_date": "2026-08-11",
+      "end_date": "2026-08-17",
+      "state": "closed",
+      "source": "milestone",
+      "goal": null,
+      "initial_totals": {
+        "count": 2,
+        "weight": 10
+      },
+      "burndown": [
+        {
+          "date": "2026-08-11",
+          "remaining_count": 1,
+          "remaining_weight": 5
+        },
+        {
+          "date": "2026-08-12",
+          "remaining_count": 1,
+          "remaining_weight": 5
+        },
+        {
+          "date": "2026-08-13",
+          "remaining_count": 2,
+          "remaining_weight": 2
+        },
+        {
+          "date": "2026-08-14",
+          "remaining_count": 2,
+          "remaining_weight": 2
+        },
+        {
+          "date": "2026-08-15",
+          "remaining_count": 2,
+          "remaining_weight": 2
+        },
+        {
+          "date": "2026-08-16",
+          "remaining_count": 2,
+          "remaining_weight": 2
+        },
+        {
+          "date": "2026-08-17",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 3,
+        "improvement": 3,
+        "new_feature": 0,
+        "other": 0
+      },
+      "completed": {
+        "count": 6,
+        "weight": 14
+      },
+      "issues": [
+        {
+          "id": 465927,
+          "iid": 156,
+          "title": "Dashboard view should match Task Order view",
+          "description": "",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::medium",
+            "type::Improvement"
+          ],
+          "milestone": "RELAY 1.0.4",
+          "date_added_to_sprint": "2026-08-13",
+          "date_closed": "2026-08-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 380262,
+          "iid": 154,
+          "title": "Open and Completed Action Data is Missing on Base Contract",
+          "description": "Screen shots provided for comparison of each database this morning using PLS Contract W15QKN-19-D-0042.  A spot check of current and expired IDIQ contracts revealed no open or completed actions.\n\nAlso, there doesn't seem to be a way to create actions for base actions\n\n![image](/uploads/85d1cd03e9d2654ad3e45156db87f9d1/image.png){width=900 height=454}\n\n![image](/uploads/f865d80ae3bbc6cf2b03c89b45be3d68/image.png){width=900 height=176}",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "priority::high",
+            "type::Bug"
+          ],
+          "milestone": "RELAY 1.0.4",
+          "date_added_to_sprint": "2026-08-11",
+          "date_closed": "2026-08-11",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 320750,
+          "iid": 150,
+          "title": "Award Details showing incorrect exercised mod",
+          "description": "After exercising a mod, the award details section is not reflecting that the option got exercised. This is causing the status to not remain active and moving the task order off the user's dashboard.\n\n![Screenshot_2026-07-31_150119](/uploads/6362b70e445f62961e462d11742931a8/Screenshot_2026-07-31_150119.jpg){width=900 height=478}",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::medium",
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": "RELAY 1.0.4",
+          "date_added_to_sprint": "2026-08-17",
+          "date_closed": "2026-08-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 320748,
+          "iid": 149,
+          "title": "Inner Exception Error - Awarding Mod",
+          "description": "Receiving an Inner Exception Error in 25F0422, when attempting to Save Mod after entering the SECTION A - SUPPLEMENTAL INFORMATION from Page 2 of the Award Modification for the MOD Justification and the MOD Impact.\nMOD impact 8-10 had to be cut and saved in the action comments to get past the error and be able to save the MOD.\n\nAllowing more character/lines to be used in the MOD Justification and the MOD Impact area could be beneficial since these areas can get lengthy in certain new awards/re-competes/modifications.\n\n![25F0422_MOD_Justification_and_MOD_Impact](/uploads/debf03e1cf739e608dd8d96b1319eb8b/25F0422_MOD_Justification_and_MOD_Impact.png){width=891 height=542}\n\n![Inner_Exception_Error_in_RELAY_Online_25F0422](/uploads/237d9a11e882d204bae7df8e121626a9/Inner_Exception_Error_in_RELAY_Online_25F0422.png){width=900 height=84}",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::medium",
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": "RELAY 1.0.4",
+          "date_added_to_sprint": "2026-08-17",
+          "date_closed": "2026-08-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 288462,
+          "iid": 142,
+          "title": "Schedule Status showing RED when completed date is same as initial date",
+          "description": "From issue tracker:\n> RELAY Schedules are showing red when the completed date is the same as the initial / revised date. This needs to be shown as green for this and red if the completed date lands after the initial / revised date\n\n**Notes**",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::high",
+            "type::Bug"
+          ],
+          "milestone": "RELAY 1.0.4",
+          "date_added_to_sprint": "2026-08-13",
+          "date_closed": "2026-08-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 288450,
+          "iid": 138,
+          "title": "bug: Duplicated records in Service Requirements screen",
+          "description": "From issue tracker:\n> There are at least 5 employee badge/PKI service requirements listed in the Service Requirements view, 2 PSDR, 2 RSS, and possible other duplicates\n\n**Notes**\nAs noted in the issue tracker item, this affects some Service Requirements entries but not all. For those that it does affect, it appears that a copy of the Service Requirement item is added to the list any time that Service Requirement is clicked on from the screen and opened. \n\nFor example, if you click on the \"RSS\" item on the Service Requirements screen and then navigate back to the Service Requirements screen, you will see an additional copy of the RSS item. (Same for the others that are exhibiting this behavior.)\n\nThis is happening on both TEST and PROD. I have not confirmed if it is affecting all the same items on each. I have not done any research to determine commonalities among the affected items nor differences with the unaffected items.",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "priority::high",
+            "type::Bug"
+          ],
+          "milestone": "RELAY 1.0.4",
+          "date_added_to_sprint": "2026-08-11",
+          "date_closed": "2026-08-13",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-13-may-26",
+  "title": "Data Services 13 May 26",
+  "start_date": "2026-04-29",
+  "end_date": "2026-05-13",
+  "generated_at": "2026-07-02T21:57:14.195939Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on stabilizing and enhancing core application functionality across multiple modules while expanding deployment capabilities to production environments. The team aimed to resolve critical bugs, complete pending feature implementations in the Purchasing and Compliance Review systems, and establish foundational architecture for the ORBIT initiative.",
+    "summary": "The team completed 31 issues spanning six major application areas, with particular emphasis on the Compliance Review module where gallery row highlighting, record attribute viewing, sorting functionality, and production deployments across all test and production environments were successfully delivered. Significant progress was made on the Purchasing module's Item Form Screen with all five component areas now complete, while critical fixes were applied to TCT archive flows, SALT configuration management, Access Requests approval and form handling, and Records API task synchronization. The ORBIT program advanced with security and data architecture work completed, and supporting systems like email notification features and training period management tools were implemented to enhance operational capabilities.",
+    "metrics": {
+      "initial_count": 34,
+      "initial_weight": 69,
+      "completed_count": 32,
+      "completed_weight": 65,
+      "initial_breakdown": "13 Improvements, 7 Bugs, 7 Others, 7 New Features",
+      "completed_breakdown": "12 Improvements, 7 Others, 7 New Features, 6 Bugs"
+    }
+  }
+}

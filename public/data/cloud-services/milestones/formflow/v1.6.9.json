@@ -1,0 +1,88 @@
+{
+  "milestone_title": "v1.6.9",
+  "milestone_id": 2304,
+  "slug": "v1.6.9",
+  "project_id": 91005,
+  "project_name": "FormFlow",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:39.583088Z",
+  "issues": [
+    {
+      "id": 184780,
+      "iid": 24,
+      "title": "List Platform Engineering Center as Primary Org",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "As a user from the Platform Engineering Center who needs to submit a support request through the Quick Submit Form, I want to see Platform Engineering Center and subordinate units listed as options when creating a support request.\n\n---\n\nACCEPTANCE CRITERIA:\n- When a user on the Quick Submit Form opens the \"Primary Organization\" selection list, they see \"Platform Engineering Center\" as an option\n- When a user selects \"Platform Engineering Center\" as the primary organization and opens the \"Secondary Organization\" selection list, the list will be empty\n- When a submits the form using \"Platform Engineering Center\" as the Primary Organization, a ticket will be created in Service Now with \"Platform Engineering Center\" as the organization"
+    },
+    {
+      "id": 184781,
+      "iid": 25,
+      "title": "List Global Client Solutions as Primary Org",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "As a Global Client Solutions user of our platform who needs to submit a support request through the Quick Submit Form, I want to see Global Client Solutions and subordinate units listed as options when creating a support request.\n\n---\n\nACCEPTANCE CRITERIA:\n- When a user on the Quick Submit Form opens the \"Primary Organization\" selection list, they see \"Global Client Solutions\" as an option\n- When a user selects \"Global Client Solutions\" as the primary organization and opens the \"Secondary Organization\" selection list, the list will be empty\n- When the user submits the form using \"Global Client Solutions\" as the Primary Organization, a ticket will be created in Service Now with \"Global Client Solutions\" as the organization"
+    },
+    {
+      "id": 184782,
+      "iid": 26,
+      "title": "List R&D Division as Primary Org",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "As a R&D Division user of our platform who needs to submit a support request through the Quick Submit Form, I want to see R&D Division listed as options when creating a support request.\n\n---\n\nACCEPTANCE CRITERIA:\n- When a user on the Quick Submit Form opens the \"Primary Organization\" selection list, they see \"R&D Division\" as an option\n- When a user selects \"R&D Division\" as the primary organization and opens the \"Secondary Organization\" selection list, the list will be empty\n- When the user submits the form using \"R&D Division\" as the Primary Organization, a ticket will be created in Service Now with \"R&D Division\" as the organization"
+    },
+    {
+      "id": 184783,
+      "iid": 27,
+      "title": "Simulation & Training secondary organization sort order",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "As a Simulation & Training user of our platform who needs to submit a support request through the Quick Submit Form, I want to see the secondary organizations of Simulation & Training listed in alphabetical order.\n\n---\n\nACCEPTANCE CRITERIA:\n- When a user on the Quick Submit Form selects \"Simulation & Training\" from the \"Primary Organization\" selection list and opens the \"Secondary Organization\" selection list, they will see the list sorted alphabetically ascending."
+    },
+    {
+      "id": 184785,
+      "iid": 28,
+      "title": "Update Network Systems to Network Operations",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "As someone from the recently renamed Network Operations and a user of our platform who needs to submit a support request through the Quick Submit Form, I want to see the organization's new name in the Primary Organization List and the new secondary organizations listed appropriately.\n\n---\n\nACCEPTANCE CRITERIA:\n- When a user on the Quick Submit Form opens the \"Primary Organization\" selection list, they see \"Network Operations\" as an option, appropriately positioned in order (alphabetical ascending)\n- When a user selects \"Network Operations\" as the primary organization and opens the \"Secondary Organization\" selection list, they see the following options\n  - _tbd - we need to get with the CSR team for specifics_\n- When the user submits the form using \"CPE\" as the Primary Organization, a ticket will be created in Service Now with \"Network Operations\" as the organization"
+    },
+    {
+      "id": 184786,
+      "iid": 29,
+      "title": "Update Applied Analytics to Data & Analytics",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "As someone from the recently renamed Data & Analytics and a user of our platform who needs to submit a support request through the Quick Submit Form, I want to see the organization's new name in the Primary Organization List and the new secondary organizations listed appropriately.\n\n---\n\nACCEPTANCE CRITERIA:\n- When a user on the Quick Submit Form opens the \"Primary Organization\" selection list, they see \"Data & Analytics\" as an option, appropriately positioned in order (alphabetical ascending)\n- When a user selects \"Data & Analytics\" as the primary organization and opens the \"Secondary Organization\" selection list, they see the following options\n  - _tbd - we need to get with the CSR team for specifics_\n- When the user submits the form using \"Data & Analytics\" as the Primary Organization, a ticket will be created in Service Now with \"Data & Analytics\" as the organization"
+    },
+    {
+      "id": 184787,
+      "iid": 30,
+      "title": "Update Risk Programs to Risk & Compliance",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "As someone from the recently renamed Risk & Compliance and a user of our platform who needs to submit a support request through the Quick Submit Form, I want to see the organization's new name in the Primary Organization List and the new secondary organizations listed appropriately.\n\n---\n\nACCEPTANCE CRITERIA:\n- When a user on the Quick Submit Form opens the \"Primary Organization\" selection list, they do not see \"Risk Programs\" as an option\n- When a user on the Quick Submit Form opens the \"Primary Organization\" selection list, they see \"Risk & Compliance\" as an option, appropriately positioned in order (alphabetical ascending)\n- When a user selects \"Risk & Compliance\" as the primary organization and opens the \"Secondary Organization\" selection list, they see the following options\n  - _tbd - we need to get with the CSR team for specifics_\n- When the user submits the form using \"Risk & Compliance\" as the Primary Organization, a ticket will be created in Service Now with \"Risk & Compliance\" as the organization"
+    }
+  ]
+}

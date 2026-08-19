@@ -1,0 +1,398 @@
+{
+  "milestone_title": "v4.2.9",
+  "milestone_id": 1958,
+  "slug": "v4.2.9",
+  "project_id": 91002,
+  "project_name": "PULSE",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:33.431848Z",
+  "issues": [
+    {
+      "id": 155605,
+      "iid": 313,
+      "title": "Add filters for 30, 60, 90, & 120 days to Error Log in Admin tools. have it default to 30 days on load.",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: New Feature",
+        "type::New Feature"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155604,
+      "iid": 352,
+      "title": "While the \"Save\" button is inactive during form load the \"Quick Award\" button remains active.",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": "When the \"Save\" button is inactive/disabled while the form is loading, the \"Quick Award\" button will not work. the \"Quick Award\" button needs to be disabled with the \"Save\" button and enabled only when the \"Save\" button is enabled while loading the form."
+    },
+    {
+      "id": 155603,
+      "iid": 353,
+      "title": "When Active Subcontractor section/field in the Post Award Tab, Prime & Sub Contractor section is set to required, a red asterisk is not placed after the field name/label.",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155602,
+      "iid": 354,
+      "title": "When a validation error occurs for the Active Subcontractor field in the Post Award Tab, Prime & Sub Contractor section, the tab/section is not opened to the location of the validation error.",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155597,
+      "iid": 355,
+      "title": "Clicking a link for PO Control# in the Consolidation Tab, Consolidation Description Section, Consolidated Actions field sends the user to the action in the same window instead of opening a new tab causing a loss of changes.",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155599,
+      "iid": 356,
+      "title": "Search Icon for Search Bar is not displayed when deployed to PROD. Icon URL returns not found.",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": "When deployed to production the search ICON is not displayed. Reviewing the console reveals the following error for the search ICON:\n![image](/uploads/c2b3ced178efa782a0c9181ebd156c59/image.png)\n\nThe issue is likely caused by because the absolute URL is used instead of the relative URL. The URL for the ICON PROD is attempting to access is \nhttps://cdn.example.com/css/searchicon.png\n\nSearching the app; i was unable to locate the referenced PNG."
+    },
+    {
+      "id": 155581,
+      "iid": 358,
+      "title": "Update PULSE DB with user Persona IDs and update SC to support new persona ID",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": "Update PULSE DB and APP to support new Persona ID and write script to update DB with user persona ID's."
+    },
+    {
+      "id": 155600,
+      "iid": 359,
+      "title": "Update NuGet Packages and Libraries",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: Package Update",
+        "type::DevOps"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155601,
+      "iid": 360,
+      "title": "Upgrade PULSE API to .Net 8",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155579,
+      "iid": 361,
+      "title": "Fix API's Failed Unit Test",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155606,
+      "iid": 362,
+      "title": "(Beacon) Dynamic change of select active contractors in post award under prime and sub contractors sub-section",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155592,
+      "iid": 363,
+      "title": "(Beacon) Fix ability to allow required for Sub Contractors in Post Award, Require at least 1 entry.",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155583,
+      "iid": 364,
+      "title": "Change revised target award date reason to sub-section selection with table similar to type of funding.",
+      "weight": 13,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155585,
+      "iid": 365,
+      "title": "(JPO) Add new award date revised reason feature to PO Admin Tab",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: New Feature",
+        "type::New Feature"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155598,
+      "iid": 366,
+      "title": "(Beacon) Add \"Incumbent?\" to the Post Award Tab",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: New Feature",
+        "type::New Feature"
+      ],
+      "description": "Add the drop down data field \"Incumbent?\" to the Post Award tab.\n\nwould like field options to be:\nN/A (default at top)\nYes\nNo\n\nshould allow to be mandatory (for Beacon only at this time)"
+    },
+    {
+      "id": 155582,
+      "iid": 367,
+      "title": "(JPO) Update LOE List",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": "see attachment to update the LOE List for JPO Meridian[20240215_LOEs.xlsx](/uploads/32e9d5beb9683ef5e0eadc1699670deb/20240215_LOEs.xlsx)"
+    },
+    {
+      "id": 155591,
+      "iid": 368,
+      "title": "Fix Dom Purify library not loading when stored in sub directory.",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": "When deployed to IIS DomPurify will not load from the sub DomPurify directory. the library was moved to the scripts parent directory for deployment of v4.2.8. It should be located in the dompurify directory for maintainability."
+    },
+    {
+      "id": 155590,
+      "iid": 369,
+      "title": "(Beacon) Update column headings",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155580,
+      "iid": 370,
+      "title": "Update organization references in List Index view to use organization enumerations",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155593,
+      "iid": 371,
+      "title": "Fix Consolidated Actions field required validation logic",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": "While working issue #355 I discovered a new issue when the Consolidated Actions field is set to required; the form validation does not recognize newly added consolidated actions and will not allow a user to save the form because it does not check the lookup table to see if a consolidated action was added before running the validation scripts. attached is a screen recording of the issue. ![ConsolidationRequiredBugScreenRecording](/uploads/c1b3a418050c2c3668def1834e19484c/ConsolidationRequiredBugScreenRecording.mp4)"
+    },
+    {
+      "id": 155595,
+      "iid": 373,
+      "title": "Complete Fortify Scan & Request Approval",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Task",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155594,
+      "iid": 374,
+      "title": "Deploy v4.2.9 to QA/Test",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Task",
+        "type::DevOps"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155586,
+      "iid": 375,
+      "title": "Deploy v4.2.9 to PROD",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Task",
+        "type::DevOps"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155587,
+      "iid": 376,
+      "title": "Complete QA/Test Version Testing",
+      "weight": 13,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Task",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155596,
+      "iid": 377,
+      "title": "Complete Dev Review",
+      "weight": 8,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Task",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155589,
+      "iid": 382,
+      "title": "Make Post Award Validation Checks Occur when Action is first changed",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": "When an action in in a pre-award state the Post Award child classes are not included in the ModelState.\n\nWhen the action is first changed to an Awarded state the form will save without flagging a validation error for required post award fields. \n\nTo work around this we implemented and initial post award section check; however this requires the user to click save multiple times to save the form when first changing to an awarded status even when the form is valid. \n\nWe need to include the Model state for post award regardless of the action status and exclude the post award fields when the action is saved if the new status is not awarded."
+    },
+    {
+      "id": 155584,
+      "iid": 383,
+      "title": "(JPO) Add read-only display field Must Have Award Date Revised/Initial above PO Admin Award Date Reason.",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: New Feature",
+        "type::New Feature"
+      ],
+      "description": "Add read-only display field Must Have Award Date Revised/Initial above PO Admin Award Date Reason.\n\nThe field should show the revised must have award date if it is not null; if it is null it should show the initial must have award date"
+    },
+    {
+      "id": 155588,
+      "iid": 384,
+      "title": "(Found in QA Testing) Javascript for Program Supported by logic is not loaded for create form.",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    }
+  ]
+}

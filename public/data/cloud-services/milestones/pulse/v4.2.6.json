@@ -1,0 +1,76 @@
+{
+  "milestone_title": "v4.2.6",
+  "milestone_id": 1955,
+  "slug": "v4.2.6",
+  "project_id": 91002,
+  "project_name": "PULSE",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:32.684868Z",
+  "issues": [
+    {
+      "id": 155901,
+      "iid": 311,
+      "title": "Update Nuget Packages and Libraries (Recurring)",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155902,
+      "iid": 312,
+      "title": "Add the program a user supports to the request access form",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155900,
+      "iid": 316,
+      "title": "When adding a release note to a realease, changes in the release edit form are not retained.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155899,
+      "iid": 317,
+      "title": "Fix export data capability in the admin tools App settings. Feature broken with recent chrome update.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155898,
+      "iid": 318,
+      "title": "Fix export data JavaScript validation for date selection.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    }
+  ]
+}

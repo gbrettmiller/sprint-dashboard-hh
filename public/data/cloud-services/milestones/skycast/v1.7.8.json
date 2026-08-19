@@ -1,0 +1,22 @@
+{
+  "milestone_title": "v1.7.8",
+  "milestone_id": 2354,
+  "slug": "v1.7.8",
+  "project_id": 91004,
+  "project_name": "SkyCast",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:23.541760Z",
+  "issues": [
+    {
+      "id": 188925,
+      "iid": 27,
+      "title": "Refactor GALWEM to download older files that may be missing from incomplete previous runs",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "Files have often been missing from GALWEM when a run doesnt fully download files due to network/azure issues. If we configure the run to grab files that are missing this will ensure all needed files are present."
+    }
+  ]
+}

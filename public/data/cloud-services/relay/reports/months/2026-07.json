@@ -1,0 +1,38 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "relay",
+  "month": "2026-07",
+  "generated_at": "2026-08-01T06:09:16.881498Z",
+  "sprints": [
+    {
+      "title": "RELAY 1.0.1",
+      "start_date": "2026-07-07",
+      "end_date": "2026-07-13",
+      "goals": "This sprint focused on stabilizing the core user interface and improving the reliability of critical workflows. We targeted three specific issues that were degrading the user experience and preventing users from completing essential tasks like adding reports and viewing accurate contract status.",
+      "summary": "The team resolved a dashboard text overflow issue that was breaking the layout in certain views, fixed a defect preventing users from successfully adding new reports, and corrected a logic error in the Base Contract Detail View that was displaying incorrect active status information. These fixes remove friction from daily user workflows and restore confidence in the accuracy of contract status data, allowing the product to operate as designed without workarounds or manual verification steps.",
+      "metrics": {
+        "initial_count": 3,
+        "initial_weight": 5,
+        "completed_count": 3,
+        "completed_weight": 5,
+        "initial_breakdown": "3 Bugs",
+        "completed_breakdown": "3 Bugs"
+      }
+    },
+    {
+      "title": "RELAY 1.0.2",
+      "start_date": "2026-07-15",
+      "end_date": "2026-07-21",
+      "goals": "This sprint focused on resolving critical routing and data display issues that were preventing accurate task order information from being presented to users. The work aimed to ensure proper URL resolution across our application infrastructure and correct persistent data integrity problems affecting mission area and contract line item detail visibility.",
+      "summary": "The team completed three high-impact fixes that restore data accuracy and system reliability across the application. We resolved nginx and Tomcat routing configuration issues that were causing URL resolution failures, fixed a bug where mission area fields were displaying as N/A in random task orders, and corrected CLIN detail records that were showing inaccurate periods of performance. Together these fixes eliminate confusion in task order management and ensure users can now reliably access and view accurate contract and mission information.",
+      "metrics": {
+        "initial_count": 4,
+        "initial_weight": 10,
+        "completed_count": 3,
+        "completed_weight": 7,
+        "initial_breakdown": "3 Bugs, 1 Improvement",
+        "completed_breakdown": "2 Bugs, 1 Improvement"
+      }
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "fiscal_year": 2026,
+  "month": 9,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 7714,
+      "title": "RELAY 1.0.5",
+      "start_date": "2026-08-18",
+      "end_date": "2026-09-01",
+      "state": "active",
+      "source": "milestone",
+      "goal": null,
+      "initial_totals": {
+        "count": 6,
+        "weight": 0
+      },
+      "burndown": [
+        {
+          "date": "2026-08-18",
+          "remaining_count": 6,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-08-19",
+          "remaining_count": 6,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 2,
+        "improvement": 4,
+        "new_feature": 0,
+        "other": 0
+      },
+      "completed": {
+        "count": 0,
+        "weight": 0
+      },
+      "issues": [
+        {
+          "id": 583763,
+          "iid": 162,
+          "title": "Add version number to app header",
+          "description": "Add version number to app header. This will make it easier for users to know when the app has been updated. \n\nAn example implementation: \n![image](/uploads/c744ec64022543cf4d1008253dc456a6/image.png){width=482 height=196}",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 0,
+          "state": "opened",
+          "labels": [
+            "priority::medium",
+            "type::Improvement"
+          ],
+          "milestone": "RELAY 1.0.5",
+          "date_added_to_sprint": "2026-08-18",
+          "date_closed": null,
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 554056,
+          "iid": 161,
+          "title": "Error Message When saving PCF Cabinet Number",
+          "description": "When attempting to save a PCF cabinet to an exercise option action for a base contract, the following error message is received \"Object Reference not set to an instance of an Object\"\n\nWhen looking at the drop down options in the open action menu, I noticed that the Mod Base Ex-Opt is not showing, this might be what's causing it to not be able to save but I'm not totally sure\n\n![image](/uploads/0c4612268a73d13d03a018cee695a61c/image.png){width=900 height=383}",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 0,
+          "state": "opened",
+          "labels": [
+            "priority::high",
+            "type::Bug"
+          ],
+          "milestone": "RELAY 1.0.5",
+          "date_added_to_sprint": "2026-08-18",
+          "date_closed": null,
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 350359,
+          "iid": 151,
+          "title": "Unable to import VCE Comments",
+          "description": "Receiving an unexpected error when importing VCE comments\n\n![image](/uploads/2230a777b21825f32238d6be91e66519/image.png){width=900 height=540}",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 0,
+          "state": "opened",
+          "labels": [
+            "priority::medium",
+            "type::Bug"
+          ],
+          "milestone": "RELAY 1.0.5",
+          "date_added_to_sprint": "2026-08-18",
+          "date_closed": null,
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 320743,
+          "iid": 147,
+          "title": "Requested Award Date Change Causing Milestone Schedule Problems",
+          "description": "A user updated the requested award date on a closeout mod, this added a revised date to the schedule and has caused the Issue PR modifications and Distribute TO modification to flag incorrectly. She also noticed that whenever the requested award date is changed, it also changes the schedule's Auto Create Action which sequentially changes the rest of the schedule. This date has also locked itself to not being able to save correctly once updating the correct date.",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 0,
+          "state": "opened",
+          "labels": [
+            "priority::medium",
+            "type::Improvement"
+          ],
+          "milestone": "RELAY 1.0.5",
+          "date_added_to_sprint": "2026-08-18",
+          "date_closed": null,
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 320742,
+          "iid": 146,
+          "title": "Milestone Schedule Reorganization",
+          "description": "The Letter of Intent to contract is sequentially after Submit to ACC (complete package w/IGE & SCA if required. Also in an option period you really don't need an options justification memo. The option justification memo is done during the recompete process which allows the task order to have option periods upon award.",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 0,
+          "state": "opened",
+          "labels": [
+            "priority::medium",
+            "type::Improvement"
+          ],
+          "milestone": "RELAY 1.0.5",
+          "date_added_to_sprint": "2026-08-18",
+          "date_closed": null,
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 288455,
+          "iid": 139,
+          "title": "Date input issues",
+          "description": "From issue tracker:\n> when entering the year, it automatically generates \"2020\" when you key in the 2nd \"2\" in the year. So , \"2020\" will generate and you have delete last digit to correct to 2026.\n\n**Notes**\nI did a quick check on a date field using the \"New Action\" form from a Task Order page. This screen recording shows the behavior I see there. \n\n![relay-date-entry](/uploads/9686d683503b694dee66d1e2b63a25ee/relay-date-entry.mp4){width=760 height=544}\n\nThe input I typed for the cases shown in the recording were:\n- 1120\n- 2220\n- 4531",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 0,
+          "state": "opened",
+          "labels": [
+            "priority::high",
+            "type::improvement"
+          ],
+          "milestone": "RELAY 1.0.5",
+          "date_added_to_sprint": "2026-08-18",
+          "date_closed": null,
+          "date_removed_from_sprint": null
+        }
+      ],
+      "last_updated": "2026-08-19T14:57:20.853382Z"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "milestone_title": "v3.2.10.1",
+  "milestone_id": 2514,
+  "slug": "v3.2.10.1",
+  "project_id": 91001,
+  "project_name": "ORBIT",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:26.367029Z",
+  "issues": [
+    {
+      "id": 189117,
+      "iid": 1168,
+      "title": "Implement In-Profile Mobile Check-In Verification",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "type::New Feature",
+        "workflow::refined"
+      ],
+      "description": "### **Enhancement: Mobile Check-In Phone Number Verification**\n\n**Description:** This PBI defines the verification process for the Mobile Check-In phone number. After a user enters a number and saves their profile, a verification field will appear at the top of the page. The user must then enter a code sent via SMS to that number to complete registration and confirm they can receive Mobile Check-In notifications.\n\n---\n\n#### **User Story**\n\n*   **As a** ORBIT user,\n*   **I want to** enter my Mobile Check-In phone number, save my profile, and then enter a verification code sent to my phone,\n*   **so that** I can securely register for Mobile Check-In and confirm my number is correct.\n\n---\n\n#### **Acceptance Criteria**\n\n**Scenario 1: User Enters Number and Saves Profile**\n\n*   **Given** a user is on their \"Edit Profile\" page and enters a new or different phone number in the \"Mobile Check-In Information\" section,\n*   **When** they click the \"Save\" button for the profile,\n*   **Then** a verification code **must** be sent via SMS to the entered phone number.\n*   **And** after the page reloads, a new section/field, clearly labeled for verification, **must** appear at the top of the profile page.\n*   **And** a status indicator next to the Mobile Check-In number **must** display \"Verification Required.\"\n\n**Scenario 2: Successful Verification**\n\n*   **Given** the verification code field is displayed on the user's profile,\n*   **When** the user enters the correct verification code from the SMS and clicks \"Verify,\"\n*   **Then** the verification section at the top of the page **must** disappear.\n*   **And** the status indicator next to the Mobile Check-In number **must** update to \"Verified.\"\n*   **And** a success message (e.g., \"Your Mobile Check-In number has been successfully verified.\") **must** be displayed.\n\n**Scenario 3: Failed Verification**\n\n*   **Given** the verification code field is displayed,\n*   **When** the user enters an incorrect code and clicks \"Verify,\"\n*   **Then** an error message (e.g., \"Invalid verification code. Please try again.\") **must** be displayed within the verification section.\n*   **And** the verification section **must** remain visible, allowing the user to try again.\n\n**Scenario 4: User with Verified Number**\n\n*   **Given** a user with a previously verified Mobile Check-In number views their \"Edit Profile\" page,\n*   **When** the page loads,\n*   **Then** the verification code section **must not** be displayed.\n*   **And** the status next to their number **must** show \"Verified.\""
+    },
+    {
+      "id": 191130,
+      "iid": 1175,
+      "title": "Notification Event name should use 24 hour format",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Failed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI corrects the time format used in the \"Notification Event\" name to use 24-hour time instead of 12-hour time (AM/PM). This change will be applied wherever the event name is displayed in the UI and also to the name of the corresponding export file, ensuring consistency with other time formats on the page.\n\n![image](/uploads/d1f3f6a21c9ef7b145450571dcec117d/image.png){width=377 height=142}\n\n---\n\n### User Story\n\n*   **As a** Notification Manager or ORBIT user,\n*   **I want** the time in the Notification Event name to be in a consistent 24-hour format,\n*   **so that** I can easily compare it to other time values on the page without confusion.\n\n---\n\n### Acceptance Criteria\n\n#### **Scenario 1: UI Display of Event Name**\n\n*   **Given** a notification was created at 1:30 PM,\n*   **When** I view the \"Notification Event Details\" page,\n*   **Then** the \"Notification Event\" name **must** display the time in 24-hour format (e.g., \"2026-02-02_13_30-PEOEnterprise\").\n\n#### **Scenario 2: Export Filename**\n\n*   **Given** the same notification was created at 1:30 PM,\n*   **When** I download the export file for this event,\n*   **Then** the filename **must** use 24-hour time for the timestamp portion (e.g.,  2026-02-02_13_30-PEOEnterprise-NotificationEvent.csv ).\n\n#### **Scenario 3: AM Time Formatting (Regression Check)**\n\n*   **Given** a notification was created at 9:05 AM,\n*   **When** viewing the \"Notification Event Details\" page,\n*   **Then** the event name **must** display the time as `09:05`.\n*   **And when** downloading the export file,\n*   **Then** the filename **must** use `09_05` in the timestamp portion, including the leading zero."
+    },
+    {
+      "id": 192888,
+      "iid": 1181,
+      "title": "Ensure modal controller is initialized in script.js",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Bug"
+      ],
+      "description": "In the latest 3.2.10.0 version somehow the initializer for the modal controller was removed during a merge. Simple one line fix to initialize modals for the app."
+    },
+    {
+      "id": 192975,
+      "iid": 1182,
+      "title": "Exclude Inactive users from Filtered Position Assignments export",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "Type:Improvement",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI addresses the situation where the \"Export Positions\" report includes inactive users when the \"Active\" filter is applied on the Position Assignments page. This update will ensure that the downloaded report accurately reflects only active users.\n\n---\n\n#### **User Story**\n\n*   **As a** ORBIT user on the Position Assignments page,\n*   **I want** the \"Export Positions\" report to contain only active users when I have the \"Active\" filter selected,\n*   **so that** the generated report accurately reflects the active users in position assignments.\n\n#### **Acceptance Criteria**\n\n*   **Given** I am on the \"Position Assignments\" page,\n*   **And** I have selected the \"Active\" filter,\n*   **When** I click the \"Export Positions\" button,\n*   **Then** the downloaded report file **must** contain only active users.\n*   **And** the report **must not** contain any inactive users.\n\n**Scenario 2: \"Inactive\" Filter is Selected (Regression Check)**\n\n*   **Given** I am on the \"Position Assignments\" page,\n*   **And** I have selected the \"Inactive\" filter,\n*   **When** I click the \"Export Positions\" button,\n*   **Then** the downloaded report file **must** contain all users in deactivated positions.\n\n**Scenario 3: \"All\" Filter is Selected (Regression Check)**\n\n*   **Given** I am on the \"Position Assignments\" page,\n*   **And** I have selected the \"All\" filter,\n*   **When** I click the \"Export Positions\" button,\n*   **Then** the downloaded report file **must** contain all users from both active and deactivated positions."
+    },
+    {
+      "id": 193787,
+      "iid": 1185,
+      "title": "Inline validation for 0 recipients of notification",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI changes the workflow for creating a notification that has no recipients. Instead of taking the user to a confirmation page that shows \"0 recipients,\" the system will now prevent navigation, remain on the creation page, and display an inline error message, prompting the user to correct their recipient selection.\n\n---\n\n### User Story\n\n*   **As a** Notification Manager creating a notification,\n*   **I want to** be immediately notified and remain on the creation page if my selected recipient criteria results in a list of zero people,\n*   **so that** I can quickly correct my \"To\" selection without navigating back and forth between pages.\n\n---\n\n### Acceptance Criteria\n\n#### **Scenario 1: No Recipients Found**\n\n*   **Given** a Notification Manager is on the \"Create Notification\" page,\n*   **And** they have selected criteria in the \"To\" field that resolves to zero recipients,\n*   **When** they click the \"Confirm Notification\" button,\n*   **Then** they **must remain** on the \"Create Notification\" page.\n*   **And** a prominent error message **must** appear at the top of the page (e.g., \"No recipients found for the selected criteria. Please update the 'To' field.\").\n*   **And** they **must not** be navigated to the \"Confirm Notification\" page.\n*   **And** all the data they had already entered into the form (Subject, Message, etc.) **must** be preserved.\n\n#### **Scenario 2: Recipients Found (Regression Check)**\n\n*   **Given** a Notification Manager is on the \"Create Notification\" page,\n*   **And** they have selected criteria in the \"To\" field that resolves to one or more recipients,\n*   **When** they click the \"Confirm Notification\" button,\n*   **Then** they **must** be navigated to the Confirm notification page"
+    },
+    {
+      "id": 195349,
+      "iid": 1196,
+      "title": "Update \"DNR\" Stored Procedure to use variable",
+      "weight": 3,
+      "state": "closed",
+      "labels": [],
+      "description": "The Problem\nThe issue lies in the repeated use of the GETUTCDATE() function in both the DELETE and INSERT statements. GETUTCDATE() is a non-deterministic function, meaning its value can change each time it is called.\n\nIf the stored procedure happens to run at the exact moment the UTC date rolls over to the next day (at midnight), the following could happen:\n\nThe DELETE statement executes, using the GETUTCDATE() value from the \"old\" day to identify and remove records.\n\nThe UTC date changes to the \"new\" day.\n\nThe INSERT statement executes, but now it uses the GETUTCDATE() value from the \"new\" day.\n\nThe result is that the records from the \"old\" day are deleted, but the new records are inserted with the \"new\" day's date, leaving a gap in your data.\n\nThe Solution\nTo prevent this from happening, you should declare a variable to hold the UTC date at the beginning of the stored procedure. This ensures that the same date and time value is used throughout the entire transaction.\n\nChange the SP to the following:\n\nALTER PROCEDURE [dbo].[DW_Job_DidNotReport_New]\nAS\nBEGIN\n    -- NOTE: Here is the main change:\n    DECLARE @CurrentUTCDate DATETIME = GETUTCDATE();\n\n    BEGIN TRANSACTION;\n\n    DELETE\n      FROM orbitdata.dbo.dw_didnotreport\n     WHERE id IN (\n           SELECT dnr.id\n             FROM orbitdata.dbo.dw_didnotreport AS dnr\n            INNER JOIN orbitdata.dbo.dw_employee_all AS per ON dnr.employeeid = per.employeeid\n            INNER JOIN orbitdata.dbo.dw_worksite AS dts ON per.worksiteid = dts.worksiteid\n            CROSS APPLY orbitdata.dbo.dw_dst_dates\n            WHERE dnr.statusdate = CAST(DATEADD(hh, (dts.timezone_gmt + (CASE WHEN dts.isdst = 1 AND DATEADD(hh, dts.timezone_gmt, @CurrentUTCDate) BETWEEN dw_dst_dates.dst_start AND dw_dst_dates.dst_end THEN 1 ELSE 0 END)), @CurrentUTCDate) AS DATE)\n           );\n\n    INSERT\n      INTO [orbitdata].[dbo].[DW_DidNotReport]\n           (\n             [DateCreated]\n            ,[Org_Id]\n            ,[EmployeeID]\n            ,[StatusDate]\n             ,[Organization_Name]\n            ,[OrganizationProjectManager_Name]\n            ,[OrganizationParagraph_Name]\n            ,[OrgSortOrder]\n            )\n    SELECT @CurrentUTCDate AS DateCreated\n          ,per.Org_Id\n          ,per.EmployeeID\n          ,CAST(DATEADD(hh, (dts.TimeZone_GMT + (CASE WHEN dts.IsDST = 1 AND DATEADD(hh, dts.TimeZone_GMT, @CurrentUTCDate) BETWEEN DW_DST_Dates.DST_Start AND DW_DST_Dates.DST_End THEN 1 ELSE 0 END)), @CurrentUTCDate) AS DATE) AS StatusDate\n          ,org.PO AS Organization_Name\n          ,org.PM AS OrganizationProjectManagerName\n          ,org.pd AS OrganizationParagraph_Name\n          ,per.OrgSortOrder\n     FROM orbitdata.dbo.DW_Employee_all AS per\n    INNER JOIN orbitdata.dbo.DW_WorkSite AS dts \n       ON per.WorkSiteID = dts.WorkSiteID\n     LEFT JOIN orbitdata.dbo.DW_Organization AS org \n       ON per.Org_Id = org.Org_Id\n    CROSS APPLY orbitdata.dbo.DW_DST_Dates\n    WHERE per.IsActive = 1\n      AND per.IsExempt = 0\n      AND 0 = (SELECT COUNT(CheckInID) FROM orbitdata.dbo.DW_CheckIn AS rc WHERE rc.EmployeeID = per.EmployeeID AND CAST(rc.statusdate AS DATE) = CAST(DATEADD(hh, (dts.TimeZone_GMT + (CASE WHEN dts.isdst = 1 AND DATEADD(hh, dts.TimeZone_GMT, @CurrentUTCDate) BETWEEN DW_DST_Dates.DST_Start AND DW_DST_Dates.DST_End THEN 1 ELSE 0 END)), @CurrentUTCDate) AS DATE))\n      AND 1 = dbo.DW_IsBusinessDay(CAST(DATEADD(hh, (dts.TimeZone_GMT + (CASE WHEN dts.IsDST = 1 AND DATEADD(hh, dts.TimeZone_GMT, @CurrentUTCDate) BETWEEN DW_DST_Dates.DST_Start AND DW_DST_Dates.DST_End THEN 1 ELSE 0 END)), @CurrentUTCDate) AS DATE));\n     \n    COMMIT TRANSACTION;\nEND;"
+    },
+    {
+      "id": 195427,
+      "iid": 1198,
+      "title": "Restore Missing Check-In Data",
+      "weight": 5,
+      "state": "closed",
+      "labels": [],
+      "description": "Due to issue 1196, a customer check-in data is missing for 17 February; this data must be somehow restored to the SQL Server reporting database."
+    },
+    {
+      "id": 195685,
+      "iid": 1199,
+      "title": "Increase \"maxPoolSize\" on MongoDB connection string",
+      "weight": 1,
+      "state": "closed",
+      "labels": [],
+      "description": "Increase the \"maxPoolSize\" on the MongoDB connection string in the .NET code to resolve issues with notifications to thousands of employee."
+    },
+    {
+      "id": 195711,
+      "iid": 1200,
+      "title": "BUG: Missing Data in Notification Export Report",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "priority::highest",
+        "type::Bug",
+        "workflow::refined"
+      ],
+      "description": "### **Bug: Missing Data in Notification Export Report**\n\n**Description:** This PBI addresses a critical bug regression in the Notification export report. The \"Organization\" and \"Supervisor\" columns in the downloadable CSV file are being populated with empty values. The columns still exist, but the data that should be present is missing, which impacts downstream processes and user analysis.\n\n---\n\n#### **User Story**\n\n*   **As a** system user (e.g., Administrator, Manager),\n*   **I want to** download the Notification export report with the \"Organization\" and \"Supervisor\" columns correctly populated with data,\n*   **so that** I can accurately analyze notification data, assign tasks, and conduct necessary follow-ups with the correct employee and teams.\n\n#### **Acceptance Criteria**\n\n**Scenario 1: Verify Data in Downloaded Report**\n\n*   **Given** a user is logged into the system and has generated notifications that have associated \"Organization\" and \"Supervisor\" data,\n*   **When** the user navigates to the reporting section and downloads the \"Notification export report\" as a CSV file,\n*   **Then** the \"Organization\" column in the downloaded CSV file **must** contain the correct data for each corresponding record.\n*   **And** the \"Supervisor\" column in the downloaded CSV file **must** contain the correct data for each corresponding record."
+    }
+  ]
+}

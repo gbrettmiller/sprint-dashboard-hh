@@ -1,0 +1,84 @@
+{
+  "milestone_title": "RELAY 1.0.3",
+  "milestone_id": 4847,
+  "slug": "relay-1.0.3",
+  "project_id": 91003,
+  "project_name": "RELAY",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:40.788263Z",
+  "issues": [
+    {
+      "id": 246991,
+      "iid": 125,
+      "title": "CLIN History isn't loading from Task Order page",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "priority::medium",
+        "type::Bug",
+        "workflow::refined"
+      ],
+      "description": "CLIN History isn't loading from Task Order page\n\n![image.png](/uploads/558b583d9661f589a83079d6a3643b56/image.png){width=900 height=144}"
+    },
+    {
+      "id": 257112,
+      "iid": 131,
+      "title": "Mod-Decr Value Not Allowing to Input a Negative Number",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "priority::medium",
+        "type::Bug"
+      ],
+      "description": "Whenever inputting a descope value, it's not allowing to modify the already existing number as a negative number. For instance, if the action already had -50,000, but it needs to be changed to -55,000, it's not allowing the -55,000 to be added - only allowing a positive number. This is also reflecting on the dashboard as a positive number instead of a negative."
+    },
+    {
+      "id": 257114,
+      "iid": 133,
+      "title": "Milestone Status Report Reflecting Incorrect Information",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "priority::high",
+        "type::Bug"
+      ],
+      "description": "The Milestone Status Report is showing incorrect information, based on the report itself it's displaying the Initial / Revised dates, this should be showing the completed dates for milestones that have been finalized, and the most current projected date for milestones that are still in-progress."
+    },
+    {
+      "id": 288461,
+      "iid": 141,
+      "title": "RELAY Action Auto Generation",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "priority::highest",
+        "type::Bug"
+      ],
+      "description": "From issue tracker:\n> Needing to verify if action generation is functioning correctly. In RELAY Legacy, an action was created this morning, but it's not showing it generated in online. \n\n**Notes**"
+    },
+    {
+      "id": 288463,
+      "iid": 143,
+      "title": "Service Requirements page - Service Requirements breadcrumb link",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "priority::high",
+        "type::improvement"
+      ],
+      "description": "The \"Service Requirement\" link in the breadcrumb on a Service Requirement page currently points to `/servicerequirements`, which is not a valid link.\n\nThe link from the breadcrumb should be `/service-requirements`.\n\n![image](/uploads/325947906b66eeedc5f16924f3981922/image.png){width=524 height=175}"
+    },
+    {
+      "id": 319491,
+      "iid": 144,
+      "title": "Action Page - Service Requirement breadcrumb link",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "priority::medium",
+        "type::Improvement"
+      ],
+      "description": "On Action pages, the breadcrumb link to the associated Service Requirement points to `/service-requirements/details/0`, when it should point to `/service-requirements/details/nnn`, where `nnn` represents the ID of the service requirement. \n\n![image](/uploads/ae9e15fb001c4a18fbee83f240e2452f/image.png){width=521 height=251}"
+    }
+  ]
+}

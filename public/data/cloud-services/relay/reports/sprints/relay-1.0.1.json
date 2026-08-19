@@ -1,0 +1,38 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "relay",
+  "milestone_slug": "relay-1.0.1",
+  "title": "RELAY 1.0.1",
+  "start_date": "2026-07-07",
+  "end_date": "2026-07-13",
+  "generated_at": "2026-07-14T06:10:30.777476Z",
+  "test_plan": [
+    {
+      "iid": 124,
+      "title": "Bug: Base Contract Detail View Displays Incorrect \"Active\" Status",
+      "steps": "- Navigate to the \"Base Contracts Overview\" screen and locate a contract with a status other than \"Active\" (e.g., \"Close-out\", \"Dormant\", or \"Archived\").\n- Click on that contract row to open its detail page.\n- Verify that the status displayed on the detail page matches the status shown in the overview list.\n- Repeat the test for contracts with each of the four valid statuses: \"Active\", \"Dormant\", \"Close-Out\", and \"Archived\" to ensure consistency across all status values."
+    },
+    {
+      "iid": 126,
+      "title": "Failing to add report",
+      "steps": "- Open RELAY Live and navigate to the reports section\n- Attempt to add a new report by clicking the \"Add Report\" button\n- Verify that the report is successfully created and displays the entered information (not blank)\n- Confirm that no failure/error message appears during the add report process\n- Refresh the page and verify the newly added report persists and displays correctly"
+    },
+    {
+      "iid": 127,
+      "title": "Dashboard text overflow",
+      "steps": "- Navigate to the view containing the Action Descriptions list\n- Create or identify an action with a description that exceeds the column width (or use the example from the attached image)\n- Observe that the text either wraps to a new line with the row expanding dynamically, or truncates with an ellipsis—and verify the text does not overlap the row below it\n- If truncation is implemented, hover over the truncated description and verify a tooltip displays the full text\n- Verify that the clickable area (hitbox) for each action does not overlap with adjacent actions in the list"
+    }
+  ],
+  "sprint_report": {
+    "goals": "This sprint focused on stabilizing the core user interface and improving the reliability of critical workflows. We targeted three specific issues that were degrading the user experience and preventing users from completing essential tasks like adding reports and viewing accurate contract status.",
+    "summary": "The team resolved a dashboard text overflow issue that was breaking the layout in certain views, fixed a defect preventing users from successfully adding new reports, and corrected a logic error in the Base Contract Detail View that was displaying incorrect active status information. These fixes remove friction from daily user workflows and restore confidence in the accuracy of contract status data, allowing the product to operate as designed without workarounds or manual verification steps.",
+    "metrics": {
+      "initial_count": 3,
+      "initial_weight": 5,
+      "completed_count": 3,
+      "completed_weight": 5,
+      "initial_breakdown": "3 Bugs",
+      "completed_breakdown": "3 Bugs"
+    }
+  }
+}

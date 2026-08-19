@@ -1,0 +1,53 @@
+{
+  "group_slug": "service-management",
+  "project_slug": null,
+  "month": "2026-03",
+  "generated_at": "2026-07-10T21:41:42.087333Z",
+  "sprints": [
+    {
+      "title": "Service Management FY26Q2-4",
+      "start_date": "2026-02-19",
+      "end_date": "2026-03-13",
+      "goals": "This sprint focused on completing critical data integrity updates across the Intake asset management system while ensuring platform stability following the ServiceNow Zurich upgrade. The team aimed to populate missing asset and incident data across multiple location tables and resolve any application issues introduced by the upgrade.",
+      "summary": "The team successfully completed multiple data remediation initiatives across the Intake system, populating program fields for BackupNav hardware assets and updating location and incident data tables for both NavHub and NavPod environments. Two significant asset loads were processed for NavPod GEN II hardware at different locations and timeframes, and a comprehensive location field reference update was applied across both the Incident and GPS Hardware tables to ensure data consistency. Following the ServiceNow Zurich platform upgrade, the team validated application functionality across development, test, and production environments, resolving identified issues to maintain service continuity. These completions strengthen data accuracy across the asset management infrastructure and confirm platform readiness for ongoing operations.",
+      "metrics": {
+        "initial_count": 11,
+        "initial_weight": 47,
+        "completed_count": 11,
+        "completed_weight": 47,
+        "initial_breakdown": "6 Improvements, 5 New Features",
+        "completed_breakdown": "6 Improvements, 5 New Features"
+      }
+    },
+    {
+      "title": "Service Management FY26Q2-5",
+      "start_date": "2026-03-14",
+      "end_date": "2026-03-27",
+      "goals": "This sprint focused on improving data consistency and usability across the Service Management platform by enhancing field visibility, adding critical asset tracking attributes, and aligning system workflows with business processes. The work targeted both the M2S and Fulfillment modules to streamline incident management and asset configuration capabilities.",
+      "summary": "The team completed twelve improvements that strengthen the incident and asset management experience, including the addition of installed date tracking for assets, new financial data categorization for incident records, and enhanced part identification through the addition of part number fields. Critical fixes were also delivered to resolve asset tag population issues on incidents and to ensure resolution codes are automatically set when incident states change to closed, while access controls were tightened on the parts table and system lists were reconciled to eliminate data inconsistencies. These changes reduce manual data entry errors, improve financial visibility, and create a more reliable foundation for downstream reporting and compliance workflows.",
+      "metrics": {
+        "initial_count": 12,
+        "initial_weight": 28,
+        "completed_count": 12,
+        "completed_weight": 28,
+        "initial_breakdown": "12 Others",
+        "completed_breakdown": "12 Others"
+      }
+    },
+    {
+      "title": "Service Management FY26Q3-1",
+      "start_date": "2026-03-31",
+      "end_date": "2026-04-14",
+      "goals": "This sprint aimed to enhance the Intake and Fulfillment incident management systems by improving data field accessibility and workflow automation, while strengthening security controls and enabling better post-submission record management.",
+      "summary": "The team completed eleven improvements across both Intake and Fulfillment systems, focusing on streamlining incident workflows and operational data integrity. Key accomplishments include resolving data field visibility issues in Intake, implementing security controls for incident records through refined access lists, automating contact lookups for incident assignment, and enabling flexible work note editing after submission. These enhancements collectively improve system usability, reduce manual data entry errors, and provide teams with greater flexibility in managing incidents and maintenance records throughout their lifecycle.",
+      "metrics": {
+        "initial_count": 11,
+        "initial_weight": 32,
+        "completed_count": 11,
+        "completed_weight": 32,
+        "initial_breakdown": "11 Others",
+        "completed_breakdown": "11 Others"
+      }
+    }
+  ]
+}

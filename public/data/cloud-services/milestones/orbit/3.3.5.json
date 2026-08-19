@@ -1,0 +1,95 @@
+{
+  "milestone_title": "3.3.5",
+  "milestone_id": 4851,
+  "slug": "3.3.5",
+  "project_id": 91001,
+  "project_name": "ORBIT",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:29.107666Z",
+  "issues": [
+    {
+      "id": 245463,
+      "iid": 1394,
+      "title": "Restrict training waiver actions to Layer/Org Managers and Supervisors",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Customer: CPE ISW",
+        "ORBIT Board::3Q26",
+        "type::New Feature",
+        "workflow::refined"
+      ],
+      "description": "### User Story\n```gherkin\nAs a system administrator\nI want waiver capabilities limited to authorized roles\nSo that only Layer/Org Managers and Supervisors can modify training waiver status\n```\n\n### Acceptance Criteria\n```gherkin\nFeature: Waiver Role-Based Access Control\n\n  Scenario: Authorized role sees waiver options\n    Given I am authenticated as a Layer/Org Manager or Supervisor\n    When I view an individual's training profile\n    Then I see options to waive and reverse waivers\n\n  Scenario: Unauthorized role is blocked\n    Given I am a user without Layer/Org Manager or Supervisor permissions\n    When I view an individual's training profile\n    Then I do not see any waiver-related options\n    And any direct attempt to perform a waiver action is denied with an authorization error\n```"
+    },
+    {
+      "id": 245464,
+      "iid": 1395,
+      "title": "Allow authorized users to waive a single training for an individual",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "Customer: CPE ISW",
+        "ORBIT Board::3Q26",
+        "type::New Feature",
+        "workflow::refined"
+      ],
+      "description": "### User Story\n```gherkin\nAs a Layer/Org Manager or Supervisor\nI want to waive a specific training for an individual\nSo that I can handle a single-training exception efficiently\n```\n\n### Acceptance Criteria\n```gherkin\nFeature: Waive Single Training\n\n  Background:\n    Given I am authenticated as a Layer/Org Manager or Supervisor\n    And I am viewing an individual's training profile\n\n  Scenario: Successfully waive a single training\n    Given the individual has an assigned training that is not yet completed\n    When I select the specific training\n    And I choose \"Waive Training\"\n    And I optionally enter a reason\n    And I confirm the waiver action\n    Then the selected training status is updated to \"Waived\"\n    And the training no longer counts against outstanding/required trainings\n\n  Scenario: Attempt to waive an already completed training\n    Given the individual has a training already marked \"Completed\"\n    When I view that training\n    Then the \"Waive Training\" option is unavailable or appropriately handled\n```"
+    },
+    {
+      "id": 245465,
+      "iid": 1396,
+      "title": "Allow authorized users to waive all remaining trainings for an individual",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "Customer: CPE ISW",
+        "ORBIT Board::3Q26",
+        "type::New Feature",
+        "workflow::refined"
+      ],
+      "description": "### User Story\n```gherkin\nAs a Layer/Org Manager or Supervisor\nI want to waive all remaining incomplete trainings for an individual at once\nSo that I can efficiently clear multiple training exceptions in a single action\n```\n\n### Acceptance Criteria\n```gherkin\nFeature: Waive All Remaining Trainings\n\n  Background:\n    Given I am authenticated as a Layer/Org Manager or Supervisor\n    And I am viewing an individual's training profile\n\n  Scenario: Successfully waive all remaining trainings\n    Given the individual has one or more incomplete trainings\n    When I choose \"Waive All Remaining Trainings\"\n    And I optionally enter a reason\n    And I confirm the bulk waiver action\n    Then all incomplete trainings for that individual are set to \"Waived\"\n    And none of the waived trainings count against outstanding/required trainings\n\n  Scenario: No remaining trainings to waive\n    Given the individual has no incomplete trainings\n    When I view the waiver options\n    Then the \"Waive All Remaining Trainings\" option is unavailable or disabled\n```"
+    },
+    {
+      "id": 245466,
+      "iid": 1397,
+      "title": "Allow authorized users to reverse a previously waived training",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "Customer: CPE ISW",
+        "ORBIT Board::3Q26",
+        "type::New Feature",
+        "workflow::refined"
+      ],
+      "description": "### User Story\n```gherkin\nAs a Layer/Org Manager or Supervisor\nI want to reverse a waiver on a training\nSo that I can restore the training requirement if it was waived in error or circumstances change\n```\n\n### Acceptance Criteria\n```gherkin\nFeature: Reverse Training Waiver\n\n  Background:\n    Given I am authenticated as a Layer/Org Manager or Supervisor\n    And I am viewing an individual's training profile\n\n  Scenario: Successfully reverse a waiver\n    Given a training is currently in \"Waived\" status\n    When I select the waived training\n    And I choose \"Reverse Waiver\"\n    And I confirm the reversal action\n    Then the training status returns to its prior active/required state\n    And the training is once again counted against outstanding/required trainings\n\n  Scenario: Reverse waiver option only available for waived trainings\n    Given a training is not in \"Waived\" status\n    When I view that training\n    Then the \"Reverse Waiver\" option is not available\n```"
+    },
+    {
+      "id": 245467,
+      "iid": 1398,
+      "title": "Record and display audit history for all waiver and reversal actions",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "Customer: CPE ISW",
+        "ORBIT Board::3Q26",
+        "type::New Feature",
+        "workflow::refined"
+      ],
+      "description": "### User Story\n```gherkin\nAs a Layer/Org Manager, Supervisor, or Auditor\nI want every waiver and reversal action recorded with who, when, and why\nSo that there is full traceability and accountability for training exceptions\n```\n\n### Acceptance Criteria\n```gherkin\nFeature: Waiver Audit Trail\n\n  Scenario: Waiver action is logged\n    Given a training has been waived\n    Then the system records the actor's identity, timestamp, and any provided reason\n\n  Scenario: Reversal action is logged\n    Given a waiver has been reversed\n    Then the system records the actor's identity and timestamp\n\n  Scenario: View training history\n    Given a training has had waiver or reversal actions\n    When I view the training's history\n    Then I can see who performed each action, when, and any reason provided\n```"
+    },
+    {
+      "id": 245469,
+      "iid": 1399,
+      "title": "Design and implement UI for waiver actions on the individual training profile",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "Customer: CPE ISW",
+        "ORBIT Board::3Q26",
+        "type::New Feature",
+        "workflow::refined"
+      ],
+      "description": "### User Story\n```gherkin\nAs a Layer/Org Manager or Supervisor\nI want a clear and intuitive interface to waive, bulk-waive, and reverse trainings\nSo that I can manage training exceptions confidently without confusion\n```\n\n### Acceptance Criteria\n```gherkin\nFeature: Waiver Management UI\n\n  Scenario: Waiver controls are clearly presented\n    Given I am an authorized user viewing an individual's training profile\n    Then waiver actions are clearly visible and labeled per training\n    And a bulk \"Waive All Remaining\" action is accessible\n\n  Scenario: Confirmation prevents accidental actions\n    When I trigger a waiver or reversal\n    Then I am prompted with a confirmation dialog before the action completes\n    And I can optionally provide a reason\n\n  Scenario: Status is visually distinct\n    Given trainings have varying statuses\n    Then \"Waived\" trainings are visually distinguishable from active/required ones\n```"
+    }
+  ]
+}

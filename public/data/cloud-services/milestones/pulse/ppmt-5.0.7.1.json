@@ -1,0 +1,26 @@
+{
+  "milestone_title": "PULSE 5.0.7.1",
+  "milestone_id": 2325,
+  "slug": "ppmt-5.0.7.1",
+  "project_id": 91002,
+  "project_name": "PULSE",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:38.113886Z",
+  "issues": [
+    {
+      "id": 186167,
+      "iid": 625,
+      "title": "Modify Org Selection on User Settings page",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "customer:network-ops",
+        "priority::highest",
+        "source::customer-direct",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "**As an** owner or admin **I want** to only select one user group for a given user on the User Settings page to ensure data consistency. \n\n---\n\nAcceptance Criteria:"
+    }
+  ]
+}

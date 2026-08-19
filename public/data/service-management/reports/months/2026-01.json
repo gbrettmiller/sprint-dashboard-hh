@@ -1,0 +1,38 @@
+{
+  "group_slug": "service-management",
+  "project_slug": null,
+  "month": "2026-01",
+  "generated_at": "2026-07-10T21:41:42.086792Z",
+  "sprints": [
+    {
+      "title": "Service Management FY26 Q2-1",
+      "start_date": "2026-01-06",
+      "end_date": "2026-01-15",
+      "goals": "This sprint focused on expanding the financial tracking and status management capabilities within our Fulfillment and Intake systems while improving data governance and organizational alignment. The work aimed to enhance parts inventory management, refine incident handling workflows, and establish foundational support structures for BackupNav operations.",
+      "summary": "The team completed fifteen targeted improvements across multiple system domains, including the addition of financial fields for parts tracking, implementation of new on-hold status reasons for incident management, and removal of obsolete data fields to streamline user interfaces. Key accomplishments include establishing a parts reference table, converting warranty expiration to date-type storage for accurate reporting, restricting visibility of resolution codes by customer tenant, and creating the BackupNav support structure with automated maintenance record population. These changes strengthen financial controls, improve data accuracy for compliance reporting, and enable the preventive maintenance capabilities required for long-term asset management visibility across the organization.",
+      "metrics": {
+        "initial_count": 15,
+        "initial_weight": 34,
+        "completed_count": 15,
+        "completed_weight": 34,
+        "initial_breakdown": "15 Others",
+        "completed_breakdown": "15 Others"
+      }
+    },
+    {
+      "title": "Service Management FY26Q2-2",
+      "start_date": "2026-01-19",
+      "end_date": "2026-01-30",
+      "goals": "This sprint aimed to enhance the Intake asset management system by completing the BackupNav data integration pipeline and improving the foundational data structure through table design work. In parallel, the team strengthened incident management capabilities in Fulfillment and established critical notification infrastructure for M2S customers.",
+      "summary": "The team successfully completed the full BackupNav data integration workflow, including review protocols, import functionality, and the finalized spreadsheet template that will enable seamless asset data ingestion into the system. Supporting this integration, the Intake team designed and implemented the Site Code and Location tables while updating incident workflows to automatically pull configuration item information, establishing a more robust asset-to-incident relationship. On the Fulfillment side, the team improved incident creation visibility by adding submitter notifications, enforced data quality by making the Assignment Group field mandatory, and streamlined the default incident list view to surface the most relevant information to operators. Additionally, the team configured notification routing for FieldGear ORBIT customers in M2S and synchronized code across development and test environments, ensuring consistency and readiness for downstream deployment.",
+      "metrics": {
+        "initial_count": 12,
+        "initial_weight": 28,
+        "completed_count": 12,
+        "completed_weight": 28,
+        "initial_breakdown": "12 Others",
+        "completed_breakdown": "12 Others"
+      }
+    }
+  ]
+}

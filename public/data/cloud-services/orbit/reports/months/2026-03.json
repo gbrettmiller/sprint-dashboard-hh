@@ -1,0 +1,23 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "orbit",
+  "month": "2026-03",
+  "generated_at": "2026-06-30T22:00:17.515531Z",
+  "sprints": [
+    {
+      "title": "v3.3.0",
+      "start_date": "2026-03-26",
+      "end_date": "2026-04-08",
+      "goals": "This sprint focused on enhancing system reliability and user experience by modernizing infrastructure components, resolving critical communication and data integrity issues, and expanding mobile application functionality. The team also worked to improve security controls and ensure accurate data synchronization across platform systems.",
+      "summary": "The team completed 20 significant improvements spanning infrastructure upgrades, backend enhancements, and user-facing features. Key accomplishments include upgrading MongoDB and .NET environments to current versions, resolving daylight savings time calculation errors, implementing Employee ID field integration across user profiles and registration workflows, and addressing critical issues with role management and notification delivery systems. Mobile Check-In now accepts spelled-out numbers and includes an Admin Leave option, while the platform now correctly handles phone verification and excludes read-only managers from unnecessary notifications. These changes collectively strengthen system stability, improve data accuracy in reporting, and provide users with a more intuitive and reliable experience.",
+      "metrics": {
+        "initial_count": 21,
+        "initial_weight": 55,
+        "completed_count": 21,
+        "completed_weight": 55,
+        "initial_breakdown": "10 Others, 9 Improvements, 1 Task, 1 Devops",
+        "completed_breakdown": "10 Others, 9 Improvements, 1 Task, 1 Devops"
+      }
+    }
+  ]
+}

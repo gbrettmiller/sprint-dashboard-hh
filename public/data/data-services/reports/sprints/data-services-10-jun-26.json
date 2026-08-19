@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-10-jun-26",
+  "title": "Data Services 10 JUN 26",
+  "start_date": "2026-05-27",
+  "end_date": "2026-06-09",
+  "generated_at": "2026-07-02T21:57:22.390158Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint aimed to advance multiple applications toward production readiness by establishing foundational infrastructure for test environments, resolving critical operational issues across distributed sites, and delivering user-facing enhancements that improve workflow efficiency and reporting capabilities.",
+    "summary": "The team successfully deployed infrastructure across four major applications, creating required lists and libraries for Access Requests, AMIT, SALT, and Compliance Review in test and production environments while pushing three applications to production. Critical bugs affecting attribute synchronization across sites, supervisor selection accuracy, and PDF generation were resolved, and significant user experience improvements were implemented including dynamic task filtering, approver visibility into their approved requests, and enhanced administrative controls. These completions establish stable test environments for ongoing development, eliminate blocking production issues, and deliver tangible improvements to end-user workflows across the platform.",
+    "metrics": {
+      "initial_count": 34,
+      "initial_weight": 59,
+      "completed_count": 31,
+      "completed_weight": 52,
+      "initial_breakdown": "18 Others, 9 Improvements, 4 New Features, 3 Bugs",
+      "completed_breakdown": "18 Others, 7 Improvements, 3 New Features, 3 Bugs"
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "orbit",
+  "milestone_slug": "v3.3.1.0",
+  "title": "v3.3.1.0",
+  "start_date": "2026-04-17",
+  "end_date": "2026-04-30",
+  "generated_at": "2026-06-30T21:58:00.087563Z",
+  "test_plan": [
+    {
+      "iid": 860,
+      "title": "[ORBIT-81] Allow for check-in based on user's local time",
+      "steps": "- Open the check-in submission page and verify the system displays the current local date as the reporting date (not UTC date)\n- Submit check-in prior to 2359 in your local timezone and confirm the submission is accepted for the current local day\n- Simulate crossing local midnight (0000) by adjusting system time or accessing from a different timezone, and verify the reporting date advances to the next local calendar day\n- Create a Future Check-in for \"tomorrow\" before local midnight and confirm the system sets the reporting date to the next local calendar day (not based on UTC)\n- Access the check-in feature simultaneously from two devices/browsers in different timezones and verify each displays the reporting date based on their respective local time, not a shared UTC date"
+    },
+    {
+      "iid": 1202,
+      "title": "Email verification via code for Notification Information",
+      "steps": "- Navigate to the \"Edit Profile\" page, enter a new email in the \"Additional Email\" field, and click \"Save\" to confirm a verification code is sent and a verification section appears at the top with \"Verification Required\" status.\n- Retrieve the verification code from the email inbox, enter it in the verification field, and click \"Verify\" to confirm the verification section disappears and the status updates to \"Verified\" with a success message.\n- On the verification field, enter an incorrect code and click \"Verify\" to confirm an error message appears and the verification section remains visible.\n- Log out and log back in, then navigate to \"Edit Profile\" to confirm the verification section does not appear for a previously verified email and the status displays \"Verified.\"\n- Change the \"Additional Email\" to a different address and save to confirm a new verification code is sent, the verification section reappears, and the status shows \"Verification Required.\""
+    },
+    {
+      "iid": 1207,
+      "title": "SQL CreatedBy Bug",
+      "steps": "- Create a new employee record as User A and verify the CreatedBy field shows User A\n- Have User B update the employee record and verify the CreatedBy field still shows User A (not User B)\n- Query the database to confirm the CreatedBy column contains User A's information, not User B's\n- Update the record multiple times with different users and verify CreatedBy remains unchanged after each update\n- Verify that historical records that were incorrectly updated now display the correct original creator"
+    },
+    {
+      "iid": 1219,
+      "title": "Data Sync: Update User Records in SQL with Employee ID",
+      "steps": "- Backfill an Employee ID value for an existing user in MongoDB through the ORBIT application\n- Finalize the backfill process and verify the operation completes successfully\n- Query the SQL reporting database to confirm the user's record was updated with the correct Employee ID value using their personaID\n- Verify in Power BI that the updated Employee ID data is reflected in the historical user reporting\n- Test upsert logic by backfilling an Employee ID for a user whose record does not exist in SQL, and confirm a new record is created with the correct personaID and Employee ID value"
+    },
+    {
+      "iid": 1223,
+      "title": "Visually Distinguish Active and Inactive Roles During Role Assignment",
+      "steps": "- Log in as an Organization Manager or Admin and navigate to the \"Create New Role\" page\n- Select a user who has both active and inactive roles assigned, and verify that inactive roles display a clear visual distinction (greyed out text, \"(Inactive)\" label, strikethrough, or similar indicator) while active roles appear in standard format\n- Select a user who has only active roles assigned, and verify that all roles in the list appear in the standard \"active\" format with no inactive styling applied\n- Verify that the visual distinction between active and inactive roles is consistent across different users and role combinations\n- Confirm that the visual indicator does not interfere with the ability to select or assign new roles to the user"
+    },
+    {
+      "iid": 1224,
+      "title": "Prevent Duplicate Role Assignment",
+      "steps": "- Log in as an Organization Manager or Admin and navigate to the role creation page for an existing user\n- Attempt to assign a role that the user already has in an \"Active\" state and click save\n- Verify that no duplicate role is created, an error message is displayed, and the user is redirected to the Customer Role index page\n- Navigate back to role creation for a user who has an \"Inactive\" role and attempt to assign the same role again\n- Verify that the inactive role is automatically reactivated, no duplicate role is created, and the user is redirected to the Customer Role index page"
+    },
+    {
+      "iid": 1231,
+      "title": "Don't Allow Invalid Transfer Requests",
+      "steps": "- Navigate to the Employee Transfer page and verify the Request Transfer button is initially disabled\n- Type a name in the Employee search field without selecting from results and confirm the button remains disabled\n- Select a valid user from the search results dropdown and verify the button becomes enabled (assuming other required fields are populated)\n- Clear the Employee field after a valid selection and confirm the Request Transfer button becomes disabled again\n- Attempt to modify the Employee field text without selecting from results and verify the button stays disabled"
+    },
+    {
+      "iid": 1235,
+      "title": "Show Layer Name for existing roles",
+      "steps": "- Navigate to the Create Role screen for a user with an existing \"Layer Manager\" role for a specific layer (e.g., HQ)\n- Verify that the existing role is displayed as \"Layer Manager - [Layer Name]\" (e.g., \"Layer Manager - HQ\")\n- Assign a user multiple Layer Manager roles for different layers and open the Create Role screen\n- Confirm each role displays with its respective layer name (e.g., \"Layer Manager - HQ\", \"Layer Manager - DIV\")\n- Verify that non-Layer-Manager roles (e.g., Admin, Editor) display without any layer name suffix or modification"
+    },
+    {
+      "iid": 1256,
+      "title": "Employee Pending Transfers are not shown in Home Page Alerts",
+      "steps": "- Navigate to the Home Page and locate the Alerts section\n- Verify that pending employee transfers are displayed in the Alerts section\n- Create or trigger a new pending transfer for a employee record\n- Refresh the Home Page and confirm the pending transfer alert appears in the Alerts section\n- Validate that the alert contains accurate transfer details (employee name, transfer date, destination department)"
+    },
+    {
+      "iid": 1257,
+      "title": "Fix sub-page search method to allow re-searching",
+      "steps": "- Navigate to a page with a employee search field (Employee Transfer or Create Role page)\n- Search for and select a employee record from the dropdown results\n- Modify or backspace the search text while keeping more than 2 characters, and verify new search results appear in the dropdown\n- Clear all text from the search field, type a new name (more than 2 characters), and verify matching results appear\n- On Employee Transfer page, verify that Persona ID, Current Organization, and Current Employee Type fields clear when search text is modified after a selection\n- On Create Role page, verify that selecting a different employee updates the existing roles table to show the newly selected person's roles"
+    },
+    {
+      "iid": 1258,
+      "title": "Update display format on Roles page",
+      "steps": "- Navigate to a customer organization's Roles page and verify that roles without an associated scope display as type only (e.g., \"Organization Manager\")\n- Verify that \"Layer Manager\" and \"Company Lead\" roles with defined scopes display in \"Role Type - Scope\" format (e.g., \"Layer Manager - Headquarters\")\n- Verify that \"Notification Manager\" roles with defined scopes display as \"Notification Manager - [Scope]\"\n- Verify that \"Notification Manager\" roles without a defined scope display as type only (e.g., \"Notification Manager\")\n- Confirm the display format is consistent across multiple roles with varying scope configurations on the same page"
+    },
+    {
+      "iid": 1259,
+      "title": "Add \"Hide Layer level label\" to organization Layers page",
+      "steps": "- Navigate to an organization's Layers page and verify the layer level label toggle defaults to Off, with layers displaying only their names (e.g., \"ARDAP\")\n- Toggle the layer level label option to On and verify all layers now display as \"Level - Name\" format (e.g., \"PM - ARDAP\")\n- Toggle the layer level label option back to Off and verify layers revert to displaying only their names\n- Refresh the page and verify the toggle state persists with the correct layer display format\n- Test with multiple organizations to ensure the toggle behavior works consistently across different Layers pages"
+    },
+    {
+      "iid": 1260,
+      "title": "Investigate Not Sent Check-In Reminder Emails",
+      "steps": "- Trigger a check-in reminder batch process and note the exact timestamp when it begins processing\n- Verify that all employee records processed in the batch receive the same DateReminderCheckIn timestamp (matching the batch start time), regardless of their position in the processing queue\n- Wait 10 minutes, then trigger another reminder batch and confirm that employee from the first batch are not re-evaluated or sent duplicate reminders\n- Process a large batch of employee records and confirm the DateReminderCheckIn timestamps remain consistent across all records (no drift between early and late-processed records)\n- Verify that the 14-minute deduplication window is applied consistently, preventing duplicate reminder emails within a single batch cycle"
+    },
+    {
+      "iid": 1262,
+      "title": "Use Azure Environment Variable to Display/Hide Warning Banner",
+      "steps": "- Verify the warning banner is hidden by default in the PROD environment\n- Set the Azure Environment variable to enable the warning banner and confirm it displays correctly\n- Set the Azure Environment variable to disable the warning banner and confirm it is hidden\n- Test in multiple environments (DEV, STAGING, PROD) to ensure the environment variable is properly read and applied in each"
+    },
+    {
+      "iid": 1263,
+      "title": "Fix CustomerLayer SP to ensure SortOrder is not null",
+      "steps": "- Rename a CustomerLayer at any level (1-7) in the organization hierarchy\n- Verify that all descendant layers retain their SortOrder values in the DW_Organization table after the rename\n- Run the DW_Organization_RebuildSortOrder_Level stored procedure and confirm SortOrder remains populated (non-null) for all descendant rows\n- Create a role belonging to a descendant layer and verify Queue.CustomerRole.ProcessToSql() completes without DBNull-to-string cast exceptions when looking up OrganizationSortOrder\n- Rename a layer with the same name under a different customer and confirm only the correct ancestor's descendants are updated, not unrelated rows with the same layer name"
+    },
+    {
+      "iid": 1264,
+      "title": "Bug with missing \"Order\" for Department, Division, and SubDivision lists.",
+      "steps": "- Navigate to the Customer Create/Edit form\n- Verify that the Department dropdown list loads and displays options in alphabetical order by Name\n- Verify that the Division dropdown list loads and displays options in alphabetical order by Name\n- Verify that the SubDivision dropdown list loads and displays options in alphabetical order by Name\n- Confirm that no 500 error or InvalidOperationException occurs when the form renders with populated dropdown lists"
+    },
+    {
+      "iid": 1309,
+      "title": "Filter Twilio SMS delivery status webhooks to reduce MongoDB load",
+      "steps": "- Send a test SMS via Twilio and verify that `queued`, `sending`, and `scheduled` status callbacks return HTTP 200 without creating or updating database records in MongoDB.\n- Send a test SMS and confirm that `sent`, `delivered`, `undelivered`, and `failed` status callbacks trigger MongoDB write operations and update the message status correctly.\n- During a simulated check-in blast with multiple concurrent SMS messages, monitor MongoDB query load and verify it does not spike on intermediate statuses (`queued`, `sending`).\n- Validate that final delivery status (e.g., `delivered` or `failed`) is correctly persisted and visible in the application UI."
+    },
+    {
+      "iid": 1310,
+      "title": "Fix CustomerLayerName.ToBsonDocument generates a random _id on every call",
+      "steps": "- Create a new CustomerLayer with a CustomerLayerName and save it\n- Retrieve the CustomerLayer and verify the LayerName._id matches the originally assigned ID\n- Fetch the CustomerLayerName by its ID and confirm it returns the correct document (not null)\n- Update the CustomerLayer and verify the LayerName._id remains consistent across CustomerLayer, CustomerRole, Employee, and Tda collections\n- Query the database directly to confirm the stored LayerName._id matches the in-memory ID value"
+    },
+    {
+      "iid": 1311,
+      "title": "NullReferenceException in NotificationEvent view when NotificationResponse.Employee is null",
+      "steps": "- Navigate to a Notification Event whose response list contains an entry where `Employee` is null or orphaned; verify the page loads without throwing a NullReferenceException.\n- Verify that Notification Events with all valid `Employee` records still sort and display correctly by name.\n- Confirm that the NotificationEvent view renders properly in both scenarios (with and without null Employee entries)."
+    }
+  ],
+  "sprint_report": {
+    "goals": "This sprint focused on improving system stability and user experience across critical operational workflows, particularly around employee management, notification handling, and administrative visibility. The team also strengthened the foundation of lookup and reference data management to prevent data integrity issues.",
+    "summary": "The team resolved several high-impact bugs affecting core workflows: fixed null reference exceptions in notifications, corrected the employee transfers navigation error, and eliminated duplicate role assignments while preventing invalid transfer requests. Additionally, the sprint delivered meaningful user-facing improvements including timezone-aware check-in scheduling based on local time, enhanced role assignment UI to distinguish active and inactive statuses, and better visibility of pending transfers in home page alerts. Backend improvements included optimizing Twilio webhook filtering to reduce database load, correcting sort order issues across rank classification lookups, and implementing email verification for notification settings. The work also ensured data quality in employee synchronization by updating user records with Employee ID identifiers, establishing a more reliable foundation for downstream system integrations.",
+    "metrics": {
+      "initial_count": 47,
+      "initial_weight": 70,
+      "completed_count": 47,
+      "completed_weight": 70,
+      "initial_breakdown": "33 Others, 8 Improvements, 6 Bugs",
+      "completed_breakdown": "33 Others, 8 Improvements, 6 Bugs"
+    }
+  }
+}

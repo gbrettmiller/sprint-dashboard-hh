@@ -1,0 +1,22 @@
+{
+  "group_slug": "service-management",
+  "project_slug": null,
+  "milestone_slug": "service-management-fy26-q1-4",
+  "title": "Service Management FY26 Q1-4",
+  "start_date": "2025-12-18",
+  "end_date": "2025-12-31",
+  "generated_at": "2026-07-10T21:41:06.380694Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on enhancing our Service Management platform's asset management capabilities and improving notification reliability across the enterprise. We prioritized integrating FieldGear asset data into our configuration management system while addressing critical operational gaps in vehicle maintenance tracking and communication workflows.",
+    "summary": "The team successfully implemented automated asset ingestion from the FieldGear system through a new client script that populates configuration items directly from source data, eliminating manual entry errors and reducing administrative overhead. We resolved notification delivery failures affecting group communications, completed the GPS vehicle changeover documentation, and expanded the maintenance form to include BackupNav sections alongside critical updates for NavHub GEN II Fleet Vehicle parts management. Additionally, we improved the configuration item interface by implementing a cascading dropdown linked to vessel selection, streamlining data entry for users managing multi-platform assets. These enhancements collectively strengthen asset visibility, reduce operational friction in maintenance workflows, and ensure stakeholders receive timely communications across all supported platforms.",
+    "metrics": {
+      "initial_count": 8,
+      "initial_weight": 22,
+      "completed_count": 8,
+      "completed_weight": 22,
+      "initial_breakdown": "8 Others",
+      "completed_breakdown": "8 Others"
+    }
+  }
+}

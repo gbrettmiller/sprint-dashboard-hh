@@ -1,0 +1,53 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "month": "2026-01",
+  "generated_at": "2026-07-02T21:57:26.274286Z",
+  "sprints": [
+    {
+      "title": "Data Services 7 JAN 26",
+      "start_date": "2025-12-17",
+      "end_date": "2026-01-07",
+      "goals": "This sprint focused on stabilizing core application functionality across multiple modules while expanding administrative capabilities and improving data security posture. The team prioritized bug fixes in existing workflows, enhanced user interface consistency, and implemented critical security controls for document handling and data retrieval operations.",
+      "summary": "The team delivered 27 completed items spanning six product lines, with particular emphasis on resolving user-facing issues in the Records API, Access Requests, and Compliance Review modules that were blocking normal operations. Key accomplishments include fixing dropdown and release type functionality in Records API, implementing security controls for SharePoint library access in Compliance Review, standardizing required field validation across Access Requests, and improving reporting accuracy in the I/O Power BI environment. Additionally, the team advanced foundational work through schema updates, security model documentation, and administrative guides that position these systems for sustained operation and governance. These fixes and enhancements reduce operational friction, strengthen data security compliance, and improve the user experience across all deployed modules.",
+      "metrics": {
+        "initial_count": 27,
+        "initial_weight": 58,
+        "completed_count": 27,
+        "completed_weight": 58,
+        "initial_breakdown": "14 Others, 11 Improvements, 2 Bugs",
+        "completed_breakdown": "14 Others, 11 Improvements, 2 Bugs"
+      }
+    },
+    {
+      "title": "Data Services 21 JAN 26",
+      "start_date": "2026-01-07",
+      "end_date": "2026-01-21",
+      "goals": "This sprint aimed to advance four major product lines—Compliance Review Records Management, Records API routing and approvals, Finance Portal contract lifecycle management, and I/O business intelligence—while stabilizing core applications through targeted bug fixes and operational deployments. The team prioritized delivering enterprise-scale capabilities, improving user experience through interface refinements, and expanding platform reach across test and production environments.",
+      "summary": "The sprint delivered significant enhancements across multiple systems: Compliance Review gained critical record management features including mapping views, multi-site collection architecture, and enhanced search and filter capabilities; Records API received workflow improvements with customizable routing, alphabetical sorting, team filtering, and archive functionality; Finance Portal moved to live production with full contract milestone tracking, Budget Status integration, and comprehensive views across funding, PAE, PMRT, and Division domains; and I/O deployed enterprise BI reporting and HRDB menu items to production. Supporting this work, the team resolved numerous user experience issues spanning duplicate value displays, field naming conventions, permission-based filtering, and application performance while creating essential user guides and deploying TCT updates across all customer environments. These completions position the platform for broader enterprise adoption and provide customers with more robust tools for records management, approvals, contract oversight, and business intelligence.",
+      "metrics": {
+        "initial_count": 42,
+        "initial_weight": 98,
+        "completed_count": 39,
+        "completed_weight": 87,
+        "initial_breakdown": "27 Others, 10 Improvements, 3 New Features, 2 Bugs",
+        "completed_breakdown": "27 Others, 8 Improvements, 2 Bugs, 2 New Features"
+      }
+    },
+    {
+      "title": "Data Services 4 FEB 26",
+      "start_date": "2026-01-21",
+      "end_date": "2026-02-04",
+      "goals": "This sprint focused on advancing four critical applications toward production readiness by completing core feature implementations, resolving functional defects, and establishing operational governance controls. The team worked to enhance user experience across multiple systems while ensuring proper administrative oversight and data integrity in test and production environments.",
+      "summary": "The team delivered substantial progress across Access Requests, Compliance Review, Records API, I/O, TCT, and Finance Portal applications, with 22 completed issues spanning feature development, bug resolution, and deployment activities. Key accomplishments include deploying Compliance Review to the test environment with improved notification and labeling functionality, establishing dynamic form capabilities and read-only controls in Access Requests, moving TCT and Finance Portal to production, and pushing I/O updates across multiple customer environments. These completions establish the foundation for operational use while improving data management practices, administrative controls, and user workflows across the portfolio.",
+      "metrics": {
+        "initial_count": 27,
+        "initial_weight": 59,
+        "completed_count": 23,
+        "completed_weight": 45,
+        "initial_breakdown": "13 Improvements, 11 Others, 3 New Features",
+        "completed_breakdown": "11 Others, 10 Improvements, 2 New Features"
+      }
+    }
+  ]
+}

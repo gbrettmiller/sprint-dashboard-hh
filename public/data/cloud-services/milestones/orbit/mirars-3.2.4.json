@@ -1,0 +1,88 @@
+{
+  "milestone_title": "ORBIT 3.2.4",
+  "milestone_id": 1973,
+  "slug": "mirars-3.2.4",
+  "project_id": 91001,
+  "project_name": "ORBIT",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:29.510431Z",
+  "issues": [
+    {
+      "id": 153053,
+      "iid": 764,
+      "title": "Remove period from disclaimer agree button",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Customer: Internal",
+        "type::Improvement"
+      ],
+      "description": "![image](/uploads/a23d5ecd033bcab099e74a60ca0e7193/image.png){width=128 height=44}"
+    },
+    {
+      "id": 153054,
+      "iid": 765,
+      "title": "Role based view only access to ORBIT",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "customer:platform-engineering",
+        "source::gov-board-F725Q3",
+        "type::New Feature"
+      ],
+      "description": "As an admin or Organization Manager, I want to be able to assign users a read-only role at the organization or layer level so that they can see the status of people within the org / layer but not have access to modify any content. \n\nAcceptance criteria:\n* When admin / org manager creates a new role, they can select the option \"Read Only\"\n* When \"Read Only\" option is selected, the admin/org manager can select a layer\n* A user assigned the Read Only role can view, but not edit or update, check-in information for people in the org / layer"
+    },
+    {
+      "id": 153055,
+      "iid": 766,
+      "title": "Allow for Training Waiver",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "customer:data-analytics",
+        "source::gov-board-F725Q3",
+        "type::New Feature",
+        "workflow::refined"
+      ],
+      "description": "As a Layer Manager, I want to be able to mark a person exempt from training / tasks and provide a reason for why they are exempt.\n\nACCEPTANCE CRITERIA\n\nLayer Manager\n- User Employee page includes an option for Layer Manager to exempt user from training\n- Default is \"not exempt\"\n- If \"exempt\" is selected, there is a mandatory \"reason\" field\n User\n- User does not see Tasks on home page\n- User does not see Tasks on Profile\n- User does not see Tasks in menu\n\nSystem\n- Task exemption status stored in SQL Server Reporting database\n- Task exemption reason stored in SQL Server Reporting database\n- Layer Mananger name who exempted user stored in SQL Server Reporting database\n\nTASKS\n\n- Add Task exemption boolean and reason to employee form\n- Update Home page to not show Tasks if user is exempt\n- Update Profile page to not show Tasks if user is exempt\n- Update navigation menu to not show Tasks if user is exempt\n- Update tables in SQL Server Reporting database\n\n_Original customer request: \n- Enhance the Exempt feature to include exempt from Check-In and/or Training, allow to select check-in, training or both\n- Add an exempt end date \n- Have an exemption form that HR POCs can use to submit a request to HQ for a member which would show up under Alerts on the main page for HQ approval. \n- HQ would then mark the member as exempt with an end date and they would choose check-in, training or both. \n- Generate an automated email to the HR POC and HQ to remind them of the end date a week in advance._"
+    },
+    {
+      "id": 153056,
+      "iid": 767,
+      "title": "Improve Employee search",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "customer:platform-engineering",
+        "source::gov-board-fy25q4",
+        "type::Improvement"
+      ],
+      "description": "Employee Search: Improve the search bar functionality throughout the app. Ideally the search would return results in the following priority: 1. Exact match to query 2. Results with partial match 3. Closest similarity. Currently the search bar doesn\u2019t return results with 2 or less letters"
+    },
+    {
+      "id": 153133,
+      "iid": 777,
+      "title": "Check-In reminder emails should not be sent on dates identified as holidays",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Customer: Internal",
+        "Type: Bug"
+      ],
+      "description": "On Columbus Day 2025 (October 13), email reminder emails were sent to employees at 0830 and 0845 (local time). Reminder emails and Supervisor reminder emails should not be sent on days identified as holidays."
+    },
+    {
+      "id": 153138,
+      "iid": 781,
+      "title": "Implement Content Filtering for Contracts page (Active, Inactive, All)",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Customer: Internal",
+        "type::story",
+        "workflow::ready-for-release"
+      ],
+      "description": "As a user with access to the Contracts page (in Customer Settings panel), I want the Contracts page to display only Active items by default when the page is loaded, even though all data (active and inactive) is retrieved. I want to be able to switch between \"Active\", \"Inactive\", and \"All\" items using a filter implemented on the page. The currently selected filter option should be highlighted and disabled to indicate the active filter. \n\nAcceptance Criteria: \n- Page retrieves all data (active and inactive)\n- Default view shows only Active items\n- Filter options are available for \"Active\", \"Inactive\", and \"All\" \n- Filtering is performed entirely on the client-side\n- Selected filter option is highlighted and disabled\n- UI is responsive and accessible"
+    }
+  ]
+}

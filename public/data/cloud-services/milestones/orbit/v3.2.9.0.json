@@ -1,0 +1,29 @@
+{
+  "milestone_title": "v3.2.9.0",
+  "milestone_id": 2352,
+  "slug": "v3.2.9.0",
+  "project_id": 91001,
+  "project_name": "ORBIT",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:26.126287Z",
+  "issues": [
+    {
+      "id": 189509,
+      "iid": 1171,
+      "title": "Notifications company-issued / Personal Responses as One Record",
+      "weight": 5,
+      "state": "closed",
+      "labels": [],
+      "description": "Per GCS, they would like to see a response from either a personal mobile or company-issued mobile as one record - they're concerned with who hasn't responded, so the related app-generated report should also only show one record per person.\n\n---\n\nThe ORBIT Notification feature allows users to identify up to two phone numbers at which to receive SMS notifications. When a notification manager sends an SMS notification, they can choose to either require or not require a response from the recipients. If they choose to require a response, the allowed responses will be a single digit from a pre-configured list. It is expected that someone with just one phone number in their profile will respond from that number. However, a user with two phone numbers may reply from either. \n\nOn the Notification Event page, the Notification Manager needs to see the status of responses, i.e. a list of people who have responded and a list of people who have not. Additionally, the list of people who have responded should be sorted by response, i.e. all of the \"1\" responses together, etc. \n\nIf a person with two phone numbers responds from either of their numbers, their name and response must show up in the \"has responded\" section, and their name must not show up in the \"has not responded\" section."
+    },
+    {
+      "id": 190082,
+      "iid": 1172,
+      "title": "Create hidden inputs for newly disabled register page fields",
+      "weight": 1,
+      "state": "closed",
+      "labels": [],
+      "description": ""
+    }
+  ]
+}

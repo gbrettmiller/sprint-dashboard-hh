@@ -1,0 +1,85 @@
+{
+  "milestone_title": "RELAY 1.0.4",
+  "milestone_id": 5563,
+  "slug": "relay-1.0.4",
+  "project_id": 91003,
+  "project_name": "RELAY",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:40.965989Z",
+  "issues": [
+    {
+      "id": 288450,
+      "iid": 138,
+      "title": "bug: Duplicated records in Service Requirements screen",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "priority::high",
+        "type::Bug"
+      ],
+      "description": "From issue tracker:\n> There are at least 5 employee badge/PKI service requirements listed in the Service Requirements view, 2 PSDR, 2 RSS, and possible other duplicates\n\n**Notes**\nAs noted in the issue tracker item, this affects some Service Requirements entries but not all. For those that it does affect, it appears that a copy of the Service Requirement item is added to the list any time that Service Requirement is clicked on from the screen and opened. \n\nFor example, if you click on the \"RSS\" item on the Service Requirements screen and then navigate back to the Service Requirements screen, you will see an additional copy of the RSS item. (Same for the others that are exhibiting this behavior.)\n\nThis is happening on both TEST and PROD. I have not confirmed if it is affecting all the same items on each. I have not done any research to determine commonalities among the affected items nor differences with the unaffected items."
+    },
+    {
+      "id": 288462,
+      "iid": 142,
+      "title": "Schedule Status showing RED when completed date is same as initial date",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "priority::high",
+        "type::Bug"
+      ],
+      "description": "From issue tracker:\n> RELAY Schedules are showing red when the completed date is the same as the initial / revised date. This needs to be shown as green for this and red if the completed date lands after the initial / revised date\n\n**Notes**"
+    },
+    {
+      "id": 320748,
+      "iid": 149,
+      "title": "Inner Exception Error - Awarding Mod",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "priority::medium",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "Receiving an Inner Exception Error in 25F0422, when attempting to Save Mod after entering the SECTION A - SUPPLEMENTAL INFORMATION from Page 2 of the Award Modification for the MOD Justification and the MOD Impact.\nMOD impact 8-10 had to be cut and saved in the action comments to get past the error and be able to save the MOD.\n\nAllowing more character/lines to be used in the MOD Justification and the MOD Impact area could be beneficial since these areas can get lengthy in certain new awards/re-competes/modifications.\n\n![25F0422_MOD_Justification_and_MOD_Impact](/uploads/debf03e1cf739e608dd8d96b1319eb8b/25F0422_MOD_Justification_and_MOD_Impact.png){width=891 height=542}\n\n![Inner_Exception_Error_in_RELAY_Online_25F0422](/uploads/237d9a11e882d204bae7df8e121626a9/Inner_Exception_Error_in_RELAY_Online_25F0422.png){width=900 height=84}"
+    },
+    {
+      "id": 320750,
+      "iid": 150,
+      "title": "Award Details showing incorrect exercised mod",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "priority::medium",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "After exercising a mod, the award details section is not reflecting that the option got exercised. This is causing the status to not remain active and moving the task order off the user's dashboard.\n\n![Screenshot_2026-07-31_150119](/uploads/6362b70e445f62961e462d11742931a8/Screenshot_2026-07-31_150119.jpg){width=900 height=478}"
+    },
+    {
+      "id": 380262,
+      "iid": 154,
+      "title": "Open and Completed Action Data is Missing on Base Contract",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "priority::high",
+        "type::Bug"
+      ],
+      "description": "Screen shots provided for comparison of each database this morning using PLS Contract W15QKN-19-D-0042.  A spot check of current and expired IDIQ contracts revealed no open or completed actions.\n\nAlso, there doesn't seem to be a way to create actions for base actions\n\n![image](/uploads/85d1cd03e9d2654ad3e45156db87f9d1/image.png){width=900 height=454}\n\n![image](/uploads/f865d80ae3bbc6cf2b03c89b45be3d68/image.png){width=900 height=176}"
+    },
+    {
+      "id": 465927,
+      "iid": 156,
+      "title": "Dashboard view should match Task Order view",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "priority::medium",
+        "type::Improvement"
+      ],
+      "description": ""
+    }
+  ]
+}

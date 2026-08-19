@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-5-nov",
+  "title": "Data Services 5 Nov",
+  "start_date": "2025-10-22",
+  "end_date": "2025-11-05",
+  "generated_at": "2026-07-02T21:56:22.644187Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint aimed to standardize the user interface across all applications through a unified header component while simultaneously addressing critical data flow, permissions, and form validation issues that were blocking user workflows. The team also focused on removing technical debt and deprecated application resources to improve system maintainability and performance.",
+    "summary": "The sprint delivered a comprehensive header component rollout across five applications (I/O, ITAM, RIST, TCT, and Access Requests), ensuring consistent branding and navigation for end users. The team resolved critical functional gaps including transfer workflows in the I/O application, permission controls for application configuration, form field validation issues in RIST, and debugging of position editing capabilities. Additionally, the sprint cleared deprecated screens and formulas from multiple applications, deployed TCT and ITAM updates to test environments, and completed UI mockup improvements for the Purchasing and Catalog Sync applications, collectively reducing maintenance overhead and preparing systems for production readiness.",
+    "metrics": {
+      "initial_count": 35,
+      "initial_weight": 60,
+      "completed_count": 34,
+      "completed_weight": 57,
+      "initial_breakdown": "16 Improvements, 15 Others, 3 Bugs, 1 New Feature",
+      "completed_breakdown": "15 Others, 15 Improvements, 3 Bugs, 1 New Feature"
+    }
+  }
+}

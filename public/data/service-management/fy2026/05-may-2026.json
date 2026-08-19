@@ -1,0 +1,497 @@
+{
+  "fiscal_year": 2026,
+  "month": 5,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 4935,
+      "title": "Service Management FY26Q3-3",
+      "start_date": "2026-04-28",
+      "end_date": "2026-05-12",
+      "state": 3,
+      "source": "iteration",
+      "goal": null,
+      "initial_totals": {
+        "count": 5,
+        "weight": 15
+      },
+      "burndown": [
+        {
+          "date": "2026-04-28",
+          "remaining_count": 5,
+          "remaining_weight": 15
+        },
+        {
+          "date": "2026-04-29",
+          "remaining_count": 4,
+          "remaining_weight": 14
+        },
+        {
+          "date": "2026-04-30",
+          "remaining_count": 4,
+          "remaining_weight": 14
+        },
+        {
+          "date": "2026-05-01",
+          "remaining_count": 4,
+          "remaining_weight": 14
+        },
+        {
+          "date": "2026-05-02",
+          "remaining_count": 4,
+          "remaining_weight": 14
+        },
+        {
+          "date": "2026-05-03",
+          "remaining_count": 4,
+          "remaining_weight": 14
+        },
+        {
+          "date": "2026-05-04",
+          "remaining_count": 3,
+          "remaining_weight": 11
+        },
+        {
+          "date": "2026-05-05",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2026-05-06",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2026-05-07",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2026-05-08",
+          "remaining_count": 3,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2026-05-09",
+          "remaining_count": 3,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2026-05-10",
+          "remaining_count": 3,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2026-05-11",
+          "remaining_count": 3,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2026-05-12",
+          "remaining_count": 1,
+          "remaining_weight": 3
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 5,
+        "new_feature": 1,
+        "other": 0
+      },
+      "completed": {
+        "count": 6,
+        "weight": 16
+      },
+      "issues": [
+        {
+          "id": 221102,
+          "iid": 66,
+          "title": "Fulfillment Update columns in Asset Config Workspace List",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Review Complete",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-05-08",
+          "date_closed": "2026-05-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 219071,
+          "iid": 71,
+          "title": "Intake Asset Vehicle Initial Hours and Initial Miles update",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-04-28",
+          "date_closed": "2026-05-05",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 219068,
+          "iid": 70,
+          "title": "Intake BackupNav Consumable Asset Update",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-04-28",
+          "date_closed": "2026-05-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 218936,
+          "iid": 68,
+          "title": "Intake Add Initial Hours and Initial Miles fields to Asset and Maintenance",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-04-28",
+          "date_closed": "2026-04-29",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 218934,
+          "iid": 67,
+          "title": "Intake NavHub GEN II Asset Update Vehicle Type",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-04-28",
+          "date_closed": "2026-05-04",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 215156,
+          "iid": 65,
+          "title": "Fulfillment Configure Performance Analytics KPI to Capture Open Tickets Trend",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::New-Feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-04-28",
+          "date_closed": "2026-05-12",
+          "date_removed_from_sprint": null
+        }
+      ]
+    },
+    {
+      "id": 5031,
+      "title": "Service Management FY26Q3-4",
+      "start_date": "2026-05-14",
+      "end_date": "2026-05-29",
+      "state": 3,
+      "source": "iteration",
+      "goal": "Goal:\n\n* Continue SPM pilot in Test environment",
+      "initial_totals": {
+        "count": 10,
+        "weight": 32
+      },
+      "burndown": [
+        {
+          "date": "2026-05-14",
+          "remaining_count": 9,
+          "remaining_weight": 31
+        },
+        {
+          "date": "2026-05-15",
+          "remaining_count": 8,
+          "remaining_weight": 28
+        },
+        {
+          "date": "2026-05-16",
+          "remaining_count": 8,
+          "remaining_weight": 28
+        },
+        {
+          "date": "2026-05-17",
+          "remaining_count": 8,
+          "remaining_weight": 28
+        },
+        {
+          "date": "2026-05-18",
+          "remaining_count": 8,
+          "remaining_weight": 28
+        },
+        {
+          "date": "2026-05-19",
+          "remaining_count": 8,
+          "remaining_weight": 28
+        },
+        {
+          "date": "2026-05-20",
+          "remaining_count": 6,
+          "remaining_weight": 22
+        },
+        {
+          "date": "2026-05-21",
+          "remaining_count": 6,
+          "remaining_weight": 22
+        },
+        {
+          "date": "2026-05-22",
+          "remaining_count": 6,
+          "remaining_weight": 22
+        },
+        {
+          "date": "2026-05-23",
+          "remaining_count": 6,
+          "remaining_weight": 22
+        },
+        {
+          "date": "2026-05-24",
+          "remaining_count": 5,
+          "remaining_weight": 19
+        },
+        {
+          "date": "2026-05-25",
+          "remaining_count": 5,
+          "remaining_weight": 19
+        },
+        {
+          "date": "2026-05-26",
+          "remaining_count": 5,
+          "remaining_weight": 19
+        },
+        {
+          "date": "2026-05-27",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2026-05-28",
+          "remaining_count": 1,
+          "remaining_weight": 5
+        },
+        {
+          "date": "2026-05-29",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 6,
+        "new_feature": 4,
+        "other": 0
+      },
+      "completed": {
+        "count": 10,
+        "weight": 32
+      },
+      "issues": [
+        {
+          "id": 226378,
+          "iid": 69,
+          "title": "Fulfillment Add Serial Number field to Fulfillment CI Views",
+          "description": "Add Serial Number field to Fulfillment CI Views so customer can update the values.",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-05-14",
+          "date_closed": "2026-05-14",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 225720,
+          "iid": 76,
+          "title": "Intake Add a 'RMA number' field to the RMA section of the Maintenance record",
+          "description": "Add a 'RMA number' field to the RMA section of the Maintenance record. This will be a string field similar to the Vendor Ticket number field on the Incident.\n\nThe 'Vendor Ticket' number field is there to store the information on the Incident in case there is no Maintenance record. We can go ahead and add the new 'RMA number' field on the Maintenance record and copy the data from the 'Vendor Ticket' field to the 'RMA number'. As long as there is no data loss (i.e., every incident with a 'Vendor Ticket' value also has a Maintenance record) we can then remove the 'Vendor Ticket' field.",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-05-14",
+          "date_closed": "2026-05-28",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 225040,
+          "iid": 75,
+          "title": "Intake Add Query Range ACL for Rack Location Code field on GPS Hardware",
+          "description": "Add Query Range ACL for 'rack_Location_code' field on GPS Hardware [x_g_us29_gps_hardware]. Currently Intake users are not able to perform search using 'Contains' option.\n\nPlease see error message:\n\n ![image](/uploads/ece5f7ec89bb8c838b0877a479c74c69/image.png){width=804 height=34}",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-05-14",
+          "date_closed": "2026-05-27",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 223487,
+          "iid": 74,
+          "title": "Intake BackupNav Asset Updates",
+          "description": "BackupNav Asset Updates. Please find the updates in attached spreadsheet.\n\n[BackupNav_Consolidated_Import_Sheet_04-30-2026.xlsx](/uploads/b277850a0907066e90ea77cdfacdc6aa/BackupNav_Consolidated_Import_Sheet_04-30-2026.xlsx)",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-05-14",
+          "date_closed": "2026-05-15",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 223436,
+          "iid": 68,
+          "title": "Fulfillment Link Vessel Dashboard data visualization scores to the vessel specific lists",
+          "description": "Update the interaction settings on the Fleet Vessel Incident Dashboard data visualization scores for each vessel to link to the vessel specific lists.",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-05-14",
+          "date_closed": "2026-05-20",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 223430,
+          "iid": 67,
+          "title": "Fulfillment Create Open Incident Workspace Lists for Vessel types",
+          "description": "Create Open Incident Workspace Lists for Vessel types:\nType A\nType B\nType C\nType D\nType E\nType F\nDisplay the same columns as the Incident>Open workspace list",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review",
+            "type::New-Feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-05-14",
+          "date_closed": "2026-05-20",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 219039,
+          "iid": 441,
+          "title": "SPM Implement additional access control using Assignment Group",
+          "description": "Implement additional access control for SPM Pilot. Use the Assignment Group field when available (for example on the Project table).",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::New-Feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-05-14",
+          "date_closed": "2026-05-27",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 219037,
+          "iid": 440,
+          "title": "SPM Test data import for projects with custom fields and calendar for SPM Pilot",
+          "description": "Test data import for projects with custom fields and custom calendar for SPM Pilot.\n\n\n\n[Corporate_HQ_SharePoint_Support_FY24.mpp](/uploads/d181128d63ab6b4342627bef791f9704/Corporate_HQ_SharePoint_Support_FY24.mpp)\n\nThis MPP contains about a dozen tasks.  Each task has 2 custom fields.  \"Health\" uses a look table for it's field values, and the choices are contained in the Excel file.  \n\"Health\" Values:\n- Not Specified\n- On schedule\n- Late\n- Early\n- Blocked\n- Completed\n\n'Charge Code' is just a basic text custom field.",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::New-Feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-05-14",
+          "date_closed": "2026-05-29",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 219036,
+          "iid": 439,
+          "title": "SPM Implement access control architecture for SPM Pilot",
+          "description": "Implement access control architecture for SPM Pilot based on the design developed in previous sprint. The access control will use the fields Business Unit, Department and possibly Company (to store CPE level organization information).",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::New-Feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-05-14",
+          "date_closed": "2026-05-27",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 218937,
+          "iid": 69,
+          "title": "Intake Update Workflow to pull Initial Hours and Initial Miles values from Asset to Maintenance",
+          "description": "Update Workflow to pull 'Initial Hours' and 'Initial Miles' values from Asset to Maintenance record during Incident creation.",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-05-14",
+          "date_closed": "2026-05-24",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

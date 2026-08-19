@@ -1,0 +1,291 @@
+{
+  "fiscal_year": 2026,
+  "month": 1,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 3746,
+      "title": "Third-Party Integration FY26Q1-6",
+      "start_date": "2025-12-24",
+      "end_date": "2026-01-06",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 1,
+        "weight": 3
+      },
+      "burndown": [
+        {
+          "date": "2025-12-24",
+          "remaining_count": 1,
+          "remaining_weight": 3
+        },
+        {
+          "date": "2025-12-25",
+          "remaining_count": 1,
+          "remaining_weight": 3
+        },
+        {
+          "date": "2025-12-26",
+          "remaining_count": 1,
+          "remaining_weight": 3
+        },
+        {
+          "date": "2025-12-27",
+          "remaining_count": 1,
+          "remaining_weight": 3
+        },
+        {
+          "date": "2025-12-28",
+          "remaining_count": 1,
+          "remaining_weight": 3
+        },
+        {
+          "date": "2025-12-29",
+          "remaining_count": 1,
+          "remaining_weight": 3
+        },
+        {
+          "date": "2025-12-30",
+          "remaining_count": 0,
+          "remaining_weight": 1
+        },
+        {
+          "date": "2025-12-31",
+          "remaining_count": 0,
+          "remaining_weight": 1
+        },
+        {
+          "date": "2026-01-01",
+          "remaining_count": 0,
+          "remaining_weight": 1
+        },
+        {
+          "date": "2026-01-02",
+          "remaining_count": 2,
+          "remaining_weight": 4
+        },
+        {
+          "date": "2026-01-03",
+          "remaining_count": 2,
+          "remaining_weight": 4
+        },
+        {
+          "date": "2026-01-04",
+          "remaining_count": 2,
+          "remaining_weight": 4
+        },
+        {
+          "date": "2026-01-05",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-06",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 5
+      },
+      "completed": {
+        "count": 5,
+        "weight": 8
+      },
+      "issues": [
+        {
+          "id": 185489,
+          "iid": 24,
+          "title": "Add GALWEM priv key to key vault for app and pull it in via pipeline",
+          "project_id": 91004,
+          "project_name": "skycast",
+          "weight": 2,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-02",
+          "date_closed": "2026-01-05",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 185401,
+          "iid": 23,
+          "title": "Move MetGM .pfx to key vault for app and pull it in via pipeline in TEST",
+          "project_id": 91004,
+          "project_name": "skycast",
+          "weight": 2,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-02",
+          "date_closed": "2026-01-02",
+          "date_removed_from_sprint": "2025-12-30"
+        },
+        {
+          "id": 185279,
+          "iid": 22,
+          "title": "Reconfigure SSH key to work with AF SFTP server (format issue)",
+          "project_id": 91004,
+          "project_name": "skycast",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-24",
+          "date_closed": "2026-01-05",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184710,
+          "iid": 20,
+          "title": "Update Deployment and Configuration Processes",
+          "project_id": 91004,
+          "project_name": "skycast",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "priority::high",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-02",
+          "date_closed": "2026-01-05",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184708,
+          "iid": 19,
+          "title": "Securely Manage and Access the Private Key",
+          "project_id": 91004,
+          "project_name": "skycast",
+          "weight": 0,
+          "state": "closed",
+          "labels": [
+            "priority::high",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-02",
+          "date_closed": "2026-01-02",
+          "date_removed_from_sprint": null
+        }
+      ]
+    },
+    {
+      "id": 3825,
+      "title": "Third-Party Integration FY26Q2-1",
+      "start_date": "2026-01-07",
+      "end_date": "2026-01-20",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 1,
+        "weight": 5
+      },
+      "burndown": [
+        {
+          "date": "2026-01-07",
+          "remaining_count": 1,
+          "remaining_weight": 5
+        },
+        {
+          "date": "2026-01-08",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-09",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-10",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-11",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-12",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-13",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-14",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-15",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-16",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-17",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-18",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-19",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-20",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 1
+      },
+      "completed": {
+        "count": 1,
+        "weight": 5
+      },
+      "issues": [
+        {
+          "id": 186153,
+          "iid": 25,
+          "title": "Finish configuring private key for use with GALWEM SFTP server",
+          "project_id": 91004,
+          "project_name": "skycast",
+          "weight": 5,
+          "state": "closed",
+          "labels": [],
+          "milestone": "v1.7.6",
+          "date_added_to_sprint": "2026-01-07",
+          "date_closed": "2026-01-08",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

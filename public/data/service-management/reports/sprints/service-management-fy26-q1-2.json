@@ -1,0 +1,22 @@
+{
+  "group_slug": "service-management",
+  "project_slug": null,
+  "milestone_slug": "service-management-fy26-q1-2",
+  "title": "Service Management FY26 Q1-2",
+  "start_date": "2025-11-18",
+  "end_date": "2025-12-02",
+  "generated_at": "2026-07-10T21:40:59.001304Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint aimed to strengthen core IT Service Management capabilities by improving data accessibility, automating critical workflows, and enhancing the Support system with proper role-based security and incident routing. The team also worked to ensure data integrity across asset management systems and make infrastructure dependencies visible to support teams.",
+    "summary": "The team completed fourteen features and improvements that collectively modernize the Service Management platform's usability and automation. Key accomplishments include expanding template capacity, automating contact and tier population workflows, establishing proper default assignment routing in the Support ticketing system, and implementing role-based access controls aligned with organizational structure. Additionally, asset management data was refreshed with over Site 8 updates, financial and reference data was standardized per customer specifications, and critical infrastructure navigation tools were integrated to help teams visualize CI dependencies. These changes reduce manual data entry, improve incident routing accuracy, and provide teams with better visibility into system relationships and asset hierarchies.",
+    "metrics": {
+      "initial_count": 14,
+      "initial_weight": 34,
+      "completed_count": 14,
+      "completed_weight": 34,
+      "initial_breakdown": "14 Others",
+      "completed_breakdown": "14 Others"
+    }
+  }
+}

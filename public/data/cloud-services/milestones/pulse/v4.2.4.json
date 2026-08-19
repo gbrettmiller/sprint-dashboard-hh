@@ -1,0 +1,143 @@
+{
+  "milestone_title": "v4.2.4",
+  "milestone_id": 1952,
+  "slug": "v4.2.4",
+  "project_id": 91002,
+  "project_name": "PULSE",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:32.898590Z",
+  "issues": [
+    {
+      "id": 155625,
+      "iid": 228,
+      "title": "[PULSE-232] Clean up the Access Log \"View accessed\" column",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::story"
+      ],
+      "description": "Strip the word \"Controller\" from the access logs \"View accessed\" column values\n\n---\n\n**Issue metadata**\n\n- Issue type: Improvement\n- Priority: Medium\n- Fix versions: 4.2.4"
+    },
+    {
+      "id": 155624,
+      "iid": 230,
+      "title": "[PULSE-234] API Schema Names Clean Up",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::New Feature"
+      ],
+      "description": "Fix schema names in API docs so that they match the titles provided in the methods section of PULSE API Swagger Docs Web-Based UI\n\n---\n\n**Issue metadata**\n\n- Issue type: Improvement\n- Priority: Medium\n- Fix versions: 4.2.4"
+    },
+    {
+      "id": 155623,
+      "iid": 260,
+      "title": "[PULSE-264] Fix Header buttons in Admin section",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::story"
+      ],
+      "description": "In Admin tab Data analytics expiring type of fund allocations section. When active the about and user profile buttons on the right side if the top navigation bar do not respond to user inputs (clicks)\n\n---\n\n**Issue metadata**\n\n- Issue type: Bug\n- Priority: Medium\n- Fix versions: 4.2.4"
+    },
+    {
+      "id": 155622,
+      "iid": 271,
+      "title": "[PULSE-275] Move PULSE Jira and Repository into Gitlab",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::New Feature"
+      ],
+      "description": "Move the PULSE repository and Jira Project Management into the internal GitLab instance.\u00a0\n\n---\n\n**Issue metadata**\n\n- Issue type: Improvement\n- Priority: Medium\n- Fix versions: 4.2.4"
+    },
+    {
+      "id": 155621,
+      "iid": 272,
+      "title": "[PULSE-276] Upgrade PULSE API to .Net 6 and Merge with PULSE Project",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::New Feature"
+      ],
+      "description": "Upgrade the PULSE API from .Net Core 3.1 to .Net 6.\n\nMerge the API solution into the PULSE solution.\u00a0\n\nDo this work before moving the repository into Gitlab.\u00a0\n\n---\n\n**Issue metadata**\n\n- Issue type: Improvement\n- Priority: Medium\n- Fix versions: 4.2.4"
+    },
+    {
+      "id": 155620,
+      "iid": 273,
+      "title": "[PULSE-277] Update JPO Meridian LOE List",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::New Feature"
+      ],
+      "description": "see attached for updated LOE list that needs to be updated for JPO\n\n---\n\n**Issue metadata**\n\n- Issue type: New Feature\n- Priority: Medium\n- Fix versions: 4.2.4"
+    },
+    {
+      "id": 155627,
+      "iid": 274,
+      "title": "Update legacy secondary email addresses to the primary company domain",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155619,
+      "iid": 275,
+      "title": "Fix null reference error in admin Field Edit capability occurring when Lookup Item field is null",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155618,
+      "iid": 277,
+      "title": "Fix button alignment for Lookup Item Create and Edit forms",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::New Feature"
+      ],
+      "description": "Some of the admin sub-forms for updating and lookup item fields has the submit/save button misalligned. The cancel and submit buttons should be aligned at the bottom of the form."
+    },
+    {
+      "id": 155617,
+      "iid": 278,
+      "title": "Add link from duration of funds admin tool to type of funding's",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::Improvement"
+      ],
+      "description": "To help users find the lookup values for the duration of funds add a link to the type of funding lookup items to the duration of funds page."
+    },
+    {
+      "id": 155616,
+      "iid": 279,
+      "title": "Change years on Lists in PULSE",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::Improvement"
+      ],
+      "description": "Need to update the year selections on the following lists in PULSE so that they start at 2018 and end at 2032:\n\nObligation YR\n\nColor YR"
+    }
+  ]
+}

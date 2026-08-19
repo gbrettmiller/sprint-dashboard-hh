@@ -1,0 +1,53 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "month": "2025-12",
+  "generated_at": "2026-07-02T21:57:26.273937Z",
+  "sprints": [
+    {
+      "title": "Data Services 3 DEC",
+      "start_date": "2025-11-19",
+      "end_date": "2025-12-03",
+      "goals": "This sprint focused on stabilizing core functionality across multiple applications while advancing the Compliance Review system toward operational readiness. The team aimed to resolve critical bugs affecting notifications and environment deployments while establishing foundational features for records management and user interface consistency across the platform.",
+      "summary": "The sprint delivered significant progress across five major applications with a balance of bug fixes and new capability development. Critical issues were resolved including notification routing problems in TCT, component menu errors in I/O, and environment configuration issues in Records API, while the Compliance Review application advanced with the implementation of record upload screens, metadata management interfaces, and a comprehensive security model. Supporting work included the deployment of corrected configurations to test and production environments for Regional Office, the creation of reviewer tracking in bulk processing workflows, and the establishment of automated notifications for records managers. Release documentation was prepared for both I/O and Access Requests applications to facilitate stakeholder communication and system adoption.",
+      "metrics": {
+        "initial_count": 25,
+        "initial_weight": 55,
+        "completed_count": 25,
+        "completed_weight": 55,
+        "initial_breakdown": "21 Others, 2 Improvements, 2 Bugs",
+        "completed_breakdown": "21 Others, 2 Improvements, 2 Bugs"
+      }
+    },
+    {
+      "title": "Data Services 17 DEC",
+      "start_date": "2025-12-03",
+      "end_date": "2025-12-17",
+      "goals": "This sprint focused on advancing user interface consistency and functionality across five major applications while resolving critical workflow and data management issues. The team prioritized completing core admin features, improving form layouts and validations, and establishing stronger organizational data integrations.",
+      "summary": "The team delivered significant enhancements to the I/O, Access Requests, Records API, Compliance Review, TCT, and Catalog Sync applications, including new admin dashboards, corrected task assignment and deletion workflows, and improved form field organization using centralized organizational hierarchies. Critical bugs affecting approval notifications, email rendering, and sub-organizational task handling were resolved, while UI consistency was improved across applications through color alignment and standardized component libraries. The sprint also established foundational work for security modeling, record retention automation, and data source integration from enterprise systems like external HR systems. These changes streamline administrative operations, improve user experience consistency, and strengthen the platform's ability to manage records, training assignments, and approval workflows at enterprise scale.",
+      "metrics": {
+        "initial_count": 29,
+        "initial_weight": 73,
+        "completed_count": 29,
+        "completed_weight": 73,
+        "initial_breakdown": "16 Others, 7 Bugs, 6 Improvements",
+        "completed_breakdown": "16 Others, 7 Bugs, 6 Improvements"
+      }
+    },
+    {
+      "title": "Data Services 7 JAN 26",
+      "start_date": "2025-12-17",
+      "end_date": "2026-01-07",
+      "goals": "This sprint focused on stabilizing core application functionality across multiple modules while expanding administrative capabilities and improving data security posture. The team prioritized bug fixes in existing workflows, enhanced user interface consistency, and implemented critical security controls for document handling and data retrieval operations.",
+      "summary": "The team delivered 27 completed items spanning six product lines, with particular emphasis on resolving user-facing issues in the Records API, Access Requests, and Compliance Review modules that were blocking normal operations. Key accomplishments include fixing dropdown and release type functionality in Records API, implementing security controls for SharePoint library access in Compliance Review, standardizing required field validation across Access Requests, and improving reporting accuracy in the I/O Power BI environment. Additionally, the team advanced foundational work through schema updates, security model documentation, and administrative guides that position these systems for sustained operation and governance. These fixes and enhancements reduce operational friction, strengthen data security compliance, and improve the user experience across all deployed modules.",
+      "metrics": {
+        "initial_count": 27,
+        "initial_weight": 58,
+        "completed_count": 27,
+        "completed_weight": 58,
+        "initial_breakdown": "14 Others, 11 Improvements, 2 Bugs",
+        "completed_breakdown": "14 Others, 11 Improvements, 2 Bugs"
+      }
+    }
+  ]
+}

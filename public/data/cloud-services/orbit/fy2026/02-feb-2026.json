@@ -1,0 +1,621 @@
+{
+  "fiscal_year": 2026,
+  "month": 2,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 3934,
+      "title": "Third-Party Integration FY26Q2-2",
+      "start_date": "2026-01-21",
+      "end_date": "2026-02-03",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 6,
+        "weight": 15
+      },
+      "burndown": [
+        {
+          "date": "2026-01-21",
+          "remaining_count": 6,
+          "remaining_weight": 15
+        },
+        {
+          "date": "2026-01-22",
+          "remaining_count": 5,
+          "remaining_weight": 13
+        },
+        {
+          "date": "2026-01-23",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2026-01-24",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2026-01-25",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2026-01-26",
+          "remaining_count": 4,
+          "remaining_weight": 14
+        },
+        {
+          "date": "2026-01-27",
+          "remaining_count": 2,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2026-01-28",
+          "remaining_count": 2,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2026-01-29",
+          "remaining_count": 2,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2026-01-30",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-31",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-01",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-02",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-03",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 8
+      },
+      "completed": {
+        "count": 8,
+        "weight": 21
+      },
+      "issues": [
+        {
+          "id": 190082,
+          "iid": 1172,
+          "title": "Create hidden inputs for newly disabled register page fields",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": "v3.2.9.0",
+          "date_added_to_sprint": "2026-01-27",
+          "date_closed": "2026-01-27",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189509,
+          "iid": 1171,
+          "title": "Notifications company-issued / Personal Responses as One Record",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 5,
+          "state": "closed",
+          "labels": [],
+          "milestone": "v3.2.9.0",
+          "date_added_to_sprint": "2026-01-23",
+          "date_closed": "2026-01-27",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 188995,
+          "iid": 1165,
+          "title": "Add filters to the position assignments page for org managers from nav link instead of settings link",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [],
+          "milestone": "v3.2.9.1",
+          "date_added_to_sprint": "2026-01-21",
+          "date_closed": "2026-01-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 188859,
+          "iid": 1164,
+          "title": "Alignment of data fields on Settings page",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.9.1",
+          "date_added_to_sprint": "2026-01-21",
+          "date_closed": "2026-01-26",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 188849,
+          "iid": 1163,
+          "title": "Notify Layer Managers of New Registrations",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "customer:platform-engineering",
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.9.1",
+          "date_added_to_sprint": "2026-01-21",
+          "date_closed": "2026-01-30",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 186375,
+          "iid": 1155,
+          "title": "Align Download with Filter Selection - Position Assignments page",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "customer:network-ops",
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.9.1",
+          "date_added_to_sprint": "2026-01-21",
+          "date_closed": "2026-01-27",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 186326,
+          "iid": 1151,
+          "title": "Notify Organization Managers of New Registrations",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "customer:platform-engineering",
+            "Customer:EIS",
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.9.1",
+          "date_added_to_sprint": "2026-01-21",
+          "date_closed": "2026-01-30",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183674,
+          "iid": 1116,
+          "title": "Add POC and CSR Fields to Organization Records",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.9.1",
+          "date_added_to_sprint": "2026-01-21",
+          "date_closed": "2026-01-26",
+          "date_removed_from_sprint": null
+        }
+      ]
+    },
+    {
+      "id": 3986,
+      "title": "Third-Party Integration FY26Q2-3",
+      "start_date": "2026-02-04",
+      "end_date": "2026-02-17",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 11,
+        "weight": 21
+      },
+      "burndown": [
+        {
+          "date": "2026-02-04",
+          "remaining_count": 9,
+          "remaining_weight": 19
+        },
+        {
+          "date": "2026-02-05",
+          "remaining_count": 5,
+          "remaining_weight": 14
+        },
+        {
+          "date": "2026-02-06",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2026-02-07",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2026-02-08",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2026-02-09",
+          "remaining_count": 1,
+          "remaining_weight": 7
+        },
+        {
+          "date": "2026-02-10",
+          "remaining_count": 1,
+          "remaining_weight": 7
+        },
+        {
+          "date": "2026-02-11",
+          "remaining_count": 2,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2026-02-12",
+          "remaining_count": 1,
+          "remaining_weight": 7
+        },
+        {
+          "date": "2026-02-13",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-14",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-15",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-16",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-17",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 3,
+        "improvement": 11,
+        "new_feature": 1,
+        "other": 2
+      },
+      "completed": {
+        "count": 17,
+        "weight": 32
+      },
+      "issues": [
+        {
+          "id": 193787,
+          "iid": 1185,
+          "title": "Inline validation for 0 recipients of notification",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "TEST-Passed",
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.10.1",
+          "date_added_to_sprint": "2026-02-12",
+          "date_closed": "2026-02-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 193650,
+          "iid": 1184,
+          "title": "Refactor edit notification feature to not pass employee checklist items which cause 400 status in large payload scenarios",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "TEST-Passed",
+            "type::Bug"
+          ],
+          "milestone": "v3.2.10.0",
+          "date_added_to_sprint": "2026-02-11",
+          "date_closed": "2026-02-11",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 192994,
+          "iid": 1183,
+          "title": "Fix url for notification edit button form action",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "TEST-Passed",
+            "type::Bug"
+          ],
+          "milestone": "v3.2.10.0",
+          "date_added_to_sprint": "2026-02-10",
+          "date_closed": "2026-02-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 192975,
+          "iid": 1182,
+          "title": "Exclude Inactive users from Filtered Position Assignments export",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "TEST-Passed",
+            "Type:Improvement",
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.10.1",
+          "date_added_to_sprint": "2026-02-11",
+          "date_closed": "2026-02-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 192888,
+          "iid": 1181,
+          "title": "Ensure modal controller is initialized in script.js",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "TEST-Passed",
+            "type::Bug"
+          ],
+          "milestone": "v3.2.10.1",
+          "date_added_to_sprint": "2026-02-10",
+          "date_closed": "2026-02-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 192273,
+          "iid": 1180,
+          "title": "Fix issue with Future Check-Ins Not Appearing on Manager's Home Screens",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "v3.2.10.0",
+          "date_added_to_sprint": "2026-02-06",
+          "date_closed": "2026-02-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 191683,
+          "iid": 1179,
+          "title": "Enable Editing of Profile Fields on Registration Page",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "TEST-Passed",
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.9.2",
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": "2026-02-04",
+          "date_removed_from_sprint": "2026-02-04"
+        },
+        {
+          "id": 191294,
+          "iid": 1178,
+          "title": "Add link to ORBIT Mobile Experience quick reference guide to help page",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "TEST-Passed",
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.10.0",
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": "2026-02-05",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 191135,
+          "iid": 1177,
+          "title": "Standardize Emergency Contact Field labels",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.10.0",
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": "2026-02-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 191132,
+          "iid": 1176,
+          "title": "Implement email input validation for Additional email field on user profile",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "TEST-Passed",
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.10.0",
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": "2026-02-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 191130,
+          "iid": 1175,
+          "title": "Notification Event name should use 24 hour format",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "TEST-Failed",
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.10.1",
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": "2026-02-05",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 191118,
+          "iid": 1174,
+          "title": "Add \"Edit Notification\" Capability from Confirmation Page",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "TEST-Passed",
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.10.0",
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": "2026-02-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 191104,
+          "iid": 1173,
+          "title": "Update link to User Roles in ORBIT page",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "customer:network-ops",
+            "TEST-Passed",
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.10.0",
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": "2026-02-05",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189123,
+          "iid": 1170,
+          "title": "Revamp 'Add Role' Page into a Centralized User Role Management Interface",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": "2026-02-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189118,
+          "iid": 1169,
+          "title": "Implement Phone Number Validation on User Profile",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.10.0",
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": "2026-02-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189117,
+          "iid": 1168,
+          "title": "Implement In-Profile Mobile Check-In Verification",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::New Feature",
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.10.1",
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": "2026-02-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189115,
+          "iid": 1167,
+          "title": "Add \"Cancel Notification\" Confirmation Prompt",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "TEST-Passed",
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.10.0",
+          "date_added_to_sprint": "2026-02-04",
+          "date_closed": "2026-02-05",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

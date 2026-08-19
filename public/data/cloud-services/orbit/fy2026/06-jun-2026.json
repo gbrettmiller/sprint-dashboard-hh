@@ -1,0 +1,358 @@
+{
+  "fiscal_year": 2026,
+  "month": 6,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 4229,
+      "title": "3.3.3",
+      "start_date": "2026-06-03",
+      "end_date": "2026-06-16",
+      "state": "closed",
+      "source": "milestone",
+      "goal": "Bug fixes and CosmosDB testing",
+      "initial_totals": {
+        "count": 9,
+        "weight": 20
+      },
+      "burndown": [
+        {
+          "date": "2026-06-03",
+          "remaining_count": 8,
+          "remaining_weight": 17
+        },
+        {
+          "date": "2026-06-04",
+          "remaining_count": 8,
+          "remaining_weight": 17
+        },
+        {
+          "date": "2026-06-05",
+          "remaining_count": 8,
+          "remaining_weight": 17
+        },
+        {
+          "date": "2026-06-06",
+          "remaining_count": 8,
+          "remaining_weight": 17
+        },
+        {
+          "date": "2026-06-07",
+          "remaining_count": 8,
+          "remaining_weight": 17
+        },
+        {
+          "date": "2026-06-08",
+          "remaining_count": 4,
+          "remaining_weight": 10
+        },
+        {
+          "date": "2026-06-09",
+          "remaining_count": 4,
+          "remaining_weight": 10
+        },
+        {
+          "date": "2026-06-10",
+          "remaining_count": 4,
+          "remaining_weight": 10
+        },
+        {
+          "date": "2026-06-11",
+          "remaining_count": 4,
+          "remaining_weight": 10
+        },
+        {
+          "date": "2026-06-12",
+          "remaining_count": 1,
+          "remaining_weight": 1
+        },
+        {
+          "date": "2026-06-13",
+          "remaining_count": 1,
+          "remaining_weight": 1
+        },
+        {
+          "date": "2026-06-14",
+          "remaining_count": 1,
+          "remaining_weight": 1
+        },
+        {
+          "date": "2026-06-15",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-06-16",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 1,
+        "new_feature": 0,
+        "other": 15
+      },
+      "completed": {
+        "count": 16,
+        "weight": 37
+      },
+      "issues": [
+        {
+          "id": 243906,
+          "iid": 1387,
+          "title": "Fix matrixed-to-supervisor future check-in visibility on Home screen (#1386)",
+          "description": "Fix for #1386. A person in org A matrixed to a supervisor in org B showed as \"no location reported\" on the matrix supervisor's Home screen, while the matrix Org Manager and Layer Manager saw the location correctly.\n\n**Root cause**\nThe supervisor section built its \"reported\" list from `CheckInHot.FetchBy(Supervisor)`, which resolved the matrix relationship from the **frozen embedded** `Employee.MatrixSupervisor` snapshot on the roll-call document. The supervised list, by contrast, read the **live** `Employee.MatrixSupervisor`, so a matrixed person appeared in the list but their check-in was filtered out. Managers were unaffected because they match by `MatrixCustomerLayer`, which is reliably present. Separately, `Employee.FetchMissingCheckInBy(supervisor)` only filtered on `Supervisor._id` and ignored `MatrixSupervisor._id`.\n\n**Changes**\n- `ORBIT.Web/Controllers/HomeController.cs` \u2014 supervisor section now calls `CheckInHot.FetchBy(employeeList: supervisedList)`, matching check-ins by `Employee._id` off the already-correct live supervised list.\n- `ORBIT.Model/CheckIn/CheckInHot.cs` \u2014 removed a redundant duplicate `FetchBy(List<Employee>)` overload; reuses the existing one.\n- `ORBIT.Model/Employee/Employee.cs` \u2014 `FetchMissingCheckInBy` supervisor filter changed to `Or(Supervisor._id, MatrixSupervisor._id)`.\n\n**Tests added** (`ORBIT.Test.Unit/Employee/EmployeeFetchHelpers.cs`)\n- `Employee_FetchMissingCheckInBy_BySupervisor_SurfacesMatrixSupervisedReports` \u2014 regression: a matrix-supervised person who is genuinely missing a check-in must appear under their matrix supervisor.\n- `Employee_FetchMissingCheckInBy_BySupervisor_OnlyReturnsDirectOrMatrixReports` \u2014 contract: every returned person is direct- or matrix-supervised by the supervisor and stays in-customer.\n\nUnit suite: 415 passed / 0 failed / 12 skipped. Playwright: 18 passed / 0 failed.",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "release-notes::no"
+          ],
+          "milestone": "3.3.3",
+          "date_added_to_sprint": "2026-06-23",
+          "date_closed": "2026-06-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 243654,
+          "iid": 1386,
+          "title": "Matrixed To Org Future check-in issue",
+          "description": "When an employee is in an organization (A) and matrixed to another organization (B), there is an issue with future check-in being displayed on the home screen of certain roles. \n\nMatrixed To (B) Org Manager see the location  as reported\n\nMatrixed to Layer Manager sees the location as reported \n\nMatrixed to supervisor shows the person as no location reported\n\nCombination Matrixed Layer Manager and Matrixed supervisor shows the person as not reported in both sections of the home screen (supervisor section and layer manager section)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "3.3.3",
+          "date_added_to_sprint": "2026-06-23",
+          "date_closed": "2026-06-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 235665,
+          "iid": 1383,
+          "title": "Backfill unit tests for Notification namespace (write paths)",
+          "description": "**Goal:** Backfill the write-path coverage on the `ORBIT.Model.Notification` namespace. Today the namespace has 6 classes and 3 partial test files (`NotificationEvents`, `NotificationLog`, `NotificationResponse`) \u2014 all read-side. The remaining classes have no coverage.\n\n**Scope (untested today):**\n- `Notification.Group` \u2014 distribution group lookups + membership\n- `Notification.Scenario` \u2014 scenario configuration\n- `Notification.Message` \u2014 message body / templates\n\n**What will be done:**\n1. One test file per class under `Source/dotnet/ORBIT.Test.Unit/Notification/` (e.g. `NotificationGroup.cs`, `NotificationScenario.cs`, `NotificationMessage.cs`).\n2. Cover `FetchBy` overloads, `Save` (insert + update), and `SetInactive` / cascade behavior (e.g. NotificationEvent \u2192 Group membership).\n3. Use `try/finally` for cleanup; mirror the Employee pattern for any class that writes to the SQL queue.\n4. Extend the existing partial test files when adding write-path coverage to `Event`, `Log`, or `Response` rather than creating new files.\n\n**Constraint:** Files under `Source/dotnet/ORBIT.Model/Notification/` are **off-limits per `CLAUDE.md`** \u2014 tests only, no production-code edits.\n\n**Why it was split from the prior ticket:** Originally bundled with the Application namespace work. Split so each namespace can be closed independently and reported separately in the milestone.",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "release-notes::no"
+          ],
+          "milestone": "3.3.3",
+          "date_added_to_sprint": "2026-06-12",
+          "date_closed": "2026-06-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 235625,
+          "iid": 1382,
+          "title": "Remove unused \"Start Time\" (TimeStart) field from Future Check-In",
+          "description": "Remove the **\"Start Time\"** field (`TimeStart`) from the Future Check-In form and its persistence paths. Investigation confirmed the value is captured and stored but is never read by any Check-In logic (no controller, worker, report, or scheduling logic consumes it; roll-call timing keys off `DateStart`/`DateEnd`).\n\n**Field:** `TimeStart` (labeled \"Start Time\"), only on the Future Check-In form.",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": "3.3.3",
+          "date_added_to_sprint": "2026-06-12",
+          "date_closed": "2026-06-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 231261,
+          "iid": 1360,
+          "title": "Test modified application and run Azure Load Tests for CosmosDB statistics",
+          "description": "Test the modified ORBIT application against the new CosmosDB for MongoDB structure, and run **Azure Load Tests** to gather performance/throughput (Request Unit) statistics on CosmosDB.\n\n**Source branch:** `1331`\n\nGoal: validate application behavior on CosmosDB and capture RU/latency/throttling metrics under load to inform throughput sizing.",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "3.3.3",
+          "date_added_to_sprint": "2026-06-03",
+          "date_closed": "2026-06-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 231260,
+          "iid": 1359,
+          "title": "Deploy modified applications for new CosmosDB database structure (branch 1331)",
+          "description": "Deploy the ORBIT applications (Web + Worker Services) updated for the new CosmosDB for MongoDB database structure.\n\n**Source branch:** `1331`\n\nCovers the apps modified for the split global databases (orbit-identity / orbit-geo / orbit-lookup / orbit-system) and per-tenant databases produced by the MongoDB \u2192 CosmosDB migration.",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": "3.3.3",
+          "date_added_to_sprint": "2026-06-03",
+          "date_closed": "2026-06-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 231008,
+          "iid": 1358,
+          "title": "bug: Intermittent and random email reminders being sent to DNR",
+          "description": "## Summary (corrected root cause)\n\nThe \"intermittent / random, before\u20118:30\u2011AM\u2011local\" reminders are **manual reminders triggered by supervisors/managers from the Home page** \u2014 **not** the scheduler. In the deployed build these manual sends fire on a plain **GET**, are **not logged**, and go to a supervisor's \"no location reported\" list, which spans time zones \u2014 so recipients *west* of the sender receive a \"ORBIT - Check-In Reminder\" (the same subject the scheduler uses) **before 8:30 their local time**.\n\n> An earlier version of this description blamed the `DateStatus` / \"did\u2011not\u2011report\" time\u2011zone math. That has been **disproven** (see Evidence) and is not the cause.\n\n## Evidence\n\n- **Scheduler is correctly timed** (exonerated three ways):\n  - Per\u2011person: `DateReminderCheckIn` converted to each recipient's own zone lands at **08:30 / 08:45 local**.\n  - 3 weeks of `SystemLog` (`Source = \"Reminder.Email.RemindToReport\"`) show firing only at the expected UTC slots, with at most a harmless `:31`/`:46` (one\u2011minute *late*) drift \u2014 **never early**.\n- **Time\u2011zone data is clean** \u2014 of the reminder\u2011eligible population only **1** person lacks `IanaTimeZoneId`; `Name`\u2194`IanaTimeZoneId` are consistent (Eastern\u2194`America/New_York`, etc.). So mis\u2011migrated time zones are **not** the cause.\n- **The manual path is unlogged in production.** `ORBIT.Web/Controllers/HomeController.cs` `SendReminder` / `SendReminderSupervised` at tag `v3.3.2.0` contain **0** `ReminderLog` writes (logging is being added on the current sprint branch). That is why `ReminderLog` is empty and the early sends were invisible.\n- **The manual path is in heavy, cross\u2011zone use.** `ReminderSentToday` (set only by the manual path; the scheduler uses `DateReminderCheckIn`) was `true` for **214 people today** \u2014 194 Eastern, 19 Central, 1 Pacific. An Eastern manager hitting \"remind all\" early morning lands on their Central/Pacific reports before those reports' 8:30 local.\n\n## Why it's \"accidental\"\n\nThe Home\u2011page reminder controls are `<a href>` **GET** links (`~/home/sendreminder/{id}/`, `~/home/sendreminder/`, `~/home/sendremindersupervised/`) and the actions have **no `[HttpPost]`** and **no anti\u2011forgery**. The JS confirm modal calls `preventDefault()` on click, but that does nothing for a GET issued by **browser prefetch/prerender, a refresh/back, or a misclick / opened\u2011in\u2011new\u2011tab** \u2014 any of which fires the send with no human intent. The bulk \"remind all\" has no server\u2011side guard.\n\n## Fix\n\n1. Make `SendReminder` / `SendReminderSupervised` **`[HttpPost]` + `[ValidateAntiForgeryToken]`** so a GET (prefetch/refresh/direct) returns 405 and can no longer trigger a send.\n2. Submit the deliberate click as a **token\u2011bearing POST** (confirm modal updated; anti\u2011forgery token rendered on the page). The existing confirmation dialog is retained.\n3. Keep the **`ReminderLog` logging** being added this sprint \u2014 it gives ongoing visibility (it does not, by itself, stop the early sends).\n4. Optional follow\u2011ups: a **time\u2011zone guard** (warn/block when reminding a recipient before ~8:30 their local time) and a **distinct subject/source** so manual vs. scheduled reminders are tellable in inboxes and logs.\n\n## Verify after deploy\n\nOnce the new `ReminderLog` logging is live, group today's entries by source + recipient\u2011local time; expect `Home Page - \u2026` rows landing **before 08:30** for western recipients.\n\n## Notes\n\n- A small hardening was kept from the earlier investigation: `TimeZone.Difference` now guards `FindSystemTimeZoneById` (an invalid `IanaTimeZoneId` previously threw out of the getter and aborted the roll\u2011call save, making that person a permanent DNR). The rest of that earlier prototype was removed as not relevant to this defect.",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "3.3.3",
+          "date_added_to_sprint": "2026-06-18",
+          "date_closed": "2026-06-18",
+          "date_removed_from_sprint": "2026-06-15"
+        },
+        {
+          "id": 231007,
+          "iid": 1357,
+          "title": "bug: Northeast Region cannot change layer names",
+          "description": "",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 0,
+          "state": "closed",
+          "labels": [],
+          "milestone": "3.3.3",
+          "date_added_to_sprint": "2026-06-02",
+          "date_closed": "2026-06-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 229776,
+          "iid": 1356,
+          "title": "Fix Application Response search returning no results",
+          "description": "## Summary\n\nThe Application Response page at `/setting/application/response/` populates its initial table correctly, but typing any value into the search box returns \"No records were returned.\" Same symptom as [#1354](../issues/1354), but a different root cause.\n\n## Root cause\n\nThe page **displays one collection but searches a different one.**\n\n### Where the initial table comes from\n\n- Controller: [`Areas/Application/Controllers/ResponseController.cs` line 17](Source/dotnet/ORBIT.Web/Areas/Application/Controllers/ResponseController.cs#L17) \u2014 `ResponseTime.FetchRecent()`\n- Model: [`Source/dotnet/ORBIT.Model/Log/ResponseTime.cs`](Source/dotnet/ORBIT.Model/Log/ResponseTime.cs) \u2014 class `ORBIT.Model.Log.ResponseTime` with fields `Uri`, `Time`, `PersonaId`\n- View: [`Areas/Application/Views/Response/Index.cshtml` lines 25\u201335](Source/dotnet/ORBIT.Web/Areas/Application/Views/Response/Index.cshtml#L25-L35) \u2014 iterates `Model.ResponseTimeList`, renders `systemResponse.Uri`, `systemResponse.Time`, `systemResponse.PersonaId`\n\n### Where the search hits\n\n- JS handler: [`wwwroot/js/script.js` lines 3447\u20133505](Source/dotnet/ORBIT.Web/wwwroot/js/script.js#L3447-L3505) \u2014 `fieldset[data-search='systemresponse']` POSTs to `/json/search_systemresponse/`\n- Controller endpoint: [`Controllers/JsonController.cs` lines 785\u2013801](Source/dotnet/ORBIT.Web/Controllers/JsonController.cs#L785-L801) \u2014 `SearchSystemResponse` calls `SystemResponse.SearchBy(searchValue)`\n- Model queried: [`Source/dotnet/ORBIT.Model/Application/Response.cs`](Source/dotnet/ORBIT.Model/Application/Response.cs) \u2014 class `ORBIT.Model.Application.SystemResponse` (fields `Url`, `Time`, `PersonaId`) \u2014 a **different MongoDB collection** from `ResponseTime`\n\nSo the user sees rows from `ResponseTime` but the search query is run against `SystemResponse`, which is either empty or contains unrelated documents. Result: no matches, ever.\n\n### Bonus issue (same handler)\n\nEven if the right collection were queried, the JS at [`script.js` line 3479](Source/dotnet/ORBIT.Web/wwwroot/js/script.js#L3479) renders `systemResponse.AkoId` in the last column \u2014 a stale property name from before the PersonaId migration. The corresponding model field is `PersonaId`, so the cell would render `undefined`. Worth fixing in the same change.\n\n## Fix options\n\n1. **Repoint the search at `ResponseTime`** (the collection the page actually shows). Add a `SearchBy` to `ResponseTime` (it already has one \u2014 [`ResponseTime.cs` lines 50\u201384](Source/dotnet/ORBIT.Model/Log/ResponseTime.cs#L50-L84)), update `JsonController.SearchSystemResponse` to call `ResponseTime.SearchBy(searchValue)`, and adjust the JS field mapping (`Uri` instead of `Url`, `PersonaId` instead of `AkoId`).\n2. Or, if `SystemResponse` is in fact the intended source going forward, switch `ResponseController.Index` and the view to use `SystemResponse.FetchRecent()` so the displayed and searched collections agree.\n\nOption 1 is the conservative change and keeps the existing data visible.\n\n## Acceptance criteria\n\n- [ ] Typing 3+ characters into the search box on `/setting/application/response/` returns matching rows from the same collection shown in the initial table.\n- [ ] Persona ID column populates correctly in search results (not `undefined`).\n- [ ] Empty/non-matching searches still show the \"No records were returned.\" message.",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "3.3.3",
+          "date_added_to_sprint": "2026-06-03",
+          "date_closed": "2026-06-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 229775,
+          "iid": 1355,
+          "title": "Audit-log individual check-in reminder emails sent from the home page",
+          "description": "## Summary\n\nWhen a supervisor or manager sends an individual employee check-in reminder email from the home page, we currently have no audit trail. We need to log **who** initiated the reminder, **who** it was sent to, and **when**, so we can investigate disputes and confirm what was actually sent.\n\n## Where this happens today\n\n[`Source/dotnet/ORBIT.Web/Controllers/HomeController.cs` `SendReminder(string id)` lines 378\u2013463](Source/dotnet/ORBIT.Web/Controllers/HomeController.cs#L378-L463).\n\nTwo code paths exist in this action:\n\n1. **No `id` provided** \u2014 bulk send to every unreported employee under the supervisor/manager's roles. Sends happen on a background `Task.Run`, looping `Reminder.SendReminderFromSupervisor(p.Email)` per person ([lines 420\u2013438](Source/dotnet/ORBIT.Web/Controllers/HomeController.cs#L420-L438)).\n2. **`id` provided** \u2014 single individual send. Calls `Reminder.SendReminderFromSupervisor(employee.Email)` directly ([lines 444\u2013450](Source/dotnet/ORBIT.Web/Controllers/HomeController.cs#L444-L450)).\n\nNeither path writes an audit record on the success path. Only thrown exceptions are logged to `SystemLog` ([line 432, line 456](Source/dotnet/ORBIT.Web/Controllers/HomeController.cs#L432)). The same gap exists in the sibling `SendReminderSupervised()` action just below ([lines 465\u2013525](Source/dotnet/ORBIT.Web/Controllers/HomeController.cs#L465-L525)) \u2014 should be addressed in the same change for consistency.\n\n## What to log\n\nAt minimum, for every reminder sent (both bulk and individual paths):\n\n- **Sender** \u2014 identity of the supervisor/manager initiating (from `WebSession` \u2014 likely PersonaId/Employee ID + display name).\n- **Recipient** \u2014 Employee identity and email address actually sent to.\n- **Timestamp** \u2014 when the send was initiated (UTC).\n- **Initiation context** \u2014 which action (`SendReminder` individual, `SendReminder` bulk, or `SendReminderSupervised`).\n- **Customer** \u2014 the customer scope the supervisor was acting in.\n\n## Suggested approach\n\nAdd the audit entry inside the loop / single-send branches immediately after `SendReminderFromSupervisor(...)` succeeds (before the `Save()`), and inside the `catch` so failures also produce an audit row tagged as failed. Either:\n\n- Reuse `SystemLog` with a structured message and a dedicated `Source` value so the existing System Logs UI search (once [#1354](../issues/1354) is fixed) can find them; or\n- Add a purpose-built `ReminderAuditLog` entity in `ORBIT.Model.Log` if the data warrants its own searchable view.\n\n## Acceptance criteria\n\n- [ ] Every individual reminder send writes an audit record on success.\n- [ ] Every bulk-send iteration writes a per-recipient audit record on success.\n- [ ] Failures continue to be captured (with sender + recipient context, not just the exception).\n- [ ] Records are visible / searchable to system administrators.\n- [ ] Same coverage applied to `SendReminderSupervised`.",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "3.3.3",
+          "date_added_to_sprint": "2026-06-03",
+          "date_closed": "2026-06-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 229761,
+          "iid": 1354,
+          "title": "Fix System Log search returning no results",
+          "description": "## Summary\n\nThe System Log search UI (`/application/log/`) returns no results for any query, even though the initial table populates correctly. Search has historically been very useful for investigating issues, so this needs to be fixed.\n\n## Root cause\n\nThere is a field-name mismatch between how `SystemLog` records are written and how `Log<T>.Search` queries them.\n\n### Where the data is written\n\n[`Source/dotnet/ORBIT.Model/Log/SystemLog.cs` lines 18\u201333](Source/dotnet/ORBIT.Model/Log/SystemLog.cs#L18-L33) \u2014 every `SystemLog` constructor sets the `ApplicationLogType` property (serialized to the Mongo field `ApplicationLogType`). A grep across the codebase confirms nothing ever sets `SystemLogType` on a `SystemLog` (only `Ooo.cs` sets it, and that is a different collection). So every `SystemLog` document in Mongo looks like:\n\n- `ApplicationLogType` = 1, 2, ... (one of the valid enum values)\n- `SystemLogType` = 0  \u2190 default value from the base-class property; not a valid enum entry\n\n### Where the search queries it\n\n[`Source/dotnet/ORBIT.Model/Log/Log.cs` lines 82\u201394](Source/dotnet/ORBIT.Model/Log/Log.cs#L82-L94) \u2014 `Log<T>.Search` builds an `$and` of two `$or` clauses. The second clause is:\n\n```csharp\nfilterBuilder.Or(\n    filterBuilder.Eq( \"SystemLogType\", SystemLogType.Exception ),            // 1\n    filterBuilder.Eq( \"SystemLogType\", SystemLogType.Information ),          // 2\n    filterBuilder.Eq( \"SystemLogType\", SystemLogType.EmployeeInactive ),    // 9\n    filterBuilder.Eq( \"SystemLogType\", SystemLogType.EmployeeNotRegistered )// 10\n)\n```\n\nNo `SystemLog` document has `SystemLogType` in `{1, 2, 9, 10}` \u2014 every document has `SystemLogType = 0` \u2014 so the filter matches zero rows on every query. That is why search always returns \"No records were returned\" while `FetchRecent()` (no type filter, [`Log.cs` lines 58\u201367](Source/dotnet/ORBIT.Model/Log/Log.cs#L58-L67)) still populates the initial table correctly.\n\n## Fix options\n\n1. Change the secondary `$or` in `Log<T>.Search` to filter on the field the records actually use (`\"ApplicationLogType\"` with the corresponding `ApplicationLogType` enum values). Preserves original intent of restricting to user-facing categories.\n2. Drop the secondary `$or` entirely \u2014 `FetchRecent` already returns everything without a type filter, and the search endpoint at [`JsonController.cs` line 767](Source/dotnet/ORBIT.Web/Controllers/JsonController.cs#L767) is already gated to system administrators.\n\nOption 1 is the more conservative change.",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "3.3.3",
+          "date_added_to_sprint": "2026-06-03",
+          "date_closed": "2026-06-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 229026,
+          "iid": 1353,
+          "title": "Determine pages that need backend auth guard",
+          "description": "  Scenario: Determine which roles should access each page\n    Given the complete list of routes\n    And the complete list of roles\n    When I review each page against its intended audience\n    Then I should document, for every page, which roles are permitted to access it\n    And I should flag any page whose intended audience is unclear and requires stakeholder input\n\n  Scenario: Identify privileged actions that need extra scrutiny\n    Given pages that trigger side effects such as sending notifications, modifying customer data, or changing settings\n    When I review these pages\n    Then I should explicitly call them out in the audit as high-priority guard targets\n    And I should note the action performed and the role(s) that should be permitted\n\n  Scenario: Determine the redirect destination for unauthorized access\n    Given a user attempts to access a page their role does not permit\n    When the guard denies access\n    Then I should document the agreed-upon redirect target (e.g. home page, \"access denied\" page, login)\n    And the redirect behavior should be consistent across the application\n\n  Scenario: Deliver the audit output\n    Given the discovery work is complete\n    When I finalize the audit\n    Then I should deliver a matrix (page/route \u00d7 role) showing allowed access\n    And the matrix should be in a format suitable for handoff to the implementation ticket",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::DevOps",
+            "workflow::refined"
+          ],
+          "milestone": "3.3.3",
+          "date_added_to_sprint": "2026-06-02",
+          "date_closed": "2026-06-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 228763,
+          "iid": 1351,
+          "title": "Backfill unit tests for Application namespace",
+          "description": "**Goal:** Close the unit-test gap on `ORBIT.Model.Application` namespace \u2014 4 classes with **0 tests** today.\n\n**Scope:** All classes under `Source/dotnet/ORBIT.Model/Application/`:\n- `Administrator` \u2014 admin user lookup and operations\n- `Performance` \u2014 application performance metrics\n- `Response` \u2014 application-level response envelopes\n- `SignIn` \u2014 sign-in tracking\n\n**What will be done:**\n1. One test file per class under `Source/dotnet/ORBIT.Test.Unit/Application/`.\n2. Use Category B scaffold (`[TestInitialize]` / `[TestCleanup]`) since these are standard CRUD without queue mirrors.\n3. Cover `FetchBy` overloads, `Save` round-trip, and any `SetInactive` paths.\n4. `Assert.Inconclusive` if no records are seeded for the test customer.\n\n**Why it was split from the prior ticket:** Originally bundled with the Notification namespace work. Split so each namespace can be closed independently and reported separately in the milestone.",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "release-notes::no"
+          ],
+          "milestone": "3.3.3",
+          "date_added_to_sprint": "2026-06-12",
+          "date_closed": "2026-06-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 228761,
+          "iid": 1349,
+          "title": "Backfill unit tests for Helper namespace",
+          "description": "**Goal:** Close the single largest unit-test gap in the codebase \u2014 the `ORBIT.Model.Helper` namespace has 33 classes and ~119 public methods with **zero** tests today. These are mostly pure functions, so they are the highest test-per-hour return on the board.\n\n**Scope:** All classes under `Source/dotnet/ORBIT.Model/Helper/`, including (non-exhaustive):\n- `StringEncryption` \u2014 AES round-trip, key handling\n- `Extension` (string / DateTime / collection extensions)\n- `Email` \u2014 format validation, normalization\n- `PhoneNumber` \u2014 parse, format, mask\n- `UniqueId` \u2014 generation, uniqueness\n- `Enumeration` \u2014 enum helpers\n- `BsonExtensions` \u2014 to/from BSON conversions\n- `DateExtensions` \u2014 UTC normalization, business-day math\n\n**What will be done:**\n1. Create a test file per logical grouping under `Source/dotnet/ORBIT.Test.Unit/Helper/`:\n   - `Helper_Encryption.cs`\n   - `Helper_StringExtensions.cs`\n   - `Helper_PhoneNumber.cs`\n   - `Helper_DateExtensions.cs`\n   - `Helper_BsonExtensions.cs`\n   - `Helper_Email.cs`\n   - `Helper_UniqueId.cs`\n   - `Helper_Enumeration.cs`\n2. Cover happy path, boundary cases (null / empty / max length), and any round-trip invariants (encrypt/decrypt, BSON-serialize/deserialize).\n3. Follow project test conventions \u2014 no DB dependency required for most of these; `Assert.Inconclusive` only where helpers reach external resources.\n4. Lift unit-method coverage from ~70% (of tested classes) toward ~80% overall.\n\n**Out of scope:** Helpers under `ORBIT.Web/` (those belong with controller tests).",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "release-notes::no"
+          ],
+          "milestone": "3.3.3",
+          "date_added_to_sprint": "2026-06-12",
+          "date_closed": "2026-06-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 228436,
+          "iid": 1348,
+          "title": "Add EmployeeId-only employee upload + include EmployeeId in existing ProcessRaw",
+          "description": "## Background\n\nA customer has asked for a new file-upload workflow that matches existing employee by **PersonaId** and **only** updates their **EmployeeId**. This is a lighter-weight complement to the full employee CSV upload at `~/setting/customer/process/` ([Upload.cshtml](Source/dotnet/ORBIT.Web/Areas/Customer/Views/Customer/Upload.cshtml)) so customers can backfill EmployeeIds without re-sending the entire employee roster.\n\nIn addition, the existing employee CSV upload (`ORBIT.Model.Employee.ProcessRaw` at [Employee.cs:1253](Source/dotnet/ORBIT.Model/Employee/Employee.cs#L1253)) needs to learn a new optional `EmployeeId` column so future full uploads can carry the value in one pass.\n\n> **Note:** `EmployeeId` is the same value as **Employee ID**. Employee are currently keyed by `PersonaId`; the system is mid-migration toward `EmployeeId`. This work should populate `EmployeeId` cleanly so the eventual Employee ID cutover has the data it needs.\n\n---\n\n## Scope\n\n### 1. New \"EmployeeId Upload\" workflow (PersonaId \u2192 EmployeeId only)\n\n**Model \u2014 `ORBIT.Model.Employee`**\n- Add a new static method, e.g. `Employee.ProcessEmployeeIdRaw( Customer customer, Stream stream )`, mirroring the streaming/parsing pattern of `ProcessRaw` (TextFieldParser, `stream.Length > 100` early-exit, batched `Parallel.ForEach` over `csvList.Chunk( 250 )`).\n- Expected CSV columns (in order):\n  1. PersonaId\n  2. EmployeeId\n- For each row:\n  - `Employee existing = Employee.FetchBy( uniqueId: personaId );` scoped to the supplied customer.\n  - If found and `EmployeeId` is non-empty, update **only** the `EmployeeId` field. Reuse the targeted update path already in `Employee.cs` ([Employee.cs:3358](Source/dotnet/ORBIT.Model/Employee/Employee.cs#L3358)) \u2014 `Builders<Employee>.Update.Set( t => t.EmployeeId, employeeId )` and `ORBIT.Model.Queue.Employee.UpdateEmployeeIdToSql( ... )` \u2014 so we don't trigger a full `Save()` (which would re-write all encrypted fields and emit unrelated SQL queue noise).\n  - If `existing` is null, log a SystemLog warning (`PersonaId not found for customer X`) and skip \u2014 do **not** create new employee from this upload.\n- Encrypt the value the same way `Employee.Save()` does today before writing.\n\n**Controller \u2014 `ORBIT.Web.Areas.Customer.Controllers.CustomerController`**\n- Add a sibling action to `Process(...)` ([CustomerController.cs:210](Source/dotnet/ORBIT.Web/Areas/Customer/Controllers/CustomerController.cs#L210)), e.g. `ProcessEmployeeId( Model.Customer customer )`, that copies the upload stream and dispatches `Employee.ProcessEmployeeIdRaw` on a background `Task.Run` just like `Process` does today. Redirect back to the customer view with a `?working=1` / `?error=1` query flag.\n\n**View**\n- Add a new view alongside [Upload.cshtml](Source/dotnet/ORBIT.Web/Areas/Customer/Views/Customer/Upload.cshtml), e.g. `UploadEmployeeId.cshtml`, modeled on Upload.cshtml with:\n  - `form action=\"~/setting/customer/processemployeeid/\"`\n  - A single file input bound to `FileEmployeeImport` (reuse the existing property on `CustomerViewModel` / `Customer`).\n  - Instructions section listing the two-column format (Persona ID, EmployeeId).\n- Wire a link/button on the customer view page to reach the new upload.\n\n### 2. Add `EmployeeId` to the existing employee upload (`ProcessRaw`)\n\n- Extend the column contract of `Employee.ProcessRaw` to **append** a new optional column at the end (avoid renumbering the 12 existing columns to keep customer files backward-compatible):\n  - **12 - EmployeeId** *(optional, may be blank)*\n- Update both the create branch ([Employee.cs:1407-1439](Source/dotnet/ORBIT.Model/Employee/Employee.cs#L1407-L1439)) and the update branch (lines immediately following) to populate `EmployeeId` when the column is present and non-empty. When blank, leave the existing value untouched on update (do **not** wipe an already-set EmployeeId).\n- Defensive bounds-check on `row.Length` so old 12-column files still parse.\n- Update the in-source column comment block at [Employee.cs:1269-1282](Source/dotnet/ORBIT.Model/Employee/Employee.cs#L1269-L1282).\n- Update [Upload.cshtml](Source/dotnet/ORBIT.Web/Areas/Customer/Views/Customer/Upload.cshtml) Instructions list to add `<li>EmployeeId (optional)</li>` after Position Title.\n\n---\n\n## Files to touch\n\n| File | Change |\n|---|---|\n| [Employee.cs](Source/dotnet/ORBIT.Model/Employee/Employee.cs) | Add `ProcessEmployeeIdRaw`; extend `ProcessRaw` for optional EmployeeId column |\n| [CustomerController.cs](Source/dotnet/ORBIT.Web/Areas/Customer/Controllers/CustomerController.cs) | Add `ProcessEmployeeId` action |\n| Source/dotnet/ORBIT.Web/Areas/Customer/Views/Customer/UploadEmployeeId.cshtml | New view |\n| [Upload.cshtml](Source/dotnet/ORBIT.Web/Areas/Customer/Views/Customer/Upload.cshtml) | Add EmployeeId to instruction list |\n| Customer view page | Link to new upload |\n\n> \u26a0\ufe0f `Source/dotnet/ORBIT.Model/Employee/` is normally off-limits in routine refactors; this work intentionally requires edits there because the upload logic lives in `Employee.cs`.\n\n---\n\n## Test plan\n\n- **Unit (`ORBIT.Test.Unit`):** Mirror [EmployeeProcessRaw.cs](Source/dotnet/ORBIT.Test.Unit/Employee/EmployeeProcessRaw.cs):\n  - `ProcessEmployeeIdRaw` early-exits on null / tiny streams.\n  - `ProcessEmployeeIdRaw` updates EmployeeId for an existing PersonaId (try/finally restores original EmployeeId; clean up `ORBIT.Model.Queue.Employee` per the project convention).\n  - `ProcessEmployeeIdRaw` no-ops for an unknown PersonaId (logs only, no new Employee created).\n  - `ProcessRaw` continues to parse a 12-column file unchanged (regression).\n  - `ProcessRaw` populates EmployeeId from a new 13-column file.\n  - `ProcessRaw` leaves an existing EmployeeId alone when column 12 is blank on update.\n- **Manual / Playwright:** Upload a sample 2-column CSV from the new customer view link, confirm EmployeeId appears on Employee form. Upload a 13-column employee CSV, confirm EmployeeId populates.\n\n---\n\n## Out of scope\n\n- The broader PersonaId \u2192 Employee ID partition-key migration.\n- Bulk EmployeeId backfill from any external/authoritative source.",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "3.3.3",
+          "date_added_to_sprint": "2026-06-02",
+          "date_closed": "2026-06-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 227817,
+          "iid": 1345,
+          "title": "Ensure only notification managers/sys admins can see/use pencil on notification responses page",
+          "description": "## Story\n\nToday only Notification Managers can use the manual edit-response feature. This should be broadened so System Administrators can also use it (even when they have not been assigned the Notification Manager role). The pencil edit icon must be hidden from all other users, and any user without one of those two roles who attempts to access the edit-response URL directly must be redirected back to the notification index page.\n\n## Acceptance Criteria\n\n```gherkin\nFeature: Edit-response access broadened to Notification Managers and System Administrators\n\n  Scenario: Notification Manager sees the pencil and can open the edit form\n    Given I am logged in as a Notification Manager (without the System Administrator role)\n    And I am viewing the notification event response tracking page\n    When the responses table is rendered\n    Then I see the pencil edit icon next to each response row\n    And clicking the pencil opens the edit-response form for that row\n    And submitting the form saves the manual response successfully\n\n  Scenario: System Administrator sees the pencil and can open the edit form\n    Given I am logged in as a System Administrator (without the Notification Manager role)\n    And I am viewing the notification event response tracking page\n    When the responses table is rendered\n    Then I see the pencil edit icon next to each response row\n    And clicking the pencil opens the edit-response form for that row\n    And submitting the form saves the manual response successfully\n\n  Scenario: User with both Notification Manager and System Administrator roles can edit\n    Given I am logged in as a user with both the Notification Manager and System Administrator roles\n    And I am viewing the notification event response tracking page\n    Then I see the pencil edit icon next to each response row\n    And the edit-response form is accessible and savable\n\n  Scenario: Supervisor cannot see the pencil\n    Given I am logged in as a Supervisor (without the Notification Manager or System Administrator role)\n    And I am viewing the notification event response tracking page\n    When the responses table is rendered\n    Then the pencil edit icon is not present on any row\n\n  Scenario: Supervisor attempting to access the edit-response URL is redirected\n    Given I am logged in as a Supervisor (without the Notification Manager or System Administrator role)\n    When I navigate directly to the edit-response URL for a known response\n    Then I am redirected to the notification index page with an error indicator\n\n  Scenario: Regular user cannot see the pencil\n    Given I am logged in as a user with no Notification Manager or System Administrator role\n    And I have somehow reached the notification event response tracking page\n    When the responses table is rendered\n    Then the pencil edit icon is not present on any row\n\n  Scenario: Regular user attempting to access the edit-response URL is redirected\n    Given I am logged in as a user with no Notification Manager or System Administrator role\n    When I navigate directly to the edit-response URL for a known response\n    Then I am redirected to the notification index page with an error indicator\n\n```",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": "3.3.3",
+          "date_added_to_sprint": "2026-06-02",
+          "date_closed": "2026-06-02",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,505 @@
+{
+  "fiscal_year": 2026,
+  "month": 7,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 4311,
+      "title": "v5.1.5",
+      "start_date": "2026-06-25",
+      "end_date": "2026-07-09",
+      "state": "closed",
+      "source": "milestone",
+      "goal": null,
+      "initial_totals": {
+        "count": 8,
+        "weight": 21
+      },
+      "burndown": [
+        {
+          "date": "2026-06-25",
+          "remaining_count": 7,
+          "remaining_weight": 19
+        },
+        {
+          "date": "2026-06-26",
+          "remaining_count": 4,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2026-06-27",
+          "remaining_count": 4,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2026-06-28",
+          "remaining_count": 4,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2026-06-29",
+          "remaining_count": 4,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2026-06-30",
+          "remaining_count": 5,
+          "remaining_weight": 17
+        },
+        {
+          "date": "2026-07-01",
+          "remaining_count": 5,
+          "remaining_weight": 17
+        },
+        {
+          "date": "2026-07-02",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-03",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-04",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-05",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-06",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-07",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-08",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-09",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 3,
+        "improvement": 4,
+        "new_feature": 2,
+        "other": 2
+      },
+      "completed": {
+        "count": 11,
+        "weight": 30
+      },
+      "issues": [
+        {
+          "id": 245538,
+          "iid": 735,
+          "title": "build: upgrade PULSE to .NET 10 (LTS) and align all NuGet packages \u2014 freeze Bootstrap 3.3.7 & jQuery 3.7.1",
+          "description": "## Summary\n\nUpgrade PULSE from **.NET 8 (LTS)** to **.NET 10 (current LTS, GA Nov 2025)** across the entire solution, and bring all NuGet packages up to their aligned `10.0.x` baselines. This is a single, self-contained platform-maintenance ticket: it keeps PULSE on a supported LTS runtime and eliminates the current cross-project version drift (Data/Service on EF Core 8.0.14, Web on 8.0.18, API mixing EF Core 9.0.1 with classic EntityFramework 6.5.1, `Microsoft.Extensions.*` on 9.0.0).\n\n**The overriding requirement is zero functional regression.** Front-end libraries are the highest-risk area and are handled conservatively:\n\n- **Bootstrap 3.3.7 is FROZEN.** The vendored, PULSE-modified Bootstrap files are **not** to be touched, upgraded, re-minified, or re-fetched. They must be byte-for-byte identical before and after this ticket (verified by checksum \u2014 see Guardrails). A Bootstrap major upgrade (3\u21924/5) is explicitly **out of scope** and, if ever pursued, belongs in its own epic.\n- **jQuery stays on 3.7.1** (already the latest 3.x; jQuery 4 is still beta). No jQuery / jQuery UI version change.\n\nThis is a server-runtime + NuGet upgrade only. No application behavior, no markup, and no client-side library changes ship in this ticket.\n\n---\n\n## Target versions\n\n| Component | From | To |\n|---|---|---|\n| .NET SDK (`global.json`) | 8.0.404 / 8.0.414 | latest .NET **10** SDK (10.0.1xx feature band) |\n| `TargetFramework` (all 7 projects) | `net8.0` | `net10.0` |\n| EF Core (all packages) | 8.0.14 / 8.0.18 / 9.0.1 | **10.0.x** (single unified version) |\n| ASP.NET Core packages (DataProtection, Identity.*, SignalR.Client, Authentication.Certificate) | 8.0.x / 9.0.x | **10.0.x** |\n| `Microsoft.Extensions.*` | 9.0.0 / 9.0.7 | **10.0.x** |\n| Docker base images | `dotnet/aspnet:8.0`, `dotnet/sdk:8.0` | `:10.0` |\n| CI runner image | `mcr.microsoft.com/dotnet/sdk:8.0` | `:10.0` |\n| jQuery / jQuery UI | 3.7.1 / 1.13.2 / 1.14.1 | **unchanged** |\n| Bootstrap (vendored) | 3.3.7 | **unchanged (frozen)** |\n\nThird-party packages (EPPlus, ClosedXML, X.PagedList, Newtonsoft.Json, StackExchange.Redis, UAParser, Swashbuckle, NSwag, Moq, xunit, Playwright, etc.) should be updated to their current stable releases **only where a `net10.0`-compatible version exists and the change is non-breaking**. Any package whose latest version introduces a breaking API change must be left at its current working version and called out in the MR description rather than force-upgraded.\n\n---\n\n## Files to modify\n\n**SDK / target framework**\n- `Source/global.json` \u2014 pin to the latest .NET 10 SDK feature band.\n- `Source/OneNListApp.Data/global.json` \u2014 same .NET 10 SDK pin (remove the drift from the root `global.json`).\n- `Source/OneNListApp.Web/OneNListApp.Web.csproj` \u2014 `net8.0` \u2192 `net10.0`; bump EF Core (8.0.18), `Microsoft.AspNetCore.DataProtection` (9.0.7), `Identity.*` (8.0.18), `SignalR.Client` (8.0.18), `Caching.StackExchangeRedis` (9.0.7), `System.Text.Json` (8.0.6) to 10.0.x. **Do not remove** the `<Content Remove>`/`<None Include>` jQuery intellisense entries.\n- `Source/OneNListApp.Data/OneNListApp.Data.csproj` \u2014 `net8.0` \u2192 `net10.0`; unify EF Core (8.0.14 \u2192 10.0.x), `Microsoft.Extensions.*` (9.0.0 \u2192 10.0.x), `Identity.EntityFrameworkCore` (8.0.14 \u2192 10.0.x). Leave `jQuery`/`jQuery.UI.Combined` package refs and the `Content`/`Scripts` items **unchanged**.\n- `Source/OneNListApp.Service/OneNListApp.Service.csproj` \u2014 `net8.0` \u2192 `net10.0`; EF Core 8.0.14 \u2192 10.0.x; `Identity.EntityFrameworkCore` \u2192 10.0.x. Leave jQuery/jQuery UI refs **unchanged**.\n- `Source/OneNListApp.API/OneNListApp.API.csproj` \u2014 `net8.0` \u2192 `net10.0`; EF Core 9.0.1 \u2192 10.0.x. **Investigate the classic `EntityFramework` 6.5.1 reference** \u2014 confirm whether it is still used; keep it if so (EF6 runs on .NET 10), document the finding. Bump `Microsoft.VisualStudio.Web.CodeGeneration.Design` and `Authentication.Certificate` to 10.0.x.\n- `Source/OneNListApp.Tests/OneNListApp.Tests.csproj` \u2014 `net8.0` \u2192 `net10.0`; `EntityFrameworkCore.InMemory` 8.0.0 \u2192 10.0.x (keep the version-unification comment accurate).\n- `Source/OneNListApp.IntegrationTests/OneNListApp.IntegrationTests.csproj` \u2014 `net8.0` \u2192 `net10.0`; EF Core 8.0.14 \u2192 10.0.x.\n- `Source/OneNListApp.E2E/OneNListApp.E2E.csproj` \u2014 `net8.0` \u2192 `net10.0`; update the `playwright.ps1` path comment from `net8.0` to `net10.0`.\n\n**Docker**\n- `Source/OneNListApp.Web/Dockerfile` \u2014 `base` (`aspnet:8.0`) and `build` (`sdk:8.0`) stages \u2192 `:10.0`.\n- `Source/OneNListApp.API/Dockerfile` \u2014 `base` (`aspnet:8.0`) and `build` (`sdk:8.0`) stages \u2192 `:10.0`.\n\n**CI / publish profiles**\n- `Source/pipeline/.gitlab-ci-templates.yml` \u2014 `.dotnet-base` image `dotnet/sdk:8.0` \u2192 `:10.0`.\n- `Source/pipeline/.test-e2e-gitlab-ci.yml` \u2014 `playwright.ps1` path `bin/Release/net8.0/` \u2192 `net10.0/`.\n- `Source/OneNListApp.API/Properties/PublishProfiles/PROD.pubxml` and `QA.pubxml` \u2014 `<TargetFramework>net8.0</TargetFramework>` \u2192 `net10.0`.\n- `Source/OneNListApp.Web/Properties/PublishProfiles/FolderProfile.pubxml` \u2014 `net8.0` \u2192 `net10.0`.\n\n**Docs (text references only)**\n- `README.md`, `docs/PULSE-Build-and-Deployment.md`, `docs/LOCAL_DEVELOPMENT.md`, `Source/OneNListApp.API/ReadMe/README.md` \u2014 update `.NET 8` / `net8.0` references to `.NET 10`.\n\n**Explicitly NOT modified (frozen):**\n- `Source/OneNListApp.Web/wwwroot/css/bootstrap*.css` (+ `.map`), `Source/OneNListApp.Web/wwwroot/scripts/bootstrap.js` / `bootstrap.min.js`, `bootstrap-multiselect.*`, and all `jquery-*` / `jquery-ui-*` script files. `libman.json` and `bundleconfig.json` remain unchanged.\n\n---\n\n## Guardrails / anti-regression protections\n\n1. **Bootstrap byte-for-byte freeze.** Before starting, record SHA-256 checksums of every `wwwroot/css/bootstrap*` and `wwwroot/scripts/bootstrap*` + `jquery*` file. After the upgrade, re-compute and confirm the hashes are identical. Any diff fails the ticket. Do **not** run `libman restore`, `dotnet bundle`, or any minifier step that would regenerate `site.min.css` / `site.min.js` from changed inputs.\n2. **One concern per commit.** Sequence the work so a regression can be bisected: (a) `global.json` + all `TargetFramework` bumps; (b) EF Core unification; (c) remaining ASP.NET Core / Extensions package bumps; (d) Docker + CI + pubxml; (e) docs. Build and run the full test suite after each step.\n3. **EF Core upgrade is the highest server-side risk.** EF Core 10 changes some query translation and default behaviors. After the EF bump, run `OneNListApp.IntegrationTests` against a real SQL Server (the SP\u2192EF `#675` translation tests: permission-TVF IN-subquery, `STRING_AGG`, fiscal-year aggregation, `OFFSET/FETCH` paging) \u2014 the InMemory provider cannot catch these. Generate no new migrations unless the model changed (it must not in this ticket).\n4. **No new analyzer warnings.** `net10.0` enables newer analyzers; the build must remain warning-clean. Address (or explicitly justify) any new warnings rather than suppressing globally.\n5. **Verify the classic `EntityFramework` 6.5.1 / `System.ServiceModel.Http` / `System.Linq 4.3.0` legacy refs** still resolve and run on .NET 10 before declaring done.\n6. **Smoke-test the running app** (`InfrastructureSmokeTests` + manual): login, list/index, item create/edit, admin lookup screens, Excel import/export, SignalR notifications, and Data Protection key persistence (antiforgery tokens) \u2014 these touch the upgraded packages most directly.\n\n---\n\n## Acceptance Criteria\n\n- [ ] `global.json` (both files) pin the latest .NET 10 SDK; `dotnet --version` resolves to 10.x on the build host.\n- [ ] All 7 projects target `net10.0`; solution builds in Debug **and** QA/PROD configurations with **no errors and no new warnings**.\n- [ ] EF Core is a single unified `10.0.x` version across Web, Data, Service, API, Tests, and IntegrationTests (no remaining 8.0.x / 9.0.1 EF Core references).\n- [ ] `Microsoft.Extensions.*` and all ASP.NET Core packages are on `10.0.x`; no mixed major versions remain.\n- [ ] Both Dockerfiles build against `dotnet/sdk:10.0` / `dotnet/aspnet:10.0`; the Web and API images run and serve `/PULSE/Health` (and the API root) successfully.\n- [ ] CI pipeline (`.gitlab-ci-templates.yml`) builds and the unit-test job passes on the `:10.0` runner image; the E2E job's `playwright.ps1` path resolves under `net10.0`.\n- [ ] Publish profiles (`PROD.pubxml`, `QA.pubxml`, `FolderProfile.pubxml`) target `net10.0` and a self-contained `win-x64` publish succeeds.\n- [ ] **Bootstrap and jQuery/jQuery UI vendored files are byte-for-byte unchanged** (verified by checksum); `site.min.css` / `site.min.js` are not regenerated.\n- [ ] Full unit-test suite (`OneNListApp.Tests`) passes; `OneNListApp.IntegrationTests` passes against real SQL Server (or skips cleanly when DB is unreachable).\n- [ ] `OneNListApp.E2E` Playwright suite passes against the upgraded stack.\n- [ ] Manual smoke test passes: login, list, item create/edit, admin lookup, Excel import/export, SignalR, antiforgery/Data Protection.\n- [ ] Project builds with no errors or warnings after the change.\n- [ ] All existing tests continue to pass.\n\n## Unit Test Requirements\n\nNo new application logic is introduced, so no new unit tests are required. Verification is via the **existing** suites run on the upgraded framework: `OneNListApp.Tests` (unit), `OneNListApp.IntegrationTests` (real-SQL EF translation), and `OneNListApp.E2E` (Playwright). `InfrastructureSmokeTests` must pass on `net10.0` as the baseline build/DI sanity check.",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Type: Package Update",
+            "priority::high",
+            "type::DevOps"
+          ],
+          "milestone": "v5.1.5",
+          "date_added_to_sprint": "2026-06-30",
+          "date_closed": "2026-07-02",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 245123,
+          "iid": 734,
+          "title": "fix: eliminate tempDB exhaustion from whole-table STRING_AGG in action-list query (PEO_AdjudicationComments)",
+          "description": "## Problem\n\nThe action-list query (`QueryForList` in `Source/OneNListApp.Service/OneNListItemService.cs`) is exhausting **tempDB in production**, slowly eating up resources under sustained load.\n\nThe `PEO_AdjudicationComments` column is sourced from a `FromSqlRaw` derived table:\n\n```sql\nSELECT fk_OneNList_ID, STRING_AGG(CAST(UserComments AS NVARCHAR(MAX)), ' | ') AS Comments\nFROM dbo.OneNList_PEOAdjudicationComments\nGROUP BY fk_OneNList_ID\n```\n\n\u2026which is then composed into the projection as a correlated subquery filtered by `fk_OneNList_ID = o.ID`:\n\n```sql\nCOALESCE((SELECT TOP(1) [o1].[Comments] FROM ( <whole-table GROUP BY above> ) AS [o1]\n          WHERE [o1].[fk_OneNList_ID] = [o].[ID]), N'')\n```\n\n### Why it destroys tempDB\n\nThis is **aggregate-the-whole-table-then-filter** instead of **filter-then-aggregate**:\n\n1. The `WHERE fk_OneNList_ID = o.ID` predicate lives *outside* the grouped aggregate, so SQL Server cannot push it into the derived table.\n2. The aggregate is `STRING_AGG(CAST(UserComments AS NVARCHAR(MAX)), ...)` \u2014 a **LOB/MAX** aggregation, which forces the GROUP BY into a sort/hash aggregate whose worktable **spills to tempDB**.\n3. Because the subquery is correlated, the whole-table LOB aggregation is evaluated **per output row, per page load, per concurrent user**. tempDB grows and is not reclaimed under load.\n\nEvery other correlated subquery in the query is safe by comparison: the LookupItem scalars are PK seeks, and the ProjectedObligation/TypeOfFunding aggregations filter *first* (`WHERE fk_OneNList_ID = o.ID`) and aggregate only the action's rows. The comments subquery is the only one that aggregates the full table before filtering.\n\n## Fix (filter-then-aggregate)\n\nReplace the whole-table derived table with a **filter-then-aggregate inline TVF** that scopes the STRING_AGG to a single action:\n\n```sql\nCREATE FUNCTION dbo.fnGetPeoAdjudicationCommentsForAction (@onenId int)\nRETURNS TABLE\nAS RETURN\n(\n    SELECT STRING_AGG(CAST(UserComments AS NVARCHAR(MAX)), ' | ') AS Comments\n    FROM dbo.OneNList_PEOAdjudicationComments\n    WHERE fk_OneNList_ID = @onenId\n);\n```\n\nMap it via `HasDbFunction` (same pattern as `EfSqlFunctions.TryParseFloat`) and compose it in the projection so it becomes an **index seek** aggregating only the action's handful of comment rows \u2014 no whole-table scan, no tempDB spill. EF Core 8 still cannot emit `STRING_AGG` from LINQ, so the TVF carries it.\n\n> An inline TVF is preferred over a scalar UDF because the optimizer can inline it; a scalar UDF (`RETURNS NVARCHAR(MAX)`) doing the same filtered STRING_AGG is acceptable if TVF composition proves awkward.\n\n## Files to modify\n\n- `Source/Migrations/5.1.2/08_<date>_AddPeoAdjudicationCommentsForActionTVF.sql` (new) \u2014 create `dbo.fnGetPeoAdjudicationCommentsForAction`.\n- `Source/OneNListApp.Data/OneNListContext.cs` \u2014 map the TVF via `HasDbFunction`; remove the keyless `OneNListPeoAdjudicationCommentsAgg` whole-table registration if no longer used.\n- `Source/OneNListApp.Service/OneNListItemService.cs` \u2014 delete the `FromSqlRaw` whole-table `peoComments` derived table; compose the filtered TVF call for `PEO_AdjudicationComments` in the projection.\n- `Source/OneNListApp.Data/EfSqlFunctions.cs` / TVF stub \u2014 add the LINQ-visible mapping method as needed.\n- `Source/OneNListApp.IntegrationTests/QueryForListTranslationTests.cs` \u2014 regression test.\n\n## Acceptance Criteria\n\n- [ ] `PEO_AdjudicationComments` is produced by a per-action filtered STRING_AGG (filter-then-aggregate), not a whole-table `GROUP BY` derived table.\n- [ ] The SQL generated by `QueryForList(...).ToQueryString()` contains **no** `GROUP BY` over `OneNList_PEOAdjudicationComments` (no whole-table aggregate).\n- [ ] The generated SQL references `fnGetPeoAdjudicationCommentsForAction` and filters by `fk_OneNList_ID = [o].[ID]` / `@onenId`.\n- [ ] Column output is unchanged: actions with multiple comments return them joined by `' | '`; actions with none return an empty string.\n- [ ] Migration script runs cleanly and is idempotent (drop-if-exists guard).\n- [ ] Project builds with no errors or warnings.\n- [ ] All existing tests continue to pass.\n\n## Unit / Integration Test Requirements\n\nFollow the `ToQueryString()` assertion pattern in `QueryForListTranslationTests`:\n\n- `QueryForList_Recent_DoesNotAggregateWholeCommentsTable` \u2014 asserts the generated SQL does **not** contain a `GROUP BY` over `OneNList_PEOAdjudicationComments`, and **does** reference `fnGetPeoAdjudicationCommentsForAction` (regression guard so the whole-table pattern cannot creep back).",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "priority::highest",
+            "source::customer-direct",
+            "type::Bug"
+          ],
+          "milestone": "v5.1.5",
+          "date_added_to_sprint": "2026-06-29",
+          "date_closed": "2026-06-29",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 244706,
+          "iid": 733,
+          "title": "Admin: Type of Funding section shows no fields \u2014 display names cannot be edited",
+          "description": "## Summary\nThe Admin > Form Field Settings > Financials > **Type of Funding Settings** page (`/Admin/Field/Section?Section=TypeOfFunding`) renders an empty field table. No fields are listed, so an admin cannot edit the display names (or other field settings) for the Type of Funding section.\n\n## Steps to Reproduce\n1. Log in as an Owner.\n2. Go to Admin > Form Field Settings > Financials.\n3. Click **Type of Funding Settings** (or browse to `/Admin/Field/Section?Section=TypeOfFunding&`).\n4. Observe: the section header and column headings render, but the field list is empty (only the Cancel button shows).\n\n## Expected\nThe editable Type of Funding fields (Amount, Obligation YR, Color/Fiscal YR, Type of Fund, Customer, PWD/MIPR #, P/R Form Contract Award Date, Is Direct, Is Reimbursable) should be listed and clickable so their display name and field settings can be edited \u2014 consistent with every other section.\n\n## Root Cause\n`FieldController.SetViewbagPropertiesAsync` builds the field list by reflecting only over properties decorated with the `[FieldMetadata]` attribute:\n```csharp\nvar properties = type.GetProperties()\n    .Where(x => x.GetCustomAttribute<FieldMetadataAttribute>() != null);\n```\n`TypeOfFundingViewModel` is the only section view model with **no** `[FieldMetadata]` attributes (its properties carry only `[Display]`/`[Required]`). With zero matching properties, `ViewBag.Properties` is empty and `_PropertiesHelper.cshtml` renders an empty table. The URL and controller routing are correct.\n\n## Proposed Fix\nAdd `[FieldMetadata(...)]` attributes to the editable fields on `TypeOfFundingViewModel`, mirroring the field set in the Type of Funding edit modal and following the flag conventions used in `ItemFinancialsViewModel` (e.g. `AllowRequired`, `AllowHidden`, `AllowDuplicate`, `AllowLookup` as appropriate per field).\n\n## Acceptance Criteria\n- [ ] The Type of Funding settings page lists the editable fields.\n- [ ] Each field is clickable into the Edit dialog and its display name can be changed.\n- [ ] An updated display name is reflected on the Type of Funding edit modal.\n- [ ] No regression to other section settings pages.\n\n## Affected Files\n- `Source/OneNListApp.Web/Models/TypeOfFundingViewModel.cs`",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "type::Bug"
+          ],
+          "milestone": "v5.1.5",
+          "date_added_to_sprint": "2026-06-26",
+          "date_closed": "2026-06-26",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 244506,
+          "iid": 732,
+          "title": "fix: Admin Lookup Item editor reads Is Direct / Is Reimbursable across all orgs (not org-scoped)",
+          "description": "## Summary\n\nRiverside reported that the **Is Direct** / **Is Reimbursable** fund-type filter on the Type of Funding form filtered out all selectable Type of Fund options. Further observation narrowed the real defect: setting the flag in Admin > Lookup Item, saving, then re-opening the **same** lookup item shows the checkbox **unchecked** \u2014 yet the Type of Fund dropdown filters correctly. So the value **is** persisted; the **Admin editor display** does not reflect it.\n\n## Observed behavior (reporter)\n\n> I defined the setting in the admin tools, clicked save, then re-opened the same lookup. The field did not show clicked anymore, but the dropdown list is now filtered correctly even though the setting does not appear defined in the admin section.\n\n## Root cause\n\n`IsDirect` / `IsReimbursable` / `RequireIncumbent` are stored **per organization** in `Organization_Lookup_Config` (`fk_LookupItem_ID` + `fk_Organization_ID`). A single lookup item has one config row **per org**. The save and display paths in `LookupItemController` are asymmetric:\n\n- **Save (correct, org-scoped):** `LookupItemController.cs:276` calls `LookupConfigService.GetByLookupItemAsync(model.LookupItem, SessionManager.GetOrganizationId())`, which filters `x.fk_Organization_ID == organizationId` (`LookupConfigService.cs:57`). The current org's row is updated correctly \u2014 which is why the front-end Type of Fund filter (org-scoped via the `GetLookupItems` SP) now works.\n\n- **Display / Edit GET (buggy, NOT org-scoped):** `LookupItemController.cs:221`\n\n```csharp\nvar orgConfig = model.LookupItem.Organization_Lookup_Config.FirstOrDefault();\nmodel.IsDirect = orgConfig?.IsDirect ?? false;\n```\n\n`model.LookupItem` is loaded by `LookupItemService.Find(id)` \u2014 a bare `_dbContext.Set<LookupItem>().Find(id)` with no `Include` and no org filter (`LookupItemService.cs:79`). Accessing the `Organization_Lookup_Config` navigation lazy-loads **all** rows for that lookup item across **every** organization, and `FirstOrDefault()` (no `Where`, no ordering) returns an arbitrary org's row \u2014 typically another org whose flag is null/false. The current org's saved value is therefore not displayed, so the checkbox appears unchecked / undefined.\n\n## Fix\n\n- **Primary** \u2014 `LookupItemController.cs:221`: load the current org's config explicitly instead of the unscoped navigation `FirstOrDefault()`. Use the existing org-scoped service, e.g.:\n\n```csharp\nvar orgConfig = (await LookupConfigService.GetByLookupItemAsync(model.LookupItem, SessionManager.GetOrganizationId())).FirstOrDefault();\n```\n\n  (or `LookupConfigService.GetByLookupItemIdAsync(model.LookupItem.ID, SessionManager.GetOrganizationId())`, which already returns a single org-scoped row \u2014 `LookupConfigService.cs:61`).\n\n- **Save update branch hardening** \u2014 `LookupItemController.cs:277` resolves `orgConfigs` the same unscoped way (`model.LookupItem.Organization_Lookup_Config.FirstOrDefault()`) before falling back to the org-scoped `lookup.FirstOrDefault()`. It works today only because the model-bound nav collection is empty on POST. Make it use the org-scoped result directly to avoid editing/duplicating the wrong org's row if that ever changes.\n\n- **Latent (separate) defect** \u2014 `LookupItemController.cs:299` (insert branch) sets `orgConfigs.fk_Organization_ID = SessionManager.GetUserId();` instead of `GetOrganizationId()`. This is not the reported symptom (the update branch handles existing rows), but it will mis-key a brand-new config row to a user id. Fix while here.\n\n## Files to modify\n\n- `Source/OneNListApp.Web/Areas/Admin/Controllers/LookupItemController.cs` \u2014 line 221 (org-scope the display read); line 277 (org-scope the save read); line 299 (`GetUserId()` -> `GetOrganizationId()`).\n\n## Acceptance Criteria\n\n- [ ] Set Is Direct (and/or Is Reimbursable) on a Type of Fund lookup item in Admin > Lookup Item, save, re-open the same item: the checkbox reflects the saved value for the current organization.\n- [ ] The displayed flags reflect only the **current org's** `Organization_Lookup_Config` row, regardless of other orgs' rows for the same lookup item.\n- [ ] Saving does not create a duplicate or modify another org's `Organization_Lookup_Config` row.\n- [ ] A newly inserted config row (first-time flag on an item with no existing row) is keyed to the organization id, not a user id.\n- [ ] The Type of Funding Is Direct / Is Reimbursable dropdown filter continues to work for Riverside.\n- [ ] Project builds with no errors or warnings; all existing tests pass.\n\n## Unit Test Requirements\n\n*(Follow the Moq + MockDbSetHelper pattern in `OneNListApp.Tests/`.)*\n\n- `LookupItemController.Edit_Get_WhenItemHasConfigsForMultipleOrgs_DisplaysCurrentOrgFlags` \u2014 lookup item with `Organization_Lookup_Config` rows for org A (IsDirect=true) and org B (IsDirect=false); session org = A; assert `model.IsDirect == true`.\n- `LookupItemController.Edit_Post_WhenNoExistingOrgConfig_InsertsConfigWithOrganizationId` \u2014 assert inserted row's `fk_Organization_ID == GetOrganizationId()`.\n- `LookupItemController.Edit_Post_UpdatesOnlyCurrentOrgConfigRow` \u2014 assert the current org's row is updated and other orgs' rows are untouched.",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "Web",
+            "priority::high",
+            "source::customer-direct",
+            "type::Bug"
+          ],
+          "milestone": "v5.1.5",
+          "date_added_to_sprint": "2026-06-25",
+          "date_closed": "2026-06-25",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 244445,
+          "iid": 731,
+          "title": "feat: combine PM C&S and PM DCO into PM CW (Crestline)",
+          "description": "## Description\n\nCrestline wants the two PM/PD values **\"PM C&S\"** and **\"PM DCO\"** merged into a single value **\"PM CW\"**. PM/PD values are not hardcoded \u2014 they are `LookupItem` rows in the `PMPD` lookup category (`Enumerations.eLookups.PMPD`), joined to actions via `OneNList.fk_PMPD_Lookup_ID`.\n\nThe Admin \u2192 LookupItem screen (`Source/OneNListApp.Web/Areas/Admin/Controllers/LookupItemController.cs`) can Create/Edit a *single* item but has **no merge / bulk-reassign**, so combining two PMs into one must be done as an **idempotent SQL data migration** under `Source/Migrations/`, following the header/guard conventions of existing migrations (e.g. `Source/Migrations/5.1.4/02_20260610_AddNextFyObligationAmountColumnConfig.sql`). The merge must be scoped to Crestline's organization/security group so other orgs' PM lists are untouched.\n\n## Approach (in one transaction, idempotent)\n\n1. Resolve the surviving target: rename one existing item to **\"PM CW\"**, or create a new `PMPD` `LookupItem` \"PM CW\" if neither exists. Capture its `ID` as `@cwId` and the source IDs `@csId` (PM C&S) and `@dcoId` (PM DCO).\n2. Repoint actions: `UPDATE OneNList SET fk_PMPD_Lookup_ID = @cwId WHERE fk_PMPD_Lookup_ID IN (@csId, @dcoId)`.\n3. Migrate & de-dupe dependent extension rows from the source IDs to `@cwId`:\n   - `LookupItem_PMPDExt` (per-security-group / `ARPCollaborationURL` assignments) \u2014 re-point `fk_LookupItem_ID`, skipping duplicates on `(fk_LookupItem_ID, fk_PMSecurityGroupID)`.\n   - `LookupItem_PriorityReorderExt` (priority ordering rows).\n   - `Organization_Lookup_Config` rows referencing the source IDs.\n4. Retire the now-orphaned \"PM C&S\" and \"PM DCO\" items per product-owner decision (delete vs. keep inactive \u2014 see open question).\n5. Verify no remaining FK references to `@csId`/`@dcoId` before deletion.\n\n## Files to modify\n\n- `Source/Migrations/5.1.4/<NN>_<YYYYMMDD>_CombinePmCsAndDcoIntoPmCw.sql` *(new \u2014 use the next sequence number in the current sprint folder)* \u2014 performs steps 1\u20135 above with `IF NOT EXISTS` guards and a `PRINT @@ROWCOUNT` summary so re-runs are no-ops.\n\n## Acceptance Criteria\n\n- [ ] After the migration, a single PM/PD value \"PM CW\" exists for Crestline; \"PM C&S\" and \"PM DCO\" no longer appear as selectable PM/PD options for Crestline users.\n- [ ] Every Crestline action previously assigned to \"PM C&S\" or \"PM DCO\" is now assigned to \"PM CW\" (no orphaned/NULL `fk_PMPD_Lookup_ID`).\n- [ ] Security-group assignments (`LookupItem_PMPDExt`), priority-reorder rows, and `Organization_Lookup_Config` entries for the old items are carried over to \"PM CW\" with no duplicates.\n- [ ] No PM/PD values for any other organization are altered.\n- [ ] Migration is idempotent: re-running produces 0 changes and no errors.\n- [ ] Project builds; all existing tests continue to pass.\n\n## Unit Test Requirements\n\nOmitted \u2014 this is a pure data migration with no new C#/service logic. If desired, add an integration check that no `OneNList` rows reference the retired lookup IDs after migration.\n\n## \u26a0 Open questions for product owner before implementation\n\n1. Confirm the exact current `LookupItemValue` spellings and IDs for the two items (e.g. is it literally \"PM C&S\" / \"PM DCO\"?), and which Crestline organization/security group they belong to.\n2. Should the old \"PM C&S\" / \"PM DCO\" items be **hard-deleted** or **kept but hidden/inactive** for historical/audit purposes?\n3. Confirm \"PM CW\" is the exact desired display text and whether it should inherit C&S's or DCO's existing priority position/security-group config.",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "source::customer-direct",
+            "type::Improvement"
+          ],
+          "milestone": "v5.1.5",
+          "date_added_to_sprint": "2026-06-25",
+          "date_closed": "2026-07-02",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 244444,
+          "iid": 730,
+          "title": "fix: rename Post Award sub-contractor selection pop-up title (Crestline)",
+          "description": "## Description\n\nIn the Post Award tab, the pop-up shown when a user goes to select Sub Contractors is titled **\"Select Post Award Prime Contractor\"**, which is incorrect \u2014 the modal selects *sub* contractors. Per Crestline request, change the title to **\"Select Post Award Sub Contractors\"**.\n\nThe modal header is rendered by `onenlist.modal.js` (lines 38 & 61), which copies the triggering link's `title` attribute into the modal's `<h4 class=\"modal-title\">`. The fix is a one-line text change to that `title` attribute \u2014 no DB, controller, or logic change.\n\n## Files to modify\n\n- `Source/OneNListApp.Web/Views/Item/_PostContractorsSection.cshtml:56` \u2014 change `title=\"Select Post Award Prime Contractor\"` to `title=\"Select Post Award Sub Contractors\"` on the `a[data-modal]` link that opens the Active/Sub Contractors selection modal.\n\n## Acceptance Criteria\n\n- [ ] On an item's Post Award tab \u2192 Prime & Sub Contractors panel, clicking the contractor-selection link opens a modal whose header reads \"Select Post Award Sub Contractors\".\n- [ ] No other modal titles or the link's displayed label text are changed.\n- [ ] Project builds with no errors or warnings after the change.\n- [ ] All existing tests continue to pass.\n\n## Unit Test Requirements\n\nOmitted \u2014 static Razor text change with no new logic. Optionally add an E2E assertion in `OneNListApp.E2E` that the modal `.modal-title` reads \"Select Post Award Sub Contractors\" if the Post Award flow is covered there.",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "source::customer-direct",
+            "type::Improvement"
+          ],
+          "milestone": "v5.1.5",
+          "date_added_to_sprint": "2026-06-25",
+          "date_closed": "2026-06-26",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 243514,
+          "iid": 729,
+          "title": "feat: add \"RFP Release Date Revised\" as a selectable Action List column",
+          "description": "In the **Action List Column Configuration** admin page (Admin area, Owner access), admins customize which columns appear in each action list view (Recent, **All Open Actions / PreAward**, Draft, Awarded, Cancelled, Expired, Deleted).\n\nThe customer wants the **RFP Release Date Revised** field to appear as a selectable column. Currently it is not offered as a choice.\n\nGood news: the field already exists end-to-end in the data model (entity, view-model, item form, history/audit, exports). It simply has not been _wired in_ as a selectable list column. A non-revised **RFP Release Date** column already exists and is selectable \u2014 this ticket adds the **Revised** variant alongside it, across **all views**.\n\n**Existing data plumbing (already present, no new schema needed):**\n\n* Entity:\u00a0`OneNList.RFPReleaseDateRevised`\u00a0\u2014\u00a0[OneNList.cs:198](vscode-webview://0nfnc11nghrep6s3jh3und5rh4tbkta95dj880h1qbj3egeupg18/Source/OneNListApp.Data/Models/OneNList.cs#L198)\u00a0(`DateOnly?`)\n* List view-model:\u00a0`GetOneNListItemsByUser.RFPReleaseDateRevised`\u00a0\u2014\u00a0[GetOneNListItemsByUser.cs:240](vscode-webview://0nfnc11nghrep6s3jh3und5rh4tbkta95dj880h1qbj3egeupg18/Source/OneNListApp.Data/StoredProcedures/Models/GetOneNListItemsByUser.cs#L240)\u00a0(`DateTime?`)\n\n## Background \u2014 how a column becomes selectable\n\nA column is only offered/displayed when its `ColumnKey` is wired into several hardcoded maps that must be kept in sync (this is why the field exists but isn't selectable today):\n\n1. Master key list\u00a0`_allColumnKeys`\u00a0\u2014\u00a0[ActionListColumnConfigService.cs:14-21](vscode-webview://0nfnc11nghrep6s3jh3und5rh4tbkta95dj880h1qbj3egeupg18/Source/OneNListApp.Service/ActionListColumnConfigService.cs#L14-L21)\n2. A render\u00a0`case`\u00a0in the List view \u2014\u00a0[Views/List/Index.cshtml:143-264](vscode-webview://0nfnc11nghrep6s3jh3und5rh4tbkta95dj880h1qbj3egeupg18/Source/OneNListApp.Web/Views/List/Index.cshtml#L143-L264)\n3. A default header label \u2014\u00a0[Index.cshtml:20-42](vscode-webview://0nfnc11nghrep6s3jh3und5rh4tbkta95dj880h1qbj3egeupg18/Source/OneNListApp.Web/Views/List/Index.cshtml#L20-L42)\n4. A sort-param entry \u2014\u00a0[ListController.cs:126-150](vscode-webview://0nfnc11nghrep6s3jh3und5rh4tbkta95dj880h1qbj3egeupg18/Source/OneNListApp.Web/Controllers/ListController.cs#L126-L150)\u00a0(`ViewBag.ColumnSortParams`)\n5. Date-range filter support \u2014\u00a0[ListFilterHelper.cs](vscode-webview://0nfnc11nghrep6s3jh3und5rh4tbkta95dj880h1qbj3egeupg18/Source/OneNListApp.Web/Helpers/ListFilterHelper.cs)\u00a0(`ApplyDateRangeFilter`)\n6. A seed migration so existing orgs get the new config row \u2014 mirror how\u00a0`RfpReleaseDate`\u00a0is seeded in\u00a0`Source/Migrations/5.1.2/02_...sql`\u00a0and\u00a0`05_...sql`\n\nThe existing `RfpReleaseDate` column is the exact pattern to mirror.\n\n## Acceptance Criteria\n\n* \u00a0**RFP Release Date Revised**\u00a0appears as a selectable column in the Admin Action List Column Configuration page\u00a0**for all views**\u00a0(Recent, PreAward / All Open Actions, Draft, Awarded, Cancelled, Expired, Deleted).\n  * [ ] \u00a0The column\u00a0**defaults to hidden**\u00a0(`IsVisible = 0`) for every org/view \u2014 admins opt in via the configuration page.\n  * [ ] \u00a0When an admin enables the column for an org/view, it renders in the List view showing\u00a0`item.RFPReleaseDateRevised`.\n  * [ ] \u00a0Column header label reads\u00a0**\"RFP Release Date Revised\"**\u00a0(overridable via the existing Display Name Override).\n  * [ ] \u00a0Column is sortable (sort link works) consistent with other date columns.\n  * [ ] \u00a0Date is displayed in\u00a0**MM/dd/yyyy**\u00a0date-only format, consistent with the other list date columns (NOTE: the view-model currently formats this property as\u00a0`MM/dd/yyyy HH:mm`\u00a0\u2014 render it date-only in the column to match\u00a0`RFP Release Date`\u00a0/\u00a0`Award Date`).\n  * [ ] \u00a0Column is\u00a0**date-range filterable**\u00a0(admin can enable\u00a0`IsFilterable`\u00a0with\u00a0`FilterType = daterange`), matching the behavior of the other selectable date columns.\n  * [ ] \u00a0A seed migration adds the new config row (default hidden) for\u00a0**all existing organizations and all views**, so existing saved configurations are not broken.\n  * [ ] \u00a0Existing organizations' current column selections are unaffected; the new column is purely additive.\n  * [ ] \u00a0Unit tests cover the new column key in the service defaults, plus the render/label/sort/filter mapping.\n\n## Implementation Notes (suggested)\n\nMirror the existing `RfpReleaseDate` wiring, using new key `\"RfpReleaseDateRevised\"` \u2192 property `item.RFPReleaseDateRevised`:\n\n1. Add\u00a0`\"RfpReleaseDateRevised\"`\u00a0to\u00a0`_allColumnKeys`\u00a0([ActionListColumnConfigService.cs:20](vscode-webview://0nfnc11nghrep6s3jh3und5rh4tbkta95dj880h1qbj3egeupg18/Source/OneNListApp.Service/ActionListColumnConfigService.cs#L20)).\n2. Add a render\u00a0`case`\u00a0in\u00a0[Index.cshtml](vscode-webview://0nfnc11nghrep6s3jh3und5rh4tbkta95dj880h1qbj3egeupg18/Source/OneNListApp.Web/Views/List/Index.cshtml#L261)\u00a0(near the\u00a0`RfpReleaseDate`\u00a0case),\u00a0**formatting date-only**.\n3. Add\u00a0`defaultLabels`\u00a0entry \u2192 \"RFP Release Date Revised\" ([Index.cshtml:20-42](vscode-webview://0nfnc11nghrep6s3jh3und5rh4tbkta95dj880h1qbj3egeupg18/Source/OneNListApp.Web/Views/List/Index.cshtml#L20-L42)).\n4. Add\u00a0`ColumnSortParams`\u00a0entry + matching sort branch in the list query/sort logic ([ListController.cs:126-150](vscode-webview://0nfnc11nghrep6s3jh3und5rh4tbkta95dj880h1qbj3egeupg18/Source/OneNListApp.Web/Controllers/ListController.cs#L126-L150)).\n5. Add\u00a0`case \"RfpReleaseDateRevised\"`\u00a0to\u00a0`ApplyDateRangeFilter`\u00a0in\u00a0[ListFilterHelper.cs](vscode-webview://0nfnc11nghrep6s3jh3und5rh4tbkta95dj880h1qbj3egeupg18/Source/OneNListApp.Web/Helpers/ListFilterHelper.cs)\u00a0so date-range filtering works when enabled.\n6. Add a seed migration (next version folder) inserting the new\u00a0`Organization_ActionList_Column_Config`\u00a0row for\u00a0**every org and every view**,\u00a0`IsVisible = 0`,\u00a0`IsFilterable`\u00a0defaulted off, mirroring the\u00a0`RfpReleaseDate`\u00a0seed rows in\u00a0`Source/Migrations/5.1.2/02_*`\u00a0and\u00a0`05_*`.\n\n## Notes for the implementer\n\n* This is a\u00a0**pure wiring task**\u00a0\u2014 no new schema, since\u00a0`OneNList.RFPReleaseDateRevised`\u00a0already exists.\n* The one real gotcha is the\u00a0**format mismatch**: the view-model property is\u00a0`MM/dd/yyyy HH:mm`, but every other list date column is date-only \u2014 the render\u00a0`case`\u00a0should format it date-only.",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "source::customer-direct",
+            "type::New Feature"
+          ],
+          "milestone": "v5.1.5",
+          "date_added_to_sprint": "2026-06-25",
+          "date_closed": "2026-06-26",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 241957,
+          "iid": 728,
+          "title": "feat: add selectable \"Total Funded Amount\" column to action list (sum all FYs)",
+          "description": "Meridian has requested a selectable list-view column showing the **total funded amount across all fundings** for each action, regardless of fiscal year \u2014 restoring a column that existed before the dynamic column-selection capability. The value uses the **same data source as the existing `CurrentFyObligationAmount` column** (`OneNList_ProjectedObligation.Amount`), but sums every row for the action rather than filtering to the current FY. This mirrors the `CurrentFyObligationAmount` / `NextFyObligationAmount` pattern added in #725, plus a column-config migration so org owners can opt the column into any view. The new column must preserve the established NULL-on-empty semantics (no obligation rows \u2192 blank/`$0`, not a misleading aggregate).\n\n**Files to modify:**\n\n* `Source/OneNListApp.Data/StoredProcedures/Models/GetOneNListItemsByUser.cs`\u00a0\u2014 add a new nullable DTO property (e.g.\u00a0`TotalFundedAmt`,\u00a0`[Display(Name = \"Total Funded Amount\")]`,\u00a0`[DisplayFormat(DataFormatString = \"{0:n}\")]`), distinct from the existing static\u00a0`TotalObligatedAmount`\u00a0property.\n* `Source/OneNListApp.Service/OneNListItemService.cs`\u00a0\u2014 in\u00a0`QueryForList`, project\u00a0`TotalFundedAmt`\u00a0as\u00a0`SUM(OneNList_ProjectedObligation.Amount)`\u00a0for the action across\u00a0**all**\u00a0`ObligationYear`\u00a0values, guarded with\u00a0`.Any()`\u00a0to return\u00a0`null`\u00a0(not\u00a0`0`) when no rows exist \u2014 mirroring the existing\u00a0`CurrentFyTotalObligatedAmt`\u00a0block but without the\u00a0`ObligationYear == currentFy`\u00a0filter. Add a unit-tested static helper\u00a0`SumAllObligations(obligations)`\u00a0alongside the existing\u00a0`SumObligationsForFiscalYear`.\n* `Source/OneNListApp.Service/ActionListColumnConfigService.cs`\u00a0\u2014 add\u00a0`\"TotalFundedAmount\"`\u00a0to the canonical\u00a0`ColumnKeys`\u00a0list (the \\~20-key registry, near\u00a0`CurrentFyObligationAmount`/`NextFyObligationAmount`).\n* `Source/OneNListApp.Web/Views/List/Index.cshtml`\u00a0\u2014 add a\u00a0`case \"TotalFundedAmount\":`\u00a0rendering a\u00a0`<td data-col-key=\"TotalFundedAmount\">`\u00a0with the same\u00a0`$`/`$0`\u00a0rendering used by the existing FY obligation columns.\n* `Source/OneNListApp.Web/Controllers/ListController.cs`\u00a0\u2014 add sort cases (`TotalFundedAmt`\u00a0/\u00a0`TotalFundedAmt_desc`) to the OrderBy switch, and a\u00a0`[\"TotalFundedAmount\"]`\u00a0entry to the column-config sort-mapping dictionary.\n* `Source/Migrations/5.1.4/05_20260618_AddTotalFundedAmountColumnConfig.sql`\u00a0\u2014\u00a0**new migration**: seed\u00a0`Organization_ActionList_Column_Config`\u00a0rows for\u00a0`TotalFundedAmount`\u00a0across the same orgs/views as #725,\u00a0`IsVisible=0`,\u00a0`IsFilterable=0`,\u00a0`FilterType='numeric'`\u00a0(opt-in),\u00a0`DisplayName='Total Funded Amount'`\u00a0for Meridian (org JPOCompliance).\n\n**Acceptance Criteria:**\n\n* \u00a0A\u00a0`TotalFundedAmount`\u00a0column key exists and is selectable per-org/per-view in the Admin \u2192 Action List Column Config screen.\n  * [ ] \u00a0When enabled, the list view shows the sum of all\u00a0`OneNList_ProjectedObligation.Amount`\u00a0rows for each action across every obligation year, formatted as currency.\n  * [ ] \u00a0An action with no projected-obligation rows renders blank/`$0`\u00a0(NULL-on-empty), consistent with the Current/Next FY columns.\n  * [ ] \u00a0The column header reads \"Total Funded Amount\" (or the org's configured\u00a0`DisplayName`); no \"PO\"/\"JPO\" text in any user-visible label.\n  * [ ] \u00a0The column is sortable ascending and descending.\n  * [ ] \u00a0The column is hidden by default (opt-in) until an org owner enables it.\n  * [ ] \u00a0Project builds with no errors or warnings after the change.\n  * [ ] \u00a0All existing tests continue to pass.\n\n**Unit Test Requirements:**\n\n_(Moq + MockDbSetHelper pattern in `OneNListApp.Tests/`; name as `Subject_Condition_ExpectedResult`.)_\n\n* `OneNListItemService.SumAllObligations_MultipleFiscalYears_ReturnsSumAcrossAllYears`\u00a0\u2014 asserts amounts from different\u00a0`ObligationYear`\u00a0values are all summed.\n* `OneNListItemService.SumAllObligations_NoObligationRows_ReturnsNull`\u00a0\u2014 asserts NULL (not 0) on empty set, matching the FY-column semantics.\n* `OneNListItemService.SumAllObligations_SingleYear_EqualsThatYearTotal`\u00a0\u2014 asserts the all-years total equals the per-FY total when only one year has rows (cross-check against\u00a0`SumObligationsForFiscalYear`).",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "type::New Feature"
+          ],
+          "milestone": "v5.1.5",
+          "date_added_to_sprint": "2026-06-25",
+          "date_closed": "2026-06-26",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 233259,
+          "iid": 721,
+          "title": "Add supporting indexes for lookup foreign keys and review delete behavior",
+          "description": "_Follow-up from the lookup architecture review (#398). Source: the project backlog docs._\n\n### Problem\nLookup FK indexing is inconsistent: `LookupItem` indexes `LookupItemValue` and `fk_Lookup_ID` (`OneNListContext.cs:450-452`), but the Service Code mapping FKs and several `OneNList` lookup FK columns have no dedicated supporting index (DB-verified: `LookupItem_PscCodeToSpendCat` has only the clustered PK). Every lookup FK uses `OnDelete(ClientSetNull)` (`OneNListContext.cs:617-635`), creating orphan/null risk on lookup deletion.\n\n### Proposed change\nAudit lookup FK columns (mapping tables + `OneNList` lookup FKs) for missing nonclustered indexes and add them where the goal/mapping queries justify it. Review whether `ClientSetNull` is the right delete behavior per relationship (e.g. `Restrict` for mappings that must not be silently orphaned). Apply via Fluent config + SQL migration.\n\n### Affected files\n- `Source/OneNListApp.Data/OneNListContext.cs` (indexes + delete behavior)\n- New SQL migration under `Source/Migrations/<next-version>/`\n\n### Rough effort\nM.\n\n### Severity\nLow (D6)",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": "v5.1.5",
+          "date_added_to_sprint": "2026-06-25",
+          "date_closed": "2026-07-02",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 233258,
+          "iid": 720,
+          "title": "Adopt the VendorId mapping conventions as the standard for lookup mapping tables",
+          "description": "_Follow-up from the lookup architecture review (#398). Source: the project backlog docs._\n\n### Problem\nThe codebase has several lookup *mapping* tables built to different standards. The newest, `LookupItem_CageCodeToPrimeContractor` (2026-01), is the cleanest: explicit org scoping, a unique constraint (`UX_Cage_Prime_Org`), single-purpose entity. The older Service Code mapping tables (`LookupItem_PscCodeToSpendCat`, `LookupItem_PscCodeGoalMap`) lack uniqueness and lean on sprocs/magic strings. There is no written convention, so the next mapping table is likely to repeat the older mistakes.\n\n### Proposed change\nWrite a short \"lookup mapping table\" convention doc (org-scoped FK, unique composite index, enum-backed type references, EF-LINQ-first over sprocs where practical) and add a lightweight checklist to the PR/MR template. Reference it from the review. No production code change required.\n\n### Affected files\n- New `docs/architecture/lookup-mapping-conventions.md`\n- (reference) `docs/architecture/lookup-architecture-review.md`\n\n### Rough effort\nS.\n\n### Severity\nProcess / convention",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Refactor"
+          ],
+          "milestone": "v5.1.5",
+          "date_added_to_sprint": "2026-06-25",
+          "date_closed": "2026-07-02",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 233257,
+          "iid": 719,
+          "title": "Make LOE_ID a first-class concept instead of overloading LookupItemNumericValue",
+          "description": "_Follow-up from the lookup architecture review (#398). Source: the project backlog docs._\n\n### Problem\n\"LOE_ID\" is stored in the generic `LookupItem.LookupItemNumericValue` column \u2014 the same column also holds FiscalYear numeric values \u2014 and the admin UI shows/edits it only when a runtime heuristic (`ViewBag.LoeIdFk_LookupID`, `LookupItemController.cs:241`) decides the current item is a LevelOfEffort item (`_EditFields.cshtml:90-104`, `_ViewFields.cshtml:62-72`). The overload is non-obvious and the gating is not tied to the `LevelOfEffort` enum constant.\n\n### Proposed change\nLowest-cost: replace the heuristic with the explicit `eLookups.LevelOfEffort` constant so the LOE_ID field renders deterministically. Higher-value (optional): give LevelOfEffort a small extension table (`LookupItem_LevelOfEffortExt`) following the established `*Ext` pattern so LOE_ID has a named, typed home.\n\n### Affected files\n- `Source/OneNListApp.Web/Areas/Admin/Controllers/LookupItemController.cs`\n- `Source/OneNListApp.Web/Areas/Admin/Views/LookupItem/_EditFields.cshtml`\n- `Source/OneNListApp.Web/Areas/Admin/Views/LookupItem/_ViewFields.cshtml`\n- (optional) new `LookupItem_LevelOfEffortExt` model + Fluent config + migration\n\n### Rough effort\nS for the heuristic-to-constant fix; M if adding the extension table.\n\n### Severity\nMed (D4)",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": "v5.1.5",
+          "date_added_to_sprint": "2026-06-25",
+          "date_closed": "2026-07-02",
+          "date_removed_from_sprint": null
+        }
+      ]
+    },
+    {
+      "id": 4466,
+      "title": "v5.1.6",
+      "start_date": "2026-07-15",
+      "end_date": "2026-07-28",
+      "state": "closed",
+      "source": "milestone",
+      "goal": null,
+      "initial_totals": {
+        "count": 6,
+        "weight": 19
+      },
+      "burndown": [
+        {
+          "date": "2026-07-15",
+          "remaining_count": 5,
+          "remaining_weight": 16
+        },
+        {
+          "date": "2026-07-16",
+          "remaining_count": 5,
+          "remaining_weight": 16
+        },
+        {
+          "date": "2026-07-17",
+          "remaining_count": 4,
+          "remaining_weight": 11
+        },
+        {
+          "date": "2026-07-18",
+          "remaining_count": 4,
+          "remaining_weight": 11
+        },
+        {
+          "date": "2026-07-19",
+          "remaining_count": 4,
+          "remaining_weight": 11
+        },
+        {
+          "date": "2026-07-20",
+          "remaining_count": 4,
+          "remaining_weight": 11
+        },
+        {
+          "date": "2026-07-21",
+          "remaining_count": 4,
+          "remaining_weight": 11
+        },
+        {
+          "date": "2026-07-22",
+          "remaining_count": 3,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2026-07-23",
+          "remaining_count": 1,
+          "remaining_weight": 2
+        },
+        {
+          "date": "2026-07-24",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-25",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-26",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-27",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-07-28",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 5,
+        "new_feature": 1,
+        "other": 0
+      },
+      "completed": {
+        "count": 6,
+        "weight": 19
+      },
+      "issues": [
+        {
+          "id": 233266,
+          "iid": 723,
+          "title": "Notify users when records are updated / provide a recently-updated records list",
+          "description": "## Customer request\n> \"Would it be possible to set up some kind of alert to notify us when records are updated, or to obtain a list of recently updated records?\"\n\nTwo related capabilities: (A) a **list/report of recently-updated records**, and (B) an **alert/notification when records are updated**. They're framed as alternatives \u2014 recommend delivering (A) first (small, high value) and treating (B) as a follow-on phase because it requires infrastructure decisions.\n\n## What already exists (build on, don't reinvent)\n- **Per-record timestamps:** `OneNList.ModifiedDate` / `ModifiedBy` are populated on update (`OneNListContext.cs:731-732`, DB default `getdate()`; set via `OneNItemUpdateHelper`). This is the simplest source for \"recently updated.\"\n- **Reporting view:** `BO_View_OneNList` already aggregates action fields for list/report queries.\n- **Analytics sproc pattern:** `GetEndUserAnalytics_Totals/_ChangesByType/_ChangesByUser` (`StoredProcedureService.cs:518-540`, surfaced at `/Admin/UserAnalytics`) is a good template for a change-summary query.\n- **Change-log tables exist but are NOT populated:** `TableChangeLogSummary` / `TableChangeLogDetail` entities are mapped (`OneNListContext.cs` ~1489-1519) but no code writes to them. Field-level change history is therefore not currently available without new write logic or triggers.\n- **Email is a stub:** `EmailService.SendEmailAsync` returns `Task.CompletedTask` with no SMTP (`App_Start/IdentityConfig.cs:11-17`, registered `Program.cs:128`). `eMetricType.Email` enum exists but is unused.\n- **SignalR exists** (`Hubs/ProgressHub.cs`, `Helpers/ProgressNotifier.cs`) \u2014 currently only for bulk-progress; could power in-app notifications.\n- **No background/scheduled job framework** (no `IHostedService`/Hangfire/Quartz) \u2014 a digest/scheduled email would need one added.\n- **API project** (`Source/OneNListApp.API`) exposes specific history views by API key but has **no** generic \"modified since X\" endpoint.\n\n## Recommended phased scope\n\n### Phase 1 \u2014 Recently-updated records list (low effort, satisfies request B-as-list)\n- Add a stored proc / view query: actions where `ModifiedDate >= @cutoff`, scoped by organization (respect existing org multi-tenancy filter), returning PO Control #, Title, ModifiedBy, ModifiedDate, status.\n- Surface it as a filterable admin/list page (reuse the action list table styling) and/or a parameterized API endpoint (e.g. `GET /api/RecentlyUpdated?sinceDays=7`) guarded by the existing API-key check.\n- Acceptance: a user can see/pull all records in their org updated within a chosen window (default 7 days), sortable by ModifiedDate.\n\n### Phase 2 \u2014 Update alerts/notifications (larger; needs decisions)\n- Implement real notification delivery. Options:\n  - **In-app** via the existing SignalR hub (no SMTP needed).\n  - **Email digest** \u2014 requires implementing `EmailService` with an SMTP/relay (gov-approved) + a scheduled job (new `IHostedService`) to send a periodic \"records updated since last digest\" summary, leveraging `eMetricType`.\n- Optional: a subscription/preferences table so users opt into which orgs/fields trigger alerts.\n- If field-level (\"what changed\") detail is required (not just \"record X was updated\"), add population of `TableChangeLogSummary/Detail` (SaveChanges interceptor or DB triggers) \u2014 currently empty.\n\n## Decisions needed before Phase 2 (open questions)\n1. **Delivery channel:** in-app (SignalR) vs email vs both?\n2. If email: is an approved SMTP/relay available in the gov environment, and what cadence (real-time vs daily/weekly digest)?\n3. **Granularity:** \"record was updated\" (use `ModifiedDate`) vs \"these fields changed\" (requires populating the change-log tables)?\n4. **Scope/recipients:** all updates in an org, or only specific statuses/fields, and who receives them?\n\n## Affected files (indicative)\n- `Source/OneNListApp.Service/StoredProcedureService.cs` + `IStoredProcedureService.cs` (new query)\n- new SQL migration under `Source/Migrations/<next-version>/` (sproc/view; optionally change-log triggers)\n- `Source/OneNListApp.Web/...` new list page/controller (Phase 1)\n- `Source/OneNListApp.API/...` new endpoint (Phase 1, optional)\n- `Source/OneNListApp.Web/App_Start/IdentityConfig.cs` (implement EmailService), `Program.cs` (register hosted service), `Hubs/ProgressHub.cs` (Phase 2)\n\n## Rough effort\nPhase 1: S\u2013M. Phase 2: M\u2013L (depends on channel + digest decisions).\n\n_Source: codebase review of change-tracking, ModifiedDate, EmailService, SignalR, and the API project._",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::New Feature"
+          ],
+          "milestone": "v5.1.6",
+          "date_added_to_sprint": "2026-07-14",
+          "date_closed": "2026-07-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 233256,
+          "iid": 718,
+          "title": "Introduce repeatable, idempotent lookup seeding",
+          "description": "_Follow-up from the lookup architecture review (#398). Source: the project backlog docs._\n\n### Problem\nThe entire lookup layer is seeded by hand-run SQL scripts + a `.bak` restore \u2014 there are **no `HasData` calls** in `OnModelCreating` (`OneNListContext.cs:160-1591`) and no programmatic seeder. This has already caused cross-environment lookup-ID drift (commit `9682475d`, \"Fixed issue with lookup anomalies between DREN and QA\"). New environments and the Service Code CSV import depend on the right scripts being applied in the right order.\n\n### Proposed change\nDefine the canonical lookup *types* (and fixed system items) as idempotent seed data \u2014 either EF `HasData` for stable `Lookup` rows, or a versioned re-runnable `MERGE`-based SQL seed invoked at deploy. Document the seed order for Service Code types + goal-map CSV import so a fresh environment reaches a known lookup state in one repeatable step.\n\n### Affected files\n- `Source/OneNListApp.Data/OneNListContext.cs` (if `HasData`)\n- New seed script(s) under `Source/Migrations/`\n- `Source/OneNListApp.Web/Areas/Admin/Controllers/PscCodeMappingController.cs` (CSV import order/docs)\n\n### Rough effort\nL.\n\n### Severity\nMed (D3)",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": "v5.1.6",
+          "date_added_to_sprint": "2026-07-14",
+          "date_closed": "2026-07-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 233255,
+          "iid": 717,
+          "title": "Add a uniqueness constraint to LookupItem_PscCodeToSpendCat",
+          "description": "_Follow-up from the lookup architecture review (#398). Source: the project backlog docs._\n\n### Problem\n`LookupItem_PscCodeToSpendCat` defines only FK constraints (all `ClientSetNull`) and **no unique index** (`OneNListContext.cs:617-635`). **DB-verified:** the physical table has only the clustered PK on `ID` \u2014 no unique constraint, no FK indexes \u2014 and currently holds **97 rows with 0 duplicate `(FK_PscCode, FK_Spending_Category, FK_Organization_ID)` combinations**, so a unique index can be added now without a cleanup step. Without it, duplicate mappings can be inserted and produce ambiguous/doubled goal resolution. The 2026 VendorId mapping already proves the pattern (`UX_Cage_Prime_Org`, `OneNListContext.cs:1566-1568`).\n\n### Proposed change\nAdd a unique composite index on `(FK_PscCode, FK_Spending_Category, FK_Organization_ID)` via Fluent config + a SQL migration (guard with a pre-check in case PROD differs). Update the CRUD sproc / `SaveOrUpdate` path to upsert rather than blind-insert.\n\n### Affected files\n- `Source/OneNListApp.Data/OneNListContext.cs` (Fluent config)\n- New SQL migration under `Source/Migrations/<next-version>/`\n- `Source/OneNListApp.Web/Areas/Admin/Controllers/PscCodeMappingController.cs`\n\n### Rough effort\nM.\n\n### Severity\nHigh (D2)",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": "v5.1.6",
+          "date_added_to_sprint": "2026-07-14",
+          "date_closed": "2026-07-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 198902,
+          "iid": 677,
+          "title": "UX: Add feedback and progress indication for data exports",
+          "description": "## Summary\nData export operations in PULSE provide no user feedback. The export button is\ndisabled after click (via `onenlist.btnslinks.disable.js`) and re-enabled via a\ncookie polling mechanism (`data-trigger-download` attribute, lines 34\u201352). This\ncookie detection is unreliable \u2014 race conditions can leave the button permanently\ndisabled or re-enabled before the download starts, leaving the user with no\nindication of whether the export worked.\n\n**Affected file:** `Source/OneNListApp.Web/wwwroot/scripts/onenlist.btnslinks.disable.js`\n\n## Acceptance Criteria\n- [ ] When an export is triggered, a non-blocking status message appears (e.g., \"Preparing your export\u2026\")\n- [ ] The status message is replaced with \"Download ready\" or dismissed automatically once the file download begins\n- [ ] If the export fails (server error), a user-visible error message is shown (not just a console log)\n- [ ] The export button is reliably re-enabled after the download completes or fails\n- [ ] The cookie-based re-enable mechanism is replaced with a more reliable approach (e.g., `fetch` with blob response, or a server-sent status endpoint)\n- [ ] Existing export functionality is not broken for any export type",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": "v5.1.6",
+          "date_added_to_sprint": "2026-07-14",
+          "date_closed": "2026-07-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 198901,
+          "iid": 676,
+          "title": "UX: Add admin dashboard with quick-access to common tasks",
+          "description": "## Summary\nThe PULSE Admin area contains 27 sub-sections accessible only through a flat\nnavigation menu. Administrators have no at-a-glance view of the system state and\nmust click through menus to reach common tasks like adding a user, editing a lookup,\nor reviewing error logs. There is no summary of recent activity, pending access\nrequests, or data anomalies.\n\n**Affected area:** `Source/OneNListApp.Web/Areas/Admin/`\n\n## Acceptance Criteria\n- [ ] An Admin Home dashboard page is created at `/Admin/Home/Index`\n- [ ] The dashboard displays quick-action cards/tiles for the most common tasks: Manage Users, Manage Lookups, Manage Field Config, Review Error Logs, Review API Keys\n- [ ] A \"Recent Activity\" section shows the last 10 configuration changes (user, action, timestamp) if an audit log is available\n- [ ] A \"Pending Access Requests\" count is displayed if the access request feature is active\n- [ ] A \"Data Anomalies\" count links to the DataAnomalyController if anomalies exist\n- [ ] The dashboard is responsive and renders correctly on tablet-sized screens\n- [ ] Navigation to any Admin sub-section from the dashboard takes no more than 2 clicks",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": "v5.1.6",
+          "date_added_to_sprint": "2026-07-14",
+          "date_closed": "2026-07-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 198899,
+          "iid": 674,
+          "title": "UX: Add breadcrumb navigation to all main views",
+          "description": "## Summary\nPULSE has no breadcrumb trail anywhere in the application. Users navigating from the\naction item list \u2192 item detail \u2192 post-award \u2192 sub-contractor have no visible path\nback and must use the browser Back button or top-level navigation menu. This is\nparticularly disorienting in the Admin area, which has 27 sub-sections.\n\n## Acceptance Criteria\n- [ ] A Bootstrap breadcrumb component is added to the shared layout (`_Layout.cshtml` or a partial)\n- [ ] Breadcrumbs are populated per-view using a ViewData/ViewBag convention (e.g., `ViewData[\"Breadcrumbs\"]`)\n- [ ] At minimum, breadcrumbs are implemented for: Dashboard \u2192 Item List \u2192 Item Detail \u2192 each sub-tab (Post Award, Compliance Docs, etc.)\n- [ ] Admin area breadcrumbs reflect: Admin Home \u2192 Section \u2192 Record (e.g., Admin \u2192 Users \u2192 Edit)\n- [ ] Breadcrumbs are rendered as a `<nav aria-label=\"breadcrumb\">` with `<ol class=\"breadcrumb\">` for accessibility\n- [ ] The current page is the last breadcrumb item and is not a link (`aria-current=\"page\"`)\n- [ ] No existing navigation or layout behavior is broken",
+          "project_id": 91002,
+          "project_name": "pulse",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": "v5.1.6",
+          "date_added_to_sprint": "2026-07-14",
+          "date_closed": "2026-07-15",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

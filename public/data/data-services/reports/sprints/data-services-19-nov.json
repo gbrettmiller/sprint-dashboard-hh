@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-19-nov",
+  "title": "Data Services 19 Nov",
+  "start_date": "2025-11-05",
+  "end_date": "2025-11-19",
+  "generated_at": "2026-07-02T21:56:26.571872Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint aimed to advance core platform capabilities across multiple applications while establishing foundational architecture for dynamic data collection and cross-system interoperability. The team worked to resolve critical registration application issues, strengthen permission controls across baseline systems, and architect solutions for enhanced document management and procurement workflows.",
+    "summary": "The team completed substantial feature work across five major workstreams, including critical bug fixes and UI improvements to the App Registry, architectural decisions and site preparation for the Compliance Review document management library system, permission scrubbing across three baseline list systems to strengthen security posture, and advancement of the Records API and Purchasing modules with new interface designs and packaging capabilities. Notable achievements include establishing the dynamic data collection model for Compliance Review, enabling cross-Division transfer functionality in the I/O system, and implementing improved user interfaces for Catalog Sync home screen and procurement workflows. These completions position the platform for more robust permission governance, better document handling capabilities, and improved user experience across registration and purchasing functions.",
+    "metrics": {
+      "initial_count": 23,
+      "initial_weight": 51,
+      "completed_count": 23,
+      "completed_weight": 51,
+      "initial_breakdown": "17 Others, 5 Improvements, 1 New Feature",
+      "completed_breakdown": "17 Others, 5 Improvements, 1 New Feature"
+    }
+  }
+}

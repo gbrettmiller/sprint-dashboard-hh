@@ -1,0 +1,53 @@
+{
+  "group_slug": "service-management",
+  "project_slug": null,
+  "month": "2025-12",
+  "generated_at": "2026-07-10T21:41:42.086494Z",
+  "sprints": [
+    {
+      "title": "Service Management FY26 Q1-2",
+      "start_date": "2025-11-18",
+      "end_date": "2025-12-02",
+      "goals": "This sprint aimed to strengthen core IT Service Management capabilities by improving data accessibility, automating critical workflows, and enhancing the Support system with proper role-based security and incident routing. The team also worked to ensure data integrity across asset management systems and make infrastructure dependencies visible to support teams.",
+      "summary": "The team completed fourteen features and improvements that collectively modernize the Service Management platform's usability and automation. Key accomplishments include expanding template capacity, automating contact and tier population workflows, establishing proper default assignment routing in the Support ticketing system, and implementing role-based access controls aligned with organizational structure. Additionally, asset management data was refreshed with over Site 8 updates, financial and reference data was standardized per customer specifications, and critical infrastructure navigation tools were integrated to help teams visualize CI dependencies. These changes reduce manual data entry, improve incident routing accuracy, and provide teams with better visibility into system relationships and asset hierarchies.",
+      "metrics": {
+        "initial_count": 14,
+        "initial_weight": 34,
+        "completed_count": 14,
+        "completed_weight": 34,
+        "initial_breakdown": "14 Others",
+        "completed_breakdown": "14 Others"
+      }
+    },
+    {
+      "title": "Service Management FY26 Q1-3",
+      "start_date": "2025-12-03",
+      "end_date": "2025-12-16",
+      "goals": "This sprint aimed to expand Service Management platform capabilities for two new mission systems, BackupNav and NavHub GEN I, while improving data quality and user experience across incident management and financial tracking workflows. The team also worked to refine configuration management and dashboard reporting to better align with operational requirements.",
+      "summary": "The team successfully onboarded BackupNav into the Service Management platform by creating incident templates, adding product definitions, and extending the GPS Hardware form with system-specific fields, enabling operators to track and manage BackupNav incidents within the standard workflow. Parallel efforts completed the NavHub GEN I consumables data ingestion, implemented reference qualifiers across multiple forms to enforce data integrity, and updated incident status workflows with new hold reasons that reflect actual operational constraints like site travel dependencies. Additional refinements included dashboard cleanup for Fulfillment, improved Configuration Item labeling for domain-specific contexts, and investigative work into PDF-based incident field population that will inform future automation opportunities. These changes collectively reduce manual data entry, improve asset visibility, and provide teams with more accurate categorization and filtering capabilities.",
+      "metrics": {
+        "initial_count": 18,
+        "initial_weight": 46,
+        "completed_count": 18,
+        "completed_weight": 46,
+        "initial_breakdown": "18 Others",
+        "completed_breakdown": "18 Others"
+      }
+    },
+    {
+      "title": "Service Management FY26 Q1-4",
+      "start_date": "2025-12-18",
+      "end_date": "2025-12-31",
+      "goals": "This sprint focused on enhancing our Service Management platform's asset management capabilities and improving notification reliability across the enterprise. We prioritized integrating FieldGear asset data into our configuration management system while addressing critical operational gaps in vehicle maintenance tracking and communication workflows.",
+      "summary": "The team successfully implemented automated asset ingestion from the FieldGear system through a new client script that populates configuration items directly from source data, eliminating manual entry errors and reducing administrative overhead. We resolved notification delivery failures affecting group communications, completed the GPS vehicle changeover documentation, and expanded the maintenance form to include BackupNav sections alongside critical updates for NavHub GEN II Fleet Vehicle parts management. Additionally, we improved the configuration item interface by implementing a cascading dropdown linked to vessel selection, streamlining data entry for users managing multi-platform assets. These enhancements collectively strengthen asset visibility, reduce operational friction in maintenance workflows, and ensure stakeholders receive timely communications across all supported platforms.",
+      "metrics": {
+        "initial_count": 8,
+        "initial_weight": 22,
+        "completed_count": 8,
+        "completed_weight": 22,
+        "initial_breakdown": "8 Others",
+        "completed_breakdown": "8 Others"
+      }
+    }
+  ]
+}

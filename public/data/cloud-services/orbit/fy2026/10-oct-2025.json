@@ -1,0 +1,393 @@
+{
+  "fiscal_year": 2026,
+  "month": 10,
+  "year": 2025,
+  "sprints": [
+    {
+      "id": 3356,
+      "title": "Third-Party Integration FY26Q1-1",
+      "start_date": "2025-10-14",
+      "end_date": "2025-10-29",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 16,
+        "weight": 22
+      },
+      "burndown": [
+        {
+          "date": "2025-10-14",
+          "remaining_count": 15,
+          "remaining_weight": 21
+        },
+        {
+          "date": "2025-10-15",
+          "remaining_count": 13,
+          "remaining_weight": 16
+        },
+        {
+          "date": "2025-10-16",
+          "remaining_count": 12,
+          "remaining_weight": 15
+        },
+        {
+          "date": "2025-10-17",
+          "remaining_count": 5,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2025-10-18",
+          "remaining_count": 5,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2025-10-19",
+          "remaining_count": 5,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2025-10-20",
+          "remaining_count": 4,
+          "remaining_weight": 7
+        },
+        {
+          "date": "2025-10-21",
+          "remaining_count": 0,
+          "remaining_weight": 4
+        },
+        {
+          "date": "2025-10-22",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-10-23",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-10-24",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-10-25",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-10-26",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-10-27",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-10-28",
+          "remaining_count": 0,
+          "remaining_weight": 2
+        },
+        {
+          "date": "2025-10-29",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 2,
+        "new_feature": 1,
+        "other": 15
+      },
+      "completed": {
+        "count": 18,
+        "weight": 30
+      },
+      "issues": [
+        {
+          "id": 157363,
+          "iid": 1081,
+          "title": "\"Employee Upload\" Improvements",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 5,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-21",
+          "date_closed": "2025-10-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 153144,
+          "iid": 787,
+          "title": "Selecting \"All\" filter option displays all items",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 0,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-14",
+          "date_closed": "2025-10-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 153143,
+          "iid": 786,
+          "title": "Clicking \"Inactive\" filter option displays Inactive items only",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 0,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-14",
+          "date_closed": "2025-10-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 153142,
+          "iid": 785,
+          "title": "Clicking \"Active\" filter option displays Active items only",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 0,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-14",
+          "date_closed": "2025-10-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 153141,
+          "iid": 784,
+          "title": "Selected filter option is highlighted and inactive",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 0,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-14",
+          "date_closed": "2025-10-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 153140,
+          "iid": 783,
+          "title": "Add filter selector to page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 0,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-14",
+          "date_closed": "2025-10-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 153139,
+          "iid": 782,
+          "title": "Page displays Active items only on page load",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 0,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-14",
+          "date_closed": "2025-10-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 153138,
+          "iid": 781,
+          "title": "Implement Content Filtering for Contracts page (Active, Inactive, All)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Customer: Internal",
+            "type::story",
+            "workflow::ready-for-release"
+          ],
+          "milestone": "ORBIT 3.2.4",
+          "date_added_to_sprint": "2025-10-14",
+          "date_closed": "2025-10-21",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 153135,
+          "iid": 779,
+          "title": "Supervisor reminder emails not sent on holidays",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 0,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-14",
+          "date_closed": "2025-10-21",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 153134,
+          "iid": 778,
+          "title": "Reminder emails not sent on holidays",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 0,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-14",
+          "date_closed": "2025-10-21",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 153133,
+          "iid": 777,
+          "title": "Check-In reminder emails should not be sent on dates identified as holidays",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Customer: Internal",
+            "Type: Bug"
+          ],
+          "milestone": "ORBIT 3.2.4",
+          "date_added_to_sprint": "2025-10-14",
+          "date_closed": "2025-10-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 153125,
+          "iid": 772,
+          "title": "Update Daylight Saving Time (DST) 2025 end date in database",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "Customer: Internal"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-14",
+          "date_closed": "2025-10-15",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 153062,
+          "iid": 769,
+          "title": "Set up ORBIT local dev - Bradley",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Customer: Internal",
+            "workflow::deployed"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-14",
+          "date_closed": "2025-10-21",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 153061,
+          "iid": 768,
+          "title": "Document ORBIT local development setup",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "Customer: Internal",
+            "workflow::deployed"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-14",
+          "date_closed": "2025-10-21",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 153056,
+          "iid": 767,
+          "title": "Improve Employee search",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "customer:platform-engineering",
+            "source::gov-board-fy25q4",
+            "type::Improvement"
+          ],
+          "milestone": "ORBIT 3.2.4",
+          "date_added_to_sprint": "2025-10-14",
+          "date_closed": "2025-10-15",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 153054,
+          "iid": 765,
+          "title": "Role based view only access to ORBIT",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "customer:platform-engineering",
+            "source::gov-board-F725Q3",
+            "type::New Feature"
+          ],
+          "milestone": "ORBIT 3.2.4",
+          "date_added_to_sprint": "2025-10-14",
+          "date_closed": "2025-10-20",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 153053,
+          "iid": 764,
+          "title": "Remove period from disclaimer agree button",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Customer: Internal",
+            "type::Improvement"
+          ],
+          "milestone": "ORBIT 3.2.4",
+          "date_added_to_sprint": "2025-10-14",
+          "date_closed": "2025-10-16",
+          "date_removed_from_sprint": "2025-10-14"
+        },
+        {
+          "id": 155456,
+          "iid": 1075,
+          "title": "[ORBIT-327] Improve throughput to Twilio from PROD",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "jira-import::ORBIT-1"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-28",
+          "date_closed": "2025-10-29",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-24-jun-27",
+  "title": "Data Services 24 JUN 27",
+  "start_date": "2026-06-09",
+  "end_date": "2026-06-24",
+  "generated_at": "2026-07-02T21:57:26.272679Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint aimed to expand functionality across multiple modules including travel coordinator workflows in Access Requests, records management capabilities in Compliance Review, and software licensing approvals in SALT, while simultaneously preparing systems for production deployment and resolving critical blocking issues preventing normal operations.",
+    "summary": "The team completed 43 issues spanning four product areas, delivering substantial enhancements to user workflows and system stability. Key accomplishments include implementing travel coordinator role-based access and filtering in Access Requests, establishing Compliance Review's production infrastructure with proper menu configuration and records mapping, resolving critical SALT approval and data persistence bugs that were blocking user operations, and introducing new UI patterns such as read-only note viewing and improved form validation across the platform. These changes collectively improve user efficiency by streamlining approval processes, reducing manual data re-entry, and enabling role-specific views, while the infrastructure work positions Compliance Review and SALT for reliable production operation.",
+    "metrics": {
+      "initial_count": 41,
+      "initial_weight": 69,
+      "completed_count": 38,
+      "completed_weight": 62,
+      "initial_breakdown": "14 Others, 12 Improvements, 10 Bugs, 5 New Features",
+      "completed_breakdown": "14 Others, 10 Improvements, 10 Bugs, 4 New Features"
+    }
+  }
+}

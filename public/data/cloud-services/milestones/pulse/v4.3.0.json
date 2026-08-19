@@ -1,0 +1,115 @@
+{
+  "milestone_title": "v4.3.0",
+  "milestone_id": 1959,
+  "slug": "v4.3.0",
+  "project_id": 91002,
+  "project_name": "PULSE",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:33.809363Z",
+  "issues": [
+    {
+      "id": 155653,
+      "iid": 147,
+      "title": "Date Fields Required",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "Status: Awaiting Approval",
+        "Type: New Feature",
+        "type::New Feature"
+      ],
+      "description": "Vantage customer would like the option to make date fields required however sometimes the selection of a date is not applicable.\u00a0 so need an N/A option on dates for that instance.\n\n\u00a0\n\nIf you make the: 'DraftRfpReleaseDate' and\u00a0 'RfpReleaseDate' both required then the user will be required to always select a date.\u00a0\u00a0\n\nthe PO Vantage customer would like an option for when users are not required to select a date.\n\n\u00a0\n\n---\n\n**Issue metadata**\n\n- Issue type: New Feature\n- Priority: Medium"
+    },
+    {
+      "id": 155650,
+      "iid": 187,
+      "title": "Review Lookup Architecture",
+      "weight": 8,
+      "state": "closed",
+      "labels": [
+        "Status: Awaiting Approval",
+        "Type: Task",
+        "type::Improvement"
+      ],
+      "description": "not sure how lookup architecture has changed now that we have made so many changes including the addition of the Service Code to Spend Category mapping and the LOE_ID; plus the lookup item number ID\n\n---\n\n**Issue metadata**\n\n- Issue type: Bug\n- Priority: Medium"
+    },
+    {
+      "id": 155913,
+      "iid": 372,
+      "title": "Update the post award active contractors multi-select capability to mimic the rest of PULSE's multi-select sub-form with table capabilities.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: Awaiting Approval",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": "Update the post award active contractors multi-select capability to mimic the rest of PULSE's multi-select sub-form with table capabilities.\n\nCurrently the section does not allow deselection of options and instead uses a delete method triggered by the trashcan icon for each row in the results table."
+    },
+    {
+      "id": 155914,
+      "iid": 378,
+      "title": "Admin Page Edit Section Fields Layout cleared when a specific lookup item value is changed.",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: Awaiting Approval",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": "(Non-Breaking Issue) (Cosmetic) When clicking save after changing the Lookup Item Value for a specific lookup in the admin edit section fields for a lookup field, the layout page is removed."
+    },
+    {
+      "id": 155915,
+      "iid": 379,
+      "title": "Order Admin tool sections alphabetically.",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: Awaiting Approval",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": "Currently some admin tools section's are order alphabetically, however many just appear to be random. Have all sections order alphabetically. Field sections should order by there display name."
+    },
+    {
+      "id": 155916,
+      "iid": 380,
+      "title": "Add validation to modal form for contract vehicle fields admin tools.",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: Awaiting Approval",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": "In admin tools create contract vehicle fields do not display which fields are required; when clicking save without completeing the required fields user is redirected to the form on a new page displaying the errors. The reload of this page causes a JavaScript error to be logged to console for an already defined constant global variable."
+    },
+    {
+      "id": 155917,
+      "iid": 381,
+      "title": "Add search and column sort to POC Lookup Tables and add column to list view for Is Active",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "Status: Awaiting Approval",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": "Add search to Admin Tools POC_Lookup, Contracting Branch Chief contains many records with paging for Vantage it is 326 pages. \n\nAdd the ability to search and sort by column headers. \n\nAdd a column to the table view to show when a poc is active or inactive."
+    },
+    {
+      "id": 155648,
+      "iid": 394,
+      "title": "Update JPO LOE Lookups",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: Awaiting Approval",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": ""
+    }
+  ]
+}

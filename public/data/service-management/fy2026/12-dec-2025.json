@@ -1,0 +1,938 @@
+{
+  "fiscal_year": 2026,
+  "month": 12,
+  "year": 2025,
+  "sprints": [
+    {
+      "id": 3594,
+      "title": "Service Management FY26 Q1-2",
+      "start_date": "2025-11-18",
+      "end_date": "2025-12-02",
+      "state": 3,
+      "source": "iteration",
+      "goal": null,
+      "initial_totals": {
+        "count": 13,
+        "weight": 33
+      },
+      "burndown": [
+        {
+          "date": "2025-11-18",
+          "remaining_count": 13,
+          "remaining_weight": 33
+        },
+        {
+          "date": "2025-11-19",
+          "remaining_count": 10,
+          "remaining_weight": 30
+        },
+        {
+          "date": "2025-11-20",
+          "remaining_count": 7,
+          "remaining_weight": 21
+        },
+        {
+          "date": "2025-11-21",
+          "remaining_count": 7,
+          "remaining_weight": 21
+        },
+        {
+          "date": "2025-11-22",
+          "remaining_count": 7,
+          "remaining_weight": 21
+        },
+        {
+          "date": "2025-11-23",
+          "remaining_count": 7,
+          "remaining_weight": 21
+        },
+        {
+          "date": "2025-11-24",
+          "remaining_count": 7,
+          "remaining_weight": 21
+        },
+        {
+          "date": "2025-11-25",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2025-11-26",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2025-11-27",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2025-11-28",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2025-11-29",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2025-11-30",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2025-12-01",
+          "remaining_count": 5,
+          "remaining_weight": 15
+        },
+        {
+          "date": "2025-12-02",
+          "remaining_count": 5,
+          "remaining_weight": 15
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 14
+      },
+      "completed": {
+        "count": 14,
+        "weight": 34
+      },
+      "issues": [
+        {
+          "id": 177118,
+          "iid": 21,
+          "title": "GPS - Increase length of Template field to 60",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Review Complete"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-24",
+          "date_closed": "2025-11-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 174943,
+          "iid": 16,
+          "title": "Audit  template, program, and Affected CIs on Intake Incidents",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-18",
+          "date_closed": "2025-11-25",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 174886,
+          "iid": 15,
+          "title": "Site 8 Asset updates",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-18",
+          "date_closed": "2025-11-20",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 174853,
+          "iid": 14,
+          "title": "Make Intake tables accessible from All menu",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-18",
+          "date_closed": "2025-12-01",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 174852,
+          "iid": 13,
+          "title": "Make Organization table accessible in Intake Workspace",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Review Complete"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-18",
+          "date_closed": "2025-11-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 171292,
+          "iid": 420,
+          "title": "Update list view of Contact table",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Capability:: M2S"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-18",
+          "date_closed": "2025-11-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 171225,
+          "iid": 18,
+          "title": "PopulaterTier 1, Tier 2 and Tier 2 on Fulfillment CI records",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-18",
+          "date_closed": "2025-11-20",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 171224,
+          "iid": 419,
+          "title": "Create contact table workflow to populate the table",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Capability:: M2S",
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-18",
+          "date_closed": "2025-12-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 171219,
+          "iid": 14,
+          "title": "Update choice list for Financial Data Type",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-18",
+          "date_closed": "2025-12-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 171218,
+          "iid": 13,
+          "title": "Update the Reference Data Lists based on the spreadsheet provided by customer",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-18",
+          "date_closed": "2025-11-20",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 167934,
+          "iid": 418,
+          "title": "M2S: On Ticket creation default Assignment Group to Support Center",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Capability:: M2S",
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-18",
+          "date_closed": "2025-12-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 167933,
+          "iid": 417,
+          "title": "M2S: Populate Owner Field on Existing Incidents",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Capability:: M2S",
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-18",
+          "date_closed": "2025-12-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 166973,
+          "iid": 416,
+          "title": "M2S: Rename app permission roles to m2s_user, m2s_admin, m2s_management",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Capability:: M2S"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-18",
+          "date_closed": "2025-11-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 166742,
+          "iid": 5,
+          "title": "Add link to CI Dependency viewer to view the asset hierarchy",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-11-18",
+          "date_closed": "2025-12-03",
+          "date_removed_from_sprint": null
+        }
+      ]
+    },
+    {
+      "id": 3662,
+      "title": "Service Management FY26 Q1-3",
+      "start_date": "2025-12-03",
+      "end_date": "2025-12-16",
+      "state": 3,
+      "source": "iteration",
+      "goal": null,
+      "initial_totals": {
+        "count": 17,
+        "weight": 45
+      },
+      "burndown": [
+        {
+          "date": "2025-12-03",
+          "remaining_count": 16,
+          "remaining_weight": 44
+        },
+        {
+          "date": "2025-12-04",
+          "remaining_count": 14,
+          "remaining_weight": 42
+        },
+        {
+          "date": "2025-12-05",
+          "remaining_count": 13,
+          "remaining_weight": 39
+        },
+        {
+          "date": "2025-12-06",
+          "remaining_count": 13,
+          "remaining_weight": 39
+        },
+        {
+          "date": "2025-12-07",
+          "remaining_count": 13,
+          "remaining_weight": 39
+        },
+        {
+          "date": "2025-12-08",
+          "remaining_count": 11,
+          "remaining_weight": 33
+        },
+        {
+          "date": "2025-12-09",
+          "remaining_count": 10,
+          "remaining_weight": 32
+        },
+        {
+          "date": "2025-12-10",
+          "remaining_count": 9,
+          "remaining_weight": 29
+        },
+        {
+          "date": "2025-12-11",
+          "remaining_count": 8,
+          "remaining_weight": 26
+        },
+        {
+          "date": "2025-12-12",
+          "remaining_count": 7,
+          "remaining_weight": 23
+        },
+        {
+          "date": "2025-12-13",
+          "remaining_count": 7,
+          "remaining_weight": 23
+        },
+        {
+          "date": "2025-12-14",
+          "remaining_count": 7,
+          "remaining_weight": 23
+        },
+        {
+          "date": "2025-12-15",
+          "remaining_count": 7,
+          "remaining_weight": 23
+        },
+        {
+          "date": "2025-12-16",
+          "remaining_count": 2,
+          "remaining_weight": 6
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 18
+      },
+      "completed": {
+        "count": 18,
+        "weight": 46
+      },
+      "issues": [
+        {
+          "id": 184100,
+          "iid": 31,
+          "title": "Verify and add remaining NavHub GEN I Consumables",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-16",
+          "date_closed": "2025-12-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 181253,
+          "iid": 27,
+          "title": "Analyze current Incident capability for BackupNav",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 181251,
+          "iid": 25,
+          "title": "2 CR Asset Update",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-04",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 181250,
+          "iid": 24,
+          "title": "Add BackupNav Incident templates",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 181248,
+          "iid": 23,
+          "title": "Add BackupNav products to Product Models table",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 181247,
+          "iid": 22,
+          "title": "Add BackupNav section and fields to GPS Hardware form",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 180964,
+          "iid": 31,
+          "title": "Add On Hold Status Reason “Awaiting Travel to Site Due to Bundling”",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-05",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 175362,
+          "iid": 18,
+          "title": "Review Intake incident permissions",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 175361,
+          "iid": 17,
+          "title": "Add verified NavHub GEN I Consumables",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 175349,
+          "iid": 30,
+          "title": "Add Active reference qualifier on Vessel field on Incident form",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 175226,
+          "iid": 29,
+          "title": "Remove Vendor field from Financials form",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Review Complete"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 175225,
+          "iid": 28,
+          "title": "Add Active reference qualifier on Manufacturer field on Financials form",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 175199,
+          "iid": 27,
+          "title": "Investigate if ServiceNow can populate Incident fields based on PDF attachments on Incident",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 175194,
+          "iid": 26,
+          "title": "Add Active reference qualifier on Shipper field on Financials form",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-04",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 174944,
+          "iid": 25,
+          "title": "Update Status Reason drop down based on list provided by customer",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-11",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 171231,
+          "iid": 21,
+          "title": "Update Configuration Item drop down to display on AWS choices",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 171228,
+          "iid": 20,
+          "title": "For Fulfillment change Configuration Item label to 'Affected FieldGear Asset'",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 171227,
+          "iid": 19,
+          "title": "Update Fulfillment Dashboard and remove Canceled tickets",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-03",
+          "date_removed_from_sprint": null
+        }
+      ]
+    },
+    {
+      "id": 3736,
+      "title": "Service Management FY26 Q1-4",
+      "start_date": "2025-12-18",
+      "end_date": "2025-12-31",
+      "state": 3,
+      "source": "iteration",
+      "goal": null,
+      "initial_totals": {
+        "count": 8,
+        "weight": 22
+      },
+      "burndown": [
+        {
+          "date": "2025-12-18",
+          "remaining_count": 8,
+          "remaining_weight": 22
+        },
+        {
+          "date": "2025-12-19",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2025-12-20",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2025-12-21",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2025-12-22",
+          "remaining_count": 3,
+          "remaining_weight": 11
+        },
+        {
+          "date": "2025-12-23",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-12-24",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-12-25",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-12-26",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-12-27",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-12-28",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-12-29",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-12-30",
+          "remaining_count": 1,
+          "remaining_weight": 3
+        },
+        {
+          "date": "2025-12-31",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 8
+      },
+      "completed": {
+        "count": 8,
+        "weight": 22
+      },
+      "issues": [
+        {
+          "id": 184586,
+          "iid": 35,
+          "title": "Create Client Script to create config item from FieldGear Asset Field",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Review Complete"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-17",
+          "date_closed": "2025-12-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184585,
+          "iid": 34,
+          "title": "FieldGear Asset Field needs to be populated",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Review Complete"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-17",
+          "date_closed": "2025-12-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184584,
+          "iid": 33,
+          "title": "AWS Corrective Actions Status Update",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-17",
+          "date_closed": "2025-12-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184396,
+          "iid": 33,
+          "title": "GPS - Site 14 change over",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-17",
+          "date_closed": "2025-12-19",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183836,
+          "iid": 32,
+          "title": "Email notifications are not being sent to all group members",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 5,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-17",
+          "date_closed": "2025-12-30",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 181741,
+          "iid": 30,
+          "title": "NavHub GEN II - Fleet Vehicle Parts List",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Ready for Review"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-17",
+          "date_closed": "2025-12-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 181254,
+          "iid": 28,
+          "title": "Add BackupNav section and fields to Maintenance form",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Review Complete"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-17",
+          "date_closed": "2025-12-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 171233,
+          "iid": 22,
+          "title": "Configuration Item drop down menu should be a cascading menu with Vessel drop down",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Review Complete"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-17",
+          "date_closed": "2025-12-31",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

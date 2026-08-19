@@ -1,0 +1,247 @@
+{
+  "milestone_title": "v3.2.11.0",
+  "milestone_id": 2553,
+  "slug": "v3.2.11.0",
+  "project_id": 91001,
+  "project_name": "ORBIT",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:27.044646Z",
+  "issues": [
+    {
+      "id": 155411,
+      "iid": 1030,
+      "title": "Input Validation for Phone Number Fields",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "jira-import::ORBIT-1",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI introduces robust input validation for the user phone number field. The goal is to ensure that any phone number entered by a user is in a valid format, whether it is a US domestic number or an international number. This validation will improve data accuracy and ensure the reliability of contact information stored in the system.\n\n#### User Story\n\n*   **As a** system administrator,\n*   **I want to** ensure that all phone numbers entered by users are in a valid, recognized format,\n*   **so that** we maintain high data quality and can reliably use this information for communication purposes without errors.\n\n#### Acceptance Criteria\n\n**Scenario 1: User enters a valid US phone number**   \n   \nFields: DSN, Notification Info, Mobile Check-In number   \n   \n*   **Given** a user is on a page with the phone number input field,\n*   **When** they enter a valid US phone number in a common format (e.g., \"555-123-4567\", \"(555) 123-4567\", or \"5551234567\"),\n*   **And** they save the form,\n*   **Then** the phone number **must** be accepted and saved successfully.\n*   **And** it is recommended that the number be stored in a standardized format (e.g., E.164 format: +15551234567).\n\n**Scenario 2: User enters a valid international phone number**\n\nFields: Work Phone, Emergency Contact Phones\n\n*   **Given** a user is on a page with the phone number input field,\n*   **When** they enter a valid international phone number that starts with a plus sign and the country code (e.g., \"+44 20 7946 0958\"),\n*   **And** they save the form,\n*   **Then** the phone number **must** be accepted and saved successfully.\n\n**Scenario 3: User enters an invalid phone number**   \n   \nFields: Work Phone, Emergency Contact phones\n   \n*   **Given** a user is on a page with the phone number input field,\n*   **When** they enter an invalid number (e.g., contains letters, is too short, or is missing digits),\n*   **And** they attempt to save the form,\n*   **Then** the form **must not** save.\n*   **And** a clear validation error message **must** be displayed, such as \"Please enter a valid phone number, including the country code if applicable (e.g., +1 for US).\"\n\n**Scenario 4: User leaves the phone number field blank**\n\n*   **Given** the phone number field is optional,\n*   **And** a user is on a page with the phone number input field,\n*   **When** they leave the field empty,\n*   **And** they save the form,\n*   **Then** the form **must** save successfully without any validation errors related to the phone number field."
+    },
+    {
+      "id": 186169,
+      "iid": 1150,
+      "title": "SQL Dateupdated",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "type::Bug",
+        "workflow::refined"
+      ],
+      "description": "When updating someones employee record, the datecreated date gets updated instead of the dateupdated."
+    },
+    {
+      "id": 188705,
+      "iid": 1160,
+      "title": "Supervisor home page: 3 consecutive DNR",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "customer:platform-engineering",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "### **Supervisor home page: Employee with 3 Consecutive Missed Reports**\n\n**Description:** This PBI introduces a new, high-visibility section on the supervisor's homepage that lists all employee who have failed to report their status for the last three consecutive duty days. This serves as a critical alert to prompt supervisor intervention.\n\n---\n\n#### **User Story**\n\n*   **As a** Supervisor,\n*   **I want to** see a distinct list of employee I supervise in ORBIT who have not reported for the past three consecutive duty days on my home page,\n*   **so that** I can immediately identify individuals who may be at risk or in need of follow-up, ensuring their health and safety.\n\n#### **Acceptance Criteria**\n\n**Scenario 1: Displaying the New Section**\n\n*   **Given** a Supervisor is viewing their ORBIT home page,\n*   **When** the page loads,\n*   **Then** a new section, clearly titled \"Missed 3 Consecutive Reports\" (or similar), **must** be displayed.\n*   **And** this new section **must** be styled in a way that draws immediate attention (e.g., using a red or amber color, a warning icon, and prominent placement, potentially above the existing \"No Location Reported\" section).\n*   **And** this section **must** contain a list of all employee under that supervisor's  purview who have a \"did not report\" status for the current duty day AND the previous two consecutive duty days.\n\n**Scenario 2: Content of the New Section**\n\n*   **Given** the \"Missed 3 Consecutive Reports\" section is visible,\n*   **When** a user's name appears in this list,\n*   **Then** that user's name **must** link to the user's employee record,\n*   **And** that user's name **must** also appear in the standard \"No Location Reported\" list for the current day, to maintain consistency of reporting.\n*   **And** if there are no employee who meet the 3-day criteria,\n*   **Then** the section **must** display a message indicating that, such as \"There are no records.\"\n\n**Scenario 3: Defining \"Duty Days\"**\n\n*   **Given** the system is calculating the 3-day period,\n*   **When** checking for consecutive missed reports,\n*   **Then** the calculation **must** be based on \"duty days\" as defined by the organization's settings (e.g., it must correctly skip weekends and holidays if so configured)."
+    },
+    {
+      "id": 188750,
+      "iid": 1161,
+      "title": "Layer Manager home page: 3 consecutive DNR",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "customer:platform-engineering",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "### **Layer Manager home page: Employee with 3 Consecutive Missed Reports**\n\n**Description:** This PBI introduces a new, high-visibility section on the Layer Manager's homepage that lists all employee who have failed to report their status for the last three consecutive duty days. This serves as a critical alert to prompt leadership intervention.\n\n---\n\n#### **User Story**\n\n*   **As a** Layer Manager,\n*   **I want to** see a distinct list of employee in the Layers I manage in ORBIT who have not reported for the past three consecutive duty days on my home page,\n*   **so that** I can immediately identify individuals who may be at risk or in need of follow-up, ensuring their health and safety.\n\n#### **Acceptance Criteria**\n\n**Scenario 1: Displaying the New Section**\n\n*   **Given** a Layer Manager is viewing their ORBIT home page,\n*   **When** the page loads,\n*   **Then** a new section, clearly titled \"Missed 3 Consecutive Reports\" (or similar), **must** be displayed.\n*   **And** this new section **must** be styled in a way that draws immediate attention (e.g., using a red or amber color, a warning icon, and prominent placement, potentially above the existing \"No Location Reported\" section).\n*   **And** this section **must** contain a list of all employee in that Layer Manager's layer who have a \"did not report\" status for the current duty day AND the previous two consecutive duty days.\n\n**Scenario 2: Content of the New Section**\n\n*   **Given** the \"Missed 3 Consecutive Reports\" section is visible,\n*   **When** a user's name appears in this list,\n*   **Then** that user's name **must** link to the user's employee record,\n*   **And** that user's name **must** also appear in the standard \"No Location Reported\" list for the current day, to maintain consistency of reporting.\n*   **And** if there are no employee who meet the 3-day criteria,\n*   **Then** the section **must** display a message indicating that, such as \"There are no records.\"\n\n**Scenario 3: Defining \"Duty Days\"**\n\n*   **Given** the system is calculating the 3-day period,\n*   **When** checking for consecutive missed reports,\n*   **Then** the calculation **must** be based on \"duty days\" as defined by the organization's settings (e.g., it must correctly skip weekends and holidays if so configured).\n\n**Scenario 4: Multiple Layers Managed**\n\n*   **Given** the user is assigned as Layer Manager for more than one Layer,\n*   **When** the page loads,\n*   **Then** a \"Missed 3 Consecutive Reports\" section will be displayed for each Layer."
+    },
+    {
+      "id": 188762,
+      "iid": 1162,
+      "title": "Organization Manager home page: 3 consecutive DNR",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "customer:platform-engineering",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI introduces a new, high-visibility section on the Organization Manager's homepage that lists all employee who have failed to report their status for the last three consecutive duty days. This serves as a critical alert to prompt leadership intervention.\n\n---\n\n#### **User Story**\n\n*   **As an** Organization Manager,\n*   **I want to** see a distinct list of employee in the Organization I manage in ORBIT who have not reported for the past three consecutive duty days on my home page,\n*   **so that** I can immediately identify individuals who may be at risk or in need of follow-up, ensuring their health and safety.\n\n#### **Acceptance Criteria**\n\n**Scenario 1: Displaying the New Section**\n\n*   **Given** an Organization Manager is viewing their ORBIT home page,\n*   **When** the page loads,\n*   **Then** a new section, clearly titled \"Missed 3 Consecutive Reports\" (or similar), **must** be displayed.\n*   **And** this new section **must** be styled in a way that draws immediate attention (e.g., using a red or amber color, a warning icon, and prominent placement, potentially above the existing \"No Location Reported\" section).\n*   **And** this section **must** contain a list of all employee in that Organization Manager's organization who have a \"did not report\" status for the current duty day AND the previous two consecutive duty days.\n\n**Scenario 2: Content of the New Section**\n\n*   **Given** the \"Missed 3 Consecutive Reports\" section is visible,\n*   **When** a user's name appears in this list,\n*   **Then** that user's name **must** link to the user's employee record,\n*   **And** that user's name **must** also appear in the standard \"No Location Reported\" list for the current day, to maintain consistency of reporting.\n*   **And** if there are no employee who meet the 3-day criteria,\n*   **Then** the section **must** display a message indicating that, such as \"There are no records.\"\n\n**Scenario 3: Defining \"Duty Days\"**\n\n*   **Given** the system is calculating the 3-day period,\n*   **When** checking for consecutive missed reports,\n*   **Then** the calculation **must** be based on \"duty days\" as defined by the organization's settings (e.g., it must correctly skip weekends and holidays if so configured)."
+    },
+    {
+      "id": 194549,
+      "iid": 1186,
+      "title": "CRUD Unit Testing Roles",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "type::DevOps",
+        "workflow::refined"
+      ],
+      "description": ""
+    },
+    {
+      "id": 194550,
+      "iid": 1187,
+      "title": "CRUD Unit Testing Employee",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "type::DevOps",
+        "workflow::refined"
+      ],
+      "description": ""
+    },
+    {
+      "id": 194551,
+      "iid": 1188,
+      "title": "CRUD Unit Testing WorkSites",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "type::DevOps",
+        "workflow::refined"
+      ],
+      "description": ""
+    },
+    {
+      "id": 194553,
+      "iid": 1189,
+      "title": "CRUD Unit Testing Layers",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "type::DevOps",
+        "workflow::refined"
+      ],
+      "description": ""
+    },
+    {
+      "id": 194703,
+      "iid": 1191,
+      "title": "Update Support Center email address",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI covers the work to update the email address for the Support Center on the ORBIT Help page. The PO organization has been renamed to Business Unit 2, resulting in a new email address that must be reflected in the application.\n\n---\n\n#### User Story\n\n*   **As a** ORBIT user seeking assistance,\n*   **I want to** see the correct, new email address for the Support Center on the Help page,\n*   **so that** my support requests are sent to the proper destination and I can get help when I need it.\n\n---\n\n#### Acceptance Criteria\n\n#### **Scenario 1: Viewing the Help Page**\n\n*   **Given** a user navigates to the \"Help\" page,\n*   **When** the page loads,\n*   **Then** the old support center email address **must not** be visible.\n*   **And** the new email address, `support-center@example.com`, **must** be displayed as the link text.\n\n#### **Scenario 2: Interacting with the Email Link**\n\n*   **Given** the new email address is displayed on the Help page,\n*   **When** a user inspects the link,\n*   **Then** the link **must** be a `mailto:` link pointing to `mailto:support-center@example.com`.\n*   **And when** a user clicks the link,\n*   **Then** their default email client **must** open a new message pre-addressed to `support-center@example.com`."
+    },
+    {
+      "id": 194887,
+      "iid": 1192,
+      "title": "Update Security Statement with Business Unit 2",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "The ORBIT Security Statement page includes the following statement. It needs to be updated to reflect new organizational branding.\n\n> Welcome to ORBIT which is provided by the Program Executive Office (PO).\n\n**Acceptance Criteria**\n\n* **Given** a user navigates to the \"Security Statement\" page,\n* **When** the page loads,\n* **Then** the old organization name **must not** be visible.\n* **And** the new organization name,\n\n> Capability Program Executive Enterprise Software and Services (Business Unit 2)\n\n* **must** be displayed as the link text."
+    },
+    {
+      "id": 195231,
+      "iid": 1193,
+      "title": "Add email reminder sent label to Supervised No Location Reported section on Layer/Org Manager's Homepage",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement"
+      ],
+      "description": "This label was only applied to No Location Reported section of the homepage, we need it also applied to the Supervised No Location Reported section as well."
+    },
+    {
+      "id": 195234,
+      "iid": 1194,
+      "title": "Add email reminder confirmation modal to Supervised No Location Reported section on Layer/Org Manager's Homepage",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement"
+      ],
+      "description": "This feature was added only to the No Location Reported section on layer/org manager hoempages, we need to also add it to the Supervised No Location Reported section."
+    },
+    {
+      "id": 195237,
+      "iid": 1195,
+      "title": "Troubleshoot email \"remind all\" button on Supervised DNR section on supervisor's Homepage",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Bug"
+      ],
+      "description": "Remind all button in Supervised No Location Reported section on supervisor's homepage is not sending email reminders to supervised users."
+    },
+    {
+      "id": 195353,
+      "iid": 1197,
+      "title": "Fix DNR email reminders for users who are Org/Layer manager & Supervisor",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Bug"
+      ],
+      "description": "As of now when a user is an org/layer manager AND a supervisor the email reminder for the regular DNR list on the homepage only sends the reminders to the users they supervise. This should not be the case."
+    },
+    {
+      "id": 195832,
+      "iid": 1201,
+      "title": "Domain Validation for Additional Email Field",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI describes an enhancement to the validation logic for the \"Additional Email\" field located in the user profile's \"Notification Information\" section. Currently, the field only checks for a valid email format. This change will introduce an additional layer of validation to ensure that the email domain belongs to an approved list of Top-Level Domains (TLDs), thereby improving data integrity and ensuring compliance with communication policies.\n\n---\n\n#### **User Story**\n\n*   **As a** system administrator,\n*   **I want to** enforce that any email entered in the \"Additional Email\" field uses an approved domain (.com, .net, .org, .gov, .mil, .us, .co, .biz, .ai, .io),\n*   **so that** I can ensure all notification emails are sent to authorized domains and prevent data from being routed to unapproved or personal email providers.\n\n#### **Acceptance Criteria**\n\n**Scenario 1: User enters an email with an approved domain**\n\n*   **Given** a user is editing the \"Additional Email\" field in their profile,\n*   **When** they enter a validly formatted email with an approved TLD (e.g., \"john.doe@example.com\" or \"jane.doe@agency.gov\"),\n*   **And** they save the profile,\n*   **Then** the email address **must** be saved successfully.\n*   **And** no validation error message **must** be displayed.\n\n**Scenario 2: User enters an email with a non-approved domain**\n\n*   **Given** a user is editing the \"Additional Email\" field in their profile,\n*   **When** they enter a validly formatted email with a non-approved TLD (e.g., \"john.doe@example.net\" or \"jane.doe@company.biz\"),\n*   **And** they attempt to save the profile,\n*   **Then** the profile **must not** save.\n*   **And** a clear validation error message **must** be displayed, such as \"Invalid domain. Accepted domains are .com, .net, .org, .gov, .mil, .us, .co, .biz, .ai, .io\"\n\n**Scenario 3: User enters an email with an invalid format**\n\n*   **Given** a user is editing the \"Additional Email\" field in their profile,\n*   **When** they enter text that is not a valid email format (e.g., \"john.doe@example\" or \"invalid-email\"),\n*   **And** they attempt to save the profile,\n*   **Then** the existing validation for email format **must** still be enforced, and an appropriate error message (e.g., \"Please enter a valid email address.\") **must** be displayed."
+    },
+    {
+      "id": 196034,
+      "iid": 1204,
+      "title": "Unit Testing Notification Sent Report",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "type::DevOps",
+        "workflow::refined"
+      ],
+      "description": ""
+    },
+    {
+      "id": 196271,
+      "iid": 1205,
+      "title": "CRUD Unit Testing CustomerReports",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "type::DevOps",
+        "workflow::refined"
+      ],
+      "description": ""
+    },
+    {
+      "id": 196272,
+      "iid": 1206,
+      "title": "CRUD Unit Testing CustomerVendorAccounts",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "type::DevOps",
+        "workflow::refined"
+      ],
+      "description": ""
+    }
+  ]
+}

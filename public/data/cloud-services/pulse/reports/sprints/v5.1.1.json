@@ -1,0 +1,58 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "pulse",
+  "milestone_slug": "v5.1.1",
+  "title": "v5.1.1",
+  "start_date": "2026-03-26",
+  "end_date": "2026-04-08",
+  "generated_at": "2026-06-30T22:00:52.910070Z",
+  "test_plan": [
+    {
+      "iid": 696,
+      "title": "feat: Add \"Action Supported By\" lookup field to Item Action Description section",
+      "steps": "- Navigate to Item Action Description section and verify the \"Action Supported By\" dropdown field is present and displays alongside \"Program Supported By\" in a half-section layout without rendering issues.\n- Select an organization that uses the field, access Admin > Field Configuration, and confirm \"Action Supported By\" appears with configurable settings (visibility, required status, display name); then verify these settings are reflected on the Item form.\n- Create or edit an item, select a value from the \"Action Supported By\" dropdown, save the item, and reload the page to confirm the selected value is persisted and retrieved correctly.\n- Verify the \"Action Supported By\" dropdown is populated with the full org-scoped lookup list at page load and does not filter or change when other fields (PM/PD, Program Supported By, etc.) are modified.\n- Access Admin > Lookup Item screens and confirm that new lookup items for \"ActionSupportedBy\" can be created, edited, and deleted without errors."
+    },
+    {
+      "iid": 697,
+      "title": "refactor: Replace PO/JPO acronyms with Central in all user-visible display text",
+      "steps": "- Navigate to `/Item/Edit` and verify the tab label reads **\"Central Administration\"** and all field labels within that section use \"Central\" terminology (e.g., \"Central Priority Level Override\", \"Central Adjudication\", \"Compliance Central Approval\").\n- Navigate to the List view (`/List/Index`) and confirm column headers display **\"Central Control#\"**, **\"Central Priority #\"**, and **\"Central Priority #\"** (no \"PO\" or \"JPO\" text).\n- Navigate to the Reports page (`/Reports`) and verify the label reads **\"Central Reports\"**.\n- Check the navbar brand/title displays the correct Central organization names: **Central Riverside**, **Central Crestline**, **Central Meridian** for each respective organization.\n- Navigate to the Customer Access Request form and verify the organization dropdown shows **\"Central Meridian\"**, **\"Central Riverside\"**, **\"Central Crestline\"**; select one option and submit to confirm the form routes correctly without errors."
+    },
+    {
+      "iid": 699,
+      "title": "refactor(sql): Replace hardcoded group IDs and name lookups in fnGetOneNListIDsUserHasPermissionsFor",
+      "steps": "- Deploy the migration SQL file and verify `fnGetOneNListIDsUserHasPermissionsFor` compiles without errors\n- Query the function for a user in group ID 15 (Sequoia) and confirm results include their own PM records plus all Northline purchase records\n- Query the function for a user in group ID 16 (Halcyon) and confirm results include their own PM records plus all Baymark purchase records\n- Rename the JPO-Meridian security group in the database, then re-query the function for a JPO user and verify the returned record set is identical to before the rename\n- Create a new test PM security group with `HasNorthlineAccess = 1`, assign a user to it, seed a Northline purchase record, and verify the function returns that Northline record for the user"
+    },
+    {
+      "iid": 700,
+      "title": "refactor(sql): Replace hardcoded group lookups in BO_fnGetOneNListUserHasPermissionsFor",
+      "steps": "- Execute the migration script and verify the `BO_fnGetOneNListUserHasPermissionsFor` function compiles without errors in the database\n- Run BI report queries that depend on this function for multiple organizations and confirm row counts match baseline results from before the refactor\n- Rename the JPO-Meridian security group in the database and re-run the same BI report queries, verifying that output remains unchanged\n- Create a test user in a group with `HasNorthlineAccess = 1` flag set, run BI reports as that user, and confirm the returned records match what a Sequoia user received before the refactor\n- Verify in the function definition that no calls to `fnResolveSecurityGroupId` remain and that flag-driven logic replaces all hardcoded group lookups"
+    },
+    {
+      "iid": 701,
+      "title": "feat(csharp): Add HasNorthlineAccess, HasCHSAccess, HasAllACCAccess to security group model and viewmodel",
+      "steps": "- Navigate to the Admin User Group edit page, select a security group, and verify that the three new checkboxes (HasNorthlineAccess, HasCHSAccess, HasAllACCAccess) are present and display their current values correctly.\n- Check each checkbox individually, save the security group, and reload the page to confirm that the checked state persists in the database.\n- Uncheck each checkbox individually, save the security group, and reload the page to confirm that the unchecked (false) state persists and is not stored as null.\n- Create a new security group and verify that all three checkboxes default to unchecked (false) and can be toggled before saving.\n- Verify that the application builds without warnings or errors and that existing user group management functionality remains unaffected."
+    },
+    {
+      "iid": 702,
+      "title": "feat(ui): Add Northline, Baymark, and AllRegion behavior flags to Security Group admin create/edit form",
+      "steps": "- Navigate to Admin > Security Groups > Create New Group, select \"PM\" or \"FinancialsLimited\" from the Access Level dropdown, and verify that Northline Cross-Access and Baymark Cross-Access checkboxes appear below the Compliance Collaboration URL field.\n- Select \"Region\" from the Access Level dropdown and verify that only the AllRegion Access checkbox appears; then change to \"Admin,\" \"Owner,\" \"Member,\" or \"Visitor\" and confirm all flag checkboxes are hidden.\n- Check the Northline Cross-Access checkbox, enter a group name, and save; then re-open the group edit form and verify the Northline checkbox is pre-populated as checked.\n- Check one or more flag checkboxes, save the group, re-open it, uncheck a previously-checked flag, save again, and verify the flag is stored as false in the database (not null).\n- Open Chrome DevTools Console while creating and editing security groups with various access levels and flag combinations, and confirm no JavaScript errors appear."
+    },
+    {
+      "iid": 703,
+      "title": "improvement: Prevent automatic re-authentication after user logout",
+      "steps": "- Log in to the application and verify you are redirected to the list page\n- Click the Logout button and confirm you are returned to the disclaimer page (Home/Index), not the list\n- On the disclaimer page, verify you are NOT automatically re-authenticated (no redirect back to the list should occur)\n- Click the \"I Agree\" button on the disclaimer page and confirm you are successfully logged in and redirected to the list page\n- Log in again, logout, and verify the disclaimer page remains stable without any \"blink\" or automatic re-authentication behavior"
+    }
+  ],
+  "sprint_report": {
+    "goals": "This sprint focused on enhancing security group management capabilities and improving the flexibility of permission-based access controls across the platform. The work also refined authentication behavior and updated organizational terminology to reflect current departmental structure.",
+    "summary": "The team implemented configurable permission flag columns in the security group database schema and extended the UI and C# models to support three new access control flags for Northline, Baymark, and AllRegion systems. Two critical SQL refactoring efforts eliminated hardcoded group lookups and ID references, making the permission system more maintainable and adaptable to future organizational changes. Additional improvements include preventing unintended re-authentication after user logout, standardizing all user-facing references from PO/JPO terminology to Central, and adding an \"Action Supported By\" lookup capability to Item Action Descriptions for better operational clarity.",
+    "metrics": {
+      "initial_count": 8,
+      "initial_weight": 17,
+      "completed_count": 8,
+      "completed_weight": 17,
+      "initial_breakdown": "4 New Features, 3 Refactors, 1 Improvement",
+      "completed_breakdown": "4 New Features, 3 Refactors, 1 Improvement"
+    }
+  }
+}

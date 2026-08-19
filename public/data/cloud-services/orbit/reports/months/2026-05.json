@@ -1,0 +1,23 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "orbit",
+  "month": "2026-05",
+  "generated_at": "2026-06-30T22:00:17.516203Z",
+  "sprints": [
+    {
+      "title": "v3.3.2",
+      "start_date": "2026-05-07",
+      "end_date": "2026-05-21",
+      "goals": "This sprint aimed to stabilize the platform by addressing critical data integrity bugs in the Layer and Customer management workflows while laying the architectural groundwork for a multi-database CosmosDB migration. The team also standardized the user experience across administrative forms by implementing consistent navigation patterns.",
+      "summary": "The sprint delivered fixes to several high-impact production issues, including resolving orphaned CustomerLayer references when renaming layers, correcting the supervisor reminder email null reference error, and fixing mobile check-in note capture. In parallel, the team completed the migration strategy and database schema work for CosmosDB, establishing separate tenant, geo, system, lookup, and identity databases to support better scaling and data isolation. Across the administrative interface, the team systematized the user experience by adding Cancel buttons and confirmation modals to 47 forms, improving data safety and navigation consistency. These efforts collectively reduce support burden from data corruption issues, enable the upcoming database migration, and create a more predictable administrative experience for customers and internal staff.",
+      "metrics": {
+        "initial_count": 57,
+        "initial_weight": 88,
+        "completed_count": 57,
+        "completed_weight": 88,
+        "initial_breakdown": "41 Improvements, 13 Others, 3 Bugs",
+        "completed_breakdown": "41 Improvements, 13 Others, 3 Bugs"
+      }
+    }
+  ]
+}

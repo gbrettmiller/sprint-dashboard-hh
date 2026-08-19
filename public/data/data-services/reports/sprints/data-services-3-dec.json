@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-3-dec",
+  "title": "Data Services 3 DEC",
+  "start_date": "2025-11-19",
+  "end_date": "2025-12-03",
+  "generated_at": "2026-07-02T21:56:30.135304Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on stabilizing core functionality across multiple applications while advancing the Compliance Review system toward operational readiness. The team aimed to resolve critical bugs affecting notifications and environment deployments while establishing foundational features for records management and user interface consistency across the platform.",
+    "summary": "The sprint delivered significant progress across five major applications with a balance of bug fixes and new capability development. Critical issues were resolved including notification routing problems in TCT, component menu errors in I/O, and environment configuration issues in Records API, while the Compliance Review application advanced with the implementation of record upload screens, metadata management interfaces, and a comprehensive security model. Supporting work included the deployment of corrected configurations to test and production environments for Regional Office, the creation of reviewer tracking in bulk processing workflows, and the establishment of automated notifications for records managers. Release documentation was prepared for both I/O and Access Requests applications to facilitate stakeholder communication and system adoption.",
+    "metrics": {
+      "initial_count": 25,
+      "initial_weight": 55,
+      "completed_count": 25,
+      "completed_weight": 55,
+      "initial_breakdown": "21 Others, 2 Improvements, 2 Bugs",
+      "completed_breakdown": "21 Others, 2 Improvements, 2 Bugs"
+    }
+  }
+}

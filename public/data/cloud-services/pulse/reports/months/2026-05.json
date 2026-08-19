@@ -1,0 +1,38 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "pulse",
+  "month": "2026-05",
+  "generated_at": "2026-06-30T22:02:34.900118Z",
+  "sprints": [
+    {
+      "title": "v5.1.2",
+      "start_date": "2026-04-21",
+      "end_date": "2026-05-04",
+      "goals": "This sprint aimed to establish a configuration-driven framework for customizing action list column displays and to extend the platform's permission model to support users assigned to multiple security groups simultaneously. These changes remove hard-coded UI constraints and enable more flexible organizational access control.",
+      "summary": "The team built a complete admin interface and data layer for managing action list column visibility through configuration, eliminating the need for code changes when column display rules need to adjust. In parallel, the permission and session architecture was refactored to recognize and enforce security rules across all groups a user belongs to, rather than limiting users to a single group. These foundational changes increase operational flexibility and allow the platform to scale to more complex organizational permission structures without requiring engineering intervention for routine configuration updates.",
+      "metrics": {
+        "initial_count": 8,
+        "initial_weight": 23,
+        "completed_count": 8,
+        "completed_weight": 23,
+        "initial_breakdown": "4 Improvements, 3 New Features, 1 Refactor",
+        "completed_breakdown": "4 Improvements, 3 New Features, 1 Refactor"
+      }
+    },
+    {
+      "title": "v5.1.3",
+      "start_date": "2026-05-06",
+      "end_date": "2026-05-20",
+      "goals": "This sprint focused on expanding visibility and usability of the FieldSat action tracking system while systematizing error handling and filtering capabilities across the platform. The team aimed to streamline user workflows by surfacing critical information and reducing friction points in common application tasks.",
+      "summary": "The team extended the FieldSat action feature set by adding checkbox controls and database support for organization-wide visibility of Central Riverside actions, enabling better tracking and coordination across teams. Concurrent work addressed recurring user experience friction by improving error messaging clarity, fixing modal dialog stacking problems that locked users out of the interface, and introducing advanced per-column filtering with organization-level configuration on action item lists. Additional refinements included exposing previously hidden validation errors within collapsed accordion sections and consolidating duplicated logic in PostAward sub-contractor controllers to reduce maintenance burden and improve code consistency going forward.",
+      "metrics": {
+        "initial_count": 7,
+        "initial_weight": 21,
+        "completed_count": 7,
+        "completed_weight": 21,
+        "initial_breakdown": "5 Improvements, 2 New Features",
+        "completed_breakdown": "5 Improvements, 2 New Features"
+      }
+    }
+  ]
+}

@@ -1,0 +1,337 @@
+{
+  "fiscal_year": 2026,
+  "month": 6,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 5181,
+      "title": "Service Management FY26Q3-5",
+      "start_date": "2026-06-03",
+      "end_date": "2026-06-23",
+      "state": 3,
+      "source": "iteration",
+      "goal": null,
+      "initial_totals": {
+        "count": 8,
+        "weight": 22
+      },
+      "burndown": [
+        {
+          "date": "2026-06-03",
+          "remaining_count": 8,
+          "remaining_weight": 22
+        },
+        {
+          "date": "2026-06-04",
+          "remaining_count": 9,
+          "remaining_weight": 25
+        },
+        {
+          "date": "2026-06-05",
+          "remaining_count": 9,
+          "remaining_weight": 25
+        },
+        {
+          "date": "2026-06-06",
+          "remaining_count": 9,
+          "remaining_weight": 25
+        },
+        {
+          "date": "2026-06-07",
+          "remaining_count": 9,
+          "remaining_weight": 25
+        },
+        {
+          "date": "2026-06-08",
+          "remaining_count": 9,
+          "remaining_weight": 25
+        },
+        {
+          "date": "2026-06-09",
+          "remaining_count": 9,
+          "remaining_weight": 25
+        },
+        {
+          "date": "2026-06-10",
+          "remaining_count": 9,
+          "remaining_weight": 25
+        },
+        {
+          "date": "2026-06-11",
+          "remaining_count": 8,
+          "remaining_weight": 24
+        },
+        {
+          "date": "2026-06-12",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2026-06-13",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2026-06-14",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2026-06-15",
+          "remaining_count": 5,
+          "remaining_weight": 15
+        },
+        {
+          "date": "2026-06-16",
+          "remaining_count": 4,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2026-06-17",
+          "remaining_count": 4,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2026-06-18",
+          "remaining_count": 6,
+          "remaining_weight": 20
+        },
+        {
+          "date": "2026-06-19",
+          "remaining_count": 6,
+          "remaining_weight": 20
+        },
+        {
+          "date": "2026-06-20",
+          "remaining_count": 6,
+          "remaining_weight": 20
+        },
+        {
+          "date": "2026-06-21",
+          "remaining_count": 6,
+          "remaining_weight": 20
+        },
+        {
+          "date": "2026-06-22",
+          "remaining_count": 6,
+          "remaining_weight": 20
+        },
+        {
+          "date": "2026-06-23",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 9,
+        "new_feature": 2,
+        "other": 0
+      },
+      "completed": {
+        "count": 11,
+        "weight": 33
+      },
+      "issues": [
+        {
+          "id": 236299,
+          "iid": 82,
+          "title": "Intake Link the Related Consumables field on Incident to the Consumable related item",
+          "description": "Link the Related Consumables field on Incident to the Consumable related item. Currently, the user can add a cable in the Related Consumables field and at the same time create a record in the Consumable related item table. The two records are storing independent information, thus it may appear that two consumable cables were used.\n\nNeed to redesign so that when the Related Consumables field on Incident is populated, it will create the Consumable related item record. Users can populate the Quantity value on the Consumable related item record.",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-18",
+          "date_closed": "2026-06-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 236296,
+          "iid": 81,
+          "title": "Intake Consumable Related Item record populate vehicle info from Consumable model",
+          "description": "Consumable Related Item record populate vehicle and other asset information from Consumable model:\nVehicle Type\nVariant\nModel\nInstallation Kit#\nSKU\nDescription\nPart Number",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-18",
+          "date_closed": "2026-06-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 232912,
+          "iid": 79,
+          "title": "Intake Asset Load NavHub GEN II for Site 6 Asset",
+          "description": "Asset Load NavHub GEN II for Site 6 Asset. Reformatted raw data into the attached import spreadsheet.\n\n[NavHub_GEN_II_Site_6_Master_Asset_List_15_May_2026_Import.xlsx](/uploads/5aa956d0e29671b2972a638d8fe85e73/NavHub_GEN_II_Site_6_Master_Asset_List_15_May_2026_Import.xlsx)",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-04",
+          "date_closed": "2026-06-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 232685,
+          "iid": 444,
+          "title": "Service Management: Validation for SPM Pilot",
+          "description": "",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Capability::SPM",
+            "type::New-Feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-03",
+          "date_closed": "2026-06-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 232682,
+          "iid": 70,
+          "title": "Trouble shoot new Dashboard",
+          "description": "",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-03",
+          "date_closed": "2026-06-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 231270,
+          "iid": 442,
+          "title": "M2S Quick Submit update Secondary Org for OpsNet",
+          "description": "Quick Submit update Secondary Org for OpsNet\n\nHQ\nCompliance\nSecurity Ops\nPeople Ops\nOps Group 2\nFinance\nAnalytics\nPM OpsNet Apps\nPM OpsNet Data/AI\nPM OpsNet Infrastructure\nPM OpsNet Transport\nPM Integration Engineering\nPL Core Network\nPL OpsNet Enablers\nOpsNet Program Lead",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Capability:: M2S",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-03",
+          "date_closed": "2026-06-11",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 230259,
+          "iid": 78,
+          "title": "Intake Add Multiple Consumable Items of Same Type",
+          "description": "Related Consumables – Is it possible to add two of the same cable? Currently no. Need to add a way to capture the quantify of cables used as they are expensive. \n\nAdd Multiple Consumable Items of Same Type. Currently there is the ability to add Multiple Consumable Items to the same incident as long as they are of different types. Need a way to track multiple consumables of the same type on an incident. The suggestion was to add a Consumable Quantity field on Incident which would be used to track the quantity of consumable. For example, if consumable model 'Cable 1' was related to the Incident and five of those cables were used, the 'Consumable Quantity' field would store the value 5.",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-03",
+          "date_closed": "2026-06-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 228018,
+          "iid": 77,
+          "title": "Intake Add Resolution Codes",
+          "description": "Jordan Reyes requested the following Resolution Code for Intake:\n- Repaired\n- Removed and Replaced  (this one already exists)\n- Cannot Duplicate\n- Reboot\n- Software Reload",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-03",
+          "date_closed": "2026-06-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 221087,
+          "iid": 73,
+          "title": "Intake Add Consumable Asset table to Workspace Lists",
+          "description": "Add Consumable Asset table to Workspace Lists. It is labeled as 'Consumable Models' in the Intake application under All menu.",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::New-Feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-03",
+          "date_closed": "2026-06-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 218387,
+          "iid": 66,
+          "title": "Intake Incident Related Consumables Filter based on Program",
+          "description": "Incident Related Consumables Filter based on Program. Add a reference qualifier on the Related Consumables field so that it displays only the consumables based on the Program. \n\n- Add a Program field to the GPS Consumables table [x_g_us29_gps_consumable]\n- Populate this field for all existing Consumable assets\n- Add a Program reference qualifier for the Related Consumables [x_g_us29_gps_related_consumables] field on Incident",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-03",
+          "date_closed": "2026-06-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 166758,
+          "iid": 414,
+          "title": "M2S: Add Active flag for Primary org, Secondary org",
+          "description": "Add Active flag for reference tables Primary org, Secondary org. Due to the recent reorganization a lot of names have changed. Without the Active flag users will see the old orgs which have to be retained as they are linked to old tickets.\n\nAdd Active reference qualifier for the Primary org and Secondary org fields on Incident.",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Capability:: M2S",
+            "Workflow::Ready for Review",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-03",
+          "date_closed": "2026-06-15",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

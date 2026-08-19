@@ -1,0 +1,38 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "month": "2026-07",
+  "generated_at": "2026-08-01T06:09:17.068392Z",
+  "sprints": [
+    {
+      "title": "Data Services 8 JUL 26",
+      "start_date": "2026-06-24",
+      "end_date": "2026-07-08",
+      "goals": "This sprint aimed to resolve critical production issues across four major applications while advancing user experience improvements and administrative capabilities. The team prioritized stability for upcoming demonstrations and deployments while establishing foundational infrastructure for enhanced reporting and access control.",
+      "summary": "The sprint delivered seventeen completed items spanning bug fixes, feature enhancements, and administrative updates across Access Requests, AMIT, Compliance Review, and SALT applications. Key accomplishments include resolving notification delivery failures and form field validation errors in Access Requests, enabling production deployment of Region D, establishing proper role-based access controls for Records Managers, and improving data presentation through Power BI workspace reorganization and currency formatting. These efforts directly support operational readiness, reduce friction in approval workflows, and ensure the applications are prepared for demonstration and production use.",
+      "metrics": {
+        "initial_count": 22,
+        "initial_weight": 39,
+        "completed_count": 17,
+        "completed_weight": 30,
+        "initial_breakdown": "10 Others, 6 Improvements, 3 Bugs, 3 New Features",
+        "completed_breakdown": "8 Others, 4 Improvements, 3 Bugs, 2 New Features"
+      }
+    },
+    {
+      "title": "Data Services 22 JUL 26",
+      "start_date": "2026-07-08",
+      "end_date": "2026-07-22",
+      "goals": "This sprint focused on enhancing the SALT request management system with critical validation and usability improvements while advancing deployment and integration efforts across multiple applications including ITAM, Access Requests, and purchasing modules. The team prioritized form refinements, approval workflow enhancements, and foundational work to support production readiness across the Data Services platform ecosystem.",
+      "summary": "The sprint delivered substantial improvements to the SALT request workflow by implementing mandatory fields such as justification and need-by date, enforcing supervisor selection on approval matrices, and validating that only sub-organization and team combinations with defined approval matrices are available to requesters. Beyond SALT, the team deployed the AMIT application to test environments, resolved critical issues with hand receipt uploads and search functionality in ITAM, enhanced notification systems with formatted approval emails to both requesters and submitters, and improved user interface consistency across Access Requests and purchasing modules. Additionally, the team completed baseline organizational changes, established production connection references for notifications, and addressed usability concerns in the Compliance Review module regarding screen layout and administrative controls. This work collectively strengthens data integrity, improves user experience, and positions multiple applications for production deployment.",
+      "metrics": {
+        "initial_count": 40,
+        "initial_weight": 57,
+        "completed_count": 35,
+        "completed_weight": 48,
+        "initial_breakdown": "15 Improvements, 14 Others, 10 New Features, 1 Bug",
+        "completed_breakdown": "15 Improvements, 10 Others, 9 New Features, 1 Bug"
+      }
+    }
+  ]
+}

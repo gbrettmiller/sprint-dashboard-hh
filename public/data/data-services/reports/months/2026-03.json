@@ -1,0 +1,53 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "month": "2026-03",
+  "generated_at": "2026-07-02T21:57:26.275004Z",
+  "sprints": [
+    {
+      "title": "Data Services 3 MAR 26",
+      "start_date": "2026-02-18",
+      "end_date": "2026-03-03",
+      "goals": "This sprint focused on stabilizing core workflows across multiple applications and expanding administrative capabilities to support organizational restructuring. The team prioritized fixing critical user-facing bugs, completing modal-based workflows for document management, and establishing proper access controls across newly configured organizational hierarchies.",
+      "summary": "The team completed 47 issues spanning six major application areas, with particular emphasis on the Catalog Sync document request screens, Access Requests traveler management, and Compliance Review records management platforms. Key accomplishments include full implementation of document request modals with edit and delete functionality, resolution of form validation and navigation issues in Access Requests, deployment of Compliance Review capabilities to all consortium test environments, and comprehensive configuration of application admin group permissions and memberships across five organizational entities. Additionally, the team addressed critical data display problems such as missing PDF content and lost UI elements, implemented sorting and filtering enhancements across multiple screens, and updated notification logic to include relevant stakeholders like Traveler Points of Contact. These changes improve operational efficiency, ensure proper governance through role-based access controls, and provide users with more reliable and complete information during key business processes.",
+      "metrics": {
+        "initial_count": 47,
+        "initial_weight": 92,
+        "completed_count": 47,
+        "completed_weight": 92,
+        "initial_breakdown": "26 Others, 14 Improvements, 4 New Features, 3 Bugs",
+        "completed_breakdown": "26 Others, 14 Improvements, 4 New Features, 3 Bugs"
+      }
+    },
+    {
+      "title": "Data Services 18 MAR 26",
+      "start_date": "2026-03-03",
+      "end_date": "2026-03-18",
+      "goals": "This sprint focused on refining user interfaces across multiple applications, establishing infrastructure for new purchasing capabilities, and expanding role-based access controls to support organizational hierarchy requirements. The team also prioritized environment promotions and data migrations to advance staging readiness across the ecosystem.",
+      "summary": "The team completed significant user experience improvements to the Access Requests application by streamlining the My POC and My Action screens, removing redundant Travel Card columns, and enhancing navigation with improved form validation and button functionality. Critical infrastructure work included pushing Catalog Sync to production and test environments, deploying Compliance Review capabilities across consortium test systems with expanded resource manager support, and establishing the foundation for a new Purchasing module with screen layouts and navigation components. Administrative enhancements expanded Program Office permissions across multiple organizational groups while data migrations and environment configurations moved Division and Business Unit applications closer to production readiness. These deliverables collectively improve user workflows, extend system accessibility, and position the platform for the next phase of capability rollout.",
+      "metrics": {
+        "initial_count": 28,
+        "initial_weight": 72,
+        "completed_count": 28,
+        "completed_weight": 72,
+        "initial_breakdown": "13 Others, 11 Improvements, 3 Bugs, 1 New Feature",
+        "completed_breakdown": "13 Others, 11 Improvements, 3 Bugs, 1 New Feature"
+      }
+    },
+    {
+      "title": "Data Services 1 APR 26",
+      "start_date": "2026-03-18",
+      "end_date": "2026-04-01",
+      "goals": "This sprint focused on advancing multiple application platforms toward production readiness while addressing critical UI and workflow issues across the Data Services ecosystem. The team prioritized stability improvements, organizational hierarchy fixes, and new feature deployment across Access Requests, Compliance Review, Purchasing, and support applications.",
+      "summary": "The sprint delivered 34 completed items spanning production deployments, scaling and display fixes, and foundational architectural work. Key accomplishments include full Access Requests production deployment with enhanced form functionality and funding source controls, Compliance Review production dashboard launch with multi-level organizational support and document tracking, and the initial framework for the new Purchasing application. The team also resolved critical UI rendering issues affecting icon and button display at various screen sizes, corrected email targeting in approval workflows, and implemented security group and role updates across all environments. Together, these changes improve operational efficiency across records management, request approvals, procurement, and in-processing workflows while enhancing system stability and user experience.",
+      "metrics": {
+        "initial_count": 32,
+        "initial_weight": 66,
+        "completed_count": 32,
+        "completed_weight": 66,
+        "initial_breakdown": "17 Others, 12 Improvements, 3 New Features",
+        "completed_breakdown": "17 Others, 12 Improvements, 3 New Features"
+      }
+    }
+  ]
+}

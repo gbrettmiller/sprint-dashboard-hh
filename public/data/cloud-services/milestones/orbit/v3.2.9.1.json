@@ -1,0 +1,79 @@
+{
+  "milestone_title": "v3.2.9.1",
+  "milestone_id": 2355,
+  "slug": "v3.2.9.1",
+  "project_id": 91001,
+  "project_name": "ORBIT",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:25.937831Z",
+  "issues": [
+    {
+      "id": 183674,
+      "iid": 1116,
+      "title": "Add POC and CSR Fields to Organization Records",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "#### **User Story**\n\n* **As a** ORBIT Admin,\n* **I want to** add and manage a \"ORBIT POC\" and a \"CSR\" for each customer organization record,\n* **so that** I can maintain up-to-date points of contact for both organizational and technical support, ensuring better communication and service.\n\n---\n\n#### **Acceptance Criteria**\n\n**Scenario 1: Adding / editing the Organization Record Form**\n\n* **Given** I am on the Admin Settings page for creating or editing an organization's record,\n* **When** the form is displayed,\n* **Then** I **must** see two data fields labeled \"ORBIT POC\" and \"CSR\".\n* **And** the \"ORBIT POC\" field **must** use employee lookup from the Organization\n* **And** the \"CSR\" field **must** use employee lookup from ORBIT as a whole.\n* **When** I attempt to save the record \n* **Then** the organization record **must** save successfully.\n\n**Scenario 2: Viewing the Organization Data**\n\n* **Given** data has been successfully saved in the \"ORBIT POC\" and \"CSR\" fields for an organization,\n* **When** I view the details of that organization's record (in a read-only view),\n* **Then** the saved values for both new fields **must** be correctly displayed."
+    },
+    {
+      "id": 186326,
+      "iid": 1151,
+      "title": "Notify Organization Managers of New Registrations",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "customer:platform-engineering",
+        "Customer:EIS",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI implements an automated email notification to Organization Managers when a new user registers for their organization *without* selecting a specific Suborganization (Layer).\n\n---\n\n#### **User Story**\n\n*   **As an** Organization Manager,\n*   **I want to** receive an immediate email notification when a new user registers for my organization without selecting a specific PM/Layer,\n*   **so that** I can take timely action to approve their account and ensure they are properly assigned within my organization.\n\n#### **Acceptance Criteria**\n\n*   **Given** a new user is registering and selects an \"Organization\" but leaves the \"Suborganization (Layer)\" field blank,\n*   **And** there are one or more users assigned the \"Organization Manager\" role for that Organization,\n*   **When** the user successfully submits their registration,\n*   **Then** an email notification **must** be sent **only** to the Organization Managers of the selected Organization.\n*   **And** the notification **must not** be sent to any Layer Managers.\n*   **And** the email subject line **must** clearly indicate its purpose (e.g., \"New Unassigned User Registration for [Organization Name]\").\n*   **And** the email body **must** contain the new user's name and a link to their Employee page."
+    },
+    {
+      "id": 186375,
+      "iid": 1155,
+      "title": "Align Download with Filter Selection - Position Assignments page",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "customer:network-ops",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI corrects the behavior of the download option on the \"Position Assignments\" page to ensure the exported file respects the user's currently selected filter (Active, Inactive, or All).\n\n---\n\n#### **User Story**\n\n*   **As a** user on the \"Position Assignments\" page,\n*   **I want** the download option to export only the records that match my selected filter,\n*   **so that** I can easily generate a targeted report of the data I am currently viewing without having to manually filter a larger file.\n\n#### **Acceptance Criteria**\n\n**Scenario 1: \"Active\" Filter is Selected**\n\n*   **Given** I am on the \"Position Assignments\" page,\n*   **And** I have selected the \"Active\" filter, displaying only active records,\n*   **When** I click the \"Download\" button,\n*   **Then** the downloaded file **must** contain only the \"Active\" position assignment records.\n\n**Scenario 2: \"Inactive\" Filter is Selected**\n\n*   **Given** I am on the \"Position Assignments\" page,\n*   **And** I have selected the \"Inactive\" filter, displaying only inactive records,\n*   **When** I click the \"Download\" button,\n*   **Then** the downloaded file **must** contain only the \"Inactive\" position assignment records.\n\n**Scenario 3: \"All\" Filter is Selected (Regression Check)**\n\n*   **Given** I am on the \"Position Assignments\" page,\n*   **And** I have selected the \"All\" filter, displaying all records,\n*   **When** I click the \"Download\" button,\n*   **Then** the downloaded file **must** contain all position assignment records (both Active and Inactive).\n\n_INC0032565_"
+    },
+    {
+      "id": 188849,
+      "iid": 1163,
+      "title": "Notify Layer Managers of New Registrations",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "customer:platform-engineering",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI implements an automated email notification to Layer Managers when a new user registers and selects their specific PM (Layer) as Suborganization.\n\n---\n\n#### **User Story**\n\n*   **As a** Layer Manager,\n*   **I want to** receive an immediate email notification when a new user registers and has selected my PM/Layer as Suborganization,\n*   **so that** I am immediately aware of new employee in my specific area of responsibility and can take appropriate action.\n\n#### **Acceptance Criteria**\n\n*   **Given** a new user is registering and selects both an \"Organization\" and a specific \"Suborganization (Layer)\",\n*   **And** there are one or more users assigned the \"Layer Manager\" role for that specific Layer,\n*   **When** the user successfully completes their registration,\n*   **Then** an email notification **must** be sent **only** to the Layer Managers of the selected Layer.\n*   **And** the email notification **must not** be sent to the Organization Managers.\n*   **And** the email subject line **must** clearly indicate its purpose (e.g., \"New User Registration for Layer: [PM/Layer Name]\").\n*   **And** the email body **must** contain the new user's name and a link to their Employee page."
+    },
+    {
+      "id": 188859,
+      "iid": 1164,
+      "title": "Alignment of data fields on Settings page",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "* **As an** Organization Manager or ORBIT admin,\n* **I want** the data presented in the left column of the settings page to be vertically aligned with the corresponding label,\n* **so that** I can more easily match the data with the lable when viewing the page. \n\n**Acceptance Criteria**\n\n* **Given** an Organization Manager or ORBIT Admin is viewing the Settings page for an organization,\n* **Then** the data fields **must** be vertically aligned with the corresponding label for that data field."
+    },
+    {
+      "id": 188995,
+      "iid": 1165,
+      "title": "Add filters to the position assignments page for org managers from nav link instead of settings link",
+      "weight": 2,
+      "state": "closed",
+      "labels": [],
+      "description": ""
+    }
+  ]
+}

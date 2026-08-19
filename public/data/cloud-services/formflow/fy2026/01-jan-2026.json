@@ -1,0 +1,339 @@
+{
+  "fiscal_year": 2026,
+  "month": 1,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 3746,
+      "title": "Third-Party Integration FY26Q1-6",
+      "start_date": "2025-12-24",
+      "end_date": "2026-01-06",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 7,
+        "weight": 7
+      },
+      "burndown": [
+        {
+          "date": "2025-12-24",
+          "remaining_count": 7,
+          "remaining_weight": 7
+        },
+        {
+          "date": "2025-12-25",
+          "remaining_count": 7,
+          "remaining_weight": 7
+        },
+        {
+          "date": "2025-12-26",
+          "remaining_count": 7,
+          "remaining_weight": 7
+        },
+        {
+          "date": "2025-12-27",
+          "remaining_count": 7,
+          "remaining_weight": 7
+        },
+        {
+          "date": "2025-12-28",
+          "remaining_count": 7,
+          "remaining_weight": 7
+        },
+        {
+          "date": "2025-12-29",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-12-30",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-12-31",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-01",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-02",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-03",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-04",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-05",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-06",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 8
+      },
+      "completed": {
+        "count": 8,
+        "weight": 8
+      },
+      "issues": [
+        {
+          "id": 185508,
+          "iid": 31,
+          "title": "Reconfigure pipeline in FormFlow to ensure it logs into azure and updates app svc",
+          "project_id": 91005,
+          "project_name": "formflow",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-01-02",
+          "date_closed": "2026-01-02",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184787,
+          "iid": 30,
+          "title": "Update Risk Programs to Risk & Compliance",
+          "project_id": 91005,
+          "project_name": "formflow",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v1.6.9",
+          "date_added_to_sprint": "2025-12-24",
+          "date_closed": "2025-12-29",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184786,
+          "iid": 29,
+          "title": "Update Applied Analytics to Data & Analytics",
+          "project_id": 91005,
+          "project_name": "formflow",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v1.6.9",
+          "date_added_to_sprint": "2025-12-24",
+          "date_closed": "2025-12-29",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184785,
+          "iid": 28,
+          "title": "Update Network Systems to Network Operations",
+          "project_id": 91005,
+          "project_name": "formflow",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v1.6.9",
+          "date_added_to_sprint": "2025-12-24",
+          "date_closed": "2025-12-29",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184783,
+          "iid": 27,
+          "title": "Simulation & Training secondary organization sort order",
+          "project_id": 91005,
+          "project_name": "formflow",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v1.6.9",
+          "date_added_to_sprint": "2025-12-24",
+          "date_closed": "2025-12-29",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184782,
+          "iid": 26,
+          "title": "List R&D Division as Primary Org",
+          "project_id": 91005,
+          "project_name": "formflow",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v1.6.9",
+          "date_added_to_sprint": "2025-12-24",
+          "date_closed": "2025-12-29",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184781,
+          "iid": 25,
+          "title": "List Global Client Solutions as Primary Org",
+          "project_id": 91005,
+          "project_name": "formflow",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v1.6.9",
+          "date_added_to_sprint": "2025-12-24",
+          "date_closed": "2025-12-29",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184780,
+          "iid": 24,
+          "title": "List Platform Engineering Center as Primary Org",
+          "project_id": 91005,
+          "project_name": "formflow",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v1.6.9",
+          "date_added_to_sprint": "2025-12-24",
+          "date_closed": "2025-12-29",
+          "date_removed_from_sprint": null
+        }
+      ]
+    },
+    {
+      "id": 3825,
+      "title": "Third-Party Integration FY26Q2-1",
+      "start_date": "2026-01-07",
+      "end_date": "2026-01-20",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 0,
+        "weight": 0
+      },
+      "burndown": [
+        {
+          "date": "2026-01-07",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-08",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-09",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-10",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-11",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-12",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-13",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-14",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-15",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-16",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-17",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-18",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-19",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-20",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 1
+      },
+      "completed": {
+        "count": 1,
+        "weight": 3
+      },
+      "issues": [
+        {
+          "id": 181700,
+          "iid": 20,
+          "title": "Update FormFlow to .net 10 by Nov 2026",
+          "project_id": 91005,
+          "project_name": "formflow",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "v1.7.1",
+          "date_added_to_sprint": "2026-01-16",
+          "date_closed": "2026-01-16",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

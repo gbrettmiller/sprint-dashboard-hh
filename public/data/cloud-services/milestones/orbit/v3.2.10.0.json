@@ -1,0 +1,134 @@
+{
+  "milestone_title": "v3.2.10.0",
+  "milestone_id": 2500,
+  "slug": "v3.2.10.0",
+  "project_id": 91001,
+  "project_name": "ORBIT",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:26.586361Z",
+  "issues": [
+    {
+      "id": 189115,
+      "iid": 1167,
+      "title": "Add \"Cancel Notification\" Confirmation Prompt",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI introduces a confirmation dialog that appears if a Notification Manager clicks the \"Cancel\" button on the final notification confirmation screen, preventing the accidental loss of a configured notification.\n\n---\n\n### User Story\n\n*   **As a** Notification Manager reviewing a notification,\n*   **I want to** be prompted with a warning if I click \"Cancel,\"\n*   **so that** I don't accidentally discard the notification details I have just prepared.\n\n---\n\n### Acceptance Criteria\n\n*   **Given** a Notification Manager is on the \"Confirm Notification\" page,\n*   **When** they click the \"Cancel\" button,\n*   **Then** a confirmation dialog **must** appear with a message like, \"Are you sure you want to cancel? This unsent notification will be discarded.\"\n*   **And** the dialog **must** have two options, such as \"Discard Notification\" and \"Continue Review.\"\n\n#### Scenario: User Confirms Cancellation\n*   **Given** the warning dialog is displayed,\n*   **When** the user clicks the \"Discard Notification\" button,\n*   **Then** the dialog **must** close, and the user **must** be navigated away from the confirmation page (e.g., back to the main \"Notifications\" page).\n\n#### Scenario: User Denies Cancellation\n*   **Given** the warning dialog is displayed,\n*   **When** the user clicks the \"Continue Review\" button,\n*   **Then** the dialog **must** close, and the user **must** remain on the \"Confirm Notification\" page."
+    },
+    {
+      "id": 189118,
+      "iid": 1169,
+      "title": "Implement Phone Number Validation on User Profile",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI introduces input validation for all phone number-related fields on the user profile page. This will ensure that data entered is in a recognizable and valid phone number format, improving the overall data quality and reliability of contact information within ORBIT. This validation must accommodate both standard US and international phone number formats.\n\n---\n\n### User Story\n\n*   **As a** ORBIT user editing my profile,\n*   **I want** the system to validate phone number fields when I save,\n*   **so that** I can be confident that I've entered a correctly formatted number and that contact information in the system is reliable for notifications and communication.\n\n---\n\n### Acceptance Criteria\n\n#### **Scenario 1: Valid US Number Formats are Accepted**\n\n*   **Given** a user is editing their profile page,\n*   **When** they enter a 10-digit US phone number in any of the following formats into a phone number field:\n    *   `xxx-xxx-xxxx`\n    *   `xxx.xxx.xxxx`\n    *   `xxxxxxxxxx`\n    *   `(xxx) xxx-xxxx`\n*   **Then** upon saving, the form **must** save successfully without any validation errors for that field.\n\n#### **Scenario 2: Valid International Number Formats are Accepted**\n\n*   **Given** a user is editing their profile page,\n*   **When** they enter a valid international phone number (e.g., starting with `+` and followed by country code and digits) into a phone number field,\n*   **Then** upon saving, the form **must** save successfully without any validation errors for that field.\n    *   *(Note to Developer: A reasonable check is to validate for a `+` followed by 7 to 15 digits, which covers most international standards).*\n\n#### **Scenario 3: Invalid Formats are Rejected**\n\n*   **Given** a user is editing their profile page,\n*   **When** they enter a non-valid phone number format (e.g., contains letters, is too short, has incorrect punctuation) and attempt to save,\n*   **Then** the save action **must** fail.\n*   **And** a user-friendly error message (e.g., \"Please enter a valid phone number\") **must** be displayed next to the field(s) containing the invalid data.\n\n#### **Scenario 4: Validation Applies to All Specified Fields**\n\n*   **Given** the phone number validation logic is implemented,\n*   **When** testing the user profile edit page,\n*   **Then** the validation logic described in the scenarios above **must** be applied consistently to **all** of the following fields:\n    *   Work Phone\n    *   DSN Phone\n    *   Government Issued Mobile Device\n    *   Emergency Contact 1 phone\n    *   Emergency Contact 2 phone\n    *   Mobile Check-in phone number\n    *   Notification SMS/Text Messaging Number"
+    },
+    {
+      "id": 191104,
+      "iid": 1173,
+      "title": "Update link to User Roles in ORBIT page",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "customer:network-ops",
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "On the ORBIT help page, the link to User Roles in ORBIT is incorrect - there is an extra \"x\" at the end of the link. It should be https://intranet.example.com/sites/orbit/SitePages/Roles-in-ORBIT.aspx\n\n## ACCEPTANCE CRITERIA\n**Given** that a user is on the ORBIT help page,\n**And** the user clicks the link to \"User Roles in ORBIT\", \n**Then** the \"Roles in ORBIT\" page **must** open in a new browser tab.\n\n![image](/uploads/bd776637f7666149a606db705ecc57c1/image.png){width=396 height=96}"
+    },
+    {
+      "id": 191118,
+      "iid": 1174,
+      "title": "Add \"Edit Notification\" Capability from Confirmation Page",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI introduces a new \"Edit\" button on the final notification confirmation screen, allowing a manager to easily go back and modify the notification's details without having to start the entire process over.\n\n---\n\n### User Story\n\n*   **As a** Notification Manager reviewing a notification on the confirmation screen,\n*   **I want** an \"Edit\" button,\n*   **so that** I can easily go back to the previous step to modify any details I notice are incorrect before sending it.\n\n---\n\n### Acceptance Criteria\n\n*   **Given** a Notification Manager is on the \"Confirm Notification\" page,\n*   **When** the page loads,\n*   **Then** a new button labeled \"Edit\" (or \"Modify\") **must** be visible, positioned logically near the \"Send\" and \"Cancel\" buttons.\n\n*   **And when** the user clicks the \"Edit\" button,\n*   **Then** they **must** be taken back to the previous screen (the notification creation page).\n*   **And** all fields on that creation page **must** be pre-populated with the data from the notification they were just reviewing (e.g., recipients, subject, message, settings).\n\n#### Scenario: User Submits After Editing\n*   **Given** a user has clicked \"Edit,\" changed a detail (e.g., the subject line), and clicked \"Confirm Notification\" again,\n*   **When** the \"Confirm Notification\" page reloads,\n*   **Then** the page **must** display the updated detail (the new subject line)."
+    },
+    {
+      "id": 191132,
+      "iid": 1176,
+      "title": "Implement email input validation for Additional email field on user profile",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI introduces input validation for the \"Additional Email\" field within the \"Notification Information\" section of the user profile. This will ensure that any email address entered is in a valid format, preventing data entry errors and ensuring successful delivery of email notifications.\n\n---\n\n### User Story\n\n*   **As a** ORBIT user editing my profile,\n*   **I want** the system to validate the format of the \"Additional Email\" field when I save,\n*   **so that** I can be confident that I've entered a correct and usable email address.\n\n---\n\n### Acceptance Criteria\n\n#### **Scenario 1: Valid Email Format is Accepted**\n\n*   **Given** a user is editing their profile page,\n*   **When** they enter a syntactically valid email address (e.g., `user@example.com`, `user.name@domain.co.uk`) into the \"Additional Email\" field and save,\n*   **Then** the form **must** save successfully without any validation errors for that field.\n\n#### **Scenario 2: Invalid Email Format is Rejected**\n\n*   **Given** a user is editing their profile page,\n*   **When** they enter a syntactically invalid email address (e.g., `userexample.com`, `user@`, `user@domain.`) into the \"Additional Email\" field and attempt to save,\n*   **Then** the save action **must** fail.\n*   **And** a user-friendly error message (e.g., \"Please enter a valid email address\") **must** be displayed next to the \"Additional Email\" field.\n\n#### **Scenario 3: Empty Field is Accepted**\n\n*   **Given** a user is editing their profile page,\n*   **And** the \"Additional Email\" field is not mandatory,\n*   **When** they leave the \"Additional Email\" field blank and save the profile,\n*   **Then** the form **must** save successfully without any validation errors for that field."
+    },
+    {
+      "id": 191135,
+      "iid": 1177,
+      "title": "Standardize Emergency Contact Field labels",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI updates the field labels within the \"Emergency Contact Information\" section on the \"Edit Profile\" page. The current labels are verbose and numbered (e.g., \"Person 1\"). They will be replaced with simpler, more standard labels (\"Name\", \"Phone\", \"Relationship\") for both contacts to improve clarity and readability.\n\n---\n\n### User Story\n\n*   **As a** ORBIT user editing my profile,\n*   **I want to** see simple, consistent labels like \"Name,\" \"Phone,\" and \"Relationship\" for both of my emergency contacts,\n*   **so that** the form is easier to read and understand at a glance.\n\n---\n\n### Acceptance Criteria\n\n#### **Scenario 1: Viewing the Emergency Contact Section**\n\n*   **Given** a user is on the \"Edit Profile\" page,\n*   **When** they view the \"Emergency Contact Information\" section,\n*   **Then** for the first emergency contact, the labels **must** be displayed as \"Name\", \"Phone\", and \"Relationship\".\n*   **And** for the second emergency contact, the labels **must** also be displayed as \"Name\", \"Phone\", and \"Relationship\".\n*   **And** the old labels (e.g., \"Person 1\", \"Person's Phone 1\", \"Person 2\") **must** no longer be visible.\n\n#### **Scenario 2: Data Integrity (Regression Check)**\n\n*   **Given** the field labels have been updated,\n*   **When** a user enters data into the \"Name\" field for the first contact and saves their profile,\n*   **Then** the data **must** be correctly saved to the underlying data field for the first emergency contact's name.\n*   *(This confirms the change is purely cosmetic and does not break the data binding between the UI and the backend).*"
+    },
+    {
+      "id": 191294,
+      "iid": 1178,
+      "title": "Add link to ORBIT Mobile Experience quick reference guide to help page",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "On the ORBIT help page, add a link to \"Quick Reference Guide: Intro to the ORBIT Mobile Experience\"  https://intranet.example.com/sites/orbit/SitePages/Intro-to-the-ORBIT-Mobile-Experience.aspx\n\n## ACCEPTANCE CRITERIA\n**Given** that a user is on the ORBIT help page,\n\n**And** the user clicks the link to \"Quick Reference Guide: Intro to the ORBIT Mobile Experience\",\n\n**Then** the \"Intro to the ORBIT Mobile Experience\" page **must** open in a new browser tab.\n\n![image](/uploads/b7f88aa3ae7e4353e8f40fd98792a319/image.png){width=519 height=198}"
+    },
+    {
+      "id": 192273,
+      "iid": 1180,
+      "title": "Fix issue with Future Check-Ins Not Appearing on Manager's Home Screens",
+      "weight": 3,
+      "state": "closed",
+      "labels": [],
+      "description": "While the method to update all Future Check-Ins for an organization worked, the manager's home screen still do not show the updated items."
+    },
+    {
+      "id": 192994,
+      "iid": 1183,
+      "title": "Fix url for notification edit button form action",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Bug"
+      ],
+      "description": "During recent test deployment it was realized that the form action when the edit button is clicked was redirecting to the wrong url."
+    },
+    {
+      "id": 193650,
+      "iid": 1184,
+      "title": "Refactor edit notification feature to not pass employee checklist items which cause 400 status in large payload scenarios",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Bug"
+      ],
+      "description": ""
+    }
+  ]
+}

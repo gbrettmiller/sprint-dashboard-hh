@@ -1,0 +1,20 @@
+{
+  "milestone_title": "v1.7.6",
+  "milestone_id": 2329,
+  "slug": "v1.7.6",
+  "project_id": 91004,
+  "project_name": "SkyCast",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:23.922960Z",
+  "issues": [
+    {
+      "id": 186153,
+      "iid": 25,
+      "title": "Finish configuring private key for use with GALWEM SFTP server",
+      "weight": 5,
+      "state": "closed",
+      "labels": [],
+      "description": ""
+    }
+  ]
+}

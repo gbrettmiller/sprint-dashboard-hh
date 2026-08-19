@@ -1,0 +1,24 @@
+{
+  "milestone_title": "v1.7.3",
+  "milestone_id": 2557,
+  "slug": "v1.7.3",
+  "project_id": 91005,
+  "project_name": "FormFlow",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:40.061204Z",
+  "issues": [
+    {
+      "id": 194714,
+      "iid": 35,
+      "title": "Update support center email address",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "**Description:** This PBI covers the work to update the email address for the Support Center on the Quick Submit Form home page. The Enterprise Services organization has been renamed to Business Unit 2, resulting in a new email address that must be reflected in the application.\n\n---\n\n### User Story\n\n*   **As a** customer / user seeking assistance,\n*   **I want to** see the correct, new email address for the Support Center on the Quick Submit Forms home page,\n*   **so that** my support requests are sent to the proper destination and I can get help when I need it.\n\n---\n\n### Acceptance Criteria\n\n#### **Scenario 1: Viewing the FormFlow Home Page**\n\n*   **Given** a user navigates to the \"Home\" page,\n*   **When** the page loads,\n*   **Then** the old support center email address **must not** be visible.\n*   **And** the new email address, `support@business-unit-2.example.com`, **must** be displayed as the link text.\n\n#### **Scenario 2: Interacting with the Email Link**\n\n*   **Given** the new email address is displayed on the Home page,\n*   **When** a user inspects the link,\n*   **Then** the link **must** be a `mailto:` link pointing to `mailto:support@business-unit-2.example.com`.\n*   **And when** a user clicks the link,\n*   **Then** their default email client **must** open a new message pre-addressed to `support@business-unit-2.example.com`."
+    }
+  ]
+}

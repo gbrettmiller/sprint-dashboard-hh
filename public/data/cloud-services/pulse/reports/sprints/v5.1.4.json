@@ -1,0 +1,73 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "pulse",
+  "milestone_slug": "v5.1.4",
+  "title": "v5.1.4",
+  "start_date": "2026-06-03",
+  "end_date": "2026-06-17",
+  "generated_at": "2026-06-30T22:02:34.898941Z",
+  "test_plan": [
+    {
+      "iid": 595,
+      "title": "Add View Mode with Edit Toggle for Lookup Items on Prime Contractor Metadata Settings Page",
+      "steps": "- Open the Prime Contractor Metadata Settings page and select a Lookup Item to verify it opens in read-only View mode by default\n- Confirm all field values are displayed in a non-editable layout and click the Edit button to transition to Edit mode without a full page reload\n- Modify a field value, click Save, and verify the form returns to View mode with a success confirmation message displayed\n- Return to Edit mode, make changes, click Cancel, and verify the form reverts to View mode with no changes applied\n- Test keyboard navigation (Tab through fields, Enter to activate buttons, Escape to cancel) in both View and Edit modes across supported browsers"
+    },
+    {
+      "iid": 680,
+      "title": "Refactor: Replace magic number '1388' (Small Business Yes) with named constant",
+      "steps": "- Open the form containing the Small Business field and verify the checkbox appears and is functional\n- Toggle the Small Business checkbox on and off, confirming the mutual-exclusivity logic works correctly (related fields enable/disable as expected)\n- Test the form submission with Small Business set to \"Yes\" and verify the correct lookup ID is captured in the backend/database\n- Access the form in a different environment (if available) and confirm the Small Business checkbox still functions correctly without errors\n- Search the browser console for any JavaScript errors related to lookup ID resolution while interacting with the Small Business field"
+    },
+    {
+      "iid": 681,
+      "title": "UX: Add help text and tooltips to Admin field configuration settings",
+      "steps": "- Navigate to Admin > Field Configuration and open an existing field for editing; verify that each of the five fields (`IsRequired`, `IsHidden`, `ConditionallyRequired`, `IsFiltered`, `AllowDateNA`) displays a help icon (\u24d8) next to its label.\n- Hover over each help icon and confirm that a tooltip appears with clear explanation of what the setting does, its impact on the end-user form, and any side effects.\n- Verify that a documentation link to the relevant GitLab wiki page is visible at the top of the field configuration page.\n- Tab through the form fields using keyboard navigation and confirm that help icons are focusable and tooltips appear on focus (without requiring mouse hover).\n- Save and close the field configuration form, then reopen it to verify that existing CRUD functionality remains unchanged and all previously configured values are preserved."
+    },
+    {
+      "iid": 682,
+      "title": "UX: Improve API key management \u2014 add expiration display, usage count, and revocation log",
+      "steps": "- Navigate to the Admin API key management screen and verify the list displays Client ID, Issued Date, Expiration Date, Last Used Date, and Status (Active/Expired/Revoked) columns for each key.\n- Create a new API key and confirm the UI allows setting an expiration date; edit an existing key and verify the expiration date can be modified.\n- Attempt to authenticate using an API key that has passed its expiration date and verify the request is rejected with a clear error message.\n- Revoke an API key and confirm a revocation log entry is created with timestamp, admin user, and reason; verify the log is viewable from the key detail page.\n- Add a \"Notes\" field value to an API key documenting the system/integration using it, save, and verify the notes persist and display on the key detail page."
+    },
+    {
+      "iid": 714,
+      "title": "refactor: Switch action list data layer from stored procedures to EF IQueryable (Phase 2a follow-up to #675)",
+      "steps": "- Load the action list view in a non-prod environment and verify all ~140 columns render with the same data values as they did before the refactor by spot-checking 100 representative rows across different status filters and permission levels.\n- Apply 3+ column filters simultaneously (e.g., filter by status, date range, and text search) and confirm the filtered results load in under 2 seconds and match the legacy SP behavior exactly; verify via SQL trace that filters execute server-side (WHERE clause in SQL, not in-memory C#).\n- Navigate through multiple pages of results on a 10k+ row organization using the pagination controls and confirm page load time with warm cache is no more than 110% of the baseline captured before the refactor.\n- Verify the \"Recently Modified\" view and status-specific views (statusId > 1) display correct row counts and sort order, matching the legacy behavior.\n- Open browser developer tools (Network tab) and confirm the wire footprint is smaller after the refactor by comparing the JSON response size for the same filtered page before and after; verify OFFSET/FETCH is in the SQL trace."
+    },
+    {
+      "iid": 722,
+      "title": "Add OrbitalLink checkbox to Action Description (alongside FieldSat field)",
+      "steps": "- Navigate to the Item/Action form and open the Action Description section; verify that a \"OrbitalLink\" checkbox appears immediately adjacent to the existing FieldSat checkbox.\n- Create a new action with the OrbitalLink checkbox checked, save the item, and reload the form to confirm the checkbox value persists.\n- Edit an existing action, toggle the OrbitalLink checkbox on and off, save, and verify the changes round-trip correctly.\n- Duplicate an action with OrbitalLink checked and confirm the OrbitalLink checkbox is **not** copied to the duplicated action (AllowDuplicate=false).\n- Verify that the OrbitalLink checkbox respects per-organization visibility settings in System_FieldMetadata and honors read-only mode when the form is in read-only state."
+    },
+    {
+      "iid": 724,
+      "title": "fix: Type of Submission required asterisk persists after admin sets field to not-required (and required validation blocks save)",
+      "steps": "- Navigate to Admin field configuration and set **Type of Submission** field to **Required = off**, then save and return to the Item action create/edit screen without restarting the application; verify the red required asterisk is **not displayed**.\n- In Admin field configuration, set **Type of Submission** back to **Required = on**, return to the Item action create/edit screen, and confirm the red required asterisk **now appears**.\n- On the Item action create/edit screen with **Type of Submission** set to Required, attempt to save without selecting any checkbox; verify the save is **blocked** with a validation error.\n- Select one or more checkboxes in the **Type of Submission** field and attempt to save; verify the action saves **successfully** and no validation error appears.\n- Verify that the presence/absence of the red asterisk and the enforcement of the required validation are **always consistent** \u2014 asterisk visible means validation is enforced, and vice versa."
+    },
+    {
+      "iid": 725,
+      "title": "fix: Home page funded amounts only show current FY (FY26) \u2014 show FY27 and future fiscal years",
+      "steps": "- Navigate to the PULSE home/action-list page and verify that the \"Current FY Obligation Amount\" column (or equivalent funded-amount display) shows amounts for both FY26 and FY27.\n- Confirm that FY26 totals remain unchanged from the previous release.\n- Verify that FY27 amounts display correctly alongside FY26 amounts in the same view or in separate columns/sections as designed.\n- Check that the display automatically includes any additional fiscal years with data (FY28+) without requiring code changes.\n- Confirm that the page loads with no errors and all existing functionality on the home/action-list page continues to work as expected."
+    },
+    {
+      "iid": 726,
+      "title": "feat: Add newly created LOE values to the Level of Effort lookup",
+      "steps": "- Navigate to an action description form and open the Level of Effort dropdown to verify the new LOE value(s) appear in the list for the correct organization(s).\n- Select each new LOE value and save an action to confirm the value is properly stored and retrieved without errors.\n- Verify that existing LOE values remain unchanged and are still selectable in the dropdown.\n- Re-run the migration script and confirm no duplicate LOE values are created (idempotency check).\n- Build the project and run the existing test suite to ensure no regressions."
+    },
+    {
+      "iid": 727,
+      "title": "Add Excel import tool for LevelOfEffort lookup items (Action Descriptions)",
+      "steps": "- Navigate to `/Admin/Field/Edit?Id=LevelOfEffort&Section=ItemActionDescription` and verify the \"Import from Excel\" button appears in the Lookup Settings section; then navigate to a different lookup field and verify the button does **not** appear.\n- Upload a valid `.xlsx` file with headers `LevelOfEffortId` and `LevelOfEffortName`, containing rows with new LOE ids and names; verify the preview modal displays accurate counts for \"to add\" and shows the new items listed, with **no database changes yet**.\n- Click **Confirm** on the preview and verify the page reloads, the new LOEs appear in the Lookup Settings table with `IsActive = true`, and an `Organization_Lookup_Config` row was created for the current organization with `DisplayOrder` appended to the existing max.\n- Upload a file that updates an existing LOE (matching `LookupItemNumericValue`) with a new `LevelOfEffortName`; verify the preview shows it in the \"to update\" list, and after confirming, the LOE's name is changed and `ModifiedBy`/`ModifiedDate` are updated.\n- Upload a file missing one or more LOEs that are currently active for the organization; verify the preview lists them under \"to deactivate,\" confirm the import, and verify those LOEs' `Organization_Lookup_Config.IsActive` is set to `false` while their `LookupItem` rows and names remain unchanged.\n- Upload an invalid file (missing `LevelOfEffortId` header, blank ids, non-numeric ids, duplicate ids, or names over 150 chars); verify the upload is rejected with an itemized error list and **zero database writes**."
+    }
+  ],
+  "sprint_report": {
+    "goals": "This sprint focused on enhancing data import capabilities and administrative tooling while resolving critical display and validation issues affecting users and administrators. The team aimed to improve the maintainability of core data layers and strengthen API security features alongside user experience improvements across lookup item management.",
+    "summary": "The team successfully delivered an Excel import tool for Level of Effort lookup items, enabling faster data ingestion and reducing manual configuration overhead. Critical bugs were fixed including correction of fiscal year filtering on the home page dashboard and resolution of a persistent validation issue with the Type of Submission field that was blocking saves. The sprint also modernized the action list data layer by transitioning from stored procedures to Entity Framework, refactored magic numbers into named constants for improved code clarity, and significantly enhanced administrative capabilities through improved API key management with expiration tracking and usage visibility. Additional polish to the user experience included new help text and tooltips in admin settings, a view and edit toggle for lookup items, and new metadata fields such as OrbitalLink checkbox support for action descriptions.",
+    "metrics": {
+      "initial_count": 12,
+      "initial_weight": 30,
+      "completed_count": 12,
+      "completed_weight": 30,
+      "initial_breakdown": "7 Improvements, 2 Refactors, 1 New Feature, 1 Bug, 1 Devops",
+      "completed_breakdown": "7 Improvements, 2 Refactors, 1 New Feature, 1 Bug, 1 Devops"
+    }
+  }
+}

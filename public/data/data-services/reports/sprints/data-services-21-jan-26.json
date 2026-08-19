@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-21-jan-26",
+  "title": "Data Services 21 JAN 26",
+  "start_date": "2026-01-07",
+  "end_date": "2026-01-21",
+  "generated_at": "2026-07-02T21:56:42.160191Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint aimed to advance four major product lines\u2014Compliance Review Records Management, Records API routing and approvals, Finance Portal contract lifecycle management, and I/O business intelligence\u2014while stabilizing core applications through targeted bug fixes and operational deployments. The team prioritized delivering enterprise-scale capabilities, improving user experience through interface refinements, and expanding platform reach across test and production environments.",
+    "summary": "The sprint delivered significant enhancements across multiple systems: Compliance Review gained critical record management features including mapping views, multi-site collection architecture, and enhanced search and filter capabilities; Records API received workflow improvements with customizable routing, alphabetical sorting, team filtering, and archive functionality; Finance Portal moved to live production with full contract milestone tracking, Budget Status integration, and comprehensive views across funding, PAE, PMRT, and Division domains; and I/O deployed enterprise BI reporting and HRDB menu items to production. Supporting this work, the team resolved numerous user experience issues spanning duplicate value displays, field naming conventions, permission-based filtering, and application performance while creating essential user guides and deploying TCT updates across all customer environments. These completions position the platform for broader enterprise adoption and provide customers with more robust tools for records management, approvals, contract oversight, and business intelligence.",
+    "metrics": {
+      "initial_count": 42,
+      "initial_weight": 98,
+      "completed_count": 39,
+      "completed_weight": 87,
+      "initial_breakdown": "27 Others, 10 Improvements, 3 New Features, 2 Bugs",
+      "completed_breakdown": "27 Others, 8 Improvements, 2 Bugs, 2 New Features"
+    }
+  }
+}

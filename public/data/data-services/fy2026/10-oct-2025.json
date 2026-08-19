@@ -1,0 +1,1292 @@
+{
+  "fiscal_year": 2026,
+  "month": 10,
+  "year": 2025,
+  "sprints": [
+    {
+      "id": 5472,
+      "title": "Data Services 7 OCT",
+      "start_date": "2025-09-23",
+      "end_date": "2025-10-07",
+      "state": "closed",
+      "source": "jira",
+      "goal": "Access Requests & I/O Enhancements, RIST MVP",
+      "initial_totals": {
+        "count": 27,
+        "weight": 63
+      },
+      "burndown": [
+        {
+          "date": "2025-09-23",
+          "remaining_count": 27,
+          "remaining_weight": 63
+        },
+        {
+          "date": "2025-09-24",
+          "remaining_count": 27,
+          "remaining_weight": 63
+        },
+        {
+          "date": "2025-09-25",
+          "remaining_count": 26,
+          "remaining_weight": 64
+        },
+        {
+          "date": "2025-09-26",
+          "remaining_count": 25,
+          "remaining_weight": 61
+        },
+        {
+          "date": "2025-09-27",
+          "remaining_count": 25,
+          "remaining_weight": 61
+        },
+        {
+          "date": "2025-09-28",
+          "remaining_count": 25,
+          "remaining_weight": 61
+        },
+        {
+          "date": "2025-09-29",
+          "remaining_count": 22,
+          "remaining_weight": 60
+        },
+        {
+          "date": "2025-09-30",
+          "remaining_count": 19,
+          "remaining_weight": 55
+        },
+        {
+          "date": "2025-10-01",
+          "remaining_count": 15,
+          "remaining_weight": 43
+        },
+        {
+          "date": "2025-10-02",
+          "remaining_count": 13,
+          "remaining_weight": 38
+        },
+        {
+          "date": "2025-10-03",
+          "remaining_count": 10,
+          "remaining_weight": 31
+        },
+        {
+          "date": "2025-10-04",
+          "remaining_count": 10,
+          "remaining_weight": 31
+        },
+        {
+          "date": "2025-10-05",
+          "remaining_count": 10,
+          "remaining_weight": 31
+        },
+        {
+          "date": "2025-10-06",
+          "remaining_count": 4,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2025-10-07",
+          "remaining_count": 3,
+          "remaining_weight": 15
+        }
+      ],
+      "type_breakdown": {
+        "bug": 2,
+        "improvement": 25,
+        "new_feature": 0,
+        "other": 10
+      },
+      "completed": {
+        "count": 37,
+        "weight": 81
+      },
+      "issues": [
+        {
+          "id": 630076,
+          "iid": 773,
+          "title": "ITAM - Update flow to allow assets in bulk upload to process with no Current Owner",
+          "project_id": 25918,
+          "project_name": "No Component",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-03",
+          "date_closed": "2025-10-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 630006,
+          "iid": 772,
+          "title": "Add the masterTask ID to Task List",
+          "project_id": 25918,
+          "project_name": "No Component",
+          "weight": 0,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-02",
+          "date_closed": "2025-10-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 629839,
+          "iid": 765,
+          "title": "I/O - Admin view needs a filter for status",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 0,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "I/O v1.2.1",
+          "date_added_to_sprint": "2025-10-01",
+          "date_closed": "2025-10-01",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 629668,
+          "iid": 764,
+          "title": "I/O - Change sub-org and team lookups on new in processing to use Org Hierarchy list",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "I/O v1.2.1",
+          "date_added_to_sprint": "2025-10-01",
+          "date_closed": "2025-10-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 629629,
+          "iid": 763,
+          "title": "I/O - Consistent font size on details screen",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "I/O v1.2.1",
+          "date_added_to_sprint": "2025-10-01",
+          "date_closed": "2025-10-01",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 629628,
+          "iid": 762,
+          "title": "I/O - Consistent font size on new in-processing form - supervisor field",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "I/O v1.2.1",
+          "date_added_to_sprint": "2025-10-01",
+          "date_closed": "2025-10-01",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 629607,
+          "iid": 761,
+          "title": "Rebuild HRDB Import Flow fix Hardcoded File",
+          "project_id": 25918,
+          "project_name": "No Component",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::bug"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-09-29",
+          "date_closed": "2025-10-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 629493,
+          "iid": 759,
+          "title": "ITAM - Update Flow used for bulk import",
+          "project_id": 25918,
+          "project_name": "Asset Management",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-03",
+          "date_closed": "2025-10-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 629012,
+          "iid": 756,
+          "title": "Access Requests - Deploy to test environments",
+          "project_id": 25918,
+          "project_name": "Access Requests",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-10-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 629011,
+          "iid": 755,
+          "title": "I/O - Deploy to test environments",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-10-02",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 628995,
+          "iid": 754,
+          "title": "Access Requests - Format PDF Report, add bold to title labels, etc.",
+          "project_id": 25918,
+          "project_name": "No Component",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-09-25",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 628987,
+          "iid": 753,
+          "title": "Access Requests - Remarks notification",
+          "project_id": 25918,
+          "project_name": "Access Requests",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "Access Requests 1.2",
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-09-30",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 628919,
+          "iid": 752,
+          "title": "TCT - scrolling pages for smaller screens",
+          "project_id": 25918,
+          "project_name": "Training and Cert Tracker",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "TCT 1.2.0",
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-09-26",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 628841,
+          "iid": 751,
+          "title": "I/O Home and Admin screens - View Details column",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": "I/O v1.2.1",
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-09-25",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 628824,
+          "iid": 750,
+          "title": "Access Requests - Admin view font consistency",
+          "project_id": 25918,
+          "project_name": "Access Requests",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "Access Requests 1.2",
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-09-30",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 628823,
+          "iid": 749,
+          "title": "Access Requests - Update email notification",
+          "project_id": 25918,
+          "project_name": "Access Requests",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "Access Requests 1.2",
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-09-29",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 628822,
+          "iid": 748,
+          "title": "Menu hotspots",
+          "project_id": 25918,
+          "project_name": "Data Services Baseline/Environment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-10-02",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 628731,
+          "iid": 746,
+          "title": "I/O - Update user guide with images from new UI",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-10-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 628730,
+          "iid": 745,
+          "title": "I/O - Supervisor field used to assign tasks to supervisor",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "I/O v1.2.1",
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-09-30",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 628484,
+          "iid": 744,
+          "title": "Deployment SOP",
+          "project_id": 25918,
+          "project_name": "Data Services Baseline/Environment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-10-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 628421,
+          "iid": 743,
+          "title": "ITAM - Add ability to assign assets to users during bulk upload",
+          "project_id": 25918,
+          "project_name": "Asset Management",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-10-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 628324,
+          "iid": 741,
+          "title": "Access Requests - Conditional logic based on exemption input",
+          "project_id": 25918,
+          "project_name": "Access Requests",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "Access Requests 1.2",
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-10-02",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 628323,
+          "iid": 740,
+          "title": "Access Requests - input validation for numeric fields (phone and cost)",
+          "project_id": 25918,
+          "project_name": "Access Requests",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "Access Requests 1.2",
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-09-29",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 628321,
+          "iid": 738,
+          "title": "Access Requests - Input validation",
+          "project_id": 25918,
+          "project_name": "Access Requests",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "Access Requests 1.2",
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-09-29",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 628320,
+          "iid": 737,
+          "title": "Access Requests - Designate required form fields",
+          "project_id": 25918,
+          "project_name": "Access Requests",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "Access Requests 1.2",
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-09-29",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 628197,
+          "iid": 735,
+          "title": "I/O - email for recurring notifications modification",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "I/O v1.2.1",
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-10-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 627898,
+          "iid": 731,
+          "title": "RIST - Unable to schedule interview",
+          "project_id": 25918,
+          "project_name": "Resume & Interview Scoring Tool",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::bug"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-10-01",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 627792,
+          "iid": 728,
+          "title": "RIST - Should not be able to schedule interviews already scheduled",
+          "project_id": 25918,
+          "project_name": "Resume & Interview Scoring Tool",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-10-01",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 627409,
+          "iid": 706,
+          "title": "Baseline - Update header component",
+          "project_id": 25918,
+          "project_name": "Data Services Baseline/Environment",
+          "weight": 5,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-02",
+          "date_closed": "2025-10-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 627407,
+          "iid": 705,
+          "title": "Baseline - Design consistent header for apps",
+          "project_id": 25918,
+          "project_name": "Data Services Baseline/Environment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-09-25",
+          "date_closed": "2025-10-02",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 626337,
+          "iid": 692,
+          "title": "RIST - PBI report modifications",
+          "project_id": 25918,
+          "project_name": "Resume & Interview Scoring Tool",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-10-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 626218,
+          "iid": 681,
+          "title": "Registry - All reg requests screen",
+          "project_id": 25918,
+          "project_name": "Data Services App Registry",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "Registry 1.3.0",
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-10-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 626217,
+          "iid": 680,
+          "title": "Registry - New reg request form",
+          "project_id": 25918,
+          "project_name": "Data Services App Registry",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "Registry 1.3.0",
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-10-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 625367,
+          "iid": 670,
+          "title": "ITAM - Create Asset Manage user guide",
+          "project_id": 25918,
+          "project_name": "Asset Management",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-10-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 617973,
+          "iid": 649,
+          "title": "I/O troubleshoot deploy for HRDB fields",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "I/O v1.2.1",
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-10-01",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 611460,
+          "iid": 519,
+          "title": "I/O - expand profiles to include a Pod or office location",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "I/O v1.2.1",
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-10-01",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 606989,
+          "iid": 442,
+          "title": "I/O -Research/engineer Task assignment at sub-org/team level",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-09-23",
+          "date_closed": "2025-10-01",
+          "date_removed_from_sprint": null
+        }
+      ]
+    },
+    {
+      "id": 5501,
+      "title": "Data Services 22 OCT",
+      "start_date": "2025-10-07",
+      "end_date": "2025-10-22",
+      "state": "closed",
+      "source": "jira",
+      "goal": "RIST, Access Requests, I/O, Asset management enhancements",
+      "initial_totals": {
+        "count": 22,
+        "weight": 52
+      },
+      "burndown": [
+        {
+          "date": "2025-10-07",
+          "remaining_count": 22,
+          "remaining_weight": 52
+        },
+        {
+          "date": "2025-10-08",
+          "remaining_count": 20,
+          "remaining_weight": 50
+        },
+        {
+          "date": "2025-10-09",
+          "remaining_count": 16,
+          "remaining_weight": 46
+        },
+        {
+          "date": "2025-10-10",
+          "remaining_count": 14,
+          "remaining_weight": 44
+        },
+        {
+          "date": "2025-10-11",
+          "remaining_count": 14,
+          "remaining_weight": 44
+        },
+        {
+          "date": "2025-10-12",
+          "remaining_count": 14,
+          "remaining_weight": 44
+        },
+        {
+          "date": "2025-10-13",
+          "remaining_count": 14,
+          "remaining_weight": 44
+        },
+        {
+          "date": "2025-10-14",
+          "remaining_count": 12,
+          "remaining_weight": 40
+        },
+        {
+          "date": "2025-10-15",
+          "remaining_count": 13,
+          "remaining_weight": 41
+        },
+        {
+          "date": "2025-10-16",
+          "remaining_count": 11,
+          "remaining_weight": 33
+        },
+        {
+          "date": "2025-10-17",
+          "remaining_count": 7,
+          "remaining_weight": 23
+        },
+        {
+          "date": "2025-10-18",
+          "remaining_count": 7,
+          "remaining_weight": 23
+        },
+        {
+          "date": "2025-10-19",
+          "remaining_count": 7,
+          "remaining_weight": 23
+        },
+        {
+          "date": "2025-10-20",
+          "remaining_count": 9,
+          "remaining_weight": 25
+        },
+        {
+          "date": "2025-10-21",
+          "remaining_count": 5,
+          "remaining_weight": 19
+        },
+        {
+          "date": "2025-10-22",
+          "remaining_count": 5,
+          "remaining_weight": 19
+        }
+      ],
+      "type_breakdown": {
+        "bug": 4,
+        "improvement": 17,
+        "new_feature": 0,
+        "other": 12
+      },
+      "completed": {
+        "count": 32,
+        "weight": 62
+      },
+      "issues": [
+        {
+          "id": 631076,
+          "iid": 798,
+          "title": "I/O Add Filter for Matrix to Master Task List",
+          "project_id": 25918,
+          "project_name": "No Component",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-20",
+          "date_closed": "2025-10-21",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 631074,
+          "iid": 796,
+          "title": "I/O Master Task List Add Matrix",
+          "project_id": 25918,
+          "project_name": "No Component",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-20",
+          "date_closed": "2025-10-21",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 631048,
+          "iid": 794,
+          "title": "I/O - Add filter for sub-org on master task list",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "I/O v1.2.1",
+          "date_added_to_sprint": "2025-10-17",
+          "date_closed": "2025-10-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 631042,
+          "iid": 793,
+          "title": "Add Matrix to I/O New Form",
+          "project_id": 25918,
+          "project_name": "No Component",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-17",
+          "date_closed": "2025-10-21",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 631035,
+          "iid": 792,
+          "title": "I/O - Add sub-org and team columns to master task list gallery",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "I/O v1.2.1",
+          "date_added_to_sprint": "2025-10-17",
+          "date_closed": "2025-10-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 631034,
+          "iid": 791,
+          "title": "I/O - Master task list edit form missing sub-org and team info",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "I/O v1.2.1",
+          "date_added_to_sprint": "2025-10-17",
+          "date_closed": "2025-10-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 630963,
+          "iid": 789,
+          "title": "ITAM - Manage Assets screen functionality",
+          "project_id": 25918,
+          "project_name": "Asset Management",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-20",
+          "date_closed": "2025-10-20",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 630635,
+          "iid": 787,
+          "title": "ITAM - permission errors",
+          "project_id": 25918,
+          "project_name": "Asset Management",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::bug"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-15",
+          "date_closed": "2025-10-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 630566,
+          "iid": 786,
+          "title": "In/Out - Deploy to Enterprise production",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-16",
+          "date_closed": "2025-10-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 630511,
+          "iid": 785,
+          "title": "RIST - organization field should pull from Org Hierarchy",
+          "project_id": 25918,
+          "project_name": "Resume & Interview Scoring Tool",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-20",
+          "date_closed": "2025-10-21",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 630379,
+          "iid": 783,
+          "title": "ITAM - Incorporate Data Services menu component",
+          "project_id": 25918,
+          "project_name": "Asset Management",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-16",
+          "date_closed": "2025-10-20",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 630377,
+          "iid": 782,
+          "title": "I/O - HRDB Load not properly adding organization to correct column",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": "I/O v1.2.1",
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-14",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 630368,
+          "iid": 781,
+          "title": "RIST - Power BI report export",
+          "project_id": 25918,
+          "project_name": "Resume & Interview Scoring Tool",
+          "weight": 5,
+          "state": "opened",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": null,
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 630353,
+          "iid": 779,
+          "title": "Purchasing - Improved UI mockups",
+          "project_id": 25918,
+          "project_name": "Purchasing",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-11-18",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 630352,
+          "iid": 778,
+          "title": "Catalog Sync - Improved UI mockups",
+          "project_id": 25918,
+          "project_name": "Catalog Sync",
+          "weight": 5,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-31",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 630351,
+          "iid": 777,
+          "title": "RIST - Deploy to Regional Office test",
+          "project_id": 25918,
+          "project_name": "Resume & Interview Scoring Tool",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 630250,
+          "iid": 776,
+          "title": "I/O - Deploy version 1.2 to Region C, Enterprise, Finance Portal and Region E TEST",
+          "project_id": 25918,
+          "project_name": "No Component",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 630186,
+          "iid": 775,
+          "title": "Access Requests - Deploy version 1.2 to Region C, Enterprise, Regional Office and Innovation Office TEST",
+          "project_id": 25918,
+          "project_name": "No Component",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 630176,
+          "iid": 774,
+          "title": "I/O - Update user guide for new HRDB import menu item and process",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 629928,
+          "iid": 770,
+          "title": "RIST - Bug editing Criteria",
+          "project_id": 25918,
+          "project_name": "Resume & Interview Scoring Tool",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::bug"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-28",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 629913,
+          "iid": 769,
+          "title": "RIST - Interview questions using position title instead of question title",
+          "project_id": 25918,
+          "project_name": "Resume & Interview Scoring Tool",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::bug"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 629846,
+          "iid": 768,
+          "title": "I/O - Change the update Task Flow to account for this",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "I/O v1.2.1",
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 629843,
+          "iid": 767,
+          "title": "I/O - Change the Assign Flow to filter and get items at that level",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "I/O v1.2.1",
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 629842,
+          "iid": 766,
+          "title": "I/O - Add Org ,Sub Org, Team columns to Master task List",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "I/O v1.2.1",
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 629519,
+          "iid": 760,
+          "title": "I/O - Copy master task list from test to prod for Division Enterprise",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 629016,
+          "iid": 757,
+          "title": "TCT - Add CY and FY26 to all TCT production customers",
+          "project_id": 25918,
+          "project_name": "Training and Cert Tracker",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 628821,
+          "iid": 747,
+          "title": "ITAM - Issue New Equipment bugs",
+          "project_id": 25918,
+          "project_name": "Asset Management",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::bug"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 627409,
+          "iid": 706,
+          "title": "Baseline - Update header component",
+          "project_id": 25918,
+          "project_name": "Data Services Baseline/Environment",
+          "weight": 5,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-23",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 627326,
+          "iid": 704,
+          "title": "I/O - Remove organization title field from HRDB form, add sub-org and team",
+          "project_id": 25918,
+          "project_name": "No Component",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 626728,
+          "iid": 695,
+          "title": "ITAM - Provide Excel template for bulk upload in app",
+          "project_id": 25918,
+          "project_name": "Asset Management",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-14",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 626218,
+          "iid": 681,
+          "title": "Registry - All reg requests screen",
+          "project_id": 25918,
+          "project_name": "Data Services App Registry",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "Registry 1.3.0",
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 626217,
+          "iid": 680,
+          "title": "Registry - New reg request form",
+          "project_id": 25918,
+          "project_name": "Data Services App Registry",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "Registry 1.3.0",
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 612195,
+          "iid": 544,
+          "title": "I/O - research matrix field for profiles and tasks",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "I/O v1.2.1",
+          "date_added_to_sprint": "2025-10-07",
+          "date_closed": "2025-10-17",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

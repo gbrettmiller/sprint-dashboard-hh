@@ -1,0 +1,98 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "orbit",
+  "milestone_slug": "v3.3.0",
+  "title": "v3.3.0",
+  "start_date": "2026-03-26",
+  "end_date": "2026-04-08",
+  "generated_at": "2026-06-30T21:56:55.366905Z",
+  "test_plan": [
+    {
+      "iid": 1166,
+      "title": "Notification Responses does not show Email",
+      "steps": "- Send a Notification via both SMS and Email channels\n- Navigate to the Responses view of the sent Notification\n- Verify that two distinct records are displayed, one labeled \"Text Message\" and one labeled \"Email\"\n- Confirm that the \"Email\" record is no longer incorrectly labeled as \"Text Message\""
+    },
+    {
+      "iid": 1203,
+      "title": "Phone number verification via code for Notification Information",
+      "steps": "- Navigate to the Edit Profile page, enter a new phone number in the Notification Information section, and click Save; verify that a verification code field appears at the top of the page and the status indicator shows \"Verification Required.\"\n- Retrieve the verification code sent via SMS to the entered phone number, enter it in the verification field, and click Verify; confirm that the verification section disappears, the status changes to \"Verified,\" and a success message is displayed.\n- With the verification field displayed, enter an incorrect verification code and click Verify; confirm that an error message appears and the verification section remains visible.\n- Log out and log back in, then navigate to Edit Profile for a user with a previously verified phone number; confirm that no verification code section is displayed and the status shows \"Verified.\"\n- Change a verified phone number to a different number and click Save; verify that the verification code field reappears, a new SMS is sent to the new number, and the status returns to \"Verification Required.\""
+    },
+    {
+      "iid": 1208,
+      "title": "Fix Day Light Savings Time issue.",
+      "steps": "- Set system time to a date before DST transition and create a Work Site record with an associated Check-In record\n- Verify the Check-In record displays the correct time offset for the pre-DST period\n- Advance system time to a date after DST transition without re-saving the Work Site record\n- Verify the Check-In record automatically reflects the updated time offset for the post-DST period without manual re-save"
+    },
+    {
+      "iid": 1210,
+      "title": "Training Exempt Flag and Reason not populating in SQL",
+      "steps": "- Navigate to the user/employee management section and locate a user record\n- Mark the user as \"Training Exempt\" and provide a reason for the exemption\n- Save the changes and verify the exempt flag and reason are visible in the UI\n- Query the SQL database to confirm the training exempt flag and reason are populated in the corresponding user record\n- Run a report that includes training exemption data and verify the flag and reason display correctly"
+    },
+    {
+      "iid": 1214,
+      "title": "Display Employee ID on User Registration Page",
+      "steps": "- Navigate to the User Registration page after completing authentication and verify that a new field labeled \"Employee ID\" (or \"Employee ID\") is displayed on the page.\n- Confirm that the Employee ID field is pre-populated with the correct Employee ID value from the authentication service.\n- Verify that the Employee ID field has a visually distinct appearance (e.g., greyed-out background) indicating it is read-only.\n- Attempt to click on the Employee ID field and verify that it is disabled and prevents any user interaction or text modification.\n- Complete the registration form with valid data in all other fields and submit to confirm that all other registration form fields remain functional."
+    },
+    {
+      "iid": 1215,
+      "title": "UI: Display Employee ID on User and Employee Profile Pages",
+      "steps": "- Log in as a regular user, navigate to \"My Profile\" page, and verify that the Employee ID field is displayed with the correct value and is read-only in both view and edit modes.\n- Log in as an Admin/Manager, navigate to a Employee details page for a user with an Employee ID on record, and verify the Employee ID field displays the correct value and is read-only.\n- Log in as an Admin/Manager, navigate to a Employee details page for a user without an Employee ID on record, and verify the Employee ID field label is present with a clear placeholder text (e.g., \"Pending user login\" or \"---\") and is read-only.\n- Attempt to edit the Employee ID field by clicking on it or entering edit mode, and confirm that the field remains read-only and cannot be modified.\n- Verify that the Employee ID field layout and formatting are consistent across all profile pages (My Profile, Employee pages, etc.)."
+    },
+    {
+      "iid": 1216,
+      "title": "Backend: Backfill Employee ID for Existing Users on Login",
+      "steps": "- Log in as an existing user with a valid personaID and Employee ID from the authentication service\n- Verify in MongoDB that the user's Employee ID field is populated after the first login post-deployment\n- Log in again with the same user account and confirm the Employee ID value remains unchanged (no duplicate update)\n- Log in as an existing user whose profile already contains an Employee ID value and confirm no update occurs during login\n- Verify that users without an Employee ID from the authentication service are not affected and their Employee ID field remains empty/null"
+    },
+    {
+      "iid": 1220,
+      "title": "Add \"Admin Leave\" option to Mobile Check-In",
+      "steps": "- Submit \"?\" to Mobile Check-In and verify \"Admin Leave\" appears in the help message list of available status options\n- Enter \"Admin Leave\" as the status in Mobile Check-In, submit the report, and confirm a successful submission confirmation message is displayed\n- Log in as a supervisor or administrator, view the Check-In report for the user who submitted \"Admin Leave,\" and verify the status is accurately recorded and displayed as \"Admin\"\n- Verify that \"Admin Leave\" status can be submitted across different scenarios (e.g., during inclement weather conditions, delayed opening situations) and is consistently saved and reported\n- Test that selecting \"Admin Leave\" does not cause any errors or prevent successful form submission, and that all related fields populate correctly in the backend report"
+    },
+    {
+      "iid": 1221,
+      "title": "Accept Spelled-Out Numbers for Mobile Check-In",
+      "steps": "- Send an SMS with a spelled-out number (e.g., \"one\", \"Two\", \"THREE\") and verify the system parses it correctly as its numeric equivalent and processes the report successfully with a confirmation message.\n- Send an SMS with a standard digit (e.g., \"1\", \"2\") and verify the system continues to process the report successfully as before.\n- Send an SMS with common voice recognition artifacts (e.g., \"Number One\", \"Digit 2\") and verify the system intelligently extracts the intended number and processes the report successfully.\n- Send an SMS with invalid text that cannot be recognized as a digit or spelled-out number (e.g., \"won\", \"hello world\") and verify the system responds with the standard error message for invalid input.\n- Test case sensitivity by sending messages with mixed case spelled-out numbers (e.g., \"OnE\", \"tWo\") and verify they are all correctly parsed and accepted."
+    },
+    {
+      "iid": 1222,
+      "title": "3 Consecutive DNR should not show for regular users",
+      "steps": "- Log in as a regular user without Supervisor, Layer Manager, or Organization Manager role\n- Navigate to the section where \"Employee Missed 3 Consecutive Check-Ins\" would typically be displayed\n- Verify that this section is not visible or accessible to the regular user\n- Log in as a user with an active Supervisor, Layer Manager, or Organization Manager role\n- Confirm that the \"Employee Missed 3 Consecutive Check-Ins\" section is displayed for users with these roles"
+    },
+    {
+      "iid": 1225,
+      "title": "Exclude Read-Only Org Managers from New User Notifications",
+      "steps": "- Create or identify an Organization Manager account with \"Read-only: Yes\" attribute and a standard Organization Manager account with \"Read-only: No\" attribute in the same organization\n- Register a new user, select the organization but do not select a layer, and submit the registration\n- Verify that the read-only Organization Manager does not receive the new user registration email while the standard Organization Manager does\n- Register another new user, select both an organization and a layer, and submit the registration\n- Verify that no Organization Managers receive the email notification (confirming the layer-based notification routing remains unchanged)"
+    },
+    {
+      "iid": 1226,
+      "title": "Change HTTP Response from 400 to 202 on Twilio Status Updates",
+      "steps": "- Set up a mock Twilio webhook or use Twilio's testing tools to send a delivery status update to the ORBIT endpoint\n- Capture the HTTP response code returned by ORBIT when receiving the Twilio status update\n- Verify that the response code is 202 (Accepted) rather than 400 (Bad Request)\n- Confirm that ORBIT processes the status update internally without returning an error response\n- Test with multiple status update scenarios (delivery, bounce, failure) to ensure all respond with 202"
+    },
+    {
+      "iid": 1228,
+      "title": "Error when editing and saving existing roles",
+      "steps": "- Navigate to the roles management section and select an existing supervisor role\n- Change the read-only flag setting and attempt to save the changes\n- Verify that the record saves successfully without displaying a 'record not saved' error\n- Test editing and saving multiple different existing roles to identify any patterns in when the error occurs\n- Document which role types and flag combinations trigger the error versus those that save successfully"
+    },
+    {
+      "iid": 1230,
+      "title": "Remove Invalid Roles from the Web UI",
+      "steps": "- Log in as a Super Admin user and navigate to the Role Assignment form\n- Verify that \"Security Manager\" and \"Travel Manager\" roles are not displayed in the role dropdown/list\n- Log in as an Org Manager user and navigate to the Role Assignment form\n- Confirm that \"Security Manager\" and \"Travel Manager\" roles are not available in the role options\n- Verify that other valid roles remain accessible in the Role Assignment form for both user types"
+    },
+    {
+      "iid": 1234,
+      "title": "Remove validation on DSN phone field.",
+      "steps": "- Navigate to the DSN phone field input form\n- Attempt to enter an invalid phone number format (e.g., letters, special characters, incorrect length)\n- Verify that the invalid input is accepted without displaying a validation error message\n- Enter a valid phone number and confirm it submits successfully\n- Test with various phone number formats to ensure no validation restrictions are applied"
+    }
+  ],
+  "sprint_report": {
+    "goals": "This sprint focused on enhancing system reliability and user experience by modernizing infrastructure components, resolving critical communication and data integrity issues, and expanding mobile application functionality. The team also worked to improve security controls and ensure accurate data synchronization across platform systems.",
+    "summary": "The team completed 20 significant improvements spanning infrastructure upgrades, backend enhancements, and user-facing features. Key accomplishments include upgrading MongoDB and .NET environments to current versions, resolving daylight savings time calculation errors, implementing Employee ID field integration across user profiles and registration workflows, and addressing critical issues with role management and notification delivery systems. Mobile Check-In now accepts spelled-out numbers and includes an Admin Leave option, while the platform now correctly handles phone verification and excludes read-only managers from unnecessary notifications. These changes collectively strengthen system stability, improve data accuracy in reporting, and provide users with a more intuitive and reliable experience.",
+    "metrics": {
+      "initial_count": 21,
+      "initial_weight": 55,
+      "completed_count": 21,
+      "completed_weight": 55,
+      "initial_breakdown": "10 Others, 9 Improvements, 1 Task, 1 Devops",
+      "completed_breakdown": "10 Others, 9 Improvements, 1 Task, 1 Devops"
+    }
+  }
+}

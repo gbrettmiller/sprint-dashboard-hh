@@ -1,0 +1,246 @@
+{
+  "fiscal_year": 2026,
+  "month": 2,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 3995,
+      "title": "Service Management FY26Q2-3",
+      "start_date": "2026-02-04",
+      "end_date": "2026-02-18",
+      "state": 3,
+      "source": "iteration",
+      "goal": null,
+      "initial_totals": {
+        "count": 8,
+        "weight": 24
+      },
+      "burndown": [
+        {
+          "date": "2026-02-04",
+          "remaining_count": 8,
+          "remaining_weight": 24
+        },
+        {
+          "date": "2026-02-05",
+          "remaining_count": 6,
+          "remaining_weight": 22
+        },
+        {
+          "date": "2026-02-06",
+          "remaining_count": 6,
+          "remaining_weight": 22
+        },
+        {
+          "date": "2026-02-07",
+          "remaining_count": 6,
+          "remaining_weight": 22
+        },
+        {
+          "date": "2026-02-08",
+          "remaining_count": 6,
+          "remaining_weight": 22
+        },
+        {
+          "date": "2026-02-09",
+          "remaining_count": 3,
+          "remaining_weight": 13
+        },
+        {
+          "date": "2026-02-10",
+          "remaining_count": 3,
+          "remaining_weight": 13
+        },
+        {
+          "date": "2026-02-11",
+          "remaining_count": 3,
+          "remaining_weight": 13
+        },
+        {
+          "date": "2026-02-12",
+          "remaining_count": 2,
+          "remaining_weight": 10
+        },
+        {
+          "date": "2026-02-13",
+          "remaining_count": 2,
+          "remaining_weight": 10
+        },
+        {
+          "date": "2026-02-14",
+          "remaining_count": 2,
+          "remaining_weight": 10
+        },
+        {
+          "date": "2026-02-15",
+          "remaining_count": 2,
+          "remaining_weight": 10
+        },
+        {
+          "date": "2026-02-16",
+          "remaining_count": 2,
+          "remaining_weight": 10
+        },
+        {
+          "date": "2026-02-17",
+          "remaining_count": 2,
+          "remaining_weight": 10
+        },
+        {
+          "date": "2026-02-18",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 6,
+        "new_feature": 2,
+        "other": 0
+      },
+      "completed": {
+        "count": 8,
+        "weight": 24
+      },
+      "issues": [
+        {
+          "id": 191324,
+          "iid": 48,
+          "title": "Reporting Planning",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-03",
+          "date_closed": "2026-02-18",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 190451,
+          "iid": 47,
+          "title": "Intake Remove Channel, Correlation ID, Category fields from Incident view",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Review Complete",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-03",
+          "date_closed": "2026-02-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189491,
+          "iid": 428,
+          "title": "M2S Create notification for the POC submitting the ticket that a ticket has been created",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Capability:: M2S",
+            "Workflow::Ready for Review",
+            "type::New-Feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-03",
+          "date_closed": "2026-02-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189157,
+          "iid": 45,
+          "title": "Intake - Add Program field to GPS Hardware table/form",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-03",
+          "date_closed": "2026-02-18",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 189058,
+          "iid": 44,
+          "title": "Intake - RMA update - Site 2",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-03",
+          "date_closed": "2026-02-05",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 188209,
+          "iid": 427,
+          "title": "M2S Create a notification to the Contact Email when the ticket is resolved",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Capability:: M2S",
+            "Workflow::Ready for Review",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-03",
+          "date_closed": "2026-02-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 187664,
+          "iid": 40,
+          "title": "Intake Add Maintenance table to Workspace Lists",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Workflow::Review Complete",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-03",
+          "date_closed": "2026-02-05",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 185488,
+          "iid": 44,
+          "title": "Fulfillment Create workflow to populate parts financial data using Parts reference table",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Workflow::Review Complete",
+            "type::New-Feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-02-03",
+          "date_closed": "2026-02-09",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

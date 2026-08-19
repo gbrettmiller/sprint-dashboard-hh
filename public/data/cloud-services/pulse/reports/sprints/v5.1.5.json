@@ -1,0 +1,68 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "pulse",
+  "milestone_slug": "v5.1.5",
+  "title": "v5.1.5",
+  "start_date": "2026-06-25",
+  "end_date": "2026-07-09",
+  "generated_at": "2026-07-10T06:10:23.700832Z",
+  "test_plan": [
+    {
+      "iid": 719,
+      "title": "Make LOE_ID a first-class concept instead of overloading LookupItemNumericValue",
+      "steps": "- Navigate to the Admin UI and open the LookupItem editor for a LevelOfEffort lookup item.\n- Verify that the LOE_ID field displays and is editable without relying on runtime heuristics (confirm it appears deterministically based on the `eLookups.LevelOfEffort` constant).\n- Create or edit a LevelOfEffort lookup item, set an LOE_ID value, and save; verify the value persists correctly.\n- Confirm that the LOE_ID field does NOT appear when editing non-LevelOfEffort lookup items (e.g., FiscalYear items that use `LookupItemNumericValue`).\n- If the extension table was implemented, verify that LOE_ID data is stored in the `LookupItem_LevelOfEffortExt` table and displays correctly in the UI."
+    },
+    {
+      "iid": 728,
+      "title": "feat: add selectable \"Total Funded Amount\" column to action list (sum all FYs)",
+      "steps": "- Navigate to Admin \u2192 Action List Column Config, select Meridian org and a view, and verify `TotalFundedAmount` appears in the selectable columns list and is hidden by default (`IsVisible=0`).\n- Enable the `TotalFundedAmount` column, return to the action list view, and confirm the new column displays with header \"Total Funded Amount\" showing the sum of all projected-obligation amounts across all fiscal years, formatted as currency.\n- Verify an action with no projected-obligation rows renders blank or `$0` (not a misleading non-zero value), matching the behavior of `CurrentFyObligationAmount` and `NextFyObligationAmount` columns.\n- Click the `TotalFundedAmount` column header to sort ascending and descending, confirming the sort works correctly and the list re-orders by total funded amount.\n- Build the project and run the full test suite; confirm zero build errors/warnings and all existing tests pass, including the three new unit tests for `SumAllObligations`."
+    },
+    {
+      "iid": 729,
+      "title": "feat: add \"RFP Release Date Revised\" as a selectable Action List column",
+      "steps": "- Navigate to Admin > Action List Column Configuration and verify that **\"RFP Release Date Revised\"** appears as a selectable column option for all views (Recent, PreAward / All Open Actions, Draft, Awarded, Cancelled, Expired, Deleted), defaulting to hidden.\n- Enable the **\"RFP Release Date Revised\"** column for at least one view and verify it renders in the List view displaying dates in **MM/dd/yyyy** format (date-only, not including time).\n- Click the column header sort link and verify the list sorts correctly by the revised release date, consistent with other date columns.\n- Enable **\"RFP Release Date Revised\"** as filterable (set `IsFilterable` in config) and verify that a date-range filter control appears and filters list items correctly by the revised release date.\n- Verify that existing organizations' saved column configurations remain unchanged (the new column is purely additive and does not affect previously enabled/disabled columns)."
+    },
+    {
+      "iid": 730,
+      "title": "fix: rename Post Award sub-contractor selection pop-up title (Crestline)",
+      "steps": "- Navigate to an item's Post Award tab and locate the Prime & Sub Contractors panel.\n- Click the contractor-selection link to open the modal.\n- Verify the modal header reads \"Select Post Award Sub Contractors\".\n- Confirm no other modal titles or the link's displayed label text have changed.\n- Verify the application builds successfully with no errors or warnings."
+    },
+    {
+      "iid": 731,
+      "title": "feat: combine PM C&S and PM DCO into PM CW (Crestline)",
+      "steps": "- Verify that after migration deployment, the PM/PD dropdown in the action creation/edit UI for Crestline users shows only \"PM CW\" and not \"PM C&S\" or \"PM DCO\".\n- Create a new action in Crestline and assign it to \"PM CW\"; verify it saves successfully and displays \"PM CW\" in the action detail view.\n- Query the database to confirm all Crestline actions previously assigned to \"PM C&S\" or \"PM DCO\" now have `fk_PMPD_Lookup_ID` pointing to the \"PM CW\" lookup item ID, with no NULL values.\n- Verify that security-group assignments and priority-reorder settings from the old PM items are correctly applied to \"PM CW\" (confirm in the Admin \u2192 LookupItem detail for \"PM CW\").\n- Confirm that PM/PD values for organizations other than Crestline remain unchanged by comparing a sample of their action PM assignments before and after migration."
+    },
+    {
+      "iid": 732,
+      "title": "fix: Admin Lookup Item editor reads Is Direct / Is Reimbursable across all orgs (not org-scoped)",
+      "steps": "- Open Admin > Lookup Item and select a Type of Fund lookup item. Check the **Is Direct** checkbox, save, then re-open the same lookup item. Verify the checkbox is now checked (reflects the saved value for your organization).\n- In Admin > Lookup Item, set **Is Reimbursable** on a Type of Fund item, save, and re-open it. Confirm the checkbox remains checked and the Type of Funding dropdown filter on the form correctly filters options based on this flag.\n- Create a Type of Fund lookup item with **Is Direct** checked in your organization, then verify a user in a different organization sees the checkbox unchecked when they open the same item (confirming org-scoped display).\n- Navigate to a Type of Funding form and verify the **Is Direct** / **Is Reimbursable** dropdown filters work correctly for Riverside and other organizations after the fix is deployed."
+    },
+    {
+      "iid": 733,
+      "title": "Admin: Type of Funding section shows no fields \u2014 display names cannot be edited",
+      "steps": "- Log in as an Owner and navigate to Admin > Form Field Settings > Financials > Type of Funding Settings.\n- Verify that the Type of Funding fields (Amount, Obligation YR, Color/Fiscal YR, Type of Fund, Customer, PWD/MIPR #, P/R Form Contract Award Date, Is Direct, Is Reimbursable) are displayed in the field table.\n- Click on a field to open the Edit dialog and change its display name, then save the change.\n- Navigate to the Type of Funding edit modal and confirm the updated display name is reflected.\n- Verify that other section settings pages (e.g., Financials sections) continue to display their fields correctly with no regressions."
+    },
+    {
+      "iid": 734,
+      "title": "fix: eliminate tempDB exhaustion from whole-table STRING_AGG in action-list query (PEO_AdjudicationComments)",
+      "steps": "- Verify the action-list query executes without tempDB exhaustion errors under sustained load (monitor tempDB usage during repeated page loads with concurrent users).\n- Confirm that actions with multiple PO adjudication comments display all comments joined by ' | ' separator with no truncation or missing data.\n- Confirm that actions with no PO adjudication comments display an empty string (not null or error).\n- Execute the query in SQL Server and verify the generated SQL uses `fnGetPeoAdjudicationCommentsForAction` and contains **no** `GROUP BY` over the `OneNList_PEOAdjudicationComments` table.\n- Verify the application builds successfully and all existing tests pass."
+    },
+    {
+      "iid": 735,
+      "title": "build: upgrade PULSE to .NET 10 (LTS) and align all NuGet packages \u2014 freeze Bootstrap 3.3.7 & jQuery 3.7.1",
+      "steps": "- Log in to the application and verify the login flow completes successfully without authentication errors.\n- Navigate to the main list/index page, create a new item, edit it, and delete it to confirm core CRUD operations function correctly across the upgraded runtime.\n- Access the admin lookup screens and verify data loads and filters work as expected.\n- Test Excel import and export functionality to confirm file processing operates correctly on .NET 10.\n- Verify SignalR notifications fire in real-time (if applicable to your workflow) and that antiforgery tokens/Data Protection persist correctly across requests by performing an action that requires CSRF validation."
+    }
+  ],
+  "sprint_report": {
+    "goals": "This sprint focused on modernizing the platform's technical foundation while addressing critical data integrity and performance issues, and expanding administrative and reporting capabilities to better serve post-award operations.",
+    "summary": "The team upgraded the entire codebase to .NET 10 LTS and aligned all NuGet dependencies to establish a stable foundation for future development. Critical fixes resolved a tempDB exhaustion issue in action-list queries, corrected permission scoping in lookup item editors, and remedied display issues in the Type of Funding administration section. Feature work streamlined program management structures by consolidating PM roles, enhanced the action list with new reportable columns including RFP Release Date Revised and Total Funded Amount, and improved data model hygiene by formalizing LOE_ID as a core concept and standardizing lookup mapping conventions. Infrastructure improvements including foreign key indexing and refined delete behavior protect data integrity across the system.",
+    "metrics": {
+      "initial_count": 11,
+      "initial_weight": 30,
+      "completed_count": 11,
+      "completed_weight": 30,
+      "initial_breakdown": "4 Improvements, 3 Bugs, 2 New Features, 1 Devops, 1 Refactor",
+      "completed_breakdown": "4 Improvements, 3 Bugs, 2 New Features, 1 Devops, 1 Refactor"
+    }
+  }
+}

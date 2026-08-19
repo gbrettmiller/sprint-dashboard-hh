@@ -1,0 +1,78 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "orbit",
+  "milestone_slug": "3.3.3",
+  "title": "3.3.3",
+  "start_date": "2026-06-03",
+  "end_date": "2026-06-16",
+  "generated_at": "2026-06-30T22:00:17.514948Z",
+  "test_plan": [
+    {
+      "iid": 1345,
+      "title": "Ensure only notification managers/sys admins can see/use pencil on notification responses page",
+      "steps": "- Log in as a Notification Manager and navigate to the notification event response tracking page; verify the pencil edit icon is visible next to each response row and clicking it opens the edit-response form\n- Log in as a System Administrator (without Notification Manager role) and navigate to the notification event response tracking page; verify the pencil edit icon is visible and the edit form is accessible and savable\n- Log in as a user with a different role (e.g., Supervisor) and navigate to the notification event response tracking page; verify the pencil edit icon is not present on any row\n- Log in as a user without Notification Manager or System Administrator role and attempt to access the edit-response URL directly; verify you are redirected to the notification index page\n- Log in as a user with both Notification Manager and System Administrator roles and navigate to the notification event response tracking page; verify the pencil edit icon is visible and functional"
+    },
+    {
+      "iid": 1348,
+      "title": "Add EmployeeId-only employee upload + include EmployeeId in existing ProcessRaw",
+      "steps": "- Upload a 2-column CSV (PersonaId, EmployeeId) via the new \"EmployeeId Upload\" view and verify the EmployeeId field updates on the matching Employee record without modifying other fields.\n- Upload a 13-column employee CSV with EmployeeId populated in column 12 and verify new Employee are created with the EmployeeId value and existing Employee are updated with the EmployeeId value.\n- Upload a 12-column employee CSV (legacy format) and verify it still parses correctly without errors and does not clear any existing EmployeeId values.\n- Attempt to upload a 2-column EmployeeId CSV with a non-existent PersonaId and verify no new Employee record is created and a warning is logged.\n- Verify the new \"EmployeeId Upload\" link appears on the customer view page and navigates to the upload form with correct instructions listing the two-column format."
+    },
+    {
+      "iid": 1354,
+      "title": "Fix System Log search returning no results",
+      "steps": "- Navigate to the System Log search UI at `/application/log/`\n- Verify the initial table populates with log records\n- Enter a search query in the search field and submit\n- Verify the search returns matching results instead of \"No records were returned\"\n- Repeat with multiple different search queries to confirm consistent results"
+    },
+    {
+      "iid": 1355,
+      "title": "Audit-log individual check-in reminder emails sent from the home page",
+      "steps": "- Navigate to the Home page and send an individual check-in reminder email to a specific employee member, then verify an audit log entry is created with sender identity, recipient email, timestamp, and action context.\n- Send a bulk check-in reminder to all unreported employee under your supervisor/manager roles, then verify audit log entries are created for each recipient sent.\n- Attempt to send a reminder that fails (simulate error conditions if possible), then verify the failure is captured in the audit log with sender and recipient context.\n- Access the System Logs or Reminder Audit Log UI and search/filter for reminder entries by sender, recipient, date range, and action type to confirm records are visible and searchable to administrators.\n- Repeat the above steps for the `SendReminderSupervised` action to confirm the same audit coverage applies."
+    },
+    {
+      "iid": 1356,
+      "title": "Fix Application Response search returning no results",
+      "steps": "- Navigate to `/setting/application/response/` and verify the initial table populates with rows containing Uri, Time, and PersonaId values.\n- Type a value (3+ characters) that matches a Uri or PersonaId from the displayed table into the search box and verify matching rows are returned (not \"No records were returned.\").\n- Verify the PersonaId column in the search results displays an actual value, not `undefined`.\n- Search for a value that does not exist in the table and verify \"No records were returned.\" message displays."
+    },
+    {
+      "iid": 1357,
+      "title": "bug: Northeast Region cannot change layer names",
+      "steps": "- Open Northeast Region application and navigate to the layer management section\n- Attempt to rename an existing layer by right-clicking or selecting an edit option\n- Verify that the layer name field is editable and accepts the new name input\n- Save the changes and confirm the layer name has been updated in the layer list\n- Reload or refresh the application to verify the layer name change persists"
+    },
+    {
+      "iid": 1358,
+      "title": "bug: Intermittent and random email reminders being sent to DNR",
+      "steps": "- Log in as a supervisor/manager and navigate to the Home page; verify that \"Send Reminder\" and \"Send Reminder (Supervised)\" links are now POST buttons/forms (not GET links) and require anti-forgery tokens.\n- Attempt to trigger a manual reminder send via direct GET request (e.g., `~/home/sendreminder/{id}/`); verify the server returns HTTP 405 Method Not Allowed instead of sending a reminder.\n- Click the \"Send Reminder\" button for a report in a different time zone (e.g., supervisor in Eastern, recipient in Pacific); confirm the reminder is sent and logged with source \"Home Page\" in `ReminderLog`, and verify it does not arrive before 08:30 recipient local time.\n- Refresh the browser page immediately after clicking a \"Send Reminder\" button; verify that the reminder is sent exactly once (no duplicate from the refresh/back action) and that the POST request is required for the send to execute.\n- Open the `ReminderLog` table and filter by today's entries; verify no \"Home Page\" source reminders appear with a recipient-local send time before 08:30."
+    },
+    {
+      "iid": 1359,
+      "title": "Deploy modified applications for new CosmosDB database structure (branch 1331)",
+      "steps": "- Verify that the ORBIT Web application loads successfully and displays the user interface without errors\n- Test user authentication and login functionality to confirm the identity database connectivity is working\n- Perform a search or query operation that requires accessing geo, lookup, and system data to validate all split global databases are accessible\n- Create or modify a tenant-specific record and verify it persists correctly to the per-tenant database\n- Check application logs for any database connection errors or migration-related issues during normal operations"
+    },
+    {
+      "iid": 1360,
+      "title": "Test modified application and run Azure Load Tests for CosmosDB statistics",
+      "steps": "- Deploy the modified ORBIT application from source branch `1331` to a test environment connected to the new CosmosDB for MongoDB instance\n- Execute the Azure Load Tests against the CosmosDB instance and verify the test runs successfully without errors\n- Validate that the application functions correctly under load (no crashes, timeouts, or data inconsistencies) by monitoring application logs during the load test\n- Collect and review CosmosDB performance metrics (Request Units consumed, latency, throttling events) from Azure Monitor to confirm they align with expected throughput requirements\n- Document the RU/latency/throttling statistics in a report for throughput sizing recommendations"
+    },
+    {
+      "iid": 1382,
+      "title": "Remove unused \"Start Time\" (TimeStart) field from Future Check-In",
+      "steps": "- Verify that the \"Start Time\" field is removed from the Future Check-In form UI\n- Confirm that the form can be submitted successfully without the \"Start Time\" field present\n- Validate that Check-In functionality still operates correctly using `DateStart`/`DateEnd` for timing logic\n- Verify that existing Check-In records without `TimeStart` data display and function properly"
+    },
+    {
+      "iid": 1386,
+      "title": "Matrixed To Org Future check-in issue",
+      "steps": "- Log in as a Matrixed To (B) Org Manager and verify the employee's location displays as \"reported\" on the home screen check-in section\n- Log in as a Matrixed to Layer Manager and verify the employee's location displays as \"reported\" on the home screen check-in section\n- Log in as a Matrixed to Supervisor and verify the employee displays as \"no location reported\" on the home screen check-in section\n- Log in as a user with both Matrixed Layer Manager and Matrixed Supervisor roles and verify the employee shows as \"not reported\" in both the supervisor section and layer manager section of the home screen"
+    }
+  ],
+  "sprint_report": {
+    "goals": "Sprint 3.3.3 aimed to resolve critical visibility and permissions issues across the platform while modernizing the database infrastructure to improve system performance and reliability. The team also focused on eliminating edge cases in notification delivery and search functionality that were impacting user experience.",
+    "summary": "The sprint delivered fixes for several high-impact issues including correcting role-based visibility for matrixed employee on the home screen, resolving intermittent email reminder bugs affecting do-not-resend preferences, and restoring search functionality for both application responses and system logs. The team successfully migrated to a new CosmosDB database structure with comprehensive load testing and validation, implemented stricter permission controls on notification management features, enabled EmployeeId-based employee uploads for improved data management, and backfilled unit test coverage across critical namespaces to strengthen code quality and maintainability. These changes collectively enhance system stability, data integrity, and user access control across the platform.",
+    "metrics": {
+      "initial_count": 16,
+      "initial_weight": 37,
+      "completed_count": 16,
+      "completed_weight": 37,
+      "initial_breakdown": "14 Others, 1 Devops, 1 Improvement",
+      "completed_breakdown": "14 Others, 1 Devops, 1 Improvement"
+    }
+  }
+}

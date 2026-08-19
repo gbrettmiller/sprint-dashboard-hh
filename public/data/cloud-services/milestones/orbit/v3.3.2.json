@@ -1,0 +1,718 @@
+{
+  "milestone_title": "v3.3.2",
+  "milestone_id": 3268,
+  "slug": "v3.3.2",
+  "project_id": 91001,
+  "project_name": "ORBIT",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:28.219834Z",
+  "issues": [
+    {
+      "id": 220550,
+      "iid": 1273,
+      "title": "Add Cancel button to Customer Contracts Create form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Customer Contracts Create form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Contracts Create form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Contracts Create form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Contracts Create form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Contracts Create form with my entered data intact"
+    },
+    {
+      "id": 220551,
+      "iid": 1274,
+      "title": "Add Cancel button to Customer Contracts Edit form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Customer Contracts Edit form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Contracts Edit form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Contracts Edit form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Contracts Edit form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Contracts Edit form with my entered data intact"
+    },
+    {
+      "id": 220552,
+      "iid": 1275,
+      "title": "Add Cancel button to Customer Vendor Accounts Create form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Customer Vendor Accounts Create form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Vendor Accounts Create form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Vendor Accounts Create form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Vendor Accounts Create form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Vendor Accounts Create form with my entered data intact"
+    },
+    {
+      "id": 220553,
+      "iid": 1276,
+      "title": "Add Cancel button to Customer Vendor Accounts Edit form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Customer Vendor Accounts Edit form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Vendor Accounts Edit form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Vendor Accounts Edit form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Vendor Accounts Edit form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Vendor Accounts Edit form with my entered data intact"
+    },
+    {
+      "id": 220554,
+      "iid": 1277,
+      "title": "Add Cancel button to Customer Work Site Create form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Customer Work Site Create form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Work Site Create form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Work Site Create form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Work Site Create form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Work Site Create form with my entered data intact"
+    },
+    {
+      "id": 220555,
+      "iid": 1278,
+      "title": "Add Cancel button to Customer Work Site Edit form and fix incorrect page heading",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button and a correct page heading on the Customer Work Site Edit form so that the form is functional, accurately labeled, and prompts me before discarding entered data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Work Site Edit form\n      Then the page heading reads \"Edit Work Site\"\n      And not \"Create Work Site\"\n- [ ] Given I am on the Customer Work Site Edit form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Work Site Edit form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Work Site Edit form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Work Site Edit form with my entered data intact"
+    },
+    {
+      "id": 220556,
+      "iid": 1279,
+      "title": "Add Cancel button to Customer Layers Create form and fix incorrect page heading",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button and a correct page heading on the Customer Layers Create form so that the form is functional, accurately labeled, and prompts me before discarding entered data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Layers Create form\n      Then the page heading reads \"Create Layer\"\n      And not \"Edit Layer\"\n- [ ] Given I am on the Customer Layers Create form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Layers Create form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Layers Create form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Layers Create form with my entered data intact"
+    },
+    {
+      "id": 220557,
+      "iid": 1280,
+      "title": "Add Cancel button to Customer Layers Edit form and fix incorrect page heading",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button and a correct page heading on the Customer Layers Edit form so that the form is functional, accurately labeled, and prompts me before discarding entered data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Layers Edit form\n      Then the page heading reads \"Edit Layer\"\n      And not \"Create Layer\"\n- [ ] Given I am on the Customer Layers Edit form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Layers Edit form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Layers Edit form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Layers Edit form with my entered data intact"
+    },
+    {
+      "id": 220558,
+      "iid": 1281,
+      "title": "Add Cancel button to Customer Layer Names Edit form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Customer Layer Names Edit form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Layer Names Edit form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Layer Names Edit form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Layer Names Edit form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Layer Names Edit form with my entered data intact"
+    },
+    {
+      "id": 220559,
+      "iid": 1282,
+      "title": "Add Cancel button to Customer Matrix Org Edit form and fix incorrect page heading",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button and a correct page heading on the Customer Matrix Org Edit form so that the form is functional, accurately labeled, and prompts me before discarding entered data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Matrix Org Edit form\n      Then the page heading reads \"Edit Matrix Org\"\n      And not \"Add Matrix Org\"\n- [ ] Given I am on the Customer Matrix Org Edit form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Matrix Org Edit form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Matrix Org Edit form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Matrix Org Edit form with my entered data intact"
+    },
+    {
+      "id": 220560,
+      "iid": 1283,
+      "title": "Add Cancel button to Customer Matrix Org Create form and fix incorrect page heading",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button and a correct page heading on the Customer Matrix Org Create form so that the form is functional, accurately labeled, and prompts me before discarding entered data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Matrix Org Create form\n      Then the page heading reads \"Create Matrix Org\"\n      And not \"Edit Matrix Org\"\n- [ ] Given I am on the Customer Matrix Org Create form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Matrix Org Create form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Matrix Org Create form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Matrix Org Create form with my entered data intact"
+    },
+    {
+      "id": 220561,
+      "iid": 1284,
+      "title": "Add Cancel button to Customer Modules Edit form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Customer Modules Edit form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Modules Edit form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Modules Edit form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Modules Edit form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Modules Edit form with my entered data intact"
+    },
+    {
+      "id": 220562,
+      "iid": 1285,
+      "title": "Add Cancel button to Customer POC form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Customer POC form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer POC form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer POC form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer POC form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer POC form with my entered data intact"
+    },
+    {
+      "id": 220563,
+      "iid": 1286,
+      "title": "Add Cancel button to Customer Reports Edit form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Customer Reports Edit form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Reports Edit form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Reports Edit form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Reports Edit form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Reports Edit form with my entered data intact"
+    },
+    {
+      "id": 220564,
+      "iid": 1287,
+      "title": "Add Cancel button to Customer Reports Create form and fix incorrect page heading",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button and a correct page heading on the Customer Reports Create form so that the form is functional, accurately labeled, and prompts me before discarding entered data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Reports Create form\n      Then the page heading reads \"Create Report\"\n      And not \"Edit Report\"\n- [ ] Given I am on the Customer Reports Create form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Reports Create form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Reports Create form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Reports Create form with my entered data intact"
+    },
+    {
+      "id": 220565,
+      "iid": 1288,
+      "title": "Add Cancel button to Customer Role Edit form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Customer Role Edit form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Role Edit form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Role Edit form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Role Edit form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Role Edit form with my entered data intact"
+    },
+    {
+      "id": 220566,
+      "iid": 1289,
+      "title": "Add Cancel button to Customer Role Create form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Customer Role Create form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Role Create form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Role Create form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Role Create form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Role Create form with my entered data intact"
+    },
+    {
+      "id": 220567,
+      "iid": 1290,
+      "title": "Add Cancel button to Customer Software License form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Customer Software License form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Software License form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Software License form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Software License form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Software License form with my entered data intact"
+    },
+    {
+      "id": 220568,
+      "iid": 1291,
+      "title": "Add Cancel button to Customer Task Edit form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Customer Task Edit form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Task Edit form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Task Edit form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Task Edit form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Task Edit form with my entered data intact"
+    },
+    {
+      "id": 220569,
+      "iid": 1292,
+      "title": "Add Cancel button to Customer Task Create form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Customer Task Create form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Task Create form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Task Create form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Task Create form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Task Create form with my entered data intact"
+    },
+    {
+      "id": 220570,
+      "iid": 1293,
+      "title": "Add Cancel button to Customer Employee Data Upload form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Customer Employee Data Upload form so that I can navigate away without completing the upload, with a confirmation prompt if any data has been entered.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Employee Data Upload form\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Employee Data Upload form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without completing the upload\n- [ ] Given I am on the Customer Employee Data Upload form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without completing the upload\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Employee Data Upload form with my entered data intact\n\n**Note:** Confirm whether this should be a standard Cancel button or a \"Return to Previous Menu\" button based on UX requirements."
+    },
+    {
+      "id": 220571,
+      "iid": 1294,
+      "title": "Add Cancel button to Customer Bulk Transfer form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Customer Bulk Transfer form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Customer Bulk Transfer form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Customer Bulk Transfer form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Customer Bulk Transfer form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Customer Bulk Transfer form with my entered data intact"
+    },
+    {
+      "id": 220572,
+      "iid": 1295,
+      "title": "Add Cancel button to Federal Holiday Create form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Federal Holiday Create form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Federal Holiday Create form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Federal Holiday Create form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Federal Holiday Create form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Federal Holiday Create form with my entered data intact"
+    },
+    {
+      "id": 220573,
+      "iid": 1296,
+      "title": "Add Cancel button to Federal Holiday Edit form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Federal Holiday Edit form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Federal Holiday Edit form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Federal Holiday Edit form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Federal Holiday Edit form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Federal Holiday Edit form with my entered data intact"
+    },
+    {
+      "id": 220574,
+      "iid": 1297,
+      "title": "Add Cancel button to Time Zone Edit form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Time Zone Edit form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Time Zone Edit form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Time Zone Edit form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Time Zone Edit form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Time Zone Edit form with my entered data intact"
+    },
+    {
+      "id": 220575,
+      "iid": 1298,
+      "title": "Add Cancel button to App Admin Add form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the App Admin Add form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the App Admin Add form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the App Admin Add form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the App Admin Add form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the App Admin Add form with my entered data intact"
+    },
+    {
+      "id": 220576,
+      "iid": 1299,
+      "title": "Add Cancel button to App Admin Edit form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the App Admin Edit form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the App Admin Edit form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the App Admin Edit form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the App Admin Edit form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the App Admin Edit form with my entered data intact"
+    },
+    {
+      "id": 220579,
+      "iid": 1302,
+      "title": "Add Cancel button to Edit Employee form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Edit Employee form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I navigate to a position assignment and open Edit Employee within an assignment\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Edit Employee form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Edit Employee form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Edit Employee form with my entered data intact\n\n**Note:** This form is accessed via Position Assignment > Edit Employee within an assignment."
+    },
+    {
+      "id": 220580,
+      "iid": 1303,
+      "title": "Add Cancel button to Create Employee form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Create Employee form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Create Employee form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Create Employee form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Create Employee form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Create Employee form with my entered data intact"
+    },
+    {
+      "id": 220581,
+      "iid": 1304,
+      "title": "Add Cancel button to Create Notification Group form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Create Notification Group form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Create Notification Group form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Create Notification Group form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Create Notification Group form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Create Notification Group form with my entered data intact"
+    },
+    {
+      "id": 220582,
+      "iid": 1305,
+      "title": "Add Cancel button to Edit Notification Group form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Edit Notification Group form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Edit Notification Group form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Edit Notification Group form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Edit Notification Group form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Edit Notification Group form with my entered data intact"
+    },
+    {
+      "id": 220583,
+      "iid": 1306,
+      "title": "Fix Cancel button styling and wire confirmation modal on Create, Edit, and View Scenario forms",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want the Cancel buttons on the Create and Edit Scenario forms to have correct styling and prompt me before discarding entered data so that they are visually consistent and protect against accidental data loss.\n\n## Acceptance Criteria\n- [ ] Given I am on the Create Scenario form\n      Then the Cancel button styling matches the application design standards\n- [ ] Given I am on the Edit Scenario form\n      Then the Cancel button styling matches the application design standards\n- [ ] Given I am on the Create or Edit Scenario form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Create or Edit Scenario form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the form with my entered data intact"
+    },
+    {
+      "id": 220584,
+      "iid": 1307,
+      "title": "Add Cancel button to Create Future CheckIn form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Create Future CheckIn form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Create Future CheckIn form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Create Future CheckIn form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Create Future CheckIn form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Create Future CheckIn form with my entered data intact"
+    },
+    {
+      "id": 220585,
+      "iid": 1308,
+      "title": "Add Cancel button to Edit Future CheckIn form",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a user, I want a Cancel button on the Edit Future CheckIn form so that I can navigate away without saving changes, with a confirmation prompt if I have entered any data.\n\n## Acceptance Criteria\n- [ ] Given I am on the Edit Future CheckIn form\n      When I click Cancel\n      Then a Cancel button is visible on the form\n- [ ] Given I am on the Edit Future CheckIn form and have not entered any data\n      When I click Cancel\n      Then I am returned to the previous page without saving changes\n- [ ] Given I am on the Edit Future CheckIn form and have entered data into one or more fields\n      When I click Cancel\n      Then the existing confirmation modal is displayed warning me that my progress will be lost\n- [ ] Given the confirmation modal is displayed\n      When I confirm the cancellation\n      Then I am returned to the previous page without saving changes\n- [ ] Given the confirmation modal is displayed\n      When I dismiss the modal\n      Then I remain on the Edit Future CheckIn form with my entered data intact"
+    },
+    {
+      "id": 224294,
+      "iid": 1312,
+      "title": "Show Company Name for existing Company Lead roles",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\n\nAs a system administrator assigning roles,\nI want to see the specific company name alongside a user's existing Company Lead role,\nSo that I can distinguish between Company Lead roles for different companies without ambiguity.\n\n## Acceptance Criteria\n\n**Scenario: Company Lead role displays company name**\n- Given a user has an existing role of type \"Company Lead\" for a specific company \n- When the Create Role screen is displayed\n- Then the role is shown as \"Company Lead - [Company Name]\"\n\n**Scenario: Multiple Company Lead roles display distinct company names**\n- Given a user has Company Lead roles for multiple companies\n- When the Create Role screen is displayed\n- Then each role shows its respective company name (e.g. \"Company Lead - Acme, Inc.\", \"Company Lead - Ajax, LLC\")\n\n**Scenario: Non-Company-Lead roles are unaffected**\n- Given a user has existing roles other than Company Lead\n- When the Create Role screen is displayed\n- Then those roles display without modification"
+    },
+    {
+      "id": 224297,
+      "iid": 1313,
+      "title": "Show Layer Name for existing Notification Manager roles",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\n\nAs a system administrator assigning roles,\nI want to see the specific layer name alongside a user's existing Notification Manager role,\nSo that I can distinguish between Notification Manager roles for different layers without ambiguity.\n\n## Acceptance Criteria\n\n**Scenario: Notification Manager role displays layer name**\n- Given a user has an existing role of type \"Notification Manager\" for a specific layer (e.g. HQ)\n- When the Create Role screen is displayed\n- Then the role is shown as \"Notification Manager - [Layer Name]\" (e.g. \"Notification Manager - HQ\")\n\n**Scenario: Multiple Notification Manager roles display distinct layer names**\n- Given a user has Notification Manager roles for multiple layers\n- When the Create Role screen is displayed\n- Then each role shows its respective layer name (e.g. \"Notification Manager - HQ\", \"Notification Manager - DIV\")\n\n**Scenario: Non-layer specific Notification Manager roles**\n- Given a user has Notification Manager role for the organization (i.e., no layers specified)\n- When the Create Role screen is displayed\n- Then the role is shown as \"Notification Manager - [Org Name]\" (e.g. \"Notification Manager - Business Unit 2\")\n\n**Scenario: Non-Notification-Manager roles are unaffected**\n- Given a user has existing roles other than Notification Manager\n- When the Create Role screen is displayed\n- Then those roles display without modification"
+    },
+    {
+      "id": 224299,
+      "iid": 1314,
+      "title": "Existing roles list shows only roles from current organization",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "#### **User Story**\n\n*   **As an** Organization Manager or Admin,\n*   **I want to** only see a user's existing roles in their current organization when I am assigning them a new role,\n*   **so that** I can avoid confusion, make a more informed decision.\n\n---\n\n#### **Acceptance Criteria**\n\n**Scenario 1: User with existing Roles in current and previous organizations**\n\n*   **Given** an administrator is on the \"Create New Role\" page and has selected a user who has a mix of roles from currently and previously assigned organizations,\n*   **When** the list of that user's current roles is displayed,\n*   **Then** only roles in the user's current organization are shown.\n\n**Scenario 2: User with existing Roles only in previous organizations**\n\n*   **Given** an administrator is on the \"Create New Role\" page and has selected a user who has existing roles in a previously assigned organizations,\n*   **When** the list of that user's current roles is displayed,\n*   **Then** no existing roles for that user will be displayed.\n\n**Scenario 3: User with existing Roles only in current organization**\n\n*   **Given** an administrator is on the \"Create New Role\" page and has selected a user who has existing roles in the currently assigned organization,\n*   **When** the list of that user's current roles is displayed,\n*   **Then** all existing roles for that user in the current organization will be displayed."
+    },
+    {
+      "id": 224675,
+      "iid": 1320,
+      "title": "Add Secondary Email and SMS tabs to Notification missing-contact list",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\n**As an** organization administrator,\n**I want** individual tabs for Secondary Email and SMS on the Notification page's missing-contact list,\n**So that** I can view and download targeted lists of users missing each specific contact type.\n\n---\n\n## Background / Context\n\n**Current Behavior**\nThe Notification page shows a single consolidated list (\"Employee Without Notification Information\") of users who have not entered either a secondary email address or SMS number, with one CSV download for the combined list.\n\n**Desired Behavior**\nThe consolidated list is restructured into three tabs:\n- **All** \u2014 the current consolidated list (users missing secondary email OR SMS), with CSV download (preserves existing behavior)\n- **Secondary Email** \u2014 users who have not entered a secondary email address, with CSV download\n- **SMS** \u2014 users who have not entered an SMS number, with CSV download\n\nEach tab displays the same columns as the current consolidated list (Employee, Secondary Email status, SMS status), filtered to the relevant contact type. The system remembers the user's last selected tab, so that tab will be the one that loads next time the user visits the page.\n\n---\n\n## Acceptance Criteria (Gherkin)\n\n```gherkin\nFeature: Tabbed missing-contact lists on the Notification page\n  As an organization administrator\n  I want individual tabs for Secondary Email and SMS on the Notification page's missing-contact list\n  So that I can view and download targeted lists of users missing each specific contact type\n\n  Background:\n    Given I am signed in as an organization administrator\n    And I am on the Notification page\n\n  Scenario: Tabs are present on the Notification page\n    When the missing-contact list section loads\n    Then I see three tabs labeled \"All\", \"Secondary Email\", and \"SMS\"\n\n  Scenario: \"All\" tab preserves existing consolidated behavior\n    When I click the \"All\" tab\n    Then I see the consolidated list of users missing a secondary email address OR an SMS number\n    And the list displays the columns \"Employee\", \"Secondary Email status\", and \"SMS status\"\n    And I can download the list as a CSV\n\n  Scenario: \"Secondary Email\" tab shows users missing a secondary email\n    When I click the \"Secondary Email\" tab\n    Then I see only users who have not entered a secondary email address\n    And the list displays the columns \"Employee\", \"Secondary Email status\", and \"SMS status\"\n    And I can download the filtered list as a CSV\n\n  Scenario: \"SMS\" tab shows users missing an SMS number\n    When I click the \"SMS\" tab\n    Then I see only users who have not entered an SMS number\n    And the list displays the columns \"Employee\", \"Secondary Email status\", and \"SMS status\"\n    And I can download the filtered list as a CSV\n\n  Scenario Outline: CSV file names are distinguishable per tab\n    Given I am viewing the \"<tab>\" tab\n    When I download the list as a CSV\n    Then the downloaded file name is \"<file_name>\"\n\n    Examples:\n      | tab              | file_name                   |\n      | All              | missing-all.csv             |\n      | Secondary Email  | missing-secondary-email.csv |\n      | SMS              | missing-sms.csv             |\n\n  Scenario: System remembers the last selected tab on return visit\n    Given I have selected the \"SMS\" tab during my previous visit to the Notification page\n    When I navigate away and later return to the Notification page\n    Then the \"SMS\" tab is selected and loaded by default\n\n  Scenario: Default tab on first visit\n    Given I have never selected a tab on the Notification page before\n    When I open the Notification page\n    Then the \"All\" tab is selected by default\n```\n\n---\n\n## Definition of Done\n- All Gherkin scenarios above pass automated acceptance tests.\n- UI matches existing styling/accessibility standards (keyboard navigation, ARIA roles for tabs).\n- Last-selected-tab persistence works across sessions (e.g., stored per user).\n- CSV exports validated for each tab (correct rows, correct file name).\n- Updated documentation/help text reflects new tabbed view.\n- Code reviewed, merged, and deployed to the test environment for stakeholder sign-off."
+    },
+    {
+      "id": 224677,
+      "iid": 1321,
+      "title": "Remove duplicate \"read only\" field from Role editor page",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::bug",
+        "workflow::refined"
+      ],
+      "description": "## User Story\nAs a system administrator,\nI want the Role editor page to display each field only once,\nSo that the form is accurate and not confusing when creating or editing roles.\n\n## Current Behavior\nThe Role editor page (used for both creating and editing roles) displays two \"read only\" fields. This appears to be a copy/paste error where the field was added twice.\n\n## Desired Behavior\nThe Role editor page displays exactly one \"read only\" field.\n\n## Acceptance Criteria\n\nScenario: Role editor shows one \"read only\" field\n  Given I open the Role editor page to create a new role\n  Then I see exactly one \"read only\" field\n\nScenario: Role editor shows one \"read only\" field when editing\n  Given I open the Role editor page to edit an existing role\n  Then I see exactly one \"read only\" field\n\nScenario: No functional regression\n  Given I save a role using the corrected editor\n  Then the role saves correctly with the expected read-only setting"
+    },
+    {
+      "id": 224878,
+      "iid": 1327,
+      "title": "Employee ID display issue on profile Edit view",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "type::Bug"
+      ],
+      "description": "What's happening:\n- When a user's Employee record is opened in \"View\" mode, it shows the correct value for Employee ID\n- When the Employee record is opened in \"Edit\" mode, the Employee ID shows correctly\n- When the Employee record is saved, with or without changes, the Employee ID shows correctly in View mode\n- If the record is opened again in Edit mode in that browser, there is a long random (?) string shown in the Employee ID field\n- Changing the value of the field and saving the form results in the same behavior: Employee ID displayed in view mode, random string shown in Edit mode\n\nHere's where it gets interesting\n- If you sign out of ORBIT and then sign back in, or if you open ORBIT in a different browser, and repeat the steps above\n- When a user's Employee record is opened in \"View\" mode, it shows the correct value for Employee ID\n- When the Employee record is opened in \"Edit\" mode, the Employee ID shows correctly\n- But then the behavior described above happens again in the new browser"
+    },
+    {
+      "id": 224883,
+      "iid": 1328,
+      "title": "Manual Update of User Responses for Notifications",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Customer:GCS",
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\n\nAs a Notification Manager, I need the ability to manually update a user's response to a \"response required\" notification, so that I can accurately track acknowledgments when employee respond to me directly (out-of-band) rather than through the system.\n\n## Acceptance Criteria\n\n```gherkin\nFeature: Manual update of user responses by Notification Manager\n\n  Scenario: Notification Manager manually inputs a response for a pending user\n    Given a \"response required\" notification has been distributed\n    And a target user currently has a \"pending\" or \"no response\" status\n    And the Notification Manager is viewing the response tracking or details page for that notification\n    When the Notification Manager selects the option to manually update the response for the target user\n    And the Notification Manager inputs the appropriate response value (e.g., Acknowledged, Yes/No)\n    And the Notification Manager saves the manual entry\n    Then the target user's status must immediately update to reflect the newly entered response\n    And the system must log that the response was manually entered\n    And the system must record the timestamp and identity of the Notification Manager who made the update\n\n  Scenario: Notification Manager modifies a previously submitted user response\n    Given a target user has an existing recorded response for a \"response required\" notification\n    And the Notification Manager is viewing the response tracking or details page for that notification\n    When the Notification Manager selects the option to edit the user's existing response\n    And the Notification Manager inputs the corrected response value\n    And the Notification Manager saves the manual entry\n    Then the target user's status must immediately update to reflect the modified response\n    And the system must retain a historical log of the previous response\n    And the system must record the timestamp and identity of the Notification Manager who modified the response\n\n  Scenario: Unauthorized users cannot manually update responses\n    Given a user without the \"Notification Manager\" role is viewing the notification tracking page\n    When the user attempts to view the individual user response statuses\n    Then the option to manually update or edit another user's response must be disabled or hidden\n```\n\n## Behavioral Clarifications\n\n### Once a response is set, it stays set\n\nAfter a Notification Manager manually updates a user's response, **any subsequent text response from that user will not overwrite the manual entry**. The manager's deliberate update is treated as the source of truth. If a user replies via text after a manual update, that reply will not change the recorded value.\n\nIf the manager wants to revise the response again, they can \u2014 managers can edit a row as many times as needed, and each edit replaces the previous value.\n\n### Where the edit option appears\n\n- The pencil edit icon appears on every response row visible to a Notification Manager \u2014 pending rows, manually overridden rows, and rows where the user has already responded.\n- Supervisors and other non-managers do not see the edit option on any row.\n\n### Response options on the form\n\nThe dropdown of available responses on the edit form reflects the event's actual response configuration:\n- For events with custom responses, the manager picks from the same custom options the user could have selected.\n- For default events, the manager picks from \"I'm okay\" or \"I need help.\"\n\nThis ensures the manually entered value is always one of the values the user could have legitimately replied with.\n\n### Visual indicator on the tracking page\n\nRows on the Responses table that are currently a manual override show a small information icon next to the response value. Hovering reveals the manager who entered it and the date/time. Rows with an authentic response from the user have no indicator.\n\n### CSV export changes\n\nThe Notification Event CSV download now has a new columns at the end of each response row:\n\n- **`Manually Updated By`** \n\nThe export captures both who made each change last.\n\n### What's recorded in the audit trail\n\nFor every manual update the system records:\n\n- **Who** \u2014 the name and persona ID of the Notification Manager who triggered that change.\n- **When** \u2014 the date and time of that change (UTC).\n\n### Authorization (Scenario 3 specifics)\n\nThe edit option is enforced in two places:\n- The pencil icon is hidden in the UI for users without the Notification Manager role.\n- A user who tries to bypass the UI (e.g., by pasting an edit URL directly) is rejected by the server and redirected to the notifications page with an error.\n\nSupervisors and other non-managers see the responses tracking page in read-only form (no change from current behavior)."
+    },
+    {
+      "id": 224907,
+      "iid": 1329,
+      "title": "Remove Link Pointer Cursor from Non-Actionable Status Icons",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::improvement",
+        "workflow::refined"
+      ],
+      "description": "**User Story:**\nAs a ORBIT user, I need non-clickable status and alert icons (such as the exclamation point and check marks) to display the default mouse cursor upon hover, so that I am not misled into believing they are clickable links.\n\n**Acceptance Criteria:**\n\n```gherkin\nFeature: Correct cursor behavior on non-actionable status and alert icons\n\n  Scenario: Hovering over the Alerts exclamation icon on the Home page\n    Given a user is logged into ORBIT\n    And the user is navigating the \"Home\" page\n    When the user hovers the mouse cursor over the \"Alerts\" exclamation icon\n    Then the cursor should remain as the default system pointer\n    And the cursor must not change to a hyperlink hand pointer\n\n  Scenario: Hovering over status icons on the Notifications page\n    Given a user is logged into ORBIT\n    And the user is viewing the \"Notifications\" page\n    And the user is viewing the list of people without secondary contact methods\n    When the user hovers the mouse cursor over the exclamation icon or check mark icon\n    Then the cursor should remain as the default system pointer\n    And the cursor must not change to a hyperlink hand pointer\n\n  Scenario: Global behavior for non-actionable status icons throughout ORBIT\n    Given a user is navigating any page within ORBIT\n    When the user hovers the mouse cursor over any non-actionable status or alert icon\n    Then the cursor should remain as the default system pointer\n    And the UI should not indicate that the icon is an interactive link\n```"
+    },
+    {
+      "id": 225018,
+      "iid": 1330,
+      "title": "Employee ID in SQL",
+      "weight": 3,
+      "state": "closed",
+      "labels": [],
+      "description": ""
+    },
+    {
+      "id": 225262,
+      "iid": 1331,
+      "title": "Plan CosmosDB multi-database architecture for migration",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "test-plan::no"
+      ],
+      "description": "**Goal:** Define the target Cosmos DB for MongoDB database structure for the ORBIT migration to internal Azure CosmosDB.\n\n**Driving constraints:**\n- Cosmos shared-throughput cap of 25 collections per database (current ORBIT Mongo holds ~80).\n- Scale target: 14,000 employee today \u2192 100,000+ within ~12 months.\n- Customer is the natural tenant boundary.\n\n**Decisions captured:**\n- Per-customer (one DB per customer) tenant model with a single consolidated DB per customer.\n- Global DBs for identity/routing, reference lookups (split mil/geo), system telemetry.\n- Notifications live in the per-customer tenant DB (organization owns its notification data).\n- Existing `ORBIT-Queue` Mongo outbox migrates as-is (already its own DB, already under 25 collections).\n- Downstream `orbitdata` SQL Server stays untouched.\n- IT asset collections (`CustomerItAsset`, `CustomerItHandReceipt`) retired \u2014 not migrated.\n\n**Open issue:** Tenant DB lands at ~31 collections after pulling notifications in \u2014 over the 25 cap."
+    },
+    {
+      "id": 225687,
+      "iid": 1332,
+      "title": "Persist filter tab and scope search by it on customer setting index pages",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": "## User Story\n\nAs an Organization Manager or Admin,\nI want the active/inactive/all filter on customer setting index pages to persist across page loads and to constrain the search results,\nso that I can return to a list in the state I left it and only see records that match both my filter and my search at the same time.\n\n## Background\n\nCustomer setting index pages with the **Active / All / Inactive** filter buttons are:\n\n- `Areas/Customer/Views/Role/Index.cshtml`\n- `Areas/Customer/Views/Layer/Index.cshtml`\n- `Areas/Customer/Views/Task/Index.cshtml`\n- `Areas/Customer/Views/Report/Index.cshtml`\n- `Areas/Customer/Views/Matrix/Index.cshtml`\n- `Areas/Customer/Views/WorkSite/Index.cshtml`\n- `Areas/Customer/Views/Customer/Position.cshtml`\n- `Areas/Customer/Views/Customer/Employee.cshtml`\n- `Areas/Customer/Views/VendorAccount/Index.cshtml`\n- `Areas/Customer/Views/Contract/Index.cshtml`\n\n## Acceptance Criteria\n\n### Scenario 1: Search respects the Active filter\n\n```gherkin\nGiven I am on a customer setting index page that has the Active/All/Inactive filter\nAnd the \"Active\" filter is selected\nAnd the table contains both active and inactive records that match my search term\nWhen I open the search field and type a search term\nThen only active records that match the search term are shown\nAnd inactive records that match the search term are hidden\nAnd active records that do not match the search term are hidden\n```\n\n### Scenario 2: Search respects the Inactive filter\n\n```gherkin\nGiven I am on a customer setting index page that has the Active/All/Inactive filter\nAnd the \"Inactive\" filter is selected\nAnd the table contains both active and inactive records that match my search term\nWhen I open the search field and type a search term\nThen only inactive records that match the search term are shown\nAnd active records that match the search term are hidden\n```\n\n### Scenario 3: Search respects the All filter\n\n```gherkin\nGiven I am on a customer setting index page that has the Active/All/Inactive filter\nAnd the \"All\" filter is selected\nWhen I open the search field and type a search term\nThen both active and inactive records that match the search term are shown\nAnd records that do not match the search term are hidden\n```\n\n### Scenario 5: Clearing the search restores the current filter view\n\n```gherkin\nGiven I am on a customer setting index page that has the Active/All/Inactive filter\nAnd the \"Inactive\" filter is selected\nAnd I have typed a search term that hides some inactive rows\nWhen I clear the search field\nThen all inactive records are shown\nAnd no active records are shown\n```\n\n### Scenario 6: Selected filter persists across page reloads\n\n```gherkin\nGiven I am on a customer setting index page that has the Active/All/Inactive filter\nAnd I select the \"Inactive\" filter\nWhen I reload the page\nThen the \"Inactive\" filter is selected\nAnd only inactive records are shown\n```\n\n### Scenario 7: Selected filter persists when navigating away and returning\n\n```gherkin\nGiven I am on the Customer Roles index page\nAnd I select the \"All\" filter\nWhen I navigate to a different page\nAnd I navigate back to the Customer Roles index page\nThen the \"All\" filter is selected\nAnd both active and inactive records are shown\n```\n\n### Scenario 8: Persisted filter is per index page, not shared across pages\n\n```gherkin\nGiven I have selected the \"Inactive\" filter on the Customer Roles index page\nAnd I have selected the \"All\" filter on the Customer Layers index page\nWhen I reload the Customer Roles index page\nThen the \"Inactive\" filter is selected on the Customer Roles page\nAnd the Customer Layers page still has the \"All\" filter selected when I navigate to it\n```\n\n### Scenario 9: First-time visit defaults to Active\n\n```gherkin\nGiven I have never selected a filter on a customer setting index page\nAnd I have no stored filter preference for that page\nWhen I load the page\nThen the \"Active\" filter is selected\nAnd only active records are shown\n```\n\n## Implementation Notes\n\n- The current search handler in `wwwroot/js/script.js` (around line 3462) calls `elementTableBodyRows.show()` before filtering by text \u2014 this is what causes search to ignore the Active/Inactive selection. Search must layer on top of the current filter rather than overwrite it.\n- `filterContracts(filter)` (around `script.js:670`) and the page-load default at `script.js:809-811` both need to consult/update a `localStorage` key. A per-page key such as `customerFilter:<pathname>` keeps Scenario 8 straightforward.\n- `closeSearch()` (around `script.js:3482`) resets all rows with `.show()` \u2014 it must re-apply the current filter rather than reveal everything."
+    },
+    {
+      "id": 225742,
+      "iid": 1333,
+      "title": "Build orbit-identity database and update entity classes",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "test-plan::no"
+      ],
+      "description": "**Goal:** Build the `orbit-identity` Cosmos database \u2014 the routing front door for the new multi-database architecture. Holds the master `Employee` record plus person-attached audit/task collections. Includes both the Cosmos provisioning *and* the source-code change to route the corresponding entity classes to the new database.\n\n**Collections (6) and shard keys:**\n- `Employee` \u2014 shard on `PersonaId` today; switch to `EmployeeId` once the Employee ID key transition completes (coordinate with that work).\n- `EmployeeAudit` \u2014 shard on `EmployeeId` (colocates a person's audit history).\n- `EmployeeTask` \u2014 shard on `EmployeeId` (colocates a person's tasks).\n- `SystemAdministrator` \u2014 shard on `_id`.\n- `SystemSignIn` \u2014 shard on `_id`.\n- `WebSession` \u2014 shard on `_id`.\n\n**Scope of this issue:**\n\n*Database / infrastructure work:*\n- Provision the `orbit-identity` database in TESTENV Cosmos for MongoDB (internal).\n- Create each collection above with the correct shard key.\n- Validate connectivity from a worker pod (X.509 auth, RU floor sizing).\n\n*Source-code work:*\n- Apply the `[Database(DatabaseScope.GlobalNamed, \"orbit-identity\")]` attribute to each of the six entity classes:\n  - `ORBIT.Model.Employee` (already done in the Entity<T> refactor verification)\n  - `ORBIT.Model.EmployeeAudit`\n  - `ORBIT.Model.EmployeeTask`\n  - `ORBIT.Model.SystemAdministrator`\n  - `ORBIT.Model.SystemSignIn`\n  - `ORBIT.Model.WebSession`\n- After applying, do a clean **rebuild** (Build \u2192 Rebuild Solution) \u2014 hot reload silently skips changes to static field initializers, which is what the `[Database]` attribute resolver depends on.\n- Verify reads *and* writes both land on `orbit-identity` for each entity (the Employee verification turned up that writes were going through a separate code path until `Entity<T>.Save(BsonDocument)` was also routed through `ResolveDatabaseName()` \u2014 the same care applies for these other classes if they have any custom `Save()` overrides).\n\n*Migration-script work:*\n- Add `$out` aggregations to `MongoDB/Migrate.js` to copy each of the six collections from `ORBIT.{collection}` into `orbit-identity.{collection}`.\n\n**Out of scope for this issue (tracked separately):**\n- Migration scripts that span ALL the global/tenant databases \u2014 this issue covers only the `orbit-identity` slice.\n- Production cutover (per the Migration Phases plan in the design doc).\n\n**Reference:** `CosmosDB-Migration-Design.md` \u2014 see the `orbit-identity` section under \"Target Database Layout\" and the partition-key guidance under \"Migration script design\"."
+    },
+    {
+      "id": 225824,
+      "iid": 1334,
+      "title": "Build orbit-lookup database and update entity classes",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "test-plan::no"
+      ],
+      "description": "**Goal:** Build the `orbit-lookup` Cosmos database \u2014 the global reference/lookup collections (rank, HR, organizational, calendar). Read-mostly, written by admins only. Includes both the Cosmos provisioning *and* the source-code change to route the corresponding entity classes to the new database.\n\n**Collections (22) \u2014 all shard on `_id`:**\n- `Activity`\n- `Building`\n- `Region`\n- `VendorAccount`\n- `Department`\n- `FederalHoliday`\n- `Division`\n- `Matrix`\n- `MilitaryBranch`\n- `Rank`\n- `MilitaryTypeOfSeparation`\n- `Module`\n- `OooType`\n- `EmployeeType`\n- `SoftwareLicense`\n- `SubDivision`\n- `TaskType`\n- `TdaCivcc`\n- `TdaCType`\n- `TdaIdent`\n- `TdaPositionGrade`\n- `TdaPositionPosco`\n\n**Scope of this issue:**\n\n*Database / infrastructure work:*\n- Provision the `orbit-lookup` database in TESTENV Cosmos for MongoDB (internal).\n- Create each collection above with `_id` as the shard key.\n- Validate connectivity from a worker pod (X.509 auth, RU floor sizing).\n\n*Source-code work:*\n- Apply the `[Database(DatabaseScope.GlobalNamed, \"orbit-lookup\")]` attribute to all 22 entity classes listed above. Most live under `ORBIT.Model.Lookup`; a few (`Building`, `VendorAccount`, `Division`, `SubDivision`, `Region`, `Department`) are in the `ORBIT.Model` root namespace.\n- After applying, do a clean **rebuild** (Build \u2192 Rebuild Solution) \u2014 hot reload silently skips changes to static field initializers.\n- Verify reads *and* writes both land on `orbit-lookup` for at least one representative entity from each namespace (Lookup vs. root).\n\n*Migration-script work:*\n- Add `$out` aggregations to `MongoDB/Migrate.js` to copy each of the 22 collections from `ORBIT.{collection}` into `orbit-lookup.{collection}`. Since these collections are small and low-cardinality, a single `$out` per collection is sufficient \u2014 no checkpointing/resumability machinery needed at this scale.\n\n**Out of scope for this issue (tracked separately):**\n- Geographic lookups \u2014 those land in `orbit-reference-geo` (separate database, separate work item).\n- Production cutover (per the Migration Phases plan in the design doc).\n\n**Excluded from migration** (per the design doc's retired-features list):\n- `ItAssetType` \u2014 IT asset feature retired.\n- `DaylightSaving` \u2014 replaced by `IanaTimeZoneId` on each duty-station/timezone record.\n\n**Note on read traffic:** Redis is currently used only for session management, not lookup caching. Every page load currently hits multiple lookups directly against MongoDB, so `orbit-lookup` will see real read traffic that scales with user count \u2014 size the RU/s accordingly.\n\n**Reference:** `CosmosDB-Migration-Design.md` \u2014 see the `orbit-lookup` section under \"Target Database Layout\" and the \"Migration script design\" notes."
+    },
+    {
+      "id": 225828,
+      "iid": 1335,
+      "title": "Build orbit-system database and update entity classes",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "test-plan::no"
+      ],
+      "description": "**Goal:** Build the `orbit-system` Cosmos database \u2014 append-only telemetry and log streams. High insert volume (`ApplicationLog` is the largest), low read volume. Includes both the Cosmos provisioning *and* the source-code change to route the corresponding entity classes to the new database.\n\n**Collections (4) \u2014 all shard on `_id`:**\n- `ApplicationLog` \u2014 structured application log; **highest insert volume in the post-retirement system**.\n- `ResponseTime` \u2014 per-request response time trace (replaces the discontinued `SystemResponse`).\n- `SystemLog` \u2014 general system log.\n- `ReminderLog` \u2014 reminder send log.\n\n**Partition key rationale:** `_id` (`ObjectId`) already has a timestamp prefix, so it distributes inserts evenly across logical partitions without creating a hot \"today\" partition that a date-truncated key would. No specialized key needed for these access patterns.\n\n**Scope of this issue:**\n\n*Database / infrastructure work:*\n- Provision the `orbit-system` database in TESTENV Cosmos for MongoDB (internal).\n- Create each collection above with `_id` as the shard key.\n- **Configure TTL indexes on each collection** for 30-day rolling retention. Without TTL, these collections grow unbounded \u2014 `ApplicationLog` would dominate storage cost within months. The TTL field is `DateCreated` on every collection.\n- Validate connectivity from a worker pod (X.509 auth, RU floor sizing).\n\n*Source-code work:*\n- Apply the `[Database(DatabaseScope.GlobalNamed, \"orbit-system\")]` attribute to the four entity classes in `ORBIT.Model.Log`:\n  - `ORBIT.Model.Log.Application` (the `ApplicationLog` class)\n  - `ORBIT.Model.Log.ResponseTime`\n  - `ORBIT.Model.Log.SystemLog`\n  - `ORBIT.Model.Log.Reminder` (the `ReminderLog` class)\n- After applying, do a clean **rebuild** (Build \u2192 Rebuild Solution) \u2014 hot reload silently skips changes to static field initializers, which is what the `[Database]` attribute resolver depends on.\n- Verify reads *and* writes both land on `orbit-system` for at least one representative class \u2014 telemetry write paths are scattered across the codebase (every controller does some logging), so a smoke test with a single page-load and an mongosh check is sufficient.\n\n*Migration-script work:*\n- Add `$out` aggregations to `MongoDB/Migrate.js` to copy each of the four collections from `ORBIT.{collection}` into `orbit-system.{collection}`. Same pattern as `orbit-lookup` \u2014 no checkpointing needed at this scale, and the data is append-only telemetry so any in-flight write loss during cutover is non-critical.\n\n**Out of scope for this issue (tracked separately):**\n- Production cutover (per the Migration Phases plan in the design doc).\n\n**Excluded from migration** (per the design doc's retired-features list):\n- `SystemResponse` \u2014 replaced by `ResponseTime`.\n- `SystemPerformance` \u2014 feature retired; writes ceased 2026-04-29.\n- `SystemPerformanceViewer` \u2014 discontinued feature.\n\n**Note on isolation:** keeping telemetry in its own database matters because the insert firehose (`ApplicationLog` especially) should not compete for RU/s with user-blocking identity reads on `orbit-identity`. Provision RU/s independently per database.\n\n**Reference:** `CosmosDB-Migration-Design.md` \u2014 see the `orbit-system` section under \"Target Database Layout\"."
+    },
+    {
+      "id": 225863,
+      "iid": 1336,
+      "title": "Build orbit-geo database and update entity classes",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "test-plan::no"
+      ],
+      "description": "**Goal:** Build the `orbit-geo` Cosmos database \u2014 geographic reference lookups. `GeographicLocation` is the largest collection in this DB by document count. Includes both the Cosmos provisioning *and* the source-code change to route the corresponding entity classes to the new database.\n\n**Collections (5) \u2014 all shard on `_id`:**\n- `Country`\n- `WorkSite`\n- `GeographicLocation`\n- `State`\n- `TimeZone`\n\n**Scope of this issue:**\n\n*Database / infrastructure work:*\n- Provision the `orbit-geo` database in TESTENV Cosmos for MongoDB (internal).\n- Create each collection above with `_id` as the shard key.\n- Validate connectivity from a worker pod (X.509 auth, RU floor sizing). `GeographicLocation` has the highest document count of the geo collections \u2014 size RU/s with that in mind.\n\n*Source-code work:*\n- Apply the `[Database(DatabaseScope.GlobalNamed, \"orbit-geo\")]` attribute to the five entity classes:\n  - `ORBIT.Model.Lookup.Country`\n  - `ORBIT.Model.Lookup.WorkSite`\n  - `ORBIT.Model.GeographicLocation` (this one lives in `ORBIT.Model` root, **not** under `Lookup/`)\n  - `ORBIT.Model.Lookup.State`\n  - `ORBIT.Model.Lookup.TimeZone`\n- After applying, do a clean **rebuild** (Build \u2192 Rebuild Solution) \u2014 hot reload silently skips changes to static field initializers, which is what the `[Database]` attribute resolver depends on.\n- Verify reads *and* writes both land on `orbit-geo` for at least one representative class. The employee-edit page is a good smoke test surface \u2014 it touches `Country`, `State`, and `WorkSite` on every load.\n\n*Migration-script work:*\n- Add `$out` aggregations to `MongoDB/Migrate.js` to copy each of the five collections from `ORBIT.{collection}` into `orbit-geo.{collection}`. `GeographicLocation` is the only one large enough to be worth watching for timing during rehearsal \u2014 the other four are small reference data.\n\n**Out of scope for this issue (tracked separately):**\n- Production cutover (per the Migration Phases plan in the design doc).\n\n**Why split geo from lookup:** with Redis used only for session management (not lookup caching), every page load hits multiple geo lookups directly against MongoDB. Splitting `orbit-geo` from `orbit-lookup` lets the geo lookups (heavy on employee-edit pages) scale on a separate RU budget from the `orbit-lookup` collections (heavier on TDA pages). The 25-collection cap also requires the split \u2014 see the design doc.\n\n**Reference:** `CosmosDB-Migration-Design.md` \u2014 see the `orbit-geo` section under \"Target Database Layout\"."
+    },
+    {
+      "id": 225869,
+      "iid": 1337,
+      "title": "bug: Layers cannot be saved after Layer Names (levels) are changed",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Customer: JPO",
+        "type::bug"
+      ],
+      "description": "If a Layer Name (eg. PM, PD, PL) is changed in an organization (e.g. PM -> Prod Man), any layers that exist in that organization can no longer be edited. If a layer is opened in edit mode, and changes are made, the Save option does not work. If a layer is opened in edit mode, and no changes are made, the Save option does not work. In both cases, the \"Layer\" field (which represents the level) shows the top level Layer Name (in this example, \"Prod Man\") and the selector is disabled. Changing the Layer Name back to the original (e.g. Prod Man -> PM) does not resolve the issue. If a new layer is created, it correctly uses the active Layer Names and can be successfully edited and saved. \n\n\nFrom INC0034282: \n> I'm having problems getting ORBIT to accept changes. I have tried using both Chrome and Edge. I was trying to update one of our (Northeast Region) layers. I just keep getting the Information was not saved error message. I want to change \"Sales-Ops-East | Regional Development\" to \"Sales-Ops-East | Customer Support & Operations (CSO)\""
+    },
+    {
+      "id": 225987,
+      "iid": 1339,
+      "title": "Build orbit-tenant per-customer databases and update entity classes",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "test-plan::no"
+      ],
+      "description": "**Goal:** Build the per-customer `orbit-tenant-{customerId}` Cosmos databases \u2014 one database per customer holding the full operational footprint for that organization. This is the largest piece of the migration: N databases (one per customer, ~29 in TESTENV), 23 collections each, plus the runtime tenant-resolution machinery that routes every request to the right database.\n\n**Collections (23) and shard keys:**\n\n*Sharded on `_id` (18 collections):*\n- `Customer`\n- `CustomerContract`\n- `CustomerVendorAccount`\n- `CustomerWorkSite`\n- `CustomerLayer`\n- `CustomerMatrix`\n- `CustomerReport`\n- `CustomerRole`\n- `CustomerSoftwareLicense`\n- `CustomerTask`\n- `CustomerTaskAudit`\n- `NotificationEvent`\n- `NotificationGroup`\n- `NotificationScenario`\n- `OooItem`\n- `OooLog`\n- `OooLogParent`\n- `CheckInHot`\n\n*Sharded on `EmployeeId` (3 collections \u2014 colocates a person's records, used by the employee-detail page query patterns):*\n- `CheckIn` *(largest collection in the system)*\n- `NotificationLog`\n- `NotificationResponse`\n\n*Sharded on `CustomerLayerId` (2 collections \u2014 colocates positions within an org layer):*\n- `Tda`\n- `TdaPosition`\n\n**Scope of this issue:**\n\n*Database / infrastructure work:*\n- Provision one `orbit-tenant-{customerId}` database in TESTENV Cosmos for MongoDB (internal) per existing customer (~29 today).\n- Create each of the 23 collections per database with the correct shard key (see above).\n- Validate connectivity from a worker pod (X.509 auth, RU floor sizing). Plan for per-tenant RU/s budgets \u2014 large customers may need different floors than small ones.\n\n*Source-code work:*\n- Apply the `[Database(DatabaseScope.Tenant)]` attribute to all 23 entity classes. Most live in `ORBIT.Model.Customer/`, `ORBIT.Model.CheckIn/`, and `ORBIT.Model.Notification/`. `Tda`, `TdaPosition`, `OooItem`, `OooLog`, and `OooLogParent` are in `ORBIT.Model` root. **`ORBIT.Model.Notification/*` code is off-limits to edit per CLAUDE.md** \u2014 adding the attribute on the class line is permitted (it's not a logic change), but the rest of those files stays untouched.\n- Implement `CosmosTenantProvisioner` (sketched in `CosmosDB-Migration-Design.md` under the `orbit-tenant-{customerId}` section). Hook it into `Customer.Save()` so a brand-new customer automatically gets a provisioned tenant DB with all 23 collections sharded correctly.\n- Wire the web layer's auth middleware to call `TenantContext.Use(employee.CustomerId)` once per request after authentication resolves the user's customer. Until this is in place, any `[Database(Tenant)]` entity access from the web layer will throw `InvalidOperationException(\"No tenant in scope.\")`.\n- Update worker services (`Background`, `Notification`, `Ooo`, `SqlReporting`) to wrap per-customer iteration in `using (TenantContext.Use(customer.Id)) { ... }` blocks. **`ORBIT.WorkerService.Notification` and `ORBIT.WorkerService.SqlReporting` are off-limits per CLAUDE.md** \u2014 coordinate with whoever owns those workers before touching them.\n- After applying, do a clean **rebuild** (Build \u2192 Rebuild Solution) \u2014 hot reload silently skips changes to static field initializers.\n- Verify reads *and* writes both land on the correct `orbit-tenant-{customerId}` database for at least one customer. The roll-call submission flow is a good smoke test \u2014 it touches `Customer`, `CustomerLayer`, `CustomerRole`, `CheckIn`, and `CheckInHot` in a single request.\n\n*Migration-script work:*\n- The per-tenant migration is more complex than the global DBs: you need to iterate `ORBIT.Customer`, and for each customer copy the 23 tenant collections from `ORBIT.{collection}` filtered by `Customer._id` into `orbit-tenant-{customerId}.{collection}`. Use `$match` before `$out` in the aggregation:\n  ```javascript\n  const customers = sourceDb.Customer.find({}, { _id: 1 }).toArray();\n  for (const { _id: customerId } of customers) {\n    const tenantDb = db.getSiblingDB(`orbit-tenant-${customerId}`);\n    sourceDb.CheckIn.aggregate([\n      { $match: { \"Customer._id\": customerId } },\n      { $out: { db: tenantDb.getName(), coll: \"CheckIn\" } }\n    ]);\n    // ... repeat for the other 22 tenant collections\n  }\n  ```\n- Wrap each call in the `copyIfMissing` pattern from `MongoDB/Migrate.js` so the script is idempotent across dev iterations.\n\n**Out of scope for this issue (tracked separately):**\n- Production cutover (per the Migration Phases plan in the design doc).\n- Replacing the SQL Queue / `orbitdata` plumbing (out of scope for the entire migration).\n\n**Reference:** `CosmosDB-Migration-Design.md` \u2014 see the `orbit-tenant-{customerId}` section under \"Target Database Layout\", the `CosmosTenantProvisioner` code sketch, and the Code Changes Required section for the `[Database(Tenant)]` + `TenantContext` runtime pattern."
+    },
+    {
+      "id": 226167,
+      "iid": 1340,
+      "title": "Update unit tests for TenantContext-scoped entities",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Goal:** Update the unit test suite to set `TenantContext` for tests that exercise tenant-scoped entities. After the Cosmos migration code landed (per work items #1333, #1334, #1335, #1336, #1339), 85 of 229 unit tests fail with `System.InvalidOperationException: No tenant in scope. Call TenantContext.Use(customerId) first.` This is not a bug in the migration \u2014 it is the tests not yet aware of the new tenant-routing model.\n\n**Baseline (as of this issue):**\n- Total: 229 tests\n- Passing: 138 (all global-DB entities \u2014 `Lookup`, `Employee` identity tests, system telemetry)\n- Failing: 85 (every test that touches a tenant-scoped entity)\n- Skipped: 6\n\n**Scope of this issue:**\n\n*Test infrastructure:*\n- Add a `TenantTestBase` class under `ORBIT.Test.Unit/` that sets up `TenantContext.Use(<seeded test customer id>)` in `[TestInitialize]` and disposes it in `[TestCleanup]`. Pick a customer id that is reliably seeded in the local Mongo container (the same one currently used for tenant-data tests).\n- Have failing test classes inherit from `TenantTestBase`. The `using` block disappears from individual tests; the base class handles it once per test method automatically.\n\n*Test class updates:*\n- Sweep the failing test classes and either inherit from `TenantTestBase` (preferred) or add explicit `using ( TenantContext.Use( ... ) )` blocks per method. Test files affected (not exhaustive \u2014 confirm against full failure list):\n  - `ORBIT.Test.Unit/Customer/Roles.cs`\n  - `ORBIT.Test.Unit/Customer/Tasks.cs`\n  - `ORBIT.Test.Unit/Customer/TaskAudits.cs`\n  - `ORBIT.Test.Unit/Customer/Layers.cs`\n  - `ORBIT.Test.Unit/Customer/CustomerReports.cs`\n  - `ORBIT.Test.Unit/Customer/WorkSites.cs`\n  - `ORBIT.Test.Unit/CheckIn/*.cs`\n  - `ORBIT.Test.Unit/Notification/*.cs`\n  - `ORBIT.Test.Unit/PositionAssignments.cs` (touches Tda)\n  - Anything else surfaced when re-running the suite after the base class lands\n\n*Slash-command update:*\n- Update `.claude/commands/test.md` so the `/test` skill generates the `TenantTestBase` inheritance (or the explicit `using` block) by default for any new test against a tenant-scoped entity. Add a \"Category E \u2014 Tenant-scoped CRUD\" section to the entity-categories list with the pattern.\n\n**Out of scope for this issue:**\n- Playwright tests \u2014 those are blocked separately by a Redis configuration issue in the local `orbit-web` container (it tries to authenticate against the production Azure Redis for DataProtection key storage). That is unrelated to the migration and tracked separately.\n- The 138 passing tests \u2014 leave them alone; they don't touch tenant entities.\n\n**Verification:**\n- Re-run `/runtests` after the changes.\n- Target: zero \"No tenant in scope\" failures. The remaining failures (if any) should be unrelated to tenant routing.\n\n**Pattern reference:**\n\n```csharp\n// ORBIT.Test.Unit/TenantTestBase.cs\npublic abstract class TenantTestBase\n{\n    private const string TestCustomerId = \"<seeded test customer id>\";\n    private IDisposable _tenantScope;\n\n    [TestInitialize]\n    public void TenantSetup()\n    {\n        _tenantScope = TenantContext.Use( TestCustomerId );\n    }\n\n    [TestCleanup]\n    public void TenantTeardown()\n    {\n        _tenantScope?.Dispose();\n    }\n}\n\n// then on a failing test class:\n[TestClass]\npublic class RoleTest : TenantTestBase\n{\n    [TestMethod]\n    public void Role_Save_TogglesCanManageTask()\n    {\n        // Tenant is already set by TenantTestBase\n        var role = CustomerRole.FetchBy( true ).FirstOrDefault();\n        ...\n    }\n}\n```\n\n**Reference:** `CosmosDB-Migration-Design.md` \u2014 see the `orbit-tenant-{customerId}` section and the Code Changes Required #3 (Tenant resolver in the Web layer)."
+    },
+    {
+      "id": 226234,
+      "iid": 1341,
+      "title": "Build Python script to migrate TEST MongoDB to TEST CosmosDB",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "test-plan::no"
+      ],
+      "description": "**Goal:** Build a Python migration script that copies ORBIT data from the **TEST MongoDB** instance to the **TEST CosmosDB for MongoDB** instance, mirroring the logical structure of `MongoDB/Migrate.js` but operating across two different database instances. The script runs from a internal VDI that has network access to both endpoints.\n\n**Why Python (not mongosh / Node.js):**\n- mongosh `$out` only writes within a single MongoDB instance \u2014 cannot copy across servers.\n- Python (`pymongo`) handles two independent connection strings cleanly, supports idempotent/resumable patterns, and matches the team's existing operational tooling (`md_to_pdf.py`, `create_issue.py`, etc.).\n- Ships with Python 3 already on the internal VDI; only `pip install pymongo` is needed.\n\n**Source / target shape:**\n- **Source:** TEST MongoDB instance (single `ORBIT` database with all original collections, plus `ORBIT-Queue`).\n- **Target:** TEST CosmosDB for MongoDB instance \u2014 empty, will receive the new multi-database structure: `orbit-identity`, `orbit-lookup`, `orbit-geo`, `orbit-system`, `ORBIT-Queue`, plus `orbit-tenant-{customerId}` per active customer.\n\n**Scope of this issue:**\n\n*Script:*\n- New file `MongoDB/migrate.py` parallel to `Migrate.js`.\n- Reads two env vars: `ORBIT_TEST_MONGODB_URI` (source) and `ORBIT_TEST_COSMOSDB_URI` (target).\n- Mirrors the collection lists in `Migrate.js` exactly \u2014 global DBs (identity / geo / lookup / system / `ORBIT-Queue`) plus per-customer tenant DBs.\n- Honors the same exclusions: skips `OooItem`, `CustomerItAsset`, `CustomerItHandReceipt`, `Travel`, `CustomerMetric`, `SystemPerformance`, `SystemPerformanceViewer`, `CheckInLocation`, `DaylightSaving`, `ItAssetType`, `SystemResponse`.\n- **Idempotent:** re-runnable. Uses a checkpoint collection on the target side (`orbit-migration-control._checkpoint`) recording per-`(target_db, collection)` progress.\n- **Resumable:** `_id` cursor with batched `bulk_write` upserts so a crash mid-collection resumes from the last completed batch (matters for `CheckIn` which has 3M+ documents).\n- Per-customer slicing: iterates `ORBIT.Customer` and copies tenant collections filtered by `Customer._id`.\n- `Customer` itself goes to `orbit-identity` (global), per the latest design.\n\n*Operational:*\n- Document the environment-variable contract and prerequisites in a `MongoDB/README.md` section (or inline at the top of `migrate.py`).\n- Document how to run it from the internal VDI: `pip install pymongo`, set the two env vars, `python migrate.py`.\n\n**Out of scope for this issue:**\n- Production migration (cutover plan covered separately by the design doc's Migration Phases section).\n- Data validation / reconciliation tooling beyond the per-collection counts emitted by the script (a richer validation pass can be its own future issue).\n- Performance tuning for production-scale CheckIn (will surface during rehearsal, not now).\n\n**Verification:**\n- Run from internal VDI against TEST MongoDB \u2192 TEST CosmosDB.\n- Log output should print `[copy]` / `[skip]` per collection (matching the JS script's vocabulary).\n- Spot-check counts in target Cosmos vs. source MongoDB after a clean run.\n- Re-run: every line should print `[skip]` (idempotency check).\n\n**Reference:** `CosmosDB-Migration-Design.md` \u2014 see \"Migration script design\" subsection for the idempotent/resumable pattern. `MongoDB/Migrate.js` is the structural blueprint."
+    },
+    {
+      "id": 226773,
+      "iid": 1342,
+      "title": "Backfill unit tests for Employee.cs (highest-priority gaps)",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "## Summary\n\nBackfill unit test coverage for `ORBIT.Model.Employee`. Today only ~9 of ~60 public methods on `Employee.cs` have any unit-test coverage. This work item tracks the highest-priority gaps identified during the v3.3.2 testing-coverage review.\n\nTests follow project conventions: `try/finally` to restore DB state, `Assert.Inconclusive(...)` when seeded data is missing, `Assert.IsNotNull(x, \"Precondition: ...\")` for preconditions, and queue cleanup after `Employee.Save()` (`ORBIT.Model.Queue.Employee { Id = ... }.Remove()` plus `CustomerRole` cleanup).\n\nNote: `Source/dotnet/ORBIT.Model/Employee/` is off-limits to edit per `CLAUDE.md`. All changes belong in `Source/dotnet/ORBIT.Test.Unit/Employee/`.\n\n## Test Tasks\n\n- [ ] **Employee \u2014 Encrypt/Decrypt round-trip tests** \u2014 `Encrypt`, `Decrypt`. PII handling. Round-trip an instance; verify ciphertext \u2260 plaintext; verify nulls/empty fields don't throw.\n- [ ] **Employee \u2014 Save happy path + queue/audit side effects** \u2014 `Save` (success path). Existing test only covers the validation throw. Verify queue mirror written, `EmployeeAudit` row created, `DateCreated`/`TouchedBy` populated. Use `try/finally` cleanup + queue cleanup pattern.\n- [ ] **Employee \u2014 Remove behavior** \u2014 `Remove`. Verify soft-delete (`IsActive = false`), queue mirror updated, audit entry created.\n- [ ] **Employee \u2014 FetchBy supervisor overloads** \u2014 `FetchBy(Supervisor)`, `FetchBy(Supervisor, isActive)`. Two overloads currently untested.\n- [ ] **Employee \u2014 FetchBy customer-layer overloads** \u2014 `FetchBy(CustomerLayer ...)` (4 overloads at lines 688, 709, 720, 747).\n- [ ] **Employee \u2014 FetchBy work site / role overloads** \u2014 `FetchBy(WorkSite)`, `FetchBy(CustomerRole)` (lines 762, 823, 858, 872, 887).\n- [ ] **Employee \u2014 FetchByAsync** \u2014 Async path needs its own test (await + result equivalence to sync).\n- [ ] **Employee \u2014 FetchBy(persona/Employee ID) edge cases** \u2014 `FetchBy(personaId)`, `FetchBy(employeeId)` (lines 936, 964). Relevant to the in-progress Employee ID transition. Verify both keys resolve to the same record where both exist.\n- [ ] **Employee \u2014 Notification/Reminder fetch helpers** \u2014 `FetchMissingNotificationInformationBy`, `FetchForNotificationBy`, `FetchForReminderBy`, `FetchMissingCheckInBy`, `FetchProfileOutdatedBy`. These drive the worker services \u2014 high blast radius if they regress.\n- [ ] **Employee \u2014 Transfer-related fetch helpers** \u2014 `FetchTransferBy()`, `FetchTransferBy(customer)`, `FetchUnassigned()`, `FetchUnassigned(customer)`. Four helpers behind the Bulk Transfer UI.\n- [ ] **Employee \u2014 Search overload coverage** \u2014 `Search(...)` (4 overloads at lines 1911, 1927, 2000, 2020). 2 of 4 covered today; backfill the other two.\n- [ ] **Employee \u2014 ProcessRaw CSV import** \u2014 `ProcessRaw`. ~280-line method. Test: valid CSV inserts records, malformed row logs and continues, empty stream is a no-op.\n- [ ] **Employee \u2014 Transfer (single)** \u2014 `Transfer`. Verify customer/layer reassignment, audit trail, queue mirror.\n- [ ] **Employee \u2014 TransferBulkAsync** \u2014 Async bulk path; verify all records reassigned, partial-failure behavior.\n- [ ] **Employee \u2014 TransferRequest** \u2014 Verify request record created and notification triggered.\n- [ ] **Employee \u2014 UpdateWith overload coverage** \u2014 `UpdateWith(...)` (3 overloads at lines 3351, 3363, 3375). Verify each merges expected fields without clobbering others.\n- [ ] **Employee \u2014 Mobile CheckIn verification flow** \u2014 `UpdateMobileReportingVerifyCode`, `VerifyMobileCheckIn`, `SendVerificationCode`. Code generated, persisted, verifies on match, rejects on mismatch/expired.\n- [ ] **Employee \u2014 Emergency Email verification flow** \u2014 `UpdateEmergencyEmailVerifyCode`, `VerifyEmergencyEmail`, `SendVerificationCodeForEmergencyEmail`. Same pattern as the mobile flow.\n- [ ] **Employee \u2014 Emergency SMS verification flow** \u2014 `UpdateEmergencySmsVerifyCode`, `VerifyEmergencySms`, `SendVerificationCodeForEmergencySms`. Same pattern as the mobile flow.\n- [ ] **Employee \u2014 SendRegistrationAlert** \u2014 Verify alert payload built correctly; mock or inspect the queued notification.\n- [ ] **Employee \u2014 ToBsonDocument / ToSupervisor projections** \u2014 `ToBsonDocument`, `ToSupervisor`. Round-trip and field-mapping correctness.\n\n## Acceptance Criteria\n\n- All 21 test groups above implemented in `ORBIT.Test.Unit/Employee/`\n- `dotnet test Source/dotnet/ORBIT.Test.Unit/ --filter \"FullyQualifiedName~Employee\"` passes locally and in CI\n- Each new test follows the project conventions (Arrange/Act/Assert, `Assert.Inconclusive` for missing seed data, `try/finally` cleanup, queue cleanup after `Save`)"
+    },
+    {
+      "id": 227207,
+      "iid": 1343,
+      "title": "Renaming a Customer Layer Name orphans existing CustomerLayer references; edit/save then fails",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "release-notes::no"
+      ],
+      "description": "**Reported in:** INC0034282\n\n**Symptom (from internal GitLab description):**\nIf a Layer Name (e.g. PM, PD, PL) is changed in an organization (e.g. PM -> Prod Man), any layers that exist in that organization can no longer be edited. The Layer Edit form shows the top-level Layer Name in a disabled selector, and Save returns 'Information was not saved' regardless of whether changes were made. Renaming back to the original does not resolve the issue. Newly created layers work correctly.\n\n**Root cause:**\n`CustomerLayerName.Save(Customer)` at `Source/dotnet/ORBIT.Model/Customer/LayerName.cs` unsets the entire `LayerNameList` and rebuilds it with brand-new `ObjectId` values for **every** entry on every save \u2014 even ones that were not renamed. Existing `CustomerLayer` documents still embed the old `LayerName._id` values, which are now orphaned.\n\nWhen a CustomerLayer is then edited:\n1. The Form (`Areas/Customer/Views/Layer/Form.cshtml`) builds the Layer `<select>` from the customer's new `LayerNameList` \u2014 the previously selected ID is no longer in the list, so no option is selected and the disabled dropdown shows the first option (the top-level name).\n2. The hidden `LayerName.Id` posted back is the orphaned ID.\n3. `CustomerLayer.ToBsonDocument()` calls `CustomerLayerName.FetchById(this.LayerName.Id)`, which returns null, then dereferences `this.LayerName.LayerLevel` \u2192 `NullReferenceException`.\n4. `LayerController.Save()` catches and redirects to `?error=1` (the 'Information was not saved' banner).\n\n**Fix (Option 1 \u2013 preserve IDs):**\nModify `CustomerLayerName.Save()` to match each incoming form entry to an existing entry by `LayerLevel` and reuse its `_id`. Only generate a new `ObjectId` for layer levels that did not exist before. Drop the redundant `Unset` of `LayerNameList` (the trailing `Set` replaces it).\n\n**Tests to add:**\n- Failing test that proves `CustomerLayerName.Save()` currently regenerates IDs for unchanged entries.\n- (After fix) regression test that asserts IDs are preserved across a rename.\n\n**Files in scope:**\n- `Source/dotnet/ORBIT.Model/Customer/LayerName.cs` (fix)\n- `Source/dotnet/ORBIT.Test.Unit/Customer/LayerNames.cs` (tests)"
+    },
+    {
+      "id": 228010,
+      "iid": 1346,
+      "title": "Fix supervisor reminder email \u2014 NullReferenceException on missing TimeZone.Name",
+      "weight": 2,
+      "state": "closed",
+      "labels": [],
+      "description": "**Component:** `ORBIT.WorkerService.Background` \u2192 `ORBIT.Model.Reminder.Email.SupervisorDidNotReportEmployee`\\n\\n**Symptom:** Customer reported their supervisor was not receiving the morning 'did not report' supervisor email.\\n\\n**Root cause:** The employee filter in `SupervisorDidNotReportEmployee()` called `t.WorkSite.TimeZone.Name.StartsWith( timeZoneId )` without first checking that `Name` was non-null. If any one employee record system-wide had a `WorkSite.TimeZone` with a null `Name`, the `.ToList()` threw a `NullReferenceException`. Because the 9:30 trigger in `Worker.ExecuteAsync` calls the method via `Task.Run(...)` with no `await` and no try/catch, the exception became an unobserved task exception \u2014 silently swallowed \u2014 and no supervisor received the email that morning.\\n\\nThe sibling method `RemindToReport()` already had the `!String.IsNullOrEmpty(t.WorkSite.TimeZone.Name)` guard; `SupervisorDidNotReportEmployee()` did not.\\n\\n**Fix:** Added the matching `!String.IsNullOrEmpty(t.WorkSite.TimeZone.Name)` guard in the LINQ filter at `Source/dotnet/ORBIT.Model/Reminder/Email.cs`."
+    },
+    {
+      "id": 228012,
+      "iid": 1347,
+      "title": "Fix mobile check-in: capture free-text note after menu option",
+      "weight": 2,
+      "state": "closed",
+      "labels": [],
+      "description": "**File:** `Source/dotnet/ORBIT.Model/Telephony/CheckIn.cs`\\n\\n**Bug:** When a user texts a mobile check-in with extra text after the menu option (e.g. `4 Going to meeting`), only the menu option (`4`) is captured. The free-text remainder (`Going to meeting`) is parsed out as `messageRemainder` and passed into `Process(...)` as the `message` argument, but the switch statement only consumes it for cases 3 and 8 (Travel / Off-Site, for geographic parsing). For all other menu options the remainder is silently discarded, and `checkIn.Note` only contains the hard-coded `\"Reported by Mobile Check-In with: '4'\"`.\\n\\n**Fix:** After setting the auto-generated note in `Process(...)`, append the trimmed `message` (when non-empty) to `checkIn.Note` as an additional `Note:` line. Applies to all menu options.\\n\\n**Resulting note for `4 Going to meeting`:**\\n```\\nReported by Mobile Check-In with: '4'\\n\\nNote: Going to meeting\\n```"
+    }
+  ]
+}

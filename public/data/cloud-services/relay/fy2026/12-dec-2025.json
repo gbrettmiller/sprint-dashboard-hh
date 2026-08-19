@@ -1,0 +1,468 @@
+{
+  "fiscal_year": 2026,
+  "month": 12,
+  "year": 2025,
+  "sprints": [
+    {
+      "id": 3633,
+      "title": "Third-Party Integration FY26Q1-4",
+      "start_date": "2025-11-26",
+      "end_date": "2025-12-09",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 0,
+        "weight": 0
+      },
+      "burndown": [
+        {
+          "date": "2025-11-26",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-11-27",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-11-28",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-11-29",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-11-30",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-12-01",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-12-02",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-12-03",
+          "remaining_count": 6,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2025-12-04",
+          "remaining_count": 6,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2025-12-05",
+          "remaining_count": 6,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2025-12-06",
+          "remaining_count": 6,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2025-12-07",
+          "remaining_count": 6,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2025-12-08",
+          "remaining_count": 6,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2025-12-09",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 7
+      },
+      "completed": {
+        "count": 7,
+        "weight": 8
+      },
+      "issues": [
+        {
+          "id": 181229,
+          "iid": 63,
+          "title": "MOD Justification field on Modify Task Order screen",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "customer-review::25Nov25",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 181224,
+          "iid": 61,
+          "title": "RA Org column on Open Actions displays Acronym",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "customer-review::25Nov25",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 181053,
+          "iid": 60,
+          "title": "Unit price field allows accurate entry of price",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "customer-review::24Nov25",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 181051,
+          "iid": 58,
+          "title": "Default Duration and Unit for new option",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "customer-review::24Nov25",
+            "priority::low",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 181049,
+          "iid": 56,
+          "title": "Projected POP field label - Base Full Performance End",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "customer-review::24Nov25",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 181047,
+          "iid": 55,
+          "title": "Task Order listing on Service Requirement Page should include all TOs",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "customer-review::24Nov25",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-03",
+          "date_closed": "2025-12-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 181045,
+          "iid": 54,
+          "title": "Service Requirement displays all associated data (organization, contact POC)",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "customer-review::24Nov25",
+            "workflow::refined"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-09",
+          "date_closed": "2025-12-09",
+          "date_removed_from_sprint": null
+        }
+      ]
+    },
+    {
+      "id": 3719,
+      "title": "FY26Q1-5",
+      "start_date": "2025-12-11",
+      "end_date": "2025-12-23",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 9,
+        "weight": 16
+      },
+      "burndown": [
+        {
+          "date": "2025-12-11",
+          "remaining_count": 4,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-12-12",
+          "remaining_count": 4,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-12-13",
+          "remaining_count": 4,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-12-14",
+          "remaining_count": 4,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-12-15",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-12-16",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-12-17",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-12-18",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-12-19",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-12-20",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-12-21",
+          "remaining_count": 2,
+          "remaining_weight": 8
+        },
+        {
+          "date": "2025-12-22",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2025-12-23",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 11
+      },
+      "completed": {
+        "count": 11,
+        "weight": 24
+      },
+      "issues": [
+        {
+          "id": 184680,
+          "iid": 86,
+          "title": "Edit Projected POPs and CLINs on Post MOD Modal",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-18",
+          "date_closed": "2025-12-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184678,
+          "iid": 85,
+          "title": "Display Actual POPs and Select Affected POPs on MOD Action Details Page",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 5,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-18",
+          "date_closed": "2025-12-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183818,
+          "iid": 80,
+          "title": "Implement Collapsible Actual POPs Section for MOD Actions",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-11",
+          "date_closed": "2025-12-15",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183817,
+          "iid": 79,
+          "title": "Implement Projected MOD Extensions Section",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-11",
+          "date_closed": "2025-12-15",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183816,
+          "iid": 78,
+          "title": "Implement Pre-Award Validation Logic for New/Recompete Actions",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-11",
+          "date_closed": "2025-12-15",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183815,
+          "iid": 77,
+          "title": "Implement MOD-Specific Validation Logic",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-11",
+          "date_closed": "2025-12-15",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183814,
+          "iid": 76,
+          "title": "Update Frontend Route Configuration",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-11",
+          "date_closed": "2025-12-11",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183813,
+          "iid": 75,
+          "title": "Refactor Backend GetActionDetailsByIdAsync Method",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-11",
+          "date_closed": "2025-12-11",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183812,
+          "iid": 74,
+          "title": "Create ActionDetailsMod Component for MOD Actions",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-11",
+          "date_closed": "2025-12-11",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183811,
+          "iid": 73,
+          "title": "Create ActionDetailsNew Component for New Requirement and Recompete Actions",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 2,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-11",
+          "date_closed": "2025-12-11",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183808,
+          "iid": 72,
+          "title": "Create Base Router Component for Action Details",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2025-12-11",
+          "date_closed": "2025-12-11",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

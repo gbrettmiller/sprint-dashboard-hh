@@ -1,0 +1,117 @@
+{
+  "fiscal_year": 2026,
+  "month": 3,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 4179,
+      "title": "Third-Party Integration FY262-4",
+      "start_date": "2026-02-18",
+      "end_date": "2026-03-03",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 0,
+        "weight": 0
+      },
+      "burndown": [
+        {
+          "date": "2026-02-18",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-19",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-20",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-21",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-22",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-23",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-24",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-25",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-26",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-27",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-28",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-03-01",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-03-02",
+          "remaining_count": 1,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-03-03",
+          "remaining_count": 1,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 1
+      },
+      "completed": {
+        "count": 0,
+        "weight": 0
+      },
+      "issues": [
+        {
+          "id": 169556,
+          "iid": 47,
+          "title": "RELAY CI/CD Pipeline - TEST",
+          "project_id": 91003,
+          "project_name": "relay",
+          "weight": 0,
+          "state": "opened",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-03-02",
+          "date_closed": null,
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

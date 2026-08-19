@@ -1,0 +1,38 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "pulse",
+  "month": "2026-07",
+  "generated_at": "2026-08-01T06:09:16.800969Z",
+  "sprints": [
+    {
+      "title": "v5.1.5",
+      "start_date": "2026-06-25",
+      "end_date": "2026-07-09",
+      "goals": "This sprint focused on modernizing the platform's technical foundation while addressing critical data integrity and performance issues, and expanding administrative and reporting capabilities to better serve post-award operations.",
+      "summary": "The team upgraded the entire codebase to .NET 10 LTS and aligned all NuGet dependencies to establish a stable foundation for future development. Critical fixes resolved a tempDB exhaustion issue in action-list queries, corrected permission scoping in lookup item editors, and remedied display issues in the Type of Funding administration section. Feature work streamlined program management structures by consolidating PM roles, enhanced the action list with new reportable columns including RFP Release Date Revised and Total Funded Amount, and improved data model hygiene by formalizing LOE_ID as a core concept and standardizing lookup mapping conventions. Infrastructure improvements including foreign key indexing and refined delete behavior protect data integrity across the system.",
+      "metrics": {
+        "initial_count": 11,
+        "initial_weight": 30,
+        "completed_count": 11,
+        "completed_weight": 30,
+        "initial_breakdown": "4 Improvements, 3 Bugs, 2 New Features, 1 Devops, 1 Refactor",
+        "completed_breakdown": "4 Improvements, 3 Bugs, 2 New Features, 1 Devops, 1 Refactor"
+      }
+    },
+    {
+      "title": "v5.1.6",
+      "start_date": "2026-07-15",
+      "end_date": "2026-07-28",
+      "goals": "This sprint aimed to improve system reliability and user experience by strengthening data integrity controls, enhancing visibility into system activity, and streamlining navigation and administrative workflows. We focused on reducing friction in common user tasks while ensuring the lookup reference data layer remains consistent and maintainable.",
+      "summary": "We completed six interconnected improvements that address both operational robustness and user experience. The team implemented a real-time notification system for record updates with a recently-modified records list, enabling users to stay informed of changes affecting their work. On the data integrity side, we introduced idempotent lookup seeding to prevent duplication issues during system initialization and added a uniqueness constraint to the spend category mapping table to enforce data consistency. Three UX enhancements\u2014an admin dashboard with quick-access shortcuts, progress feedback for data exports, and breadcrumb navigation across main views\u2014reduce cognitive load and help users navigate the system more intuitively. Together, these changes make the system more trustworthy, transparent, and efficient to use.",
+      "metrics": {
+        "initial_count": 6,
+        "initial_weight": 19,
+        "completed_count": 6,
+        "completed_weight": 19,
+        "initial_breakdown": "5 Improvements, 1 New Feature",
+        "completed_breakdown": "5 Improvements, 1 New Feature"
+      }
+    }
+  ]
+}

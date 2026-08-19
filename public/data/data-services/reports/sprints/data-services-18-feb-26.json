@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-18-feb-26",
+  "title": "Data Services 18 FEB 26",
+  "start_date": "2026-02-04",
+  "end_date": "2026-02-18",
+  "generated_at": "2026-07-02T21:56:49.065624Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on stabilizing core functionality across multiple applications by resolving critical navigation and form rendering issues, while advancing the Compliance Review platform toward full consortium deployment. The team prioritized user experience improvements and configuration readiness to support ongoing testing across all consortium member environments.",
+    "summary": "The team completed 34 work items spanning five major applications, addressing a mix of critical defects and feature enhancements that collectively improve application usability and operational capability. Key accomplishments include resolving form navigation issues in Access Requests, establishing organizational hierarchy support in Compliance Review for multi-level record management, deploying Records API to the Region C test environment with corrected filtering and routing workflows, and advancing Catalog Sync toward production readiness through UI refinements and feature completion. The sprint also delivered Compliance Review configuration to all consortium test sites and created specialized reporting capabilities for enterprise stakeholders, positioning the platforms for broader testing and validation across the organization.",
+    "metrics": {
+      "initial_count": 35,
+      "initial_weight": 69,
+      "completed_count": 35,
+      "completed_weight": 69,
+      "initial_breakdown": "18 Improvements, 10 Others, 7 New Features",
+      "completed_breakdown": "18 Improvements, 10 Others, 7 New Features"
+    }
+  }
+}

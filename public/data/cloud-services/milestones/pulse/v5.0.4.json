@@ -1,0 +1,113 @@
+{
+  "milestone_title": "v5.0.4",
+  "milestone_id": 1966,
+  "slug": "v5.0.4",
+  "project_id": 91002,
+  "project_name": "PULSE",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:38.318007Z",
+  "issues": [
+    {
+      "id": 156099,
+      "iid": 563,
+      "title": "Remove Mandatory ActionItemId and FkOneNlistId Parameters from Comments Endpoints",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "governance-board::july",
+        "jira-import::PULSE-1",
+        "type::Improvement"
+      ],
+      "description": "## Summary\nModify the `AllComments` and `PmMustHaveAwardDateRevisedReason` endpoints so that `ActionItemId` and `FkOneNlistId` are optional query filters rather than required parameters.\n\n## Acceptance Criteria\n- [ ] `AllComments` endpoint no longer requires `ActionItemId` as a mandatory parameter\n- [ ] `PmMustHaveAwardDateRevisedReason` endpoint no longer requires `FkOneNlistId` as mandatory\n- [ ] When parameters are omitted, the endpoint returns all records accessible to the requesting org\n- [ ] When parameters are provided, the existing filtering behavior is fully preserved (backward-compatible)\n- [ ] Unit tests are added covering requests both with and without each optional parameter\n- [ ] Swagger annotations and API documentation are updated to reflect the parameters as optional"
+    },
+    {
+      "id": 156103,
+      "iid": 570,
+      "title": "[PULSE-191] Removing required for RFP/RPP and To/Do the red asterisk are remaining and the field remains required, but it removes the Case ID # asterisk",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "jira-import::PULSE-1",
+        "type::story"
+      ],
+      "description": "Removing required for RFP/RPP and To/Do the red asterisk are remaining and the field remains required but it removes the Case ID # asterisk\u00a0\n\n---\n\n**Issue metadata**\n\n- Issue type: Bug\n- Priority: Should Have"
+    },
+    {
+      "id": 156243,
+      "iid": 587,
+      "title": "Analyze Existing Pipeline",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "governance-board::july",
+        "type::DevOps",
+        "workflow::ready-for-release"
+      ],
+      "description": "Review the provided ORBIT GitLab pipeline script to understand its structure, stages, and dependencies.\n\n* **Tasks**:\n  * Identify stages (`tests`,\u00a0`packages`,\u00a0`cleanup`).\n  * Understand triggers and rules for each job.\n  * Note dependencies between jobs."
+    },
+    {
+      "id": 156245,
+      "iid": 588,
+      "title": "Define PULSE Workflow",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "governance-board::july",
+        "type::DevOps",
+        "workflow::ready-for-release"
+      ],
+      "description": "Map the GitLab pipeline stages and jobs to PULSE workflows.\n\n* **Tasks**:\n  * Create corresponding stages in PULSE (e.g.,\u00a0`tests`,\u00a0`packages`,\u00a0`cleanup`).\n  * Define rules for triggering jobs based on\u00a0`$CI_COMMIT_TAG`.\n  * Ensure dependencies are properly represented in PULSE."
+    },
+    {
+      "id": 156247,
+      "iid": 589,
+      "title": "Create Job Pipeline Script",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "governance-board::july",
+        "type::DevOps",
+        "workflow::ready-for-release"
+      ],
+      "description": "Set up the GitLab CI/CD pipeline to automate testing, packaging, and cleanup processes for the project. The pipeline consists of multiple stages (`tests`,\u00a0`packages`,\u00a0`cleanup`) and jobs triggered based on\u00a0`$CI_COMMIT_TAG`. This issue covers the implementation of all jobs and their dependencies as defined in the provided pipeline script.\n\n1. **Tests Stage**:\n   * **Playwright Testing**:\n     * Configure the\u00a0`test-playwright`\u00a0job to trigger based on\u00a0`$CI_COMMIT_TAG`.\n     * Include the\u00a0`.test-playwright-gitlab-ci.yml`\u00a0file.\n   * **Unit Testing**:\n     * Configure the\u00a0`test-unit`\u00a0job to trigger based on\u00a0`$CI_COMMIT_TAG`.\n     * Include the\u00a0`.test-unit-gitlab-ci.yml`\u00a0file.\n2. **Packages Stage**:\n   * **Web Application**:\n     * Configure the\u00a0`web-app`\u00a0job to package the web application.\n     * Include the\u00a0`.web-app-gitlab-ci.yml`\u00a0file.\n   * **Background Worker Service**:\n     * Configure the\u00a0`workerservice-background`\u00a0job to package the background worker service.\n     * Include the\u00a0`.workerservice-background-gitlab-ci.yml`\u00a0file.\n   * **Notification Worker Service**:\n     * Configure the\u00a0`workerservice-notification`\u00a0job to package the notification worker service.\n     * Include the\u00a0`.workerservice-notification-gitlab-ci.yml`\u00a0file.\n   * **Out-of-Office Worker Service**:\n     * Configure the\u00a0`workerservice-ooo`\u00a0job to package the out-of-office worker service.\n     * Include the\u00a0`.workerservice-ooo-gitlab-ci.yml`\u00a0file.\n   * **SQL Reporting Worker Service**:\n     * Configure the\u00a0`workerservice-sqlreporting`\u00a0job to package the SQL reporting worker service.\n     * Include the\u00a0`.workerservice-sqlreporting-gitlab-ci.yml`\u00a0file.\n3. **Cleanup Stage**:\n   * **Cleanup Job**:\n     * Configure the\u00a0`cleanup_job`\u00a0to remove cache after pipeline execution.\n     * Ensure it runs even if previous stages fail (`when: always`).\n     * Adjust the\u00a0`CACHE_PATH`\u00a0variable as needed."
+    },
+    {
+      "id": 156249,
+      "iid": 590,
+      "title": "Implement Pipeline in PULSE",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "governance-board::july",
+        "type::DevOps"
+      ],
+      "description": "Configure the pipeline in PULSE based on the defined workflow and tickets.\n\n* **Tasks**:\n  * Set up triggers and rules for each job.\n  * Ensure dependencies are correctly linked.\n  * Test the pipeline configuration."
+    },
+    {
+      "id": 156250,
+      "iid": 591,
+      "title": "Test and Validate Pipeline",
+      "weight": 8,
+      "state": "closed",
+      "labels": [
+        "governance-board::july",
+        "type::DevOps",
+        "workflow::refined"
+      ],
+      "description": "### **Description**\n\nRun the pipeline in PULSE to ensure it works as expected. This task involves testing each stage and job, validating triggers and dependencies, and debugging and fixing any issues encountered during the process.\n\n---\n\n### **Acceptance Criteria**\n\n1. All stages and jobs in the pipeline are successfully tested and validated.\n2. Triggers and dependencies are verified to function correctly.\n3. Any issues identified during testing are debugged and resolved.\n4. The pipeline is confirmed to be fully operational and reliable.\n\n---\n\n### **Tasks**\n\n1. **Pipeline Execution**\n   * Run the pipeline in PULSE to initiate testing.\n   * Monitor the execution of each stage and job.\n2. **Stage and Job Testing**\n   * Test each stage and job in the pipeline to ensure they execute as expected.\n   * Validate the outputs and results of each job.\n3. **Trigger Validation**\n   * Verify that all pipeline triggers are functioning correctly.\n   * Ensure that dependencies between stages and jobs are properly configured.\n4. **Debugging**\n   * Identify any issues or failures during pipeline execution.\n   * Debug and resolve errors in the pipeline configuration, scripts, or dependencies.\n5. **Re-Testing**\n   * Re-run the pipeline after fixing issues to confirm that the problems are resolved.\n   * Validate the pipeline's functionality across multiple runs.\n\n---\n\n### **Additional Notes**\n\n* Ensure the pipeline is tested in both staging and production environments to validate its behavior under different conditions.\n* Communicate the results of the testing process to stakeholders and provide recommendations for further improvements if necessary.\n* Consider adding automated tests to the pipeline to streamline future validation efforts."
+    },
+    {
+      "id": 156251,
+      "iid": 592,
+      "title": "Pipeline Documentation",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "governance-board::july",
+        "type::DevOps",
+        "workflow::refined"
+      ],
+      "description": "### **Description**\n\nDocument the pipeline setup and workflow in PULSE to ensure future maintainability and ease of updates. The documentation should include detailed instructions for maintaining and updating the pipeline, as well as troubleshooting steps to address common issues.\n\n---\n\n### **Acceptance Criteria**\n\n1. Comprehensive documentation is created for the pipeline setup and workflow in PULSE.\n2. The documentation includes clear instructions for maintaining and updating the pipeline.\n3. Troubleshooting steps are provided to address common issues.\n4. The documentation is reviewed and approved by relevant stakeholders.\n\n---\n\n### **Tasks**\n\n1. **Pipeline Overview**\n   * Provide an overview of the pipeline setup, including its purpose and key components.\n   * Include diagrams or flowcharts to illustrate the workflow.\n2. **Setup Instructions**\n   * Write step-by-step instructions for setting up the pipeline in PULSE.\n   * Include details on configuration, dependencies, and environment requirements.\n3. **Maintenance Guidelines**\n   * Document best practices for maintaining the pipeline.\n   * Include instructions for updating pipeline components, such as scripts, configurations, or dependencies.\n4. **Troubleshooting Steps**\n   * Identify common issues that may arise during pipeline execution.\n   * Provide clear troubleshooting steps to resolve these issues.\n   * Include examples of error messages and their resolutions.\n5. **Testing and Validation**\n   * Document the process for testing and validating the pipeline after updates or changes.\n   * Include instructions for running test cases and verifying results.\n6. **Version Control**\n   * Provide guidelines for managing pipeline changes using version control systems (e.g., Git).\n   * Include instructions for creating branches, committing changes, and merging updates.\n7. **Review and Approval**\n   * Share the documentation with relevant stakeholders for review and feedback.\n   * Incorporate feedback and finalize the documentation.\n\n---\n\n### **Additional Notes**\n\n* Ensure the documentation is clear, concise, and easy to follow.\n* Use consistent formatting and include examples where applicable.\n* Store the documentation in a centralized location accessible to all relevant team members."
+    }
+  ]
+}

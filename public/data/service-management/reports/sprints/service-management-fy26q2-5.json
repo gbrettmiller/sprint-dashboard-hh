@@ -1,0 +1,22 @@
+{
+  "group_slug": "service-management",
+  "project_slug": null,
+  "milestone_slug": "service-management-fy26q2-5",
+  "title": "Service Management FY26Q2-5",
+  "start_date": "2026-03-14",
+  "end_date": "2026-03-27",
+  "generated_at": "2026-07-10T21:41:24.054151Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on improving data consistency and usability across the Service Management platform by enhancing field visibility, adding critical asset tracking attributes, and aligning system workflows with business processes. The work targeted both the M2S and Fulfillment modules to streamline incident management and asset configuration capabilities.",
+    "summary": "The team completed twelve improvements that strengthen the incident and asset management experience, including the addition of installed date tracking for assets, new financial data categorization for incident records, and enhanced part identification through the addition of part number fields. Critical fixes were also delivered to resolve asset tag population issues on incidents and to ensure resolution codes are automatically set when incident states change to closed, while access controls were tightened on the parts table and system lists were reconciled to eliminate data inconsistencies. These changes reduce manual data entry errors, improve financial visibility, and create a more reliable foundation for downstream reporting and compliance workflows.",
+    "metrics": {
+      "initial_count": 12,
+      "initial_weight": 28,
+      "completed_count": 12,
+      "completed_weight": 28,
+      "initial_breakdown": "12 Others",
+      "completed_breakdown": "12 Others"
+    }
+  }
+}

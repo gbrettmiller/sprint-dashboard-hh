@@ -1,0 +1,38 @@
+{
+  "group_slug": "service-management",
+  "project_slug": null,
+  "month": "2026-02",
+  "generated_at": "2026-07-10T21:41:42.087063Z",
+  "sprints": [
+    {
+      "title": "Service Management FY26Q2-3",
+      "start_date": "2026-02-04",
+      "end_date": "2026-02-18",
+      "goals": "This sprint aimed to enhance incident management workflows across multiple systems by streamlining data presentation, improving notification capabilities, and expanding asset management functionality. The team focused on removing unnecessary fields from user views, automating stakeholder communications, and integrating financial data management into parts workflows.",
+      "summary": "The team completed eight significant improvements to the Service Management platform spanning incident management, asset tracking, and financial operations. Work included refining the incident view interface by removing redundant fields, implementing automated notifications to both ticket submitters and resolution contacts to improve transparency, adding program tracking to hardware records, and establishing a new workflow to automatically populate parts financial data from reference tables. These changes collectively reduce manual data entry, improve communication with end users, enhance asset visibility across the organization, and streamline financial tracking for spare parts management.",
+      "metrics": {
+        "initial_count": 8,
+        "initial_weight": 24,
+        "completed_count": 8,
+        "completed_weight": 24,
+        "initial_breakdown": "6 Improvements, 2 New Features",
+        "completed_breakdown": "6 Improvements, 2 New Features"
+      }
+    },
+    {
+      "title": "Service Management FY26Q2-4",
+      "start_date": "2026-02-19",
+      "end_date": "2026-03-13",
+      "goals": "This sprint focused on completing critical data integrity updates across the Intake asset management system while ensuring platform stability following the ServiceNow Zurich upgrade. The team aimed to populate missing asset and incident data across multiple location tables and resolve any application issues introduced by the upgrade.",
+      "summary": "The team successfully completed multiple data remediation initiatives across the Intake system, populating program fields for BackupNav hardware assets and updating location and incident data tables for both NavHub and NavPod environments. Two significant asset loads were processed for NavPod GEN II hardware at different locations and timeframes, and a comprehensive location field reference update was applied across both the Incident and GPS Hardware tables to ensure data consistency. Following the ServiceNow Zurich platform upgrade, the team validated application functionality across development, test, and production environments, resolving identified issues to maintain service continuity. These completions strengthen data accuracy across the asset management infrastructure and confirm platform readiness for ongoing operations.",
+      "metrics": {
+        "initial_count": 11,
+        "initial_weight": 47,
+        "completed_count": 11,
+        "completed_weight": 47,
+        "initial_breakdown": "6 Improvements, 5 New Features",
+        "completed_breakdown": "6 Improvements, 5 New Features"
+      }
+    }
+  ]
+}

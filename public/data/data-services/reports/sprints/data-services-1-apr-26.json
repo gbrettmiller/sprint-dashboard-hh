@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-1-apr-26",
+  "title": "Data Services 1 APR 26",
+  "start_date": "2026-03-18",
+  "end_date": "2026-04-01",
+  "generated_at": "2026-07-02T21:57:00.998250Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on advancing multiple application platforms toward production readiness while addressing critical UI and workflow issues across the Data Services ecosystem. The team prioritized stability improvements, organizational hierarchy fixes, and new feature deployment across Access Requests, Compliance Review, Purchasing, and support applications.",
+    "summary": "The sprint delivered 34 completed items spanning production deployments, scaling and display fixes, and foundational architectural work. Key accomplishments include full Access Requests production deployment with enhanced form functionality and funding source controls, Compliance Review production dashboard launch with multi-level organizational support and document tracking, and the initial framework for the new Purchasing application. The team also resolved critical UI rendering issues affecting icon and button display at various screen sizes, corrected email targeting in approval workflows, and implemented security group and role updates across all environments. Together, these changes improve operational efficiency across records management, request approvals, procurement, and in-processing workflows while enhancing system stability and user experience.",
+    "metrics": {
+      "initial_count": 32,
+      "initial_weight": 66,
+      "completed_count": 32,
+      "completed_weight": 66,
+      "initial_breakdown": "17 Others, 12 Improvements, 3 New Features",
+      "completed_breakdown": "17 Others, 12 Improvements, 3 New Features"
+    }
+  }
+}

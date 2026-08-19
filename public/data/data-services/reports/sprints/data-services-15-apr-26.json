@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-15-apr-26",
+  "title": "Data Services 15 APR 26",
+  "start_date": "2026-04-01",
+  "end_date": "2026-04-15",
+  "generated_at": "2026-07-02T21:57:05.204872Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint aimed to stabilize core platform infrastructure across multiple applications while advancing three major feature initiatives: the Software License Tracker application build-out, the Compliance Review functionality improvements, and organizational restructuring across Baseline systems to reflect current org structure and staff assignments.",
+    "summary": "The team completed thirty-three issues spanning infrastructure updates, bug fixes, and new feature development across four major systems. Significant progress was made on the Software License Tracker, bringing the application from initial setup through UI build-out and request form functionality. The Compliance Review received critical fixes addressing document upload, attribute updates, and library mapping challenges, while also implementing reporting integration and group population for records management oversight. Platform maintenance work modernized naming conventions and organizational structures across Baseline applications to align with current Division-to-Business Unit transitions, and the Purchasing module launched new home screen and administrative screens to support software licensing workflows. These deliverables collectively enhance operational efficiency, strengthen data governance, and establish foundational architecture for downstream feature work.",
+    "metrics": {
+      "initial_count": 33,
+      "initial_weight": 73,
+      "completed_count": 33,
+      "completed_weight": 73,
+      "initial_breakdown": "16 Improvements, 11 Others, 6 Bugs",
+      "completed_breakdown": "16 Improvements, 11 Others, 6 Bugs"
+    }
+  }
+}

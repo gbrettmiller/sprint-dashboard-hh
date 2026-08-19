@@ -1,0 +1,23 @@
+{
+  "group_slug": "service-management",
+  "project_slug": null,
+  "month": "2026-06",
+  "generated_at": "2026-07-10T21:41:42.088183Z",
+  "sprints": [
+    {
+      "title": "Service Management FY26Q3-5",
+      "start_date": "2026-06-03",
+      "end_date": "2026-06-23",
+      "goals": "This sprint focused on enhancing the Intake inventory and incident management capabilities while improving organizational data governance across multiple systems. The team worked to strengthen consumable asset tracking, streamline incident workflows, and expand configuration options for multi-organizational support.",
+      "summary": "The team completed a comprehensive set of enhancements to the Intake module, including the ability to link and filter consumables by program, populate vehicle information from consumable models, and support multiple consumable items of the same type within incidents. Additionally, the sprint delivered resolution code functionality and extended the M2S system with organizational flags and secondary organization updates for the OpsNet pilot. The Asset Load capability was expanded to support Site 6 assets with NavHub GEN II data, and a new Consumable Asset table was added to workspace lists to improve visibility and data accessibility. These improvements collectively enhance operational efficiency by providing better asset traceability, cleaner organizational workflows, and more granular inventory management for field and support teams.",
+      "metrics": {
+        "initial_count": 11,
+        "initial_weight": 33,
+        "completed_count": 11,
+        "completed_weight": 33,
+        "initial_breakdown": "9 Improvements, 2 New Features",
+        "completed_breakdown": "9 Improvements, 2 New Features"
+      }
+    }
+  ]
+}

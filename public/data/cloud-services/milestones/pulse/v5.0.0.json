@@ -1,0 +1,35 @@
+{
+  "milestone_title": "v5.0.0",
+  "milestone_id": 1963,
+  "slug": "v5.0.0",
+  "project_id": 91002,
+  "project_name": "PULSE",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:34.549242Z",
+  "issues": [
+    {
+      "id": 155692,
+      "iid": 128,
+      "title": "Convert PULSE from .Net 4.8 to .Net 7",
+      "weight": 156,
+      "state": "closed",
+      "labels": [
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": "Convert PULSE to .Net Core\n\n---\n\n**Issue metadata**\n\n- Issue type: Improvement\n- Priority: Medium"
+    },
+    {
+      "id": 155612,
+      "iid": 234,
+      "title": "Update build documentation.",
+      "weight": 13,
+      "state": "closed",
+      "labels": [
+        "Type: Task",
+        "type::New Feature"
+      ],
+      "description": "Update build documentation for PULSE incorporating the PULSE API and updating the current documentation to the latest release.\u00a0\n\n---\n\n**Issue metadata**\n\n- Issue type: Task"
+    }
+  ]
+}

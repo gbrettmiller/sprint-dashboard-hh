@@ -1,0 +1,253 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "orbit",
+  "milestone_slug": "v3.3.2",
+  "title": "v3.3.2",
+  "start_date": "2026-05-07",
+  "end_date": "2026-05-21",
+  "generated_at": "2026-06-30T21:59:49.720948Z",
+  "test_plan": [
+    {
+      "iid": 1273,
+      "title": "Add Cancel button to Customer Contracts Create form",
+      "steps": "- Navigate to the Customer Contracts Create form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and verify you are returned to the previous page without a confirmation prompt\n- Enter data into one or more fields on the form, click Cancel, and verify the confirmation modal appears warning that progress will be lost\n- In the confirmation modal, click the confirm/OK button and verify you are returned to the previous page without saving changes\n- Repeat step 3, but dismiss/close the modal instead and verify you remain on the form with all entered data intact"
+    },
+    {
+      "iid": 1274,
+      "title": "Add Cancel button to Customer Contracts Edit form",
+      "steps": "- Navigate to the Customer Contracts Edit form and verify a Cancel button is visible on the form\n- Click Cancel without entering any data and confirm you are returned to the previous page without saving changes\n- Enter data into one or more fields, click Cancel, and verify the confirmation modal is displayed warning that progress will be lost\n- In the confirmation modal, click confirm and verify you are returned to the previous page without saving changes\n- Re-enter data into fields, click Cancel, dismiss the modal, and verify you remain on the form with your entered data intact"
+    },
+    {
+      "iid": 1275,
+      "title": "Add Cancel button to Customer Vendor Accounts Create form",
+      "steps": "- Navigate to the Customer Vendor Accounts Create form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and confirm you are returned to the previous page without a confirmation modal\n- Enter data into one or more fields, click Cancel, and verify the confirmation modal appears warning that progress will be lost\n- In the confirmation modal, click confirm and verify you are returned to the previous page without saving the entered data\n- Enter data into one or more fields, click Cancel, dismiss the confirmation modal, and verify you remain on the form with all entered data intact"
+    },
+    {
+      "iid": 1276,
+      "title": "Add Cancel button to Customer Vendor Accounts Edit form",
+      "steps": "- Navigate to the Customer Vendor Accounts Edit form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and verify you are returned to the previous page without saving changes\n- Navigate back to the Customer Vendor Accounts Edit form, enter data into one or more fields, and click Cancel to verify the confirmation modal appears\n- In the confirmation modal, click the confirm button and verify you are returned to the previous page without saving changes\n- Navigate back to the Customer Vendor Accounts Edit form, enter data, click Cancel, and dismiss the modal to verify you remain on the form with your data intact"
+    },
+    {
+      "iid": 1277,
+      "title": "Add Cancel button to Customer Work Site Create form",
+      "steps": "- Navigate to the Customer Work Site Create form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and verify you are returned to the previous page without saving changes\n- Navigate back to the Customer Work Site Create form, enter data into one or more fields, and click Cancel to verify the confirmation modal is displayed\n- In the confirmation modal, click confirm and verify you are returned to the previous page without saving changes\n- Navigate back to the Customer Work Site Create form, enter data, click Cancel, and dismiss the modal to verify you remain on the form with your data intact"
+    },
+    {
+      "iid": 1278,
+      "title": "Add Cancel button to Customer Work Site Edit form and fix incorrect page heading",
+      "steps": "- Navigate to a Customer Work Site record and open the Edit form, then verify the page heading reads \"Edit Work Site\" and not \"Create Work Site\"\n- Locate and confirm the Cancel button is visible on the Customer Work Site Edit form\n- Click Cancel without entering any data and verify you are returned to the previous page without saving changes\n- Enter data into one or more fields, click Cancel, and verify a confirmation modal appears warning that progress will be lost\n- In the confirmation modal, click confirm and verify return to the previous page; then repeat the test, dismiss the modal instead and verify you remain on the form with data intact"
+    },
+    {
+      "iid": 1279,
+      "title": "Add Cancel button to Customer Layers Create form and fix incorrect page heading",
+      "steps": "- Navigate to the Customer Layers Create form and verify the page heading reads \"Create Layer\" and not \"Edit Layer\"\n- Verify the Cancel button is visible on the Customer Layers Create form\n- Click Cancel without entering any data and confirm you are returned to the previous page without saving changes\n- Enter data into one or more fields, click Cancel, and verify the confirmation modal is displayed warning that progress will be lost\n- On the confirmation modal, click confirm and verify you are returned to the previous page; then repeat the previous step but dismiss the modal and verify you remain on the form with data intact"
+    },
+    {
+      "iid": 1280,
+      "title": "Add Cancel button to Customer Layers Edit form and fix incorrect page heading",
+      "steps": "- Navigate to the Customer Layers Edit form and verify the page heading displays \"Edit Layer\" and not \"Create Layer\"\n- Confirm the Cancel button is visible on the Customer Layers Edit form\n- Click Cancel without entering any data and verify you are returned to the previous page\n- Enter data into one or more fields, click Cancel, and verify the confirmation modal is displayed\n- In the confirmation modal, click confirm and verify you return to the previous page without saving; then repeat the test, dismiss the modal, and verify you remain on the form with data intact"
+    },
+    {
+      "iid": 1281,
+      "title": "Add Cancel button to Customer Layer Names Edit form",
+      "steps": "- Navigate to the Customer Layer Names Edit form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and confirm you are returned to the previous page without saving changes\n- Enter data into one or more fields on the form, click Cancel, and verify the confirmation modal is displayed warning that progress will be lost\n- In the confirmation modal, click confirm and verify you are returned to the previous page without saving changes\n- Enter data into fields again, click Cancel, dismiss the modal, and verify you remain on the form with your entered data intact"
+    },
+    {
+      "iid": 1282,
+      "title": "Add Cancel button to Customer Matrix Org Edit form and fix incorrect page heading",
+      "steps": "- Navigate to the Customer Matrix Org Edit form and verify the page heading reads \"Edit Matrix Org\" (not \"Add Matrix Org\")\n- Confirm the Cancel button is visible on the form\n- Click Cancel without entering any data and verify you are returned to the previous page\n- Enter data into one or more fields, click Cancel, and verify a confirmation modal appears warning about unsaved changes\n- On the confirmation modal, click confirm and verify you return to the previous page without saving; then repeat the test and dismiss the modal to verify you remain on the form with data intact"
+    },
+    {
+      "iid": 1283,
+      "title": "Add Cancel button to Customer Matrix Org Create form and fix incorrect page heading",
+      "steps": "- Navigate to the Customer Matrix Org Create form and verify the page heading reads \"Create Matrix Org\" (not \"Edit Matrix Org\")\n- Verify a Cancel button is visible on the form\n- Click Cancel without entering any data and confirm you are returned to the previous page without saving\n- Enter data into one or more form fields, click Cancel, and verify the confirmation modal appears warning that progress will be lost\n- Click \"Confirm\" on the modal and verify you are returned to the previous page; then repeat the test clicking \"Dismiss\" and verify you remain on the form with your data intact"
+    },
+    {
+      "iid": 1284,
+      "title": "Add Cancel button to Customer Modules Edit form",
+      "steps": "- Navigate to the Customer Modules Edit form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and confirm you are returned to the previous page without saving changes\n- Enter data into one or more fields on the Customer Modules Edit form, click Cancel, and verify the confirmation modal is displayed\n- On the confirmation modal, click confirm and verify you are returned to the previous page without saving changes\n- Re-enter data on the Customer Modules Edit form, click Cancel, dismiss the modal, and verify you remain on the form with your data intact"
+    },
+    {
+      "iid": 1285,
+      "title": "Add Cancel button to Customer POC form",
+      "steps": "- Verify the Cancel button is visible and accessible on the Customer POC form\n- Click Cancel with no data entered and confirm immediate navigation to the previous page\n- Enter data into one or more fields, click Cancel, and verify the confirmation modal appears\n- Click confirm on the modal and verify return to the previous page without saving data\n- Enter data, click Cancel, dismiss the modal, and verify data remains intact on the form"
+    },
+    {
+      "iid": 1286,
+      "title": "Add Cancel button to Customer Reports Edit form",
+      "steps": "- Verify the Cancel button is visible and properly positioned on the Customer Reports Edit form\n- Navigate to the Customer Reports Edit form, make no changes, click Cancel, and confirm you are returned to the previous page without a confirmation prompt\n- Navigate to the Customer Reports Edit form, enter data in one or more fields, click Cancel, and verify the confirmation modal appears\n- From the confirmation modal, click confirm and verify you are returned to the previous page without saving the entered data\n- From the confirmation modal, dismiss it and verify you remain on the form with all entered data intact"
+    },
+    {
+      "iid": 1287,
+      "title": "Add Cancel button to Customer Reports Create form and fix incorrect page heading",
+      "steps": "- Navigate to the Customer Reports Create form and verify the page heading displays \"Create Report\" (not \"Edit Report\")\n- Verify the Cancel button is visible on the form\n- Click Cancel without entering any data and confirm you are returned to the previous page\n- Enter data into one or more fields, click Cancel, and verify the confirmation modal appears warning that progress will be lost\n- On the confirmation modal, click confirm and verify you are returned to the previous page without saving; then repeat the test clicking dismiss and verify you remain on the form with data intact"
+    },
+    {
+      "iid": 1288,
+      "title": "Add Cancel button to Customer Role Edit form",
+      "steps": "- Verify the Cancel button is visible and properly positioned on the Customer Role Edit form\n- Navigate to the form with no data entered, click Cancel, and confirm immediate return to the previous page without a confirmation prompt\n- Enter data into one or more fields on the form, click Cancel, and verify the confirmation modal appears with the appropriate warning message\n- In the confirmation modal, click the confirm/proceed button and verify return to the previous page without saving the entered data\n- In the confirmation modal, click the dismiss/close button and verify remaining on the form with all entered data intact"
+    },
+    {
+      "iid": 1289,
+      "title": "Add Cancel button to Customer Role Create form",
+      "steps": "- Navigate to the Customer Role Create form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and verify you are returned to the previous page without saving changes\n- Navigate back to the Customer Role Create form, enter data into one or more fields, and click Cancel to verify the confirmation modal is displayed\n- In the confirmation modal, click confirm and verify you are returned to the previous page without saving changes\n- Navigate back to the Customer Role Create form, enter data, click Cancel, then dismiss the modal and verify you remain on the form with your data intact"
+    },
+    {
+      "iid": 1290,
+      "title": "Add Cancel button to Customer Software License form",
+      "steps": "- Navigate to the Customer Software License form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and confirm you are returned to the previous page without saving changes\n- Enter data into one or more form fields, click Cancel, and verify the confirmation modal is displayed warning that progress will be lost\n- In the confirmation modal, click the confirm option and verify you are returned to the previous page without saving changes\n- Enter data into form fields, click Cancel, dismiss the confirmation modal, and verify you remain on the form with all entered data intact"
+    },
+    {
+      "iid": 1291,
+      "title": "Add Cancel button to Customer Task Edit form",
+      "steps": "- Navigate to the Customer Task Edit form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and confirm you are returned to the previous page without saving changes\n- Navigate back to the Customer Task Edit form, enter data into one or more fields, click Cancel, and verify the confirmation modal appears\n- In the confirmation modal, click confirm and verify you are returned to the previous page without saving changes\n- Navigate back to the Customer Task Edit form, enter data, click Cancel, dismiss the modal, and verify you remain on the form with your data intact"
+    },
+    {
+      "iid": 1292,
+      "title": "Add Cancel button to Customer Task Create form",
+      "steps": "- Navigate to the Customer Task Create form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and verify you are returned to the previous page without saving changes\n- Navigate back to the Customer Task Create form, enter data into one or more fields, click Cancel, and verify the confirmation modal is displayed\n- In the confirmation modal, confirm the cancellation and verify you are returned to the previous page without saving changes\n- Navigate back to the Customer Task Create form, enter data, click Cancel, dismiss the modal, and verify you remain on the form with your data intact"
+    },
+    {
+      "iid": 1293,
+      "title": "Add Cancel button to Customer Employee Data Upload form",
+      "steps": "- Navigate to the Customer Employee Data Upload form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and confirm you are returned to the previous page without a confirmation prompt\n- Enter data into one or more fields, click Cancel, and verify the confirmation modal is displayed warning that progress will be lost\n- In the confirmation modal, click confirm and verify you are returned to the previous page without completing the upload\n- Return to the form, enter data again, click Cancel, dismiss the modal, and verify you remain on the form with your data intact"
+    },
+    {
+      "iid": 1294,
+      "title": "Add Cancel button to Customer Bulk Transfer form",
+      "steps": "- Navigate to the Customer Bulk Transfer form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and confirm you are returned to the previous page without a confirmation prompt\n- Enter data into one or more fields, click Cancel, and verify the confirmation modal is displayed warning that progress will be lost\n- In the confirmation modal, click confirm and verify you are returned to the previous page without saving changes\n- Navigate back to the Customer Bulk Transfer form, enter data, click Cancel, dismiss the modal, and verify you remain on the form with your data intact"
+    },
+    {
+      "iid": 1295,
+      "title": "Add Cancel button to Federal Holiday Create form",
+      "steps": "- Navigate to the Federal Holiday Create form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and verify you are returned to the previous page without saving changes\n- Navigate back to the Federal Holiday Create form, enter data into one or more fields, click Cancel, and verify the confirmation modal is displayed\n- In the confirmation modal, click confirm and verify you are returned to the previous page without saving changes\n- Navigate back to the Federal Holiday Create form, enter data, click Cancel, dismiss the modal, and verify you remain on the form with your data intact"
+    },
+    {
+      "iid": 1296,
+      "title": "Add Cancel button to Federal Holiday Edit form",
+      "steps": "- Navigate to the Federal Holiday Edit form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and confirm you are returned to the previous page without saving changes\n- Re-enter the Federal Holiday Edit form, enter data into one or more fields, click Cancel, and verify the confirmation modal is displayed\n- From the confirmation modal, click confirm and verify you are returned to the previous page without saving changes\n- Re-enter the Federal Holiday Edit form, enter data, click Cancel, dismiss the modal, and verify you remain on the form with your entered data intact"
+    },
+    {
+      "iid": 1297,
+      "title": "Add Cancel button to Time Zone Edit form",
+      "steps": "- Navigate to the Time Zone Edit form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and confirm you are returned to the previous page without saving changes\n- Navigate back to the Time Zone Edit form, enter data into one or more fields, click Cancel, and verify the confirmation modal is displayed\n- In the confirmation modal, click confirm and verify you are returned to the previous page without saving changes\n- Navigate back to the Time Zone Edit form, enter data, click Cancel, dismiss the modal in the confirmation dialog, and verify you remain on the form with your data intact"
+    },
+    {
+      "iid": 1298,
+      "title": "Add Cancel button to App Admin Add form",
+      "steps": "- Navigate to the App Admin Add form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and verify you are returned to the previous page without a confirmation prompt\n- Enter data into one or more fields on the App Admin Add form, click Cancel, and verify the confirmation modal is displayed\n- On the confirmation modal, click confirm and verify you are returned to the previous page without saving changes\n- Enter data on the App Admin Add form, click Cancel, then dismiss the confirmation modal and verify you remain on the form with data intact"
+    },
+    {
+      "iid": 1299,
+      "title": "Add Cancel button to App Admin Edit form",
+      "steps": "- Navigate to the App Admin Edit form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and verify you are returned to the previous page without saving changes\n- Enter data into one or more fields on the App Admin Edit form, click Cancel, and verify the confirmation modal is displayed\n- On the confirmation modal, click confirm and verify you are returned to the previous page without saving changes\n- Enter data into one or more fields, click Cancel to display the confirmation modal, dismiss the modal, and verify you remain on the form with your data intact"
+    },
+    {
+      "iid": 1302,
+      "title": "Add Cancel button to Edit Employee form",
+      "steps": "- Navigate to a Position Assignment and open Edit Employee to verify the Cancel button is visible on the form\n- Click Cancel without entering any data and confirm you are returned to the previous page without saving changes\n- Enter data into one or more fields, click Cancel, and verify the confirmation modal appears warning that progress will be lost\n- In the confirmation modal, click confirm and verify you are returned to the previous page without saving changes\n- Enter data into fields, click Cancel, dismiss the modal, and verify you remain on the Edit Employee form with all entered data intact"
+    },
+    {
+      "iid": 1303,
+      "title": "Add Cancel button to Create Employee form",
+      "steps": "- Navigate to the Create Employee form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and confirm you are returned to the previous page without saving changes\n- Enter data into one or more fields on the Create Employee form, click Cancel, and verify the confirmation modal is displayed\n- On the confirmation modal, click the confirm/proceed button and verify you are returned to the previous page without saving changes\n- Re-enter data on the Create Employee form, click Cancel, dismiss the confirmation modal, and verify you remain on the form with your data intact"
+    },
+    {
+      "iid": 1304,
+      "title": "Add Cancel button to Create Notification Group form",
+      "steps": "- Navigate to the Create Notification Group form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and confirm you are returned to the previous page without saving changes\n- Navigate back to the Create Notification Group form, enter data into one or more fields, click Cancel, and verify the confirmation modal is displayed\n- In the confirmation modal, click confirm and verify you are returned to the previous page without saving changes\n- Navigate back to the Create Notification Group form, enter data, click Cancel, dismiss the confirmation modal, and verify you remain on the form with your entered data intact"
+    },
+    {
+      "iid": 1305,
+      "title": "Add Cancel button to Edit Notification Group form",
+      "steps": "- Navigate to the Edit Notification Group form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and confirm you are returned to the previous page without saving changes\n- Enter data into one or more fields, click Cancel, and verify the confirmation modal is displayed warning that progress will be lost\n- In the confirmation modal, click confirm and verify you are returned to the previous page without saving changes\n- Enter data into fields, click Cancel, dismiss the modal, and verify you remain on the form with your entered data intact"
+    },
+    {
+      "iid": 1306,
+      "title": "Fix Cancel button styling and wire confirmation modal on Create, Edit, and View Scenario forms",
+      "steps": "- Verify Cancel button styling matches application design standards on Create Scenario form\n- Verify Cancel button styling matches application design standards on Edit Scenario form\n- Click Cancel on Create/Edit form with no data entered and confirm return to previous page\n- Enter data in form fields, click Cancel, and verify confirmation modal displays with data loss warning\n- In confirmation modal, click confirm and verify return to previous page without saving\n- In confirmation modal, click dismiss and verify user remains on form with data intact"
+    },
+    {
+      "iid": 1307,
+      "title": "Add Cancel button to Create Future CheckIn form",
+      "steps": "- Navigate to the Create Future CheckIn form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and confirm you are returned to the previous page without saving\n- Enter data into one or more fields, click Cancel, and verify the confirmation modal is displayed warning that progress will be lost\n- On the confirmation modal, click confirm and verify you are returned to the previous page without saving changes\n- Navigate back to the Create Future CheckIn form, enter data, click Cancel, dismiss the modal, and verify you remain on the form with your entered data intact"
+    },
+    {
+      "iid": 1308,
+      "title": "Add Cancel button to Edit Future CheckIn form",
+      "steps": "- Navigate to the Edit Future CheckIn form and verify the Cancel button is visible on the form\n- Click Cancel without entering any data and confirm you are returned to the previous page without saving changes\n- Re-enter the Edit Future CheckIn form, enter data into one or more fields, click Cancel, and verify the confirmation modal is displayed\n- In the confirmation modal, click confirm and verify you are returned to the previous page without saving changes\n- Re-enter the Edit Future CheckIn form, enter data, click Cancel, dismiss the modal in the confirmation prompt, and verify you remain on the form with your data intact"
+    },
+    {
+      "iid": 1312,
+      "title": "Show Company Name for existing Company Lead roles",
+      "steps": "- Navigate to the Create Role screen and locate a user with an existing \"Company Lead\" role\n- Verify that the role displays as \"Company Lead - [Company Name]\" with the specific company name shown\n- Locate a user with multiple Company Lead roles for different companies and confirm each role displays its respective company name (e.g., \"Company Lead - Acme, Inc.\", \"Company Lead - Ajax, LLC\")\n- Verify that other non-Company-Lead roles (e.g., Admin, Manager) display without any company name suffix\n- Confirm that the company name is accurately associated with each Company Lead role and there is no ambiguity between roles"
+    },
+    {
+      "iid": 1313,
+      "title": "Show Layer Name for existing Notification Manager roles",
+      "steps": "- Navigate to the Create Role screen for a user with an existing Notification Manager role assigned to a specific layer (e.g., HQ)\n- Verify that the role displays as \"Notification Manager - [Layer Name]\" (e.g., \"Notification Manager - HQ\")\n- Assign a user multiple Notification Manager roles for different layers and open the Create Role screen, then confirm each role shows its respective layer name (e.g., \"Notification Manager - HQ\", \"Notification Manager - DIV\")\n- Verify that a user with a Notification Manager role at the organization level displays as \"Notification Manager - [Org Name]\"\n- Confirm that non-Notification Manager roles (e.g., Administrator, Viewer) display without any layer name modification"
+    },
+    {
+      "iid": 1314,
+      "title": "Existing roles list shows only roles from current organization",
+      "steps": "- Log in as an Organization Manager or Admin and navigate to the \"Create New Role\" page\n- Select a user who has roles in both current and previous organizations, and verify that only roles from the current organization are displayed in the existing roles list\n- Select a user who has roles only in previous organizations, and verify that no existing roles are displayed\n- Select a user who has roles only in the current organization, and verify that all existing roles from the current organization are displayed\n- Attempt to assign a new role to each user type and confirm the role assignment process completes successfully with the correct roles filtered"
+    },
+    {
+      "iid": 1320,
+      "title": "Add Secondary Email and SMS tabs to Notification missing-contact list",
+      "steps": "- Navigate to the Notification page as an organization administrator and verify that three tabs labeled \"All\", \"Secondary Email\", and \"SMS\" are displayed in the missing-contact list section.\n- Click each tab (\"All\", \"Secondary Email\", \"SMS\") and confirm that the correct filtered list appears: \"All\" shows users missing either contact type, \"Secondary Email\" shows only users without a secondary email, and \"SMS\" shows only users without an SMS number.\n- Download the CSV file from each tab and verify that the file names are \"missing-all.csv\", \"missing-secondary-email.csv\", and \"missing-sms.csv\" respectively, and that each file contains the correct filtered data with columns for \"Employee\", \"Secondary Email status\", and \"SMS status\".\n- Select the \"SMS\" tab, navigate away from the Notification page, then return to it and confirm that the \"SMS\" tab is loaded by default (tab persistence).\n- Visit the Notification page for the first time in a new session/browser and verify that the \"All\" tab is selected by default."
+    },
+    {
+      "iid": 1321,
+      "title": "Remove duplicate \"read only\" field from Role editor page",
+      "steps": "- Open the Role editor page to create a new role and verify that exactly one \"read only\" field is displayed\n- Open the Role editor page to edit an existing role and verify that exactly one \"read only\" field is displayed\n- Create a new role with the \"read only\" field set to a specific value, save it, and verify the role saves correctly with the expected setting\n- Edit an existing role, modify the \"read only\" field value, save it, and confirm the changes persist correctly\n- Verify that all other fields on the Role editor page function normally and no other duplicate fields exist"
+    },
+    {
+      "iid": 1327,
+      "title": "Employee ID display issue on profile Edit view",
+      "steps": "- Open a Employee record in View mode and verify the Employee ID displays the correct value\n- Open the same Employee record in Edit mode and confirm the Employee ID shows correctly\n- Save the record without making changes and return to View mode to verify Employee ID is still correct\n- Open the same Employee record in Edit mode again and verify that a long random string appears in the Employee ID field instead of the correct value\n- Sign out and sign back in, then repeat steps 1-4 to confirm the behavior reproduces consistently"
+    },
+    {
+      "iid": 1328,
+      "title": "Manual Update of User Responses for Notifications",
+      "steps": "- Log in as a Notification Manager and navigate to a \"response required\" notification with at least one user having \"pending\" status; click the pencil edit icon on that user's row, select a response value from the dropdown, save, and verify the status updates immediately with an info icon and audit trail recorded.\n- Verify that a previously manually updated response cannot be overwritten by a subsequent text reply from the user by having a user send a text response after a manager has set their status; confirm the manually entered value persists.\n- Log in as a non-Manager user (Supervisor or other role), navigate to the notification responses tracking page, and confirm the pencil edit icon is not visible on any response rows and the page is read-only.\n- Download the CSV export for a notification containing manually updated responses and verify the \"Manually Updated By\" column captures the manager's name/ID for each manually modified row.\n- As a Notification Manager, click the pencil icon on a response row, modify the value to a different option, save, and verify the historical log retains the previous response while the current value and timestamp reflect the new update."
+    },
+    {
+      "iid": 1329,
+      "title": "Remove Link Pointer Cursor from Non-Actionable Status Icons",
+      "steps": "- Log into ORBIT and navigate to the Home page, then hover the mouse cursor over the \"Alerts\" exclamation icon and verify the cursor remains as the default system pointer (not a hand/link pointer)\n- Navigate to the Notifications page and locate the list of people without secondary contact methods, then hover over the exclamation icon and check mark icon separately to confirm the cursor remains as the default system pointer\n- Systematically navigate through multiple pages in ORBIT (Dashboard, Reports, Settings, etc.) and hover over all visible non-actionable status and alert icons to verify none display a hyperlink hand cursor\n- For each icon tested, confirm that the UI provides no visual indication that the icon is interactive or clickable"
+    },
+    {
+      "iid": 1332,
+      "title": "Persist filter tab and scope search by it on customer setting index pages",
+      "steps": "- Navigate to a customer setting index page (e.g., Customer Roles), select the \"Inactive\" filter, verify only inactive records display, then reload the page and confirm the \"Inactive\" filter persists and only inactive records are shown.\n- On the Customer Roles index page with \"Active\" filter selected, search for a term that matches both active and inactive records, and verify only active records matching the search term appear.\n- Select \"Inactive\" filter on Customer Roles index page, perform a search, then clear the search field and verify all inactive records reappear while no active records are shown.\n- Select \"All\" filter on Customer Roles index page, navigate to Customer Layers index page and select \"Inactive\" filter there, then navigate back to Customer Roles and confirm \"All\" filter is still selected.\n- Load a customer setting index page for the first time without any prior filter selection and verify the \"Active\" filter is selected by default with only active records displayed."
+    },
+    {
+      "iid": 1337,
+      "title": "bug: Layers cannot be saved after Layer Names (levels) are changed",
+      "steps": "- Change a Layer Name (e.g., \"PM\" to \"Prod Man\") in an organization's settings\n- Open an existing layer in edit mode, make a change to any field, and attempt to Save\n- Verify that the Save operation fails and displays an error message\n- Open the same layer in edit mode without making any changes and attempt to Save\n- Verify that the Save operation fails despite no changes being made\n- Create a new layer after the Layer Name change and verify it can be edited and saved successfully"
+    },
+    {
+      "iid": 1346,
+      "title": "Fix supervisor reminder email \u2014 NullReferenceException on missing TimeZone.Name",
+      "steps": "- Verify that the supervisor \"did not report\" email is successfully sent at the scheduled 9:30 AM trigger time, even when one or more employee records in the system have a WorkSite.TimeZone with a null Name value.\n- Confirm that no NullReferenceException is logged in the application event log or worker service logs when the scheduled task executes.\n- Check that supervisors receive the expected morning reminder email for employee who did not report, using test data that includes at least one employee record with a null TimeZone.Name.\n- Verify that the fix does not prevent emails from being sent to supervisors of employee with valid (non-null) TimeZone.Name values."
+    },
+    {
+      "iid": 1347,
+      "title": "Fix mobile check-in: capture free-text note after menu option",
+      "steps": "- Send a mobile check-in text with menu option 4 followed by free-text (e.g., `4 Going to meeting`)\n- Verify the check-in note contains both the auto-generated message and the free-text note on separate lines\n- Repeat with different menu options (1, 2, 3, 5, 6, 7, 8, 9) each with trailing text to confirm free-text is captured for all options\n- Send a check-in with menu option only (no trailing text) and verify only the auto-generated note appears without an empty \"Note:\" line\n- Verify trimming works by sending menu option with leading/trailing whitespace in the free-text portion (e.g., `4   Going to meeting   `) and confirm extra spaces are removed"
+    }
+  ],
+  "sprint_report": {
+    "goals": "This sprint aimed to stabilize the platform by addressing critical data integrity bugs in the Layer and Customer management workflows while laying the architectural groundwork for a multi-database CosmosDB migration. The team also standardized the user experience across administrative forms by implementing consistent navigation patterns.",
+    "summary": "The sprint delivered fixes to several high-impact production issues, including resolving orphaned CustomerLayer references when renaming layers, correcting the supervisor reminder email null reference error, and fixing mobile check-in note capture. In parallel, the team completed the migration strategy and database schema work for CosmosDB, establishing separate tenant, geo, system, lookup, and identity databases to support better scaling and data isolation. Across the administrative interface, the team systematized the user experience by adding Cancel buttons and confirmation modals to 47 forms, improving data safety and navigation consistency. These efforts collectively reduce support burden from data corruption issues, enable the upcoming database migration, and create a more predictable administrative experience for customers and internal staff.",
+    "metrics": {
+      "initial_count": 57,
+      "initial_weight": 88,
+      "completed_count": 57,
+      "completed_weight": 88,
+      "initial_breakdown": "41 Improvements, 13 Others, 3 Bugs",
+      "completed_breakdown": "41 Improvements, 13 Others, 3 Bugs"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "pulse",
+  "milestone_slug": "v5.1.6",
+  "title": "v5.1.6",
+  "start_date": "2026-07-15",
+  "end_date": "2026-07-28",
+  "generated_at": "2026-07-29T06:12:50.316417Z",
+  "test_plan": [
+    {
+      "iid": 674,
+      "title": "UX: Add breadcrumb navigation to all main views",
+      "steps": "- Navigate to Dashboard, then to Item List, then to an Item Detail view and verify a breadcrumb trail appears at the top showing \"Dashboard > Item List > [Item Name]\" with each prior step as a clickable link and the current page unlinked.\n- Click on a sub-tab (Post Award, Compliance Docs, etc.) from Item Detail and confirm the breadcrumb updates to include the sub-tab as the final non-linked item (e.g., \"Dashboard > Item List > [Item Name] > Post Award\").\n- Navigate through the Admin area (Admin Home \u2192 a section like Users \u2192 Edit a user record) and verify breadcrumbs display as \"Admin > Users > Edit [User Name]\" with only the current page unlinked.\n- Click a breadcrumb link at any level and confirm navigation to that section works correctly and the page layout/existing navigation remains functional.\n- Inspect the breadcrumb HTML using browser developer tools and verify it uses `<nav aria-label=\"breadcrumb\">`, `<ol class=\"breadcrumb\">`, and the current page item has `aria-current=\"page\"`."
+    },
+    {
+      "iid": 676,
+      "title": "UX: Add admin dashboard with quick-access to common tasks",
+      "steps": "- Navigate to `/Admin/Home/Index` and verify the Admin Home dashboard page loads successfully with all quick-action cards displayed (Manage Users, Manage Lookups, Manage Field Config, Review Error Logs, Review API Keys).\n- Click each quick-action card/tile and verify navigation to the corresponding admin sub-section completes in no more than 2 clicks.\n- Verify the \"Recent Activity\" section displays the last 10 configuration changes with user, action, and timestamp information (or confirms audit log is unavailable if not implemented).\n- Verify the \"Pending Access Requests\" count and \"Data Anomalies\" count are displayed and clickable if their respective features are active.\n- Open the dashboard on a tablet-sized screen (e.g., 768px width) and verify all elements render responsively without horizontal scrolling or overlapping content."
+    },
+    {
+      "iid": 677,
+      "title": "UX: Add feedback and progress indication for data exports",
+      "steps": "- Click the export button and verify a non-blocking status message (e.g., \"Preparing your export\u2026\") appears immediately\n- Wait for the file download to begin and confirm the status message is replaced with \"Download ready\" or dismissed automatically\n- Verify the export button is reliably re-enabled after the download completes\n- Trigger an export and simulate a server error (e.g., via network throttling or server-side error injection) and confirm a user-visible error message is displayed\n- Test all available export types to ensure existing export functionality is not broken"
+    },
+    {
+      "iid": 717,
+      "title": "Add a uniqueness constraint to LookupItem_PscCodeToSpendCat",
+      "steps": "- Navigate to the PscCodeMapping admin page and attempt to insert a duplicate mapping with identical `(Service Code, Spending Category, Organization)` values as an existing row; verify the system rejects it or performs an upsert instead of creating a duplicate.\n- Verify that the database migration executes successfully and adds a unique composite index on `(FK_PscCode, FK_Spending_Category, FK_Organization_ID)` by querying the physical table schema.\n- Test the SaveOrUpdate CRUD operation with duplicate key combinations through the UI or API; confirm the second attempt updates the existing record rather than inserting a new one.\n- Perform a goal resolution lookup involving PscCodeToSpendCat mappings with the 2026 VendorId pattern as a reference; verify no ambiguous or doubled results are returned.\n- Confirm that all 97 existing rows in the lookup table remain intact after the migration and that no data loss or constraint violations occur."
+    },
+    {
+      "iid": 718,
+      "title": "Introduce repeatable, idempotent lookup seeding",
+      "steps": "- Create a fresh database environment and run the lookup seeding process (either EF `HasData` or the versioned SQL seed script) once, then verify all canonical lookup types and fixed system items are present with correct IDs\n- Run the seeding process a second time on the same environment and confirm it completes idempotently without errors or duplicate records\n- Import a Service Code CSV file after seeding and verify that lookup IDs match expected values (no drift between environments)\n- Restore a database backup and re-run the seeding process, then confirm the lookup state matches a freshly seeded environment\n- Test seeding order by running only the lookup seed, then the Service Code type seed, then a goal-map CSV import, and verify each step completes successfully without lookup ID conflicts"
+    },
+    {
+      "iid": 723,
+      "title": "Notify users when records are updated / provide a recently-updated records list",
+      "steps": "- Open the Recently-Updated Records list page (or call `GET /api/RecentlyUpdated?sinceDays=7` via API) and verify it returns all records in your organization with `ModifiedDate` within the selected time window, sorted by most recent first.\n- Update a test record (change any field and save), then refresh the Recently-Updated Records list and confirm the updated record appears at the top with the correct ModifiedBy user and current timestamp.\n- Filter the Recently-Updated Records list by different time windows (e.g., 7 days, 30 days, custom date range) and verify the result count and displayed records change appropriately.\n- Verify that the Recently-Updated Records list respects organization multi-tenancy \u2014 log in as a user in Organization A and confirm only records from Organization A appear, not from Organization B.\n- (Phase 2 placeholder) Once email notifications are implemented, update a record and verify a notification is delivered via the chosen channel (in-app SignalR banner or email digest) within the expected timeframe, containing the record ID, title, and modification timestamp."
+    }
+  ],
+  "sprint_report": {
+    "goals": "This sprint aimed to improve system reliability and user experience by strengthening data integrity controls, enhancing visibility into system activity, and streamlining navigation and administrative workflows. We focused on reducing friction in common user tasks while ensuring the lookup reference data layer remains consistent and maintainable.",
+    "summary": "We completed six interconnected improvements that address both operational robustness and user experience. The team implemented a real-time notification system for record updates with a recently-modified records list, enabling users to stay informed of changes affecting their work. On the data integrity side, we introduced idempotent lookup seeding to prevent duplication issues during system initialization and added a uniqueness constraint to the spend category mapping table to enforce data consistency. Three UX enhancements\u2014an admin dashboard with quick-access shortcuts, progress feedback for data exports, and breadcrumb navigation across main views\u2014reduce cognitive load and help users navigate the system more intuitively. Together, these changes make the system more trustworthy, transparent, and efficient to use.",
+    "metrics": {
+      "initial_count": 6,
+      "initial_weight": 19,
+      "completed_count": 6,
+      "completed_weight": 19,
+      "initial_breakdown": "5 Improvements, 1 New Feature",
+      "completed_breakdown": "5 Improvements, 1 New Feature"
+    }
+  }
+}

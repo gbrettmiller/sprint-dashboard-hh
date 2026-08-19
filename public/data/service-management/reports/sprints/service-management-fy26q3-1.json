@@ -1,0 +1,22 @@
+{
+  "group_slug": "service-management",
+  "project_slug": null,
+  "milestone_slug": "service-management-fy26q3-1",
+  "title": "Service Management FY26Q3-1",
+  "start_date": "2026-03-31",
+  "end_date": "2026-04-14",
+  "generated_at": "2026-07-10T21:41:27.446436Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint aimed to enhance the Intake and Fulfillment incident management systems by improving data field accessibility and workflow automation, while strengthening security controls and enabling better post-submission record management.",
+    "summary": "The team completed eleven improvements across both Intake and Fulfillment systems, focusing on streamlining incident workflows and operational data integrity. Key accomplishments include resolving data field visibility issues in Intake, implementing security controls for incident records through refined access lists, automating contact lookups for incident assignment, and enabling flexible work note editing after submission. These enhancements collectively improve system usability, reduce manual data entry errors, and provide teams with greater flexibility in managing incidents and maintenance records throughout their lifecycle.",
+    "metrics": {
+      "initial_count": 11,
+      "initial_weight": 32,
+      "completed_count": 11,
+      "completed_weight": 32,
+      "initial_breakdown": "11 Others",
+      "completed_breakdown": "11 Others"
+    }
+  }
+}

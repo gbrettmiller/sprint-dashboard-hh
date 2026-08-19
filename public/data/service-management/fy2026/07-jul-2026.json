@@ -1,0 +1,220 @@
+{
+  "fiscal_year": 2026,
+  "month": 7,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 5376,
+      "title": "Service Management FY26Q3-6",
+      "start_date": "2026-06-30",
+      "end_date": "2026-07-14",
+      "state": 3,
+      "source": "iteration",
+      "goal": null,
+      "initial_totals": {
+        "count": 6,
+        "weight": 18
+      },
+      "burndown": [
+        {
+          "date": "2026-06-30",
+          "remaining_count": 6,
+          "remaining_weight": 18
+        },
+        {
+          "date": "2026-07-01",
+          "remaining_count": 5,
+          "remaining_weight": 15
+        },
+        {
+          "date": "2026-07-02",
+          "remaining_count": 5,
+          "remaining_weight": 15
+        },
+        {
+          "date": "2026-07-03",
+          "remaining_count": 5,
+          "remaining_weight": 15
+        },
+        {
+          "date": "2026-07-04",
+          "remaining_count": 5,
+          "remaining_weight": 15
+        },
+        {
+          "date": "2026-07-05",
+          "remaining_count": 5,
+          "remaining_weight": 15
+        },
+        {
+          "date": "2026-07-06",
+          "remaining_count": 5,
+          "remaining_weight": 15
+        },
+        {
+          "date": "2026-07-07",
+          "remaining_count": 3,
+          "remaining_weight": 11
+        },
+        {
+          "date": "2026-07-08",
+          "remaining_count": 3,
+          "remaining_weight": 11
+        },
+        {
+          "date": "2026-07-09",
+          "remaining_count": 3,
+          "remaining_weight": 11
+        },
+        {
+          "date": "2026-07-10",
+          "remaining_count": 2,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2026-07-11",
+          "remaining_count": 2,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2026-07-12",
+          "remaining_count": 2,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2026-07-13",
+          "remaining_count": 2,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2026-07-14",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 4,
+        "new_feature": 1,
+        "other": 1
+      },
+      "completed": {
+        "count": 6,
+        "weight": 18
+      },
+      "issues": [
+        {
+          "id": 244977,
+          "iid": 71,
+          "title": "Fulfillment Category Type Item not populating when Affected System selected",
+          "description": "Customer reports that Category Type Item is not populating when Affected System is selected while creating a new Incident. This feature was working but stopped working about two weeks ago.",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Support"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-30",
+          "date_closed": "2026-07-01",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 244651,
+          "iid": 445,
+          "title": "M2S Add Description field to Notification email",
+          "description": "Add Description field to Notification email \"Incident was opened- M2S\". \nSee INC0035151 for request:\nUsers are unable to see whole description of M2S issues in email. Is it possible to expose more of the description in the system email? How else can a general submitter see details from their submission?",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Capability:: M2S",
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-30",
+          "date_closed": "2026-07-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 243806,
+          "iid": 84,
+          "title": "Intake Load New BackupNav Assets",
+          "description": "Load New BackupNav Assets provided in attached spreadsheet.\n\n[BackupNav_NEW_Service_Now_Assets_06-22-2026.xlsx](/uploads/bbd8f2fcad60b766304dc23348a49610/BackupNav_NEW_Service_Now_Assets_06-22-2026.xlsx)\n\nFormatted load spreadsheet:\n[BackupNav_Consolidated_Import_Sheet_06-22-2026.xlsx](/uploads/42ce6933b16eb2aa9ad5086f8efbb9f0/BackupNav_Consolidated_Import_Sheet_06-22-2026.xlsx)",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-30",
+          "date_closed": "2026-07-07",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 241948,
+          "iid": 83,
+          "title": "Intake On Maintenance record calculate Repair Time (Field Level)",
+          "description": "On Maintenance record calculate 'Repair Time (Field Level)' based on the calculation:\nRepair Time (Field Level) = Repair stop time - Repair start time\n\nAlso calculate the 'Admin delay time' based on the calculation:\nAdmin delay time = Repair start time - Fault date/time",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-30",
+          "date_closed": "2026-07-14",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 232683,
+          "iid": 443,
+          "title": "Service Management: SPM Implement the Access Control for SPM Pilot",
+          "description": "The CPE level access control was implemented jointly with the FACT team. The implemented now needs to be extended to department level segregation (Tier 2 and Tier 3). Currently, CPE OpsNet does not need department level segregation.",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "Capability::SPM",
+            "Workflow::Refined",
+            "type::New-Feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-30",
+          "date_closed": "2026-07-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 188208,
+          "iid": 426,
+          "title": "M2S Add Affected System to email notifications to Assignment Groups",
+          "description": "Add 'Affected System' field value to email notifications to Assignment Groups so that it is easy for Assignees to identify their own tickets as all support members are in one group.\n\nThe current notification is as below:\n![image](/uploads/d3b035c663e7eb9a665793e4cc77ab14/image.png){width=549 height=461}",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "Capability:: M2S",
+            "Workflow::Refined",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-30",
+          "date_closed": "2026-07-14",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

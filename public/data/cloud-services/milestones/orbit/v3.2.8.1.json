@@ -1,0 +1,141 @@
+{
+  "milestone_title": "v3.2.8.1",
+  "milestone_id": 2332,
+  "slug": "v3.2.8.1",
+  "project_id": 91001,
+  "project_name": "ORBIT",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:25.223210Z",
+  "issues": [
+    {
+      "id": 183668,
+      "iid": 1110,
+      "title": "Display Default Message Content on Notification create page",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "#### **User Story**\n\n* **As a** Notification Manager,\n* **I want to** see the \"Default\" message content when selected,\n* **so that** I know what message will be sent to recipients of the notification.\n\n---\n\n#### **Acceptance Criteria**\n\n* **Given** a Notification Manager is on the \"Send Notification\" page,\n* **And** \"Response Required\" is set to \"Yes\",\n* **When** the \"Message\" dropdown is set to \"Default\",\n* **Then** a read-only view of the default message **must** appear below the dropdown,\n* **And** the editable field used for \"Custom\" message **must not** be visible,\n* **And** when the \"Confirm Notification\" button is clicked, the default message is sent in the notification."
+    },
+    {
+      "id": 183669,
+      "iid": 1111,
+      "title": "Display default responses on Notification create page",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "#### **User Story**\n\n* **As a** Notification Manager,\n* **I want to** see the \"Default\" response options when selected,\n* **so that** I know what responses will be available to recipients of the message I am sending.\n\n---\n\n#### **Acceptance Criteria**\n\n* **Given** a Notification Manager is on the \"Send Notification\" page,\n* **And** \"Response Required\" is set to \"Yes\",\n* **When** the \"Response\" dropdown is set to \"Default\",\n* **Then** a read-only view of the default response options (e.g., a list of the response buttons/choices) **must** appear below the dropdown,\n* **And** the editable fields used for \"Custom\" responses **must not** be visible,\n* **And** when the \"Confirm Notification\" button is clicked, the default options are used for responses."
+    },
+    {
+      "id": 183670,
+      "iid": 1112,
+      "title": "Conditionally Display Email Help Text",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "#### **User Story**\n\n* **As a** Notification Manager,\n* **I want** the help text for email notifications to appear only when I select the \"Email\" checkbox,\n* **so that** the interface is cleaner and I only see information relevant to the channels I've actually chosen.\n\n---\n\n#### **Acceptance Criteria (Gherkin Format)**\n\n**Scenario 1: Initial Page Load**\n\n* **Given** a Notification Manager is on the \"Send Notification\" page,\n* **And** the \"Email\" checkbox is unchecked by default,\n* **When** the page finishes loading,\n* **Then** the help text related to email notifications **must not** be visible.\n\n**Scenario 2: User Selects the Email Option**\n\n* **Given** the email-related help text is not visible,\n* **When** the user clicks the \"Email\" checkbox to select it,\n* **Then** the email-related help text **must** immediately appear on the page, positioned logically near the email selection area.\n\n**Scenario 3: User De-selects the Email Option**\n\n* **Given** the \"Email\" checkbox is checked and the help text is visible,\n* **When** the user clicks the \"Email\" checkbox again to uncheck it,\n* **Then** the email-related help text **must** immediately disappear."
+    },
+    {
+      "id": 184631,
+      "iid": 1130,
+      "title": "Expand Layer Selection for Notification Managers",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "#### **User Story**\n\n* **As a** Notification Manager for a specific layer,\n* **I want to** be able to select my assigned layer and all of its sub-layers as notification recipients,\n* **so that** I can communicate effectively with the entire hierarchy under my responsibility, not just my immediate layer.\n\n---\n\n#### **Acceptance Criteria (Gherkin Format)**\n\n**Scenario 1: Viewing the Recipient Selection UI**\n\n* **Given** I am logged in as a Notification Manager assigned specifically to \"Layer 2\",\n* **When** I navigate to the \"Send Notification\" page,\n* **And** I select \"Organization Layer\" in the \"To:\" field,\n* **Then** the recipient selection tool **must** display my assigned layer (\"Layer 2\")\n* **And** it **must** also display all sub-layers beneath my assigned layer (e.g., \"Layer 2.1\", \"Layer 2.2\", \"Layer 2.2.1\").\n* **And** it **must not** display any layers that are above my assigned layer (e.g., \"Layer 1\").\n* **And** it **must not** display any layers that are parallel to my assigned layer (e.g., \"Layer 3\").\n\n**Scenario 2: Sending a Notification to a Sub-Layer**\n\n* **Given** I am a Notification Manager for \"Layer 2\",\n* **And** I am on the \"Send Notification\" page,\n* **When** I select only a sub-layer (\"Layer 2.1\") as a recipient and send the notification,\n* **Then** only users assigned to \"Layer 2.1\" **must** receive the notification.\n\n**Scenario 3: Sending a Notification to Multiple Layers (Parent and Sub-Layer)**\n\n* **Given** I am a Notification Manager for \"Layer 2\",\n* **And** I am on the \"Send Notification\" page,\n* **When** I select my own layer (\"Layer 2\") AND a sub-layer (\"Layer 2.2\") as recipients and send the notification,\n* **Then** users in both \"Layer 2\" and \"Layer 2.2\" **must** receive the notification.\n\n**Scenario 4: Regression Test for Organization-level Manager**\n\n* **Given** I am logged in as a Notification Manager for the entire organization (no layer restriction),\n* **When** I navigate to the \"Send Notification\" page,\n* **Then** the recipient selection tool **must** display all layers within the entire organization."
+    },
+    {
+      "id": 185017,
+      "iid": 1133,
+      "title": "Improve Organization Field Instructional Text",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "#### **User Story**\n\n* **As a** new user registering for ORBIT,\n* **I want** the instructional note for selecting my Organization to be clearer and placed directly under the field it refers to,\n* **so that** I can immediately understand the correct action to take if I cannot find my specific organization in the list.\n\n---\n\n#### **Acceptance Criteria**\n\n**Scenario: User Views the Registration Page**\n\n* **Given** a new user is on the self-registration page,\n* **When** the page renders,\n* **Then** the note text \"**_Note:_** Select the Organization to which you are assigned. If your organization is not listed, please contact your supervisor.\" **must** be displayed.\n* **And** this note **must** be positioned directly below the \"Organization\" selection field and above the \"Sub-organization\" selection field.\n* **And** the old text (\"**_Note:_** Only register for your Organization...\") **must not** be visible anywhere on the page."
+    },
+    {
+      "id": 185018,
+      "iid": 1134,
+      "title": "Add Instructional Text for Sub-Organization Field",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "#### **User Story**\n\n* **As a** new user registering for ORBIT,\n* **I want to** see a clear note explaining that the Sub-Organization field is optional,\n* **so that** I can confidently complete my registration without getting stuck if I don't know my specific Sub-Organization.\n\n---\n\n#### **Acceptance Criteria (Gherkin Format)**\n\n**Scenario: User Views the Registration Page**\n\n* **Given** a new user is on the self-registration page,\n* **When** the page renders,\n* **Then** the note text \"**_Note:_** If you know the Sub-Organization to which you are assigned, you can enter it here. If you do not know, you can leave this field blank.\" **must** be displayed.\n* **And** this note **must** be positioned directly below the \"Sub-organization\" selection field."
+    },
+    {
+      "id": 185022,
+      "iid": 1137,
+      "title": "Unify Profile View with Edit Mode",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "#### **User Story**\n\n* **As a** ORBIT user,\n* **I want to** see all of my profile information sections when I view my profile, in the same order that they appear in edit mode,\n* **so that** I can easily and completely review my data for accuracy without having to enter the edit screen.\n\n---\n\n#### **Acceptance Criteria (Gherkin Format)**\n\n**Scenario 1: User Views Their Profile**\n\n* **Given** a user is on their \"View Profile\" page,\n* **When** the page finishes loading,\n* **Then** it **must** display sections for \"Mobile Check-In Information\" and \"Notification Information\".\n* **And** all sections on the page **must** be arranged in the following specific order:\n  1. General Information\n  2. Work Contact Information\n  3. Contractor Information\n  4. Home Address Information\n  5. Emergency Contact Information\n  6. Mobile Check-In Information\n  7. Notification Information\n\n**Scenario 2: Verifying Data Display**\n\n* **Given** a user has entered and saved specific data in the \"Mobile Check-In Information\" and \"Notification Information\" sections via the \"Edit Profile\" page,\n* **When** they navigate to the \"View Profile\" page,\n* **Then** the saved data for those sections **must** be correctly displayed.\n\n---\n\n#### **Test Cases**\n\n| Test ID | Description | Steps | Expected Result |\n|---------|-------------|-------|-----------------|\n| **TC-001** | **UI - Section Presence:** Verify the two missing sections now appear in view mode. | 1\\. Navigate to the \"View Profile\" page. | A section titled \"Mobile Check-In Information\" and a section titled \"Notification Information\" are both visible. |\n| **TC-002** | **UI - Section Order:** Verify the order of all sections is correct in view mode. | 1\\. Navigate to the \"View Profile\" page. 2. Observe the order of all information sections from top to bottom. | The sections appear in the exact order specified in the Acceptance Criteria. |\n| **TC-003** | **Data Integrity Test:** Verify data from the new sections is displayed correctly. | 1\\. Go to \"Edit Profile\". 2. Enter unique, identifiable data into fields within \"Mobile Check-In Information\" and \"Notification Information\". 3. Save the changes. 4. Go to \"View Profile\". | The unique data entered in step 2 is displayed correctly in the corresponding sections on the view page. |\n| **TC-004** | **Regression Test:** Verify that existing sections still display data correctly. | 1\\. Navigate to \"View Profile\". 2. Check the data displayed in the \"General Information\" and \"Work Contact Information\" sections. | The data in the previously existing sections is still present and accurate. |"
+    },
+    {
+      "id": 185023,
+      "iid": 1138,
+      "title": "Restructure Emergency Contact Information Section (UI Only)",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "#### **User Story**\n\n* **As a** ORBIT user viewing or editing my profile,\n* **I want** the emergency contact fields to be organized into two distinct sub-sections, \"Emergency Contact 1\" and \"Emergency Contact 2\",\n* **so that** I can more easily distinguish between my primary and secondary contacts and review their information at a glance.\n\n---\n\n#### **Acceptance Criteria (Gherkin Format)**\n\n**Scenario 1: Viewing or Editing the Profile Layout**\n\n* **Given** a user is on their \"View Profile\" or \"Edit Profile\" page,\n* **When** the \"Emergency Contact Information\" section is rendered,\n* **Then** it **must** be visually divided into two sub-sections, clearly titled \"Emergency Contact 1\" and \"Emergency Contact 2\".\n* **And** each sub-section **must** contain exactly three fields, labeled \"Name\", \"Phone Number\", and \"Relationship\".\n* **And** the old, flat list of six individual fields **must** no longer be visible.\n\n**Scenario 2: Verifying Correct Data Binding**\n\n* **Given** a user has existing data for their primary and secondary emergency contacts,\n* **When** the \"Edit Profile\" or \"View Profile\" page loads,\n* **Then** the data corresponding to \"Emergency Contact 1\" **must** correctly populate the fields within the \"Emergency Contact 1\" sub-section.\n* **And** the data corresponding to \"Emergency Contact 2\" **must** correctly populate the fields within the \"Emergency Contact 2\" sub-section.\n\n---\n\n#### **Test Cases**\n\n| Test ID | Description | Steps | Expected Result |\n|---------|-------------|-------|-----------------|\n| **TC-001** | **UI - Layout Verification:** Confirm the new structure is in place on both View and Edit pages. | 1\\. Navigate to the \"View Profile\" page. 2. Navigate to the \"Edit Profile\" page. | Both pages display the Emergency Contact section with two sub-sections, \"Emergency Contact 1\" and \"Emergency Contact 2\", each containing \"Name\", \"Phone Number\", and \"Relationship\" fields. |\n| **TC-002** | **UI - Regression:** Confirm the old UI elements are removed. | 1\\. Navigate to the \"View Profile\" page. 2. Navigate to the \"Edit Profile\" page. | The old layout (a flat list of six fields like \"EMERGENCY CONTACT NAME\", \"EMERGENCY CONTACT PHONE\", etc.) is no longer present on either page. |\n| **TC-003** | **Data Binding Test:** Verify that existing data is displayed in the correct new fields. | 1\\. Using a test user with pre-populated data for both emergency contacts, navigate to the \"View Profile\" page. | The name for contact 1 appears in the \"Name\" field under \"Emergency Contact 1\". The phone for contact 2 appears in the \"Phone Number\" field under \"Emergency Contact 2\", and so on. |\n| **TC-004** | **Empty State Test:** Verify the layout renders correctly for users with no emergency contact data. | 1\\. Using a profile with no emergency contact info, navigate to the \"View Profile\" and \"Edit Profile\" pages. | The two sub-sections and their respective fields are displayed correctly as empty, and the page functions without errors. |"
+    },
+    {
+      "id": 185024,
+      "iid": 1139,
+      "title": "Add Unsaved Changes Confirmation on Cancel on Edit Profile",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "#### **User Story**\n\n* **As a** ORBIT user editing my profile,\n* **I want to** be prompted with a confirmation dialog if I click \"Cancel\" after I've made changes,\n* **so that** I can avoid accidentally discarding my updates without saving.\n\n---\n\n#### **Acceptance Criteria (Gherkin Format)**\n\n**Scenario 1: User Cancels With NO Unsaved Changes**\n\n* **Given** a user is on the \"Edit Profile\" page,\n* **And** they have not made any changes to the form fields,\n* **When** they click the \"Cancel\" button,\n* **Then** they **must** be immediately redirected to the \"View Profile\" page without any confirmation prompt.\n\n**Scenario 2: User Cancels WITH Unsaved Changes**\n\n* **Given** a user is on the \"Edit Profile\" page,\n* **And** they have made at least one change to a form field,\n* **When** they click the \"Cancel\" button,\n* **Then** a confirmation dialog **must** appear.\n* **And** the dialog **must** contain text similar to: \"You have unsaved changes. Are you sure you want to discard them?\"\n* **And** the dialog **must** have two options, such as \"Discard Changes\" and \"Continue Editing\".\n\n**Scenario 3: User Confirms to Discard Changes**\n\n* **Given** the \"unsaved changes\" confirmation dialog is displayed,\n* **When** the user clicks the \"Discard Changes\" button,\n* **Then** the dialog **must** close.\n* **And** the user **must** be redirected to the \"View Profile\" page.\n* **And** the changes they made **must not** be saved.\n\n**Scenario 4: User Chooses to Continue Editing**\n\n* **Given** the \"unsaved changes\" confirmation dialog is displayed,\n* **When** the user clicks the \"Continue Editing\" button,\n* **Then** the dialog **must** close.\n* **And** the user **must** remain on the \"Edit Profile\" page.\n* **And** the unsaved changes they made **must** still be visible in the form fields.\n\n---\n\n#### **Test Cases**\n\n| Test ID | Description | Steps | Expected Result |\n|---------|-------------|-------|-----------------|\n| **TC-001** | **Happy Path (No Changes):** Verify no prompt appears if no edits are made. | 1\\. Navigate to \"Edit Profile\". 2. Immediately click \"Cancel\". | The user is redirected to the \"View Profile\" page without any confirmation dialog. |\n| **TC-002** | **Modal Trigger:** Verify the prompt appears after an edit. | 1\\. Navigate to \"Edit Profile\". 2. Type a character into any text field. 3. Click \"Cancel\". | The confirmation dialog appears. |\n| **TC-003** | **Confirm Discard:** Verify changes are discarded after confirming cancellation. | 1\\. Perform steps for TC-002. 2. Click \"Discard Changes\" in the dialog. 3. Once on the \"View Profile\" page, click \"Edit\" again. | The user is redirected, and upon returning to the edit page, the field is back to its original value (the change was not saved). |\n| **TC-004** | **Deny Cancel:** Verify the user stays on the page after denying cancellation. | 1\\. Perform steps for TC-002. 2. Click \"Continue Editing\" in the dialog. | The dialog closes, the user remains on the \"Edit Profile\" page, and the character typed in step 2 is still visible in the field. |\n| **TC-005** | **UI/Text Verification:** Verify the text on the confirmation dialog. | 1\\. Trigger the confirmation dialog. | The text is clear, grammatically correct, and accurately reflects the choice the user needs to make. |"
+    },
+    {
+      "id": 186130,
+      "iid": 1146,
+      "title": "Display Message Content on \"Confirm Notification\" page",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "#### **User Story**\n\n* **As a** Notification Manager viewing the Confirm Notification page for a notification I am preparing to send,\n* **I want to** see the message that will be sent to recipients,\n* **so that** I can confirm that the message is correct before I send the notification.\n\n---\n\n#### **Acceptance Criteria**\n\n**Scenario 1**\n\n* **Given** a Notification Manager has \"Email\" as the \"Channel\" on the Notification creation page, \n* **And** is on the \"Confirm Notification\" page,\n* **Then** a section displaying the content of the email message **must** appear on the page and clearly indicate that the message will be delivered via email.\n\n**Scenario 2**\n\n* **Given** a Notification Manager has selected only \"Text Message\" as the \"Channel\" on the Notification creation page, \n* **And** is on the \"Confirm Notification\" page,\n* **Then** a section displaying the content of the text message **must** appear on the page and clearly indicate that the message will be delivered via text message.\n\n**Scenario 3**\n\n* **Given** a Notification Manager has selected both \"Email\" and \"Text Message\" as the \"Channel\" on the Notification creation page, \n* **And** is on the \"Confirm Notification\" page,\n* **Then** a section displaying the content of the email message **must** appear on the page and clearly indicate that the message will be delivered via email.\n* **And** a section displaying the content of the text message **must** appear on the page and clearly indicate that the message will be delivered via text message."
+    },
+    {
+      "id": 186131,
+      "iid": 1147,
+      "title": "Display response options on \"Confirm Notification\" page",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "#### **User Story**\n\n* **As a** Notification Manager viewing the Confirm Notification page for a notification I am preparing to send,\n* **I want to** see the response options I have configured,\n* **so that** I can confirm that the response options are configured correctly before I send the notification.\n\n---\n\n#### **Acceptance Criteria**\n\n* **Given** a Notification Manager has configured responses on the \"Notification\" creation page \n* **And** is on the \"Confirm Notification\" page,\n* **Then** a section displaying the configured response options **must** appear on the page."
+    },
+    {
+      "id": 187919,
+      "iid": 1159,
+      "title": "Fix Notifications",
+      "weight": 3,
+      "state": "closed",
+      "labels": [],
+      "description": "Notifications are broken, so this item has been changed to find a fix for it.\n\nOriginal: \n~~Add more notification logging so we can track who is receiving notification and which.~~"
+    }
+  ]
+}

@@ -1,0 +1,440 @@
+{
+  "id": 7048,
+  "title": "Data Services 2 SEP 26",
+  "start_date": "2026-08-18",
+  "end_date": "2026-09-02",
+  "state": "active",
+  "source": "jira",
+  "goal": null,
+  "initial_totals": {
+    "count": 27,
+    "weight": 73
+  },
+  "burndown": [
+    {
+      "date": "2026-08-18",
+      "remaining_count": 27,
+      "remaining_weight": 73
+    },
+    {
+      "date": "2026-08-19",
+      "remaining_count": 27,
+      "remaining_weight": 73
+    }
+  ],
+  "type_breakdown": {
+    "bug": 2,
+    "improvement": 7,
+    "new_feature": 3,
+    "other": 15
+  },
+  "completed": {
+    "count": 0,
+    "weight": 0
+  },
+  "issues": [
+    {
+      "id": 1053578,
+      "iid": 1600,
+      "title": "TCT UI Fixing - Archived Items Screen",
+      "project_id": 25918,
+      "project_name": "No Component",
+      "weight": 3,
+      "state": "opened",
+      "labels": [],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 1053577,
+      "iid": 1599,
+      "title": "TCT UI Fixing - Add Training Screen",
+      "project_id": 25918,
+      "project_name": "No Component",
+      "weight": 3,
+      "state": "opened",
+      "labels": [],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 1053576,
+      "iid": 1598,
+      "title": "TCT UI Fixing - Home Screen",
+      "project_id": 25918,
+      "project_name": "No Component",
+      "weight": 3,
+      "state": "opened",
+      "labels": [],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 1053568,
+      "iid": 1597,
+      "title": "Baseline - Vantage Recording Sessions Level 100",
+      "project_id": 25918,
+      "project_name": "No Component",
+      "weight": 3,
+      "state": "opened",
+      "labels": [],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 1053439,
+      "iid": 1596,
+      "title": "Baseline - Intro to Vantage for Compliance Level 100",
+      "project_id": 25918,
+      "project_name": "Data Services Baseline/Environment",
+      "weight": 5,
+      "state": "opened",
+      "labels": [],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 1053431,
+      "iid": 1594,
+      "title": "Compliance Review - Deploy v1.3.4. to production",
+      "project_id": 25918,
+      "project_name": "Compliance Review",
+      "weight": 1,
+      "state": "opened",
+      "labels": [],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 1053021,
+      "iid": 1589,
+      "title": "SALT - investigate ability to trigger false emails",
+      "project_id": 25918,
+      "project_name": "SW License Tracking",
+      "weight": 3,
+      "state": "opened",
+      "labels": [],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 1053018,
+      "iid": 1587,
+      "title": "SALT - update Actions gallery to show correct status",
+      "project_id": 25918,
+      "project_name": "SW License Tracking",
+      "weight": 1,
+      "state": "opened",
+      "labels": [],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 1053013,
+      "iid": 1586,
+      "title": "SALT - secure the approval status cannot be removed",
+      "project_id": 25918,
+      "project_name": "SW License Tracking",
+      "weight": 1,
+      "state": "opened",
+      "labels": [
+        "type::bug"
+      ],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 1053012,
+      "iid": 1585,
+      "title": "SALT - Employee type auto populate",
+      "project_id": 25918,
+      "project_name": "SW License Tracking",
+      "weight": 1,
+      "state": "opened",
+      "labels": [
+        "type::bug"
+      ],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 1053008,
+      "iid": 1584,
+      "title": "SALT - Employee type required field",
+      "project_id": 25918,
+      "project_name": "SW License Tracking",
+      "weight": 1,
+      "state": "opened",
+      "labels": [
+        "type::improvement"
+      ],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 1053007,
+      "iid": 1583,
+      "title": "SALT - make Need by Date required field",
+      "project_id": 25918,
+      "project_name": "SW License Tracking",
+      "weight": 1,
+      "state": "opened",
+      "labels": [
+        "type::improvement"
+      ],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 1053006,
+      "iid": 1582,
+      "title": "SALT - make Date Requested a required field",
+      "project_id": 25918,
+      "project_name": "SW License Tracking",
+      "weight": 1,
+      "state": "opened",
+      "labels": [
+        "type::improvement"
+      ],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 1052550,
+      "iid": 1580,
+      "title": "Service Catalog - Print to PDF for MD App",
+      "project_id": 25918,
+      "project_name": "No Component",
+      "weight": 1,
+      "state": "opened",
+      "labels": [],
+      "milestone": "Service Catalog MVP",
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 1013908,
+      "iid": 1579,
+      "title": "Access Requests - Provide info/helper pop-up on name fields",
+      "project_id": 25918,
+      "project_name": "Access Requests",
+      "weight": 1,
+      "state": "opened",
+      "labels": [
+        "type::improvement"
+      ],
+      "milestone": "Access Requests 1.5.2",
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 1013906,
+      "iid": 1577,
+      "title": "Service Catalog - Create columns to save calculations",
+      "project_id": 25918,
+      "project_name": "Service Catalog",
+      "weight": 3,
+      "state": "opened",
+      "labels": [],
+      "milestone": "Service Catalog MVP",
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 1012879,
+      "iid": 1574,
+      "title": "Access Requests - Travel Coordinator role at the team level",
+      "project_id": 25918,
+      "project_name": "Access Requests",
+      "weight": 3,
+      "state": "opened",
+      "labels": [
+        "type::new-feature"
+      ],
+      "milestone": "Access Requests 1.5.2",
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 951172,
+      "iid": 1563,
+      "title": "Access Requests - Add a description/role to each of the approvals in the matrix",
+      "project_id": 25918,
+      "project_name": "Access Requests",
+      "weight": 5,
+      "state": "opened",
+      "labels": [
+        "type::improvement"
+      ],
+      "milestone": "Access Requests 1.5.2",
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 951170,
+      "iid": 1561,
+      "title": "Access Requests - Display where record is in the approval status (1 of x)",
+      "project_id": 25918,
+      "project_name": "Access Requests",
+      "weight": 1,
+      "state": "opened",
+      "labels": [
+        "type::new-feature"
+      ],
+      "milestone": "Access Requests 1.5.2",
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 941200,
+      "iid": 1550,
+      "title": "Baseline - Admin app user lookup employee list",
+      "project_id": 25918,
+      "project_name": "Data Services Baseline/Environment",
+      "weight": 3,
+      "state": "opened",
+      "labels": [],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 941170,
+      "iid": 1549,
+      "title": "Baseline - Admin app deploy notification service",
+      "project_id": 25918,
+      "project_name": "Data Services Baseline/Environment",
+      "weight": 3,
+      "state": "opened",
+      "labels": [],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 940948,
+      "iid": 1548,
+      "title": "Purchasing - wire up the request form",
+      "project_id": 25918,
+      "project_name": "Purchasing",
+      "weight": 5,
+      "state": "opened",
+      "labels": [],
+      "milestone": "Purchase v2.0.0",
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 872624,
+      "iid": 1512,
+      "title": "Compliance Review - Review UI and create mockups for cleaner interface: Home Screen",
+      "project_id": 25918,
+      "project_name": "Compliance Review",
+      "weight": 5,
+      "state": "opened",
+      "labels": [],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 830551,
+      "iid": 1490,
+      "title": "Access Requests - support changes to approval matrix mid-approval",
+      "project_id": 25918,
+      "project_name": "Access Requests",
+      "weight": 5,
+      "state": "opened",
+      "labels": [],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 729603,
+      "iid": 1458,
+      "title": "Access Requests - Move approval flows from app into a Flow",
+      "project_id": 25918,
+      "project_name": "Access Requests",
+      "weight": 5,
+      "state": "opened",
+      "labels": [
+        "type::improvement"
+      ],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 729200,
+      "iid": 1457,
+      "title": "Compliance Vantage Dashboard",
+      "project_id": 25918,
+      "project_name": "Budget Status",
+      "weight": 3,
+      "state": "opened",
+      "labels": [
+        "type::new-feature"
+      ],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    },
+    {
+      "id": 658948,
+      "iid": 1242,
+      "title": "SALT- Power BI Report",
+      "project_id": 25918,
+      "project_name": "No Component",
+      "weight": 3,
+      "state": "opened",
+      "labels": [
+        "type::improvement"
+      ],
+      "milestone": null,
+      "date_added_to_sprint": "2026-08-18",
+      "date_closed": null,
+      "date_removed_from_sprint": null
+    }
+  ],
+  "last_updated": "2026-08-19T14:57:43.942488Z"
+}

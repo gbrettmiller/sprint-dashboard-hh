@@ -1,0 +1,22 @@
+{
+  "group_slug": "service-management",
+  "project_slug": null,
+  "milestone_slug": "service-management-fy26q3-3",
+  "title": "Service Management FY26Q3-3",
+  "start_date": "2026-04-28",
+  "end_date": "2026-05-12",
+  "generated_at": "2026-07-10T21:41:33.912654Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on enhancing asset management capabilities across the Intake and Fulfillment platforms by expanding data fields and reporting visibility. The work aimed to improve operational tracking of vehicle assets and provide leadership with better visibility into ticket resolution trends.",
+    "summary": "The team completed six features that strengthen asset lifecycle management and reporting across both systems. Vehicle and consumable assets now capture initial hours and miles data, with improved navigation and configuration options in NavHub GEN II and the Asset Config Workspace. In parallel, performance analytics were configured to track open ticket trends, giving operations and leadership real-time insight into support backlog health. These enhancements enable more accurate asset valuation, better maintenance planning, and data-driven decision making around support resource allocation.",
+    "metrics": {
+      "initial_count": 6,
+      "initial_weight": 16,
+      "completed_count": 6,
+      "completed_weight": 16,
+      "initial_breakdown": "5 Improvements, 1 New Feature",
+      "completed_breakdown": "5 Improvements, 1 New Feature"
+    }
+  }
+}

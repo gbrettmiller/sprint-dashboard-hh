@@ -1,0 +1,23 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "pulse",
+  "month": "2026-03",
+  "generated_at": "2026-06-30T22:02:34.899503Z",
+  "sprints": [
+    {
+      "title": "v5.1.1",
+      "start_date": "2026-03-26",
+      "end_date": "2026-04-08",
+      "goals": "This sprint focused on enhancing security group management capabilities and improving the flexibility of permission-based access controls across the platform. The work also refined authentication behavior and updated organizational terminology to reflect current departmental structure.",
+      "summary": "The team implemented configurable permission flag columns in the security group database schema and extended the UI and C# models to support three new access control flags for Northline, Baymark, and AllRegion systems. Two critical SQL refactoring efforts eliminated hardcoded group lookups and ID references, making the permission system more maintainable and adaptable to future organizational changes. Additional improvements include preventing unintended re-authentication after user logout, standardizing all user-facing references from PO/JPO terminology to Central, and adding an \"Action Supported By\" lookup capability to Item Action Descriptions for better operational clarity.",
+      "metrics": {
+        "initial_count": 8,
+        "initial_weight": 17,
+        "completed_count": 8,
+        "completed_weight": 17,
+        "initial_breakdown": "4 New Features, 3 Refactors, 1 Improvement",
+        "completed_breakdown": "4 New Features, 3 Refactors, 1 Improvement"
+      }
+    }
+  ]
+}

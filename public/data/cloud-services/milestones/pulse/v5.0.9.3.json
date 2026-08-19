@@ -1,0 +1,88 @@
+{
+  "milestone_title": "v5.0.9.3",
+  "milestone_id": 2644,
+  "slug": "v5.0.9.3",
+  "project_id": 91002,
+  "project_name": "PULSE",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:35.718368Z",
+  "issues": [
+    {
+      "id": 198910,
+      "iid": 685,
+      "title": "Bug: Expand ErrorLog.HttpResponseMessage field \u2014 currently truncated to 25 characters",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "type::Bug"
+      ],
+      "description": "## Summary\nThe `ErrorLog` entity (`OneNListApp.Data/Models/ErrorLog.cs`) stores the HTTP\nresponse message in a field truncated to 25 characters. This means administrators\nviewing the error log see messages like `\"An error occurred while\"` with no\nindication of what the full error was. Full error context is lost and debugging\nrequires searching application logs by timestamp, which may not be retained.\n\n**Affected file:** `Source/OneNListApp.Data/Models/ErrorLog.cs`\n\n## Acceptance Criteria\n- [ ] The `HttpResponseMessage` column in `ErrorLog` is expanded to at minimum 2000 characters (or `nvarchar(max)`)\n- [ ] A database migration is created to alter the column length\n- [ ] The corresponding EF Core model property is updated (remove or increase `[MaxLength]` attribute)\n- [ ] Existing error logging calls that truncated input are updated to pass the full message\n- [ ] The Admin error log view displays the full message (with a truncated preview in the list and full text on detail/expand)\n- [ ] The `ErrorLog_Archive` table receives the same column length update\n- [ ] All existing tests that reference `ErrorLog` continue to pass"
+    },
+    {
+      "id": 198911,
+      "iid": 686,
+      "title": "Bug: Fix blocking .Result calls on async methods in BulkUploadController",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "type::Bug"
+      ],
+      "description": "## Summary\n`BulkUploadController` calls `.Result` on async methods at lines 107 and 140,\nsynchronously blocking the thread while waiting for database or service operations.\nUnder concurrent load this causes ASP.NET thread pool starvation \u2014 all available\nthreads block waiting for I/O, new requests queue up, and the server becomes\nunresponsive. This is a known anti-pattern in ASP.NET Core.\n\n**Affected file:** `Source/OneNListApp.Web/Controllers/BulkUploadController.cs:107,140`\n\n## Acceptance Criteria\n- [ ] All `.Result` and `.Wait()` calls in `BulkUploadController` are replaced with `await`\n- [ ] The controller actions that perform these operations are converted to `async Task<IActionResult>`\n- [ ] A search of all Web and API controllers is performed for other `.Result`/`.Wait()` usages; each found is converted or documented with a reason for the synchronous call\n- [ ] All existing bulk upload controller unit tests pass after the conversion\n- [ ] No deadlock occurs under a simple load test (10 concurrent uploads)"
+    },
+    {
+      "id": 198912,
+      "iid": 687,
+      "title": "Performance: Disable global lazy-loading and add explicit .Include() calls to fix N+1 queries",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "type::Improvement"
+      ],
+      "description": "## Summary\n`OneNListContext` enables EF Core lazy-loading proxies globally\n(`optionsBuilder.UseLazyLoadingProxies()`, line 20). The `OneNList` entity has\n290+ properties and many navigation properties (lookups, history records,\npost-award records). Each navigation access triggers a separate database query,\ncreating N+1 query problems. A list page loading 50 action items can generate\nthousands of individual SQL queries, causing significant performance degradation\nas data grows.\n\n**Affected file:** `Source/OneNListApp.Data/OneNListContext.cs:20`\n\n## Acceptance Criteria\n- [ ] `UseLazyLoadingProxies()` is removed from `OneNListContext`\n- [ ] All existing queries that relied on lazy-loading are audited and updated with explicit `.Include()` / `.ThenInclude()` calls for the navigation properties they access\n- [ ] A SQL query count test (or EF Core logging) confirms that common list/detail page loads execute \u2264 5 queries instead of N+50\n- [ ] No `NullReferenceException` or missing-data regressions are introduced (navigation properties previously auto-loaded now return null without explicit Include)\n- [ ] The stored procedure context (`OneNListStoredProcedureContext`) is unaffected\n- [ ] All existing unit tests pass; integration tests (if any) pass against the actual database"
+    },
+    {
+      "id": 198913,
+      "iid": 688,
+      "title": "Security: Fix XSS vulnerability \u2014 replace innerHTML assignment in customAlerts.js",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "type::Bug"
+      ],
+      "description": "## Summary\n`customAlerts.js` line 46 directly assigns user-supplied or server-supplied HTML\nto `element.innerHTML`:\n\n```js\nelement.innerHTML = html;\n```\n\nIf any part of the `html` parameter originates from user input or an unsanitized\nserver response, this is a Cross-Site Scripting (XSS) sink. Although DOMPurify is\nimported elsewhere in the codebase (`onenlist.modal.js`), it is not applied before\nthis assignment.\n\n**Affected file:** `Source/OneNListApp.Web/wwwroot/scripts/customAlerts.js:46`\n\n## Acceptance Criteria\n- [ ] The direct `innerHTML` assignment on line 46 is replaced with `DOMPurify.sanitize(html)` before assignment, or with DOM API methods (`createElement`, `textContent`, `appendChild`) where plain text is sufficient\n- [ ] All call sites of `custAlertModal` are audited; any that pass unsanitized server-rendered HTML are updated\n- [ ] A Semgrep rule (`rules/xss-innerhtml.yaml`) is added to the repo to catch future direct `innerHTML` assignments without sanitization\n- [ ] The custom alert modal continues to render correctly in all existing usages (error messages, confirmation dialogs)\n- [ ] No regression in alert dialog functionality"
+    },
+    {
+      "id": 198914,
+      "iid": 689,
+      "title": "Security: Add CSRF anti-forgery token validation to BulkUpload POST action",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "type::Bug"
+      ],
+      "description": "## Summary\nThe `BulkUploadController.Upload` POST action (line 119) is missing the\n`[ValidateAntiForgeryToken]` attribute. All other state-changing POST actions in\nthe Web application include this attribute to prevent Cross-Site Request Forgery\nattacks. The bulk upload endpoint is accessible to authenticated users and could be\nabused by a malicious site to trigger a file upload on behalf of a logged-in user.\n\n**Affected file:** `Source/OneNListApp.Web/Controllers/BulkUploadController.cs:119`\n\n## Acceptance Criteria\n- [ ] `[ValidateAntiForgeryToken]` is added to the `Upload` POST action in `BulkUploadController`\n- [ ] The corresponding Razor view includes `@Html.AntiForgeryToken()` inside the upload form (verify it is already present or add it)\n- [ ] A search of all POST actions across Web controllers confirms no other state-changing actions are missing the attribute; any found are fixed or documented with justification\n- [ ] Existing bulk upload unit tests are updated to include a valid anti-forgery token in test requests, or the test setup mocks the validation\n- [ ] The upload workflow functions correctly end-to-end after the fix"
+    },
+    {
+      "id": 198915,
+      "iid": 690,
+      "title": "Security: Implement API key expiration and rate limiting on API endpoints",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "type::Bug"
+      ],
+      "description": "## Summary\nPULSE API keys (`ApiConfClient`) have a `DtExpires` column but `ApiKeyAuthAttribute`\ndoes not enforce expiration \u2014 keys issued years ago remain valid indefinitely.\nAdditionally, there is no rate limiting on any API endpoint, meaning a single API\nkey can make unlimited requests per second, enabling accidental or intentional\nresource exhaustion.\n\n**Affected files:**\n- `Source/OneNListApp.API/Helpers/ApiKeyAuthAttribute.cs`\n- `Source/OneNListApp.Data/Models/ApiConfClient.cs`\n- `Source/OneNListApp.API/Program.cs` or `Startup.cs`\n\n## Acceptance Criteria\n- [ ] `ApiKeyAuthAttribute` checks `DtExpires` against `DateTime.UtcNow`; expired keys receive HTTP 401 with message `\"API key has expired. Contact your administrator to renew.\"`\n- [ ] An ASP.NET Core rate-limiting middleware (e.g., `Microsoft.AspNetCore.RateLimiting`) is configured on the API project\n- [ ] Default rate limit: 100 requests per minute per API key; limit is configurable via `appsettings.json`\n- [ ] Rate-limited requests receive HTTP 429 with a `Retry-After` header\n- [ ] Expiration enforcement is covered by at least 2 new unit tests in `AuthenticationTests.cs`\n- [ ] Rate limiting is documented in `docs/api-reference` wiki page\n- [ ] All existing authentication unit tests (260 total) continue to pass"
+    },
+    {
+      "id": 198916,
+      "iid": 691,
+      "title": "Security: Centralize multi-tenant org filtering to prevent cross-org data access",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "type::Bug"
+      ],
+      "description": "## Summary\nPULSE uses soft multi-tenancy: each `OneNList` record has a `fk_OrganizationId`\ncolumn, and each query is expected to filter by the current user's organization.\nHowever, there is no centralized enforcement of this filter \u2014 each service, controller,\nand stored procedure must independently remember to apply the org filter. A missed\nfilter in any query would expose another organization's data to the requesting user.\n\nThis is a data isolation risk: a bug in any query can silently leak sensitive tenant data across\norganizational boundaries.\n\n**Affected file:** `Source/OneNListApp.Data/OneNListContext.cs`\n\n## Acceptance Criteria\n- [ ] EF Core Global Query Filters (`modelBuilder.Entity<OneNList>().HasQueryFilter(...)`) are implemented for all multi-tenant entities to automatically apply the `fk_OrganizationId` filter\n- [ ] The current organization ID is provided to the DbContext via a scoped `IOrganizationContext` service (injected from the session) rather than passed ad-hoc to each query\n- [ ] A unit test confirms that a query executed with OrgId=1 cannot return records belonging to OrgId=2\n- [ ] Stored procedures that perform cross-org queries (reports, analytics) are explicitly documented with a comment explaining why the global filter is bypassed, and are gated by `[CustomAuthorize(eAccessLevel.Admin)]`\n- [ ] All existing service and controller unit tests pass after the refactor\n- [ ] No regression in multi-org admin views that intentionally show data across organizations"
+    }
+  ]
+}

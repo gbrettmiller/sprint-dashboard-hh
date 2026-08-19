@@ -1,0 +1,22 @@
+{
+  "group_slug": "service-management",
+  "project_slug": null,
+  "milestone_slug": "service-management-fy26q3-2",
+  "title": "Service Management FY26Q3-2",
+  "start_date": "2026-04-15",
+  "end_date": "2026-04-24",
+  "generated_at": "2026-07-10T21:41:30.848040Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on expanding asset management capabilities across multiple systems by enhancing data models, improving user interfaces, and establishing security foundations for new pilot initiatives. The team aimed to increase operational visibility and control by modernizing how asset information is captured, displayed, and protected across Intake, SPM, and Fulfillment platforms.",
+    "summary": "The team completed six substantial initiatives that strengthen asset lifecycle management and system interoperability. Work included updates to Intake asset records to reflect component-level maintenance and service life tracking, enhancements to the Fulfillment workspace to display more comprehensive asset information, and delivery of a vessel graphical dashboard that provides intuitive operational visibility. Additionally, the team designed and implemented access control architecture for the SPM pilot program, ensuring secure transition to production use. These improvements directly enable field teams to make faster, more informed decisions about asset maintenance and operations while establishing the security and data governance needed to scale new capabilities across the enterprise.",
+    "metrics": {
+      "initial_count": 6,
+      "initial_weight": 21,
+      "completed_count": 6,
+      "completed_weight": 21,
+      "initial_breakdown": "4 Improvements, 2 New Features",
+      "completed_breakdown": "4 Improvements, 2 New Features"
+    }
+  }
+}

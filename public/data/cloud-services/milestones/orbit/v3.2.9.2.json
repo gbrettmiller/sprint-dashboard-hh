@@ -1,0 +1,24 @@
+{
+  "milestone_title": "v3.2.9.2",
+  "milestone_id": 2499,
+  "slug": "v3.2.9.2",
+  "project_id": 91001,
+  "project_name": "ORBIT",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:26.749542Z",
+  "issues": [
+    {
+      "id": 191683,
+      "iid": 1179,
+      "title": "Enable Editing of Profile Fields on Registration Page",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "TEST-Passed",
+        "type::Improvement",
+        "workflow::refined"
+      ],
+      "description": " **Description:** This PBI modifies the user self-registration page to make profile fields (like name and email) editable. Currently, these fields are populated from the EAMS-A authentication service and are read-only. Due to data quality issues from the source, this change will empower users to correct their own information during the registration process.\n\n---\n\n### User Story\n\n*   **As a** new user registering for ORBIT,\n*   **I want to** be able to edit my name and email on the registration form,\n*   **so that** I can correct any outdated or incorrect information provided by the authentication service and ensure my profile data is accurate from day one.\n\n---\n\n### Acceptance Criteria\n\n#### **Scenario 1: Page Loads with Editable Fields**\n\n*   **Given** a new user lands on the \"User Registration\" page after authenticating,\n*   **When** the page loads,\n*   **Then** the profile fields (e.g., \"First Name\", \"Last Name\", \"Email\") **must** be populated with the data from EAMS-A as they are today.\n*   **And** these fields **must** now be enabled and fully editable, allowing the user to change the pre-populated values.\n*   **And** the fields **must not** have a read-only visual style (i.e., no greyed-out background).\n\n#### **Scenario 2: User Saves Edited Information**\n\n*   **Given** a user is on the registration page,\n*   **And** they have modified one or more of the pre-populated profile fields (e.g., changed their last name),\n*   **When** they complete the rest of the form and click \"Register\",\n*   **Then** the system **must** save the user's manually entered/corrected values to their new ORBIT profile in the database, overriding the original data from EAMS-A.\n\n#### **Scenario 3: User Does Not Edit Information (Regression Check)**\n\n*   **Given** a user is on the registration page,\n*   **And** the data from EAMS-A is correct and they do not make any changes to the profile fields,\n*   **When** they complete the rest of the form and click \"Register\",\n*   **Then** the system **must** save the original, pre-populated values to their new ORBIT profile, as it does today."
+    }
+  ]
+}

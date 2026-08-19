@@ -1,0 +1,206 @@
+{
+  "milestone_title": "v3.2.6",
+  "milestone_id": 2306,
+  "slug": "v3.2.6",
+  "project_id": 91001,
+  "project_name": "ORBIT",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:25.721228Z",
+  "issues": [
+    {
+      "id": 155233,
+      "iid": 852,
+      "title": "[ORBIT-73] Add Profile Update Date to SQL",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Customer:Internal",
+        "jira-import::ORBIT-1",
+        "workflow::refined"
+      ],
+      "description": "Add user profile update date to sql so that we can see when the\u00a0 user last verified their profile\n\n---\n\n**Issue metadata**\n\n- Issue type: Improvement\n- Priority: Must Have"
+    },
+    {
+      "id": 183665,
+      "iid": 1107,
+      "title": "Receive SMS Notifications at company-issued mobile device number",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "As a ORBIT user who has a Government Issued mobile device and who has entered the number for the Government issued mobile device on my ORBIT profile, I want to receive SMS notifications at that number whenever I meet the criteria for an SMS notification that is sent by my organization.\n\n---\n\nACCEPTANCE CRITERIA:\n- If a user has entered a valid phone number in the \"Government Issued Mobile Device\" field of their profile, when a Notification Manager sends an SMS notification with conditions that the user meets, the user receives an SMS notification at the number entered in the \"Government Issued Mobile Device\" field.\n- If a user has entered a separate number in the Notification Information section of their profile, they also receive the notification at that number.\n\n---\n\nANTICIPATED TASKS:\n- ..."
+    },
+    {
+      "id": 183666,
+      "iid": 1108,
+      "title": "Update Notification Information text",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "\n---\n\nACCEPTANCE CRITERIA:\n- The \"Providing this information...\" disclaimer is placed above the checkbox for \"I do not have...\"\n- The \"Providing this information...\" paragraph is rewritten as, \"Providing this information is optional and it will only be used for delivering notifications from your organization. It will not be shared or used for any other purpose.\"\n- The \"Emergency notifications will also be sent...\" statement is shown after the SMS/Text Messaging Number field and before the Additional Email field\n- The \"Emergency notification will also be sent...\" is rewritten as, \"Email notifications will automatically be sent to your Enterprise Email address. Enter an additional email address below, if desired, to receive the notification at that address in addition to your Enterprise Email address.\""
+    },
+    {
+      "id": 183671,
+      "iid": 1113,
+      "title": "Send to Notification Managers default to \"No\"",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "As a Notification Manager creating a new notification, I want the \"Send to Notification Managers\" field selection to default to \"No\" with the ability to select \"Yes\" if needed.\n\n---\n\nACCEPTANCE CRITERIA\n- When a notification manager opens the Notification page, the \"Send to Notification Managers\" field value is set to \"No\"\n- The notification manager can change the selection to \"Yes\""
+    },
+    {
+      "id": 183672,
+      "iid": 1114,
+      "title": "Column headers in \"Employee Without Notification Information\" download",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "As a Notification Manager who downloads the \"Employee Without Notification Information\" export, I want the column header for column 8 (H) to read \"Secondary email\" instead of the current \"Notification Phone\" so that it accurately identifies the data in the column.\n\n---\n\nACCEPTANCE CRITERIA\n- When a Notification Manager downloads and opens the \"Employee Without Notification Information\" export from the Notifications page, the header for column  8 (\"H\" if opened in Excel) reads \"Secondary Email\""
+    },
+    {
+      "id": 183675,
+      "iid": 1117,
+      "title": "\"Send Notification\" button disabled until \"SEND\" entered",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "As a Notification Manager who is preparing to send a notification from the Notification Confirmation page, I want the \"Send Notification\" button to be disabled unless I have entered \"SEND\" into the appropriate field so that I don't accidentally click the button without confirming the contents and audience of the notification.\n\n---\n\nACCEPTANCE CRITERIA\n- When the Notification Confirmation page loads for a Notification Manager, the \"Send Notification\" button will be disabled\n- When the Notification Manager enters anything other than \"SEND\" (capitalization matters), the button will remain disabled\n- When the Notification Manager clicks on the button after entering anything other than \"SEND\" (capitalization matters), nothing will happen\n- When the Notification Manager enters \"SEND\", the button will become active\n- When the Notification Manager clicks the \"Send Notification\" button after entering \"SEND\", the notification will be sent"
+    },
+    {
+      "id": 183676,
+      "iid": 1118,
+      "title": "Explanatory text for \"Send toNotification Managers\" field",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "As a Notification Manager creating a notification, I want to see help text for the \"Send to Notification Managers\" field so I can understand the app's behavior associated with my selection.\n\n---\n\nACCEPTANCE CRITERIA\n- When a user views the notification page and the \"Send to Notification Managers\" field has a value of \"No\", the following message will be displayed immediately below the field.\n> This notification will be sent only to employee who match the criteria in the \"To\" field above\n- When a user views the notification page and the \"Send to Notification Managers\" field has a value of \"Yes\", the following message will be displayed immediately below the field.\n> This notification will be sent to employee who match the criteria in the \"To\" field above and to all Notification Managers in your organization"
+    },
+    {
+      "id": 183677,
+      "iid": 1119,
+      "title": "Emails for \"Response Required\" needs additional text referencing SMS notification",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "As a ORBIT user receiving an email notification from my organization that was sent with the option \"Response Required\" set to \"Yes\", I want to see information in the email that explains the purpose of the notification and provides instructions for responding to the notification.\n\n---\n\nACCEPTANCE CRITERIA\n- When a ORBIT user receives an email notification from their organization that was sent with the option \"Response Required\" set to \"Yes\", they see the following in the email message positioned above the content of the notification.\n\n> If you have configured the \"SMS/Text Messaging Number:\" field in the \"Notification Information\" section of your ORBIT profile, you will be receiving an SMS / Text Message with the content shown below. Please respond as appropriate to that SMS / Text Message. \n\n> If you have not configured the \"SMS/Text Messaging Number:\" field in the \"Notification Information\" section of your ORBIT profile, you will not receive an SMS / Text Message with the content shown below and will not be able to respond via SMS / Text message. Please contact your Supervisor directly with your response.\n\n> Do not reply to this email. \n\n\n![image](/uploads/64b33cd7d8a15fe01b23431a125c0a5d/image.png){width=617 height=241}"
+    },
+    {
+      "id": 183679,
+      "iid": 1121,
+      "title": "\"Response required\" default to No",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "As a Notification Manager creating a new notification, I want the \"Response Required\" field selection to default to \"No\" with the ability to select \"Yes\" if needed.\n\n---\n\nACCEPTANCE CRITERIA\n- When a notification manager opens the Notification page, the \"Response Required\" field value is set to \"No\"\n- When a notification manager opens the Notification page, the fields appropriate a \"No\" selection are displayed\n- The notification manager can change the selection to \"Yes\"\n- When a notification manager changes the selection to \"Yes\", the fields appropriate a \"No\" selection are hidden\n- When a notification manager changes the selection to \"Yes\", the fields appropriate a \"Yes\" selection are displayed\n- When a user switches between \"No\" and \"Yes\" values in this field, the appropriate fields are hidden or displayed as appropriate"
+    },
+    {
+      "id": 183680,
+      "iid": 1122,
+      "title": "Add explanatory text for \"Response Required\" field",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "workflow::refined"
+      ],
+      "description": "As a Notification Manager creating a notification, I want to see help text for the \"Response Required\" field so I can understand the app's behavior associated with my selection.\n\n---\n\nACCEPTANCE CRITERIA\n\n- When a user views the notification page and the \"Response Required\" field has a value of \"No\", the following message will be displayed immediately below the field.\n\n> Users will not be able to respond directly to this notification via Text Message\n\n- When a user views the notification page and the \"Response Required\" field has a value of \"Yes\", the following message will be displayed immediately below the field.\n\n> Users who receive this notification via Text Message will be able to respond directly to the Text Message"
+    },
+    {
+      "id": 183947,
+      "iid": 1123,
+      "title": "[BUG] Fix special search handlers to ensure they work on Employee/Reminder log pages",
+      "weight": 1,
+      "state": "closed",
+      "labels": [],
+      "description": "Seems the changes we did to the search script for model pages (work site, layers, etc) broke the search on the basic employee and reminder log search pages. This task is meant to fix those issues so that the search icon script calls the specific helper functions on relevant pages."
+    },
+    {
+      "id": 184097,
+      "iid": 1124,
+      "title": "[BUG] \"Emergency Contact 2\" Overwriting \"Emergency Contact 1\"",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Type: Bug",
+        "priority::high",
+        "workflow::refined"
+      ],
+      "description": "If a user enters information only in \"Emergency Contact 1\", the information is saved correctly. \n\nIf the user then also enters information for \"Emergency Contact 2\", the Name and Phone number information is overwriting \"Emergency Contact 1\" information Name and Phone number. The relationship field in Emergency Contact 1 is not affected.\n\nIf the user enters no information for Emergency Contact 1 and enters information for Emergency Contact 2, the Name and Phone number information for Emergency Contact 2 is also entered \"Emergency Contact 1\" information. The relationship field in Emergency Contact 1 is not affected."
+    },
+    {
+      "id": 184302,
+      "iid": 1125,
+      "title": "[BUG] Future check-in not active after employee transfer",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Type: Bug",
+        "priority::highest",
+        "workflow::refined"
+      ],
+      "description": "When a user is transferred from one org / layer to another, their Future Check-In information is still in their record but is not \"seen\" by the DNR reporting. So even though they have a valid future check-in, they show up on the DNR list. \n\nReport from user:\n> (PL C2 Enablers) ORBIT is showing employees as not reported event though they reported. This started after the change over to the new Organization Layers. I found that if I open the future check-ins for an individual and save it will take them off the list. It looks like the future check-ins did not transfer over. I could open each persons futures check-ins and save to clear them but that is a lot of people. I talked to other commands and they have the same problem. This PO wide problem."
+    },
+    {
+      "id": 184348,
+      "iid": 1126,
+      "title": "Deploy ORBIT v3.2.6.2 to TEST",
+      "weight": 2,
+      "state": "closed",
+      "labels": [],
+      "description": ""
+    },
+    {
+      "id": 184414,
+      "iid": 1127,
+      "title": "Investigate GitLab Pipeline Issues",
+      "weight": 3,
+      "state": "closed",
+      "labels": [],
+      "description": ""
+    },
+    {
+      "id": 184426,
+      "iid": 1128,
+      "title": "Deploy ORBIT v3.2.6.3 to TEST",
+      "weight": 1,
+      "state": "closed",
+      "labels": [],
+      "description": ""
+    },
+    {
+      "id": 184526,
+      "iid": 1129,
+      "title": "[BUG] Changing Layer assignment for Notification Managers",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Customer:GCS",
+        "Type: Bug"
+      ],
+      "description": "WHAT'S HAPPENING:\n\nWhen an Org Manager inactivates a Notification Manager role for a specific layer (layer x), and then creates a new Notification Manager role for a different layer (layer y), the layers available for the Notification Manager when creating a notification include both layer x and layer y.\n\nWhen an Org Manager inactivates a Notification Manager role for a specific layer (layer x), and then creates a new Notification Manager role at the Organization level (leaving the layer selection field blank), only the original layer (layer x) is available for the Notification Manager when creating a notification.\n\nWHAT SHOULD HAPPEN:\n\nWhen an Org Manager inactivates a Notification Manager role for a specific layer (layer x), and then creates a new Notification Manager role for a different layer (layer y), the layers available for the Notification Manager when creating a notification should include only layer y.\n\nWhen an Org Manager inactivates a Notification Manager role for a specific layer (layer x), and then creates a new Notification Manager role at the Organization level (leaving the layer selection field blank), all layers should be available for the Notification Manager when creating a notification.\n\nACCEPTANCE CRITERIA:\n- When an Organization Manager inactivates a Notification Manager role at a specific layer (layer x) and creates a new Notification Manager role for the same user at a different layer (layer y), AND the user selects \"Organization Layer\" when creating a new notification, THEN only layer y is available for the user to select.\n- When an Organization Manager inactivates a Notification Manager role at a specific layer (layer x) and creates a new Notification Manager role for the same user at the organization level, AND the user selects \"Organization Layer\" when creating a new notification, THEN all active layers in the organization are available for the user to select."
+    },
+    {
+      "id": 185096,
+      "iid": 1140,
+      "title": "Update Future Check-Ins with Updated Employee Info",
+      "weight": 3,
+      "state": "closed",
+      "labels": [],
+      "description": "Fix existing future check-ins for employee that have been moved / transferred."
+    }
+  ]
+}

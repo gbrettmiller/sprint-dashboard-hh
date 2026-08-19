@@ -1,0 +1,588 @@
+{
+  "fiscal_year": 2026,
+  "month": 1,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 3746,
+      "title": "Third-Party Integration FY26Q1-6",
+      "start_date": "2025-12-24",
+      "end_date": "2026-01-06",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 6,
+        "weight": 16
+      },
+      "burndown": [
+        {
+          "date": "2025-12-24",
+          "remaining_count": 5,
+          "remaining_weight": 14
+        },
+        {
+          "date": "2025-12-25",
+          "remaining_count": 5,
+          "remaining_weight": 14
+        },
+        {
+          "date": "2025-12-26",
+          "remaining_count": 4,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2025-12-27",
+          "remaining_count": 4,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2025-12-28",
+          "remaining_count": 4,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2025-12-29",
+          "remaining_count": 3,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2025-12-30",
+          "remaining_count": 3,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2025-12-31",
+          "remaining_count": 2,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2026-01-01",
+          "remaining_count": 2,
+          "remaining_weight": 6
+        },
+        {
+          "date": "2026-01-02",
+          "remaining_count": 1,
+          "remaining_weight": 3
+        },
+        {
+          "date": "2026-01-03",
+          "remaining_count": 1,
+          "remaining_weight": 3
+        },
+        {
+          "date": "2026-01-04",
+          "remaining_count": 1,
+          "remaining_weight": 3
+        },
+        {
+          "date": "2026-01-05",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-06",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 6
+      },
+      "completed": {
+        "count": 6,
+        "weight": 16
+      },
+      "issues": [
+        {
+          "id": 185176,
+          "iid": 1144,
+          "title": "Layer specific Notification Manager",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "v3.2.7",
+          "date_added_to_sprint": "2025-12-24",
+          "date_closed": "2025-12-31",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 185175,
+          "iid": 1143,
+          "title": "Profile Update Date in Sql",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "v3.2.7",
+          "date_added_to_sprint": "2025-12-24",
+          "date_closed": "2026-01-05",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 185174,
+          "iid": 1142,
+          "title": "Send Notifications to Government Issued Mobile Device",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "v3.2.7",
+          "date_added_to_sprint": "2025-12-24",
+          "date_closed": "2026-01-02",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 185138,
+          "iid": 1141,
+          "title": "\"Employee Without Notification Information\" csv download logic issue",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "v3.2.7",
+          "date_added_to_sprint": "2025-12-24",
+          "date_closed": "2025-12-29",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 185019,
+          "iid": 1135,
+          "title": "Enable Register Button on Form Completion",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.7",
+          "date_added_to_sprint": "2025-12-24",
+          "date_closed": "2025-12-26",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183678,
+          "iid": 1120,
+          "title": "Add Form Validation to Notification Page",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.7",
+          "date_added_to_sprint": "2025-12-24",
+          "date_closed": "2025-12-24",
+          "date_removed_from_sprint": null
+        }
+      ]
+    },
+    {
+      "id": 3825,
+      "title": "Third-Party Integration FY26Q2-1",
+      "start_date": "2026-01-07",
+      "end_date": "2026-01-20",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 15,
+        "weight": 25
+      },
+      "burndown": [
+        {
+          "date": "2026-01-07",
+          "remaining_count": 13,
+          "remaining_weight": 22
+        },
+        {
+          "date": "2026-01-08",
+          "remaining_count": 14,
+          "remaining_weight": 25
+        },
+        {
+          "date": "2026-01-09",
+          "remaining_count": 11,
+          "remaining_weight": 20
+        },
+        {
+          "date": "2026-01-10",
+          "remaining_count": 11,
+          "remaining_weight": 20
+        },
+        {
+          "date": "2026-01-11",
+          "remaining_count": 11,
+          "remaining_weight": 20
+        },
+        {
+          "date": "2026-01-12",
+          "remaining_count": 9,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2026-01-13",
+          "remaining_count": 5,
+          "remaining_weight": 7
+        },
+        {
+          "date": "2026-01-14",
+          "remaining_count": 5,
+          "remaining_weight": 7
+        },
+        {
+          "date": "2026-01-15",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-16",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-17",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-18",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-19",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-01-20",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 0,
+        "new_feature": 0,
+        "other": 19
+      },
+      "completed": {
+        "count": 19,
+        "weight": 37
+      },
+      "issues": [
+        {
+          "id": 187919,
+          "iid": 1159,
+          "title": "Fix Notifications",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "v3.2.8.1",
+          "date_added_to_sprint": "2026-01-16",
+          "date_closed": "2026-01-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 186767,
+          "iid": 1158,
+          "title": "BUG: SMS Notifications Not Sent in certain scenarios",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "priority::highest"
+          ],
+          "milestone": "v3.2.8",
+          "date_added_to_sprint": "2026-01-12",
+          "date_closed": "2026-01-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 186521,
+          "iid": 1157,
+          "title": "Ensure company-issued mobile Number is a Valid SMS Notification Channel",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.8",
+          "date_added_to_sprint": "2026-01-09",
+          "date_closed": "2026-01-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 186398,
+          "iid": 1156,
+          "title": "Upgrade PROD MongoDB to v7.0.28",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "v3.2.8",
+          "date_added_to_sprint": "2026-01-08",
+          "date_closed": "2026-01-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 186151,
+          "iid": 1148,
+          "title": "BUG: Pre-existing Future Check-In display on home page",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "priority::highest",
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.8",
+          "date_added_to_sprint": "2026-01-07",
+          "date_closed": "2026-01-12",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 186131,
+          "iid": 1147,
+          "title": "Display response options on \"Confirm Notification\" page",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.8.1",
+          "date_added_to_sprint": "2026-01-07",
+          "date_closed": "2026-01-15",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 186130,
+          "iid": 1146,
+          "title": "Display Message Content on \"Confirm Notification\" page",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.8.1",
+          "date_added_to_sprint": "2026-01-07",
+          "date_closed": "2026-01-15",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 185024,
+          "iid": 1139,
+          "title": "Add Unsaved Changes Confirmation on Cancel on Edit Profile",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 2,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.8.1",
+          "date_added_to_sprint": "2026-01-07",
+          "date_closed": "2026-01-13",
+          "date_removed_from_sprint": "2026-01-07"
+        },
+        {
+          "id": 185023,
+          "iid": 1138,
+          "title": "Restructure Emergency Contact Information Section (UI Only)",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.8.1",
+          "date_added_to_sprint": "2026-01-07",
+          "date_closed": "2026-01-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 185022,
+          "iid": 1137,
+          "title": "Unify Profile View with Edit Mode",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.8.1",
+          "date_added_to_sprint": "2026-01-07",
+          "date_closed": "2026-01-15",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 185020,
+          "iid": 1136,
+          "title": "Add Cancel Button to Registration Page",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.8",
+          "date_added_to_sprint": "2026-01-07",
+          "date_closed": "2026-01-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 185018,
+          "iid": 1134,
+          "title": "Add Instructional Text for Sub-Organization Field",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.8.1",
+          "date_added_to_sprint": "2026-01-07",
+          "date_closed": "2026-01-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 185017,
+          "iid": 1133,
+          "title": "Improve Organization Field Instructional Text",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.8.1",
+          "date_added_to_sprint": "2026-01-07",
+          "date_closed": "2026-01-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 185016,
+          "iid": 1132,
+          "title": "Lock Identity Fields on Registration Page",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.8",
+          "date_added_to_sprint": "2026-01-07",
+          "date_closed": "2026-01-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 185015,
+          "iid": 1131,
+          "title": "Unrecognized User Authentication Flow",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.8",
+          "date_added_to_sprint": "2026-01-07",
+          "date_closed": "2026-01-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 184631,
+          "iid": 1130,
+          "title": "Expand Layer Selection for Notification Managers",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.8.1",
+          "date_added_to_sprint": "2026-01-07",
+          "date_closed": "2026-01-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183670,
+          "iid": 1112,
+          "title": "Conditionally Display Email Help Text",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.8.1",
+          "date_added_to_sprint": "2026-01-07",
+          "date_closed": "2026-01-15",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183669,
+          "iid": 1111,
+          "title": "Display default responses on Notification create page",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.8.1",
+          "date_added_to_sprint": "2026-01-07",
+          "date_closed": "2026-01-15",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 183668,
+          "iid": 1110,
+          "title": "Display Default Message Content on Notification create page",
+          "project_id": 91001,
+          "project_name": "orbit",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "workflow::refined"
+          ],
+          "milestone": "v3.2.8.1",
+          "date_added_to_sprint": "2026-01-07",
+          "date_closed": "2026-01-15",
+          "date_removed_from_sprint": "2026-01-07"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "milestone_title": "v4.2.4.1",
+  "milestone_id": 1953,
+  "slug": "v4.2.4.1",
+  "project_id": 91002,
+  "project_name": "PULSE",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:32.269884Z",
+  "issues": [
+    {
+      "id": 155641,
+      "iid": 256,
+      "title": "[PULSE-260] Update Unity to latest version",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::DevOps"
+      ],
+      "description": "While attempting to update the Unity NuGet Package; encountered several new errors that need to be worked through. Due to time constraints with the v4.2.2 release, this will need to be completed in the v4.2.3 release.\n\n---\n\n**Issue metadata**\n\n- Issue type: Improvement\n- Priority: High\n- Fix versions: 4.2.4"
+    },
+    {
+      "id": 155639,
+      "iid": 276,
+      "title": "Add ability to edit update and create lookup items for type of funding to admin GUI",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::New Feature"
+      ],
+      "description": "Ability to modify lookups for type of funding was removed during type of funding refactor this capability needs to be restored."
+    },
+    {
+      "id": 155615,
+      "iid": 280,
+      "title": "Identify and fix memory leak bug",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::Bug"
+      ],
+      "description": "A potential memory leak was discovered within the PULSE application. Locate and resolve any potential causes for the Memory leak discovered vi nagios."
+    },
+    {
+      "id": 155638,
+      "iid": 282,
+      "title": "Fix ability to create new leveraging contract vehicles in admin section",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::New Feature"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155640,
+      "iid": 284,
+      "title": "Complete fortify scan for v4.2.4 Patch",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155628,
+      "iid": 285,
+      "title": "Action Leveraging Section Contract Vehicle Selection Form Does not show currently selected value; it defaults to the last value on the list.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155629,
+      "iid": 286,
+      "title": "Service Code Mapping Table returns \"DataTables warning: table id=ceilThresGrid - Ajax error.\" alert on load.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155630,
+      "iid": 287,
+      "title": "Service Code Mapping Export Capability fail's due to missing directory folder.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155631,
+      "iid": 288,
+      "title": "Service Code Mapping Edit Capability results in 404 not found error when trying to edit a Service Code Map",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155633,
+      "iid": 289,
+      "title": "Fix anti-forgery token could not be decrypted error in the User Group Create, Edit, & Delete Post Methods.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155632,
+      "iid": 290,
+      "title": "Delete capability for contract vehicle in the contact vehicles admin setting returns foreign key error.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155626,
+      "iid": 291,
+      "title": "Buttons disabled on click and are not re-enabled after the action completes or when a validation error occurs",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155634,
+      "iid": 292,
+      "title": "Duration of funds section in admin tools shows the lookup item values for all organizations and not just the current users organization.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155635,
+      "iid": 293,
+      "title": "Export capability fields are statically coded causing errors with the most recent framework update. Refactor export capability to dynamically generate fields.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155637,
+      "iid": 294,
+      "title": "Fix save button position and button styling for sub forms and admin tool forms.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155636,
+      "iid": 295,
+      "title": "API Keys Delete capability returns resource not found",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "type::New Feature"
+      ],
+      "description": ""
+    }
+  ]
+}

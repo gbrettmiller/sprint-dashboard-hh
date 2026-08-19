@@ -1,0 +1,128 @@
+{
+  "milestone_title": "v4.2.7",
+  "milestone_id": 1956,
+  "slug": "v4.2.7",
+  "project_id": 91002,
+  "project_name": "PULSE",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:39.026936Z",
+  "issues": [
+    {
+      "id": 155908,
+      "iid": 221,
+      "title": "[PULSE-225] Add confirmation page to bulk upload",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: PROD",
+        "Type: New Feature",
+        "type::New Feature"
+      ],
+      "description": "Add a detailed confirmation page following a bulk upload.\u00a0\n\nThe detailed page should include all data entered for each action created. This will enable the user to quickly identify any issues following a bulk upload without having to open each action to review.\u00a0\n\n---\n\n**Issue metadata**\n\n- Issue type: Improvement\n- Priority: Medium"
+    },
+    {
+      "id": 155910,
+      "iid": 314,
+      "title": "Add SQL logic to clear error logs older than 120 days.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: PROD",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155907,
+      "iid": 319,
+      "title": "Update PM and PdM for PO Beacon",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: PROD",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": "from the program lead (PO Beacon) In July PM Cyber & Space will stand up. PdM IW in PM EWC will move to PM C&S. We will add other PdM under C&S closer to stand up."
+    },
+    {
+      "id": 155911,
+      "iid": 320,
+      "title": "Fix bug with bulk upload import capability preventing the creation of new actions from the excel document.",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155905,
+      "iid": 321,
+      "title": "Add a section on the reports page for \"PM Reports\"",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: New Feature",
+        "type::New Feature"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155906,
+      "iid": 322,
+      "title": "PO Vantage: Revise columns on Home Page View",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155904,
+      "iid": 323,
+      "title": "Add a new Dropdown for Baymark Contract selection",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: New Feature",
+        "type::New Feature"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155903,
+      "iid": 324,
+      "title": "update and load new JPO LOE List",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155909,
+      "iid": 325,
+      "title": "Add new check box field to action description section for \"Corporate Purchase Card Buy\"",
+      "weight": 0,
+      "state": "closed",
+      "labels": [
+        "Status: PROD",
+        "Type: New Feature",
+        "type::New Feature"
+      ],
+      "description": ""
+    }
+  ]
+}

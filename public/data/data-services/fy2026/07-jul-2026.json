@@ -1,0 +1,1155 @@
+{
+  "fiscal_year": 2026,
+  "month": 7,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 6311,
+      "title": "Data Services 8 JUL 26",
+      "start_date": "2026-06-24",
+      "end_date": "2026-07-08",
+      "state": "closed",
+      "source": "jira",
+      "goal": "App enhancements for SALT, Access Requests, RMA/Compliance Review",
+      "initial_totals": {
+        "count": 20,
+        "weight": 35
+      },
+      "burndown": [
+        {
+          "date": "2026-06-24",
+          "remaining_count": 16,
+          "remaining_weight": 31
+        },
+        {
+          "date": "2026-06-25",
+          "remaining_count": 17,
+          "remaining_weight": 32
+        },
+        {
+          "date": "2026-06-26",
+          "remaining_count": 17,
+          "remaining_weight": 32
+        },
+        {
+          "date": "2026-06-27",
+          "remaining_count": 17,
+          "remaining_weight": 32
+        },
+        {
+          "date": "2026-06-28",
+          "remaining_count": 17,
+          "remaining_weight": 32
+        },
+        {
+          "date": "2026-06-29",
+          "remaining_count": 18,
+          "remaining_weight": 33
+        },
+        {
+          "date": "2026-06-30",
+          "remaining_count": 15,
+          "remaining_weight": 31
+        },
+        {
+          "date": "2026-07-01",
+          "remaining_count": 14,
+          "remaining_weight": 26
+        },
+        {
+          "date": "2026-07-02",
+          "remaining_count": 11,
+          "remaining_weight": 17
+        },
+        {
+          "date": "2026-07-03",
+          "remaining_count": 11,
+          "remaining_weight": 17
+        },
+        {
+          "date": "2026-07-04",
+          "remaining_count": 11,
+          "remaining_weight": 17
+        },
+        {
+          "date": "2026-07-05",
+          "remaining_count": 11,
+          "remaining_weight": 17
+        },
+        {
+          "date": "2026-07-06",
+          "remaining_count": 8,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2026-07-07",
+          "remaining_count": 8,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2026-07-08",
+          "remaining_count": 5,
+          "remaining_weight": 7
+        }
+      ],
+      "type_breakdown": {
+        "bug": 3,
+        "improvement": 6,
+        "new_feature": 3,
+        "other": 10
+      },
+      "completed": {
+        "count": 21,
+        "weight": 36
+      },
+      "issues": [
+        {
+          "id": 745107,
+          "iid": 1465,
+          "title": "Add jane.doe@company.com as TCT admin for Region A",
+          "project_id": 25918,
+          "project_name": "Training and Cert Tracker",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-29",
+          "date_closed": "2026-06-30",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 732383,
+          "iid": 1461,
+          "title": "AMIT - Viewing generated hand receipts results in error",
+          "project_id": 25918,
+          "project_name": "Asset Management",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::bug"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-25",
+          "date_closed": "2026-07-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 731771,
+          "iid": 1460,
+          "title": "Access Requests - Push to Region D production",
+          "project_id": 25918,
+          "project_name": "Access Requests",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": "2026-06-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 729180,
+          "iid": 1456,
+          "title": "Portfolio Reporting Data Stale",
+          "project_id": 25918,
+          "project_name": "No Component",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::new-feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": "2026-07-14",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 729178,
+          "iid": 1455,
+          "title": "Split Power BI Workspaces",
+          "project_id": 25918,
+          "project_name": "No Component",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::new-feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": "2026-07-02",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 728126,
+          "iid": 1454,
+          "title": "Access Requests - Dynamic form field issues",
+          "project_id": 25918,
+          "project_name": "Access Requests",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::bug"
+          ],
+          "milestone": "Access Requests 1.4.5",
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": "2026-06-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 726319,
+          "iid": 1453,
+          "title": "Access Requests - Team field label: You must select a Team",
+          "project_id": 25918,
+          "project_name": "Access Requests",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "Access Requests 1.4.5",
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": "2026-06-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 726093,
+          "iid": 1451,
+          "title": "Compliance Review - Evaluate Fixed width vs full-screen/flexible width",
+          "project_id": 25918,
+          "project_name": "Compliance Review",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": "Compliance Review 1.3.2",
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": "2026-07-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 726092,
+          "iid": 1450,
+          "title": "Compliance Review - Review UI and create mockups for cleaner interface: Upload Record screen",
+          "project_id": 25918,
+          "project_name": "Compliance Review",
+          "weight": 1,
+          "state": "opened",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": null,
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 726090,
+          "iid": 1448,
+          "title": "Compliance Review - Review UI and create mockups for cleaner interface: View Records screen",
+          "project_id": 25918,
+          "project_name": "Compliance Review",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": "2026-08-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 721947,
+          "iid": 1445,
+          "title": "Compliance Review - Research feasibility of using file viewer to open documents",
+          "project_id": 25918,
+          "project_name": "Compliance Review",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": "Compliance Review 1.3.2",
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": "2026-06-24",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 721932,
+          "iid": 1443,
+          "title": "Access Requests - Investigate report of travel requestor not receiving approval notification",
+          "project_id": 25918,
+          "project_name": "Access Requests",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::bug"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": "2026-07-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 721393,
+          "iid": 1440,
+          "title": "Access Requests - Cancellation feature",
+          "project_id": 25918,
+          "project_name": "Access Requests",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::new-feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": "2026-07-01",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 719182,
+          "iid": 1432,
+          "title": "Compliance Review - Provide access to the dashboard for all Records Managers",
+          "project_id": 25918,
+          "project_name": "Compliance Review",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "Compliance Review 1.3.2",
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": "2026-07-06",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 719181,
+          "iid": 1431,
+          "title": "AMIT - Ensure app is functional for 7 July Demo",
+          "project_id": 25918,
+          "project_name": "Asset Management",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": "2026-07-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 704700,
+          "iid": 1420,
+          "title": "SALT - Format \"Cost\" column for currency (3500.00)",
+          "project_id": 25918,
+          "project_name": "SW License Tracking",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "SALT 1.1.0",
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": "2026-06-30",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 704553,
+          "iid": 1416,
+          "title": "SALT - Provide additional character count for \"Official Software Title\" column",
+          "project_id": 25918,
+          "project_name": "SW License Tracking",
+          "weight": 0,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "SALT 1.1.0",
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": "2026-06-30",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 704532,
+          "iid": 1412,
+          "title": "Compliance Review - Dashboard link and permissions",
+          "project_id": 25918,
+          "project_name": "Compliance Review",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": "Compliance Review 1.3.2",
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": "2026-07-02",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 704180,
+          "iid": 1411,
+          "title": "Compliance Review - Hide the Show all items button in RM Admin screen",
+          "project_id": 25918,
+          "project_name": "Compliance Review",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "Compliance Review 1.3.2",
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": "2026-07-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 696924,
+          "iid": 1385,
+          "title": "Compliance Review - Create prod Compliance Review BI reports",
+          "project_id": 25918,
+          "project_name": "Compliance Review",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": "2026-07-02",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 681874,
+          "iid": 1343,
+          "title": "Purchasing UI - Item Form Screen - Modal - ETF Form",
+          "project_id": 25918,
+          "project_name": "Purchasing",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "Purchase v2.0.0",
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": "2026-07-20",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 681872,
+          "iid": 1342,
+          "title": "Purchasing UI - Item Form Screen - Modal - ITAS Form",
+          "project_id": 25918,
+          "project_name": "Purchasing",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "Purchase v2.0.0",
+          "date_added_to_sprint": "2026-06-24",
+          "date_closed": "2026-07-20",
+          "date_removed_from_sprint": null
+        }
+      ]
+    },
+    {
+      "id": 6403,
+      "title": "Data Services 22 JUL 26",
+      "start_date": "2026-07-08",
+      "end_date": "2026-07-22",
+      "state": "closed",
+      "source": "jira",
+      "goal": null,
+      "initial_totals": {
+        "count": 23,
+        "weight": 38
+      },
+      "burndown": [
+        {
+          "date": "2026-07-08",
+          "remaining_count": 18,
+          "remaining_weight": 33
+        },
+        {
+          "date": "2026-07-09",
+          "remaining_count": 16,
+          "remaining_weight": 31
+        },
+        {
+          "date": "2026-07-10",
+          "remaining_count": 15,
+          "remaining_weight": 30
+        },
+        {
+          "date": "2026-07-11",
+          "remaining_count": 15,
+          "remaining_weight": 30
+        },
+        {
+          "date": "2026-07-12",
+          "remaining_count": 15,
+          "remaining_weight": 30
+        },
+        {
+          "date": "2026-07-13",
+          "remaining_count": 14,
+          "remaining_weight": 27
+        },
+        {
+          "date": "2026-07-14",
+          "remaining_count": 17,
+          "remaining_weight": 31
+        },
+        {
+          "date": "2026-07-15",
+          "remaining_count": 14,
+          "remaining_weight": 28
+        },
+        {
+          "date": "2026-07-16",
+          "remaining_count": 11,
+          "remaining_weight": 19
+        },
+        {
+          "date": "2026-07-17",
+          "remaining_count": 8,
+          "remaining_weight": 14
+        },
+        {
+          "date": "2026-07-18",
+          "remaining_count": 8,
+          "remaining_weight": 14
+        },
+        {
+          "date": "2026-07-19",
+          "remaining_count": 8,
+          "remaining_weight": 14
+        },
+        {
+          "date": "2026-07-20",
+          "remaining_count": 8,
+          "remaining_weight": 12
+        },
+        {
+          "date": "2026-07-21",
+          "remaining_count": 9,
+          "remaining_weight": 13
+        },
+        {
+          "date": "2026-07-22",
+          "remaining_count": 5,
+          "remaining_weight": 9
+        }
+      ],
+      "type_breakdown": {
+        "bug": 1,
+        "improvement": 15,
+        "new_feature": 10,
+        "other": 14
+      },
+      "completed": {
+        "count": 40,
+        "weight": 57
+      },
+      "issues": [
+        {
+          "id": 871182,
+          "iid": 1500,
+          "title": "SALT - 1.2.0 Test deploy",
+          "project_id": 25918,
+          "project_name": "SW License Tracking",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": "SALT 1.2.0",
+          "date_added_to_sprint": "2026-07-20",
+          "date_closed": "2026-07-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 833840,
+          "iid": 1495,
+          "title": "SALT empty creations",
+          "project_id": 25918,
+          "project_name": "SW License Tracking",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "SALT 1.2.0",
+          "date_added_to_sprint": "2026-07-14",
+          "date_closed": "2026-07-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 830658,
+          "iid": 1494,
+          "title": "SALT - Request on behalf of function",
+          "project_id": 25918,
+          "project_name": "SW License Tracking",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::new-feature"
+          ],
+          "milestone": "SALT 1.2.0",
+          "date_added_to_sprint": "2026-07-14",
+          "date_closed": "2026-07-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 830645,
+          "iid": 1492,
+          "title": "SALT - Enforce supervisor field selection on approval matrix form",
+          "project_id": 25918,
+          "project_name": "SW License Tracking",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "SALT 1.2.0",
+          "date_added_to_sprint": "2026-07-14",
+          "date_closed": "2026-07-15",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 830591,
+          "iid": 1491,
+          "title": "Access Requests - Ensure cancel, delete and print actions are on screens",
+          "project_id": 25918,
+          "project_name": "Access Requests",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": "Access Requests 1.4.6",
+          "date_added_to_sprint": "2026-07-14",
+          "date_closed": "2026-07-14",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 829779,
+          "iid": 1489,
+          "title": "SALT - request form X option to remove selection",
+          "project_id": 25918,
+          "project_name": "SW License Tracking",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "SALT 1.2.0",
+          "date_added_to_sprint": "2026-07-20",
+          "date_closed": "2026-07-20",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 829769,
+          "iid": 1488,
+          "title": "SALT - Request tab active link before it should be",
+          "project_id": 25918,
+          "project_name": "SW License Tracking",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "SALT 1.2.0",
+          "date_added_to_sprint": "2026-07-20",
+          "date_closed": "2026-07-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 828484,
+          "iid": 1487,
+          "title": "Baseline - Finance Portal org changes",
+          "project_id": 25918,
+          "project_name": "Data Services Baseline/Environment",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-07-10",
+          "date_closed": "2026-07-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 828455,
+          "iid": 1486,
+          "title": "SALT - Alphabetical sorting of requestor and supervisor field choices",
+          "project_id": 25918,
+          "project_name": "SW License Tracking",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "SALT 1.2.0",
+          "date_added_to_sprint": "2026-07-10",
+          "date_closed": "2026-07-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 828454,
+          "iid": 1485,
+          "title": "SALT - Can we auto-populate the PTC/employee type field",
+          "project_id": 25918,
+          "project_name": "SW License Tracking",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "SALT 1.2.0",
+          "date_added_to_sprint": "2026-07-14",
+          "date_closed": "2026-07-15",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 828453,
+          "iid": 1484,
+          "title": "SALT - Need to validate only sub-org/team combos with approval matrix are available",
+          "project_id": 25918,
+          "project_name": "No Component",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "SALT 1.2.0",
+          "date_added_to_sprint": "2026-07-17",
+          "date_closed": "2026-07-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 828452,
+          "iid": 1483,
+          "title": "SALT - Change Sub_Org field label to Sub Org on request form",
+          "project_id": 25918,
+          "project_name": "SW License Tracking",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "SALT 1.2.0",
+          "date_added_to_sprint": "2026-07-10",
+          "date_closed": "2026-07-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 828451,
+          "iid": 1482,
+          "title": "SALT - Make justification field mandatory",
+          "project_id": 25918,
+          "project_name": "SW License Tracking",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::new-feature"
+          ],
+          "milestone": "SALT 1.2.0",
+          "date_added_to_sprint": "2026-07-10",
+          "date_closed": "2026-07-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 828450,
+          "iid": 1481,
+          "title": "SALT - Add a need by date field",
+          "project_id": 25918,
+          "project_name": "SW License Tracking",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::new-feature"
+          ],
+          "milestone": "SALT 1.2.0",
+          "date_added_to_sprint": "2026-07-14",
+          "date_closed": "2026-07-15",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 828049,
+          "iid": 1480,
+          "title": "Baseline - Data Services Group Employee Lookup",
+          "project_id": 25918,
+          "project_name": "Data Services Baseline/Environment",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::new-feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-07-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 828046,
+          "iid": 1479,
+          "title": "Catalog Sync - Prod connections references for notifications",
+          "project_id": 25918,
+          "project_name": "Catalog Sync",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::bug"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-07-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 828045,
+          "iid": 1478,
+          "title": "Baseline - Data Services marketing slip sheet template",
+          "project_id": 25918,
+          "project_name": "Data Services Baseline/Environment",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-08-04",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 794322,
+          "iid": 1476,
+          "title": "Access Requests - Change name of Record column",
+          "project_id": 25918,
+          "project_name": "Access Requests",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "Access Requests 1.4.6",
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-07-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 792906,
+          "iid": 1475,
+          "title": "ITAM - Delete function for hand receipts",
+          "project_id": 25918,
+          "project_name": "Asset Management",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::new-feature"
+          ],
+          "milestone": "AMIT 1.0.1",
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-07-10",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 778912,
+          "iid": 1474,
+          "title": "Registry - Email notification to requester and submitter on approval",
+          "project_id": 25918,
+          "project_name": "Data Services App Registry",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-07-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 778906,
+          "iid": 1473,
+          "title": "SALT - Evaluate change to supervisor",
+          "project_id": 25918,
+          "project_name": "SW License Tracking",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::new-feature"
+          ],
+          "milestone": "SALT 1.2.0",
+          "date_added_to_sprint": "2026-07-14",
+          "date_closed": "2026-07-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 757644,
+          "iid": 1472,
+          "title": "Access Requests - Save and finish later",
+          "project_id": 25918,
+          "project_name": "Access Requests",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::new-feature"
+          ],
+          "milestone": "Access Requests 1.5.0",
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-07-28",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 757640,
+          "iid": 1471,
+          "title": "I/O - Add a delete function",
+          "project_id": 25918,
+          "project_name": "In / out-processing",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::new-feature"
+          ],
+          "milestone": "I/O 1.3.0",
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-07-14",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 751412,
+          "iid": 1469,
+          "title": "ITAM - Search functions on home page",
+          "project_id": 25918,
+          "project_name": "Asset Management",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "AMIT 1.0.1",
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-07-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 749616,
+          "iid": 1468,
+          "title": "ITAM - Troubleshoot hand receipt upload process",
+          "project_id": 25918,
+          "project_name": "Asset Management",
+          "weight": 0,
+          "state": "closed",
+          "labels": [],
+          "milestone": "AMIT 1.0.1",
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-07-14",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 736299,
+          "iid": 1464,
+          "title": "Access Requests - Traveler field choices",
+          "project_id": 25918,
+          "project_name": "Access Requests",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::new-feature"
+          ],
+          "milestone": "Access Requests 1.4.6",
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-07-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 729180,
+          "iid": 1456,
+          "title": "Portfolio Reporting Data Stale",
+          "project_id": 25918,
+          "project_name": "No Component",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::new-feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-07-14",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 726093,
+          "iid": 1451,
+          "title": "Compliance Review - Evaluate Fixed width vs full-screen/flexible width",
+          "project_id": 25918,
+          "project_name": "Compliance Review",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": "Compliance Review 1.3.2",
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-07-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 726092,
+          "iid": 1450,
+          "title": "Compliance Review - Review UI and create mockups for cleaner interface: Upload Record screen",
+          "project_id": 25918,
+          "project_name": "Compliance Review",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-08-05",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 726091,
+          "iid": 1449,
+          "title": "Compliance Review - Review UI and create mockups for cleaner interface: RM Admin screen",
+          "project_id": 25918,
+          "project_name": "Compliance Review",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-08-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 726090,
+          "iid": 1448,
+          "title": "Compliance Review - Review UI and create mockups for cleaner interface: View Records screen",
+          "project_id": 25918,
+          "project_name": "Compliance Review",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": null,
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-08-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 721348,
+          "iid": 1439,
+          "title": "Compliance Review - Records Mapping text",
+          "project_id": 25918,
+          "project_name": "Compliance Review",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": "Compliance Review 1.3.2",
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-07-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 721347,
+          "iid": 1438,
+          "title": "Compliance Review - Upload screen text",
+          "project_id": 25918,
+          "project_name": "Compliance Review",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": "Compliance Review 1.3.2",
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-07-09",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 704180,
+          "iid": 1411,
+          "title": "Compliance Review - Hide the Show all items button in RM Admin screen",
+          "project_id": 25918,
+          "project_name": "Compliance Review",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "Compliance Review 1.3.2",
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-07-08",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 685746,
+          "iid": 1365,
+          "title": "SALT - approval email formatting",
+          "project_id": 25918,
+          "project_name": "SW License Tracking",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "SALT 1.2.0",
+          "date_added_to_sprint": "2026-07-21",
+          "date_closed": "2026-07-22",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 682564,
+          "iid": 1358,
+          "title": "SALT - info on what supervisor does",
+          "project_id": 25918,
+          "project_name": "SW License Tracking",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "SALT 1.2.0",
+          "date_added_to_sprint": "2026-07-17",
+          "date_closed": "2026-07-17",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 681874,
+          "iid": 1343,
+          "title": "Purchasing UI - Item Form Screen - Modal - ETF Form",
+          "project_id": 25918,
+          "project_name": "Purchasing",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "Purchase v2.0.0",
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-07-20",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 681872,
+          "iid": 1342,
+          "title": "Purchasing UI - Item Form Screen - Modal - ITAS Form",
+          "project_id": 25918,
+          "project_name": "Purchasing",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::improvement"
+          ],
+          "milestone": "Purchase v2.0.0",
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-07-20",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 681830,
+          "iid": 1338,
+          "title": "ITAM - deploy AMIT application to (2) Test Envir",
+          "project_id": 25918,
+          "project_name": "Asset Management",
+          "weight": 3,
+          "state": "closed",
+          "labels": [],
+          "milestone": "AMIT 1.0.1",
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-07-16",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 680764,
+          "iid": 1334,
+          "title": "ITAM- Connnections References",
+          "project_id": 25918,
+          "project_name": "No Component",
+          "weight": 1,
+          "state": "closed",
+          "labels": [],
+          "milestone": "AMIT 1.0.1",
+          "date_added_to_sprint": "2026-07-08",
+          "date_closed": "2026-07-16",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-3-mar-26",
+  "title": "Data Services 3 MAR 26",
+  "start_date": "2026-02-18",
+  "end_date": "2026-03-03",
+  "generated_at": "2026-07-02T21:56:53.607172Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on stabilizing core workflows across multiple applications and expanding administrative capabilities to support organizational restructuring. The team prioritized fixing critical user-facing bugs, completing modal-based workflows for document management, and establishing proper access controls across newly configured organizational hierarchies.",
+    "summary": "The team completed 47 issues spanning six major application areas, with particular emphasis on the Catalog Sync document request screens, Access Requests traveler management, and Compliance Review records management platforms. Key accomplishments include full implementation of document request modals with edit and delete functionality, resolution of form validation and navigation issues in Access Requests, deployment of Compliance Review capabilities to all consortium test environments, and comprehensive configuration of application admin group permissions and memberships across five organizational entities. Additionally, the team addressed critical data display problems such as missing PDF content and lost UI elements, implemented sorting and filtering enhancements across multiple screens, and updated notification logic to include relevant stakeholders like Traveler Points of Contact. These changes improve operational efficiency, ensure proper governance through role-based access controls, and provide users with more reliable and complete information during key business processes.",
+    "metrics": {
+      "initial_count": 47,
+      "initial_weight": 92,
+      "completed_count": 47,
+      "completed_weight": 92,
+      "initial_breakdown": "26 Others, 14 Improvements, 4 New Features, 3 Bugs",
+      "completed_breakdown": "26 Others, 14 Improvements, 4 New Features, 3 Bugs"
+    }
+  }
+}

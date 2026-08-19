@@ -1,0 +1,77 @@
+{
+  "milestone_title": "v5.1.6",
+  "milestone_id": 4466,
+  "slug": "v5.1.6",
+  "project_id": 91002,
+  "project_name": "PULSE",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:37.720296Z",
+  "issues": [
+    {
+      "id": 198899,
+      "iid": 674,
+      "title": "UX: Add breadcrumb navigation to all main views",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "type::Improvement"
+      ],
+      "description": "## Summary\nPULSE has no breadcrumb trail anywhere in the application. Users navigating from the\naction item list \u2192 item detail \u2192 post-award \u2192 sub-contractor have no visible path\nback and must use the browser Back button or top-level navigation menu. This is\nparticularly disorienting in the Admin area, which has 27 sub-sections.\n\n## Acceptance Criteria\n- [ ] A Bootstrap breadcrumb component is added to the shared layout (`_Layout.cshtml` or a partial)\n- [ ] Breadcrumbs are populated per-view using a ViewData/ViewBag convention (e.g., `ViewData[\"Breadcrumbs\"]`)\n- [ ] At minimum, breadcrumbs are implemented for: Dashboard \u2192 Item List \u2192 Item Detail \u2192 each sub-tab (Post Award, Compliance Docs, etc.)\n- [ ] Admin area breadcrumbs reflect: Admin Home \u2192 Section \u2192 Record (e.g., Admin \u2192 Users \u2192 Edit)\n- [ ] Breadcrumbs are rendered as a `<nav aria-label=\"breadcrumb\">` with `<ol class=\"breadcrumb\">` for accessibility\n- [ ] The current page is the last breadcrumb item and is not a link (`aria-current=\"page\"`)\n- [ ] No existing navigation or layout behavior is broken"
+    },
+    {
+      "id": 198901,
+      "iid": 676,
+      "title": "UX: Add admin dashboard with quick-access to common tasks",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "type::Improvement"
+      ],
+      "description": "## Summary\nThe PULSE Admin area contains 27 sub-sections accessible only through a flat\nnavigation menu. Administrators have no at-a-glance view of the system state and\nmust click through menus to reach common tasks like adding a user, editing a lookup,\nor reviewing error logs. There is no summary of recent activity, pending access\nrequests, or data anomalies.\n\n**Affected area:** `Source/OneNListApp.Web/Areas/Admin/`\n\n## Acceptance Criteria\n- [ ] An Admin Home dashboard page is created at `/Admin/Home/Index`\n- [ ] The dashboard displays quick-action cards/tiles for the most common tasks: Manage Users, Manage Lookups, Manage Field Config, Review Error Logs, Review API Keys\n- [ ] A \"Recent Activity\" section shows the last 10 configuration changes (user, action, timestamp) if an audit log is available\n- [ ] A \"Pending Access Requests\" count is displayed if the access request feature is active\n- [ ] A \"Data Anomalies\" count links to the DataAnomalyController if anomalies exist\n- [ ] The dashboard is responsive and renders correctly on tablet-sized screens\n- [ ] Navigation to any Admin sub-section from the dashboard takes no more than 2 clicks"
+    },
+    {
+      "id": 198902,
+      "iid": 677,
+      "title": "UX: Add feedback and progress indication for data exports",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "type::Improvement"
+      ],
+      "description": "## Summary\nData export operations in PULSE provide no user feedback. The export button is\ndisabled after click (via `onenlist.btnslinks.disable.js`) and re-enabled via a\ncookie polling mechanism (`data-trigger-download` attribute, lines 34\u201352). This\ncookie detection is unreliable \u2014 race conditions can leave the button permanently\ndisabled or re-enabled before the download starts, leaving the user with no\nindication of whether the export worked.\n\n**Affected file:** `Source/OneNListApp.Web/wwwroot/scripts/onenlist.btnslinks.disable.js`\n\n## Acceptance Criteria\n- [ ] When an export is triggered, a non-blocking status message appears (e.g., \"Preparing your export\u2026\")\n- [ ] The status message is replaced with \"Download ready\" or dismissed automatically once the file download begins\n- [ ] If the export fails (server error), a user-visible error message is shown (not just a console log)\n- [ ] The export button is reliably re-enabled after the download completes or fails\n- [ ] The cookie-based re-enable mechanism is replaced with a more reliable approach (e.g., `fetch` with blob response, or a server-sent status endpoint)\n- [ ] Existing export functionality is not broken for any export type"
+    },
+    {
+      "id": 233255,
+      "iid": 717,
+      "title": "Add a uniqueness constraint to LookupItem_PscCodeToSpendCat",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "type::Improvement"
+      ],
+      "description": "_Follow-up from the lookup architecture review (#398). Source: the project backlog docs._\n\n### Problem\n`LookupItem_PscCodeToSpendCat` defines only FK constraints (all `ClientSetNull`) and **no unique index** (`OneNListContext.cs:617-635`). **DB-verified:** the physical table has only the clustered PK on `ID` \u2014 no unique constraint, no FK indexes \u2014 and currently holds **97 rows with 0 duplicate `(FK_PscCode, FK_Spending_Category, FK_Organization_ID)` combinations**, so a unique index can be added now without a cleanup step. Without it, duplicate mappings can be inserted and produce ambiguous/doubled goal resolution. The 2026 VendorId mapping already proves the pattern (`UX_Cage_Prime_Org`, `OneNListContext.cs:1566-1568`).\n\n### Proposed change\nAdd a unique composite index on `(FK_PscCode, FK_Spending_Category, FK_Organization_ID)` via Fluent config + a SQL migration (guard with a pre-check in case PROD differs). Update the CRUD sproc / `SaveOrUpdate` path to upsert rather than blind-insert.\n\n### Affected files\n- `Source/OneNListApp.Data/OneNListContext.cs` (Fluent config)\n- New SQL migration under `Source/Migrations/<next-version>/`\n- `Source/OneNListApp.Web/Areas/Admin/Controllers/PscCodeMappingController.cs`\n\n### Rough effort\nM.\n\n### Severity\nHigh (D2)"
+    },
+    {
+      "id": 233256,
+      "iid": 718,
+      "title": "Introduce repeatable, idempotent lookup seeding",
+      "weight": 2,
+      "state": "closed",
+      "labels": [
+        "type::Improvement"
+      ],
+      "description": "_Follow-up from the lookup architecture review (#398). Source: the project backlog docs._\n\n### Problem\nThe entire lookup layer is seeded by hand-run SQL scripts + a `.bak` restore \u2014 there are **no `HasData` calls** in `OnModelCreating` (`OneNListContext.cs:160-1591`) and no programmatic seeder. This has already caused cross-environment lookup-ID drift (commit `9682475d`, \"Fixed issue with lookup anomalies between DREN and QA\"). New environments and the Service Code CSV import depend on the right scripts being applied in the right order.\n\n### Proposed change\nDefine the canonical lookup *types* (and fixed system items) as idempotent seed data \u2014 either EF `HasData` for stable `Lookup` rows, or a versioned re-runnable `MERGE`-based SQL seed invoked at deploy. Document the seed order for Service Code types + goal-map CSV import so a fresh environment reaches a known lookup state in one repeatable step.\n\n### Affected files\n- `Source/OneNListApp.Data/OneNListContext.cs` (if `HasData`)\n- New seed script(s) under `Source/Migrations/`\n- `Source/OneNListApp.Web/Areas/Admin/Controllers/PscCodeMappingController.cs` (CSV import order/docs)\n\n### Rough effort\nL.\n\n### Severity\nMed (D3)"
+    },
+    {
+      "id": 233266,
+      "iid": 723,
+      "title": "Notify users when records are updated / provide a recently-updated records list",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "type::New Feature"
+      ],
+      "description": "## Customer request\n> \"Would it be possible to set up some kind of alert to notify us when records are updated, or to obtain a list of recently updated records?\"\n\nTwo related capabilities: (A) a **list/report of recently-updated records**, and (B) an **alert/notification when records are updated**. They're framed as alternatives \u2014 recommend delivering (A) first (small, high value) and treating (B) as a follow-on phase because it requires infrastructure decisions.\n\n## What already exists (build on, don't reinvent)\n- **Per-record timestamps:** `OneNList.ModifiedDate` / `ModifiedBy` are populated on update (`OneNListContext.cs:731-732`, DB default `getdate()`; set via `OneNItemUpdateHelper`). This is the simplest source for \"recently updated.\"\n- **Reporting view:** `BO_View_OneNList` already aggregates action fields for list/report queries.\n- **Analytics sproc pattern:** `GetEndUserAnalytics_Totals/_ChangesByType/_ChangesByUser` (`StoredProcedureService.cs:518-540`, surfaced at `/Admin/UserAnalytics`) is a good template for a change-summary query.\n- **Change-log tables exist but are NOT populated:** `TableChangeLogSummary` / `TableChangeLogDetail` entities are mapped (`OneNListContext.cs` ~1489-1519) but no code writes to them. Field-level change history is therefore not currently available without new write logic or triggers.\n- **Email is a stub:** `EmailService.SendEmailAsync` returns `Task.CompletedTask` with no SMTP (`App_Start/IdentityConfig.cs:11-17`, registered `Program.cs:128`). `eMetricType.Email` enum exists but is unused.\n- **SignalR exists** (`Hubs/ProgressHub.cs`, `Helpers/ProgressNotifier.cs`) \u2014 currently only for bulk-progress; could power in-app notifications.\n- **No background/scheduled job framework** (no `IHostedService`/Hangfire/Quartz) \u2014 a digest/scheduled email would need one added.\n- **API project** (`Source/OneNListApp.API`) exposes specific history views by API key but has **no** generic \"modified since X\" endpoint.\n\n## Recommended phased scope\n\n### Phase 1 \u2014 Recently-updated records list (low effort, satisfies request B-as-list)\n- Add a stored proc / view query: actions where `ModifiedDate >= @cutoff`, scoped by organization (respect existing org multi-tenancy filter), returning PO Control #, Title, ModifiedBy, ModifiedDate, status.\n- Surface it as a filterable admin/list page (reuse the action list table styling) and/or a parameterized API endpoint (e.g. `GET /api/RecentlyUpdated?sinceDays=7`) guarded by the existing API-key check.\n- Acceptance: a user can see/pull all records in their org updated within a chosen window (default 7 days), sortable by ModifiedDate.\n\n### Phase 2 \u2014 Update alerts/notifications (larger; needs decisions)\n- Implement real notification delivery. Options:\n  - **In-app** via the existing SignalR hub (no SMTP needed).\n  - **Email digest** \u2014 requires implementing `EmailService` with an SMTP/relay (gov-approved) + a scheduled job (new `IHostedService`) to send a periodic \"records updated since last digest\" summary, leveraging `eMetricType`.\n- Optional: a subscription/preferences table so users opt into which orgs/fields trigger alerts.\n- If field-level (\"what changed\") detail is required (not just \"record X was updated\"), add population of `TableChangeLogSummary/Detail` (SaveChanges interceptor or DB triggers) \u2014 currently empty.\n\n## Decisions needed before Phase 2 (open questions)\n1. **Delivery channel:** in-app (SignalR) vs email vs both?\n2. If email: is an approved SMTP/relay available in the gov environment, and what cadence (real-time vs daily/weekly digest)?\n3. **Granularity:** \"record was updated\" (use `ModifiedDate`) vs \"these fields changed\" (requires populating the change-log tables)?\n4. **Scope/recipients:** all updates in an org, or only specific statuses/fields, and who receives them?\n\n## Affected files (indicative)\n- `Source/OneNListApp.Service/StoredProcedureService.cs` + `IStoredProcedureService.cs` (new query)\n- new SQL migration under `Source/Migrations/<next-version>/` (sproc/view; optionally change-log triggers)\n- `Source/OneNListApp.Web/...` new list page/controller (Phase 1)\n- `Source/OneNListApp.API/...` new endpoint (Phase 1, optional)\n- `Source/OneNListApp.Web/App_Start/IdentityConfig.cs` (implement EmailService), `Program.cs` (register hosted service), `Hubs/ProgressHub.cs` (Phase 2)\n\n## Rough effort\nPhase 1: S\u2013M. Phase 2: M\u2013L (depends on channel + digest decisions).\n\n_Source: codebase review of change-tracking, ModifiedDate, EmailService, SignalR, and the API project._"
+    }
+  ]
+}

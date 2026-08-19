@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-8-jul-26",
+  "title": "Data Services 8 JUL 26",
+  "start_date": "2026-06-24",
+  "end_date": "2026-07-08",
+  "generated_at": "2026-07-09T06:06:42.347413Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint aimed to resolve critical production issues across four major applications while advancing user experience improvements and administrative capabilities. The team prioritized stability for upcoming demonstrations and deployments while establishing foundational infrastructure for enhanced reporting and access control.",
+    "summary": "The sprint delivered seventeen completed items spanning bug fixes, feature enhancements, and administrative updates across Access Requests, AMIT, Compliance Review, and SALT applications. Key accomplishments include resolving notification delivery failures and form field validation errors in Access Requests, enabling production deployment of Region D, establishing proper role-based access controls for Records Managers, and improving data presentation through Power BI workspace reorganization and currency formatting. These efforts directly support operational readiness, reduce friction in approval workflows, and ensure the applications are prepared for demonstration and production use.",
+    "metrics": {
+      "initial_count": 22,
+      "initial_weight": 39,
+      "completed_count": 17,
+      "completed_weight": 30,
+      "initial_breakdown": "10 Others, 6 Improvements, 3 Bugs, 3 New Features",
+      "completed_breakdown": "8 Others, 4 Improvements, 3 Bugs, 2 New Features"
+    }
+  }
+}

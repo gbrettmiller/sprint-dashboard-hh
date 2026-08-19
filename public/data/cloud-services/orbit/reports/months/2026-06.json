@@ -1,0 +1,23 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "orbit",
+  "month": "2026-06",
+  "generated_at": "2026-07-01T06:08:29.740911Z",
+  "sprints": [
+    {
+      "title": "3.3.3",
+      "start_date": "2026-06-03",
+      "end_date": "2026-06-16",
+      "goals": "Sprint 3.3.3 aimed to resolve critical visibility and permissions issues across the platform while modernizing the database infrastructure to improve system performance and reliability. The team also focused on eliminating edge cases in notification delivery and search functionality that were impacting user experience.",
+      "summary": "The sprint delivered fixes for several high-impact issues including correcting role-based visibility for matrixed employee on the home screen, resolving intermittent email reminder bugs affecting do-not-resend preferences, and restoring search functionality for both application responses and system logs. The team successfully migrated to a new CosmosDB database structure with comprehensive load testing and validation, implemented stricter permission controls on notification management features, enabled EmployeeId-based employee uploads for improved data management, and backfilled unit test coverage across critical namespaces to strengthen code quality and maintainability. These changes collectively enhance system stability, data integrity, and user access control across the platform.",
+      "metrics": {
+        "initial_count": 16,
+        "initial_weight": 37,
+        "completed_count": 16,
+        "completed_weight": 37,
+        "initial_breakdown": "14 Others, 1 Devops, 1 Improvement",
+        "completed_breakdown": "14 Others, 1 Devops, 1 Improvement"
+      }
+    }
+  ]
+}

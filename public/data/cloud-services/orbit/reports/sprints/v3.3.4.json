@@ -1,0 +1,158 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "orbit",
+  "milestone_slug": "v3.3.4",
+  "title": "v3.3.4",
+  "start_date": "2026-06-30",
+  "end_date": "2026-07-14",
+  "generated_at": "2026-07-15T06:12:42.058481Z",
+  "test_plan": [
+    {
+      "iid": 1361,
+      "title": "Add caching (orbit-geo) to Country reference/lookup reads",
+      "steps": "- Load a page with a Country dropdown/pick-list (e.g. user profile, address form) and verify the list populates correctly with active countries in alphabetical order.\n- Edit a Country record in the admin interface (e.g. change name, toggle IsActive status) and save; then reload a page with the Country dropdown and confirm the change is reflected immediately.\n- Monitor Cosmos DB RU consumption for `Country` reads during normal page load activity and verify it is significantly lower than the baseline ~28k RU reported before caching was implemented.\n- Deactivate a Country record via admin interface and verify it no longer appears in Country dropdowns on subsequently loaded pages.\n- Load the same page with a Country dropdown multiple times in quick succession and confirm response times are consistent/fast (indicating cache hits)."
+    },
+    {
+      "iid": 1362,
+      "title": "Add caching (orbit-geo) to State reference/lookup reads",
+      "steps": "- Load a page with a State dropdown/pick-list (e.g., a form that displays active states) and verify states load and display correctly.\n- Edit a State record in the admin panel (change name, toggle IsActive status) and save; then refresh the dropdown page and confirm the updated state appears immediately without stale data.\n- Monitor RU consumption in CosmosDB for the `orbit-geo` database during repeated page loads with State dropdowns; verify RU usage is significantly lower than the baseline ~28k RU (caching should reduce read volume).\n- Clear the application cache (restart the app or invalidate manually if exposed), then load a State dropdown and verify it re-populates from the database and displays correctly.\n- On a multi-instance deployment (if applicable), edit a State on one instance and verify all instances reflect the change within a reasonable timeframe (if using Option B/Redis) or after cache expiration (if using Option A/in-process)."
+    },
+    {
+      "iid": 1363,
+      "title": "Add caching (orbit-geo) to TimeZone reference/lookup reads",
+      "steps": "- Open a page with a TimeZone dropdown/pick-list and verify it loads without errors and displays all active time zones.\n- Confirm the page loads successfully on repeat visits within a short timeframe (e.g., 2-3 rapid page refreshes) to verify caching is working.\n- In the admin panel, edit a TimeZone record (e.g., change the name or IsActive status) and save it.\n- Refresh the page with the TimeZone dropdown and verify the updated TimeZone data appears immediately (cache invalidation on Save).\n- Monitor Cosmos DB RU consumption during normal page loads with TimeZone dropdowns and confirm it is significantly reduced compared to the baseline (~28k RU mentioned in the issue)."
+    },
+    {
+      "iid": 1364,
+      "title": "Add caching (orbit-geo) to WorkSite reference/lookup reads",
+      "steps": "- Load a page with a `WorkSite` dropdown/pick-list (e.g., work site assignment form) and verify the list populates correctly and quickly on first load.\n- Refresh the same page multiple times within a 4-hour window and confirm the dropdown loads without noticeable delay (verifying cache is being used).\n- As an admin, edit an active `WorkSite` record (e.g., change its name or status) and save the changes.\n- Reload a page with the `WorkSite` dropdown and verify the updated/changed work site appears in the list (confirming cache invalidation on save).\n- Open the application in multiple browser tabs or windows, edit a `WorkSite` in one tab, then refresh the dropdown in another tab and confirm the change is reflected (if Option B/Redis is implemented, verify instant cross-instance sync; if Option A/in-process cache, verify within the same instance)."
+    },
+    {
+      "iid": 1365,
+      "title": "Add caching (orbit-lookup) to Activity reference/lookup reads",
+      "steps": "- Load a page with an Activity dropdown/pick-list and verify it displays the expected active activities without errors.\n- Add a new Activity record via admin interface, save it, then reload the dropdown on another page and confirm the new activity appears in the list.\n- Edit an existing Activity record (e.g., change name or IsActive flag), save it, reload the dropdown, and verify the change is reflected immediately.\n- Deactivate an Activity record (set IsActive to false), save, then reload the dropdown and confirm the inactive activity no longer appears in the active list.\n- Monitor RU consumption in Cosmos DB during normal page loads with dropdowns and verify it remains significantly lower than the pre-caching baseline (~28k RU mentioned in the issue)."
+    },
+    {
+      "iid": 1366,
+      "title": "Add caching (orbit-lookup) to Building reference/lookup reads",
+      "steps": "- Load a page with a Building dropdown/pick-list (e.g. property selection, facility lookup) and verify the list populates correctly and matches the database.\n- Perform the same page load 2\u20133 more times in quick succession and confirm load time is noticeably faster (cached reads vs. fresh Cosmos queries).\n- In an admin/management interface, edit a Building record (e.g. change name, toggle IsActive status) and Save.\n- Reload the dropdown/pick-list page and verify the updated Building data appears immediately (cache invalidation on Save worked).\n- Monitor Cosmos DB RU consumption during normal page loads with dropdowns before and after the fix; confirm RU usage has decreased significantly compared to the baseline (~28k RU mentioned in the issue)."
+    },
+    {
+      "iid": 1367,
+      "title": "Add caching (orbit-lookup) to Region reference/lookup reads",
+      "steps": "- Load a page containing a Region dropdown/pick-list (e.g., a form with reference data) and verify the dropdown populates correctly with active Region entries.\n- Perform the same page load 2\u20133 times in quick succession and confirm the dropdown renders consistently without delays, indicating cached data is being used.\n- As an admin, edit a Region record (e.g., change its name or IsActive status) and save it.\n- Reload the page containing the Region dropdown and verify the updated/refreshed data appears immediately, confirming cache invalidation on Save( ) works.\n- Monitor Cosmos RU consumption (or application logs) before and after the caching implementation and confirm a measurable reduction in read operations for repeated Region lookups."
+    },
+    {
+      "iid": 1368,
+      "title": "Add caching (orbit-lookup) to VendorAccount reference/lookup reads",
+      "steps": "- Open a page that loads `VendorAccount` dropdown/pick-list (e.g. contract creation or editing form) and verify it displays correctly with no errors.\n- Load the same page multiple times in quick succession and confirm the dropdown populates instantly without noticeable delays (cached reads should be near-instant vs. metered Cosmos reads).\n- In an admin panel, edit an active `VendorAccount` record (e.g. change name or status) and save it, then reload a page with the dropdown and verify the updated data appears immediately.\n- Verify the cache invalidation works by editing a `VendorAccount` record, waiting up to 4 hours (or until cache TTL expires), and confirming stale data does not persist beyond the invalidation.\n- Monitor application logs or RU usage metrics during normal page loads with contract dropdowns to confirm Cosmos DB read units are reduced compared to baseline (pre-caching) measurements."
+    },
+    {
+      "iid": 1369,
+      "title": "Add caching (orbit-lookup) to Department reference/lookup reads",
+      "steps": "- Load a page that displays the Department dropdown/pick-list (e.g., a form with a branch selector) and verify the dropdown populates correctly with active branches.\n- Perform the same page load multiple times in quick succession and confirm the data loads without errors (cache should serve subsequent requests).\n- As an admin, edit a Department record (e.g., change its name or IsActive status) and save it.\n- Reload the page with the dropdown and verify the updated/cached branch data appears immediately (no stale data from previous cache).\n- Monitor application performance metrics or RU consumption in CosmosDB and confirm that repeated page loads with the dropdown show reduced database read costs compared to the pre-caching baseline."
+    },
+    {
+      "iid": 1370,
+      "title": "Add caching (orbit-lookup) to FederalHoliday reference/lookup reads",
+      "steps": "- Load a page with a FederalHoliday dropdown/pick-list and verify the list displays correctly and completely (e.g., all active holidays appear).\n- Refresh the same page multiple times within a short time period and confirm the dropdown populates instantly without database delays.\n- In the admin interface, edit a FederalHoliday record (e.g., change name, toggle IsActive status) and save it.\n- Reload the page with the dropdown and verify the updated FederalHoliday data is reflected immediately (new name visible, inactive items removed, etc.).\n- Monitor application performance metrics (RU consumption in Cosmos or response times) and confirm that repeated dropdown loads do not cause a spike in database reads compared to the first load."
+    },
+    {
+      "iid": 1371,
+      "title": "Add caching (orbit-lookup) to Division reference/lookup reads",
+      "steps": "- Open a page that displays `Division` in a dropdown or pick-list (e.g. a form with a Division selector) and verify the dropdown populates correctly with active commands.\n- Monitor network traffic or RU consumption in CosmosDB during page loads that reference `Division` data, and confirm that repeated page loads do not incur additional read costs (cache hit behavior).\n- Edit a `Division` record (mark as inactive or update its name) via the admin interface, save the changes, and verify the dropdown on a freshly loaded page reflects the updated data within a few seconds.\n- Load the same page multiple times in quick succession and confirm the dropdown displays consistently and without delays (verifying cache is functioning).\n- Compare RU consumption before and after the caching implementation on a page with `Division` dropdowns under similar load conditions to confirm the reduction in database reads."
+    },
+    {
+      "iid": 1372,
+      "title": "Add caching (orbit-lookup) to Matrix reference/lookup reads",
+      "steps": "- Load a page that displays a Matrix dropdown/pick-list (e.g. a form with Matrix reference data) and verify the dropdown populates correctly with active Matrix entries.\n- Perform an admin edit to a Matrix record (e.g. add/modify/deactivate an entry) and save the changes.\n- Reload the page with the dropdown and confirm the updated Matrix data appears immediately without requiring an app restart or cache clear.\n- Monitor Cosmos DB RU consumption during repeated page loads that display Matrix dropdowns and verify RU usage is significantly lower than pre-caching baseline (~28k RU mentioned in the issue).\n- If Option B (Redis) is implemented, verify the same dropdown updates appear consistently across multiple app instances after an admin edit to confirm cross-instance cache invalidation works."
+    },
+    {
+      "iid": 1374,
+      "title": "Add caching (orbit-lookup) to Rank reference/lookup reads",
+      "steps": "- Load a page containing a `Rank` dropdown or pick-list (e.g., soldier profile, assignment form) and verify the dropdown populates correctly with active ranks.\n- Open browser developer tools (Network tab) and reload the page multiple times; confirm that after the first load, subsequent `Rank` reads do not generate new Cosmos DB queries (cached in memory).\n- Log in as an admin, edit a `Rank` record (e.g., change name or active status), save the changes, and verify the dropdown on a separate page immediately reflects the updated data.\n- Verify that a `Rank` with `IsActive = false` does not appear in the dropdown, and that toggling `IsActive` on an existing rank immediately updates the dropdown after save.\n- Monitor Cosmos DB request units (RU) consumption during normal page loads with dropdowns before and after the fix; confirm RU usage decreases significantly compared to baseline."
+    },
+    {
+      "iid": 1375,
+      "title": "Add caching (orbit-lookup) to MilitaryTypeOfSeparation reference/lookup reads",
+      "steps": "- Open a page that displays the Rank Type of Separation dropdown/pick-list and verify it loads and displays the correct active values.\n- Perform multiple page loads that trigger the `FetchActive()` read and confirm via application logs or monitoring that RU consumption for `MilitaryTypeOfSeparation` reads is significantly reduced compared to pre-cache baseline.\n- Log in as an admin, edit a Rank Type of Separation record (e.g., change name or IsActive status), save it, and verify the cache is invalidated by checking that a subsequent page load reflects the updated data.\n- Verify that `FetchAll()` returns cached results on repeated calls without additional CosmosDB reads.\n- Clear the cache manually (or wait for the 4-hour TTL to expire) and confirm the dropdown still functions and fetches fresh data from the database."
+    },
+    {
+      "iid": 1376,
+      "title": "Add caching (orbit-lookup) to Module reference/lookup reads",
+      "steps": "- Load a page with Module dropdowns/pick-lists (e.g., a form with Module reference fields) and verify the dropdown populates correctly and displays active modules in sorted order.\n- Edit an existing Module record (e.g., change its name or IsActive status) via the admin interface, save it, and reload the page to confirm the dropdown reflects the updated module data immediately.\n- Monitor Cosmos DB RU consumption during repeated page loads that reference Module dropdowns and verify RU usage is significantly lower than the pre-cache baseline (~28k RU noted in the issue).\n- Verify that inactive modules do not appear in dropdowns/pick-lists by attempting to view a form and confirming only active modules are available for selection.\n- If Option B (Redis) is chosen: perform a module edit in one app instance and verify the change is reflected immediately across other running instances without requiring a manual cache clear."
+    },
+    {
+      "iid": 1377,
+      "title": "Add caching (orbit-lookup) to OooType reference/lookup reads",
+      "steps": "- Load a page containing an `OooType` dropdown/pick-list (e.g., reference data selector) and verify the list displays correctly and completely.\n- Perform the same page load 2\u20133 additional times in quick succession and confirm the dropdown populates without delay (cached reads should be faster than uncached Cosmos reads).\n- As an admin, edit an `OooType` record (e.g., change name, toggle `IsActive` flag) and save the changes.\n- Reload the page with the dropdown and verify the updated `OooType` data appears immediately (cache invalidation on `Save()` is working).\n- Load the page again after the cache TTL expires (4 hours, or simulate by restarting the app) and confirm the dropdown still displays correct current data from the database."
+    },
+    {
+      "iid": 1378,
+      "title": "Add caching (orbit-lookup) to EmployeeType reference/lookup reads",
+      "steps": "- Load a page containing a EmployeeType dropdown/pick-list (e.g., employee creation or edit form) and verify the dropdown populates correctly with active EmployeeType values.\n- Repeat the page load 5+ times in quick succession and confirm the dropdown renders consistently and without delays, indicating cached data is being served.\n- Navigate to the EmployeeType admin configuration page, add or edit a EmployeeType record (e.g., change IsActive status or Name), and save the changes.\n- Reload a page with the EmployeeType dropdown and verify it reflects the newly saved changes, confirming the cache was invalidated on Save().\n- If multi-instance deployment is in use (Option B): perform the admin edit on one instance and verify the dropdown update appears on pages served by a different instance within a few seconds."
+    },
+    {
+      "iid": 1379,
+      "title": "Add caching (orbit-lookup) to SoftwareLicense reference/lookup reads",
+      "steps": "- Load a page with a SoftwareLicense dropdown/pick-list (e.g., software selection form) and verify the list populates correctly with active licenses.\n- Open the dropdown on multiple page loads within a short timeframe and confirm the data loads consistently without errors.\n- As an admin, create or edit a SoftwareLicense record and mark it as active; save the changes.\n- Reload a page with the SoftwareLicense dropdown and verify the newly added/edited license appears in the list immediately.\n- Monitor application performance (RU consumption in Cosmos DB or response times) during normal usage with multiple concurrent dropdown loads and confirm improvement compared to baseline uncached reads."
+    },
+    {
+      "iid": 1380,
+      "title": "Add caching (orbit-lookup) to SubDivision reference/lookup reads",
+      "steps": "- Open a page with SubDivision dropdowns/pick-lists (e.g., a form with SubDivision reference data) and verify the dropdown loads and displays correctly.\n- Perform an admin edit to a SubDivision record (e.g., add/modify/deactivate a SubDivision), save the changes, and verify the dropdown on the page reflects the update within a reasonable time.\n- Monitor application RU consumption in CosmosDB during repeated page loads with SubDivision dropdowns; verify RU usage is significantly reduced compared to pre-caching baseline (document before/after metrics if possible).\n- Reload the same page multiple times in quick succession and confirm subsequent loads do not trigger additional database reads (verify via application logs or database monitoring).\n- Test across multiple browser tabs/sessions to confirm the cached data is consistent and up-to-date across concurrent users."
+    },
+    {
+      "iid": 1381,
+      "title": "Add caching (orbit-lookup) to TaskType reference/lookup reads",
+      "steps": "- Load a page with a TaskType dropdown/pick-list (e.g., task creation or filtering UI) and confirm TaskType options appear correctly and load without errors.\n- Perform the same page load 5+ times in quick succession and verify that page load time is consistent and faster than before caching was added (compare RU consumption or response time metrics if available).\n- As an admin, edit a TaskType record (change name, status, or other field) and save it; then reload a page with the TaskType dropdown and confirm the updated TaskType data is reflected immediately (cache invalidation works).\n- Verify that inactive TaskTypes (IsActive = false) do not appear in dropdowns/pick-lists, only active ones, confirming FetchActive() filtering is preserved.\n- In a multi-instance deployment (if applicable), edit a TaskType on one instance and load a page with the TaskType dropdown on another instance; confirm the updated data appears correctly within a reasonable time (4-hour TTL or near-instant if Redis Option B is used)."
+    },
+    {
+      "iid": 1385,
+      "title": "Correctly process Mobile Check-In input with no space between number and text",
+      "steps": "- Submit a mobile check-in status with a status code (1-9) followed immediately by a state abbreviation with no space (e.g., \"3MD\")\n- Verify the status is correctly processed and the user receives a success response\n- Submit a mobile check-in status with a status code followed by a space and state abbreviation (e.g., \"3 MD\")\n- Verify both formats are processed identically and produce the same successful outcome\n- Confirm the error message \"We are sorry your location cannot be processed\" does not appear for either format"
+    },
+    {
+      "iid": 1388,
+      "title": "OOO Upload date should be absolute date (not relative)",
+      "steps": "- Navigate to the OOO Upload page and locate the OOO Upload Logs section\n- Verify that all dates displayed in the logs show absolute date format (e.g., \"23 June 2026\") instead of relative format (e.g., \"Yesterday\", \"Tuesday\")\n- Confirm that absolute dates are consistent and correctly represent the actual upload dates\n- Test with logs from various time periods (today, yesterday, last week, last month) to ensure absolute dates display correctly across all entries"
+    },
+    {
+      "iid": 1389,
+      "title": "Notification SMS Verify section appears on each profile page save",
+      "steps": "- Open a user profile in edit mode and save the form without making any changes, then verify that the \"Notification SMS Verify\" section does not appear\n- Edit a field on the profile (other than Notification SMS number) and save, then verify that the \"Notification SMS Verify\" section does not appear\n- Edit the Notification SMS number field and save, then verify that the \"Notification SMS Verify\" section appears\n- For a user with an existing Notification SMS number configured, save their profile without changes and verify the \"Notification SMS Verify\" section does not appear\n- For a user without a Notification SMS number configured, save their profile and verify that if the \"Notification SMS Verify\" section appears, there is a way to clear it (e.g., resend option or dismiss button)"
+    },
+    {
+      "iid": 1390,
+      "title": "Show successful verification confirmation on user profile page",
+      "steps": "- Navigate to the user profile page and locate a contact method requiring verification (Notification SMS, Notification email, or Mobile Check-In)\n- Complete the verification process for the selected contact method\n- Verify that the page remains on the user profile page (no redirect to ORBIT home page)\n- Confirm that the relevant section displays a success acknowledgement message instead of the \"verify\" form\n- Verify that the contact method status is updated to show as verified on the profile page"
+    },
+    {
+      "iid": 1391,
+      "title": "Show failed verification on user profile page",
+      "steps": "- Navigate to the user profile page and locate a contact method requiring verification (Notification SMS, Notification email, or Mobile Check-In)\n- Initiate the verification process and intentionally enter an incorrect verification code\n- Verify that the user remains on the profile page (not redirected) and the standard \"your data was not saved\" pop-up does not appear\n- Confirm that the relevant section displays a message indicating the entered code was wrong and prompts the user to try again\n- Verify that the rest of the profile section remains unchanged and functional"
+    },
+    {
+      "iid": 1393,
+      "title": "Notification report (sent notification) view returns 500 when a response has a null Employee",
+      "steps": "- Navigate to a notification event report (via /setting/customer/{id}/notification/view/{subId} or /notification/event/view/{id}) that contains at least one response with a null Employee field\n- Verify the page loads successfully with HTTP 200 and the response table renders without throwing a 500 error\n- Confirm that rows with valid Employee display the person's name sorted by last name then first name\n- Confirm that rows with null Employee display a placeholder text (e.g. \"Unknown employee\") instead of a name and do not have a clickable profile link\n- Verify the same behavior works for both \"Response Required: Yes\" and \"Response Required: No\" notification events"
+    },
+    {
+      "iid": 1408,
+      "title": "Fix Notification SMS and Mobile Check-In Verification",
+      "steps": "- Enter an incorrect verification code in the verification box and verify that it is rejected\n- Enter the correct verification code that was sent to the device and verify that it is accepted\n- Trigger the resend verification code button and confirm the code is sent to the Notification SMS number (not the Mobile Check-In number)\n- Complete verification and confirm the success message is sent to the Notification SMS number (not the Mobile Check-In number)"
+    }
+  ],
+  "sprint_report": {
+    "goals": "This sprint focused on improving system reliability and user experience in employee verification workflows while enhancing overall application performance through strategic caching enhancements across reference data lookups.",
+    "summary": "The team resolved critical issues in the mobile and SMS verification pipeline, including proper handling of notification responses and improved input parsing for check-in data. Users now receive clear feedback on verification status directly within their profile pages. To strengthen the foundation for these improvements and future development, comprehensive unit test coverage was added across core entity classes. Additionally, a systematic caching strategy was implemented across thirty-two reference and lookup data types using dedicated cache layers, significantly reducing database load and improving response times for employee, geographic, rank, and administrative reference data that are accessed frequently throughout the application.",
+    "metrics": {
+      "initial_count": 36,
+      "initial_weight": 67,
+      "completed_count": 36,
+      "completed_weight": 67,
+      "initial_breakdown": "29 Others, 4 Improvements, 3 Bugs",
+      "completed_breakdown": "29 Others, 4 Improvements, 3 Bugs"
+    }
+  }
+}

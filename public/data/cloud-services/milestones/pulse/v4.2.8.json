@@ -1,0 +1,332 @@
+{
+  "milestone_title": "v4.2.8",
+  "milestone_id": 1957,
+  "slug": "v4.2.8",
+  "project_id": 91002,
+  "project_name": "PULSE",
+  "group_slug": "cloud-services",
+  "last_updated": "2026-08-19T14:57:33.123306Z",
+  "issues": [
+    {
+      "id": 155560,
+      "iid": 326,
+      "title": "Bug with secondary/revised fields metadata for duplication",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": "While testing version 4.2.7 for the platform migration we discovered an issue with the RFP Release Date and the RFP Release Date revised fields. The duplicate field for the rfp release date revised can be set to true while the RFP Release Date has duplicate set to false. This results in the RFP Release Date being null while the hidden field for the RFP Release Date Revised contains a date. This issue was uncovered while reviewing reports during the platform migration. When a primary field's metadata for duplicate or required is defined; the secondary field should replicate those settings. Remove the ability to define metadata for secondary fields and set them to inherit the settings defined for the primary field."
+    },
+    {
+      "id": 155559,
+      "iid": 327,
+      "title": "Failing to include a users vendor account when creating or editing a user results in a generic DB error (See Comments)",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": "Add client side validation to check a users contact company when \"Is Contractor\" is selected/true. Currently, not including the vendor account triggers a generic error causing confusion. When a user is a contractor the vendor account cannot be null, but the logic does not alert the user to this and instead throws a generic error. (See Comments)"
+    },
+    {
+      "id": 155577,
+      "iid": 328,
+      "title": "Fix broken sub form redirect after session expiration. Add ability to extend session with change retention.",
+      "weight": 8,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": "After a PULSE Session expiries and a user remains any main form, if the user attempts to save a sub-form the sub-form, the sub-form is saved and the action's edit form is displayed in the model popup. Add a graceful way to retain the data of the sub=form while allowing the end-user to refresh there session cookie."
+    },
+    {
+      "id": 155556,
+      "iid": 329,
+      "title": "Update PULSE Nuget Packages and Client Side Libraries",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: Package Update",
+        "type::DevOps"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155557,
+      "iid": 330,
+      "title": "Action Edit Form does not show 'If Modification\" Field when an action type is set to MOD and action status is set to awarded.",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155576,
+      "iid": 331,
+      "title": "Make Sub-Contractor field mandatory for Beacon",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155566,
+      "iid": 332,
+      "title": "Make the Contract Award Date and PoP Effective Date mandatory in the Post Award Tab for Beacon",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155564,
+      "iid": 333,
+      "title": "Add a new field for Contract Ceiling to post award section.",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: New Feature",
+        "type::New Feature"
+      ],
+      "description": "Add a new field called Contract Ceiling to Post Award section after total dollar ceiling section."
+    },
+    {
+      "id": 155561,
+      "iid": 334,
+      "title": "Add ability to hide/show the total dollar ceiling in the post award tab.",
+      "weight": 5,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": "Hide the total dollar ceiling field in post award."
+    },
+    {
+      "id": 155562,
+      "iid": 336,
+      "title": "When Type of Action = \"Modification\"or Change Order, do not require a date to be entered for RFI/Draft RFP/RFP for Vantage",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: New Feature",
+        "type::New Feature"
+      ],
+      "description": "Logic:  If Type of Action is Mod or Change Order, allow blanks for RFI/DRAFT RFP/RFP.  This requires a large architecture change for PULSE.  Conditions are currently based on data in a field that is either all on or all off."
+    },
+    {
+      "id": 155567,
+      "iid": 339,
+      "title": "Change the short name for the total dollar ceiling field in the Financials section to \"Estimated Contract Ceiling\".",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155570,
+      "iid": 340,
+      "title": "Use the admin/meta data settings and set the new Contract Ceiling field in the post award tab to required.",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: Task",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155568,
+      "iid": 341,
+      "title": "Add a mandatory field after Must Have Award Date to indicate the reason the PM input that date.",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: New Feature",
+        "type::New Feature"
+      ],
+      "description": "Add a mandatory field after Must Have Award Date to indicate the reason the PM input that date. It can be titled \"Reason for Must Have Award Date\".  If possible (can be specific to PO Vantage), change' Must Have Award Date' to' PM Projected Award Date' and new field to 'Reason for PM Projected Award Date'\n\n(Reason for Must Have Award Date) can be a selection to include:  \nFielding Schedule, Testing Schedule, Funding Driven, Current Effort Expires, Gap in Service."
+    },
+    {
+      "id": 155563,
+      "iid": 342,
+      "title": "Update LOE List for JPO Meridian",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: Improvement",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155572,
+      "iid": 343,
+      "title": "Add additional date fields to action status",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: New Feature",
+        "type::New Feature"
+      ],
+      "description": "Adding additional date fields to action status. 6 total (3 initial and 3 revised)\nProposal Update Letter Issued Initial Date \nProposal Update Letter Issued Revised Date \nFunds Sent Initial Date\nFunds Sent Revised Date \nFunds Accepted Initial Date\nFunds Accepted Revised Date\n\n\nThis would be visible by default for JPO Meridian.  Hidden for Vantage and Beacon"
+    },
+    {
+      "id": 155558,
+      "iid": 344,
+      "title": "PO Admin comment pagination broken for Edit and Create forms.",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": "PO Admin section comment Pagination is broken; when a user clicks the \"nest page\" button for a comment section containing more than 10 entries, an error is returned and the entries cannot be viewed. Error occurred in Beacon. Replicated in DREN."
+    },
+    {
+      "id": 155573,
+      "iid": 345,
+      "title": "Signal R Progress Bar works intermittently and is not enabling buttons everytime.",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155575,
+      "iid": 346,
+      "title": "Follow-on Action subform Search and paging broken; sub-form paging and search are not consistent across all sub forms",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155574,
+      "iid": 347,
+      "title": "Field change checks and change logging prevents user from updating of Prime Contractor Type in Prime And Sub Contractors Section. The change is only saved when another field in the same section is also changed and the section update is trigged.",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155565,
+      "iid": 348,
+      "title": "When saving a monitary field throughout the application; if the field is set to 0.00; the user has to first set the field to a value greater than 0 before they can can set the field to 0.",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155571,
+      "iid": 349,
+      "title": "Cannot save edit sub-form for active sub-contractors in post award -> Prime & Sub-Contractors section if small business category is selected.",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": "When editing Active Subcontractor(s) in Post Award -> Prime & Sub-Contractors section in the edit sub-form if \u201cContractor Size\u201d is set to small, the \u201cSmall Business Category\u201d is displayed. If a user selects a \u201cSmall Business Category\u201d the following exception/error is returned:\n\n\u201c\"System.Exception: The INSERT statement conflicted with the FOREIGN KEY constraint \\\"FK_OneNList_PostAward_ActionActiveSubContractor_LookupID\\\". The conflict occurred in database \\\"OneNList\\\", table \\\"dbo.LookupItem\\\", column 'ID'.\\r\\nThe statement has been terminated.\\r\\n   at Repository.Pattern.Ef6.DataContext.DataContext.SaveChanges() in C:\\\\Users\\\\DoD_Admin\\\\source\\\\repos\\\\PULSE\\\\Source\\\\Repository.Pattern.Ef6\\\\DataContext\\\\DataContext.cs:line 72\\r\\n   at Repository.Pattern.Ef6.UnitOfWork.UnitOfWork.SaveChanges() in C:\\\\Users\\\\DoD_Admin\\\\source\\\\repos\\\\PULSE\\\\Source\\\\Repository.Pattern.Ef6\\\\UnitOfWork\\\\UnitOfWork.cs:line 86\\r\\n   at OneNListApp.Web.Models.PostAwardPrimeActionActiveSubContractorsViewModel.Update(Int32[] selectedids, PostAwardPrimeActionActiveSubContractorsViewModel ActiveContractor) in C:\\\\Users\\\\DoD_Admin\\\\source\\\\repos\\\\PULSE\\\\Source\\\\OneNListApp.Web\\\\Models\\\\PostAwardPrimeActionActiveSubContractorsViewModel.cs:line 237\\r\\n   at OneNListApp.Web.Controllers.PostAwardPrimeActionActiveSubContractorsController.Edit(Int32 id, PostAwardPrimeActionActiveSubContractorsViewModel ActiveSubContractorsModel, Int32[] selectedids) in C:\\\\Users\\\\DoD_Admin\\\\source\\\\repos\\\\PULSE\\\\Source\\\\OneNListApp.Web\\\\Controllers\\\\PostAwardPrimeActionActiveSubContractorsController.cs:line 95\\n Id: 2102 \\n OrganizationId: 2 \\n User: Miller, Ronald E \\n Access: DataAnalytics_HQ_MEMBERS_GROUP\""
+    },
+    {
+      "id": 155578,
+      "iid": 350,
+      "title": "Run fortify scan, fix findings, and generate report.",
+      "weight": 3,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "Type: Task",
+        "type::Improvement"
+      ],
+      "description": ""
+    },
+    {
+      "id": 155569,
+      "iid": 351,
+      "title": "Cannot Update or delete CPARS & CMRA in Action Edit form Post Award Tab action description section.",
+      "weight": 1,
+      "state": "closed",
+      "labels": [
+        "Status: DONE",
+        "TEST PASSED",
+        "Type: BUG",
+        "type::Bug"
+      ],
+      "description": ""
+    }
+  ]
+}

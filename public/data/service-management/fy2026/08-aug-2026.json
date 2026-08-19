@@ -1,0 +1,163 @@
+{
+  "fiscal_year": 2026,
+  "month": 8,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 6983,
+      "title": "Service Management FY26Q4-1",
+      "start_date": "2026-08-03",
+      "end_date": "2026-08-14",
+      "state": 3,
+      "source": "iteration",
+      "goal": "Fulfillment Work Notes ",
+      "initial_totals": {
+        "count": 4,
+        "weight": 14
+      },
+      "burndown": [
+        {
+          "date": "2026-08-03",
+          "remaining_count": 1,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2026-08-04",
+          "remaining_count": 1,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2026-08-05",
+          "remaining_count": 1,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2026-08-06",
+          "remaining_count": 1,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2026-08-07",
+          "remaining_count": 1,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2026-08-08",
+          "remaining_count": 1,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2026-08-09",
+          "remaining_count": 1,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2026-08-10",
+          "remaining_count": 1,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2026-08-11",
+          "remaining_count": 1,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2026-08-12",
+          "remaining_count": 1,
+          "remaining_weight": 9
+        },
+        {
+          "date": "2026-08-13",
+          "remaining_count": 0,
+          "remaining_weight": 4
+        },
+        {
+          "date": "2026-08-14",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 3,
+        "new_feature": 1,
+        "other": 0
+      },
+      "completed": {
+        "count": 4,
+        "weight": 14
+      },
+      "issues": [
+        {
+          "id": 319734,
+          "iid": 88,
+          "title": "Intake Remove Resolution Codes",
+          "description": "Remove the following Resolution Codes from Intake app as they are not used:\n \"Resolve by change\", \"Resolve by problem\", \"Resolve by request\", \"Logistics Financials Completed\", \"Engineering Corrections\", \"Logistics Corrections\", \"Eng/Log Corrections\", \"Incident Closed\"",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 3,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-08-03",
+          "date_closed": "2026-08-03",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 289900,
+          "iid": 87,
+          "title": "Intake Program and Type based Dynamic UI",
+          "description": "Ongoing effort to tailor the Intake app UI to each Program and within each Program to the Type of incident scheduled or unscheduled. Please see attached document for the requested updates.\n\n[ServiceNow_Training_and_recommended_changes_27_July.pptm](/uploads/5020a1779293e18cfa281fff9c2d5d65/ServiceNow_Training_and_recommended_changes_27_July.pptm)",
+          "project_id": 10344,
+          "project_name": "intake",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-08-03",
+          "date_closed": "2026-08-13",
+          "date_removed_from_sprint": null
+        },
+        {
+          "id": 245496,
+          "iid": 446,
+          "title": "Add RELAY to affected System",
+          "description": "",
+          "project_id": 10752,
+          "project_name": "platform",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "Capability:: M2S",
+            "type::Improvement"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-08-03",
+          "date_closed": "2026-08-03",
+          "date_removed_from_sprint": "2026-08-03"
+        },
+        {
+          "id": 209932,
+          "iid": 64,
+          "title": "Fulfillment Need ability to edit Work Notes after they are submitted - ACL and Log",
+          "description": "Need ability to edit Work Notes after they are submitted. Implement ACL so Fulfillment users can view the Work Notes to edit. If possible restrict the Work Notes they can edit to only those related to the incident. Also if possible add a flag to indicate the Work Note was edited.",
+          "project_id": 10343,
+          "project_name": "fulfillment",
+          "weight": 5,
+          "state": "closed",
+          "labels": [
+            "type::New-Feature"
+          ],
+          "milestone": null,
+          "date_added_to_sprint": "2026-08-03",
+          "date_closed": "2026-08-14",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}

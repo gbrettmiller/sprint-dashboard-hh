@@ -1,0 +1,22 @@
+{
+  "group_slug": "service-management",
+  "project_slug": null,
+  "milestone_slug": "service-management-fy26q3-4",
+  "title": "Service Management FY26Q3-4",
+  "start_date": "2026-05-14",
+  "end_date": "2026-05-29",
+  "generated_at": "2026-07-10T21:41:37.262699Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint aimed to enhance data visibility and access controls across our Service Management platforms while establishing a secure foundation for the SPM pilot implementation. The team focused on extending asset management capabilities, improving maintenance record functionality, and operationalizing role-based access restrictions.",
+    "summary": "The team successfully expanded Fulfillment and Intake asset tracking by adding critical identifier fields including serial numbers and RMA tracking, enabling more precise asset lifecycle management and maintenance correlation. We established sophisticated access control mechanisms across multiple modules, including Query Range ACLs for location-sensitive hardware data and Assignment Group-based restrictions for SPM, ensuring data governance aligns with organizational security requirements. Dashboard and workspace enhancements now link vessel performance visualizations to vessel-specific operational lists, improving data-driven decision making for fleet management. Additionally, maintenance workflow automation was refined to automatically pull asset baseline metrics, reducing manual data entry and ensuring consistency between asset records and maintenance histories.",
+    "metrics": {
+      "initial_count": 10,
+      "initial_weight": 32,
+      "completed_count": 10,
+      "completed_weight": 32,
+      "initial_breakdown": "6 Improvements, 4 New Features",
+      "completed_breakdown": "6 Improvements, 4 New Features"
+    }
+  }
+}

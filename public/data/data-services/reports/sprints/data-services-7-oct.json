@@ -1,0 +1,22 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "milestone_slug": "data-services-7-oct",
+  "title": "Data Services 7 OCT",
+  "start_date": "2025-09-23",
+  "end_date": "2025-10-07",
+  "generated_at": "2026-07-02T21:56:14.220756Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on stabilizing and enhancing four core applications\u2014ITAM, I/O, Access Requests, and RIST\u2014by resolving critical workflow issues, improving user interface consistency, and enabling key administrative capabilities. The team also established foundational infrastructure improvements across the platform, including updated deployment procedures and a redesigned header component.",
+    "summary": "The sprint delivered 38 completed items spanning workflow fixes, UI standardization, and feature expansion across the portfolio. Notable achievements include enabling bulk asset uploads without current owner assignment in ITAM, implementing administrator filtering and user assignment capabilities in I/O, adding validation and conditional logic to Access Requests forms, and resolving scheduling conflicts in RIST. The team also deployed updates to test environments, updated user documentation with new interface imagery, established a deployment standard operating procedure, and addressed platform-wide consistency issues with font sizing and header design, positioning these applications for improved operational efficiency and user experience.",
+    "metrics": {
+      "initial_count": 37,
+      "initial_weight": 81,
+      "completed_count": 37,
+      "completed_weight": 81,
+      "initial_breakdown": "25 Improvements, 10 Others, 2 Bugs",
+      "completed_breakdown": "25 Improvements, 10 Others, 2 Bugs"
+    }
+  }
+}

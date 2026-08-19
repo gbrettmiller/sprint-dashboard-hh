@@ -1,0 +1,22 @@
+{
+  "group_slug": "service-management",
+  "project_slug": null,
+  "milestone_slug": "service-management-fy26q2-4",
+  "title": "Service Management FY26Q2-4",
+  "start_date": "2026-02-19",
+  "end_date": "2026-03-13",
+  "generated_at": "2026-07-10T21:41:20.737562Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on completing critical data integrity updates across the Intake asset management system while ensuring platform stability following the ServiceNow Zurich upgrade. The team aimed to populate missing asset and incident data across multiple location tables and resolve any application issues introduced by the upgrade.",
+    "summary": "The team successfully completed multiple data remediation initiatives across the Intake system, populating program fields for BackupNav hardware assets and updating location and incident data tables for both NavHub and NavPod environments. Two significant asset loads were processed for NavPod GEN II hardware at different locations and timeframes, and a comprehensive location field reference update was applied across both the Incident and GPS Hardware tables to ensure data consistency. Following the ServiceNow Zurich platform upgrade, the team validated application functionality across development, test, and production environments, resolving identified issues to maintain service continuity. These completions strengthen data accuracy across the asset management infrastructure and confirm platform readiness for ongoing operations.",
+    "metrics": {
+      "initial_count": 11,
+      "initial_weight": 47,
+      "completed_count": 11,
+      "completed_weight": 47,
+      "initial_breakdown": "6 Improvements, 5 New Features",
+      "completed_breakdown": "6 Improvements, 5 New Features"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "group_slug": "service-management",
+  "project_slug": null,
+  "milestone_slug": "service-management-fy26q3-6",
+  "title": "Service Management FY26Q3-6",
+  "start_date": "2026-06-30",
+  "end_date": "2026-07-14",
+  "generated_at": "2026-07-15T06:12:46.053720Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on enhancing notification capabilities across our M2S platform while advancing critical infrastructure work for Service Management and Intake systems. The team aimed to improve data accuracy in Fulfillment workflows and implement essential access control mechanisms for the SPM pilot initiative.",
+    "summary": "The team successfully resolved a data population issue in Fulfillment that was preventing Category Type Items from displaying correctly when users selected an Affected System, ensuring data integrity in downstream processes. Across the M2S notification system, two important enhancements were delivered: a Description field was added to notification emails and the Affected System information is now included in messages sent to Assignment Groups, both of which increase operational clarity and reduce manual lookups for support teams. Additionally, the team completed the loading of new BackupNav assets into Intake and implemented comprehensive access control mechanisms for the SPM pilot, establishing the security and data governance foundations required for broader system rollout. These improvements directly enhance user experience, reduce operational friction, and establish critical control points for pilot expansion.",
+    "metrics": {
+      "initial_count": 8,
+      "initial_weight": 28,
+      "completed_count": 5,
+      "completed_weight": 15,
+      "initial_breakdown": "5 Improvements, 2 New Features, 1 Support",
+      "completed_breakdown": "3 Improvements, 1 Support, 1 New Feature"
+    }
+  }
+}

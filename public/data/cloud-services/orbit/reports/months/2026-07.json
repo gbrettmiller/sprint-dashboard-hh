@@ -1,0 +1,23 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "orbit",
+  "month": "2026-07",
+  "generated_at": "2026-08-01T06:09:16.607481Z",
+  "sprints": [
+    {
+      "title": "v3.3.4",
+      "start_date": "2026-06-30",
+      "end_date": "2026-07-14",
+      "goals": "This sprint focused on improving system reliability and user experience in employee verification workflows while enhancing overall application performance through strategic caching enhancements across reference data lookups.",
+      "summary": "The team resolved critical issues in the mobile and SMS verification pipeline, including proper handling of notification responses and improved input parsing for check-in data. Users now receive clear feedback on verification status directly within their profile pages. To strengthen the foundation for these improvements and future development, comprehensive unit test coverage was added across core entity classes. Additionally, a systematic caching strategy was implemented across thirty-two reference and lookup data types using dedicated cache layers, significantly reducing database load and improving response times for employee, geographic, rank, and administrative reference data that are accessed frequently throughout the application.",
+      "metrics": {
+        "initial_count": 36,
+        "initial_weight": 67,
+        "completed_count": 36,
+        "completed_weight": 67,
+        "initial_breakdown": "29 Others, 4 Improvements, 3 Bugs",
+        "completed_breakdown": "29 Others, 4 Improvements, 3 Bugs"
+      }
+    }
+  ]
+}

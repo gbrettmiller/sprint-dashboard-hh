@@ -1,0 +1,53 @@
+{
+  "group_slug": "data-services",
+  "project_slug": null,
+  "month": "2026-02",
+  "generated_at": "2026-07-02T21:57:26.274663Z",
+  "sprints": [
+    {
+      "title": "Data Services 4 FEB 26",
+      "start_date": "2026-01-21",
+      "end_date": "2026-02-04",
+      "goals": "This sprint focused on advancing four critical applications toward production readiness by completing core feature implementations, resolving functional defects, and establishing operational governance controls. The team worked to enhance user experience across multiple systems while ensuring proper administrative oversight and data integrity in test and production environments.",
+      "summary": "The team delivered substantial progress across Access Requests, Compliance Review, Records API, I/O, TCT, and Finance Portal applications, with 22 completed issues spanning feature development, bug resolution, and deployment activities. Key accomplishments include deploying Compliance Review to the test environment with improved notification and labeling functionality, establishing dynamic form capabilities and read-only controls in Access Requests, moving TCT and Finance Portal to production, and pushing I/O updates across multiple customer environments. These completions establish the foundation for operational use while improving data management practices, administrative controls, and user workflows across the portfolio.",
+      "metrics": {
+        "initial_count": 27,
+        "initial_weight": 59,
+        "completed_count": 23,
+        "completed_weight": 45,
+        "initial_breakdown": "13 Improvements, 11 Others, 3 New Features",
+        "completed_breakdown": "11 Others, 10 Improvements, 2 New Features"
+      }
+    },
+    {
+      "title": "Data Services 18 FEB 26",
+      "start_date": "2026-02-04",
+      "end_date": "2026-02-18",
+      "goals": "This sprint focused on stabilizing core functionality across multiple applications by resolving critical navigation and form rendering issues, while advancing the Compliance Review platform toward full consortium deployment. The team prioritized user experience improvements and configuration readiness to support ongoing testing across all consortium member environments.",
+      "summary": "The team completed 34 work items spanning five major applications, addressing a mix of critical defects and feature enhancements that collectively improve application usability and operational capability. Key accomplishments include resolving form navigation issues in Access Requests, establishing organizational hierarchy support in Compliance Review for multi-level record management, deploying Records API to the Region C test environment with corrected filtering and routing workflows, and advancing Catalog Sync toward production readiness through UI refinements and feature completion. The sprint also delivered Compliance Review configuration to all consortium test sites and created specialized reporting capabilities for enterprise stakeholders, positioning the platforms for broader testing and validation across the organization.",
+      "metrics": {
+        "initial_count": 35,
+        "initial_weight": 69,
+        "completed_count": 35,
+        "completed_weight": 69,
+        "initial_breakdown": "18 Improvements, 10 Others, 7 New Features",
+        "completed_breakdown": "18 Improvements, 10 Others, 7 New Features"
+      }
+    },
+    {
+      "title": "Data Services 3 MAR 26",
+      "start_date": "2026-02-18",
+      "end_date": "2026-03-03",
+      "goals": "This sprint focused on stabilizing core workflows across multiple applications and expanding administrative capabilities to support organizational restructuring. The team prioritized fixing critical user-facing bugs, completing modal-based workflows for document management, and establishing proper access controls across newly configured organizational hierarchies.",
+      "summary": "The team completed 47 issues spanning six major application areas, with particular emphasis on the Catalog Sync document request screens, Access Requests traveler management, and Compliance Review records management platforms. Key accomplishments include full implementation of document request modals with edit and delete functionality, resolution of form validation and navigation issues in Access Requests, deployment of Compliance Review capabilities to all consortium test environments, and comprehensive configuration of application admin group permissions and memberships across five organizational entities. Additionally, the team addressed critical data display problems such as missing PDF content and lost UI elements, implemented sorting and filtering enhancements across multiple screens, and updated notification logic to include relevant stakeholders like Traveler Points of Contact. These changes improve operational efficiency, ensure proper governance through role-based access controls, and provide users with more reliable and complete information during key business processes.",
+      "metrics": {
+        "initial_count": 47,
+        "initial_weight": 92,
+        "completed_count": 47,
+        "completed_weight": 92,
+        "initial_breakdown": "26 Others, 14 Improvements, 4 New Features, 3 Bugs",
+        "completed_breakdown": "26 Others, 14 Improvements, 4 New Features, 3 Bugs"
+      }
+    }
+  ]
+}

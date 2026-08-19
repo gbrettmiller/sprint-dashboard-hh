@@ -1,0 +1,28 @@
+{
+  "group_slug": "cloud-services",
+  "project_slug": "relay",
+  "milestone_slug": "relay-1.0.3",
+  "title": "RELAY 1.0.3",
+  "start_date": "2026-07-22",
+  "end_date": "2026-07-28",
+  "generated_at": "2026-07-29T06:12:59.590002Z",
+  "test_plan": [
+    {
+      "iid": 133,
+      "title": "Milestone Status Report Reflecting Incorrect Information",
+      "steps": "- Navigate to the Milestone Status Report and verify that finalized milestones display their completed dates rather than Initial/Revised dates\n- Confirm that in-progress milestones display the most current projected date instead of Initial/Revised dates\n- Create or locate a finalized milestone and validate the completed date appears in the report\n- Create or locate an in-progress milestone with a projected date and confirm the most current projected date is shown in the report\n- Compare the displayed dates in the report against the actual milestone records to ensure accuracy"
+    }
+  ],
+  "sprint_report": {
+    "goals": "This sprint focused on addressing a critical data integrity issue affecting milestone tracking visibility. The objective was to ensure that milestone status reports accurately reflect current project state and provide stakeholders with reliable information for decision-making.",
+    "summary": "The team identified and resolved a bug in the Milestone Status Report that was displaying outdated or incorrect milestone information to users. This fix restores confidence in the reporting system and ensures that project managers and leadership can rely on accurate status data when monitoring progress and adjusting project timelines. The correction eliminates confusion caused by misaligned milestone states and improves overall project transparency across the organization.",
+    "metrics": {
+      "initial_count": 5,
+      "initial_weight": 9,
+      "completed_count": 1,
+      "completed_weight": 0,
+      "initial_breakdown": "3 Bugs, 2 Improvements",
+      "completed_breakdown": "1 Bug"
+    }
+  }
+}

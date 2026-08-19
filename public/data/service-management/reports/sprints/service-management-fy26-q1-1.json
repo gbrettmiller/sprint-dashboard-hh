@@ -1,0 +1,22 @@
+{
+  "group_slug": "service-management",
+  "project_slug": null,
+  "milestone_slug": "service-management-fy26-q1-1",
+  "title": "Service Management FY26 Q1-1",
+  "start_date": "2025-11-04",
+  "end_date": "2025-11-17",
+  "generated_at": "2026-07-10T21:40:55.322209Z",
+  "test_plan": [],
+  "sprint_report": {
+    "goals": "This sprint focused on resolving critical data integrity issues in production Service Management systems while expanding access controls and improving the data model to support enterprise asset management workflows. The team aimed to enhance permission management across multiple applications and complete foundational work for the Site 8 and Site 3 asset tracking initiatives.",
+    "summary": "The sprint successfully resolved a production incident involving missing attachments on incidents and corrected a data relationship issue that was creating CI associations to incorrect assets during import. The team strengthened the platform's security posture by implementing granular permission controls on reference tables and application workspaces across M2S, Fulfillment, and other systems, ensuring only authorized users can edit sensitive configuration data. Additionally, the team consolidated duplicate table structures, improved reference data models by converting the Business Unit field to a reference type, and loaded critical consumables and cable inventory data into Intake to support ongoing asset management operations for the Site 8 and Site 3 units.",
+    "metrics": {
+      "initial_count": 17,
+      "initial_weight": 51,
+      "completed_count": 17,
+      "completed_weight": 51,
+      "initial_breakdown": "17 Others",
+      "completed_breakdown": "17 Others"
+    }
+  }
+}

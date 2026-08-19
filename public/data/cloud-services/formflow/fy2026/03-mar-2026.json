@@ -1,0 +1,121 @@
+{
+  "fiscal_year": 2026,
+  "month": 3,
+  "year": 2026,
+  "sprints": [
+    {
+      "id": 4179,
+      "title": "Third-Party Integration FY262-4",
+      "start_date": "2026-02-18",
+      "end_date": "2026-03-03",
+      "state": 3,
+      "source": "iteration",
+      "initial_totals": {
+        "count": 1,
+        "weight": 1
+      },
+      "burndown": [
+        {
+          "date": "2026-02-18",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-19",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-20",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-21",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-22",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-23",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-24",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-25",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-26",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-27",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-02-28",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-03-01",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-03-02",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        },
+        {
+          "date": "2026-03-03",
+          "remaining_count": 0,
+          "remaining_weight": 0
+        }
+      ],
+      "type_breakdown": {
+        "bug": 0,
+        "improvement": 1,
+        "new_feature": 0,
+        "other": 0
+      },
+      "completed": {
+        "count": 1,
+        "weight": 1
+      },
+      "issues": [
+        {
+          "id": 194714,
+          "iid": 35,
+          "title": "Update support center email address",
+          "project_id": 91005,
+          "project_name": "formflow",
+          "weight": 1,
+          "state": "closed",
+          "labels": [
+            "TEST-Passed",
+            "type::Improvement",
+            "workflow::refined"
+          ],
+          "milestone": "v1.7.3",
+          "date_added_to_sprint": "2026-02-18",
+          "date_closed": "2026-02-18",
+          "date_removed_from_sprint": null
+        }
+      ]
+    }
+  ]
+}
