@@ -1,7 +1,7 @@
 // Report document building — pure functions.
 //
-// Turns dashboard JSON (existing milestone data + the CI-generated report JSON
-// from scripts/generate_reports.py) into MS Word-openable documents using the
+// Turns dashboard JSON (existing milestone data + the pre-generated report
+// JSON in public/data/) into MS Word-openable documents using the
 // lightweight Office-HTML approach. Each build* function returns
 // { filename, html }; the UI hands html to downloadDoc() in utils.js.
 //

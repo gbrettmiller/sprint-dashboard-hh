@@ -1,14 +1,5 @@
 # Node (Vitest dev dependencies)
 node_modules/
 
-# Claude Code local settings
-.claude/settings.json
-.claude/settings.local.json
-
-# Python
-scripts/__pycache__/
-*.py[cod]
-*.env
-
 # OS
 .DS_Store

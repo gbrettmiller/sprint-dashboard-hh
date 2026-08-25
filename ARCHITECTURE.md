@@ -1,8 +1,7 @@
 # ARCHITECTURE.md — GitLab Sprint Dashboard
 
-**Last Updated:** 2026-07-02
-
-This file is the technical specification. When in doubt about how to build something, this file decides. The philosophy behind these decisions lives in VECTOR.md. The agent briefing and workflow documentation lives in CLAUDE.md.
+This file is the technical specification. When in doubt about how to build something, this
+file decides. Project intent and product framing lives in `PROJECT.md`.
 
 ---
 
@@ -41,14 +40,12 @@ A shared controller sits in the UI layer and may be imported by page modules (sa
 
 | Layer | Technology | Why |
 |-------|-----------|-----|
-| Frontend | Vanilla JavaScript (ES modules), HTML5, CSS3 | No build step, no framework dependency, direct deployment to GitLab Pages |
-| Charts | Chart.js v4.4.7 (vendored at `js/chart.min.js`) | Mature library; vendored to avoid CDN dependency on restricted network |
+| Frontend | Vanilla JavaScript (ES modules), HTML5, CSS3 | No build step, no framework dependency, direct deployment as a static site |
+| Charts | Chart.js v4.4.7 (vendored at `js/chart.min.js`) | Mature library; vendored to avoid a CDN dependency |
 | Styling | CSS custom properties (`tokens.css` + `styles.css`) | Centralized design tokens with no preprocessor |
-| Build | None | Static site; `public/` deploys directly to GitLab Pages |
-| Data Collection | Python 3.12, `requests>=2.28` | HTTP client for the GitLab REST API and the Jira Server/DC REST API (see Data Sources below) |
-| AI Reports | `anthropic>=0.40`, `httpx>=0.27` | `generate_reports.py` calls an Anthropic-compatible endpoint (Ask Sage gateway) for test-plan steps and sprint/monthly goals + summary |
-| Deployment | GitLab Pages via `.gitlab-ci.yml` | Integrated with the same GitLab instance that hosts the data source |
-| CI Runners | `python:3.12-slim` (collect stage), `alpine:latest` (pages stage) | Minimal images; DoD certificates applied at runtime via `DOD_CA_CERT` variable |
+| Build | None | Static site; `public/` deploys directly as-is |
+| Data | Static JSON in `public/data/`, maintained by hand | Interim data layer — see `README.md` for the planned SQLite/Supabase migration |
+| Deployment | Netlify or Vercel | Static hosting with git-based deploys; either works since there's no server code |
 
 ---
 
@@ -56,84 +53,59 @@ A shared controller sits in the UI layer and may be imported by page modules (sa
 
 ```
 sprint-metrics-dashboard/
-├── .gitlab-ci.yml              # Pipeline: collect → test → pages stages
+├── .gitlab-ci.yml               # CI: runs the test suite
 ├── .gitignore
-├── ARCHITECTURE.md             # This file — technical specification
-├── CLAUDE.md                   # Agent briefing and workflow documentation
-├── CLAUDE_PBI_SKILLS.md        # Future: GitLab issue management skills plan
-├── VECTOR.md                   # Project identity and doctrine
-├── README.md                   # User-facing documentation
-├── package.json                # Vitest dev dependency; "type": "module"
+├── ARCHITECTURE.md              # This file — technical specification
+├── PROJECT.md                   # Project intent, audience, constraints
+├── README.md                    # User-facing documentation
+├── package.json                 # Vitest dev dependency; "type": "module"
 ├── package-lock.json
-├── vitest.config.js            # Vitest config — scoped to public/js/core/**/*.test.js
+├── vitest.config.js             # Vitest config — scoped to public/js/core/**/*.test.js
+├── netlify.toml                 # Netlify static deploy config
+├── vercel.json                  # Vercel static deploy config
 ├── docs/
-│   ├── SSL_CERTIFICATE_SETUP.md    # DoD PKI certificate configuration
-│   ├── CUSTOM_DOCKER_IMAGE.md      # Custom runner image design doc
-│   ├── MULTI_GROUP_SUPPORT.md      # Multi-group feature design doc
-│   └── case-studies/               # Post-hoc write-ups of notable fixes/integrations
-├── scripts/                    # Python: data collection + issue management
-│   ├── gitlab_api.py           # Shared API client (auth, pagination, retry, backoff)
-│   ├── backfill.py             # One-time historical data fetch
-│   ├── scheduled_update.py     # Scheduled: active + recent sprint update
-│   ├── project_split.py        # One-time: split group data into per-project files
-│   ├── generate_reports.py     # Scheduled: AI report JSON (test plans + sprint/monthly reports)
-│   ├── jira_api.py             # Shared Jira Server/DC REST client (bearer-token auth)
-│   ├── jira_provider.py        # Jira sprints → standard sprint-record dict (source: "jira" groups)
-│   ├── api_commit.py           # Commits JSON via GitLab Commits API (bypasses signed-commit hook)
-│   ├── issue_read.py           # Read GitLab issue details
-│   ├── issue_list.py           # List and filter issues
-│   ├── issue_create.py         # Create new issues
-│   ├── issue_implement.py      # Implementation workflow helper
-│   ├── issue_comment.py        # Add issue comments
-│   ├── issue_update.py         # Update issue fields
-│   ├── issue_close.py          # Close issues with notes
-│   └── requirements.txt        # requests>=2.28
-├── public/                     # Static site root — deployed to GitLab Pages
-│   ├── index.html              # Home page (group/project cards with filter)
-│   ├── group.html              # Sprint dashboard (?group={slug}&project={slug})
-│   ├── milestone.html          # Milestone detail page
-│   ├── releases.html           # Releases index page
-│   ├── css/
-│   │   ├── tokens.css          # [Design System] CSS custom properties
-│   │   └── styles.css          # [Design System] Imports tokens.css; all component styles
-│   ├── img/                    # Logos: favicon.svg, group and project logos
-│   ├── js/
-│   │   ├── core/               # [Core] Pure logic — no DOM, no fetch, no side effects
-│   │   │   ├── utils.js        # $(), esc(), slugify(), getParams(), formatText(), officeHtml(), downloadDoc()
-│   │   │   ├── holidays.js     # US federal holidays, isWorkingDay(), generateDateRange()
-│   │   │   ├── calculations.js # calculateProgress(), burndown, velocity, type breakdown, filtering
-│   │   │   ├── parsing.js      # parseSection()
-│   │   │   ├── reports.js      # Word/Office-HTML doc builders, sprint/month predicates
-│   │   │   └── dashboardShell.js # Pure HTML-string builder for the shared dashboard markup
-│   │   ├── services/           # [Services] External data only
-│   │   │   └── api.js          # fetchJSON(), dataPath(), resolveGroupAndProject(), loadFY(), discoverFYs()
-│   │   ├── dashboard.js        # [UI] Shared sprint-dashboard controller — mountDashboard(), renderDashboard()
-│   │   ├── home.js             # [UI] Home page rendering and filter chips
-│   │   ├── group.js            # [UI] Group dashboard page — resolves URL, mounts + renders dashboard.js
-│   │   ├── milestone.js        # [UI] Milestone detail — issues, dialogs
-│   │   ├── releases.js         # [UI] Releases index — milestone list with expand/collapse
-│   │   └── chart.min.js        # Chart.js v4.4.7 (vendored, classic script — sets window.Chart)
-│   └── data/                   # Pre-generated JSON — written by Python scripts, served statically
-│       ├── groups.json         # Group + project configuration (IDs, slugs, logos, mode)
-│       └── {group-slug}/
-│           ├── current-sprint.json     # Active sprint data or `null` sentinel
-│           ├── fy{YYYY}/
-│           │   └── {MM}-{mon}-{YYYY}.json   # All sprints ending in that month
-│           ├── {project-slug}/              # project-mode groups only
-│           │   ├── current-sprint.json
-│           │   ├── fy{YYYY}/
-│           │   └── reports/                 # AI report JSON (rendered to Word client-side)
-│           │       ├── sprints/{milestone-slug}.json   # test plan + sprint report
-│           │       └── months/{YYYY-MM}.json           # monthly report
-│           └── milestones/
-│               ├── index.json               # All milestones sorted by due_date descending
-│               └── {project-slug}/
-│                   └── {milestone-slug}.json
-└── vector/                     # Investiture research artifacts
-    ├── research/               # Interviews, JTBD, personas, competitive, assumptions
-    ├── schemas/                # Zero Vector schema definitions
-    ├── decisions/              # Architecture Decision Records (ADRs)
-    └── audits/                 # Investiture skill chain audit reports
+│   └── MULTI_GROUP_SUPPORT.md   # Multi-group feature design doc
+└── public/                      # Static site root — deployed as-is
+    ├── index.html               # Home page (group/project cards with filter)
+    ├── group.html               # Sprint dashboard (?group={slug}&project={slug})
+    ├── milestone.html           # Milestone detail page
+    ├── releases.html            # Releases index page
+    ├── css/
+    │   ├── tokens.css           # [Design System] CSS custom properties
+    │   └── styles.css           # [Design System] Imports tokens.css; all component styles
+    ├── img/                     # Logos: favicon.svg, group and project logos
+    ├── js/
+    │   ├── core/                # [Core] Pure logic — no DOM, no fetch, no side effects
+    │   │   ├── utils.js         # $(), esc(), slugify(), getParams(), formatText(), officeHtml(), downloadDoc()
+    │   │   ├── holidays.js      # US federal holidays, isWorkingDay(), generateDateRange()
+    │   │   ├── calculations.js  # calculateProgress(), burndown, velocity, type breakdown, filtering
+    │   │   ├── parsing.js       # parseSection()
+    │   │   ├── reports.js       # Word/Office-HTML doc builders, sprint/month predicates
+    │   │   └── dashboardShell.js # Pure HTML-string builder for the shared dashboard markup
+    │   ├── services/            # [Services] External data only
+    │   │   └── api.js           # fetchJSON(), dataPath(), resolveGroupAndProject(), loadFY(), discoverFYs()
+    │   ├── dashboard.js         # [UI] Shared sprint-dashboard controller — mountDashboard(), renderDashboard()
+    │   ├── home.js              # [UI] Home page rendering and filter chips
+    │   ├── group.js             # [UI] Group dashboard page — resolves URL, mounts + renders dashboard.js
+    │   ├── milestone.js         # [UI] Milestone detail — issues, dialogs
+    │   ├── releases.js          # [UI] Releases index — milestone list with expand/collapse
+    │   └── chart.min.js         # Chart.js v4.4.7 (vendored, classic script — sets window.Chart)
+    └── data/                    # Static JSON, hand-maintained
+        ├── groups.json          # Group + project configuration (IDs, slugs, logos, mode)
+        └── {group-slug}/
+            ├── current-sprint.json     # Active sprint data or `null` sentinel
+            ├── fy{YYYY}/
+            │   └── {MM}-{mon}-{YYYY}.json   # All sprints ending in that month
+            ├── {project-slug}/              # project-mode groups only
+            │   ├── current-sprint.json
+            │   ├── fy{YYYY}/
+            │   └── reports/                 # Report content (rendered to Word client-side)
+            │       ├── sprints/{milestone-slug}.json   # test plan + sprint report
+            │       └── months/{YYYY-MM}.json           # monthly report
+            └── milestones/
+                ├── index.json               # All milestones sorted by due_date descending
+                └── {project-slug}/
+                    └── {milestone-slug}.json
 ```
 
 ---
@@ -143,10 +115,9 @@ sprint-metrics-dashboard/
 | File Type | Convention | Example |
 |-----------|-----------|---------|
 | JS source files | `camelCase.js` | `utils.js`, `calculations.js` |
-| Python source files | `snake_case.py` | `scheduled_update.py`, `issue_read.py` |
 | HTML pages | `lowercase.html` | `index.html`, `group.html` |
 | CSS files | `lowercase.css` | `tokens.css`, `styles.css` |
-| Data directories | `kebab-case` | `public/data/cass/`, `mirars/` |
+| Data directories | `kebab-case` | `public/data/cloud-services/` |
 | Data files | `{MM}-{mon}-{YYYY}.json` | `04-apr-2026.json` |
 | CSS classes | Semantic, no utility prefix | `.group-card`, `.skip-link`, `.home-filter` |
 | JS exports | `camelCase` functions; `UPPER_SNAKE` constants | `fetchJSON`, `EARLIEST_FY` |
@@ -188,21 +159,18 @@ There is no shared state library. Each page module (`js/*.js`) manages its own m
 
 ## API / Data Pattern
 
-Data flows in one direction: **GitLab / Jira API → Python scripts → JSON files → browser fetch → rendering**.
+Data flows in one direction: **static JSON files → browser fetch → rendering**.
 
-1. **Collection:** Python scripts hit the GitLab REST API (`/api/v4/groups/:id/iterations`, `/api/v4/projects/:id/milestones`, `/api/v4/projects/:id/issues`) and write structured JSON to `public/data/`. Groups configured with `"source": "jira"` in `groups.json` (e.g. Data Services) are collected from Jira Software (Server/DC) instead — `jira_api.py` (bearer-token REST client) and `jira_provider.py` fetch sprints via the Agile API and emit the **identical sprint-record schema** as the GitLab path, so the frontend is unaware of the source.
-2. **Commit:** `api_commit.py` uses the GitLab Commits API to push data files. This bypasses the instance's signed-commit hook requirement for automated pipeline commits.
-3. **Serve:** GitLab Pages serves `public/` as static files. No server-side computation at read time.
-4. **Fetch:** The browser fetches JSON via `fetchJSON()` in `js/services/api.js`. All network access goes through this function. It returns `null` on non-OK responses, preventing thrown errors from missing data files.
-5. **Render:** UI page modules receive fetched data and call Core functions to compute metrics, then render to the DOM.
+1. **Data:** `public/data/` holds pre-generated, hand-maintained JSON — sprint records, milestones, and report content. There is no collection pipeline right now; a future iteration may reintroduce automated collection and/or move this data into a real database (see `README.md`).
+2. **Serve:** The host serves `public/` as static files. No server-side computation at read time.
+3. **Fetch:** The browser fetches JSON via `fetchJSON()` in `js/services/api.js`. All network access goes through this function. It returns `null` on non-OK responses, preventing thrown errors from missing data files.
+4. **Render:** UI page modules receive fetched data and call Core functions to compute metrics, then render to the DOM.
 
 **Data path resolution:** `dataPath(activeGroup, activeProject, relativePath)` in `api.js` scopes all fetches to the active group and project. UI modules never construct data paths directly.
 
-**Null sentinel:** When no active sprint exists, `scheduled_update.py` writes `null` to `current-sprint.json` (valid JSON) rather than deleting the file. This prevents 404 errors in the browser console; `fetchJSON` returns `null`, and UI modules display "No active sprint."
+**Null sentinel:** When no active sprint exists, `current-sprint.json` holds `null` (valid JSON) rather than being deleted. This prevents 404 errors in the browser console; `fetchJSON` returns `null`, and UI modules display "No active sprint."
 
-**Iterations vs Milestones:** Scripts auto-detect the GitLab tier. Premium groups use the Iterations API. Groups with `mode: "projects"` in `groups.json` use project-level Milestones filtered by `transition_date`.
-
-**Data source (`source`):** Each group in `groups.json` declares a `source`, defaulting to `"gitlab"`. `backfill.py` and `scheduled_update.py` dispatch on it. `"jira"` groups pull from Jira via `jira_provider.py` (sprint metrics only — no milestones/releases index or AI reports); Jira backfill is floored at the FY2026 cutoff. See CLAUDE.md → "Jira Data Source" for the field-level config.
+**Data source (`source`):** Each group in `groups.json` can declare a `source` (`"gitlab"` by default, or `"jira"`), which only affects how the JSON was originally produced — the frontend schema is identical either way and does not branch on it.
 
 ---
 
@@ -225,11 +193,11 @@ All existing Core functions are being backfilled with tests. New Core functions 
 
 Inferred from observed patterns across the codebase. These describe the architectural beliefs behind the conventions — the "why" that guides edge-case decisions.
 
-**Data is pre-computed, not computed at request time.** Sprint metrics, burndown arrays, and type breakdowns are computed by Python scripts at collection time and stored as JSON. The browser does display logic only. Nothing is calculated server-side at page load.
+**Data is pre-computed, not computed at request time.** Sprint metrics, burndown arrays, and type breakdowns are stored as JSON. The browser does display logic only. Nothing is calculated server-side at page load.
 
 **Layer boundaries are enforced by convention, not tooling.** There is no bundler or linter enforcing the four-layer rule. It is enforced by code review and this document. Every contributor is responsible for placing new code in the correct layer.
 
-**Static over dynamic.** Every feature that could be done server-side is done at collection time (Python) or at client render time (JS). There is no application server, no API gateway, no database query at page load.
+**Static over dynamic.** Every feature is done at data-preparation time or at client render time (JS). There is no application server, no API gateway, no database query at page load.
 
 **Accessibility is structural, not cosmetic.** Semantic HTML, ARIA attributes, keyboard navigation, and skip links are part of the markup spec, not retrofitted. A feature that breaks keyboard navigation is not done.
 
@@ -244,7 +212,6 @@ Inferred from observed patterns across the codebase. These describe the architec
 - **No upward imports.** Core does not import from Services or UI. Services do not import from UI.
 - **No build tools.** No webpack, Vite, Rollup, Babel, or TypeScript compilation. Import paths must use `.js` extensions for native ES module resolution.
 - **No framework dependencies.** Vanilla JS only. No React, Vue, Angular, or Svelte.
-- **No API keys or tokens in client-side JS.** All authenticated GitLab API access is Python-only, in the CI/CD pipeline.
 - **Files approaching 300 lines — consider splitting.** If a module is growing, look for a pure function to extract into `js/core/`.
 
 ---
@@ -257,13 +224,13 @@ Follow this order. Do not skip steps.
 2. **Core logic second.** Write pure functions in the appropriate `js/core/` module. If it has no DOM dependency and no network call, it is Core.
 3. **Services third.** If the feature needs new data fetching or a new data path, add it to `js/services/api.js`.
 4. **UI last.** Wire rendering and event handling in the relevant page module (`js/home.js`, `js/group.js`, `js/milestone.js`, or `js/releases.js`), or the shared dashboard controller (`js/dashboard.js`) if it applies to the dashboard shown on multiple pages.
-5. **Python if needed.** If the feature requires new data fields, add collection logic to `scheduled_update.py` or `backfill.py` and extend the JSON schema — keeping backward compatibility.
+5. **Data if needed.** If the feature requires new fields, extend the JSON schema by hand — keeping backward compatibility with existing files.
 
 **Before shipping:**
 - Test with `cd public && python -m http.server 8000`
 - Verify keyboard navigation works on all interactive elements
 - Verify ARIA attributes are present where needed
-- Pull before pushing: `git pull origin main` (nightly pipeline commits at 2 AM and will cause rejected pushes otherwise)
+- Run `npm test`
 
 ---
 
@@ -274,21 +241,19 @@ These are preferences, not rules. They can be overridden with good reason.
 - Prefer `async/await` over raw Promise chains.
 - Prefer named exports over default exports (matches the existing codebase).
 - Prefer template literals for HTML string construction over concatenation.
-- Python scripts: PEP 8 style; descriptive variable names; no magic numbers.
 
 ---
 
 ## Decisions
 
-Architecture decisions are recorded in `./vector/decisions/` using the ADR format (see `ADR-000-template.md`).
-
-Decisions that shaped this architecture and are worth recording as ADRs:
+Notable decisions that shaped this architecture:
 
 | Decision | Status |
 |----------|--------|
-| Use GitLab Commits API instead of `git push` for data commits (bypasses signed-commit hook) | Accepted |
 | Four-layer JS architecture with no build step | Accepted |
 | Fiscal year data cutoff at October 2025 (FY2026) | Accepted |
 | Null sentinel for `current-sprint.json` instead of file deletion | Accepted |
 | Vendor Chart.js rather than load from CDN | Accepted |
 | Per-project sprint tracking via Milestones (filtered by `transition_date`) for `mode: "projects"` groups | Accepted |
+| Deploy as a static site to Netlify/Vercel instead of GitLab Pages | Accepted |
+| Data collection removed for now; `public/data/` is static and hand-maintained until a future DB migration | Accepted |
