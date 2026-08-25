@@ -35,7 +35,7 @@ export GITLAB_USERNAME="your.username"              # Optional: enables --assign
 The pipeline commits updated sprint data every night at 2 AM. Always pull before starting work to avoid merge conflicts:
 
 ```bash
-git pull origin master
+git pull origin main
 ```
 
 ## Features
@@ -223,7 +223,7 @@ Set up automatic updates throughout the workday:
 1. Go to **Build > Pipeline schedules**
 2. Create new schedule
 3. Set cron: `0 7-17 * * 1-5` (every hour, 7 AM–5 PM, Monday–Friday)
-4. Target branch: `master`
+4. Target branch: `main`
 
 This keeps the active sprint burndown and issue data current throughout the day.
 
@@ -234,7 +234,7 @@ Set up an overnight update to capture any late-day changes:
 1. Go to **Build > Pipeline schedules**
 2. Create new schedule
 3. Set cron: `0 2 * * *` (2 AM daily)
-4. Target branch: `master`
+4. Target branch: `main`
 
 The nightly job updates the active sprint and two most recently completed sprints.
 
@@ -439,7 +439,7 @@ python3 scripts/issue_implement.py --help
 
 ## Deployment
 
-The dashboard deploys automatically via GitLab Pages when changes are pushed to `master`. The `pages` job in `.gitlab-ci.yml` publishes the `public/` directory.
+The dashboard deploys automatically via GitLab Pages when changes are pushed to `main`. The `pages` job in `.gitlab-ci.yml` publishes the `public/` directory.
 
 Access the deployed dashboard at: `https://<namespace>.gitlab.io/<project-path>/`
 

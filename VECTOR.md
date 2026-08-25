@@ -110,7 +110,7 @@ A change is done when:
 - No business logic added to a UI module (`js/*.js`) that belongs in `js/core/`
 - No DOM access added to `js/core/` outside the documented exceptions
 - Vitest passes for `js/core/` — new Core functions include tests; existing Core functions are being backfilled
-- `git pull origin master` run before pushing (pipeline commits hourly during business hours and at 2 AM)
+- `git pull origin main` run before pushing (pipeline commits hourly during business hours and at 2 AM)
 - For Python script changes: JSON output schema verified against dashboard expectations
 
 ---

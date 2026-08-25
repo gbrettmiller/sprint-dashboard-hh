@@ -260,7 +260,7 @@ Lets users download **Release Notes**, **Test Plans**, **Sprint Reports**, and *
 
 **IMPORTANT: Always sync with remote at the start of each day's first session:**
 ```bash
-git pull origin master
+git pull origin main
 ```
 This is required because the pipeline automatically commits updated sprint data to `public/data/` — hourly during business hours and at 2 AM overnight. Starting your session without pulling will cause merge conflicts when you try to push.
 
@@ -343,15 +343,15 @@ python scheduled_update.py  # or backfill.py
 
 ## Git Workflow
 
-- **Main branch:** `master` (default)
+- **Main branch:** `main` (default)
 - **Commit messages:** Follow conventional commits (e.g., "chore:", "feat:", "fix:")
 - **Auto-commits:** Pipeline commits with "chore: nightly sprint data update" — hourly during business hours and at 2 AM overnight
-- **Daily sync:** Always `git pull origin master` at the start of each session — pipeline runs frequently and will cause merge conflicts if you don't sync first
+- **Daily sync:** Always `git pull origin main` at the start of each session — pipeline runs frequently and will cause merge conflicts if you don't sync first
 - **Before pushing:** Always pull before pushing to handle auto-commits from scheduled jobs
 
 ## Deployment
 
-- Automatic via GitLab Pages when pushing to `master`
+- Automatic via GitLab Pages when pushing to `main`
 - URL pattern: `https://<namespace>.gitlab.io/<project-path>/`
 - Publishes `public/` directory contents
 - No build step required (static files only)
@@ -360,7 +360,7 @@ python scheduled_update.py  # or backfill.py
 
 **"Updates were rejected" when pushing:**
 - Scheduled pipeline likely committed new data
-- Run `git pull origin master` then `git push origin master`
+- Run `git pull origin main` then `git push origin main`
 
 **Data not showing in dashboard:**
 - Check browser console for JavaScript errors

@@ -7,7 +7,7 @@ Usage:
     python3 scripts/api_commit.py "commit message" file1 file2 ...
 
 Reads files relative to the current working directory and commits them
-to the branch specified by CI_COMMIT_REF_NAME (or 'master' by default).
+to the branch specified by CI_COMMIT_REF_NAME (or 'main' by default).
 
 Required environment variables:
     CI_PUSH_TOKEN   - GitLab token with api scope
@@ -15,7 +15,7 @@ Required environment variables:
     CI_PROJECT_ID   - numeric project ID (set automatically by GitLab CI)
 
 Optional:
-    CI_COMMIT_REF_NAME - branch to commit to (default: master)
+    CI_COMMIT_REF_NAME - branch to commit to (default: main)
     GITLAB_SSL_VERIFY  - set to 'false' to disable SSL verification
 """
 
@@ -44,7 +44,7 @@ def main():
     token = os.environ.get("CI_PUSH_TOKEN", "")
     server_url = os.environ.get("CI_SERVER_URL", "").rstrip("/")
     project_id = os.environ.get("CI_PROJECT_ID", "")
-    branch = os.environ.get("CI_COMMIT_REF_NAME", "master")
+    branch = os.environ.get("CI_COMMIT_REF_NAME", "main")
 
     if not token:
         sys.exit("Error: CI_PUSH_TOKEN is required")

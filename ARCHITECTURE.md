@@ -263,7 +263,7 @@ Follow this order. Do not skip steps.
 - Test with `cd public && python -m http.server 8000`
 - Verify keyboard navigation works on all interactive elements
 - Verify ARIA attributes are present where needed
-- Pull before pushing: `git pull origin master` (nightly pipeline commits at 2 AM and will cause rejected pushes otherwise)
+- Pull before pushing: `git pull origin main` (nightly pipeline commits at 2 AM and will cause rejected pushes otherwise)
 
 ---
 

@@ -18,13 +18,13 @@ Display the returned issue title, description, acceptance criteria, suggested br
 
 ### Step 2 — Create a feature branch
 
-Check current branch. If on `master`, create and switch to the suggested branch from Step 1:
+Check current branch. If on `main`, create and switch to the suggested branch from Step 1:
 
 ```
 git checkout -b <suggested-branch-name>
 ```
 
-Never implement directly on master.
+Never implement directly on main.
 
 ### Step 3 — Mark in-progress
 
